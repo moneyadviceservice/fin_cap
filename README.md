@@ -6,7 +6,7 @@ All the things for Money Advice Service's Financial Capability website.
 
 * [Git](http://git-scm.com)
 * [Rbenv](https://github.com/rbenv/rbenv)
-* [Ruby][Ruby] - see version specified in [Gemfile](Gemfile)
+* [Ruby][Ruby] - see version specified in [.ruby-version](.ruby-version)
 
 ## Installation
 
