@@ -1,0 +1,28 @@
+$base-font-size: 16 !default;
+$baseline-unit: if($responsive, 0.375rem, 6px);
+$border-radius: 10px;
+
+// Primary Colours
+
+$primary-yellow: #FFCC00;
+$primary-orange: #EF7E25;
+$primary-blue: #0066CC;
+$primary-blue-dark:	#003399;
+$primary-green-pale: #51B9AF;
+$primary-purple: #663399;
+
+// Secondary / Supporting Colours
+
+$color-black: #1D1D1B;
+$color-white: #FFFFFF;
+$color-blue: #41A0DA;
+$color-red: #C92628;
+$color-red-pale: #E95E50;
+$color-green-dark: #008996;
+$color-green-lime: #8CC635;
+
+// Greys
+
+$grey-light: #dadada;
+$grey-lighter: #ebe9e9;
+$grey-lightest: #f1f1f1;

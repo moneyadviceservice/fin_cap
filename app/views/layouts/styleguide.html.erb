@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FinCap Styleguide</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="l-constrained">
+      <div class="l-2col">
+        <div class="l-2col-side">
+          <%= render 'styleguide/menu' %>
+        </div>
+        <div class="l-2col-main">
+          <%= yield %>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
