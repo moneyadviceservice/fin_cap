@@ -40,7 +40,7 @@ a {
     color: $primary-orange;
   }
 
-  &:not([href*="fincap.org.uk"]):after {
+  &:not([href*="#{$site}"]):after {
     @extend %icon;
     @extend .icon--external-link;
     content: '';

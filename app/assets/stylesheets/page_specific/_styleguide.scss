@@ -48,7 +48,7 @@
   }
 
   // Supress the addition of the external link icon
-  &:not([href*="fincap.org.uk"]):after {
+  &:not([href*="#{$site}"]):after {
     display: none;
   }
 }
