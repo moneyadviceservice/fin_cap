@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'brakeman', require: false
   gem 'capybara'
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'pry-rails'
@@ -28,8 +28,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
