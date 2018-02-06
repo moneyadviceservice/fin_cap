@@ -5,4 +5,3 @@ class StyleguideController < ApplicationController
     render params[:page]
   end
 end
-  
