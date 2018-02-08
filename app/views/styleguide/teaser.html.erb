@@ -1,0 +1,69 @@
+<h1>UI Components</h1>
+<h2>Teaser box</h2>
+<p>The teaser box component comes in groups of 3 in all cases.</p>
+<p>To ensure the height of each image is consistent across all 3 teaser boxes, there are some basic requirements for the image used:</p>
+<ul>
+  <li>Width: 450px</li>
+  <li>Height: 250px</li>
+</ul>
+
+<div class="teaser-box__group">
+  <div class="teaser-box">
+    <%= image_tag 'styleguide/teaser-image.png', class: 'teaser-box__image' %>
+    <h3 class="teaser-box__title">Title</h3>
+    <p class="teaser-box__content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu sagittis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu sagittis nisi.
+    </p>
+    <a href="https://www.fincap.org.uk" class="teaser-box__cta">Call to action</a>
+  </div>
+
+  <div class="teaser-box">
+    <%= image_tag 'styleguide/teaser-image.png', class: 'teaser-box__image' %>
+    <h3 class="teaser-box__title">Title</h3>
+    <p class="teaser-box__content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu sagittis nisi.
+    </p>
+    <a href="https://www.fincap.org.uk" class="teaser-box__cta">Call to action</a>
+  </div>
+
+  <div class="teaser-box">
+    <%= image_tag 'styleguide/teaser-image.png', class: 'teaser-box__image' %>
+    <h3 class="teaser-box__title">Title</h3>
+    <p class="teaser-box__content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu sagittis nisi.
+    </p>
+    <a href="https://www.fincap.org.uk" class="teaser-box__cta">Call to action</a>
+  </div>
+</div>
+
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="teaser-box__group">
+    <div class="teaser-box">
+      <img src="<image-url>" class="teaser-box__image" />
+      <h3 class="teaser-box__title">Title</h3>
+      <p class="teaser-box__content">
+        Content
+      </p>
+      <a href="#" class="teaser-box__cta">Call to action</a>
+    </div>
+
+    <div class="teaser-box">
+      <img src="<image-url>" class="teaser-box__image" />
+      <h3 class="teaser-box__title">Title</h3>
+      <p class="teaser-box__content">
+        Content
+      </p>
+      <a href="#" class="teaser-box__cta">Call to action</a>
+    </div>
+
+    <div class="teaser-box">
+      <img src="<image-url>" class="teaser-box__image" />
+      <h3 class="teaser-box__title">Title</h3>
+      <p class="teaser-box__content">
+        Content
+      </p>
+      <a href="#" class="teaser-box__cta">Call to action</a>
+    </div>
+  </div>
+</xmp>
