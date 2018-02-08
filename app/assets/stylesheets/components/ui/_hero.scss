@@ -29,4 +29,21 @@
   @include respond-to($mq-m) {
     width: 30%;
   }
+
+  .hero--blue & {
+    background-color: $primary-blue;
+  }
+
+  .hero--orange & {
+    background-color: $primary-orange;
+  }
+
+  .hero--purple & {
+    background-color: $primary-purple;
+  }
+
+  .hero--yellow & {
+    background-color: $primary-yellow;
+    color: $color-black;
+  }
 }
