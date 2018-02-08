@@ -1,4 +1,8 @@
-// depend_on_asset components/Nav
+//= depend_on_asset rsvp/rsvp
+//= depend_on_asset dough/assets/js/components/DoughBaseComponent
+//= depend_on_asset dough/assets/js/lib/componentLoader
+//= depend_on_asset dough/assets/js/lib/featureDetect
+//= depend_on_asset components/Nav
 
 <%
   def requirejs_path(asset)
@@ -9,10 +13,24 @@
     baseUrl: (Rails.application.config.action_controller.asset_host || '') + \
       Rails.application.config.assets.prefix,
     paths: {
+      # External dependancies
+      eventsWithPromises: requirejs_path('eventsWithPromises/src/eventsWithPromises'),
+      jqueryThrottleDebounce: requirejs_path('jqueryThrottleDebounce/jquery.ba-throttle-debounce'),
+      rsvp: requirejs_path('rsvp/rsvp'),
+
       # Components
-      Nav: requirejs_path('components/Nav'),
+      Nav: requirejs_path('components/Nav')
     }
   }
+
+  # Dough
+  requirejs_config[:paths].merge!({
+    utilities: requirejs_path('dough/assets/js/lib/utilities'),
+    DoughBaseComponent: requirejs_path('dough/assets/js/components/DoughBaseComponent'),
+    componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
+    featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
+    mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries')
+  })
 %>
 
 // RequireJS config

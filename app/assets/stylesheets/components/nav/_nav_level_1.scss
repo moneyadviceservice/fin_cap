@@ -1,0 +1,345 @@
+// nav global variables
+$nav-transition-duration: 300ms;
+$nav-transition-ease: ease-out;
+$max-cols: 4; // the maximum number of categories in the subnav
+$gutter: $default-gutter / 2; // the space between category columns
+
+// probably should be in header styles --
+.mobile-nav-button {
+  display: block;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.l-search-bar {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+  }
+}
+// -- probably should be in header styles
+
+.nav {
+  // probably should be in base styles --
+  & * {
+    box-sizing: border-box;
+  }
+  // -- probably should be in base styles
+
+  // temporarily over-ride the external link icon --
+  a:not([href*="fincap.org.uk"]):after {
+    background-image: none;
+    width: 0;
+    height: 0;
+  }
+  // -- temporarily over-ride the external link icon
+
+  transition: transform $nav-transition-duration $nav-transition-ease;
+  position: fixed;
+  overflow-x: hidden;
+  z-index: 5;
+  width: 85%;
+  transform: translateX(-100%);
+  background: #f5f5f5; // $color-white;
+  height: 100%;
+  border-right: 1px solid; // $color-green-primary;
+
+  &.no-transition {
+    transition: none;
+  }
+
+  @include respond-to($mq-m) {
+    transition: none;
+    position: relative;
+    transform: none;
+    width: 100%;
+    overflow-x: visible;
+    border: 0;
+
+    /* non-FlexBox compliant -- */
+    display: table;
+    height: 100%;
+    /* -- non-FlexBox compliant */
+  }
+
+  &.is-active {
+    transform: translateX(0%);
+  }
+}
+
+.nav__arrow {
+  position: absolute;
+  width: (18px / 34) * 15;
+  height: 15px;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.nav__level-1 {
+  box-sizing: border-box;
+  transition: transform $nav-transition-duration $nav-transition-ease;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  transform: translateX(0%);
+  list-style: none;
+  margin: 0;
+  padding: $baseline-unit $baseline-unit*2;
+  width: 100%;
+  font-size: 1rem;
+
+  @include respond-to($mq-m) {
+    @include column(12);
+
+    transition: none;
+    transform: none;
+    position: static;
+    background: transparent;
+    display: inline-block;
+    padding: 0;
+
+    /* non-FlexBox compliant -- */
+    display: table-row;
+    /* -- non-FlexBox compliant */
+  }
+
+  &.is-active {
+    transform: translateX(-100%);
+
+    @include respond-to($mq-m) {
+      transform: none;
+    }
+  }
+
+  &.is-open {
+    transform: translateX(-200%);
+
+    @include respond-to($mq-m) {
+      transform: none;
+    }
+  }
+}
+
+.nav__level-1__element {
+  position: static;
+  margin: 0;
+  line-height: 1;
+  border-bottom: 1px solid;
+
+  .nav__arrow {
+    right: $default-gutter;
+  }
+
+  @include respond-to($mq-m) {
+    border-bottom: 0;
+
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    vertical-align: bottom;
+    /* -- non-FlexBox compliant */
+
+    .nav__arrow {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    .nav__level-2 {
+      visibility: visible;
+      transition-delay: 0s;
+
+      @include respond-to($mq-m) {
+        display: block;
+        transform: none;
+      }
+    }
+
+    @include respond-to($mq-m) {
+      background: $color-white;
+    }
+  }
+
+  &:hover {
+    background: $color-white;
+  }
+
+  &.l-search-bar:hover {
+    background: none;
+  }
+}
+
+// no-js fallback --
+// .no-js {
+//   .nav {
+//     display: none;
+//   }
+// }
+// -- no-js fallback
+
+.touch {
+  .nav__level-1__element {
+    &:hover {
+      background: transparent;
+    }
+
+    &.is-active {
+      background: $color-white;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.nav__level-1__element:last-child {
+  border-bottom: none;
+}
+
+.nav__level-1__element:first-child {
+  border-top: none;
+}
+
+.nav__level-1__element__heading {
+  @include column(12);
+
+  display: inline-block;
+  float: none;
+  line-height: 25px;
+  padding: $baseline-unit $baseline-unit*2;
+  background: transparent;
+  text-align: left;
+  position: relative;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-black;
+  }
+
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $color-black;
+  }
+
+  @include respond-to($mq-m) {
+    &:focus {
+      background: none;
+    }
+
+    .is-active &:focus {
+      background: $color-white;
+    }
+
+    position: relative;
+    width: 100%;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.nav__level-1__element__text {
+  pointer-events: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+    padding: $baseline-unit*2 10px;
+    font-weight: 700;
+    font-size: 14px;
+    font-size: 0.875rem;
+    width: auto;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      position: static;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid; // $color-grey-primary;
+      margin-left: 4px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.nav__close-button {
+  @include body(14, 24);
+  float: right;
+  margin-top: 6px;
+  display: inline;
+  color: $color-black;
+  text-align: right;
+  padding: $baseline-unit $baseline-unit*5 $baseline-unit $baseline-unit;
+  position: relative;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+
+  &:focus {
+    outline: 3px solid $color-black;
+  }
+}
+
+.nav__close-button__icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 10px;
+  top: 30%;
+  fill: none;
+}
+
+.mobile-nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: pink;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .nav {
+      display: block;
+      height: auto;
+    }
+
+    .nav__level-1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    .nav__level-1__element {
+      flex-grow: 1;
+      flex-shrink: 1;   // IE10 fix
+    }
+
+    .nav__level-1__element {
+      display: inline-block;
+    }
+  }
+}
+/* -- FlexBox compliant */
