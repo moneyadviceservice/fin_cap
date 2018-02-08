@@ -1,0 +1,24 @@
+%icon {
+  // prevent IE8 from breaking when extending .icon into a :before it doesn't understand
+  background-image: image_url('icon-sprite.png');
+  background-repeat: no-repeat;
+  @include inline-block;
+}
+
+.icon {
+  background-image: image_url('icon-sprite.png');
+  background-repeat: no-repeat;
+  @include inline-block;
+}
+
+.icon--external-link {
+  background-position: 0px 3px;
+  width: 16px;
+  height: 18px;
+}
+
+.icon--arrow {
+  background-position: -15px 2px;
+  width: 18px;
+  height: 18px;
+}
