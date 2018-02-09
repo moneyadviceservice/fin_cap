@@ -1,0 +1,302 @@
+// Global Subnavigation Content
+
+$max-cols: 7; // the maximum number of categories in the subnav
+$gutter: $default-gutter / 2; // the space between category columns
+// $nav-transition-duration: 300ms !default; // Defined in _global_nav.scss
+
+.nav__level-2 {
+  transition-property: visibility;
+  transition-delay: $nav-transition-duration;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  padding: $baseline-unit $baseline-unit $baseline-unit*10 $baseline-unit;
+  width: 100%;
+
+  @include respond-to($mq-m) {
+    transition: none;
+    top: 100%;
+    transform: none;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    background: $color-white;
+    padding-bottom: $baseline-unit;
+
+    /* non-FlexBox compliant -- */
+    display: table-row;
+    /* -- non-FlexBox compliant */
+
+    &:after {
+      box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: -1
+    }
+
+    &.is-active {
+      visibility: visible;
+    }
+  }
+}
+
+.nav__level-2__description {
+  display: none;
+
+  @include respond-to($mq-m) {
+    @include column(12);
+    display: block;
+    text-align: center;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+// no-js fallback --
+.uninitialised {
+  @include respond-to($mq-m) {
+    .nav__level-1__element__heading {
+      &:hover {
+        & + .nav__level-2 {
+          visibility: visible;
+          transform: none;
+        }
+      }
+    }
+
+    .nav__level-2:hover {
+      visibility: visible;
+      transform: none;
+    }
+  }
+}
+// -- no-js fallback
+
+.nav__level-2__heading {
+  position: relative;
+  display: block;
+  line-height: 29px;
+  padding: $baseline-unit $baseline-unit*2;
+  border-top: none;
+
+  .nav__arrow {
+    left: $baseline-unit;
+    transform: rotate(180deg);
+  }
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.nav__level-2__heading__text {
+  float: none;
+  padding: 0 0 0 15px;
+  color: $color-black;
+}
+
+.nav__level-2__categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  @include respond-to($mq-m) {
+    margin-bottom: $baseline-unit*2;
+  }
+}
+
+.nav__level-2__category {
+  padding: $baseline-unit*2;
+  margin-bottom: 0;
+
+  @include respond-to($mq-m) {
+    border-bottom: none;
+    box-shadow: none;
+    position: relative;
+    margin: 0;
+    padding: 0 $gutter;
+    border-top: none;
+    border-bottom: none;
+
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    vertical-align: top;
+    width: 100% / $max-cols;
+    /* -- non-FlexBox compliant */
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -0.5px;
+      border-left: 1px solid; // $color-grey-light;
+      width: 1px;
+    }
+
+    &:first-child {
+      padding-left: $gutter * 2;
+
+      &:before {
+        border-left: none;
+      }
+    }
+
+    &:last-child {
+      padding-right: $gutter * 2;
+    }
+  }
+}
+
+// .nav__level-2__category--double {
+//   @include respond-to($mq-m) {
+//     /* non-FlexBox compliant -- */
+//     width: ((100% / $max-cols) * 2) + $gutter;
+//     /* -- non-FlexBox compliant */
+
+//     .nav__level-2__subcategories {
+//       column-count: 2;
+//       column-fill: balance;
+//     }
+//   }
+// }
+
+// .nav__level-2__tool-category {
+//   display: block;
+
+//   @include respond-to($mq-m) {
+//     non-FlexBox compliant --
+//     display: table-cell;
+//     vertical-align: top;
+//     /* -- non-FlexBox compliant */
+//   }
+// }
+
+// exclude the tools column where:
+// - the viewport width < 66em and
+// - there are the maximum number of category columns
+// .nav__level-2__category:nth-child(#{$max-cols}) {
+//   &.nav__level-2__tool-category {
+//     @include respond-to($mq-m, 66em) {
+//       display: none;
+//     }
+//   }
+// }
+
+.nav__level-2__category:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.nav__level-2__category__heading {
+  display: block;
+  float: none;
+  padding: 0 0 $baseline-unit;
+  font-weight: bold;
+  white-space: normal;
+  border-bottom: 1px solid; // $color-yellow-dark;
+
+  @include respond-to($mq-m) {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    border: 0;
+  }
+}
+
+.nav__level-2__subcategories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include respond-to($mq-m) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+.nav__level-2__subcategory /*,
+.nav__level-2__tool */ {
+  margin: 0;
+}
+
+// .nav__level-2__tool {
+//   position: relative;
+//   border: 2px solid; // $color-callout-tool;
+//   border-left-width: 0; // $callout-border-top-height;
+//   margin-bottom: $baseline-unit*2;
+// }
+
+// .nav__level-2__tool:last-child {
+//   margin-bottom: 0;
+// }
+
+.nav__level-2__subcategory__link /* ,
+.nav__level-2__tool__link */ {
+  display: inline-block;
+  float: none;
+  padding: $baseline-unit 0;
+  white-space: normal;
+}
+
+// .nav__level-2__tool__link {
+//   margin: $baseline-unit*2;
+//   padding: 0;
+// }
+
+// .nav__level-2__tools__icon {
+//   position: absolute;
+//   width: 32px;
+//   height: 32px;
+//   left: -37px;
+//   top: 5px;
+//   border-radius: 50%;
+//   background: white;
+//   overflow: hidden;
+// }
+
+// .nav__level-2__tool-icon {
+//   position: absolute;
+//   width: 27px;
+//   height: 27px;
+//   left: 0;
+//   bottom: 0;
+// }
+
+/* FlexBox compliant -- */
+.flexbox {
+  @include respond-to($mq-m) {
+    .nav__level-2 {
+      display: block;
+    }
+
+    .nav__level-2__categories {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .nav__level-2__category {
+      display: block;
+      flex-grow: 1;
+      max-width: 100% / $max-cols;
+      // min-width: 100% / $max-cols;
+    }
+
+    // .nav__level-2__category--double {
+    //     width: auto;
+    //     max-width: ((100% / ($max-cols - 2)) * 2) + $gutter;
+    //     flex-grow: 3;
+    // }
+
+    // .nav__level-2__tool-category {
+    //   display: block;
+    //   flex-grow: 2;
+    // }
+  }
+}
+/* -- FlexBox compliant */
