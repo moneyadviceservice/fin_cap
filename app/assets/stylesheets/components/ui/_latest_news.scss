@@ -1,5 +1,12 @@
 .latest-news {
   @include column(12);
+  position: relative;
+}
+
+.latest-news__icon {
+  position: absolute;
+  top: $baseline-unit*3;
+  right: $baseline-unit*3;
 }
 
 .latest-news__inner {
@@ -10,7 +17,7 @@
 .latest-news__title {
   color: $primary-orange;
   margin: 0 0 $baseline-unit*2;
-  padding: 0;
+  padding: 0 $baseline-unit*6 0 0;
 }
 
 .latest-news__list {
