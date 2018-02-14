@@ -1,5 +1,14 @@
 $nav-transition-duration: 300ms;
 
+// probably should eventually be in header styles
+.mobile-nav-button {
+  display: block;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
 .nav {
   // temporarily over-ride the external link icon
   a:not([href*="fincap.org.uk"]):after {
@@ -213,6 +222,8 @@ $nav-transition-duration: 300ms;
 }
 
 .nav__level-1__element__text {
+  pointer-events: none;
+
   @include respond-to($mq-m) {
     display: block;
     padding: $baseline-unit*2 10px;
@@ -260,6 +271,20 @@ $nav-transition-duration: 300ms;
   right: 10px;
   top: 30%;
   fill: none; // $color-yellow-dark;
+}
+
+.mobile-nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: pink;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
 }
 
 /* FlexBox compliant -- */

@@ -5,14 +5,11 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <%# // Inline custom Modernizr %>
-    <script type="text/javascript" src="assets/modernizr-custom.js"></script
-
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <a data-mobile-nav-button href="#" role="button" class="mobile-nav-button">Menu</a>
     <%= yield %>
   </body>
 </html>
