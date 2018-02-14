@@ -15,3 +15,9 @@
 //= require lib/modernizr-custom
 //= require jquery
 //= require turbolinks
+//= require_tree .
+
+$(document).ready(function() {
+  var nav = new Nav($('.nav'));
+  nav.init();
+});
