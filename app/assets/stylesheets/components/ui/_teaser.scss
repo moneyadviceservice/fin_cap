@@ -51,8 +51,41 @@
   text-decoration: none;
   color: $color-white;
   background-color: $primary-blue;
+}
 
-  &:hover {
-    text-decoration: none;
+.teaser-box--horizontal {
+  @extend %clearfix;
+  background-color: $color-blue-lighter;
+
+  @include respond-to($mq-m) {
+    display: flex;
+  }
+
+  .teaser-box__image {
+    @include respond-to($mq-m) {
+      width: 50%;
+      flex: 1;
+    }
+  }
+
+  .teaser-box__content {
+    @include column(12);
+
+    @include respond-to($mq-m) {
+      flex: 1;
+    }
+  }
+  .teaser-box__title {
+    @include body(22, 24);
+    margin: $baseline-unit*3 0 0;
+  }
+
+  .teaser-box__content-text {
+    margin: 0;
+    padding: $baseline-unit 0;
+  }
+
+  .teaser-box__cta {
+    margin: $baseline-unit 0;
   }
 }
