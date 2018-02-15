@@ -1,6 +1,6 @@
-<nav class="nav uninitialised">
+<nav class="nav uninitialised is-active">
   <div class="l-constrained">
-    <ul class="nav__level-1" data-nav-level-1>
+    <ul class="nav__level-1 is-open" data-nav-level-1>
       <li class="nav__level-1__element" data-nav-level-1-item>
         <a href="#" class="nav__level-1__element__heading" data-nav-level-1-heading>
           <span class="nav__level-1__element__text">What is financial capability?</span>
@@ -157,7 +157,7 @@
         </div>
       </li>
 
-      <li class="nav__level-1__element" data-nav-level-1-item>
+      <li class="nav__level-1__element is-active" data-nav-level-1-item>
         <a href="#" class="nav__level-1__element__heading" data-nav-level-1-heading>
           <span class="nav__level-1__element__text">Life stages</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="nav__arrow" focusable="false">
@@ -180,58 +180,222 @@
               <li class="nav__level-2__category">
                 <a href="#">Children &amp; young people</a>
 
-                <%# third_level(
-                  'Children &amp; young people',
-                  'Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future'
-                ).html_safe %>
-              </li>
-              <li class="nav__level-2__category">
-                <a href="#">Young adults</a>
+                <div class="nav__level-3 is-active">
+                  <div class="l-constrained">
+                    <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
 
-                <%# third_level(
-                  'Young adults',
-                  'Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future'
-                ).html_safe %>
-              </li>
-              <li class="nav__level-2__category">
-                <a href="#">Working age adults</a>
+                    <a href="#" class="nav__level-3__heading">
+                      <span class="nav__level-3__heading__text">Children &amp; young people</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow nav__arrow" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                      </svg>
+                    </a>
 
-                <%# third_level(
-                  'Working age adults',
-                  'Working life starts when we enter the workplace, and stretches through to retirement – covering many life events from ages 16 to 70'
-                ).html_safe %>
+                    <ul class="nav__level-3__categories">
+                      <li  class="nav__level-3__category">
+                        <a href="#">Find out more about children and young people</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Children and young people Steering Group</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Steering group updates</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Action Plans</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
-              <li class="nav__level-2__category">
-                <a href="#">Older people in retirement</a>
 
-                <%# third_level(
-                  'Older people in retirement',
-                  'Here we focus on people who are already retired and drawing an income from pensions and other savings'
-                ).html_safe %>
+              <li class="nav__level-2__category">
+                <a href="#">Young Adults</a>
+
+                <div class="nav__level-3">
+                  <div class="l-constrained">
+                    <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
+
+                    <a href="#" class="nav__level-3__heading">
+                      <span class="nav__level-3__heading__text">Young Adults</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow nav__arrow" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                      </svg>
+                    </a>
+
+                    <ul class="nav__level-3__categories">
+                      <li  class="nav__level-3__category">
+                        <a href="#">Find out more about young adults</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Young Adults steering group</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Steering group updates</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Young Adults action plans</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
+
+              <li class="nav__level-2__category">
+                <a href="#">Working Age Adults</a>
+
+                <div class="nav__level-3">
+                  <div class="l-constrained">
+                    <p class="nav__level-3__description">Working life starts when we enter the workplace, and stretches through to retirement – covering many life events from ages 16 to 70</p>
+
+                    <a href="#" class="nav__level-3__heading">
+                      <span class="nav__level-3__heading__text">Working Age Adults</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow nav__arrow" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                      </svg>
+                    </a>
+
+                    <ul class="nav__level-3__categories">
+                      <li  class="nav__level-3__category">
+                        <a href="#">Find out more about working age adults</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Working Age Adults</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Steering group updates</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Working Age Adults Action Plans</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav__level-2__category">
+                <a href="#">Older People in Retirement</a>
+
+                <div class="nav__level-3">
+                  <div class="l-constrained">
+                    <p class="nav__level-3__description">Here we focus on people who are already retired and drawing an income from pensions and other savings</p>
+
+                    <a href="#" class="nav__level-3__heading">
+                      <span class="nav__level-3__heading__text">Older People in Retirement</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow nav__arrow" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                      </svg>
+                    </a>
+
+                    <ul class="nav__level-3__categories">
+                      <li  class="nav__level-3__category">
+                        <a href="#">Find out more about older people in retirement</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Older People in Retirement</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Steering group updates</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Older People in Retirement</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
               <li class="nav__level-2__category">
                 <a href="#">People planning to retire</a>
 
-                <%# third_level(
-                  'People planning to retire',
-                  'People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.'
-                ).html_safe %>
-              </li>
-              <li class="nav__level-2__category">
-                <a href="#">People in financial difficulties</a>
+                <div class="nav__level-3">
+                  <div class="l-constrained">
+                    <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
 
-                <%# third_level(
-                  'People in financial difficulties',
-                  'People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.'
-                ).html_safe %>
+                    <a href="#" class="nav__level-3__heading">
+                      <span class="nav__level-3__heading__text">People planning to retire</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow nav__arrow" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                      </svg>
+                    </a>
+
+                    <ul class="nav__level-3__categories">
+                      <li  class="nav__level-3__category">
+                        <a href="#">Find out more about people planning to retire</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">People planning to retire</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Steering group updates</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">People planning to retire action plans</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
+
+              <li class="nav__level-2__category">
+                <a href="#">People in Financial difficulties</a>
+
+                <div class="nav__level-3">
+                  <div class="l-constrained">
+                    <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
+
+                    <a href="#" class="nav__level-3__heading">
+                      <span class="nav__level-3__heading__text">People in Financial difficulties</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow nav__arrow" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                      </svg>
+                    </a>
+
+                    <ul class="nav__level-3__categories">
+                      <li  class="nav__level-3__category">
+                        <a href="#">Find out more about people in financial difficulties</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Debt advice steering group</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Steering Group updates</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Debt Advice action plans</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
               <li class="nav__level-2__category">
                 <a href="#">People trying to save</a>
 
-                <%# third_level(
-                  'People trying to save',
-                  'As a nation, very few of us have enough savings. This section looks at ways to tackle this'
-                ).html_safe %>
+                <div class="nav__level-3">
+                  <div class="l-constrained">
+                    <p class="nav__level-3__description">As a nation, very few of us have enough savings. This section looks at ways to tackle this</p>
+
+                    <a href="#" class="nav__level-3__heading">
+                      <span class="nav__level-3__heading__text">People trying to save</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow--narrow nav__arrow" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow--narrow"></use>
+                      </svg>
+                    </a>
+
+                    <ul class="nav__level-3__categories">
+                      <li  class="nav__level-3__category">
+                        <a href="#">Find out more about people trying to save</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Savings Steering Group</a>
+                      </li>
+                      <li  class="nav__level-3__category">
+                        <a href="#">Steering Group updates</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -379,4 +543,5 @@
     </ul>
   </div>
 </nav>
+
 <div class="mobile-nav-overlay" data-mobile-nav-overlay=""></div>
