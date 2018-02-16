@@ -8,15 +8,11 @@
     </svg>
     <h3 class="download-box__title">Downloads</h3>
     <ul class="download-box__list">
-      <li class="download-box__list-item">
-        <a href="http://www.fincap.org.uk" class="download-box__list-item-link">Download box content 1</a>
-      </li>
-      <li class="download-box__list-item">
-        <a href="http://www.fincap.org.uk" class="download-box__list-item-link">Download box content 2</a>
-      </li>
-      <li class="download-box__list-item">
-        <a href="http://www.fincap.org.uk" class="download-box__list-item-link">Download box content 3</a>
-      </li>
+      <%- 3.times do |n| %>
+        <li class="download-box__list-item">
+          <a href="http://www.fincap.org.uk" class="download-box__list-item-link"><%= "Download box content #{n+1}" %></a>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>
@@ -30,12 +26,6 @@
     <ul class="download-box__list">
       <li class="download-box__list-item">
         <a href="http://www.fincap.org.uk" class="download-box__list-item-link">Download box content 1</a>
-      </li>
-      <li class="download-box__list-item">
-        <a href="http://www.fincap.org.uk" class="download-box__list-item-link">Download box content 2</a>
-      </li>
-      <li class="download-box__list-item">
-        <a href="http://www.fincap.org.uk" class="download-box__list-item-link">Download box content 3</a>
       </li>
     </ul>
   </div>
