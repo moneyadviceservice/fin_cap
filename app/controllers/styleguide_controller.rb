@@ -15,7 +15,8 @@ class StyleguideController < ApplicationController
       'Bordered box' => 'borderedbox',
       'Latest news' => 'latestnews',
       'Download box' => 'downloads',
-      'Feedback' => 'feedback'
+      'Feedback' => 'feedback',
+      'Large call to action' => 'largecta'
     }
   end
 

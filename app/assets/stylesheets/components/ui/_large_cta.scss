@@ -1,0 +1,36 @@
+.large-cta {
+  @include body(16, 10);
+  @extend %clearfix;
+  @extend %border-radius;
+  background-color: $primary-blue;
+  padding: $baseline-unit*4 $baseline-unit*2;
+  display: block;
+  font-weight: 500;
+  position: relative;
+
+  &:not([href*="#{$site}"]):after {
+    position: absolute;
+    background-image: image-url('icons/svg/new-window.svg');
+    height: 20px;
+    top: $baseline-unit*2;
+    right: $baseline-unit*2;
+  }
+
+  &:focus {
+    outline-color: $primary-orange;
+  }
+}
+
+.large-cta__icon {
+  fill: $color-white;
+  width: 30px;
+  height: 40px;
+  display: inline-block;
+}
+
+.large-cta__text {
+  color: $color-white;
+  display: inline-block;
+  vertical-align: 15px;
+  margin-left: $baseline-unit;
+}
