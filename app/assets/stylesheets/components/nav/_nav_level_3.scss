@@ -1,0 +1,6 @@
+.nav__level-3 {
+  &.is-active {
+    visibility: visible;
+    transform: translateX(100%);
+  }
+}

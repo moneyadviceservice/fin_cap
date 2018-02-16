@@ -1,6 +1,9 @@
+// nav global variables
 $nav-transition-duration: 300ms;
+$max-cols: 7; // the maximum number of categories in the subnav
+$gutter: $default-gutter / 2; // the space between category columns
 
-// probably should eventually be in header styles
+// probably should be in header styles
 .mobile-nav-button {
   display: block;
 
@@ -10,6 +13,11 @@ $nav-transition-duration: 300ms;
 }
 
 .nav {
+  // probably should be in base styles
+  & * {
+    box-sizing: border-box;
+  }
+
   // temporarily over-ride the external link icon
   a:not([href*="fincap.org.uk"]):after {
     background-image: none;
@@ -92,6 +100,14 @@ $nav-transition-duration: 300ms;
 
   &.is-active {
     transform: translateX(-100%);
+
+    @include respond-to($mq-m) {
+      transform: none;
+    }
+  }
+
+  &.is-open {
+    transform: translateX(-200%);
 
     @include respond-to($mq-m) {
       transform: none;
