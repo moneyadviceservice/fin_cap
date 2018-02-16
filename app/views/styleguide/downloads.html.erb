@@ -1,0 +1,32 @@
+<h1>UI Components</h1>
+<h2>Download box</h2>
+<h3 class="styleguide__subheading">Default download box</h3>
+<div class="styleguide__example">
+  <div class="download-box">
+    <svg xmlns="http://www.w3.org/2000/svg" class="download-box__icon svg-icon svg-icon--download" focusable="false">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--download"></use>
+    </svg>
+    <h3 class="download-box__title">Downloads</h3>
+    <ul class="download-box__list">
+      <%- 3.times do |n| %>
+        <li class="download-box__list-item">
+          <a href="http://www.fincap.org.uk" class="download-box__list-item-link"><%= "Download box content #{n+1}" %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="download-box">
+    <svg xmlns="http://www.w3.org/2000/svg" class="download-box__icon svg-icon svg-icon--download" focusable="false">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--download"></use>
+    </svg>
+    <h3 class="download-box__title">Downloads</h3>
+    <ul class="download-box__list">
+      <li class="download-box__list-item">
+        <a href="http://www.fincap.org.uk" class="download-box__list-item-link">Download box content 1</a>
+      </li>
+    </ul>
+  </div>
+</xmp>

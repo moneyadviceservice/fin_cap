@@ -1,34 +1,17 @@
 <ul class="styleguide-nav">
   <li class="styleguide-nav__title">Base<li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/layout" class="styleguide-nav__item-link">Layout</a>
-  </li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/typography" class="styleguide-nav__item-link">Typography</a>
-  </li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/links" class="styleguide-nav__item-link">Links</a>
-  </li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/lists" class="styleguide-nav__item-link">Lists</a>
-  </li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/colours" class="styleguide-nav__item-link">Colours</a>
-  </li>
+  <%- @links.each do |nav_item| %>
+    <li class="styleguide-nav__item">
+      <a href=<%= "/styleguide/#{nav_item.downcase}" %> class="styleguide-nav__item-link"><%= nav_item %></a>
+    </li>
+  <% end %>
 </ul>
 
 <ul class="styleguide-nav">
   <li class="styleguide-nav__title">UI Components<li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/teaser" class="styleguide-nav__item-link">Teaser box</a>
-  </li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/hero" class="styleguide-nav__item-link">Hero image</a>
-  </li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/borderedbox" class="styleguide-nav__item-link">Bordered box</a>
-  </li>
-  <li class="styleguide-nav__item">
-    <a href="/styleguide/latestnews" class="styleguide-nav__item-link">Latest News</a>
-  </li>
+  <%- @components.each do |label, path| %>
+    <li class="styleguide-nav__item">
+      <a href=<%= "/styleguide/#{path}" %> class="styleguide-nav__item-link"><%= label %></a>
+    </li>
+  <% end %>
 </ul>
