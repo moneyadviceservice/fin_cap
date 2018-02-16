@@ -1,0 +1,22 @@
+.feedback-box {
+  background-color: $primary-blue;
+  padding: $baseline-unit*2;
+  color: $color-white;
+}
+
+.feedback-box__title {
+  margin: 0 0 $baseline-unit*3;
+}
+
+a.feedback-box__text{
+  color: $color-white;
+  display: inline-block;
+  vertical-align: 15px;
+  margin-left: $baseline-unit;
+}
+
+.feedback-box__icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}

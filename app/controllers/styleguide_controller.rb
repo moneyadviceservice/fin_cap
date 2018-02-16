@@ -14,7 +14,8 @@ class StyleguideController < ApplicationController
       'Hero image' => 'hero',
       'Bordered box' => 'borderedbox',
       'Latest news' => 'latestnews',
-      'Download box' => 'downloads'
+      'Download box' => 'downloads',
+      'Feedback' => 'feedback'
     }
   end
 
