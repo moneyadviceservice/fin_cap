@@ -10,6 +10,9 @@ var Nav = function($el) {
   this.$navLevel_1_Heading = this.$nav.find('[data-nav-level-1-heading]');
   this.$navLevel_2 = this.$nav.find('[data-nav-level-2]');
   this.$navLevel_2_Heading = this.$nav.find('[data-nav-level-2-heading]');
+  this.$navLevel_2_Extended_Heading = this.$nav.find('[data-nav-level-2-extended-heading]');
+  this.$navLevel_3 = this.$nav.find('[data-nav-level-3]');
+  this.$navLevel_3_Heading = this.$nav.find('[data-nav-level-3-heading]');
   this.$mobileNavClose = this.$nav.find('[data-mobile-nav-close]');
 };
 
@@ -69,7 +72,7 @@ Nav.prototype._setUpMobileInteraction = function() {
     // if (mediaQueries.atSmallViewport()) {
     if (self.viewportWidth < self.smallViewport) {
       e.preventDefault();
-      self._toggleMobileSubNav(this);
+      self._toggleMobileLevel2(this);
     }
   });
 
@@ -87,6 +90,16 @@ Nav.prototype._setUpMobileInteraction = function() {
     e.preventDefault();
     self._toggleMobileNav();
   });
+
+  this.$navLevel_2_Extended_Heading.click(function(e) {
+    e.preventDefault();
+    self._toggleMobileLevel3(this);
+  });
+
+  this.$navLevel_3_Heading.click(function(e) {
+    e.preventDefault();
+    self._toggleMobileLevel3(this);
+  })
 };
 
 Nav.prototype._toggleMobileNav = function() {
@@ -106,8 +119,8 @@ Nav.prototype._toggleMobileNav = function() {
   }
 };
 
-Nav.prototype._toggleMobileSubNav = function(index) {
-  console.log('_toggleMobileSubNav!');
+Nav.prototype._toggleMobileLevel2 = function(index) {
+  console.log('_toggleMobileLevel2!');
 
   var siblingsNav = $(index).siblings().get(0);
 
@@ -116,6 +129,13 @@ Nav.prototype._toggleMobileSubNav = function(index) {
     .parents('[data-nav-level-1]').toggleClass('is-active');
 
   $(siblingsNav).removeClass('is-hidden');
+};
+
+Nav.prototype._toggleMobileLevel3 = function(index) {
+  console.log('_toggleMobileLevel3!');
+
+  this.$navLevel_1.toggleClass('is-open');
+  $(index).siblings('[data-nav-level-3]').toggleClass('is-active');
 };
 
 Nav.prototype._returnMobileNav = function(index) {
