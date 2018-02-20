@@ -1,0 +1,20 @@
+.btn {
+  @extend %border-radius;
+  border: 0;
+  cursor: pointer;
+  padding: $baseline-unit*2;
+  font-size: 1rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+
+  @include respond-to($mq-m) {
+    width: auto;
+  }
+}
+
+.btn--primary {
+  background-color: $primary-blue-dark;
+  color: $color-white;
+}

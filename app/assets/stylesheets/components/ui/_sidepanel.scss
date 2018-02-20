@@ -1,0 +1,69 @@
+.sidepanel {
+  background-color: $color-blue-lighter;
+  padding: $baseline-unit*2;
+  margin-bottom: $baseline-unit;
+}
+
+.sidepanel__title {
+  @include body(20, 24);
+  color: $primary-blue-dark;
+  font-weight: 500;
+  padding: 0 0 $baseline-unit*2;
+  margin: 0;
+}
+
+.sidepanel__subtitle {
+  @include body(18, 24);
+  color: $primary-blue-dark;
+  font-weight: 500;
+  padding: 0;
+  margin: $baseline-unit*2 0;
+}
+
+.sidepanel__list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.sidepanel__list-item {
+  &:before {
+    background-color: $primary-blue-dark;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin-right: $baseline-unit;
+    margin-bottom: 2px;
+    height: 5px;
+    width: 5px;
+  }
+}
+
+.sidepanel__list-item-link {
+  text-decoration: underline;
+}
+
+// Form Elements
+
+.sidepanel__text-field {
+  @extend %border-radius;
+  width: calc(100% - #{$baseline-unit*4});
+  border: 0;
+  margin-bottom: $baseline-unit;
+  padding: $baseline-unit*2;
+  font-size: 1rem;
+}
+
+.sidepanel__checkbox,
+.sidepanel__radio {
+  display: block;
+  padding: $baseline-unit/2 0;
+}
+
+// Forces full width on larger screen sizes
+.sidepanel__btn {
+  @include respond-to($mq-m) {
+    width: 100%;
+    margin-bottom: $baseline-unit;
+  }
+}
