@@ -9,28 +9,15 @@
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
       </svg>
       <ul class="latest-news__list">
-        <li class="latest-news__list-item">
-          <p class="latest-news__list-item__date">2 November 2017</p>
-          <p class="latest-news__list-item__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis arcu.
-          </p>
-          <a href="http://www.fincap.org.uk" class="latest-news__list-item__cta">Read more</a>
-        </li>
-
-        <li class="latest-news__list-item">
-          <p class="latest-news__list-item__date">2 November 2017</p>
-          <p class="latest-news__list-item__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis arcu.
-          </p>
-          <a href="http://www.fincap.org.uk" class="latest-news__list-item__cta">Read more</a>
-        </li>
-        <li class="latest-news__list-item">
-          <p class="latest-news__list-item__date">2 November 2017</p>
-          <p class="latest-news__list-item__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis arcu.
-          </p>
-          <a href="http://www.fincap.org.uk" class="latest-news__list-item__cta">Read more</a>
-        </li>
+        <%- 3.times.each do |_| %>
+          <li class="latest-news__list-item">
+            <p class="latest-news__list-item__date">2 November 2017</p>
+            <p class="latest-news__list-item__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis arcu.
+            </p>
+            <a href="http://www.fincap.org.uk" class="latest-news__list-item__cta">Read more</a>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
