@@ -1,6 +1,7 @@
 .nav__level-3 {
   &.is-active {
     visibility: visible;
+    transition-delay: 0s;
     transform: translateX(100%);
 
     @include respond-to($mq-m) {
@@ -83,11 +84,13 @@
 }
 
 .nav__level-3__subcategories {
-  list-style: none;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: (1 / ($max-cols - 1)) * 100%;
-  z-index: 5;
+  @include respond-to($mq-m) {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: (1 / ($max-cols - 1)) * 100%;
+    z-index: 5;
+  }
 }

@@ -106,7 +106,8 @@
 }
 
 .nav__level-2__categories,
-.nav__level-3__categories {
+.nav__level-3__categories,
+.nav__level-3__subcategories {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -127,7 +128,7 @@
 
 .nav__level-2__category,
 .nav__level-3__category {
-  padding: $baseline-unit*2;
+  padding: 0 $baseline-unit*2;
   margin-bottom: 0;
 
   @include respond-to($mq-m) {
@@ -208,7 +209,9 @@
   }
 
   .nav__level-2__category__heading {
-    width: (1 / $max-cols) * 100%;
+    @include respond-to($mq-m) {
+      width: (1 / $max-cols) * 100%;
+    }
   }
 }
 
@@ -308,6 +311,7 @@
 }
 
 .nav__level-2__category__heading {
+  position: relative;
   display: block;
   float: none;
   padding: 0 0 $baseline-unit;
