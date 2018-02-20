@@ -16,7 +16,8 @@ class StyleguideController < ApplicationController
       'Latest news' => 'latestnews',
       'Download box' => 'downloads',
       'Feedback' => 'feedback',
-      'Large call to action' => 'largecta'
+      'Large call to action' => 'largecta',
+      'Side panel' => 'sidepanel'
     }
   end
 

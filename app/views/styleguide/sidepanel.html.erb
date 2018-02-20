@@ -1,0 +1,157 @@
+<h1>UI Components</h1>
+<h2>Side Panel</h2>
+<p>The side panel UI component can be used in a number of places with varying content.</p>
+<h3 class="styleguide__subheading">Sidepanel container</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    This is a sidepanel
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="sidepanel">
+    This is a sidepanel
+  </div>
+</xmp>
+<h3 class="styleguide__subheading">Title &amp; Sub-title</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <h4 class="sidepanel__title">Title</h4>
+    <h5 class="sidepanel__subtitle">Sub-title</h5>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <h4 class="sidepanel__title">Title</h4>
+  <h5 class="sidepanel__subtitle">Sub-title</h5>
+</xmp>
+<h3 class="styleguide__subheading">Link list</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <ul class="sidepanel__list">
+      <li class="sidepanel__list-item">
+        <a href="http://www.fincap.org.uk" class="sidepanel__list-item-link">
+          List item
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <ul class="sidepanel__list">
+    <li class="sidepanel__list-item">
+      <a href="#" class="sidepanel__list-item-link">
+        List item
+      </a>
+    </li>
+  </ul>
+</xmp>
+<h3 class="styleguide__subheading">Paragraph</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <p>Uses default paragraph styles and spacing</p>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <p>Uses default paragraph styles and spacing</p>
+</xmp>
+
+<h2>Form Elements</h2>
+<h3 class="styleguide__subheading">Text input</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <input type="text" class="sidepanel__text-field" />
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <input type="text" class="sidepanel__text-field" />
+</xmp>
+<h3 class="styleguide__subheading">Input button</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <button class="btn btn--primary sidepanel__btn">
+      Input button
+    </button>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <button class="btn btn--primary sidepanel__btn">
+    Input button
+  </button>
+</xmp>
+<h3 class="styleguide__subheading">Checkboxes</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <label class="sidepanel__checkbox">
+      <input type="checkbox"> Checkbox Label
+    </label>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <label class="sidepanel__checkbox">
+    <input type="checkbox"> Checkbox Label
+  </label>
+</xmp>
+<h3 class="styleguide__subheading">Radio buttons</h3>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <div class="sidepanel__radio">
+      <input type="radio" id="sample_radio_button" name="name" value="label_value">
+      <label for="sample_radio_button">label value</label>
+    </div>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="sidepanel__radio">
+    <input type="radio" id="sample_radio_button" name="name" value="label_value">
+    <label for="sample_radio_button">label value</label>
+  </div>
+</xmp>
+<h2>Example usage</h2>
+<div class="styleguide__example">
+  <div class="sidepanel">
+    <h4 class="sidepanel__title">Title</h4>
+    <h5 class="sidepanel__subtitle">Form</h5>
+    <input type="text" class="sidepanel__text-field" />
+    <button class="btn btn--primary sidepanel__btn">
+      Input button
+    </button>
+    <h5 class="sidepanel__subtitle">Generic content</h5>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia egestas sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus quis turpis rhoncus congue.
+    </p>
+    <h5 class="sidepanel__subtitle">Link list</h5>
+    <ul class="sidepanel__list">
+      <% 5.times do %>
+        <li class="sidepanel__list-item">
+          <a href="https://www.fincap.org.uk" class="sidepanel__list-item-link">
+            List item
+          </a>
+        </li>
+      <% end %>
+    </ul>
+    <h5 class="sidepanel__subtitle">Checkboxes</h5>
+    <% 5.times do %>
+      <label class="sidepanel__checkbox">
+        <input type="checkbox"> Checkbox
+      </label>
+    <% end %>
+    <h5 class="sidepanel__subtitle">Radio buttons</h5>
+    <% 5.times do %>
+      <div class="sidepanel__radio">
+        <input type="radio" id="sample_radio_button" name="name" value="label_value">
+        <label for="sample_radio_button">Radio option</label>
+      </div>
+    <% end %>
+  </div>
+  <div class="sidepanel">
+    <h4 class="sidepanel__title">Additional sidepanel</h4>
+    <p>To represent spacing when multiple panels are present.</p>
+  </div>
+</div>
