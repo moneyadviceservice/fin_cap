@@ -93,12 +93,12 @@ Nav.prototype._setUpMobileInteraction = function() {
 
   this.$navLevel_2_Extended_Heading.click(function(e) {
     e.preventDefault();
-    self._toggleMobileLevel3(this);
+    self._openMobileLevel3(this);
   });
 
   this.$navLevel_3_Heading.click(function(e) {
     e.preventDefault();
-    self._toggleMobileLevel3(this);
+    self._closeMobileLevel3(this);
   })
 };
 
@@ -131,11 +131,18 @@ Nav.prototype._toggleMobileLevel2 = function(index) {
   $(siblingsNav).removeClass('is-hidden');
 };
 
-Nav.prototype._toggleMobileLevel3 = function(index) {
-  console.log('_toggleMobileLevel3!');
+Nav.prototype._openMobileLevel3 = function(index) {
+  console.log('_openMobileLevel3!');
 
   this.$navLevel_1.toggleClass('is-open');
   $(index).siblings('[data-nav-level-3]').toggleClass('is-active');
+};
+
+Nav.prototype._closeMobileLevel3 = function(index) {
+  console.log('_closeMobileLevel3!');
+
+  this.$navLevel_1.toggleClass('is-open');
+  $(index).parents('[data-nav-level-3]').toggleClass('is-active');
 };
 
 Nav.prototype._returnMobileNav = function(index) {
@@ -152,58 +159,60 @@ Nav.prototype._returnMobileNav = function(index) {
 * Set up events for desktop nav
 */
 Nav.prototype._setUpDesktopInteraction = function() {
-  console.log('_setUpDesktopInteraction!');
+  if (this.viewportWidth >= this.smallViewport) {
+    console.log('_setUpDesktopInteraction!');
 
-  var self = this;
+    var self = this;
 
-  // touch event outside of global nav triggers close subnav
-  // if (!mediaQueries.atSmallViewport()) {
-  if (!self.viewportWidth < self.smallViewport) {
-    $(document).on('touchstart', function(e) {
-      if ($(e.target).parents(self.$nav).length == 0) {
-        self.$navLevel_1_item.removeClass('is-active');
-      }
-    })
-  }
-
-  this.$navLevel_1_Heading
-    .mouseenter(function(e) {
-      window.clearTimeout(self.timeout);
-
-      self.timeout = window.setTimeout(function() {
-        // self._sendHoverAnalytics($(e.target).text());
-        self._openDesktopSubNav($(e.target));
-      }, self.delay);
-    })
-    .mousedown(function(e) {
-      e.preventDefault();
-    }).on('touchstart', function(e) {
-      // remove hover event handler if touch event detected
-      $(e.target).parents('[data-nav-level-1-heading]').off('mouseenter')
-    }).on('touchend', function(e) {
-      // if (!mediaQueries.atSmallViewport()) {
-      if (!self.viewportWidth < self.smallViewport) {
-        var index = $(e.target).parents('[data-nav-level-1-heading]');
-        // touch event on clump heading triggers open/close subnav
-        if ($(e.target).parents('[data-nav-level-1]').hasClass('is-active')) {
-          self._closeDesktopSubNav(index);
-        } else {
-          self._openDesktopSubNav(index);
+    // touch event outside of global nav triggers close subnav
+    // if (!mediaQueries.atSmallViewport()) {
+    if (!self.viewportWidth < self.smallViewport) {
+      $(document).on('touchstart', function(e) {
+        if ($(e.target).parents(self.$nav).length == 0) {
+          self.$navLevel_1_item.removeClass('is-active');
         }
-      }
-    });
+      })
+    }
 
-  this.$nav
-    .mouseleave(function() {
-      window.clearTimeout(self.timeout);
+    this.$navLevel_1_Heading
+      .mouseenter(function(e) {
+        window.clearTimeout(self.timeout);
 
-      self.closeNavTimeout = window.setTimeout(function() {
-        self._closeDesktopSubNav();
-      }, self.delay);
-    })
-    .mouseenter(function() {
-      window.clearTimeout(self.closeNavTimeout);
-    });
+        self.timeout = window.setTimeout(function() {
+          // self._sendHoverAnalytics($(e.target).text());
+          self._openDesktopSubNav($(e.target));
+        }, self.delay);
+      })
+      .mousedown(function(e) {
+        e.preventDefault();
+      }).on('touchstart', function(e) {
+        // remove hover event handler if touch event detected
+        $(e.target).parents('[data-nav-level-1-heading]').off('mouseenter')
+      }).on('touchend', function(e) {
+        // if (!mediaQueries.atSmallViewport()) {
+        // if (!self.viewportWidth < self.smallViewport) {
+          var index = $(e.target).parents('[data-nav-level-1-heading]');
+          // touch event on clump heading triggers open/close subnav
+          if ($(e.target).parents('[data-nav-level-1]').hasClass('is-active')) {
+            self._closeDesktopSubNav(index);
+          } else {
+            self._openDesktopSubNav(index);
+          }
+        // }
+      });
+
+    this.$nav
+      .mouseleave(function() {
+        window.clearTimeout(self.timeout);
+
+        self.closeNavTimeout = window.setTimeout(function() {
+          self._closeDesktopSubNav();
+        }, self.delay);
+      })
+      .mouseenter(function() {
+        window.clearTimeout(self.closeNavTimeout);
+      });
+  };
 };
 
 /**
