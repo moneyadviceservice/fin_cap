@@ -1,0 +1,57 @@
+<h1>UI Components</h1>
+<h2>Evidence Types</h2>
+<p>Developer notes: This component uses a partial view for the icon and content which expects values.</p>
+<p>To render each of the icons and content call the partial from "shared/evidence_types.html.erb" and include the values:</p>
+<ul>
+  <li>render 'shared/evidence_types', <strong>icon:</strong> 'tick', <strong>text:</strong> 'Text content'</li>
+  <li>render 'shared/evidence_types', <strong>icon:</strong> 'cross', <strong>text:</strong> 'Text content'</li>
+</ul>
+<h3 class="styleguide__subheading">Default States</h3>
+<div class="styleguide__example">
+  <ul class="evidence-types">
+    <li class="evidence-types__item">
+      <%= render 'shared/evidence_types', icon: 'tick', text: 'Tick Icon' %>
+    </li>
+    <li class="evidence-types__item">
+      <%= render 'shared/evidence_types', icon: 'cross', text: 'Cross Icon' %>
+    </li>
+  </ul>
+</div>
+<h3 class="styleguide__subheading">HTML Code</h3>
+<xmp>
+  <ul class="evidence-types">
+    <li class="evidence-types__item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="evidence-types__item-icon evidence-types__item-icon--tick svg-icon svg-icon--evidence-tick" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--evidence-tick"></use>
+      </svg>
+      <p class="evidence-types__item-content">Tick icon</p>
+    </li>
+    <li class="evidence-types__item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="evidence-types__item-icon evidence-types__item-icon--cross svg-icon svg-icon--evidence-cross" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--evidence-cross"></use>
+      </svg>
+      <p class="evidence-types__item-content">Cross icon</p>
+    </li>
+  </ul>
+</xmp>
+<h2>Example Usage</h2>
+<h3 class="styleguide__subheading">Default States</h3>
+<div class="styleguide__example">
+  <ul class="evidence-types">
+    <li class="evidence-types__item">
+      <%= render 'shared/evidence_types', icon: 'cross', text: 'Programme Theory' %>
+    </li>
+    <li class="evidence-types__item">
+      <%= render 'shared/evidence_types', icon: 'tick', text: 'Measured Outcomes' %>
+    </li>
+    <li class="evidence-types__item">
+      <%= render 'shared/evidence_types', icon: 'tick', text: 'Causality' %>
+    </li>
+    <li class="evidence-types__item">
+      <%= render 'shared/evidence_types', icon: 'cross', text: 'Process Evaluation' %>
+    </li>
+    <li class="evidence-types__item">
+      <%= render 'shared/evidence_types', icon: 'cross', text: 'Value for money' %>
+    </li>
+  </ul>
+</div>

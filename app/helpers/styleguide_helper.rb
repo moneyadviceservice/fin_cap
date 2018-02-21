@@ -36,7 +36,8 @@ module StyleguideHelper
     'Download box' => 'downloads',
     'Feedback'     => 'feedback',
     'Large call to action' => 'largecta',
-    'Side panel' => 'sidepanel'
+    'Side panel'           => 'sidepanel',
+    'Evidence Type Icons'  => 'evidence_types'
   }.freeze
 
   LINKS = %w[Layout Typography Links Lists Colours].freeze
