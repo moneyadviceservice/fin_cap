@@ -1,0 +1,85 @@
+<h1>Page Specific Components</h1>
+<h2>Search Results</h2>
+<h3 class="styleguide__subheading">Default search result</h3>
+<div class="styleguide__example">
+  <ul class="search-results">
+    <li class="search-results__item">
+      <p><a href="https://www.fincap.org.uk" class="search-results__title">{title}</a></p>
+      <p class="search-results__description">{short_description}</p>
+      <p class="search-results__evidence-type">
+        Evidence Type: 
+        <a href="#" class="search-results__evidence-type-link">
+           {Evidence type}
+        </a>
+      </p>
+      <%= render 'shared/evidence_types', icon: 'tick', text: 'Evidence tick' %>
+      <%= render 'shared/evidence_types', icon: 'cross', text: 'Evidence cross' %>
+      <p>Topics: {topic}</p>
+      <p>Country/Countries: {country}</p>
+      <p>Year of publication: {publication_year}</p>
+    </li>
+  </ul>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <ul class="search-results">
+    <li class="search-results__item">
+      <p><a href="#" class="search-results__title">{title}</a></p>
+      <p class="search-results__description">{short_description}</p>
+      <p class="search-results__evidence-type">
+        Evidence Type: 
+        <a href="#" class="search-results__evidence-type-link">
+           {Evidence type}
+        </a>
+      </p>
+      // Evidence type icons
+      <p>Topics: {topic}</p>
+      <p>Country/Countries: {country}</p>
+      <p>Year of publication: {publication_year}</p>
+    </li>
+  </ul>
+</xmp>
+<h2>NEW label</h2>
+<p>New articles can be identified as being new by adding the search-results__item--new modifier class to the search-results__item element:</p>
+<ul>
+  <li>class="search-results__item <strong>search-results__item--new</strong>"</li>
+</ul>
+<h3 class="styleguide__subheading">Search result with NEW label</h3>
+<div class="styleguide__example">
+  <ul class="search-results">
+    <li class="search-results__item search-results__item--new">
+      <p><a href="https://www.fincap.org.uk" class="search-results__title">{title}</a></p>
+      <p class="search-results__description">{short_description}</p>
+      <p class="search-results__evidence-type">
+        Evidence Type: 
+        <a href="#" class="search-results__evidence-type-link">
+           {Evidence type}
+        </a>
+      </p>
+      <%= render 'shared/evidence_types', icon: 'tick', text: 'Evidence tick' %>
+      <%= render 'shared/evidence_types', icon: 'cross', text: 'Evidence cross' %>
+      <p>Topics: {topic}</p>
+      <p>Country/Countries: {country}</p>
+      <p>Year of publication: {publication_year}</p>
+    </li>
+  </ul>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <ul class="search-results">
+    <li class="search-results__item search-results__item--new">
+      <p><a href="#" class="search-results__title">{title}</a></p>
+      <p class="search-results__description">{short_description}</p>
+      <p class="search-results__evidence-type">
+        Evidence Type: 
+        <a href="#" class="search-results__evidence-type-link">
+           {Evidence type}
+        </a>
+      </p>
+      // Evidence type icons
+      <p>Topics: {topic}</p>
+      <p>Country/Countries: {country}</p>
+      <p>Year of publication: {publication_year}</p>
+    </li>
+  </ul>
+</xmp>

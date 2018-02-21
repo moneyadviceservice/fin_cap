@@ -40,5 +40,9 @@ module StyleguideHelper
     'Evidence Type Icons'  => 'evidence_types'
   }.freeze
 
+  PAGE_SPECIFIC = {
+    'Search Results'   => 'search_results'
+  }.freeze
+
   LINKS = %w[Layout Typography Links Lists Colours].freeze
 end
