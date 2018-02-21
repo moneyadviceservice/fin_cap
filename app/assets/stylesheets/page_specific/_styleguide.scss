@@ -190,3 +190,22 @@ xmp {
 .styleguide__hero {
   background-image: image-url('styleguide/hero-sample.jpg');
 }
+
+.styleguide__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.styleguide__list-item {
+  margin: 0;
+  padding: 0;
+}
+
+a.styleguide__anchor {
+  list-style: none;
+
+  &::after {
+    display: none;
+  }
+}

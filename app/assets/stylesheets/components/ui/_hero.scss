@@ -47,3 +47,41 @@
     color: $color-black;
   }
 }
+
+.hero__icon {
+  width: 70px;
+  height: 70px;
+  margin-left: $baseline-unit*3;
+}
+
+.hero-evidence-hub {
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: $baseline-unit*10 0;
+
+  @include respond-to($mq-m) {
+    background-position: right top;
+  }
+}
+
+.hero-evidence-hub__title {
+  @include body(20, 28);
+  color: $color-white;
+  font-weight: 500;
+  margin: 0 0 0 $baseline-unit*3;
+  text-transform: capitalize;
+}
+
+.hero-evidence-hub--insight {
+  background-image: image-url('headers/insight-header.png');
+}
+
+.hero-evidence-hub--review {
+  background-image: image-url('headers/review-header.png');
+}
+
+.hero-evidence-hub--evaluation {
+  background-image: image-url('headers/evaluation-header.png');
+}

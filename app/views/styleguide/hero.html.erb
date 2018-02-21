@@ -1,5 +1,15 @@
 <h1>UI Components</h1>
 <h2>Hero section</h2>
+<p>There are 2 different types of hero component, a general hero which contains header and other content and another specific to certain page types:</p>
+<ul class="styleguide__list">
+  <li class="styleguide__list-item">
+    <a href="#general" class="styleguide__anchor">General Hero Components</a>
+  </li>
+  <li>
+    <a href="#evidence_hub" class="styleguide__anchor">Evidence Hub Hero Components</a>
+  </li>
+</ul>
+<h2 id="general">General Hero Components</h2>
 <h3 class="styleguide__subheading">Default title</h3>
 <div class="styleguide__example">
   <div class="hero styleguide__hero">
@@ -102,5 +112,56 @@
     <h1 class="hero__heading">
       Main heading of the page
     </h1>
+  </div>
+</xmp>
+
+<h2 id="evidence_hub">Evidence Hub Hero Components</h2>
+<p>
+  Developer notes: There are 3 variants of evidence hub hero component, 
+  to render each call the partial 'shared/evidence_hub_hero' and pass the corresponding value for the required type:
+</p>
+<ul>
+  <li>render 'shared/evidence_hub_hero', <strong>type:</strong> 'insight'</li>
+  <li>render 'shared/evidence_hub_hero', <strong>type:</strong> 'review'</li>
+  <li>render 'shared/evidence_hub_hero', <strong>type:</strong> 'evaluation'</li>
+</ul>
+
+<h3 class="styleguide__subheading">Insight</h3>
+<div class="styleguide__example">
+  <%= render 'shared/evidence_hub_hero', type: 'insight' %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="hero hero-evidence-hub">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon svg-icon svg-icon--insight-icon" focusable="false">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--insight-icon"></use>
+    </svg>
+    <p class="hero-evidence-hub__title">Insight</p>
+  </div>
+</xmp>
+<h3 class="styleguide__subheading">Review</h3>
+<div class="styleguide__example">
+  <%= render 'shared/evidence_hub_hero', type: 'review' %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="hero hero-evidence-hub hero-evidence-hub--review">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon svg-icon svg-icon--review-icon" focusable="false">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--review-icon"></use>
+    </svg>
+    <p class="hero-evidence-hub__title">Review</p>
+  </div>
+</xmp>
+<h3 class="styleguide__subheading">Evaluation</h3>
+<div class="styleguide__example">
+  <%= render 'shared/evidence_hub_hero', type: 'evaluation' %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="hero hero-evidence-hub hero-evidence-hub--evaluation">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon svg-icon svg-icon--evaluation-icon" focusable="false">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--evaluation-icon"></use>
+    </svg>
+    <p class="hero-evidence-hub__title">Evaluation</p>
   </div>
 </xmp>
