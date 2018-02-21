@@ -23,17 +23,19 @@ $gutter: $default-gutter / 2; // the space between category columns
 // -- probably should be in header styles
 
 .nav {
-  // probably should be in base styles
+  // probably should be in base styles --
   & * {
     box-sizing: border-box;
   }
+  // -- probably should be in base styles
 
-  // temporarily over-ride the external link icon
+  // temporarily over-ride the external link icon --
   a:not([href*="fincap.org.uk"]):after {
     background-image: none;
     width: 0;
     height: 0;
   }
+  // -- temporarily over-ride the external link icon
 
   transition: transform $nav-transition-duration $nav-transition-ease;
   position: fixed;
@@ -54,7 +56,6 @@ $gutter: $default-gutter / 2; // the space between category columns
     position: relative;
     transform: none;
     width: 100%;
-    // background: none; // $color-yellow-light;
     overflow-x: visible;
     border: 0;
 
@@ -129,7 +130,7 @@ $gutter: $default-gutter / 2; // the space between category columns
   position: static;
   margin: 0;
   line-height: 1;
-  border-bottom: 1px solid; // $color-yellow-dark;
+  border-bottom: 1px solid;
 
   .nav__arrow {
     right: $default-gutter;
@@ -234,7 +235,7 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   @include respond-to($mq-m) {
     &:focus {
-      background: none; // $color-grey-pale;
+      background: none;
     }
 
     .is-active &:focus {
@@ -299,7 +300,7 @@ $gutter: $default-gutter / 2; // the space between category columns
   height: 12px;
   right: 10px;
   top: 30%;
-  fill: none; // $color-yellow-dark;
+  fill: none;
 }
 
 .mobile-nav-overlay {

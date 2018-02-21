@@ -6,41 +6,19 @@
 
     @include respond-to($mq-m) {
       transform: none;
-      // visibility: visible;
     }
   }
 
   @include respond-to($mq-m) {
+    display: none;
     visibility: visible;
-
     transform: none;
     position: absolute;
-    // transition: none;
-    // top: 0; // 100%;
-    // transform: none;
     width: ($max-cols - 1) / $max-cols * 100%;
-    // margin: 0;
-    // max-width: none;
-    // background: $color-white;
-    // padding-bottom: $baseline-unit;
-    // float: right;
     left: 1 / $max-cols * 100%;
     top: 0;
-    // z-index: 10;
-
-    display: none; // table-row;
-
-    // &:after {
-    //   box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.6);
-    //   position: relative;
-    //   z-index: -1
-    // }
-
-    // visibility: visible;
 
     &.is-active {
-      // visibility: visible;
-      // transform: none;
       display: block;
     }
   }
@@ -67,8 +45,6 @@
 .nav__level-3__category {
   @include respond-to($mq-m) {
     position: static;
-    // float: right;
-    // clear: right;
     width: (1 / ($max-cols - 1)) * 100%;
 
     &:before {
