@@ -14,6 +14,7 @@ var Nav = function($el) {
   this.$navLevel_3 = this.$nav.find('[data-nav-level-3]');
   this.$navLevel_3_Heading = this.$nav.find('[data-nav-level-3-heading]');
   this.$mobileNavClose = this.$nav.find('[data-mobile-nav-close]');
+  this.$searchBar = this.$nav.find('[data-nav-search-bar]');
 };
 
 /**
@@ -176,6 +177,17 @@ Nav.prototype._setUpDesktopInteraction = function() {
       }
     }
   });
+
+  this.$searchBar
+    .mouseenter(function(e) {
+      if (self.viewportWidth >= self.smallViewport) {
+        window.clearTimeout(self.timeout);
+
+        self.timeout = window.setTimeout(function() {
+          self._closeDesktopLevel2();
+        }, self.delay);
+      }
+    });
 
   this.$navLevel_1_Heading
     .mouseenter(function(e) {

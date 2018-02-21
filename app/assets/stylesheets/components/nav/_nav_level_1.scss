@@ -4,7 +4,7 @@ $nav-transition-ease: ease-out;
 $max-cols: 4; // the maximum number of categories in the subnav
 $gutter: $default-gutter / 2; // the space between category columns
 
-// probably should be in header styles
+// probably should be in header styles --
 .mobile-nav-button {
   display: block;
 
@@ -12,6 +12,15 @@ $gutter: $default-gutter / 2; // the space between category columns
     display: none;
   }
 }
+
+.l-search-bar {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+  }
+}
+// -- probably should be in header styles
 
 .nav {
   // probably should be in base styles
@@ -158,14 +167,18 @@ $gutter: $default-gutter / 2; // the space between category columns
   &:hover {
     background: $color-white;
   }
+
+  &.l-search-bar:hover {
+    background: none;
+  }
 }
 
 // no-js fallback --
-.no-js {
-  .nav {
-    display: none;
-  }
-}
+// .no-js {
+//   .nav {
+//     display: none;
+//   }
+// }
 // -- no-js fallback
 
 .touch {

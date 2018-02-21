@@ -1,3 +1,5 @@
+<a data-mobile-nav-button href="#" role="button" class="mobile-nav-button">Menu</a>
+
 <nav class="nav uninitialised"> <!-- is-active -->
   <div class="l-constrained">
     <ul class="nav__level-1" data-nav-level-1> <!-- is-active is-open -->
@@ -614,6 +616,19 @@
             </ul>
           </div>
         </div>
+      </li>
+
+      <li class="nav__level-1__element l-search-bar" data-nav-search-bar>
+        <form action="http://localhost:3000" method="get">
+          <label class="visually-hidden" for="search">Search</label>
+
+          <input class="" id="search"/>
+
+          <button class="" type="submit">
+            <span class="icon"></span>
+            <span class="visually-hidden">Search</span>
+          </button>
+        </form>
       </li>
 
       <li>
