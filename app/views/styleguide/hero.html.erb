@@ -6,6 +6,9 @@
     <a href="#general" class="styleguide__anchor">General Hero Components</a>
   </li>
   <li>
+    <a href="#custom_content" class="styleguide__anchor">Hero Components containing custom content</a>
+  </li>
+  <li>
     <a href="#evidence_hub" class="styleguide__anchor">Evidence Hub Hero Components</a>
   </li>
 </ul>
@@ -41,6 +44,58 @@
       This heading 
       <span class="hero__heading-strong">contains some bold copy</span>
     </h1>
+  </div>
+</xmp>
+
+<h2 id="custom_content">Hero Components containing custom content</h2>
+<p>Applies to hero components which do not contain the H1 for the page, and can contain paragraphs and lists.</p>
+<h3 class="styleguide__subheading">Paragraph</h3>
+<div class="styleguide__example">
+  <div class="hero styleguide__hero">
+    <div class="hero__content">
+      <p class="hero__content-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <span class="hero__content-strong">
+          Curabitur congue dui eget urna vulputate egestas.
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="hero styleguide__hero">
+    <div class="hero__content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <span class="hero__content-strong">
+          Curabitur congue dui eget urna vulputate egestas.
+        </span>
+      </p>
+    </div>
+  </div>
+</xmp>
+
+<h3 class="styleguide__subheading">List</h3>
+<div class="styleguide__example">
+  <div class="hero styleguide__hero">
+    <div class="hero__content">
+      <ul class="hero__content-list">
+        <% 4.times do %>
+          <li class="hero__content-list-item">List item</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="hero__content">
+    <ul class="hero__content-list">
+      <li class="hero__content-list-item">List item</li>
+      <li class="hero__content-list-item">List item</li>
+      <li class="hero__content-list-item">List item</li>
+    </ul>
   </div>
 </xmp>
 
