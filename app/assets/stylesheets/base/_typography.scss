@@ -40,7 +40,8 @@ a {
     color: $primary-orange;
   }
 
-  &:not([href*="#{$site}"]):after {
+  &[href^="http:"]:not([href*="#{$site}"]):after,
+  &[href^="https:"]:not([href*="#{$site}"]):after {
     @extend %icon;
     @extend .icon--external-link;
     content: '';
