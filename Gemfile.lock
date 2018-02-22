@@ -45,6 +45,8 @@ GEM
     ast (2.4.0)
     backports (3.11.1)
     bindex (0.5.0)
+    bowndler (1.0.2)
+      thor
     brakeman (4.1.1)
     builder (3.2.3)
     capybara (2.17.0)
@@ -245,6 +247,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bowndler (~> 1.0)
   brakeman
   capybara
   cucumber-rails
@@ -268,6 +271,9 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+
+RUBY VERSION
+   ruby 2.4.1p111
 
 BUNDLED WITH
    1.16.1

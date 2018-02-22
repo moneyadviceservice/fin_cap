@@ -1,0 +1,23 @@
+{
+  "__warning__": [
+    " ************************************************************************** ",
+    " *                                                                        * ",
+    " * WARNING!                                                               * ",
+    " * This file is generated. ANY CHANGES YOU MAKE MAY BE OVERWRITTEN.       * ",
+    " *                                                                        * ",
+    " * To add/edit bower dependencies, please edit bower.json.erb, and run    * ",
+    " * `bowndler bower_configure` to regenerate this file.                    * ",
+    " *                                                                        * ",
+    " ************************************************************************** "
+  ],
+  "name": "fincap",
+  "private": true,
+  "ignore": [
+    "*",
+    "!app/assets/**/*",
+    "!vendor/assets/fonts/*"
+  ],
+  "dependencies": {
+    "requirejs": "2.1.*"
+  }
+}
