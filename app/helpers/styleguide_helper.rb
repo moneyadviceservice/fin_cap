@@ -41,7 +41,7 @@ module StyleguideHelper
   }.freeze
 
   PAGE_SPECIFIC = {
-    'Search Results'   => 'search_results'
+    'Search Results' => 'search_results'
   }.freeze
 
   LINKS = %w[Layout Typography Links Lists Colours].freeze
