@@ -44,9 +44,28 @@ This is an engine used by the Frontend site and requires data from the [MAS CMS]
 
   To access the application locally in your browser, navigate to the port on which you started the application, e.g. [http://localhost:5000/en/tools/money-manager/](http://localhost:5000).
 
+
 [Technical docs](https://github.com/moneyadviceservice/technical-docs/tree/master/fin_cap)
 
 ### To Do
 Update link for the styleguide when the site is deployed.
 
 [Styleguide](http://localhost:3000/styleguide)
+
+## Hooks
+
+This project uses git hooks to ensure every commit follows best practices.
+The test script runs the code lints and the tests.
+
+In order to use the hooks just run this commands:
+
+```sh
+  cp hooks/pre-push .git/hooks/pre-push
+  chmod u+x .git/hooks/pre-push
+```
+
+Note: *It is not recommended but if you want to ignore the hook, you can run*:
+
+```
+git push --no-verify origin <your_branch>
+```
