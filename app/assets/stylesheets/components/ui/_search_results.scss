@@ -48,12 +48,15 @@ a.search-results__evidence-type-link {
   }
 
   &:after {
-    @include body (11, 24);
+    @include body (11, 22);
     content: 'i';
     border-radius: 50%;
     background-image: none;
     color: $color-white;
+    display: inline-block;
     background-color: $primary-blue-dark;
     text-align: center;
+    height: $baseline-unit*3;
+    width: $baseline-unit*3;
   }
 }
