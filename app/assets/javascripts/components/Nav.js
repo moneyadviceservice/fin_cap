@@ -21,21 +21,16 @@ var Nav = function($el) {
 * Initialize the component
 */
 Nav.prototype.init = function() {
-  console.log('init!');
-
   this._bindEvents();
   this._setUpMobileAnimation();
   this._setUpMobileInteraction();
   this._setUpDesktopInteraction();
-  // this._setUpKeyboardEvents();
 };
 
 /**
  * Set up component
  */
 Nav.prototype._bindEvents = function() {
-  console.log('_bindEvents!');
-
   this.$nav.removeClass('uninitialised');
   $(window).on('resize', this._debounce($.proxy(this._setUpMobileAnimation, this), 100));
 };
@@ -44,11 +39,8 @@ Nav.prototype._bindEvents = function() {
 * Ensure mobile nav not activated on resize or page load
 */
 Nav.prototype._setUpMobileAnimation = function() {
-  console.log('_setUpMobileAnimation!');
-
   this.viewportWidth = $(window).width();
 
-  // if (mediaQueries.atSmallViewport()) {
   if (this.viewportWidth < this.smallViewport) {
     this.$nav.removeClass('no-transition');
     if (this.$nav.hasClass('is-active')) {
@@ -64,8 +56,6 @@ Nav.prototype._setUpMobileAnimation = function() {
 * Set up events for mobile nav
 */
 Nav.prototype._setUpMobileInteraction = function() {
-  console.log('_setUpMobileInteraction!');
-
   var self = this;
 
   this.$mobileNavButton.click(function(e) {
@@ -108,8 +98,6 @@ Nav.prototype._setUpMobileInteraction = function() {
 };
 
 Nav.prototype._toggleMobileNav = function() {
-  console.log('_toggleMobileNav!');
-
   this.$nav.toggleClass('is-active');
   this.$mobileNavOverlay.toggleClass('is-active');
   $('body').addClass('no-scroll');
@@ -125,8 +113,6 @@ Nav.prototype._toggleMobileNav = function() {
 };
 
 Nav.prototype._toggleMobileLevel2 = function(index) {
-  console.log('_toggleMobileLevel2!');
-
   var siblingsNav = $(index).siblings().get(0);
 
   $(index)
@@ -137,15 +123,11 @@ Nav.prototype._toggleMobileLevel2 = function(index) {
 };
 
 Nav.prototype._openMobileLevel3 = function(index) {
-  console.log('_openMobileLevel3!');
-
   this.$navLevel_1.toggleClass('is-open');
   $(index).siblings('[data-nav-level-3]').toggleClass('is-active');
 };
 
 Nav.prototype._closeMobileLevel3 = function(index) {
-  console.log('_closeMobileLevel3!');
-
   this.$navLevel_1.toggleClass('is-open');
   $(index).parents('[data-nav-level-3]').toggleClass('is-active');
 };
@@ -154,7 +136,6 @@ Nav.prototype._returnMobileNav = function(index) {
   $(index)
     .parents('[data-nav-level-1-item]').toggleClass('is-active')
     .parents('[data-nav-level-1]').toggleClass('is-active');
-    // set time as variable - same as transition delay in CSS?
     setTimeout(function(){
       $('[data-nav-level-2]').addClass('is-hidden');
     }, 400);
@@ -164,12 +145,9 @@ Nav.prototype._returnMobileNav = function(index) {
 * Set up events for desktop nav
 */
 Nav.prototype._setUpDesktopInteraction = function() {
-  console.log('_setUpDesktopInteraction!');
-
   var self = this;
 
   // touch event outside of global nav triggers close subnav
-  // if (!mediaQueries.atSmallViewport()) {
   $(document).on('touchstart', function(e) {
     if (self.viewportWidth >= self.smallViewport) {
       if ($(e.target).parents(self.$nav).length == 0) {
@@ -195,7 +173,6 @@ Nav.prototype._setUpDesktopInteraction = function() {
         window.clearTimeout(self.timeout);
 
         self.timeout = window.setTimeout(function() {
-          // self._sendHoverAnalytics($(e.target).text());
           self._openDesktopLevel2($(e.target));
         }, self.delay);
       }
@@ -211,7 +188,6 @@ Nav.prototype._setUpDesktopInteraction = function() {
       }
     }).on('touchend', function(e) {
       if (self.viewportWidth >= self.smallViewport) {
-      // if (!mediaQueries.atSmallViewport()) {
         var index = $(e.target).parents('[data-nav-level-1-heading]');
         // touch event on top level heading triggers open/close subnav
         if ($(e.target).parents('[data-nav-level-1]').hasClass('is-active')) {
@@ -250,16 +226,12 @@ Nav.prototype._setUpDesktopInteraction = function() {
  * Opens subnav on desktop
  */
 Nav.prototype._openDesktopLevel2 = function(index) {
-  console.log('_openDesktopLevel2!');
-
   if (!this.$nav.hasClass('is-active')) {
     this.$navLevel_3.removeClass('is-active');
     this.$navLevel_2.removeClass('is-active');
     this.$navLevel_1_item.removeClass('is-active');
-    // this.$navLevel_1_Heading.attr('aria-expanded', 'false');
 
     $(index)
-      // .attr('aria-expanded', 'true')
       .parent('[data-nav-level-1-item]').addClass('is-active')
       .siblings('[data-nav-level-2]').addClass('is-active');
   }
@@ -269,8 +241,6 @@ Nav.prototype._openDesktopLevel2 = function(index) {
  * Closes subnav on desktop
  */
 Nav.prototype._closeDesktopLevel2 = function(index) {
-  console.log('_closeDesktopLevel2!');
-
   if (!this.$nav.hasClass('is-active')) {
     this.$navLevel_3.removeClass('is-active');
     this.$navLevel_2.removeClass('is-active');
@@ -287,21 +257,9 @@ Nav.prototype._closeDesktopLevel2 = function(index) {
  * Opens level 3 on desktop
  */
 Nav.prototype._openDesktopLevel3 = function(index) {
-  console.log('_openDesktopLevel3!');
-
   this.$navLevel_3.removeClass('is-active');
   $(index).siblings('[data-nav-level-3').addClass('is-active');
 };
-
-/**
- * Closes level 3 on desktop
- */
-// Nav.prototype._closeDesktopLevel3 = function(index) {
-//   console.log('_closeDesktopLevel3!');
-//   console.log('index: ', index);
-
-//   $(index).siblings('[data-nav-level-3').toggleClass('is-active');
-// };
 
 /**
  * Rate limit the amount of times a method is called
@@ -323,170 +281,3 @@ Nav.prototype._debounce = function(func, wait) {
     timeout = setTimeout(later, wait);
   };
 }
-
-// /**
-//  * Set up keyboard events
-//  * Adds enhanced keyboard interation to nav
-//  */
-// GlobalNav.prototype._setUpKeyboardEvents = function() {
-//   var self = this;
-
-//   this.$globalNav.keydown(function(e) {
-//     if (e.which === 32 || e.which === 40) {
-//       e.preventDefault();
-//     }
-//   });
-
-//   this.$globalNav.keyup(function(e) {
-//     var level;
-
-//     if ($(e.target).parents('[data-dough-subnav]').length > 0) {
-//       level = 'subnav';
-//     } else {
-//       level = 'top';
-//     }
-
-//     switch (e.which) {
-//       // tab
-//       case 9:
-//         if (level === 'top') {
-//           self._closeBlurredClumps(e.target);
-//         }
-//         break;
-//       // enter
-//       case 13:
-//         if (level === 'top') {
-//           e.preventDefault();
-//           self._openDesktopLevel2(e.target);
-//           self._moveFocusToSubNav(e.target);
-//         }
-//         break;
-//       // escape
-//       case 27:
-//         if (level === 'subnav') {
-//           self._closeDesktopLevel2($(e.target).parents('[data-dough-subnav]'));
-//           self._moveTopLevelFocus(e.target);
-//         }
-//         break;
-//       // spacebar
-//       case 32:
-//         e.preventDefault();
-
-//         if (level === 'top') {
-//           self._openDesktopLevel2(e.target);
-//         }
-//         break;
-//       // left arrow
-//       case 37:
-//         self._moveTopLevelFocus(e.target, 'left');
-
-//         if (level === 'subnav') {
-//           self._closeDesktopLevel2($(e.target).parents('[data-dough-subnav]'));
-//         }
-//         break;
-//       // up arrow
-//       case 38:
-//         if (level === 'subnav') {
-//           self._moveSubNavFocus(e.target, 'up');
-//         }
-//         break;
-//       // right arrow
-//       case 39:
-//         self._moveTopLevelFocus(e.target, 'right');
-
-//         if (level === 'subnav') {
-//           self._closeDesktopLevel2($(e.target).parents('[data-dough-subnav]'));
-//         }
-//         break;
-//       // down arrow
-//       case 40:
-//         if (level === 'top') {
-//           if ($(e.target).parents('[data-dough-nav-clump]').hasClass('is-active')) {
-//             self._moveFocusToSubNav(e.target);
-//           } else {
-//             self._openDesktopLevel2(e.target);
-//           }
-//         } else {
-//           self._moveSubNavFocus(e.target, 'down');
-//         }
-//         break;
-//     }
-//   });
-// };
-
-// /**
-// * Moves focus to first link of subnav
-// */
-// GlobalNav.prototype._moveFocusToSubNav = function(el) {
-//   var firstLink = $(el).siblings('[data-dough-subnav]').find('[data-dough-subcategories]').find('a')[0];
-
-//   $(firstLink).focus();
-// };
-
-// /**
-// * Moves focus of subnav up or down
-// */
-// GlobalNav.prototype._moveSubNavFocus = function(el, dir) {
-//   var subCatArray = $(el).parents('[data-dough-subcategories]').find('a');
-//   var index = $(subCatArray).index(el);
-
-//   if (dir === 'up') {
-//     if (index > 0) {
-//       subCatArray[index - 1].focus();
-//     } else {
-//       subCatArray[subCatArray.length - 1].focus();
-//     }
-//   } else {
-//     if (index < subCatArray.length - 1) {
-//       subCatArray[index + 1].focus();
-//     } else {
-//       subCatArray[0].focus();
-//     }
-//   }
-// };
-
-// /**
-// * Moves focus of top level nav to left or right
-// */
-// GlobalNav.prototype._moveTopLevelFocus = function(el, dir) {
-//   var thisClump = $(el).parents('[data-dough-nav-clump]');
-//   var clumps = $(thisClump).siblings('[data-dough-nav-clump]');
-//   var firstClump = $(clumps).first();
-//   var lastClump = $(clumps).last();
-
-//   if (dir === 'left') {
-//     if ($(thisClump).prev('[data-dough-nav-clump]').length > 0) {
-//       $(thisClump).blur()
-//         .prev().children('[data-dough-nav-clump-heading]').focus();
-//     } else {
-//       $(lastClump).children('[data-dough-nav-clump-heading]').focus();
-//     }
-//   } else if (dir === 'right') {
-//     if ($(thisClump).next('[data-dough-nav-clump]').length > 0) {
-//       $(thisClump).blur()
-//         .next().children('[data-dough-nav-clump-heading]').focus();
-//     } else {
-//       $(firstClump).children('[data-dough-nav-clump-heading]').focus();
-//     }
-//   } else {
-//     $(thisClump).children('[data-dough-nav-clump-heading]').focus();
-//   }
-// };
-
-// /**
-// * Closes all subnavs when top level focus shifts
-// */
-// GlobalNav.prototype._closeBlurredClumps = function(el) {
-//   this.$globalNavClump.not($(el).parents('[data-dough-nav-clump]')).removeClass('is-active');
-// };
-
-// GlobalNav.prototype._sendHoverAnalytics = function(label) {
-//   window.dataLayer.push({
-//     'event': 'gaEvent',
-//     'gaEventCat': 'Global Navigation',
-//     'gaEventAct': 'Hover',
-//     'gaEventLab': label
-//   });
-// };
-
-// return GlobalNav;
