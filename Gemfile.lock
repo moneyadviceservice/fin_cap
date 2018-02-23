@@ -118,7 +118,6 @@ GEM
     minitest (5.11.3)
     multi_json (1.13.1)
     multi_test (0.1.2)
-    mysql2 (0.4.9)
     newrelic_rpm (4.8.0.341)
     nio4r (2.2.0)
     nokogiri (1.8.2)
@@ -126,6 +125,7 @@ GEM
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
+    pg (0.21.0)
     powerpack (0.1.1)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -253,8 +253,8 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  mysql2 (= 0.4.9)
   newrelic_rpm
+  pg (~> 0.18)
   pry-rails
   rails (~> 5.0.6)
   rspec-rails
