@@ -44,5 +44,5 @@ module StyleguideHelper
     'Search Results' => 'search_results'
   }.freeze
 
-  LINKS = %w[Layout Typography Links Lists Colours].freeze
+  LINKS = %w[Layout Typography Links Lists Colours Buttons].freeze
 end
