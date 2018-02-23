@@ -8,7 +8,8 @@
   font-weight: 500;
   position: relative;
 
-  &:not([href*="#{$site}"]):after {
+  &[href^="http:"]:not([href*="#{$site}"]):after,
+  &[href^="https:"]:not([href*="#{$site}"]):after {
     position: absolute;
     background-image: image-url('icons/svg/new-window.svg');
     height: 20px;
