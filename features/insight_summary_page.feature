@@ -8,7 +8,7 @@ Feature: Evidence Hub: Insight Summary page
     Then I should see the content
       | Field               | Content                                                  |
       | Evidence Type       | Insight                                                  |
-      | Title               | Financial well-being: the employee view                  |
+      | Evidence Title      | Financial well-being: the employee view                  |
       | Content             | Stress caused by pay levels, lack of financial awareness |
       | Client group        | Over-indebted people                                     |
       | Topics              | Financial Capability                                     |
