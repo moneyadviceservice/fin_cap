@@ -1,16 +1,19 @@
 .btn {
+  @include body(12, 24);
   @extend %border-radius;
   border: 0;
   cursor: pointer;
+  margin: $baseline-unit 0;
   padding: $baseline-unit $baseline-unit*2;
   font-size: 1rem;
-  display: inline-block;
-  width: 100%;
+  display: block;
   text-align: center;
   text-decoration: none;
+  font-weight: 300;
+  color: $color-white;
 
   @include respond-to($mq-m) {
-    width: auto;
+    display: inline-block;
   }
 
   &:visited {
@@ -22,7 +25,40 @@
   }
 }
 
+// Form buttons require additional styles
+
+button.btn {
+  @extend .btn;
+  font-family: "Museo Rounded";
+  width: 100%;
+
+  @include respond-to($mq-m) {
+    width: auto;
+  }
+}
+
 .btn--primary {
   background-color: $primary-blue-dark;
-  color: $color-white;
+}
+
+.btn--secondary {
+  background-color: $primary-green-pale;
+}
+
+// Colour variants
+
+.btn--yellow {
+  background-color: $primary-yellow;
+}
+
+.btn--orange {
+  background-color: $primary-orange;
+}
+
+.btn--blue {
+  background-color: $primary-blue;
+}
+
+.btn--purple {
+  background-color: $primary-purple;
 }

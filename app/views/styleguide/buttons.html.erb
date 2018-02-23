@@ -1,9 +1,39 @@
 <h1>Buttons</h1>
+<p>Styles and responsive behaviour applies to both links and form buttons.</p>
 <h3 class="styleguide__subheading">Primary button</h3>
 <div class="styleguide__example">
-  <a href="#" class="btn btn--primary">Primary Button</a>
+  <p><a href="#" class="btn btn--primary">Primary Link Button</a></p>
+  <p><button class="btn btn--primary">Primary Form Button</button></p>
 </div>
 <h3 class="styleguide__subheading">Code</h3>
 <xmp>
-  <a href="#" class="btn btn--primary">Primary Button</a>
+  <a href="#" class="btn btn--primary">Primary Link Button</a>
+  <button type="button" class="btn btn--primary">Primary Form Button</button>
+</xmp>
+<h3 class="styleguide__subheading">Secondary button</h3>
+<div class="styleguide__example">
+  <p><a href="#" class="btn btn--secondary">Secondary Link Button</a></p>
+  <p><button class="btn btn--secondary">Secondary Form Button</button></p>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <a href="#" class="btn btn--secondary">Secondary Link Button</a>
+  <button class="btn btn--secondary">Secondary Form Button</button>
+</xmp>
+<h2>Colour Variants</h2>
+<p>Button colours can be altered to any of the remaining core <a href="/styleguide/colours">primary colours</a> by adding to corresonding modifier class.</p>
+<h3 class="styleguide__subheading">Primary colours</h3>
+<div class="styleguide__example">
+  <%- @primary_colours.each do |colour, hex| %>
+    <%  if colour != 'blue-dark' && colour != 'green-pale' %>
+      <a href="#" class="btn btn--primary btn--<%= "#{colour}" %>"><%= colour %></a>
+    <% end %>
+  <% end %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <a href="#" class="btn btn--primary btn--yellow">yellow</a>
+  <a href="#" class="btn btn--primary btn--orange">orange</a>
+  <a href="#" class="btn btn--primary btn--blue">blue</a>
+  <a href="#" class="btn btn--primary btn--purple">purple</a>
 </xmp>
