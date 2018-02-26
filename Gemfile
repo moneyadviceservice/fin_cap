@@ -7,6 +7,7 @@ gem 'rails', '~> 5.0.6'
 
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'mas-cms-client'
 gem 'newrelic_rpm'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
@@ -18,6 +19,7 @@ group :development, :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
