@@ -25,6 +25,9 @@ $ bundle exec rake db:create \
   && bundle exec rake db:seed
 ```
 
+Make sure to copy the .env-example file:
+`cp .env-example .env`
+
 ## Usage
 
 This is an engine used by the Frontend site and requires data from the [MAS CMS](https://github.com/moneyadviceservice/cms). Follow the instructions below to start the engine via the Frontend. You may also need to refer to [the Frontend README](https://github.com/moneyadviceservice/frontend/blob/master/README.md) if you have not already set up the Frontend site to run locally.
