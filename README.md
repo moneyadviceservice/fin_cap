@@ -27,7 +27,7 @@ $ bundle exec rake db:create \
 
 ## Usage
 
-This is an engine used by the Frontend site and requires data from the [MAS CMS](https://github.com/moneyadviceservice/cms). Follow the instructions below to start the engine via the Frontend. You may also need to refer to [the Frontend README](https://github.com/moneyadviceservice/frontend/blob/master/README.md) if you have not already set up the Frontend site to run locally.
+This is a standalone application  and requires data from the [MAS CMS](https://github.com/moneyadviceservice/cms). Follow the instructions below to get started.
 
   1. Start the CMS
   Navigate to your local CMS directory and start the application, e.g.
@@ -35,6 +35,10 @@ This is an engine used by the Frontend site and requires data from the [MAS CMS]
   ```sh
   $ rails s
   ```
+  Ensure that the FinCap application and the CMS application run on different
+  servers. By running `rails s` the FinCap application will be available on the
+  default port of `3000`. You can set the port for your local CMS in your `.env`
+  file.
 
   2. Start the application on a port which is different to the port you started the CMS on, e.g.
 
@@ -42,7 +46,7 @@ This is an engine used by the Frontend site and requires data from the [MAS CMS]
   $ foreman start
   ```
 
-  To access the application locally in your browser, navigate to the port on which you started the application, e.g. [http://localhost:5000/en/tools/money-manager/](http://localhost:5000).
+  To access the application locally in your browser, navigate to the port on which you started the application, e.g. [http://localhost:5000/](http://localhost:5000).
 
 
 [Technical docs](https://github.com/moneyadviceservice/technical-docs/tree/master/fin_cap)
@@ -50,7 +54,7 @@ This is an engine used by the Frontend site and requires data from the [MAS CMS]
 ### To Do
 Update link for the styleguide when the site is deployed.
 
-[Styleguide](http://localhost:3000/styleguide)
+[Styleguide](http://localhost:5000/styleguide)
 
 ## Hooks
 
