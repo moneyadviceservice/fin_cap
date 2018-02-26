@@ -7,6 +7,9 @@ gem 'rails', '~> 5.0.6'
 
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'mas-cms-client',
+    github: 'moneyadviceservice/mas-cms-client',
+    branch: '8974-add-insights-page'
 gem 'newrelic_rpm'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
