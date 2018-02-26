@@ -17,10 +17,22 @@
   height: 18px;
 }
 
+.icon--external-link--white {
+  background-position: 0px -15px;
+  width: 16px;
+  height: 18px;
+}
+
 .icon--arrow {
   background-position: -15px 2px;
   width: 18px;
   height: 18px;
+}
+
+.icon--search {
+  background-position: -32px 1px;
+  width: 25px;
+  height: 25px;
 }
 
 // SVG's
@@ -41,4 +53,21 @@
   width: 40px;
   height: 40px;
   fill: $color-white;
+}
+
+// Social Media
+
+.svg-icon--twitter {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-icon--youtube {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-icon--linkedin {
+  width: 40px;
+  height: 40px;
 }
