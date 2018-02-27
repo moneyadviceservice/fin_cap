@@ -27,6 +27,7 @@ group :development, :test do
   gem 'site_prism'
   gem 'sqlite3'
   gem 'tzinfo-data'
+  gem 'vcr'
 end
 
 group :development do
