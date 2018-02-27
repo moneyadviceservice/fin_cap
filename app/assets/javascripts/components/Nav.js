@@ -56,44 +56,13 @@ Nav.prototype._setUpMobileAnimation = function() {
 * Set up events for mobile nav
 */
 Nav.prototype._setUpMobileInteraction = function() {
-  var self = this;
-
-  this.$mobileNavButton.click(function(e) {
-    e.preventDefault();
-    self._toggleMobileNav();
-  });
-
-  this.$navLevel_1_Heading.click(function(e) {
-    if (self.viewportWidth < self.smallViewport) {
-      e.preventDefault();
-      self._toggleMobileLevel2(this);
-    }
-  });
-
-  this.$navLevel_2_Heading.click(function(e) {
-    e.preventDefault();
-    self._returnMobileNav(this);
-  });
-
-  this.$mobileNavClose.click(function(e){
-    e.preventDefault();
-    self._toggleMobileNav();
-  });
-
-  this.$mobileNavOverlay.click(function(e){
-    e.preventDefault();
-    self._toggleMobileNav();
-  });
-
-  this.$navLevel_2_Extended_Heading.click(function(e) {
-    e.preventDefault();
-    self._openMobileLevel3(this);
-  });
-
-  this.$navLevel_3_Heading.click(function(e) {
-    e.preventDefault();
-    self._closeMobileLevel3(this);
-  })
+  this._attachBoundHelper(this.$mobileNavButton, this._toggleMobileNav, this);
+  this._attachBoundHelper(this.$mobileNavOverlay, this._toggleMobileNav, this);
+  this._attachBoundHelper(this.$mobileNavClose, this._toggleMobileNav, this);
+  this._attachBoundHelper(this.$navLevel_1_Heading, this._openMobileLevel2, this);
+  this._attachBoundHelper(this.$navLevel_2_Heading, this._closeMobileLevel2, this);
+  this._attachBoundHelper(this.$navLevel_2_Extended_Heading, this._openMobileLevel3, this);
+  this._attachBoundHelper(this.$navLevel_3_Heading, this._closeMobileLevel3, this);
 };
 
 Nav.prototype._toggleMobileNav = function() {
@@ -111,7 +80,7 @@ Nav.prototype._toggleMobileNav = function() {
   }
 };
 
-Nav.prototype._toggleMobileLevel2 = function(index) {
+Nav.prototype._openMobileLevel2 = function(index) {
   var siblingsNav = $(index).siblings().get(0);
 
   $(index)
@@ -119,6 +88,15 @@ Nav.prototype._toggleMobileLevel2 = function(index) {
     .parents('[data-nav-level-1]').toggleClass('is-active');
 
   $(siblingsNav).removeClass('is-hidden');
+};
+
+Nav.prototype._closeMobileLevel2 = function(index) {
+  $(index)
+    .parents('[data-nav-level-1-item]').toggleClass('is-active')
+    .parents('[data-nav-level-1]').toggleClass('is-active');
+    setTimeout(function(){
+      $('[data-nav-level-2]').addClass('is-hidden');
+    }, 400);
 };
 
 Nav.prototype._openMobileLevel3 = function(index) {
@@ -129,15 +107,6 @@ Nav.prototype._openMobileLevel3 = function(index) {
 Nav.prototype._closeMobileLevel3 = function(index) {
   this.$navLevel_1.toggleClass('is-open');
   $(index).parents('[data-nav-level-3]').toggleClass('is-active');
-};
-
-Nav.prototype._returnMobileNav = function(index) {
-  $(index)
-    .parents('[data-nav-level-1-item]').toggleClass('is-active')
-    .parents('[data-nav-level-1]').toggleClass('is-active');
-    setTimeout(function(){
-      $('[data-nav-level-2]').addClass('is-hidden');
-    }, 400);
 };
 
 /**
@@ -259,6 +228,16 @@ Nav.prototype._openDesktopLevel3 = function(index) {
   this.$navLevel_3.removeClass('is-active');
   $(index).siblings('[data-nav-level-3').addClass('is-active');
 };
+
+/**
+ * Handles bound events for mobile nav
+ */
+Nav.prototype._attachBoundHelper = function($el, callback, context) {
+  $el.click(function(e) {
+    e.preventDefault();
+    callback.call(context, this);
+  });
+}
 
 /**
  * Rate limit the amount of times a method is called
