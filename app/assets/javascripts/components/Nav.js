@@ -64,7 +64,6 @@ Nav.prototype._setUpMobileInteraction = function() {
   });
 
   this.$navLevel_1_Heading.click(function(e) {
-    // if (mediaQueries.atSmallViewport()) {
     if (self.viewportWidth < self.smallViewport) {
       e.preventDefault();
       self._toggleMobileLevel2(this);
