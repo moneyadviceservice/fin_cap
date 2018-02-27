@@ -32,8 +32,8 @@ Nav.prototype.init = function() {
  */
 Nav.prototype._bindEvents = function() {
   this.$nav.removeClass('uninitialised');
-  $(window).on('resize', this._debounce($.proxy(this._setUpMobileAnimation, this), 100));
-};
+  $(window).on('resize', this._debounce(this._setUpMobileAnimation.bind(this), 100));
+}
 
 /**
 * Ensure mobile nav not activated on resize or page load
