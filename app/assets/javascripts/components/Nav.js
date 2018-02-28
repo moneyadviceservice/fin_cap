@@ -66,47 +66,58 @@ Nav.prototype._setUpMobileInteraction = function() {
 };
 
 Nav.prototype._toggleMobileNav = function() {
-  this.$nav.toggleClass('is-active');
-  this.$mobileNavOverlay.toggleClass('is-active');
-  $('body').addClass('no-scroll');
+  if (this.viewportWidth < this.smallViewport) {
+    this.$nav.toggleClass('is-active');
+    this.$mobileNavOverlay.toggleClass('is-active');
+    $('body').addClass('no-scroll');
 
-  // If we just closed the nav, reset all subnavs
-  if (!this.$nav.hasClass('is-active')) {
-    this.$nav.removeClass('is-active');
-    this.$mobileNavOverlay.removeClass('is-active');
-    this.$navLevel_1.removeClass('is-active');
-    this.$navLevel_1_item.removeClass('is-active');
-    $('body').removeClass('no-scroll');
+    // If we just closed the nav, reset all subnavs
+    if (!this.$nav.hasClass('is-active')) {
+      this.$nav.removeClass('is-active');
+      this.$mobileNavOverlay.removeClass('is-active');
+      this.$navLevel_1.removeClass('is-active');
+      this.$navLevel_1_item.removeClass('is-active');
+      $('body').removeClass('no-scroll');
+    }
   }
 };
 
 Nav.prototype._openMobileLevel2 = function(index) {
-  var siblingsNav = $(index).siblings().get(0);
+  if (this.viewportWidth < this.smallViewport) {
+    var siblingsNav = $(index).siblings().get(0);
 
-  $(index)
-    .parents('[data-nav-level-1-item]').toggleClass('is-active')
-    .parents('[data-nav-level-1]').toggleClass('is-active');
+    $(index)
+      .parents('[data-nav-level-1-item]').toggleClass('is-active')
+      .parents('[data-nav-level-1]').toggleClass('is-active');
 
-  $(siblingsNav).removeClass('is-hidden');
+    $(siblingsNav).removeClass('is-hidden');
+  }
 };
 
 Nav.prototype._closeMobileLevel2 = function(index) {
-  $(index)
-    .parents('[data-nav-level-1-item]').toggleClass('is-active')
-    .parents('[data-nav-level-1]').toggleClass('is-active');
-    setTimeout(function(){
-      $('[data-nav-level-2]').addClass('is-hidden');
-    }, 400);
+  if (this.viewportWidth < this.smallViewport) {
+    $(index)
+      .parents('[data-nav-level-1-item]').toggleClass('is-active')
+      .parents('[data-nav-level-1]').toggleClass('is-active');
+
+      setTimeout(function() {
+        $('[data-nav-level-2]').addClass('is-hidden');
+      }, 400);
+  }
 };
 
 Nav.prototype._openMobileLevel3 = function(index) {
-  this.$navLevel_1.toggleClass('is-open');
-  $(index).siblings('[data-nav-level-3]').toggleClass('is-active');
+  if (this.viewportWidth < this.smallViewport) {
+    this.$navLevel_1.toggleClass('is-open');
+    $(index).siblings('[data-nav-level-3]').toggleClass('is-active');
+  }
 };
 
 Nav.prototype._closeMobileLevel3 = function(index) {
-  this.$navLevel_1.toggleClass('is-open');
-  $(index).parents('[data-nav-level-3]').toggleClass('is-active');
+  if (this.viewportWidth < this.smallViewport) {
+    this.$navLevel_1.toggleClass('is-open');
+    $(index).parents('[data-nav-level-3]').toggleClass('is-active');
+  }
 };
 
 /**
@@ -114,57 +125,6 @@ Nav.prototype._closeMobileLevel3 = function(index) {
 */
 Nav.prototype._setUpDesktopInteraction = function() {
   var self = this;
-
-  // touch event outside of global nav triggers close subnav
-  $(document).on('touchstart', function(e) {
-    if (self.viewportWidth >= self.smallViewport) {
-      if ($(e.target).parents(self.$nav).length == 0) {
-        self.$navLevel_1_item.removeClass('is-active');
-      }
-    }
-  });
-
-  this.$searchBar
-    .mouseenter(function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
-        window.clearTimeout(self.timeout);
-
-        self.timeout = window.setTimeout(function() {
-          self._closeDesktopLevel2();
-        }, self.delay);
-      }
-    });
-
-  this.$navLevel_1_Heading
-    .mouseenter(function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
-        window.clearTimeout(self.timeout);
-
-        self.timeout = window.setTimeout(function() {
-          self._openDesktopLevel2($(e.target));
-        }, self.delay);
-      }
-    })
-    .mousedown(function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
-        e.preventDefault();
-      }
-    }).on('touchstart', function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
-        // remove hover event handler if touch event detected
-        $(e.target).parents('[data-nav-level-1-heading]').off('mouseenter');
-      }
-    }).on('touchend', function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
-        var index = $(e.target).parents('[data-nav-level-1-heading]');
-        // touch event on top level heading triggers open/close subnav
-        if ($(e.target).parents('[data-nav-level-1]').hasClass('is-active')) {
-          self._closeDesktopLevel2(index);
-        } else {
-          self._openDesktopLevel2(index);
-        }
-      }
-    });
 
   this.$nav
     .mouseleave(function() {
@@ -182,12 +142,73 @@ Nav.prototype._setUpDesktopInteraction = function() {
       }
     });
 
+  this.$navLevel_1_Heading
+    .mouseenter(function(e) {
+      if (self.viewportWidth >= self.smallViewport) {
+        window.clearTimeout(self.timeout);
+
+        self.timeout = window.setTimeout(function() {
+          self._openDesktopLevel2($(e.target));
+        }, self.delay);
+      }
+    })
+    .mousedown(function(e) {
+      if (self.viewportWidth >= self.smallViewport) {
+        e.preventDefault();
+      }
+    });
+
+  this.$searchBar
+    .mouseenter(function(e) {
+      if (self.viewportWidth >= self.smallViewport) {
+        window.clearTimeout(self.timeout);
+
+        self.timeout = window.setTimeout(function() {
+          self._closeDesktopLevel2();
+        }, self.delay);
+      }
+    });
+
   this.$navLevel_2_Extended_Heading
     .mouseenter(function() {
       if (self.viewportWidth >= self.smallViewport) {
         self._openDesktopLevel3(this);
       }
     });
+
+  if (Modernizr.touchevents) {
+    // touch event outside of global nav triggers close
+    $(document).on('touchend', function(e) {
+      if (self.viewportWidth >= self.smallViewport) {
+        if ($(e.target).parents(self.$nav).length == 0) {
+          self.$navLevel_1_item.removeClass('is-active');
+        }
+      }
+    });
+
+    this.$navLevel_1_Heading.on('touchend', function(e) {
+      if (self.viewportWidth >= self.smallViewport) {
+        // stops default mouse-emulation handling
+        e.preventDefault();
+
+        // touch event on top level heading triggers open/close subnav
+        if ($(e.target).parents('[data-nav-level-1-item]').hasClass('is-active')) {
+          self._closeDesktopLevel2(e.target);
+        } else {
+          self._openDesktopLevel2(e.target);
+        }
+      }
+    });
+
+    this.$navLevel_2_Extended_Heading.on('touchend', function(e) {
+      if (self.viewportWidth >= self.smallViewport) {
+        // stops default mouse-emulation handling
+        e.preventDefault();
+
+        self._openDesktopLevel3(this);
+      }
+    });
+  }
 };
 
 /**
