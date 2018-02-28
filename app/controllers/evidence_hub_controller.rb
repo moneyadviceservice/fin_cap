@@ -1,5 +1,5 @@
 class EvidenceHubController < ApplicationController
   def index
-    @documents = Mas::Cms::Document.all
+    @evidence_summaries = EvidenceSummary.map(Mas::Cms::Document.all)
   end
 end
