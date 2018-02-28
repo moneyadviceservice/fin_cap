@@ -224,8 +224,6 @@ Nav.prototype._setUpDesktopInteraction = function() {
  * Opens subnav on desktop
  */
 Nav.prototype._openDesktopLevel2 = function(index) {
-  console.log('_openDesktopLevel2!');
-
   if (!self.atSmallViewport) {
     this.$navLevel_3.removeClass('is-active');
     this.$navLevel_2.removeClass('is-active');
@@ -241,8 +239,6 @@ Nav.prototype._openDesktopLevel2 = function(index) {
  * Closes subnav on desktop
  */
 Nav.prototype._closeDesktopLevel2 = function(index) {
-  console.log('_closeDesktopLevel2!');
-
   if (!self.atSmallViewport) {
     this.$navLevel_3.removeClass('is-active');
     this.$navLevel_2.removeClass('is-active');
@@ -260,7 +256,7 @@ Nav.prototype._closeDesktopLevel2 = function(index) {
  */
 Nav.prototype._openDesktopLevel3 = function(index) {
   this.$navLevel_3.removeClass('is-active');
-  $(index).siblings('[data-nav-level-3').addClass('is-active');
+  $(index).siblings('[data-nav-level-3]').addClass('is-active');
 };
 
 /**
