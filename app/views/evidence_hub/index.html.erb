@@ -1,0 +1,25 @@
+<div class="l-constrained">
+  <div class="hero hero--blue">
+    <h1 class="hero__heading">
+      Evidence Summaries
+    </h1>
+  </div>
+
+  <div class="l-2col">
+    <div class="l-2col-side">
+      <div class="sidepanel">
+      </div>
+    </div>
+    <div class="l-2col-main">
+      <ul class="search-results">
+        <% @documents.each do |document| %>
+          <li class="search-results__item">
+            <p>
+              <%= link_to document.label, document.full_path %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
