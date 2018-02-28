@@ -62,3 +62,13 @@ button.btn {
 .btn--purple {
   background-color: $primary-purple;
 }
+
+// Modifiers
+// Full width button on all sreen sizes
+.btn--full-width {
+  display: block;
+}
+
+button.btn--full-width {
+  width: 100%;
+}

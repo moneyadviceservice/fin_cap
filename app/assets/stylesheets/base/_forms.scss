@@ -1,0 +1,12 @@
+// Basic form element style
+
+// Text box
+input[type=text] {
+  @include body(14, 24);
+  @extend %border-radius;
+  font-family: "Museo Rounded";
+  border: none;
+  padding: $baseline-unit;
+  margin: $baseline-unit 0;
+  width: calc(100% - #{$baseline-unit*2});
+}
