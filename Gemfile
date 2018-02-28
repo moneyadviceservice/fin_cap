@@ -7,7 +7,7 @@ gem 'rails', '~> 5.0.6'
 
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem 'mas-cms-client'
+gem 'mas-cms-client', '1.9.0'
 gem 'newrelic_rpm'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
