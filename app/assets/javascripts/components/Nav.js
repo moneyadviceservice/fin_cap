@@ -1,7 +1,6 @@
 var Nav = function($el) {
-  this.viewportWidth = 0;
   this.smallViewport = 720;
-  this.delay = 250; // ms
+  this.delay = 250;
   this.$mobileNavButton = $(document).find('[data-mobile-nav-button]');
   this.$mobileNavOverlay = $(document).find('[data-mobile-nav-overlay]');
   this.$nav = $el;
@@ -21,7 +20,8 @@ var Nav = function($el) {
 * Initialize the component
 */
 Nav.prototype.init = function() {
-  this._bindEvents();
+  this._setUpComponent();
+  this._getViewportSize();
   this._setUpMobileAnimation();
   this._setUpMobileInteraction();
   this._setUpDesktopInteraction();
@@ -30,19 +30,28 @@ Nav.prototype.init = function() {
 /**
  * Set up component
  */
-Nav.prototype._bindEvents = function() {
+Nav.prototype._setUpComponent = function() {
   this.$nav.removeClass('uninitialised');
+
   $(window).on('resize', this._debounce(this._setUpMobileAnimation.bind(this), 100));
+  $(window).on('resize', this._debounce(this._getViewportSize.bind(this), 99));
+};
+
+Nav.prototype._getViewportSize = function() {
+  if ($(window).width() < this.smallViewport) {
+    this.atSmallViewport = true;
+  } else {
+    this.atSmallViewport = false;
+  }
 }
 
 /**
 * Ensure mobile nav not activated on resize or page load
 */
 Nav.prototype._setUpMobileAnimation = function() {
-  this.viewportWidth = $(window).width();
-
-  if (this.viewportWidth < this.smallViewport) {
+  if (this.atSmallViewport) {
     this.$nav.removeClass('no-transition');
+
     if (this.$nav.hasClass('is-active')) {
       this.$mobileNavOverlay.addClass('is-active');
     }
@@ -66,7 +75,7 @@ Nav.prototype._setUpMobileInteraction = function() {
 };
 
 Nav.prototype._toggleMobileNav = function() {
-  if (this.viewportWidth < this.smallViewport) {
+  if (this.atSmallViewport) {
     this.$nav.toggleClass('is-active');
     this.$mobileNavOverlay.toggleClass('is-active');
     $('body').addClass('no-scroll');
@@ -83,7 +92,7 @@ Nav.prototype._toggleMobileNav = function() {
 };
 
 Nav.prototype._openMobileLevel2 = function(index) {
-  if (this.viewportWidth < this.smallViewport) {
+  if (this.atSmallViewport) {
     var siblingsNav = $(index).siblings().get(0);
 
     $(index)
@@ -95,7 +104,7 @@ Nav.prototype._openMobileLevel2 = function(index) {
 };
 
 Nav.prototype._closeMobileLevel2 = function(index) {
-  if (this.viewportWidth < this.smallViewport) {
+  if (this.atSmallViewport) {
     $(index)
       .parents('[data-nav-level-1-item]').toggleClass('is-active')
       .parents('[data-nav-level-1]').toggleClass('is-active');
@@ -107,14 +116,14 @@ Nav.prototype._closeMobileLevel2 = function(index) {
 };
 
 Nav.prototype._openMobileLevel3 = function(index) {
-  if (this.viewportWidth < this.smallViewport) {
+  if (this.atSmallViewport) {
     this.$navLevel_1.toggleClass('is-open');
     $(index).siblings('[data-nav-level-3]').toggleClass('is-active');
   }
 };
 
 Nav.prototype._closeMobileLevel3 = function(index) {
-  if (this.viewportWidth < this.smallViewport) {
+  if (this.atSmallViewport) {
     this.$navLevel_1.toggleClass('is-open');
     $(index).parents('[data-nav-level-3]').toggleClass('is-active');
   }
@@ -128,7 +137,7 @@ Nav.prototype._setUpDesktopInteraction = function() {
 
   this.$nav
     .mouseleave(function() {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         window.clearTimeout(self.timeout);
 
         self.closeNavTimeout = window.setTimeout(function() {
@@ -137,14 +146,14 @@ Nav.prototype._setUpDesktopInteraction = function() {
       }
     })
     .mouseenter(function() {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         window.clearTimeout(self.closeNavTimeout);
       }
     });
 
   this.$navLevel_1_Heading
     .mouseenter(function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         window.clearTimeout(self.timeout);
 
         self.timeout = window.setTimeout(function() {
@@ -153,14 +162,14 @@ Nav.prototype._setUpDesktopInteraction = function() {
       }
     })
     .mousedown(function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         e.preventDefault();
       }
     });
 
   this.$searchBar
     .mouseenter(function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         window.clearTimeout(self.timeout);
 
         self.timeout = window.setTimeout(function() {
@@ -171,7 +180,7 @@ Nav.prototype._setUpDesktopInteraction = function() {
 
   this.$navLevel_2_Extended_Heading
     .mouseenter(function() {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         self._openDesktopLevel3(this);
       }
     });
@@ -179,7 +188,7 @@ Nav.prototype._setUpDesktopInteraction = function() {
   if (Modernizr.touchevents) {
     // touch event outside of global nav triggers close
     $(document).on('touchend', function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         if ($(e.target).parents(self.$nav).length == 0) {
           self.$navLevel_1_item.removeClass('is-active');
         }
@@ -187,7 +196,7 @@ Nav.prototype._setUpDesktopInteraction = function() {
     });
 
     this.$navLevel_1_Heading.on('touchend', function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         // stops default mouse-emulation handling
         e.preventDefault();
 
@@ -201,7 +210,7 @@ Nav.prototype._setUpDesktopInteraction = function() {
     });
 
     this.$navLevel_2_Extended_Heading.on('touchend', function(e) {
-      if (self.viewportWidth >= self.smallViewport) {
+      if (!self.atSmallViewport) {
         // stops default mouse-emulation handling
         e.preventDefault();
 
@@ -215,7 +224,9 @@ Nav.prototype._setUpDesktopInteraction = function() {
  * Opens subnav on desktop
  */
 Nav.prototype._openDesktopLevel2 = function(index) {
-  if (!this.$nav.hasClass('is-active')) {
+  console.log('_openDesktopLevel2!');
+
+  if (!self.atSmallViewport) {
     this.$navLevel_3.removeClass('is-active');
     this.$navLevel_2.removeClass('is-active');
     this.$navLevel_1_item.removeClass('is-active');
@@ -230,7 +241,9 @@ Nav.prototype._openDesktopLevel2 = function(index) {
  * Closes subnav on desktop
  */
 Nav.prototype._closeDesktopLevel2 = function(index) {
-  if (!this.$nav.hasClass('is-active')) {
+  console.log('_closeDesktopLevel2!');
+
+  if (!self.atSmallViewport) {
     this.$navLevel_3.removeClass('is-active');
     this.$navLevel_2.removeClass('is-active');
     this.$navLevel_1_item.removeClass('is-active');
