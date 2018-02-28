@@ -13,9 +13,7 @@ class StyleguideController < ApplicationController
       @greys              = GREYS
     end
 
-    if page_params == 'buttons'
-      @primary_colours    = PRIMARY_COLOURS
-    end
+    @primary_colours = PRIMARY_COLOURS if page_params == 'buttons'
 
     render page_params
   end
