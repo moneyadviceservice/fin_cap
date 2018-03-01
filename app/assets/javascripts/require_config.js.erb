@@ -1,0 +1,21 @@
+// depend_on_asset components/Nav
+
+<%
+  def requirejs_path(asset)
+    javascript_path(asset).sub(/.js\z/, '')
+  end
+
+  requirejs_config = {
+    baseUrl: (Rails.application.config.action_controller.asset_host || '') + \
+      Rails.application.config.assets.prefix,
+    paths: {
+      # Components
+      Nav: requirejs_path('components/Nav'),
+    }
+  }
+%>
+
+// RequireJS config
+if(window.requirejs) {
+  requirejs.config(<%= JSON.pretty_generate(requirejs_config) %>);
+}

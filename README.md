@@ -17,6 +17,13 @@ Clone the repository:
 $ git clone https://github.com/moneyadviceservice/fin_cap.git
 ```
 
+Make sure all dependencies are available to the application:
+
+```sh
+$ bundle install
+$ bowndler install
+```
+
 Set up the database
 ```sh
 $ bundle exec rake db:create \
