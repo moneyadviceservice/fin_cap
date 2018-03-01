@@ -12,3 +12,5 @@
 
 *.DS_Store
 .env
+bower.json
+bower_components
