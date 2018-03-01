@@ -1,4 +1,4 @@
-// depend_on_asset components/Nav
+//= depend_on_asset components/Nav
 
 <%
   def requirejs_path(asset)
@@ -10,7 +10,7 @@
       Rails.application.config.assets.prefix,
     paths: {
       # Components
-      Nav: requirejs_path('components/Nav'),
+      Nav: requirejs_path('components/Nav')
     }
   }
 %>
