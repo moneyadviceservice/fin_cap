@@ -45,6 +45,8 @@ GEM
     ast (2.4.0)
     backports (3.11.1)
     bindex (0.5.0)
+    bowndler (1.0.2)
+      thor
     brakeman (4.2.0)
     builder (3.2.3)
     capybara (2.17.0)
@@ -269,6 +271,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bowndler (~> 1.0)
   brakeman
   capybara
   cucumber-rails
