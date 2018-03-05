@@ -5,6 +5,7 @@ ruby '2.4.1'
 
 gem 'rails', '~> 5.0.6'
 
+gem 'dough-ruby', '~> 5.26'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'mas-cms-client', '1.9.0'

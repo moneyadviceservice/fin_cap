@@ -4,16 +4,17 @@
 Rails.application.config.assets.version = '1.0'
 
 # Add additional assets to the asset load path
-Rails.application.config.assets.paths << Rails.root.join('bower_components', 'requirejs')
+  Rails.application.config.assets.paths << Rails.root.join('bower_components')
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Application JavaScript
   Rails.application.config.assets.precompile += %w(
                                                   components/*.js
+                                                  dough/assets/js/components/*.js
                                                 )
 
 # Vendor JavaScript
   Rails.application.config.assets.precompile += %w(
-                                                  require.js
+                                                  requirejs/require.js
                                                 )
