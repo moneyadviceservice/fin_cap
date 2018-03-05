@@ -11,8 +11,4 @@ class BasePresenter < SimpleDelegator
 
     super(@object)
   end
-
-  def h
-    @view
-  end
 end
