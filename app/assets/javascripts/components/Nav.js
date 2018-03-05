@@ -33,7 +33,8 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
   /**
   * Initialize the component
   */
-  Nav.prototype.init = function() {
+  Nav.prototype.init = function(initialised) {
+    this._initialisedSuccess(initialised);
     this._setUpComponent();
     this._getViewportSize();
     this._setUpMobileAnimation();

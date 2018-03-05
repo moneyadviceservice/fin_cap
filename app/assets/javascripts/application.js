@@ -16,8 +16,7 @@
 //= require jquery
 //= require turbolinks
 
-require(['Nav'],
-  function (Nav) {
-    new Nav($('.nav')).init();
-  }
-);
+// Component Loader
+require(['jquery', 'componentLoader'], function ($, componentLoader) {
+  componentLoader.init($('body'));
+});
