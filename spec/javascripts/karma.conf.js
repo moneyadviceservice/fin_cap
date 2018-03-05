@@ -4,30 +4,35 @@
 module.exports = function(config) {
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../',
+    basePath: '../../',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'requirejs', 'chai', 'sinon'],
+    frameworks: ['mocha', 'requirejs', 'chai', 'sinon', 'fixture'],
 
     // list of files / patterns to load in the browser
     files: [
-      'javascripts/test-main.js',
-      {pattern: 'javascripts/**/*_spec.js', included: false}
+      'spec/javascripts/test-main.js',
+      {pattern: 'app/assets/javascripts/**/*.js', included: false},
+      {pattern: 'bower_components/**/*.js', included: false},
+      {pattern: 'spec/javascripts/tests/*_spec.js', included: false},
+      {pattern: 'spec/javascripts/fixtures/*.html', included: true},
+      {pattern: 'spec/javascripts/lib/*.js', included: true}
     ],
 
     // list of files / patterns to exclude
     exclude: [
-      'app/assets/javascripts/application.js'
+      'app/assets/javascripts/application.js',
+      'app/assets/javascripts/require_config.js.erb'
     ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+     '**/*.html': ['html2js']
     },
 
     // test results reporter to use
-    // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['spec'],
 
