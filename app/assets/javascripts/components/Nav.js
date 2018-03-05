@@ -1,7 +1,12 @@
-define(['jquery'], function($) {
+define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   'use strict';
 
-  var Nav = function($el) {
+  var Nav,
+      defaultConfig = {};
+
+  Nav = function($el, config) {
+    Nav.baseConstructor.call(this, $el, config, defaultConfig);
+
     this.smallViewport = 720;
     this.delay = 250;
     this.$mobileNavButton = $(document).find('[data-mobile-nav-button]');
@@ -18,6 +23,13 @@ define(['jquery'], function($) {
     this.$mobileNavClose = this.$nav.find('[data-mobile-nav-close]');
     this.$searchBar = this.$nav.find('[data-nav-search-bar]');
   };
+
+  /**
+  * Inherit from base module, for shared methods and interface
+  */
+  DoughBaseComponent.extend(Nav);
+
+  Nav.componentName = 'Nav';
 
   /**
   * Initialize the component
