@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseComponent, utilities) {
+define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($, DoughBaseComponent, utilities, mediaQueries) {
   'use strict';
 
   var Nav,
@@ -7,7 +7,6 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
   Nav = function($el, config) {
     Nav.baseConstructor.call(this, $el, config, defaultConfig);
 
-    this.smallViewport = 720;
     this.delay = 250;
     this.$mobileNavButton = $(document).find('[data-mobile-nav-button]');
     this.$mobileNavOverlay = $(document).find('[data-mobile-nav-overlay]');
@@ -53,7 +52,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseCompo
   };
 
   Nav.prototype._getViewportSize = function() {
-    if ($(window).width() < this.smallViewport) {
+    if (mediaQueries.atSmallViewport()) {
       this.atSmallViewport = true;
     } else {
       this.atSmallViewport = false;
