@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
+define(['jquery', 'DoughBaseComponent', 'utilities'], function($, DoughBaseComponent, utilities) {
   'use strict';
 
   var Nav,
@@ -48,8 +48,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   Nav.prototype._setUpComponent = function() {
     this.$nav.removeClass('uninitialised');
 
-    $(window).on('resize', this._debounce(this._setUpMobileAnimation.bind(this), 100));
-    $(window).on('resize', this._debounce(this._getViewportSize.bind(this), 99));
+    $(window).on('resize', utilities.debounce(this._setUpMobileAnimation.bind(this), 100));
+    $(window).on('resize', utilities.debounce(this._getViewportSize.bind(this), 99));
   };
 
   Nav.prototype._getViewportSize = function() {
@@ -282,27 +282,6 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
       e.preventDefault();
       callback.call(context, this);
     });
-  }
-
-  /**
-   * Rate limit the amount of times a method is called
-   * @param  {function} func Function to be called
-   * @param  {Number} wait How long to wait until func is called in milliseconds
-   * @return {function}
-   */
-  Nav.prototype._debounce = function(func, wait) {
-    var timeout;
-
-    return function() {
-      var context = this,
-          args = arguments,
-          later = function() {
-            timeout = null;
-            func.apply(context, args);
-          };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
   }
 
   return Nav;
