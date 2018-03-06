@@ -115,9 +115,59 @@
 
 <h3 class="styleguide__subheading" id="countries-list">Countries list</h2>
 <div class="styleguide__example">
-  <%= render 'shared/country_list' %>
+  <ul class="list list--countries">
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--uk"></use>
+      </svg>
+      <%= link_to 'Strategy for United Kingdom', '/', class: 'list--countries-link' %>
+    </li>
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--northern-ireland"></use>
+      </svg>
+      <%= link_to 'Strategy for Northern Ireland', '/', class: 'list--countries-link' %>
+    </li>
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--scotland"></use>
+      </svg>
+      <%= link_to 'Strategy for Scotland', '/', class: 'list--countries-link' %>
+    </li>
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--wales"></use>
+      </svg>
+      <%= link_to 'Strategy for Wales', '/', class: 'list--countries-link' %>
+    </li>
+  </ul>
 </div>
 <h3 class="styleguide__subheading">Code</h3>
 <xmp>
- <%= render 'shared/country_list' %>
+  <ul class="list list--countries">
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--uk"></use>
+      </svg>
+      <%= link_to 'Strategy for United Kingdom', '/', class: 'list--countries-link' %>
+    </li>
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--northern-ireland"></use>
+      </svg>
+      <%= link_to 'Strategy for Northern Ireland', '/', class: 'list--countries-link' %>
+    </li>
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--scotland"></use>
+      </svg>
+      <%= link_to 'Strategy for Scotland', '/', class: 'list--countries-link' %>
+    </li>
+    <li class="list--countries-item">
+      <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--wales"></use>
+      </svg>
+      <%= link_to 'Strategy for Wales', '/', class: 'list--countries-link' %>
+    </li>
+  </ul>
 </xmp>

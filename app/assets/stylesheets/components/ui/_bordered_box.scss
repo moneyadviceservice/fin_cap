@@ -9,7 +9,6 @@
   @include respond-to($mq-m) {
     @include column(6);
     margin-bottom: 0;
-    display: flex;
   }
 }
 
@@ -17,17 +16,25 @@
   @include respond-to($mq-s) {
     display: flex;
   }
+
+  .bordered-box {
+    @include respond-to($mq-m) {
+      display: flex;
+    }
+  }
+
+  .bordered-box__inner {
+    @include respond-to($mq-m) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .bordered-box__inner {
   border: 2px solid $grey-lighter;
   background-color: $color-white;
   padding: 0;
-
-  @include respond-to($mq-m) {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .bordered-box__title {
