@@ -91,3 +91,32 @@
     margin-bottom: $baseline-unit*2;
   }
 }
+
+.list--countries {
+  padding: 0;
+
+  .list--countries-item {
+    position: relative;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .list--countries-icon {
+    margin-right: $baseline-unit;
+  }
+
+  .list--countries-link {
+    vertical-align: $baseline-unit*2;
+
+    &:after {
+      @extend %icon;
+      @extend .icon--arrow;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: $baseline-unit*2;
+    }
+  }
+}
