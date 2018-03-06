@@ -5,11 +5,6 @@
   &:last-of-type {
     margin-bottom: 0;
   }
-
-  @include respond-to($mq-m) {
-    @include column(6);
-    margin-bottom: 0;
-  }
 }
 
 .bordered-box__group {
@@ -19,7 +14,9 @@
 
   .bordered-box {
     @include respond-to($mq-m) {
+      @include column(6);
       display: flex;
+      margin-bottom: 0;
     }
   }
 
