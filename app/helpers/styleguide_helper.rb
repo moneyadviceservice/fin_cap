@@ -37,7 +37,8 @@ module StyleguideHelper
     'Feedback'     => 'feedback',
     'Large call to action' => 'largecta',
     'Side panel'           => 'sidepanel',
-    'Evidence Type Icons'  => 'evidence_types'
+    'Evidence Type Icons'  => 'evidence_types',
+    'Countries List'       => 'countries'
   }.freeze
 
   PAGE_SPECIFIC = {
