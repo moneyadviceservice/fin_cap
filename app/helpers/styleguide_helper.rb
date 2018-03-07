@@ -32,6 +32,7 @@ module StyleguideHelper
     'Teaser box'   => 'teaser',
     'Hero image'   => 'hero',
     'Bordered box' => 'borderedbox',
+    'Coloured Box' => 'coloured_box',
     'Latest news'  => 'latestnews',
     'Download box' => 'downloads',
     'Feedback'     => 'feedback',
