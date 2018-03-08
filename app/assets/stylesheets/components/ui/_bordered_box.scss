@@ -1,6 +1,6 @@
 .bordered-box {
   @include column(12);
-  margin-bottom: $baseline-unit;
+  padding-bottom: $baseline-unit*2;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -24,6 +24,7 @@
     @include respond-to($mq-m) {
       display: flex;
       flex-direction: column;
+      width: 100%;
     }
   }
 }

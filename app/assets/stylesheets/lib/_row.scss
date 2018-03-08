@@ -1,3 +1,4 @@
 .row {
   @extend %clearfix;
+  margin: $baseline-unit*2 0;
 }

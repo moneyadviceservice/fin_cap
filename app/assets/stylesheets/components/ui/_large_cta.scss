@@ -2,8 +2,10 @@
   @include body(16, 10);
   @extend %clearfix;
   @extend %border-radius;
+  clear: both;
   background-color: $primary-blue;
   padding: $baseline-unit*4 $baseline-unit*2;
+  margin: 0 $baseline-unit $baseline-unit*2;
   display: block;
   font-weight: 500;
   position: relative;
@@ -19,6 +21,10 @@
 
   &:focus {
     outline-color: $primary-orange;
+  }
+
+  @include respond-to($mq-m) {
+    margin: 0 $baseline-unit*2 $baseline-unit*2;
   }
 }
 
