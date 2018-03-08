@@ -181,6 +181,7 @@
   <li>render 'shared/evidence_hub_hero', <strong>type:</strong> 'insight'</li>
   <li>render 'shared/evidence_hub_hero', <strong>type:</strong> 'review'</li>
   <li>render 'shared/evidence_hub_hero', <strong>type:</strong> 'evaluation'</li>
+  <li>render 'shared/evidence_hub_hero', <strong>type:</strong> 'news'</li>
 </ul>
 
 <h3 class="styleguide__subheading">Insight</h3>
@@ -220,5 +221,18 @@
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--evaluation-icon"></use>
     </svg>
     <p class="hero-evidence-hub__title">Evaluation</p>
+  </div>
+</xmp>
+<h3 class="styleguide__subheading">News</h3>
+<div class="styleguide__example">
+  <%= render 'shared/evidence_hub_hero', type: 'news' %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="hero hero-evidence-hub hero-evidence-hub--news">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon svg-icon svg-icon--news-icon" focusable="false">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--news-icon"></use>
+    </svg>
+    <p class="hero-evidence-hub__title">News</p>
   </div>
 </xmp>
