@@ -7,6 +7,9 @@
 !/log/.keep
 !/tmp/.keep
 
+#Ignore test db
+db/test.sqlite3
+
 # Ignore Byebug command history file.
 .byebug_history
 
