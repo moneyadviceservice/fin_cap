@@ -14,6 +14,23 @@ RSpec.describe EvidenceSummary do
     end
   end
 
+  describe '#content' do
+    let(:attributes) do
+      {
+        'blocks' => [
+          {
+            'identifier' => 'content',
+            'content' => 'Stress caused by pay levels ...'
+          }
+        ]
+      }
+    end
+
+    it 'returns the content value for block content identifier' do
+      expect(evidence_summary.content).to eq('Stress caused by pay levels ...')
+    end
+  end
+
   describe '#evidence_type' do
     context 'when layout identifier is present' do
       let(:attributes) { { 'layout_identifier' => 'insight' } }
@@ -86,6 +103,29 @@ RSpec.describe EvidenceSummary do
     context 'when countries are not present' do
       it 'returns empty content' do
         expect(evidence_summary.countries).to eq('')
+      end
+    end
+  end
+
+  describe '#client_group' do
+    context 'when client groups are present' do
+      let(:blocks) do
+        [
+          { 'identifier' => 'client_groups', 'content' => 'Older people' },
+          { 'identifier' => 'client_groups', 'content' => 'Working age' }
+        ]
+      end
+
+      it 'returns client groups content' do
+        expect(evidence_summary.client_group).to match_array(
+          ['Older people', 'Working age']
+        )
+      end
+    end
+
+    context 'when client groups are not present' do
+      it 'returns empty content' do
+        expect(evidence_summary.client_group).to be_empty
       end
     end
   end

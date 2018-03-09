@@ -1,4 +1,6 @@
 class EvidenceSummary
+  extend ActiveModel::Translation
+
   def self.map(documents)
     documents.map { |document| new(document) }
   end
@@ -13,6 +15,14 @@ class EvidenceSummary
 
   def initialize(document)
     @document = document
+  end
+
+  def content
+    find_block(:content)
+  end
+
+  def client_group
+    find_blocks(:client_groups)
   end
 
   def topics

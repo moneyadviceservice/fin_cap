@@ -1,9 +1,16 @@
 en:
+  activemodel:
+    attributes:
+      evidence_summary:
+        evidence_type: 'Evidence type'
+        countries: 'Country/Countries'
+        topics: 'Topics'
+        year_of_publication: 'Year of publication'
+        client_group: 'Client group'
   evidence_hub:
     summaries:
       header: 'Evidence Summaries'
-    search_results:
-      evidence_type: 'Evidence type: %{evidence_type}'
-      countries: 'Country/Countries: %{countries}'
-      topics: 'Topics: %{topics}'
-      year_of_publication: 'Year of publication: %{year_of_publication}'
+  fincap:
+    evidence_hub:
+      insight_summary:
+        name: 'Insight'
