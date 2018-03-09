@@ -47,6 +47,51 @@ RSpec.describe EvidenceSummary do
     end
   end
 
+  describe '#links_to_research' do
+    context 'when links are present' do
+      let(:blocks) do
+        [
+          {
+            'identifier' => 'links_to_research',
+            'content' => '<a>Some link</a>'
+          }
+        ]
+      end
+
+      it 'returns links content' do
+        expect(evidence_summary.links_to_research).to eq('<a>Some link</a>')
+      end
+    end
+
+    context 'when links are not present' do
+      it 'returns empty content' do
+        expect(evidence_summary.links_to_research).to eq('')
+      end
+    end
+  end
+
+  describe '#contact_information' do
+    context 'when contact is present' do
+      let(:blocks) do
+        [
+          {
+            'identifier' => 'contact_information',
+            'content' => 'Tel: 7070707070'
+          }
+        ]
+      end
+
+      it 'returns contact information content' do
+        expect(evidence_summary.contact_information).to eq('Tel: 7070707070')
+      end
+    end
+
+    context 'when contact is not present' do
+      it 'returns empty content' do
+        expect(evidence_summary.contact_information).to eq('')
+      end
+    end
+  end
   describe '#overview' do
     context 'when overview is present' do
       let(:blocks) do

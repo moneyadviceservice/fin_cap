@@ -27,6 +27,14 @@ class EvidenceSummaryPresenter < BasePresenter
     "#{evidence_type_field_name}:"
   end
 
+  def contact_information_field_name
+    translate_field(:contact_information)
+  end
+
+  def links_to_research_field_name
+    translate_field(:links_to_research)
+  end
+
   def formatted_topics
     "#{topics_field_name}: #{stripped_topics.join(', ')}"
   end

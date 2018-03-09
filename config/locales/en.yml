@@ -7,6 +7,8 @@ en:
         topics: 'Topics'
         year_of_publication: 'Year of publication'
         client_group: 'Client group'
+        contact_information: 'Contact information'
+        links_to_research: 'Links to further information'
   evidence_hub:
     summaries:
       header: 'Evidence Summaries'

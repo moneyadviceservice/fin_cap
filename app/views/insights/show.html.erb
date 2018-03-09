@@ -59,6 +59,25 @@
               <%= evidence_summary.stripped_countries %>
             </div>
           </div>
+          <div class="sidepanel">
+            <div class="evidence-hub__links">
+              <h5 class="sidepanel__subtitle">
+                <%= evidence_summary.links_to_research_field_name %>
+              </h5>
+
+              <%= evidence_summary.links_to_research.html_safe %>
+            </div>
+          </div>
+
+          <div class="sidepanel">
+            <div class="evidence-hub__contact_information">
+              <h5 class="sidepanel__subtitle">
+                <%= evidence_summary.contact_information_field_name %>
+              </h5>
+
+              <%= evidence_summary.contact_information.html_safe %>
+            </div>
+          </div>
         </div>
       </div>
     <% end %>

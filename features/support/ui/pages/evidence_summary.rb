@@ -9,6 +9,8 @@ module UI
       element :topics, '.evidence-hub__topics'
       element :year_of_publication, '.evidence-hub__year_of_publication'
       element :country, '.evidence-hub__country'
+      element :contact_information, '.evidence-hub__contact_information'
+      element :links, '.evidence-hub__links'
     end
   end
 end
