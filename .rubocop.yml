@@ -46,5 +46,6 @@ AllCops:
   Exclude:
   - 'bin/**/*'
   - 'config/**/*'
+  - 'db/schema.rb'
   - 'lib/tasks/cucumber.rake'
   - 'script/cucumber'
