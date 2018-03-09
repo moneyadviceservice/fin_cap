@@ -1,0 +1,18 @@
+#!/bin/bash
+# Useful for testing in docker locally
+set -e
+export COMPOSE_PROJECT_NAME=fincap
+image_name="fincap_rails_1"
+
+docker-compose pull
+docker-compose build --force-rm
+docker-compose up -d
+docker-compose -f docker-compose.yml run --rm rails ./script/test
+
+# docker logs will only run until the container exits
+( docker logs --follow "$image_name" )&
+
+exit_code="$( docker wait "$image_name" )"
+docker-compose down
+
+exit "$exit_code"

@@ -49,3 +49,4 @@ AllCops:
   - 'db/schema.rb'
   - 'lib/tasks/cucumber.rake'
   - 'script/cucumber'
+  - 'node_modules/**/*'
