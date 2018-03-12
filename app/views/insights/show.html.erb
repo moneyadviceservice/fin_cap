@@ -1,63 +1,66 @@
-<%= render 'shared/evidence_hub_hero',
-           type: I18n.t('fincap.evidence_hub.insight_summary.name') %>
-
-<% present(@evidence_summary) do |evidence_summary| %>
-  <div class="l-constrained">
-    <div class="l-2col">
-      <div class="l-2col-main">
-        <h1 class="evidence-hub__title"><%= evidence_summary.title %></h1>
-        <div class="evidence-hub__content">
-          <%= evidence_summary.content.html_safe %>
-        </div>
-      </div>
-      <div class="l-2col-side">
-        <div class='sidepanel'>
-          <h4 class="sidepanel__title">Key info</h4>
-
-          <div class="evidence-hub__client_groups">
-            <h5 class="sidepanel__subtitle">
-              <%= evidence_summary.client_group_field_name %>
-            </h5>
-            <ul class="sidepanel__list">
-              <% evidence_summary.stripped_client_group.each do |client_group| %>
-                <li class="sidepanel__list-item">
-                  <%= link_to client_group,
-                      '#',
-                      class: 'sidepanel__list-item-link'
-                  %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-          <div class="evidence-hub__topics">
-            <h5 class="sidepanel__subtitle">
-              <%= evidence_summary.topics_field_name %>
-            </h5>
-            <ul class="sidepanel__list">
-              <% evidence_summary.stripped_topics.each do |topic| %>
-                <li class="sidepanel__list-item">
-                  <%= link_to topic,
-                      '#',
-                      class: 'sidepanel__list-item-link'
-                  %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-          <div class="evidence-hub__year_of_publication">
-            <h5 class="sidepanel__subtitle">
-              <%= evidence_summary.year_of_publication_field_name %>
-            </h5>
-            <%= evidence_summary.stripped_year_of_publication %>
-          </div>
-          <div class="evidence-hub__country">
-            <h5 class="sidepanel__subtitle">
-              <%= evidence_summary.countries_field_name %>
-            </h5>
-            <%= evidence_summary.stripped_countries %>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="l-constrained">
+  <div class="row">
+    <%= render 'shared/evidence_hub_hero',
+               type: I18n.t('fincap.evidence_hub.insight_summary.name') %>
   </div>
-<% end %>
+
+  <div class="row">
+    <% present(@evidence_summary) do |evidence_summary| %>
+      <div class="l-2col">
+        <div class="l-2col-main">
+          <h1 class="evidence-hub__title"><%= evidence_summary.title %></h1>
+          <div class="evidence-hub__content">
+            <%= evidence_summary.content.html_safe %>
+          </div>
+        </div>
+        <div class="l-2col-side">
+          <div class='sidepanel'>
+            <h4 class="sidepanel__title">Key info</h4>
+            <div class="evidence-hub__client_groups">
+              <h5 class="sidepanel__subtitle">
+                <%= evidence_summary.client_group_field_name %>
+              </h5>
+              <ul class="sidepanel__list">
+                <% evidence_summary.stripped_client_group.each do |client_group| %>
+                  <li class="sidepanel__list-item">
+                    <%= link_to client_group,
+                        '#',
+                        class: 'sidepanel__list-item-link'
+                    %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="evidence-hub__topics">
+              <h5 class="sidepanel__subtitle">
+                <%= evidence_summary.topics_field_name %>
+              </h5>
+              <ul class="sidepanel__list">
+                <% evidence_summary.stripped_topics.each do |topic| %>
+                  <li class="sidepanel__list-item">
+                    <%= link_to topic,
+                        '#',
+                        class: 'sidepanel__list-item-link'
+                    %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="evidence-hub__year_of_publication">
+              <h5 class="sidepanel__subtitle">
+                <%= evidence_summary.year_of_publication_field_name %>
+              </h5>
+              <%= evidence_summary.stripped_year_of_publication %>
+            </div>
+            <div class="evidence-hub__country">
+              <h5 class="sidepanel__subtitle">
+                <%= evidence_summary.countries_field_name %>
+              </h5>
+              <%= evidence_summary.stripped_countries %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
