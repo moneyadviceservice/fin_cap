@@ -4,6 +4,11 @@ RSpec.describe EvidenceSummaryPresenter do
     double('EvidenceSummary', attributes)
   end
   subject(:presenter) { described_class.new(evidence_summary, view) }
+  let(:attributes) { {} }
+
+  before do
+    allow(evidence_summary).to receive(:class).and_return(EvidenceSummary)
+  end
 
   describe '#link' do
     let(:attributes) do
@@ -23,7 +28,39 @@ RSpec.describe EvidenceSummaryPresenter do
     end
   end
 
-  describe '#evidence_type_info' do
+  describe '#client_group_field_name' do
+    it 'returns the name of the field' do
+      expect(presenter.client_group_field_name).to eq('Client group')
+    end
+  end
+
+  describe '#evidence_type_field_name' do
+    it 'returns the name of the field' do
+      expect(presenter.evidence_type_field_name).to eq('Evidence type')
+    end
+  end
+
+  describe '#topics_field_name' do
+    it 'returns the name of the field' do
+      expect(presenter.topics_field_name).to eq('Topics')
+    end
+  end
+
+  describe '#year_of_publication_field_name' do
+    it 'returns the name of the field' do
+      expect(presenter.year_of_publication_field_name).to eq(
+        'Year of publication'
+      )
+    end
+  end
+
+  describe '#countries_field_name' do
+    it 'returns the name of the field' do
+      expect(presenter.countries_field_name).to eq('Country/Countries')
+    end
+  end
+
+  describe '#formatted_evidence_type' do
     let(:attributes) do
       {
         evidence_type: 'Insight'
@@ -31,7 +68,49 @@ RSpec.describe EvidenceSummaryPresenter do
     end
 
     it 'returns the evidence type of the document' do
-      expect(presenter.evidence_type_info).to eq('Evidence type: Insight')
+      expect(presenter.formatted_evidence_type).to eq('Evidence type: Insight')
+    end
+  end
+
+  describe '#formatted_topics' do
+    let(:attributes) do
+      {
+        topics: ['One topic', 'Another topic']
+      }
+    end
+
+    it 'returns the topics separated by comma' do
+      expect(presenter.formatted_topics).to eq(
+        'Topics: One topic, Another topic'
+      )
+    end
+  end
+
+  describe '#formatted_countries' do
+    let(:attributes) do
+      {
+        countries: 'United Kingdom'
+      }
+    end
+
+    it 'returns the countries with the field name' do
+      expect(presenter.formatted_countries).to eq(
+        'Country/Countries: United Kingdom'
+      )
+    end
+  end
+
+  describe '#formatted_year_of_publication' do
+    let(:attributes) do
+      {
+        year_of_publication: '2017'
+      }
+    end
+
+    it 'returns the evidence type of the document' do
+      expect(presenter.formatted_year_of_publication).to eq(
+        'Year of publication: 2017'
+      )
     end
   end
 
@@ -49,6 +128,19 @@ RSpec.describe EvidenceSummaryPresenter do
     end
   end
 
+  describe '#stripped_client_group' do
+    let(:attributes) do
+      {
+        client_group: ['<p>Working age</p>', '<p>Older people</p>']
+      }
+    end
+
+    it 'strips all html tags from client groups' do
+      expect(presenter.stripped_client_group).to eq(
+        ['Working age', 'Older people']
+      )
+    end
+  end
   describe '#stripped_topics' do
     let(:attributes) do
       {
@@ -58,7 +150,7 @@ RSpec.describe EvidenceSummaryPresenter do
 
     it 'strips all html tags from topics' do
       expect(presenter.stripped_topics).to eq(
-        'Topics: Saving, Financial Capability'
+        ['Saving', 'Financial Capability']
       )
     end
   end
@@ -72,7 +164,7 @@ RSpec.describe EvidenceSummaryPresenter do
 
     it 'strips all html tags from countries' do
       expect(presenter.stripped_countries).to eq(
-        'Country/Countries: United Kingdom'
+        'United Kingdom'
       )
     end
   end
@@ -86,7 +178,7 @@ RSpec.describe EvidenceSummaryPresenter do
 
     it 'strips all html tags from year of publication' do
       expect(presenter.stripped_year_of_publication).to eq(
-        'Year of publication: 2017'
+        '2017'
       )
     end
   end

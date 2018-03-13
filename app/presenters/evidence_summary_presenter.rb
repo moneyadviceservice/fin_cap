@@ -3,33 +3,73 @@ class EvidenceSummaryPresenter < BasePresenter
     view.link_to title, full_path
   end
 
-  def evidence_type_info
-    view.t(
-      'evidence_hub.search_results.evidence_type',
-      evidence_type: evidence_type
-    )
+  def evidence_type_field_name
+    translate_field(:evidence_type)
+  end
+
+  def topics_field_name
+    translate_field(:topics)
+  end
+
+  def countries_field_name
+    translate_field(:countries)
+  end
+
+  def year_of_publication_field_name
+    translate_field(:year_of_publication)
+  end
+
+  def client_group_field_name
+    translate_field(:client_group)
+  end
+
+  def formatted_evidence_type
+    "#{evidence_type_field_name}: #{evidence_type}"
+  end
+
+  def formatted_topics
+    "#{topics_field_name}: #{stripped_topics.join(', ')}"
+  end
+
+  def formatted_countries
+    "#{countries_field_name}: #{stripped_countries}"
+  end
+
+  def formatted_year_of_publication
+    "#{year_of_publication_field_name}: #{stripped_year_of_publication}"
   end
 
   def stripped_overview
-    view.strip_tags(overview)
+    strip_text(overview)
+  end
+
+  def stripped_client_group
+    strip_collection(client_group)
   end
 
   def stripped_topics
-    all_topics = topics.map { |topic| view.strip_tags(topic).strip }.join(', ')
-    view.t('evidence_hub.search_results.topics', topics: all_topics)
-  end
-
-  def stripped_countries
-    view.t(
-      'evidence_hub.search_results.countries',
-      countries: view.strip_tags(countries)
-    )
+    strip_collection(topics)
   end
 
   def stripped_year_of_publication
-    view.t(
-      'evidence_hub.search_results.year_of_publication',
-      year_of_publication: view.strip_tags(year_of_publication)
-    )
+    strip_text(year_of_publication)
+  end
+
+  def stripped_countries
+    strip_text(countries)
+  end
+
+  private
+
+  def translate_field(field)
+    object.class.human_attribute_name(field)
+  end
+
+  def strip_collection(collection)
+    collection.map { |element| strip_text(element) }
+  end
+
+  def strip_text(text)
+    view.strip_tags(text)
   end
 end
