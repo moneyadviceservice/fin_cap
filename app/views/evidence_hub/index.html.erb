@@ -8,6 +8,12 @@
   <div class="l-2col">
     <div class="l-2col-side">
       <div class="sidepanel">
+        <h4 class="sidepanel__title">Keyword search</h4>
+
+        <%= form_tag(evidence_hub_index_path, method: :get) do %>
+          <%= text_field_tag :keyword, params[:keyword] %>
+          <%= button_tag 'Save', type: 'submit', class: 'btn btn--primary btn--full-width' %>
+        <% end %>
       </div>
     </div>
     <div class="l-2col-main">

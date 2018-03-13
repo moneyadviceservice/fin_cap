@@ -4,8 +4,8 @@ Feature: Evidence Hub Search
 	I want to be able to see a brief summary of all the insight summaries
 
   Scenario: Visit the landing page
-    When I visit the evidence hub search page
-    Then I should see the "first" result as
+    Given I visit the evidence hub search page
+    Then I should see the "first" evidence summary as
       | Field               | Value                                                    |
       | document title      | Financial well-being: the employee view                  |
       | overview            | Stress caused by pay levels, lack of financial awareness |
@@ -13,7 +13,7 @@ Feature: Evidence Hub Search
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
-    And I should see the "second" result as
+    And I should see the "second" evidence summary as
       | Field               | Value                                                                              |
       | document title      | Moving forward together: peer support for people with problem debt                 |
       | overview            | Research has found that there remains a real stigma around seeking advice for debt |
@@ -21,3 +21,16 @@ Feature: Evidence Hub Search
       | topics              | Credit Use and Debt                                                                |
       | countries           | England                                                                            |
       | year of publication | 2017                                                                               |
+
+  Scenario: Search by keyword
+    Given I visit the evidence hub search page
+    When I search on evidence hub the keyword "Financial well-being: the employee"
+    Then I should see "1" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                                                    |
+      | document title      | Financial well-being: the employee view                  |
+      | overview            | Stress caused by pay levels, lack of financial awareness |
+      | evidence type       | Insight                                                  |
+      | topics              | Saving                                                   |
+      | countries           | United Kingdom                                           |
+      | year of publication | 2015                                                     |
