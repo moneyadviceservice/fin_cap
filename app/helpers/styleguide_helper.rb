@@ -46,5 +46,9 @@ module StyleguideHelper
     'Search Results' => 'search_results'
   }.freeze
 
+  UI_HELPERS = {
+    '"New" Label' => 'new_label'
+  }.freeze
+
   LINKS = %w[Layout Typography Links Lists Colours Buttons Forms].freeze
 end

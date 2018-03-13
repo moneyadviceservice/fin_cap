@@ -24,3 +24,12 @@
     </li>
   <% end %>
 </ul>
+
+<ul class="styleguide-nav">
+  <li class="styleguide-nav__title">UI Helpers<li>
+  <%- @ui_helpers.each do |label, path| %>
+    <li class="styleguide-nav__item">
+      <a href=<%= "/styleguide/#{path}" %> class="styleguide-nav__item-link"><%= label %></a>
+    </li>
+  <% end %>
+</ul>

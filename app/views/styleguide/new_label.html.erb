@@ -1,0 +1,26 @@
+<h1>UI Helpers</h1>
+<h2>New Label</h2>
+<h3 class="styleguide__subheading">Using .is-new</h3>
+<div class="styleguide__example">
+  <h2 class="is-new">Adding a new label</h2>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <h2 class="is-new">Adding a new label</h2>
+</xmp>
+<p>You can also add more specific styles and extend .is-new to include the new label (See <a href="/styleguide/search_results" target="_blank">Search Results</a>) </p>
+<h3 class="styleguide__subheading">Extending .is-new</h3>
+<div class="styleguide__example">
+  <h2 class="heading heading--new">Adding a new label</h2>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  // Markup
+  <h2 class="heading heading--new">Adding a new label</h2>
+
+  // SASS
+  .heading--new {
+    @extend .is-new;
+    // Additional styles
+  }
+</xmp>

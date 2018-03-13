@@ -209,3 +209,9 @@ a.styleguide__anchor {
     display: none;
   }
 }
+
+.heading--new {
+  &:after {
+    @extend .is-new;
+  }
+}
