@@ -13,6 +13,8 @@ module UI::Pages
 
     set_url '{/locale}/evidence_hub'
 
+    element :keyword, '#keyword'
+    element :search_button, '.sidepanel button[type="submit"]'
     sections :search_results, SearchResult, '.search-results li'
   end
 end
