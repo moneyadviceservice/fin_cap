@@ -1,5 +1,5 @@
 class StyleguideController < ApplicationController
-  before_action :components, :page_specific, :links
+  before_action :components, :page_specific, :ui_helpers, :links
   layout 'styleguide'
   include StyleguideHelper
 
@@ -45,6 +45,10 @@ class StyleguideController < ApplicationController
 
   def page_specific
     @page_specific = PAGE_SPECIFIC
+  end
+
+  def ui_helpers
+    @ui_helpers = UI_HELPERS
   end
 
   def links
