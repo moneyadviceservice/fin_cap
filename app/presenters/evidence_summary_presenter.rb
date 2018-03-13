@@ -27,10 +27,6 @@ class EvidenceSummaryPresenter < BasePresenter
     "#{evidence_type_field_name}:"
   end
 
-  def formatted_evidence_type
-    "#{evidence_type}"
-  end
-
   def formatted_topics
     "#{topics_field_name}: #{stripped_topics.join(', ')}"
   end

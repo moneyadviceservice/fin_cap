@@ -60,18 +60,6 @@ RSpec.describe EvidenceSummaryPresenter do
     end
   end
 
-  describe '#formatted_evidence_type' do
-    let(:attributes) do
-      {
-        evidence_type: 'Insight'
-      }
-    end
-
-    it 'returns the evidence type of the document' do
-      expect(presenter.formatted_evidence_type).to eq('Evidence type: Insight')
-    end
-  end
-
   describe '#formatted_topics' do
     let(:attributes) do
       {
