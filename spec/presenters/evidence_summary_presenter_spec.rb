@@ -54,6 +54,22 @@ RSpec.describe EvidenceSummaryPresenter do
     end
   end
 
+  describe '#contact_information_field_name' do
+    it 'returns the name of the field' do
+      expect(presenter.contact_information_field_name).to eq(
+        'Contact information'
+      )
+    end
+  end
+
+  describe '#links_to_research_field_name' do
+    it 'returns the name of the field' do
+      expect(presenter.links_to_research_field_name).to eq(
+        'Links to further information'
+      )
+    end
+  end
+
   describe '#countries_field_name' do
     it 'returns the name of the field' do
       expect(presenter.countries_field_name).to eq('Country/Countries')

@@ -45,6 +45,14 @@ class EvidenceSummary
     find_block(:year_of_publication)
   end
 
+  def links_to_research
+    find_block(:links_to_research)
+  end
+
+  def contact_information
+    find_block(:contact_information)
+  end
+
   private
 
   def find_blocks(block_identifier)
