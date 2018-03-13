@@ -6,6 +6,7 @@ module World
 
     pages = %w[
       evidence_summaries
+      evidence_summary
     ]
 
     pages.each do |page|

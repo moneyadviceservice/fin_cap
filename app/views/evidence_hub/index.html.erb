@@ -1,8 +1,10 @@
 <div class="l-constrained">
-  <div class="hero hero--blue">
-    <h1 class="hero__heading">
-      <%= t('evidence_hub.summaries.header') %>
-    </h1>
+  <div class="row">
+    <div class="hero hero--blue">
+      <h1 class="hero__heading">
+        <%= t('evidence_hub.summaries.header') %>
+      </h1>
+    </div>
   </div>
 
   <div class="l-2col">
@@ -15,32 +17,35 @@
           <%= button_tag 'Save', type: 'submit', class: 'btn btn--primary btn--full-width' %>
         <% end %>
       </div>
-    </div>
-    <div class="l-2col-main">
-      <ul class="search-results">
-        <% present_collection(@evidence_summaries).each do |document| %>
-          <li class="search-results__item">
-            <p class="search-results__title">
-              <%= document.link %>
-            </p>
-            <p class="search-results__description">
-              <%= document.stripped_overview %>
-            </p>
-            <p class="search-results__evidence-type">
-              <%= document.formatted_evidence_type %>
-            </p>
-            <p class="search-results__topics">
-              <%= document.formatted_topics %>
-            </p>
-            <p class="search-results__countries">
-              <%= document.formatted_countries %>
-            </p>
-            <p class="search-results__year-of-publication">
-              <%= document.formatted_year_of_publication %>
-            </p>
-          </li>
-        <% end %>
-      </ul>
+      <div class="l-2col-main">
+        <ul class="search-results">
+          <% present_collection(@evidence_summaries).each do |document| %>
+            <li class="search-results__item">
+              <p class="search-results__title">
+                <%= document.link %>
+              </p>
+              <p class="search-results__description">
+                <%= document.stripped_overview %>
+              </p>
+              <p class="search-results__evidence-type">
+                <%= document.formatted_evidence_type_label %>
+                <a href="#" class="search-results__evidence-type-link">
+                  <%= document.evidence_type %>
+                </a>
+              </p>
+              <p class="search-results__topics">
+                <%= document.formatted_topics %>
+              </p>
+              <p class="search-results__countries">
+                <%= document.formatted_countries %>
+              </p>
+              <p class="search-results__year-of-publication">
+                <%= document.formatted_year_of_publication %>
+              </p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

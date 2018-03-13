@@ -1,6 +1,6 @@
-<div class="hero hero-evidence-hub hero-evidence-hub--<%= "#{type}" %>">
-  <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon svg-icon svg-icon--<%= "#{type}" %>-icon" focusable="false">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--<%= "#{type}" %>-icon"></use>
+<div class="hero hero-evidence-hub hero-evidence-hub--<%= "#{type.downcase}" %>">
+  <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon svg-icon svg-icon--<%= "#{type.downcase}" %>-icon" focusable="false">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--<%= "#{type.downcase}" %>-icon"></use>
   </svg>
   <p class="hero-evidence-hub__title"><%= type %></p>
 </div>

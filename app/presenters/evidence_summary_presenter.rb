@@ -23,8 +23,8 @@ class EvidenceSummaryPresenter < BasePresenter
     translate_field(:client_group)
   end
 
-  def formatted_evidence_type
-    "#{evidence_type_field_name}: #{evidence_type}"
+  def formatted_evidence_type_label
+    "#{evidence_type_field_name}:"
   end
 
   def formatted_topics

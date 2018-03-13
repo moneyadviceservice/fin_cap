@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   scope ':locale', locale: /en/ do
     resources :evidence_hub, only: :index
+    resources :insights, only: :show
   end
 
   # Styleguide
