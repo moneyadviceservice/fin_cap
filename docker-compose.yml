@@ -1,0 +1,36 @@
+version: '2.1'
+services:
+  postgres:
+    image: postgres:9.4
+    ports:
+      - 5432
+    environment:
+      - POSTGRES_PASSWORD=go
+      - POSTGRES_USER=go
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 'postgres' -p '5432'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  rails:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./script/test
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - POSTGRESHOST=postgres
+      - POSTGRESPASS=go
+      - POSTGRESUSER=go
+      - HTTP_REQUEST_TIMEOUT=10
+      - FINCAP_CMS_URL=http://localhost:3000
+      - LANG=C.UTF-8
+    links:
+      - postgres
+volumes:
+  bundle: {}
+  postgres: {}
