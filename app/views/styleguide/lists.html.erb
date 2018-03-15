@@ -23,10 +23,9 @@
 <h3 class="styleguide__subheading" id="default-list">Default list</h2>
 <div class="styleguide__example">
   <ul class="list">
-    <li>List item 1</li>
-    <li>List item 2</li>
-    <li>List item 3</li>
-    <li>List item 4</li>
+    <%- (1..4).each do |n|  %>
+      <li><%= "List item #{n}" %></li>
+    <% end %>
   </ul>
 </div>
 
@@ -43,10 +42,9 @@
 <h3 class="styleguide__subheading" id="link-list">Link list</h2>
 <div class="styleguide__example">
   <ul class="list list--links">
-    <li><a href="http://www.fincap.org.uk/">List item 1</a></li>
-    <li><a href="http://www.fincap.org.uk/">List item 2</a></li>
-    <li><a href="http://www.fincap.org.uk/">List item 3</a></li>
-    <li><a href="http://www.fincap.org.uk/">List item 4</a></li>
+    <%- (1..4).each do |n| %>
+      <li><a href="http://www.fincap.org.uk/"><%= "List item #{n}" %></a></li>
+    <% end %>
   </ul>
 </div>
 
@@ -63,10 +61,9 @@
 <h3 class="styleguide__subheading" id="grouped-cta-list">Grouped CTA list</h2>
 <div class="styleguide__example">
   <ul class="list list--grouped-cta">
-    <li><a href="http://www.fincap.org.uk/">List item 1</a></li>
-    <li><a href="http://www.fincap.org.uk/">List item 2</a></li>
-    <li><a href="http://www.fincap.org.uk/">List item 3</a></li>
-    <li><a href="http://www.fincap.org.uk/">List item 4</a></li>
+    <%- (1..4).each do |n| %>
+      <li><a href="http://www.fincap.org.uk/"><%= "List item #{n}" %></a></li>
+    <% end %>
   </ul>
 </div>
 
@@ -83,22 +80,12 @@
 <h3 class="styleguide__subheading" id="numbered-list">Numbered list</h2>
 <div class="styleguide__example">
   <dl class="list list--numbered">
-    <dt class="list--numbered__title">List item 1</dt>
-    <dd class="list--numbered__content">
-      List item description content
-    </dd>
-    <dt class="list--numbered__title">List item 2</dt>
-    <dd class="list--numbered__content">
-      List item description content
-    </dd>
-    <dt class="list--numbered__title">List item 3</dt>
-    <dd class="list--numbered__content">
-      List item description content
-    </dd>
-    <dt class="list--numbered__title">List item 4</dt>
-    <dd class="list--numbered__content">
-      List item description content
-    </dd>
+    <%- (1..4).each do |n| %>
+      <dt class="list--numbered__title"><%= "List item #{n}" %></dt>
+      <dd class="list--numbered__content">
+        List item description content
+      </dd>
+    <% end %>
   </dl>
 </div>
 
@@ -119,34 +106,15 @@
 <h3 class="styleguide__subheading" id="lettered-list">Lettered list</h2>
 <div class="styleguide__example">
   <ul class="list list--lettered">
-    <li class="list--lettered-item">
-      <div class="list--lettered-item__letter" aria-hidden="true">T</div>
-      <div class="list--lettered-item__content">
-        <a href="#">List item 1</a>
-        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
-      </div>
-    </li>
-    <li class="list--lettered-item">
-      <div class="list--lettered-item__letter" aria-hidden="true">E</div>
-      <div class="list--lettered-item__content">
-        <a href="#">List item 2</a>
-        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
-      </div>
-    </li>
-    <li class="list--lettered-item">
-      <div class="list--lettered-item__letter" aria-hidden="true">S</div>
-      <div class="list--lettered-item__content">
-        <a href="#">List item 3</a>
-        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
-      </div>
-    </li>
-    <li class="list--lettered-item">
-      <div class="list--lettered-item__letter" aria-hidden="true">T</div>
-      <div class="list--lettered-item__content">
-        <a href="#">List item 4</a>
-        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
-      </div>
-    </li>
+    <%- %w(T E S T).each do |letter, index| %>
+      <li class="list--lettered-item">
+        <div class="list--lettered-item__letter" aria-hidden="true"><%= letter %></div>
+        <div class="list--lettered-item__content">
+          <a href="#"><%= "List item #{index}" %></a>
+          <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
+        </div>
+      </li>
+    <% end %>
   </ul>
 </div>
 
