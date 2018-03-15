@@ -14,6 +14,9 @@
     <a href="#numbered-list">Numbered List</a>
   </li>
   <li class="styleguide__list-item">
+    <a href="#lettered-list">Lettered List</a>
+  </li>
+  <li class="styleguide__list-item">
     <a href="#countries-list">Countries List</a>
   </li>
 </ul>
@@ -111,6 +114,59 @@
       List item description content
     </dd>
   </dl>
+</xmp>
+
+<h3 class="styleguide__subheading" id="lettered-list">Lettered list</h2>
+<div class="styleguide__example">
+  <ul class="list list--lettered">
+    <li class="list--lettered-item">
+      <div class="list--lettered-item__letter" aria-hidden="true">T</div>
+      <div class="list--lettered-item__content">
+        <a href="#">List item 1</a>
+        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
+      </div>
+    </li>
+    <li class="list--lettered-item">
+      <div class="list--lettered-item__letter" aria-hidden="true">E</div>
+      <div class="list--lettered-item__content">
+        <a href="#">List item 2</a>
+        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
+      </div>
+    </li>
+    <li class="list--lettered-item">
+      <div class="list--lettered-item__letter" aria-hidden="true">S</div>
+      <div class="list--lettered-item__content">
+        <a href="#">List item 3</a>
+        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
+      </div>
+    </li>
+    <li class="list--lettered-item">
+      <div class="list--lettered-item__letter" aria-hidden="true">T</div>
+      <div class="list--lettered-item__content">
+        <a href="#">List item 4</a>
+        <p class="list--lettered-item__inner-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat dolor. Praesent ac eleifend eros.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <ul class="list list--lettered">
+    <li class="list--lettered-item">
+      <div class="list--lettered-item__letter" aria-hidden="true">
+        {LETTER}
+      </div>
+      <div class="list--lettered-item__content">
+        <a href="#">
+          Heading link
+        </a>
+        <p class="list--lettered-item__inner-content">
+          Content
+        </p>
+      </div>
+    </li>
+  </ul>
 </xmp>
 
 <h3 class="styleguide__subheading" id="countries-list">Countries list</h2>
