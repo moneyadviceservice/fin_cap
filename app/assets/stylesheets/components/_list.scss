@@ -120,3 +120,52 @@
     }
   }
 }
+
+.list--lettered {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .list--lettered-item {
+    @extend %clearfix;
+    list-style: none;
+    padding-bottom: $baseline-unit*4;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-left: 4px dotted $primary-yellow;
+      left: $baseline-unit*6;
+      top: 0;
+      bottom: 0;
+      height: auto;
+    }
+
+    &:last-of-type:before {
+      border: none;
+    }
+  }
+
+  .list--lettered-item__letter {
+    @include body(24, 48);
+    width: 45px;
+    height: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 50%;
+    text-align: center;
+    background-color: $primary-yellow;
+    color: $color-black;
+    position: absolute;
+    z-index: 9;
+  }
+  
+  .list--lettered-item__content {
+    padding-left: $baseline-unit*10;
+  }
+  
+  .list--lettered-item__inner-content {
+    margin: 0;
+  }
+}
