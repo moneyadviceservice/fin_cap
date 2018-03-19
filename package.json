@@ -6,16 +6,21 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^5.7.1"
+  },
   "devDependencies": {
     "chai": "^4.1.2",
     "karma": "^2.0.0",
     "karma-chai": "^0.1.0",
     "karma-cli": "^1.0.1",
+    "karma-fixture": "^0.2.6",
+    "karma-html2js-preprocessor": "^1.1.0",
     "karma-mocha": "^1.3.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-requirejs": "^1.1.0",
     "karma-sinon": "^1.0.5",
+    "karma-spec-reporter": "0.0.32",
     "mocha": "^5.0.1",
     "requirejs": "^2.3.5",
     "sinon": "^4.4.2"
