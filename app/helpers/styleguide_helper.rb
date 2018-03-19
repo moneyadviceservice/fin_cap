@@ -39,6 +39,7 @@ module StyleguideHelper
     'Large call to action' => 'largecta',
     'Side panel'           => 'sidepanel',
     'Evidence Type Icons'  => 'evidence_types',
+    'Evaluation Types'     => 'evaluation_types',
     'Countries List'       => 'countries'
   }.freeze
 

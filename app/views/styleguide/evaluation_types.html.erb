@@ -1,0 +1,33 @@
+<h1>UI Components</h1>
+<h2>Evaluation Types</h2>
+<p>Developer notes: This component uses a partial view for the evaluation type which expects a string value.</p>
+<p>To render each of the evaluation types call the partial from "shared/evaluation_types.html.erb" and include the required value:</p>
+<ul>
+  <li>render 'shared/evaluation_types', type: '<strong>Insight</strong>'</li>
+  <li>render 'shared/evaluation_types', type: '<strong>Evaluation</strong>'</li>
+  <li>render 'shared/evaluation_types', type: '<strong>Review</strong>'</li>
+</ul>
+<h3 class="styleguide__subheading">Insight</h3>
+<div class="styleguide__example">
+  <%= render 'shared/evaluation_types', type: 'Insight' %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <%= render 'shared/evaluation_types', type: 'Insight' %>
+</xmp>
+<h3 class="styleguide__subheading">Evaluation</h3>
+<div class="styleguide__example">
+  <%= render 'shared/evaluation_types', type: 'Evaluation' %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <%= render 'shared/evaluation_types', type: 'Evaluation' %>
+</xmp>
+<h3 class="styleguide__subheading">Review</h3>
+<div class="styleguide__example">
+  <%= render 'shared/evaluation_types', type: 'Review' %>
+</div>
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <%= render 'shared/evaluation_types', type: 'Review' %>
+</xmp>

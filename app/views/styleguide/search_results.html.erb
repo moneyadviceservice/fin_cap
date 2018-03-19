@@ -1,5 +1,11 @@
 <h1>Page Specific Components</h1>
 <h2>Search Results</h2>
+<p>The search results are comprised of 3 additional components:</p>
+<ul class="styleguide__list">
+  <li><a href="/styleguide/evaluation_types">Evaluation Types</a></li>
+  <li><a href="/styleguide/evidence_types">Evidence Type Icons</a></li>
+  <li><a href="/styleguide/new_label">"NEW" label</a></li>
+</ul>
 <h3 class="styleguide__subheading">Default search result</h3>
 <div class="styleguide__example">
   <ul class="search-results">
@@ -8,9 +14,7 @@
       <p class="search-results__description">{short_description}</p>
       <p class="search-results__evidence-type">
         Evidence Type: 
-        <a href="#" class="search-results__evidence-type-link">
-           {Evidence type}
-        </a>
+        <%= render 'shared/evaluation_types', type: 'Insight' %>
       </p>
       <%= render 'shared/evidence_types', icon: 'tick', text: 'Evidence tick' %>
       <%= render 'shared/evidence_types', icon: 'cross', text: 'Evidence cross' %>
@@ -53,7 +57,7 @@
       <p class="search-results__evidence-type">
         Evidence Type: 
         <a href="#" class="search-results__evidence-type-link">
-           {Evidence type}
+           <%= render 'shared/evaluation_types', type: 'Evaluation' %>
         </a>
       </p>
       <%= render 'shared/evidence_types', icon: 'tick', text: 'Evidence tick' %>
