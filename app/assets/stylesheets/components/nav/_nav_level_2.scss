@@ -7,7 +7,6 @@
   top: 0;
   left: 0;
   transform: translateX(100%);
-  padding: $baseline-unit $baseline-unit $baseline-unit*10 $baseline-unit;
   width: 100%;
 
   &.is-active {
@@ -24,12 +23,6 @@
     background: $color-white;
     padding-bottom: $baseline-unit;
 
-    &:after {
-      box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.6);
-      position: relative;
-      z-index: -1
-    }
-
     &.is-active {
       visibility: visible;
       transform: none;
@@ -37,14 +30,27 @@
   }
 }
 
-.nav__level-2__description,
-.nav__level-3__description {
+.nav__level-2 {
+  @include respond-to($mq-m) {
+    &:after {
+      content: '';
+      display: block;
+      box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: -1
+    }
+  }
+}
+
+.nav__level-2__description {
   display: none;
 
   @include respond-to($mq-m) {
     @include column(12);
+
     display: block;
     text-align: center;
+    color: $color-black;
   }
 }
 
@@ -52,7 +58,7 @@
   display: none;
 }
 
-// no-js fallback --
+// uninitialised --
 .uninitialised {
   @include respond-to($mq-m) {
     .nav__level-1__element__heading {
@@ -70,20 +76,15 @@
     }
   }
 }
-// -- no-js fallback
+// -- uninitialised fallback
 
-.nav__level-2__heading,
-.nav__level-3__heading {
+.nav__level-2__heading {
+  margin: 0 0 $baseline-unit*2;
+  background: $primary-blue-dark;
   position: relative;
   display: block;
-  line-height: 29px;
   padding: $baseline-unit $baseline-unit*2;
   border-top: none;
-
-  .nav__arrow {
-    left: $baseline-unit;
-    transform: rotate(180deg);
-  }
 
   @include respond-to($mq-m) {
     display: none;
@@ -92,9 +93,20 @@
 
 .nav__level-2__heading__text,
 .nav__level-3__heading__text {
+  display: inline-block;
   float: none;
-  padding: 0 0 0 15px;
-  color: $color-black;
+  padding: $baseline-unit * 2 0 $baseline-unit * 2 $default-gutter * 2;
+  color: $color-white;
+
+  &:before {
+    @include chevron(left, $color-white);
+
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: $default-gutter;
+    transform: translateY(-$chevron-size);
+  }
 }
 
 .nav__level-2__categories,
@@ -111,26 +123,33 @@
 }
 
 .nav__level-2__categories {
+  float: left;
+  position: relative;
+
   @include respond-to($mq-m) {
+    @include column(12);
+
     /* non-FlexBox compliant -- */
     display: table-row;
     /* -- non-FlexBox compliant */
   }
 }
 
-.nav__level-2__category,
-.nav__level-3__category {
-  padding: 0 $baseline-unit*2;
-  margin-bottom: 0;
+.nav__level-2__category {
+  @include column(12);
+
+  margin-top: $baseline-unit * 2;
+  margin-bottom: $baseline-unit * 2;
 
   @include respond-to($mq-m) {
     border-bottom: none;
     box-shadow: none;
     position: relative;
     margin: 0;
-    padding: 0 $gutter;
+    padding: 0 $default-gutter / 2;
     border-top: none;
     border-bottom: none;
+    width: auto;
 
     &:before {
       content: "";
@@ -138,12 +157,12 @@
       top: 0;
       bottom: 0;
       left: -0.5px;
-      border-left: 1px solid;
+      border-left: 1px solid $primary-orange;
       width: 1px;
     }
 
-    &:first-child {
-      padding-left: $gutter * 2;
+    &:nth-child(2) {
+      padding-left: 0;
 
       &:before {
         border-left: none;
@@ -151,13 +170,15 @@
     }
 
     &:last-child {
-      padding-right: $gutter * 2;
+      padding-right: 0;
     }
   }
 }
 
 .nav__level-2__category {
   @include respond-to($mq-m) {
+    width: calc((100% - (#{$default-gutter} * 3)) / 4);
+
     /* non-FlexBox compliant -- */
     display: table-cell;
     /* -- non-FlexBox compliant */
@@ -165,28 +186,54 @@
 }
 
 .nav__level-2--extended {
+  float: left;
+
   .nav__level-2__categories {
+    position: absolute;
+    top: 0;
+
     @include respond-to($mq-m) {
+      position: relative;
+      min-height: 21rem;
+
       /* non-FlexBox compliant -- */
       display: block; //  table-row;
       /* -- non-FlexBox compliant */
     }
-
-    float: left;
-    position: relative;
   }
 
   .nav__level-2__category {
+    margin-bottom: 0;
+
     @include respond-to($mq-m) {
+      width: 1 / $num-extended-level * 100%;
+      clear: left;
+      padding: 0;
+      position: static;
+
       /* non-FlexBox compliant -- */
       display: list-item; // table-cell;
       /* -- non-FlexBox compliant */
-      padding: 0; // $gutter;
-      position: static;
 
       &:before {
         content: none;
       }
+    }
+  }
+
+  .nav__level-2__category__heading {
+    @include respond-to($mq-m) {
+      padding-top: $baseline-unit * 2;
+
+      /* uninitialised -- */
+      .uninitialised &:hover {
+        background: $grey-lightest;
+
+        + .nav__level-3 {
+          display: block
+        }
+      }
+      /* -- uninitialised */
     }
   }
 }
@@ -195,15 +242,10 @@
   border-bottom: none;
 }
 
-.nav__level-2__category__heading,
-.nav__level-3__category__heading {
+.nav__level-2__category__heading {
   position: relative;
   display: block;
-  float: none;
-  padding: 0 0 $baseline-unit;
-  font-weight: bold;
-  white-space: normal;
-  border-bottom: 1px solid;
+  color: $primary-orange;
 
   @include respond-to($mq-m) {
     display: inline-block;
@@ -211,6 +253,42 @@
     margin: 0;
     font-size: 1rem;
     border: 0;
+
+    &.is-active {
+      background: $grey-lightest;
+    }
+  }
+}
+
+.nav__level-2__category__heading__text,
+.nav__level-3__category__heading,
+.nav__level-3__subcategory__text,
+.nav__level-3__heading__text {
+  display: block;
+  padding-bottom: $baseline-unit * 2;
+  border-bottom: solid 1px;
+}
+
+.nav__level-2__category__heading__text {
+  padding-right: calc(#{$chevron-size * $chevron-ratio} + #{$default-gutter * 2});
+
+  @include respond-to($mq-m) {
+    padding-right: calc(#{$chevron-size * $chevron-ratio} + #{$default-gutter * 8});
+  }
+
+  &:after {
+    @include chevron(right, $primary-orange);
+
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: $default-gutter;
+    transform: translateY(-$chevron-size * 2);
+
+    @include respond-to($mq-m) {
+      right: $default-gutter * 4;
+      transform: translateY(-$chevron-size * 1);
+    }
   }
 }
 
@@ -218,6 +296,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: $baseline-unit * 2;
 
   @include respond-to($mq-m) {
     font-size: 1rem;
@@ -226,14 +305,11 @@
 }
 
 .nav__level-2__subcategory {
-  margin: 0;
-}
+  margin-bottom: $baseline-unit * 2;
 
-.nav__level-2__subcategory__link {
-  display: inline-block;
-  float: none;
-  padding: $baseline-unit 0;
-  white-space: normal;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* FlexBox compliant -- */
@@ -258,7 +334,10 @@
     .nav__level-2__category {
       display: block;
       flex-grow: 1;
-      max-width: 100% / $max-cols;
+
+      @include respond-to($mq-m) {
+        max-width: calc((#{gridsystem-width()} - (#{$default-gutter} * 4)  - 2px) / 3);
+      }
     }
   }
 }

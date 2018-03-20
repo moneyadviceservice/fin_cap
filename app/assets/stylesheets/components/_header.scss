@@ -1,0 +1,21 @@
+.header {
+  position: relative;
+  background: #fff;
+  z-index: 15;
+}
+
+.mobile-nav-button {
+  display: block;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.l-search-bar {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
+  }
+}

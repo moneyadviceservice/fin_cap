@@ -242,9 +242,11 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
   };
 
   /**
-   * Opens level 3 on desktop
+   * Opens level 3 on desktop and sets active class on triggering item
    */
   Nav.prototype._openDesktopLevel3 = function(index) {
+    $(index).addClass(this.activeClass);
+    $(index).parents().siblings().find('[data-nav-level-2-extended-heading]').removeClass(this.activeClass);
     this.$navLevel_3.removeClass(this.activeClass);
     $(index).siblings('[data-nav-level-3]').addClass(this.activeClass);
   };
