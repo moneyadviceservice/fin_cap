@@ -1,0 +1,10 @@
+<a href="#" class="evaluation-type">
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       class="evaluation-type__icon 
+              evaluation-type__icon--<%= "#{type.downcase}" %> 
+              svg-icon svg-icon--<%= "#{type.downcase}" %>-icon" 
+       focusable="false">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--<%= "#{type.downcase}" %>-icon"></use>
+  </svg>
+  <span class="evaluation-type__text evaluation-type__text--<%= "#{type.downcase}" %>"><%= type %></span>
+</a>

@@ -1,0 +1,45 @@
+.evaluation-type {
+  @extend %border-radius;
+  font-weight: 500;
+  display: inline-block;
+  padding: $baseline-unit/2 $baseline-unit;
+}
+
+.evaluation-type__icon {
+  @extend %border-radius;
+  padding: $baseline-unit;
+  height: 20px;
+  width: 20px;
+}
+
+.evaluation-type__icon--insight,
+.evaluation-type__icon--news {
+  background-color: $primary-orange;
+}
+
+.evaluation-type__icon--review {
+  background-color: $primary-purple;
+}
+
+.evaluation-type__icon--evaluation {
+  background-color: $primary-green-pale;
+}
+
+.evaluation-type__text {
+  @include body(14, 24);
+  display: inline-block;
+  vertical-align: 10px;
+}
+
+.evaluation-type__text--insight,
+.evaluation-type__text--news {
+  color: $primary-orange;
+}
+
+.evaluation-type__text--review {
+  color: $primary-purple;
+}
+
+.evaluation-type__text--evaluation {
+  color: $primary-green-pale;
+}

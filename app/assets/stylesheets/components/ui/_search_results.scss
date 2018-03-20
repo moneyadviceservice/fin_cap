@@ -15,41 +15,9 @@
   }
 }
 
-.search-results__item--new {
-  @extend .is-new;
-  
-  &:after {
-    position: absolute;
-    right: $baseline-unit;
-    top: $baseline-unit;
-  }
-}
-
 .search-results__title {
   @include body(20, 24);
   font-weight: 500;
   margin-top: $baseline-unit;
   text-decoration: underline;
-}
-
-a.search-results__evidence-type-link {
-  font-weight: 500;
-  color: $color-black;
-
-  &:visited {
-    color: $color-black;
-  }
-
-  &:after {
-    @include body (11, 22);
-    content: 'i';
-    border-radius: 50%;
-    background-image: none;
-    color: $color-white;
-    display: inline-block;
-    background-color: $primary-blue-dark;
-    text-align: center;
-    height: $baseline-unit*3;
-    width: $baseline-unit*3;
-  }
 }
