@@ -12,10 +12,20 @@
       <div class="l-2col-side">
         <div class="sidepanel">
           <h4 class="sidepanel__title">Keyword search</h4>
-
-          <%= form_tag(evidence_hub_index_path, method: :get) do %>
-            <%= text_field_tag :keyword, params[:keyword] %>
-            <%= button_tag 'Save', type: 'submit', class: 'btn btn--primary btn--full-width' %>
+          <%= form_for(
+            @search_form, builder: FincapBuilder, url: evidence_hub_index_path, method: :get) do |f| %>
+            <%= f.text_field :keyword %>
+            <%= f.button 'Search', type: 'submit', class: 'btn btn--primary btn--full-width' %>
+            <%= link_to '#', class: 'sidepanel__clear-filters' do %>
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                  class="sidepanel__clear-icon" 
+                  focusable="false">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--clear-filters"></use>
+              </svg>
+              <span>Clear filters</span>
+            <% end %>
+            <div class="sidepanel__divider"></div>
+            <%= render 'filters', f: f, search_form: present(@search_form) %>
           <% end %>
         </div>
       </div>
