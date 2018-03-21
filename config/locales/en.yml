@@ -9,6 +9,42 @@ en:
         client_group: 'Client group'
         contact_information: 'Contact information'
         links_to_research: 'Links to further information'
+      evidence_hub_search_form:
+        keyword: 'keyword'
+        years_of_publication:
+          - All years
+          - Last 5 years
+          - More than 5 years ago
+        client_groups:
+          - Children (3 - 11)
+          - Young people (12 - 16)
+          - Parents / families
+          - Young adults (17 - 24)
+          - Working age (18 - 65)
+          - Older people (65+)
+          - Over-indebted people
+          - Social housing tenants
+          - Teachers / practitioners
+          - Other
+        evidence_types:
+          - Evaluation
+          - Insight
+          - Review
+        topics:
+          - Pensions
+          - Pensions and Retirement Planning
+          - Credit Use and Debt
+          - Budgeting and keeping track
+          - Insurance and protection
+          - Financial Education
+          - Financial Capability
+        countries_of_delivery:
+          - United Kingdom
+          - England
+          - Northern Ireland
+          - Scotland
+          - Wales
+          - USA
   evidence_hub:
     summaries:
       header: 'Evidence Summaries'

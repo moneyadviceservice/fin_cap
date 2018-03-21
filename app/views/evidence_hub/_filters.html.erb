@@ -1,0 +1,51 @@
+<h4 class="sidepanel__title">Filter your search</h4>
+  <h5 class="sidepanel__subtitle">Year of Publication</h5>
+  <%= collection_radio_buttons(
+    search_form.class_name,
+    :years_of_publication,
+    search_form.filter_options(:years_of_publication),
+    :value,
+    :underscore
+  ) do |b| %>
+    <%=  b.label(class: "radio-option") { b.radio_button + b.value } %>
+  <% end %>
+  <h5 class="sidepanel__subtitle">Client group</h5>
+  <%= collection_check_boxes(
+    search_form.class_name,
+    :client_groups,
+    search_form.filter_options(:client_groups),
+    :value,
+    :underscore
+  ) do |b| %>
+    <%=  b.label(class: "checkbox-label") { b.check_box(class: "checkbox") + b.value } %>
+  <% end %>
+  <h5 class="sidepanel__subtitle">Evidence Type</h5>
+  <%= collection_check_boxes(
+    search_form.class_name,
+    :evidence_types,
+    search_form.filter_options(:evidence_types),
+    :value,
+    :underscore
+  ) do |b| %>
+    <%=  b.label(class: "checkbox-label") { b.check_box(class: "checkbox") + b.value } %>
+  <% end %>
+  <h5 class="sidepanel__subtitle">Topic</h5>
+  <%= collection_check_boxes(
+    search_form.class_name,
+    :topics,
+    search_form.filter_options(:topics),
+    :value,
+    :underscore
+  ) do |b| %>
+    <%=  b.label(class: "checkbox-label") { b.check_box(class: "checkbox") + b.value } %>
+  <% end %>
+  <h5 class="sidepanel__subtitle">Country of delivery</h5>
+  <%= collection_check_boxes(
+    search_form.class_name,
+    :countries_of_delivery,
+    search_form.filter_options(:countries_of_delivery),
+    :value,
+    :underscore
+  ) do |b| %>
+    <%=  b.label(class: "checkbox-label") { b.check_box(class: "checkbox") + b.value } %>
+  <% end %>

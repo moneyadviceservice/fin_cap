@@ -1,0 +1,6 @@
+<% form_object.class.human_attribute_name(field).each do |option| %>
+  <div class="radio-option">
+    <%= f.radio_button field, option %>
+    <%= f.label field, option %>
+  </div>
+<% end %>
