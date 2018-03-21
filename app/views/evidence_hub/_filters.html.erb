@@ -1,0 +1,8 @@
+<h4 class="sidepanel__title">Filter your search</h4>
+  <h5 class="sidepanel__subtitle">Client group</h5>
+  <% search_form.client_group_options.each do |option| %>
+    <label class="checkbox-label">
+      <input type="checkbox"> <%= option %>
+    </label>
+  <% end %>
+  
