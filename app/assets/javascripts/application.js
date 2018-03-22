@@ -14,7 +14,6 @@
 //= require require_config
 //= require lib/modernizr-custom
 //= require jquery
-//= require turbolinks
 
 // Component Loader
 require(['jquery', 'componentLoader'], function ($, componentLoader) {
