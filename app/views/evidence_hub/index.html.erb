@@ -31,9 +31,7 @@
               </p>
               <p class="search-results__evidence-type">
                 <%= document.formatted_evidence_type_label %>
-                <a href="#" class="search-results__evidence-type-link">
-                  <%= document.evidence_type %>
-                </a>
+                <%= render 'shared/evaluation_types', type: "#{document.evidence_type}" %>
               </p>
               <p class="search-results__topics">
                 <%= document.formatted_topics %>
