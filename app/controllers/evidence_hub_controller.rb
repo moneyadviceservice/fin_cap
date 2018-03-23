@@ -13,7 +13,6 @@ class EvidenceHubController < ApplicationController
   private
 
   def search_params
-    binding.pry
     { document_type: DOCUMENT_TYPES }.tap do |hash|
       hash[:keyword] = params.require(:keyword) if params[:keyword].present?
     end

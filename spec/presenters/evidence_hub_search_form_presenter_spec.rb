@@ -10,10 +10,11 @@ RSpec.describe EvidenceHubSearchFormPresenter do
     allow(search_form).to receive(:class).and_return(EvidenceHubSearchForm)
   end
 
-  describe '#client_group_options' do
-    it 'returns an array with all the options' do
-      expected_result = [
-        'Childrens (3 - 11)',
+  describe '#filter_options' do
+    let(:filter_type) { :client_groups }
+    it 'creates filter option instances for the filter type\'s values' do
+      filter_option_values = [
+        'Children (3 - 11)',
         'Young people (12 - 16)',
         'Parents / families',
         'Young adults (17 - 24)',
