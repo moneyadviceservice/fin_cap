@@ -3,8 +3,10 @@ class EvidenceHubSearchFormPresenter < BasePresenter
     object.class.human_attribute_name(field)
   end
 
-  def client_group_options
-    translate_field(:client_groups)
+  def filter_options(field)
+    translate_field(field).map do |option|
+      FilterOption.new(option)
+    end
   end
 
 end
