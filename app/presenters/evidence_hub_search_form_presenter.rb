@@ -9,4 +9,8 @@ class EvidenceHubSearchFormPresenter < BasePresenter
     end
   end
 
+  def class_name
+    object.class.name.underscore
+  end
+
 end

@@ -25,7 +25,18 @@ RSpec.describe EvidenceHubSearchFormPresenter do
         'Teachers / practitioners',
         'Other'
       ]
-      expect(presenter.client_group_options).to eq(expected_result)
+
+      filter_option_values.each_with_index do |option, index|
+        expect(
+          presenter.filter_options(filter_type)[index].value
+        ).to eq(filter_option_values[index])
+      end
+    end
+  end
+
+  describe '#class_name' do
+    it 'formats the class name with underscores' do
+      expect(presenter.class_name).to eq('evidence_hub_search_form')
     end
   end
 end
