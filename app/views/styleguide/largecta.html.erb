@@ -1,12 +1,16 @@
 <h1>Large Call to Action</h1>
+<p>Developer notes: This component uses a partial view for the link url, icon and text which expects values.</p>
+<p>To render in the view, call the partial from "shared/large_cta.html.erb" and include the values:</p>
+<p>
+  &lt;%= <strong>render</strong> 'shared/large_cta', <strong>url:</strong> 'http://url.com', <strong>icon:</strong> 'document', <strong>text:</strong> 'Research' %>
+</p>
+<p>The external link icon will automatically be applied when the URL value is external to the fincap domain.</p>
 <h3 class="styleguide__subheading">Document icon</h3>
 <div class="styleguide__example">
-  <a href="www.fincap.org.uk" class="large-cta">
-    <svg xmlns="http://www.w3.org/2000/svg" class="large-cta__icon svg-icon svg-icon--document" focusable="false">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--document"></use>
-    </svg>
-    <span class="large-cta__text">Research</span>
-  </a>
+  <%= render 'shared/large_cta',
+      url: 'http://www.fincap.org.uk',
+      icon: 'document',
+      text: 'Research' %>
 </div>
 <h3 class="styleguide__subheading">Code</h3>
 <xmp>
@@ -19,12 +23,10 @@
 </xmp>
 <h3 class="styleguide__subheading">Money Management icon</h3>
 <div class="styleguide__example">
-  <a href="http://www.fincap.org.uk" class="large-cta">
-    <svg xmlns="http://www.w3.org/2000/svg" class="large-cta__icon svg-icon svg-icon--money" focusable="false">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--money"></use>
-    </svg>
-    <span class="large-cta__text">Money Management</span>
-  </a>
+  <%= render 'shared/large_cta',
+      url: 'http://www.fincap.org.uk',
+      icon: 'money',
+      text: 'Money Management' %>
 </div>
 <h3 class="styleguide__subheading">Code</h3>
 <xmp>
@@ -37,12 +39,10 @@
 </xmp>
 <h3 class="styleguide__subheading">External link</h3>
 <div class="styleguide__example">
-  <a href="http://www.moneyadviceservice.org.uk" class="large-cta">
-    <svg xmlns="http://www.w3.org/2000/svg" class="large-cta__icon svg-icon svg-icon--money" focusable="false">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--money"></use>
-    </svg>
-    <span class="large-cta__text">External link</span>
-  </a>
+  <%= render 'shared/large_cta',
+      url: 'http://www.moneyadviceservice.org.uk',
+      icon: 'money',
+      text: 'External Link' %>
 </div>
 <h3 class="styleguide__subheading">Code</h3>
 <xmp>
