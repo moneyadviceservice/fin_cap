@@ -1,5 +1,4 @@
 class EvidenceHubController < ApplicationController
-
   DOCUMENT_TYPES = ['Insight'].freeze
 
   def index
