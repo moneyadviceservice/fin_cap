@@ -43,7 +43,27 @@
   text-decoration: underline;
 }
 
+.sidepanel__divider {
+  border-bottom: 1px solid $grey-light;
+  margin-bottom: $baseline-unit*3;
+}
+
 // Form Elements
+
+.sidepanel__clear-filters {
+  @include body(14, 18);
+  @extend %border-radius;
+  margin: $baseline-unit 0 $baseline-unit*3;
+  display: inline-block;
+  border: 1px solid $primary-orange;
+  padding: $baseline-unit/2 $baseline-unit;
+  background-color: $color-white;
+}
+
+.sidepanel__clear-icon {
+  width: 15px;
+  height: 15px;
+}
 
 .sidepanel__radio {
   display: block;
