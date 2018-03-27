@@ -12,5 +12,4 @@ class EvidenceHubSearchFormPresenter < BasePresenter
   def class_name
     object.class.name.underscore
   end
-
 end
