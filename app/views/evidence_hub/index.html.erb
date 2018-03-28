@@ -13,7 +13,7 @@
         <div class="sidepanel">
           <h4 class="sidepanel__title">Keyword search</h4>
           <%= form_for(
-            @search_form, builder: Builder, url: evidence_hub_index_path, method: :get) do |f| %>
+            @search_form, builder: FincapBuilder, url: evidence_hub_index_path, method: :get) do |f| %>
             <%= f.text_field :keyword %>
             <%= f.button 'Search', type: 'submit', class: 'btn btn--primary btn--full-width' %>
             <%= link_to '#', class: 'sidepanel__clear-filters' do %>
