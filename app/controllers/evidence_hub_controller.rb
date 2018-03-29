@@ -3,21 +3,26 @@ class EvidenceHubController < ApplicationController
 
   def index
     documents = Mas::Cms::Document.all(
-      params: search_params
+      params: { document_type: DOCUMENT_TYPES }
     )
     @evidence_summaries = EvidenceSummary.map(documents)
-    @search_form = EvidenceHubSearchForm.new
+
+    @search_form = EvidenceHubSearchForm.new(search_form_params)
   end
 
   private
 
-  def search_params
+  def search_form_params
     { 
-      locale: params[:locale] =~ /en|cy/ ? params[:locale] : 'en',
       document_type: DOCUMENT_TYPES 
     }.tap do |hash|
       hash[:keyword] = params.require(:keyword) if params[:keyword].present?
-    end.merge(format_params)
+    end.merge(filter_params)
+
+  end
+
+  def search_params
+    search_form_params.merge(parse_filter_params)
   end
 
   def filter_params
@@ -29,41 +34,8 @@ class EvidenceHubController < ApplicationController
     )
   end
 
-  def format_params
+  def parse_filter_params
     return {} unless params[:evidence_hub_search_form].present?
-
-    format_filters(
-      filter_params.to_h.reject {|_,v| empty_filter?(v) }
-    )
-  end
-
-  def format_filters(filters)
-    { blocks: blocks(filters).flatten }
-  end
-
-  def blocks(filters)
-    filters.map do |id, values|
-      if values.is_a?(Array)
-        values.reject(&:blank?).map {|value| identifier_hash(id, value) }
-      else
-        identifier_hash(id, values)
-      end
-    end
-  end
-
-  def identifier_hash(id, value)
-    { identifier: id, value: value }
-  end
-
-  def empty_filter?(value)
-    empty_string?(value) || empty_array?(value)
-  end
-
-  def empty_string?(value)
-    value.is_a?(String) && value.empty?
-  end
-
-  def empty_array?(value)
-    value.is_a?(Array) && value.one? && value.first.empty?
+    FilterParser.parse(filter_params.to_h)
   end
 end
