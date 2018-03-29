@@ -1,30 +1,19 @@
 <h1>UI Components</h1>
 <h2>Feedback box</h2>
+<p>Developer notes: This component uses a partial view for the title and email address which expects values.</p>
+<p>To render in the view, call the partial from "shared/feedback.html.erb" and include the values:</p>
+<p>
+  &lt;%= <strong>render</strong> 'shared/feedback', <strong>title:</strong> 'Feedback title', <strong>email:</strong> 'target@email' %>
+</p>
 <h3 class="styleguide__subheading">Default Feedback box</h3>
 <div class="styleguide__example">
-  <div class="feedback-box">
-    <h3 class="feedback-box__title">
-      Give us your feedback or ask a question
-    </h3>
-    <svg xmlns="http://www.w3.org/2000/svg" class="feedback-box__icon svg-icon svg-icon--speech" focusable="false">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--speech"></use>
-    </svg>
-    <a href="mailto:whatworks@fincap.org.uk" class="feedback-box__text">
-      whatworks@fincap.org.uk
-    </a>
-  </div>
+  <%= render 'shared/feedback',
+      title: 'Give us your feedback or ask a question',
+      email: 'whatworks@fincap.org.uk' %>
 </div>
 <h3 class="styleguide__subheading">Code</h3>
 <xmp>
-  <div class="feedback-box">
-    <h3 class="feedback-box__title">
-      Give us your feedback or ask a question
-    </h3>
-    <svg xmlns="http://www.w3.org/2000/svg" class="feedback-box__icon svg-icon svg-icon--speech" focusable="false">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--speech"></use>
-    </svg>
-    <a href="mailto:whatworks@fincap.org.uk" class="feedback-box__text">
-      whatworks@fincap.org.uk
-    </a>
-  </div>
+  <%= render 'shared/feedback',
+      title: 'Give us your feedback or ask a question',
+      email: 'whatworks@fincap.org.uk' %>
 </xmp>
