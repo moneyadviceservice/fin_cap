@@ -9,9 +9,9 @@ en:
         client_group: 'Client group'
         contact_information: 'Contact information'
         links_to_research: 'Links to further information'
-      evidence_hub_search_form:
+      evidence_summary_search_form:
         keyword: 'keyword'
-        years_of_publication:
+        year_of_publication:
           - All years
           - Last 2 years
           - Last 5 years
@@ -28,6 +28,7 @@ en:
           - Teachers/practitioners
           - Other
         topics:
+          - Saving
           - Pensions
           - Pensions and retirement planning
           - Credit use and debt
@@ -46,6 +47,14 @@ en:
   evidence_hub:
     summaries:
       header: 'Evidence Summaries'
+    filters_header: 'Filter your search'
+    filters:
+      checkbox:
+        - client_groups
+        - topics
+        - countries_of_delivery
+      radio_button:
+        - year_of_publication
   fincap:
     life_stages:
       - text: Children and young people
