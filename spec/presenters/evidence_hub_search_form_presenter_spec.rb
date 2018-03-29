@@ -22,13 +22,13 @@ RSpec.describe EvidenceHubSearchFormPresenter do
         'Childrens (3 - 11)',
 
         'Young people (12 - 16)',
-        'Parents / families',
+        'Parents/families',
         'Young adults (17 - 24)',
         'Working age (18 - 65)',
         'Older people (65+)',
         'Over-indebted people',
         'Social housing tenants',
-        'Teachers / practitioners',
+        'Teachers/practitioners',
         'Other'
       ]
 
