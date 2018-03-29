@@ -1,9 +1,4 @@
-<%= collection_check_boxes(
-  form.class_name,
-  field,
-  form.filter_options(field),
-  :value,
-  :underscore
-  ) do |b| %>
-    <%=  b.label(class: "checkbox-label") { b.check_box(class: "checkbox") + b.value } %>
-  <% end %>
+<% form.class.human_attribute_name(field).each do |option| %>
+  <%= f.check_box field, { name: "#{form.class_name}[#{field}][]", checked: form.choosed_option?(option, field) }, option, nil %>
+  <%= f.label field, option %>
+<% end %>

@@ -6,6 +6,7 @@ class EvidenceHubController < ApplicationController
       params: search_params
     )
     @evidence_summaries = EvidenceSummary.map(documents)
+
     @search_form = EvidenceHubSearchForm.new(search_form_params)
   end
 

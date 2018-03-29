@@ -1,9 +1,8 @@
-<%= collection_radio_buttons(
-    form.class_name,
+<%= f.collection_radio_buttons(
     field,
     form.filter_options(field),
     :value,
-    :underscore
+    :value
   ) do |b| %>
     <%=  b.label(class: "radio-option") { b.radio_button + b.value } %>
   <% end %>
