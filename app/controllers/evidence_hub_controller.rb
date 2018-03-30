@@ -3,7 +3,7 @@ class EvidenceHubController < ApplicationController
 
   def index
     documents = Mas::Cms::Document.all(
-      params: search_params
+      params: { document_type: DOCUMENT_TYPES }
     )
     @evidence_summaries = EvidenceSummary.map(documents)
 

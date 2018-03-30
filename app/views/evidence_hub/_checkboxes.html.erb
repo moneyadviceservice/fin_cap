@@ -1,4 +1,10 @@
-<% form.class.human_attribute_name(field).each do |option| %>
-  <%= f.check_box field, { name: "#{form.class_name}[#{field}][]", checked: form.choosed_option?(option, field) }, option, nil %>
-  <%= f.label field, option %>
+<% form_object.class.human_attribute_name(field).each do |option| %>
+  <%= f.label field, {class: "checkbox-label"} do %>
+    <%= f.check_box field, 
+      { class: "checkbox", name: "#{form.class_name}[#{field}][]", checked: form_object.chosen_options?(option, field) }, 
+      option, 
+      nil 
+    %>
+    <%= option %>
+  <% end %>
 <% end %>
