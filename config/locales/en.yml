@@ -5,7 +5,7 @@ en:
         evidence_type: 'Evidence type'
         countries: 'Country/Countries'
         topics: 'Topics'
-        year_of_publication: 'Year of publication'
+        years_of_publication: 'Year of publication'
         client_group: 'Client group'
         contact_information: 'Contact information'
         links_to_research: 'Links to further information'
