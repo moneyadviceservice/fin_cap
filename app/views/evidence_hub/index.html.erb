@@ -16,7 +16,7 @@
             @search_form, builder: FincapBuilder, url: evidence_hub_index_path, method: :get) do |f| %>
             <%= f.text_field :keyword %>
             <%= f.button 'Search', type: 'submit', class: 'btn btn--primary btn--full-width' %>
-            <%= link_to '#', class: 'sidepanel__clear-filters' do %>
+            <%= link_to evidence_hub_index_path(reset: true), class: 'sidepanel__clear-filters' do %>
               <svg xmlns="http://www.w3.org/2000/svg" 
                   class="sidepanel__clear-icon" 
                   focusable="false">

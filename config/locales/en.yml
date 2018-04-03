@@ -5,11 +5,11 @@ en:
         evidence_type: 'Evidence type'
         countries: 'Country/Countries'
         topics: 'Topics'
-        years_of_publication: 'Year of publication'
+        year_of_publication: 'Year of publication'
         client_group: 'Client group'
         contact_information: 'Contact information'
         links_to_research: 'Links to further information'
-      evidence_hub_search_form:
+      evidence_summary_search_form:
         keyword: 'keyword'
         years_of_publication:
           - All years
@@ -46,6 +46,13 @@ en:
   evidence_hub:
     summaries:
       header: 'Evidence Summaries'
+    filters:
+      checkbox:
+        - client_groups
+        - topics
+        - countries_of_delivery
+      radio_button:
+        - years_of_publication
   fincap:
     life_stages:
       - text: Children and young people
