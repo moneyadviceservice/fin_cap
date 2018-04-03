@@ -9,27 +9,12 @@ class FilterParser
   end
 
   def parse
-    format_filters(filters.reject {|_,v| empty_filter?(v) } )
+    { blocks: blocks_hash.flatten }
   end
 
   private
-  def empty_filter?(value)
-    empty_string?(value) || empty_array?(value)
-  end
 
-  def empty_string?(value)
-    value.is_a?(String) && value.empty?
-  end
-
-  def empty_array?(value)
-    value.is_a?(Array) && value.one? && value.first.empty?
-  end
-
-  def format_filters(filters)
-    { blocks: blocks_hash(filters).flatten }
-  end
-
-  def blocks_hash(filters)
+  def blocks_hash
     filters.map do |id, values|
       if values.is_a?(Array)
         values.reject(&:blank?).map {|value| identifier_hash(id, value) }
