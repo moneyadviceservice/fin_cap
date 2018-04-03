@@ -1,5 +1,6 @@
 class FilterParser
   attr_accessor :filters
+
   def self.parse(filters)
     new(filters).parse
   end
@@ -17,7 +18,7 @@ class FilterParser
   def blocks_hash
     filters.map do |id, values|
       if values.is_a?(Array)
-        values.reject(&:blank?).map {|value| identifier_hash(id, value) }
+        values.map { |value| identifier_hash(id, value) }
       else
         identifier_hash(id, values)
       end
