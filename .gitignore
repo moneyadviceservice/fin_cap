@@ -18,3 +18,5 @@ db/test.sqlite3
 bower.json
 bower_components
 node_modules
+
+.rubocop-*
