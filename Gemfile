@@ -23,6 +23,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
+  gem 'launchy'
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop', '~> 0.54.0', require: false

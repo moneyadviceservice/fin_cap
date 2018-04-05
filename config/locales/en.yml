@@ -48,13 +48,6 @@ en:
     summaries:
       header: 'Evidence Summaries'
     filters_header: 'Filter your search'
-    filters:
-      checkbox:
-        - client_groups
-        - topics
-        - countries_of_delivery
-      radio_button:
-        - year_of_publication
   fincap:
     life_stages:
       - text: Children and young people

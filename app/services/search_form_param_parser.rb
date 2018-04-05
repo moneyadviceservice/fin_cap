@@ -14,7 +14,7 @@ class SearchFormParamParser
   end
 
   def parse
-    filter_params, non_filter_params = params.partition do |k, _|
+    filter_params, non_filter_params = params.to_h.partition do |k, _|
       filter_keys.include?(k)
     end
 

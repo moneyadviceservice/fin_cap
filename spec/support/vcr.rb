@@ -6,8 +6,13 @@ VCR.configure do |c|
     uri = URI(request.uri)
 
     if ENV['FINCAP_CMS_URL'].match?(/#{uri.host}/)
+      raw_query = uri.query || ''
+      query = CGI.unescape(raw_query).gsub(
+        'blocks[][identifier]=client_groups&blocks[][value]=', 'filter'
+      )
+
       VCR.use_cassette(
-        "/fincap_cms/#{request.method}#{uri.path}#{uri.query}",
+        "/fincap_cms/#{request.method}#{uri.path}#{query}",
         allow_playback_repeats: true,
         &request
       )

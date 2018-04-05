@@ -4,12 +4,15 @@ class EvidenceSummarySearchForm
   attr_accessor :keyword, :document_type, :evidence_types, :client_groups
   attr_accessor :countries_of_delivery, :topics, :year_of_publication
 
+  CHECKBOX_FILTERS = %w[client_groups topics countries_of_delivery].freeze
+  RADIO_BUTTON_FILTERS = %w[year_of_publication].freeze
+
   def self.checkbox_filters
-    I18n.t('evidence_hub.filters.checkbox')
+    CHECKBOX_FILTERS
   end
 
   def self.radio_button_filters
-    I18n.t('evidence_hub.filters.radio_button')
+    RADIO_BUTTON_FILTERS
   end
 
   def chosen_options?(option, field)
