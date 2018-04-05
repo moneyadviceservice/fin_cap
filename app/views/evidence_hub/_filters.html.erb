@@ -1,9 +1,11 @@
-<h4 class="sidepanel__title">Filter your search</h4>
+<h4 class="sidepanel__title"><%= I18n.t('evidence_hub.filters_header') %></h4>
 
-<h5 class="sidepanel__subtitle">Year of Publication</h5>
-<%= render 'radio_buttons', f: f, form_object: search_form, field: :years_of_publication %>
+<% EvidenceSummarySearchForm.radio_button_filters.each do |filter| %>
+  <h5 class="sidepanel__subtitle"><%= search_form.filter_title(filter) %></h5>
+  <%= render 'radio_buttons', f: f, form_object: search_form, field: filter %>
+<% end %>
 
-<% @search_form.checkbox_filters.each do |filter| %>
+<% EvidenceSummarySearchForm.checkbox_filters.each do |filter| %>
   <h5 class="sidepanel__subtitle"><%= search_form.filter_title(filter) %></h5>
   <%= render 'checkboxes', f: f, form_object: search_form, field: filter %>
 <% end %>
