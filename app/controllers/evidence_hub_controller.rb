@@ -12,7 +12,7 @@ class EvidenceHubController < ApplicationController
   def search_params
     {
       document_type: DOCUMENT_TYPES
-    }.merge(evidence_summary_search_form_params)
+    }.merge(form_params)
   end
 
   def evidence_summary_search_form_params
@@ -25,9 +25,25 @@ class EvidenceHubController < ApplicationController
     )
   end
 
-  def parse_params
-    return {} if params[:evidence_summary_search_form].blank?
+  def form_params
+    clear_filters? ? keyword_params : evidence_summary_search_form_params
+  end
 
-    SearchFormParamParser.parse(evidence_summary_search_form_params)
+  def parse_params
+    if clear_filters?
+      keyword_params
+    elsif params[:evidence_summary_search_form].blank?
+      {}
+    else
+      SearchFormParamParser.parse(evidence_summary_search_form_params)
+    end
+  end
+
+  def keyword_params
+    { keyword: params[:keyword] }
+  end
+
+  def clear_filters?
+    params[:reset]
   end
 end
