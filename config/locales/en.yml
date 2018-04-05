@@ -46,6 +46,7 @@ en:
   evidence_hub:
     summaries:
       header: 'Evidence Summaries'
+    filters_header: 'Filter your search'
     filters:
       checkbox:
         - client_groups

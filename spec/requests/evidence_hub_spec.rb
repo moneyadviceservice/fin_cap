@@ -9,10 +9,11 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
     end
 
     context 'searching with filters' do
-      let(:filters) do
+      let(:params) do
         {
           evidence_summary_search_form:
             {
+              keyword: '',
               'years_of_publication' => 'All years',
               'client_groups' => ['Young people (12 - 16)', 'Parents/families']
             }
@@ -20,11 +21,11 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
       end
 
       it 'arranges for the filter params to be formatted' do
-        expect(FilterParser)
+        expect(SearchFormParamParser)
           .to receive(:parse)
-          .with(filters[:evidence_summary_search_form]).and_return({})
+          .with(params[:evidence_summary_search_form])
 
-        get "/en/evidence_hub/?#{filters.to_query}"
+        get "/en/evidence_hub/?#{params.to_query}"
       end
     end
   end
