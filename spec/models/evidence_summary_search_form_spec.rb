@@ -4,7 +4,7 @@ RSpec.describe EvidenceSummarySearchForm do
   describe '.checkbox_filters' do
     it 'returns an array of the multi-select filters' do
       filters = %w[client_groups topics countries_of_delivery]
-      
+
       expect(described_class.checkbox_filters).to eq(filters)
     end
   end
@@ -21,7 +21,7 @@ RSpec.describe EvidenceSummarySearchForm do
     context 'when an option has been chosen' do
       it 'returns true' do
         search_form.years_of_publication = ['All years', 'Last 2 years']
-        
+
         expect(
           search_form.chosen_options?('Last 2 years', :years_of_publication)
         ).to be_truthy
