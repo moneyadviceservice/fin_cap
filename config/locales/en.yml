@@ -13,6 +13,14 @@ en:
     summaries:
       header: 'Evidence Summaries'
   fincap:
+    life_stages:
+      - Children and young people
+      - Young adults
+      - Working age adults
+      - People planning to retire
+      - Older people in retirement
+      - People in financial difficulties
+      - People trying to save
     evidence_hub:
       insight_summary:
         name: 'Insight'
