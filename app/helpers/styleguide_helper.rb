@@ -40,7 +40,8 @@ module StyleguideHelper
     'Side panel'           => 'sidepanel',
     'Evidence Type Icons'  => 'evidence_types',
     'Evaluation Types'     => 'evaluation_types',
-    'Countries List'       => 'countries'
+    'Countries List'       => 'countries',
+    'Life Stages'       => 'lifestages'
   }.freeze
 
   PAGE_SPECIFIC = {
