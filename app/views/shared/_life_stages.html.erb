@@ -4,27 +4,11 @@
     <div class="bordered-box__content">
       <p>Different life stages have an effect on people's ability to manage their money.</p>
       <ul class="list list--links">
+        <% I18n.t('fincap.life_stages').each do |stage| %>
         <li>
-          <a href="#">Children and young people</a>
+          <a href="#"><%= stage %></a>
         </li>
-        <li>
-          <a href="#">Young adults</a>
-        </li>
-        <li>
-          <a href="#">Working age adults</a>
-        </li>
-        <li>
-          <a href="#">People planning to retire</a>
-        </li>
-        <li>
-          <a href="#">Older people in retirement</a>
-        </li>
-        <li>
-          <a href="#">People in financial difficulties</a>
-        </li>
-        <li>
-          <a href="#">People trying to save</a>
-        </li>
+      <% end %>
       </ul>
     </div>
   </div>
