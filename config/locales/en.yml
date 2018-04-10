@@ -28,6 +28,22 @@ en:
         url: '#'
       - text: People trying to save
         url: '#'
+    countries:
+      title: The Strategy across the UK
+      intro: As well as the UK Strategy, there are strategies for Northern Ireland, Scotland and Wales.
+    countries_list:
+      - region: uk
+        text: Strategy for United Kingdom
+        url: '#'
+      - region: northern-ireland
+        text: Strategy for Northern Ireland
+        url: '#'
+      - region: scotland
+        text: Strategy for Scotland
+        url: '#'
+      - region: wales
+        text: Strategy for Wales
+        url: '#'
     evidence_hub:
       insight_summary:
         name: 'Insight'
