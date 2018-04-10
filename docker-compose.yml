@@ -25,6 +25,8 @@ services:
       - POSTGRESHOST=postgres
       - POSTGRESPASS=go
       - POSTGRESUSER=go
+      - GITHUB_USER=$GITHUB_TOKEN_USR
+      - GITHUB_PASS=$GITHUB_TOKEN_PSW
       - HTTP_REQUEST_TIMEOUT=10
       - FINCAP_CMS_URL=http://localhost:3000
       - LANG=C.UTF-8
