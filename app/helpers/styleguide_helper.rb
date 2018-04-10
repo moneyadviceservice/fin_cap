@@ -29,18 +29,19 @@ module StyleguideHelper
   }.freeze
 
   COMPONENTS = {
-    'Teaser box'   => 'teaser',
-    'Hero image'   => 'hero',
+    'Teaser box' => 'teaser',
+    'Hero image' => 'hero',
     'Bordered box' => 'borderedbox',
     'Coloured Box' => 'coloured_box',
-    'Latest news'  => 'latestnews',
+    'Latest news' => 'latestnews',
     'Download box' => 'downloads',
-    'Feedback'     => 'feedback',
+    'Feedback' => 'feedback',
     'Large call to action' => 'largecta',
-    'Side panel'           => 'sidepanel',
-    'Evidence Type Icons'  => 'evidence_types',
-    'Evaluation Types'     => 'evaluation_types',
-    'Countries List'       => 'countries'
+    'Side panel' => 'sidepanel',
+    'Evidence Type Icons' => 'evidence_types',
+    'Evaluation Types' => 'evaluation_types',
+    'Countries List' => 'countries',
+    'Life Stages' => 'lifestages'
   }.freeze
 
   PAGE_SPECIFIC = {

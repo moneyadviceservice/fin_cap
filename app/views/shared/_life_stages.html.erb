@@ -1,0 +1,17 @@
+<div class="bordered-box bordered-box--green">
+  <div class="bordered-box__inner">
+    <h3 class="bordered-box__title">Life stages across the UK</h3>
+    <div class="bordered-box__content">
+      <p>Different life stages have an effect on people's ability to manage their money.</p>
+      <ul class="list list--links">
+        <% I18n.t('fincap.life_stages').each do |stage| %>
+          <li>
+            <a href="<%= stage[:url] %>">
+              <%= stage[:text] %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
