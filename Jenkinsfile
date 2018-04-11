@@ -13,7 +13,20 @@ pipeline {
         }
         stage('test') {
           steps {
-            sh "docker-compose -f docker-compose.yml run --rm rails ./script/test"
+            script {
+              if (env.BRANCH_NAME == 'PR-*') {
+                environment {
+                  DANGER_CHANGE_ID = "${env.CHANGE_ID}"
+                  DANGER_CHANGE_URL = "${env.CHANGE_URL}"
+                  DANGER_JENKINS_URL = "${env.JENKINS_URL}"
+                }
+                echo 'Pull Request'
+                sh "docker-compose -f docker-compose.yml run --rm rails './script/test danger'"
+              } else {
+                echo 'Not a Pull Request'
+                sh "docker-compose -f docker-compose.yml run --rm rails ./script/test"
+              }
+            }
           }
         }
     }

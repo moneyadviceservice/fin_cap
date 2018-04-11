@@ -38,7 +38,11 @@ run bundle exec rake db:setup
 run bundle exec rubocop .
 run bundle exec cucumber -f progress
 run bundle exec rspec -f progress
-info ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
+run ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
 run brakeman -q --no-pager --ensure-latest
+
+if [ $1="danger" ]; then
+  run bundle exec danger --verbose
+fi
 
 exit "$exit_code"
