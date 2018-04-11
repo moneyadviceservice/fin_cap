@@ -40,6 +40,9 @@ run bundle exec cucumber -f progress
 run bundle exec rspec -f progress
 run ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
 run brakeman -q --no-pager --ensure-latest
-run bundle exec danger --verbose
+
+if [ $1="danger" ]; then
+  run bundle exec danger --verbose
+fi
 
 exit "$exit_code"
