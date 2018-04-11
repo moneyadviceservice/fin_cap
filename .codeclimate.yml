@@ -18,8 +18,9 @@ engines:
     enabled: true
   fixme:
     enabled: true
-  rubocop:
-    enabled: true
+  prepare:
+    url: "https://raw.githubusercontent.com/moneyadviceservice/mas-standards/master/.rubocop.yml"
+    path: ".rubocop.yml"
 ratings:
   paths:
   - Gemfile.lock
