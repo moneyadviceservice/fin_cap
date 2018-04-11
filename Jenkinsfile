@@ -16,6 +16,12 @@ pipeline {
             sh "docker-compose -f docker-compose.yml run --rm rails ./script/test"
           }
         }
+        stage('danger') {
+          when { branch 'PR-*'}
+          steps {
+            sh "docker-compose -f docker-compose.yml run --rm rails bundle exec danger"
+           }
+        }
     }
     post {
         always {
