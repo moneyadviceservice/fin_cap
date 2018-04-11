@@ -20,8 +20,10 @@ pipeline {
                   DANGER_CHANGE_URL = "${env.CHANGE_URL}"
                   DANGER_JENKINS_URL = "${env.JENKINS_URL}"
                 }
-                sh "docker-compose -f docker-compose.yml run --rm rails ./script/test danger"
+                echo 'Pull Request'
+                sh "docker-compose -f docker-compose.yml run --rm rails './script/test danger'"
               } else {
+                echo 'Not a Pull Request'
                 sh "docker-compose -f docker-compose.yml run --rm rails ./script/test"
               }
             }
