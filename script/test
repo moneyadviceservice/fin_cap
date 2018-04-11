@@ -41,5 +41,8 @@ run bundle exec rspec -f progress
 run ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
 run brakeman -q --no-pager --ensure-latest
 run bundle exec danger --verbose
+echo "CHANGE_ID $CHANGE_ID"
+echo "CHANGE_URL $CHANGE_URL"
+echo "GIT_URL $GIT_URL"
 
 exit "$exit_code"

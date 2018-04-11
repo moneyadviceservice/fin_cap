@@ -24,6 +24,8 @@ pipeline {
           when { branch 'PR-*'}
           steps {
             echo 'Conditional step for PR'
+            sh 'env > env.txt'
+            sh 'cat env.txt'
            }
         }
     }
