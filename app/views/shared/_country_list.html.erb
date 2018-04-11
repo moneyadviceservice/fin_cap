@@ -1,33 +1,17 @@
 <div class="bordered-box">
   <div class="bordered-box__inner">
-    <h3 class="bordered-box__title">The Strategy across the UK</h3>
+    <h3 class="bordered-box__title"><%= I18n.t('fincap.countries.title') %></h3>
     <div class="bordered-box__content">
-      <p>As well as the UK Strategy, there are strategies for Northern Ireland, Scotland and Wales.</p>
+      <p><%= I18n.t('fincap.countries.intro') %></p>
       <ul class="list list--countries">
-        <li class="list--countries-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--uk"></use>
-          </svg>
-          <%= link_to 'Strategy for United Kingdom', '/', class: 'list--countries-link' %>
-        </li>
-        <li class="list--countries-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--northern-ireland"></use>
-          </svg>
-          <%= link_to 'Strategy for Northern Ireland', '/', class: 'list--countries-link' %>
-        </li>
-        <li class="list--countries-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--scotland"></use>
-          </svg>
-          <%= link_to 'Strategy for Scotland', '/', class: 'list--countries-link' %>
-        </li>
-        <li class="list--countries-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--wales"></use>
-          </svg>
-          <%= link_to 'Strategy for Wales', '/', class: 'list--countries-link' %>
-        </li>
+        <% I18n.t('fincap.countries_list').each do |country| %>
+          <li class="list--countries-item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--<%= country[:region] %>"></use>
+            </svg>
+            <%= link_to "#{country[:text]}", "#{country[:url]}", class: 'list--countries-link' %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
