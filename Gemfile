@@ -25,7 +25,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'rubocop', '~> 0.49.1', require: false
+  gem 'rubocop', '~> 0.54.0', require: false
   gem 'site_prism'
   gem 'sqlite3'
   gem 'tzinfo-data'
