@@ -2,6 +2,15 @@ class StyleguideController < ApplicationController
   before_action :components, :page_specific, :ui_helpers, :links
   layout 'styleguide'
   include StyleguideHelper
+  STYLEGUIDE_VIEWS = Rails.root.join(
+    'app',
+    'views',
+    'styleguide',
+    '*.html.erb'
+  )
+  STYLEGUIDE_TEMPLATES = Dir[STYLEGUIDE_VIEWS].map do |template|
+    File.basename(template, '.html.erb')
+  end
 
   before_action :validate_templates, only: :show
 
@@ -20,19 +29,10 @@ class StyleguideController < ApplicationController
 
   private
 
-  STYLEGUIDE_VIEWS = Rails.root.join(
-    'app',
-    'views',
-    'styleguide',
-    '*.html.erb'
-  )
-
-  STYLEGUIDE_TEMPLATES = Dir[STYLEGUIDE_VIEWS].map do |template|
-    File.basename(template, '.html.erb')
-  end
-
   def validate_templates
-    render body: nil, status: 404 unless page_params.in?(STYLEGUIDE_TEMPLATES)
+    return if page_params.in?(STYLEGUIDE_TEMPLATES)
+
+    render body: nil, status: :not_found
   end
 
   def page_params
