@@ -19,7 +19,7 @@ pipeline {
         stage('danger') {
           when { branch 'PR-*'}
           steps {
-            sh "docker-compose -f docker-compose.yml run --rm rails bundle exec danger"
+            echo 'Conditional step for PR'
            }
         }
     }
