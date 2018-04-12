@@ -13,8 +13,11 @@ module UI::Pages
 
     set_url '{/locale}/evidence_hub'
 
-    element :keyword, '#keyword'
+    element :keyword, '#evidence_summary_search_form_keyword'
     element :search_button, '.sidepanel button[type="submit"]'
+    element :older_people_filter, '#evidence_summary_search_form_client_groups_older-people-65'
+    element :clear_filters_button, '.sidepanel__clear-filters'
+
     sections :search_results, SearchResult, '.search-results li'
   end
 end

@@ -30,9 +30,9 @@ class EvidenceHubController < ApplicationController
   end
 
   def parse_params
-    if clear_filters?
-      keyword_params
-    elsif params[:evidence_summary_search_form].blank?
+    return keyword_params if clear_filters?
+
+    if params[:evidence_summary_search_form].blank?
       {}
     else
       SearchFormParamParser.parse(evidence_summary_search_form_params)
