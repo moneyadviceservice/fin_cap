@@ -33,6 +33,22 @@ class EvidenceSummary
     layout_identifier.to_s.capitalize
   end
 
+  def content
+    find_block(:content)
+  end
+
+  def client_group
+    find_blocks(:client_groups)
+  end
+
+  def topics
+    find_blocks(:topics)
+  end
+
+  def evidence_type
+    layout_identifier.to_s.capitalize
+  end
+
   def overview
     find_block(:overview)
   end
