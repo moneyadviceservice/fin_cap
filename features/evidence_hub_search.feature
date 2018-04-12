@@ -48,3 +48,17 @@ Feature: Evidence Hub Search
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
+
+  Scenario: Clearing the filters for a filtered search
+    Given I visit the evidence hub search page
+    And I search based on some filters
+    When I want to clear the filters
+    Then I should see no filters checked
+
+  Scenario: Clearing the filters for a filtered keyword search
+    Given I visit the evidence hub search page
+    And I search the evidence hub with a keyword "mortgage"
+    And I search based on some filters
+    When I want to clear the filters
+    Then I should see no filters checked
+    And I should see the keyword filled in with "mortgage"

@@ -21,6 +21,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
+  gem 'launchy'
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop', '~> 0.54.0', require: false
@@ -31,7 +32,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'launchy'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
