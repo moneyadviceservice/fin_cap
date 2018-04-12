@@ -15,4 +15,17 @@ class EvidenceHubController < ApplicationController
       hash[:keyword] = params.require(:keyword) if params[:keyword].present?
     end
   end
+
+  def index
+    documents = Mas::Cms::Document.all(
+      params: search_params
+    )
+    @evidence_summaries = EvidenceSummary.map(documents)
+  end
+
+  def search_params
+    { document_type: DOCUMENT_TYPES }.tap do |hash|
+      hash[:keyword] = params.require(:keyword) if params[:keyword].present?
+    end
+  end
 end
