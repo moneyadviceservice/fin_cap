@@ -2,7 +2,7 @@ class EvidenceSummary
   extend ActiveModel::Translation
 
   def self.map(documents)
-                  documents.map { |document| new(document) }
+    documents.map { |document| new(document) }
   end
 
   attr_reader :document
@@ -14,15 +14,15 @@ class EvidenceSummary
   alias title label
 
   def initialize(document)
-                    @document = document
+    @document = document
   end
 
   def content
-                  find_block(:content)
+    find_block(:content)
   end
 
   def client_group
-                  find_blocks(:client_groups)
+    find_blocks(:client_groups)
   end
 
   def topics
