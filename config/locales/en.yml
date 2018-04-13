@@ -44,6 +44,21 @@ en:
       - region: wales
         text: Strategy for Wales
         url: '#'
+    research_and_evaluation:
+      - title: Research and findings
+        links:
+          - link_url: /financial-capability-survey
+            link_text: Existing Research
+          - link_url: /evidence_hub
+            link_text: Evidence Hub
+      - title: Evaluate your programme
+        links:
+          - link_url: /evaluate-your-programme
+            link_text: Measure your performance
+          - link_url: /evaluation-toolkit-homepage
+            link_text: Evaluation Toolkit
+          - link_url: /outcome-framework
+            link_text: Outcomes Frameworks and question banks
     evidence_hub:
       insight_summary:
         name: 'Insight'

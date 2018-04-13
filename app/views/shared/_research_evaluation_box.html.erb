@@ -1,0 +1,14 @@
+<div class="coloured-box-group">
+  <% I18n.t('fincap.research_and_evaluation').each do |item| %>
+    <div class="coloured-box">
+      <div class="coloured-box__content">
+        <h2 class="coloured-box__title"><%= item[:title] %></h2>
+        <ul class="list list--links coloured-box__list">
+          <% item[:links].each do |list_item| %>
+            <li><%= link_to "#{list_item[:link_text]}", "#{list_item[:link_url]}" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -3,6 +3,30 @@
   background-color: $primary-green-pale;
 }
 
+.coloured-box-group {
+  @include respond-to($mq-m) {
+    display: flex;
+  }
+
+  .coloured-box {
+    margin-bottom: $baseline-unit;
+    
+    @include respond-to($mq-m) {
+      @include column(6);
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+
+  .coloured-box__content {
+    @include respond-to($mq-m) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
 .coloured-box__title {
   @include body(20, 24);
   font-weight: 500;
