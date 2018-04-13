@@ -10,15 +10,15 @@ http_interactions:
       Authorization:
       - Token token=""
       User-Agent:
-      - Mas-Cms-Client/1.10.0 (Margo-Urey-00241.local; margourey; 5039) ruby/2.4.1
-        (111; x86_64-darwin16)
+      - Mas-Cms-Client/1.10.0 (Will-Hall-00229.local; willhall; 32567) ruby/2.4.1
+        (111; x86_64-darwin17)
   response:
     status:
       code: 200
       message: 
     headers:
       date:
-      - Thu, 12 Apr 2018 10:55:04 GMT
+      - Fri, 13 Apr 2018 12:58:14 GMT
       status:
       - 200 OK
       connection:
@@ -36,12 +36,12 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 3e6bae10-0e61-423e-b3f6-7260d48029f5
+      - b6a1497e-4a9b-4919-9e26-ac55e3f4b28f
       x-runtime:
-      - '0.032091'
+      - '0.102297'
     body:
       encoding: UTF-8
       string: '{"documents":[],"meta":{"results":0}}'
     http_version: 
-  recorded_at: Thu, 12 Apr 2018 10:55:04 GMT
+  recorded_at: Fri, 13 Apr 2018 12:58:14 GMT
 recorded_with: VCR 4.0.0

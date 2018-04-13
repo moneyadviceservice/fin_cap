@@ -4,6 +4,8 @@ end
 
 Given('I search based on some filters') do
   evidence_summaries_page.older_people_filter.set(true)
+  evidence_summaries_page.social_housing_tenants_filter.set(true)
+  evidence_summaries_page.children_filter.set(true)
   step %{I press search}
 end
 
