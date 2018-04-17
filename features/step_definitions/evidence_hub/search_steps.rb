@@ -44,6 +44,6 @@ Then('I should see no filters checked') do
   expect(evidence_summaries_page.older_people_filter.checked?).to be_falsey
 end
 
-Then('I should see the keyword filled in with {string}') do |keyword|
-  expect(evidence_summaries_page.keyword.value).to eq(keyword)
+Then('I should see the keyword field cleared') do
+  expect(evidence_summaries_page.keyword.value).to eq("")
 end

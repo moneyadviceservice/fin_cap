@@ -24,7 +24,7 @@ Feature: Evidence Hub Search
 
   Scenario: Search by keyword
     Given I visit the evidence hub search page
-    When I search the evidence hub for the keyword "Financial well-being: the employee"
+    When I search the evidence hub with a keyword "Financial well-being: the employee"
     Then I should see "1" evidence summary
     And I should see the "first" evidence summary as
       | Field               | Value                                                    |
@@ -37,7 +37,7 @@ Feature: Evidence Hub Search
 
   Scenario: Search by keyword and filters
     Given I visit the evidence hub search page
-    When I search the evidence hub for the keyword "Financial well-being: the employee"
+    When I search the evidence hub with a keyword "Financial well-being: the employee"
     And I filter the search for the topic Saving
     Then I should see "1" evidence summary
     And I should see the "first" evidence summary as
@@ -61,4 +61,4 @@ Feature: Evidence Hub Search
     And I search based on some filters
     When I want to clear the filters
     Then I should see no filters checked
-    And I should see the keyword filled in with "mortgage"
+    And I should see the keyword field cleared

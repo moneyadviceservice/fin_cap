@@ -26,11 +26,11 @@ class EvidenceHubController < ApplicationController
   end
 
   def form_params
-    clear_filters? ? keyword_params : evidence_summary_search_form_params
+    clear_search? ? reset_all_params : evidence_summary_search_form_params
   end
 
   def parse_params
-    return keyword_params if clear_filters?
+    return reset_all_params if clear_search?
 
     if params[:evidence_summary_search_form].blank?
       {}
@@ -39,11 +39,11 @@ class EvidenceHubController < ApplicationController
     end
   end
 
-  def keyword_params
-    { keyword: params[:keyword] }
+  def reset_all_params
+    { keyword: '' }
   end
 
-  def clear_filters?
+  def clear_search?
     params[:reset]
   end
 end
