@@ -37,6 +37,7 @@ require.config({
     DoughBaseComponent: 'bower_components/dough/assets/js/components/DoughBaseComponent',
 
     // Components
-    Nav: 'app/assets/javascripts/components/Nav'
+    Nav: 'app/assets/javascripts/components/Nav',
+    Nav_A11Y: 'app/assets/javascripts/components/Nav_A11Y'
   }
 })
