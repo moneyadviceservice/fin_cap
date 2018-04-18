@@ -13,6 +13,9 @@ en:
     summaries:
       header: 'Evidence Summaries'
   fincap:
+    components:
+      download:
+        title: 'Download'
     life_stages:
       - text: Children and young people
         url: '#'
