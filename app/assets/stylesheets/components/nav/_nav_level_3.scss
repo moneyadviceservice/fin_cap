@@ -10,17 +10,53 @@
   }
 
   @include respond-to($mq-m) {
+    width: 3 / $num-extended-level * 100%;
     display: none;
     visibility: visible;
     transform: none;
     position: absolute;
-    width: ($max-cols - 1) / $max-cols * 100%;
-    left: 1 / $max-cols * 100%;
+    left: 1 / $num-extended-level * 100%;
     top: 0;
+    background: $grey-lightest;
 
     &.is-active {
       display: block;
     }
+  }
+}
+
+.nav__level-3__main {
+  @extend %clearfix;
+
+  @include respond-to($mq-m) {
+    width: (($num-extended-level - 2) / ($num-extended-level - 1)  * 100%) - ($default-gutter * 2);
+    background: $color-white;
+    border: solid 1px $grey-light;
+    margin: $baseline-unit * 2 $default-gutter;
+    padding: $baseline-unit * 2 $default-gutter;
+    box-sizing: border-box;
+  }
+}
+
+.nav__level-3__heading {
+  @include column(12);
+
+  position: relative;
+  color: $primary-orange;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+
+.nav__level-3__heading__text {
+  position: relative;
+  color: $primary-orange;
+  padding-left: calc(#{$chevron-size * $chevron-ratio} + #{$default-gutter});
+
+  &:before {
+    @include chevron(left, $primary-orange);
+    left: 0;
   }
 }
 
@@ -29,34 +65,64 @@
 
   @include respond-to($mq-m) {
     display: block;
-    border: solid 1px;
-    width: (($max-cols - 2) / ($max-cols - 1)) * 100%;
     padding: 0 0 30%;
+    background: gray;
   }
 }
 
 .nav__level-3__description {
+  display: none;
+  color: $color-black;
+
   @include respond-to($mq-m) {
-    width: (($max-cols - 2) / ($max-cols - 1)) * 100%;
-    margin: 0;
+    display: block;
+    margin: $baseline-unit * 2 0 0;
   }
 }
 
 .nav__level-3__category {
+  @include column(12);
+
+  & .btn {
+    display: none;
+  }
+
   @include respond-to($mq-m) {
     position: static;
-    width: (1 / ($max-cols - 1)) * 100%;
+    width: (1 / ($num-extended-level - 1)) * 100%;
+    margin: 0;
+
+    & .btn {
+      display: block;
+    }
 
     &:before {
       content: none;
     }
 
     &:first-child {
-      float: left;
-      width: (($max-cols - 2) / ($max-cols - 1)) * 100%;
+      width: 100%;
       text-align: center;
     }
   }
+}
+
+// .nav__level-2__category,
+.nav__level-3__categories,
+.nav__level-3__subcategory {
+  margin-top: $baseline-unit * 2;
+}
+
+.nav__level-3__subcategory {
+  @include respond-to($mq-m) {
+    margin-right: $default-gutter * 4;
+  }
+}
+
+.nav__level-3__category__heading,
+.nav__level-3__subcategory__text {
+  color: $primary-blue-dark;
+  border-color: $primary-orange;
 }
 
 .nav__level-3__subcategories {
@@ -66,7 +132,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: (1 / ($max-cols - 1)) * 100%;
+    width: (1 / ($num-extended-level - 1)) * 100%;
     z-index: 5;
   }
 }

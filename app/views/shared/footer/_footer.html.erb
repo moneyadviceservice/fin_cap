@@ -3,7 +3,9 @@
     <div class="footer">
       <div class="footer__content">
         <div class="row">
-          <%= render 'shared/footer/footer_search' %>
+          <div class="footer__search">
+            <%= render 'shared/search', location: 'footer' %>
+          </div>
         </div>
         <div class="row">
           <%= render 'shared/footer/footer_social' %>

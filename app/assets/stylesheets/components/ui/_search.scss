@@ -10,7 +10,8 @@
   @extend %icon;
   @extend .icon--search;
   position: absolute;
-  top: $baseline-unit*2;
+  top: 50%;
   right: $baseline-unit;
+  margin-top: -12.5px;
   border: none;
 }

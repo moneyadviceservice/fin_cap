@@ -2,29 +2,35 @@
 $nav-transition-duration: 300ms;
 $nav-transition-ease: ease-out;
 $max-cols: 4; // the maximum number of categories in the subnav
-$gutter: $default-gutter / 2; // the space between category columns
+$num-elements: 5; // the number of top level links
+$num-extended-level: 4; // grid for extended level 2 layout
+$chevron-size: 0.375rem;
+$chevron-ratio: 1.5;
 
-// probably should be in header styles --
-.mobile-nav-button {
-  display: block;
+@mixin chevron($direction, $colour) {
+  content: "";
+  border: $chevron-size solid transparent;
 
-  @include respond-to($mq-m) {
-    display: none;
+  @if $direction == right {
+    border-left-color: $colour;
+    border-left-width: $chevron-size * $chevron-ratio;
+    border-right: none;
+  } @else if $direction == down {
+    border-top-color: $colour;
+    border-top-width: $chevron-size * $chevron-ratio;
+    border-bottom: none;
+  } @else if $direction == left {
+    border-right-color: $colour;
+    border-right-width: $chevron-size * $chevron-ratio;
+    border-left: none;
   }
 }
-
-.l-search-bar {
-  display: none;
-
-  @include respond-to($mq-m) {
-    display: block;
-  }
-}
-// -- probably should be in header styles
 
 .nav {
   // probably should be in base styles --
-  & * {
+  & *,
+  &:after *,
+  &:before * {
     box-sizing: border-box;
   }
   // -- probably should be in base styles
@@ -40,12 +46,11 @@ $gutter: $default-gutter / 2; // the space between category columns
   transition: transform $nav-transition-duration $nav-transition-ease;
   position: fixed;
   overflow-x: hidden;
-  z-index: 5;
+  z-index: 10;
   width: 85%;
   transform: translateX(-100%);
-  background: #f5f5f5; // $color-white;
+  background: $grey-lighter;
   height: 100%;
-  border-right: 1px solid; // $color-green-primary;
 
   &.no-transition {
     transition: none;
@@ -58,6 +63,7 @@ $gutter: $default-gutter / 2; // the space between category columns
     width: 100%;
     overflow-x: visible;
     border: 0;
+    background: $primary-blue-dark;
 
     /* non-FlexBox compliant -- */
     display: table;
@@ -67,16 +73,6 @@ $gutter: $default-gutter / 2; // the space between category columns
 
   &.is-active {
     transform: translateX(0%);
-  }
-}
-
-.nav__arrow {
-  position: absolute;
-  width: (18px / 34) * 15;
-  height: 15px;
-
-  @include respond-to($mq-m) {
-    display: none;
   }
 }
 
@@ -90,7 +86,7 @@ $gutter: $default-gutter / 2; // the space between category columns
   transform: translateX(0%);
   list-style: none;
   margin: 0;
-  padding: $baseline-unit $baseline-unit*2;
+  padding: 0;
   width: 100%;
   font-size: 1rem;
 
@@ -130,26 +126,40 @@ $gutter: $default-gutter / 2; // the space between category columns
   position: static;
   margin: 0;
   line-height: 1;
-  border-bottom: 1px solid;
-
-  .nav__arrow {
-    right: $default-gutter;
-  }
+  color: $color-white;
+  background: $primary-blue-dark;
 
   @include respond-to($mq-m) {
     border-bottom: 0;
+    background: transparent;
+    margin-top: $baseline-unit / 2;
+    vertical-align: middle;
+
+    /* uninitialised -- */
+    .uninitialised & {
+      vertical-align: bottom;
+    }
+    /* -- uninitialised */
 
     /* non-FlexBox compliant -- */
     display: table-cell;
-    vertical-align: bottom;
+    width: 100% / ($num-elements + 1);
     /* -- non-FlexBox compliant */
-
-    .nav__arrow {
-      display: none;
-    }
   }
 
   &.is-active {
+    .nav__level-1__element__heading {
+      color: $primary-orange;
+    }
+
+    .nav__level-1__element__text {
+      color: inherit;
+
+      &:after {
+        @include chevron(down, $primary-orange);
+      }
+    }
+
     .nav__level-2 {
       visibility: visible;
       transition-delay: 0s;
@@ -164,23 +174,25 @@ $gutter: $default-gutter / 2; // the space between category columns
       background: $color-white;
     }
   }
-
-  &:hover {
-    background: $color-white;
-  }
-
-  &.l-search-bar:hover {
-    background: none;
-  }
 }
 
-// no-js fallback --
-// .no-js {
-//   .nav {
-//     display: none;
-//   }
-// }
-// -- no-js fallback
+.nav__search-bar {
+  background: none;
+  display: none;
+
+  input {
+    padding-top: $baseline-unit / 2;
+    padding-bottom: $baseline-unit / 2;
+  }
+
+  @include respond-to($mq-m) {
+    vertical-align: middle;
+
+    /* non-FlexBox compliant -- */
+    display: table-cell;
+    /* -- non-FlexBox compliant */
+  }
+}
 
 .touch {
   .nav__level-1__element {
@@ -198,27 +210,19 @@ $gutter: $default-gutter / 2; // the space between category columns
   overflow: hidden;
 }
 
-.nav__level-1__element:last-child {
-  border-bottom: none;
-}
-
-.nav__level-1__element:first-child {
-  border-top: none;
-}
-
 .nav__level-1__element__heading {
   @include column(12);
 
   display: inline-block;
   float: none;
   line-height: 25px;
-  padding: $baseline-unit $baseline-unit*2;
   background: transparent;
   text-align: left;
   position: relative;
-  color: $color-black;
+  border-top: 1px solid $color-white;
+  line-height: 1.2;
+  padding: $baseline-unit * 2 0;
 
-  &:hover,
   &:focus {
     text-decoration: none;
   }
@@ -245,46 +249,66 @@ $gutter: $default-gutter / 2; // the space between category columns
     position: relative;
     width: 100%;
     margin: 0;
-    line-height: 1;
     text-align: center;
     padding: 0;
+    border-top: none;
+  }
+}
+
+.nav__level-1__element:first-child {
+  .nav__level-1__element__heading {
+    border-top: none;
+    margin-top: $baseline-unit * 2;
+
+    @include respond-to($mq-m) {
+      margin-top: 0;
+    }
+  }
+}
+
+.nav__level-1__element:nth-last-child(3) {
+  .nav__level-1__element__heading {
+    margin-bottom: $baseline-unit * 2;
+
+    @include respond-to($mq-m) {
+      margin-bottom: 0;
+    }
   }
 }
 
 .nav__level-1__element__text {
+  display: inline-block;
   pointer-events: none;
+  color: $color-white;
+  padding-right: calc(#{$chevron-size * $chevron-ratio} + #{$default-gutter * 2});
+
+  &:after {
+    @include chevron(right, $color-white);
+
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: $default-gutter;
+    transform: translateY(-$chevron-size);
+  }
 
   @include respond-to($mq-m) {
     display: block;
-    padding: $baseline-unit*2 10px;
-    font-weight: 700;
-    font-size: 14px;
-    font-size: 0.875rem;
+    padding: $baseline-unit * 2 0.625rem;
     width: auto;
 
     &:after {
-      content: "";
+      @include chevron(down, $color-white);
+
       display: inline-block;
       position: static;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid; // $color-grey-primary;
-      margin-left: 4px;
-      margin-bottom: 2px;
+      margin-left: 0.5rem;
+      transform: none;
     }
   }
 }
 
 .nav__close-button {
-  @include body(14, 24);
-  float: right;
-  margin-top: 6px;
-  display: inline;
-  color: $color-black;
-  text-align: right;
-  padding: $baseline-unit $baseline-unit*5 $baseline-unit $baseline-unit;
-  position: relative;
-
   @include respond-to($mq-m) {
     display: none;
   }
@@ -294,13 +318,17 @@ $gutter: $default-gutter / 2; // the space between category columns
   }
 }
 
+.nav__close-button__text {
+  display: inline-block;
+  line-height: 12px;
+  padding:  $baseline-unit * 2 0;
+  margin-right: $default-gutter * 1;
+  float: right;
+}
+
 .nav__close-button__icon {
-  position: absolute;
   width: 12px;
   height: 12px;
-  right: 10px;
-  top: 30%;
-  fill: none;
 }
 
 .mobile-nav-overlay {
@@ -309,8 +337,10 @@ $gutter: $default-gutter / 2; // the space between category columns
   left: 0;
   height: 100%;
   width: 100%;
-  background: pink;
+  background: $color-black;
+  opacity: 0.5;
   display: none;
+  z-index: 5;
 
   &.is-active {
     display: block;
@@ -333,12 +363,29 @@ $gutter: $default-gutter / 2; // the space between category columns
     }
 
     .nav__level-1__element {
+      display: inline-flex;
+      width: auto;
       flex-grow: 1;
       flex-shrink: 1;   // IE10 fix
     }
 
-    .nav__level-1__element {
-      display: inline-block;
+    .nav__search-bar {
+      display: inline-flex;
+      flex-grow: 2;
+      padding-left: 0.625rem;
+
+      .search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .nav__level-1__element__heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 }

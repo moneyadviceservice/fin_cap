@@ -535,12 +535,14 @@ describe('Nav', function() {
   });
 
   describe('Calls _openDesktopLevel3', function() {
-    it('Opens the level 3 item associated with the trigger', function() {
+    it('Opens the level 3 item associated with the trigger and sets active class on triggering element', function() {
       var self = this;
       this.$navLevel3.removeClass(this.activeClass);
       this.$navLevel2ExtendedItems.each(function() {
         $(this).find('[data-nav-level-2-extended-heading]').each(function() {
           self.obj._openDesktopLevel3(this);
+          expect($(this).hasClass(self.activeClass)).to.be.true;
+          expect($(this).parents().siblings().find('[data-nav-level-2-extended-heading]').hasClass(self.activeClass)).to.be.false;
           expect($(this).siblings('[data-nav-level-3]').hasClass(self.activeClass)).to.be.true;
         });
       });
