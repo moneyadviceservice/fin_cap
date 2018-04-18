@@ -2,7 +2,7 @@ class EvidenceSummarySearchForm
   include ActiveModel::Model
 
   attr_accessor :keyword, :document_type, :evidence_types, :client_groups
-  attr_accessor :countries_of_delivery, :topics, :years_of_publication
+  attr_accessor :countries_of_delivery, :topics, :year_of_publication
 
   def self.checkbox_filters
     I18n.t('evidence_hub.filters.checkbox')

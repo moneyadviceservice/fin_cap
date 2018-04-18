@@ -11,7 +11,7 @@ en:
         links_to_research: 'Links to further information'
       evidence_summary_search_form:
         keyword: 'keyword'
-        years_of_publication:
+        year_of_publication:
           - All years
           - Last 2 years
           - Last 5 years
@@ -54,7 +54,7 @@ en:
         - topics
         - countries_of_delivery
       radio_button:
-        - years_of_publication
+        - year_of_publication
   fincap:
     life_stages:
       - text: Children and young people

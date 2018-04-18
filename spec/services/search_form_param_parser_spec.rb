@@ -124,7 +124,7 @@ RSpec.describe SearchFormParamParser, type: :model do
     end
 
     context 'with a publication year filter' do
-      let(:filter) { 'years_of_publication' }
+      let(:filter) { 'year_of_publication' }
 
       context 'set to All years' do
         let(:params) { { keyword: '', filter => 'All years' } }

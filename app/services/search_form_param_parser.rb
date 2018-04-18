@@ -1,7 +1,7 @@
 class SearchFormParamParser
   FINCAP_START_YEAR = 2000
   IGNORED_OPTION = 'All years'.freeze
-  YEAR_OF_PUBLICATION_FILTER = 'years_of_publication'.freeze
+  YEAR_OF_PUBLICATION_FILTER = 'year_of_publication'.freeze
 
   attr_accessor :params
 

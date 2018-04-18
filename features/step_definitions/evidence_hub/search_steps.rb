@@ -7,8 +7,8 @@ When('I search the evidence hub for the keyword {string}') do |keyword|
   step %{I press search}
 end
 
-When('I filter the search for evidence delivered in the United Kingdom') do
-  evidence_summaries_page.uk_filter.set(true)
+When('I filter the search for the topic Saving') do
+  evidence_summaries_page.saving_filter.set(true)
   step %{I press search}
 end
 

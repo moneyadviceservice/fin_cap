@@ -15,7 +15,7 @@ module UI::Pages
 
     element :keyword, '#evidence_summary_search_form_keyword'
     element :search_button, '.sidepanel button[type="submit"]'
-    element :uk_filter, '#evidence_summary_search_form_countries_of_delivery_united-kingdom'
+    element :saving_filter, '#evidence_summary_search_form_topics_saving'
 
     sections :search_results, SearchResult, '.search-results li'
   end

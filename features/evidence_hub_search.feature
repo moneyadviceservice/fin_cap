@@ -38,7 +38,7 @@ Feature: Evidence Hub Search
   Scenario: Search by keyword and filters
     Given I visit the evidence hub search page
     When I search the evidence hub for the keyword "Financial well-being: the employee"
-    And I filter the search for evidence delivered in the United Kingdom
+    And I filter the search for the topic Saving
     Then I should see "1" evidence summary
     And I should see the "first" evidence summary as
       | Field               | Value                                                    |

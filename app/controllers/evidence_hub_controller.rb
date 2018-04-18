@@ -18,7 +18,7 @@ class EvidenceHubController < ApplicationController
   def evidence_summary_search_form_params
     params.fetch(:evidence_summary_search_form, {}).permit(
       :keyword,
-      :years_of_publication,
+      :year_of_publication,
       client_groups: [],
       topics: [],
       countries_of_delivery: []

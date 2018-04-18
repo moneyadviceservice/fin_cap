@@ -13,17 +13,17 @@ RSpec.describe EvidenceSummarySearchForm do
     it 'returns an array of the single-select filters' do
       expect(
         described_class.radio_button_filters
-      ).to eq(['years_of_publication'])
+      ).to eq(['year_of_publication'])
     end
   end
 
   describe '#chosen_options' do
     context 'when an option has been chosen' do
       it 'returns true' do
-        search_form.years_of_publication = ['All years', 'Last 2 years']
+        search_form.year_of_publication = ['All years', 'Last 2 years']
 
         expect(
-          search_form.chosen_options?('Last 2 years', :years_of_publication)
+          search_form.chosen_options?('Last 2 years', :year_of_publication)
         ).to be_truthy
       end
     end
@@ -31,7 +31,7 @@ RSpec.describe EvidenceSummarySearchForm do
     context 'when no options have been chosen' do
       it 'returns false' do
         expect(
-          search_form.chosen_options?('All years', :years_of_publication)
+          search_form.chosen_options?('All years', :year_of_publication)
         ).to be_falsey
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe EvidenceSummarySearchForm do
 
   describe '#filter_title' do
     context 'when the first word is plural' do
-      let(:filter) { 'years_of_publication' }
+      let(:filter) { 'year_of_publication' }
 
       it 'converts snake case to a heading with the first word singularised' do
         expect(search_form.filter_title(filter)).to eq('Year of publication')
