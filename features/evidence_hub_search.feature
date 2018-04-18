@@ -24,7 +24,21 @@ Feature: Evidence Hub Search
 
   Scenario: Search by keyword
     Given I visit the evidence hub search page
-    When I search on evidence hub the keyword "Financial well-being: the employee"
+    When I search the evidence hub for the keyword "Financial well-being: the employee"
+    Then I should see "1" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                                                    |
+      | document title      | Financial well-being: the employee view                  |
+      | overview            | Stress caused by pay levels, lack of financial awareness |
+      | evidence type       | Insight                                                  |
+      | topics              | Saving                                                   |
+      | countries           | United Kingdom                                           |
+      | year of publication | 2015                                                     |
+
+  Scenario: Search by keyword and filters
+    Given I visit the evidence hub search page
+    When I search the evidence hub for the keyword "Financial well-being: the employee"
+    And I filter the search for evidence delivered in the United Kingdom
     Then I should see "1" evidence summary
     And I should see the "first" evidence summary as
       | Field               | Value                                                    |

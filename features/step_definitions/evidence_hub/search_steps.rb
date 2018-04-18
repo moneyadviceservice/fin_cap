@@ -2,8 +2,17 @@ Given('I visit the evidence hub search page') do
   evidence_summaries_page.load(locale: 'en')
 end
 
-When('I search on evidence hub the keyword {string}') do |keyword|
+When('I search the evidence hub for the keyword {string}') do |keyword|
   evidence_summaries_page.keyword.set(keyword)
+  step %{I press search}
+end
+
+When('I filter the search for evidence delivered in the United Kingdom') do
+  evidence_summaries_page.uk_filter.set(true)
+  step %{I press search}
+end
+
+When('I press search') do
   evidence_summaries_page.search_button.click
 end
 
