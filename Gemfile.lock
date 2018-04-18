@@ -175,7 +175,7 @@ GEM
     newrelic_rpm (4.8.0.341)
     nio4r (2.3.0)
     no_proxy_fix (0.1.2)
-    nokogiri (1.8.2)
+    nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     octokit (4.8.0)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -324,6 +324,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mas-cms-client (= 1.10.0)
   newrelic_rpm
+  nokogiri (= 1.8.1)
   pg (~> 0.18)
   pry-rails
   rails (~> 5.0.6)
