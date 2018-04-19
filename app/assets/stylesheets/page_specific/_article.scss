@@ -1,0 +1,6 @@
+.article__primary-button {
+  a {
+    @extend .btn;
+    @extend .btn--primary;
+  }
+}
