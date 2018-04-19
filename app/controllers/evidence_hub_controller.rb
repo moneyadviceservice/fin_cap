@@ -2,17 +2,48 @@ class EvidenceHubController < ApplicationController
   DOCUMENT_TYPES = ['Insight'].freeze
 
   def index
-    documents = Mas::Cms::Document.all(
-      params: search_params
-    )
+    @search_form = EvidenceSummarySearchForm.new(search_params)
+    documents = Mas::Cms::Document.all(params: parse_params)
     @evidence_summaries = EvidenceSummary.map(documents)
   end
 
   private
 
   def search_params
-    { document_type: DOCUMENT_TYPES }.tap do |hash|
-      hash[:keyword] = params.require(:keyword) if params[:keyword].present?
+    {
+      document_type: DOCUMENT_TYPES
+    }.merge(form_params)
+  end
+
+  def evidence_summary_search_form_params
+    params.fetch(:evidence_summary_search_form, {}).permit(
+      :keyword,
+      :year_of_publication,
+      client_groups: [],
+      topics: [],
+      countries_of_delivery: []
+    )
+  end
+
+  def form_params
+    clear_search? ? reset_all_params : evidence_summary_search_form_params
+  end
+
+  def parse_params
+    return reset_all_params if clear_search?
+
+    if params[:evidence_summary_search_form].blank?
+      {}
+    else
+      SearchFormParamParser.parse(evidence_summary_search_form_params)
     end
+  end
+
+  def reset_all_params
+    { keyword: '' }
+  end
+
+  def clear_search?
+    params[:reset]
   end
 end
