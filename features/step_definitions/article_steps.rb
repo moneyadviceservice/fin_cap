@@ -18,3 +18,12 @@ Then('I should see the download box containing the links') do |table|
     expect(row[1]).to be_in(download_box_links.map { |link| link[:href] })
   end
 end
+
+Then("I should see the call to action box containing the links") do |table|
+  call_to_action_links = article_page.call_to_action_box.map(&:link)
+
+  table.rows.each do |row|
+    expect(row[0]).to be_in(call_to_action_links.map(&:text))
+    expect(row[1]).to be_in(call_to_action_links.map { |link| link[:href] })
+  end
+end

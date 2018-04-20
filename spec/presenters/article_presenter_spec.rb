@@ -1,49 +1,60 @@
 RSpec.describe ArticlePresenter do
   let(:view) { ActionView::Base.new }
   let(:article) do
-    double('Article', attributes)
+    double('FincapArticle', attributes)
   end
   subject(:presenter) { described_class.new(article, view) }
 
-  describe '#download_content' do
-    # rubocop:disable Metrics/LineLength
-    context 'when articles has download content' do
+  describe '#download_component' do
+    context 'when article has download component' do
       let(:attributes) do
-        {
-          extra_blocks: [
-            double(
-              identifier: 'component_download',
-              content: <<-CONTENT
-                <p>
-                  <a href="/financial+capability+strategy.pdf">UK Strategy</a>
-                  <a href="/detailed-strategy.pdf">UK Detailed Strategy</a>
-                  <a href="/key-statistics.pdf">Key statistics on Financial Capability</a>
-                  <a href="/fincap+progress+report+2017.pdf">Financial Capability Progress Report 2017</a>
-                </p>
-              CONTENT
-            )
-          ]
-        }
+        { download_block: double(content: '<a>some content</a>') }
       end
 
-      it 'returns 4 links adding a html class to them' do
-        expect(presenter.download_content).to match_array(
-          [
-            '<a href="/financial+capability+strategy.pdf" class="download-box__list-item-link">UK Strategy</a>',
-            '<a href="/detailed-strategy.pdf" class="download-box__list-item-link">UK Detailed Strategy</a>',
-            '<a href="/key-statistics.pdf" class="download-box__list-item-link">Key statistics on Financial Capability</a>',
-            '<a href="/fincap+progress+report+2017.pdf" class="download-box__list-item-link">Financial Capability Progress Report 2017</a>'
-          ]
+      it 'renders download component view' do
+        expect(view).to receive(:render).with(
+          'components/download',
+          content: ['<a class="download-box__list-item-link">some content</a>']
         )
+        presenter.download_component
       end
     end
-    # rubocop:enable Metrics/LineLength
 
-    context 'when article does not have download content' do
-      let(:attributes) { { extra_blocks: [] } }
+    context 'when article does not have download component' do
+      let(:attributes) do
+        { download_block: double(content: '') }
+      end
 
-      it 'returns empty array' do
-        expect(presenter.download_content).to be_empty
+      it 'does not render the component' do
+        expect(view).to_not receive(:render)
+        presenter.download_component
+      end
+    end
+  end
+
+  describe '#cta_links_component' do
+    context 'when article has cta links component' do
+      let(:attributes) do
+        { cta_links_block: double(content: '<a>some content</a>') }
+      end
+
+      it 'renders download component view' do
+        expect(view).to receive(:render).with(
+          'components/cta_links',
+          content: ['<a>some content</a>']
+        )
+        presenter.cta_links_component
+      end
+    end
+
+    context 'when article does not have cta links component' do
+      let(:attributes) do
+        { cta_links_block: double(content: '') }
+      end
+
+      it 'does not render the component' do
+        expect(view).to_not receive(:render)
+        presenter.cta_links_component
       end
     end
   end
