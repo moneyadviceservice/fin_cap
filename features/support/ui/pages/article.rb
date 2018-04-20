@@ -10,6 +10,8 @@ module UI
 
     class Article < UI::Page
       set_url '/en/articles/{/slug}'
+
+      element :feedback_box, '.feedback-box'
       sections :download_box,
                DownloadBoxSection,
                '.download-box ul.download-box__list li'

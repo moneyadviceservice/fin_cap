@@ -27,3 +27,4 @@ Feature: Article page
       | Evaluation Toolkit               | /common-evaluation-toolkit   |
       | The Steering Groups              | /steering-groups             |
       | 2015 Financial Capability Survey | /financial-capability-survey |
+    And I should see the feedback box with the email "email@moneyadviceservice.org.uk"

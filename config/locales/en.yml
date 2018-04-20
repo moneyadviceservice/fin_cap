@@ -52,6 +52,8 @@ en:
     components:
       download:
         title: 'Download'
+      feedback:
+        title: 'Give us your feedback or ask a question'
     life_stages:
       - text: Children and young people
         url: '#'

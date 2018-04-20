@@ -4,6 +4,40 @@ RSpec.describe FincapArticle do
     double('Mas::Cms::Article', attributes)
   end
 
+  describe '#feedback_block' do
+    context 'when blocks is present' do
+      let(:attributes) do
+        {
+          non_content_blocks: [
+            Mas::Cms::Block.new(
+              identifier: 'component_feedback',
+              content: 'email@moneyadviceservice.org.uk'
+            )
+          ]
+        }
+      end
+
+      it 'returns feedback component' do
+        expect(subject.feedback_block).to eq(
+          Mas::Cms::Block.new(
+            identifier: 'component_feedback',
+            content: 'email@moneyadviceservice.org.uk'
+          )
+        )
+      end
+    end
+
+    context 'when blocks is not present' do
+      let(:attributes) do
+        { non_content_blocks: [] }
+      end
+
+      it 'returns nil' do
+        expect(subject.feedback_block).to be_nil
+      end
+    end
+  end
+
   describe '.download_block' do
     context 'when blocks is present' do
       let(:attributes) do

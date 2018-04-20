@@ -27,3 +27,7 @@ Then("I should see the call to action box containing the links") do |table|
     expect(row[1]).to be_in(call_to_action_links.map { |link| link[:href] })
   end
 end
+
+Then("I should see the feedback box with the email {string}") do |email|
+  expect(article_page.feedback_box).to have_content(email)
+end
