@@ -1,0 +1,20 @@
+<div class="l-constrained">
+  <div class="hero">
+    <h1 class="hero__heading">
+      HERO component
+    </h1>
+  </div>
+</div>
+
+<div class="l-constrained">
+  <div class="l-2col">
+    <div class="l-2col-main">
+      <h2><%= article.title %></h2>
+
+      <%= article.body.html_safe %>
+    </div>
+    <div class="l-2col-side">
+      <%= article.download_component %>
+    </div>
+  </div>
+ </div>

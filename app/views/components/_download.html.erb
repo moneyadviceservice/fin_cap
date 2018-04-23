@@ -1,0 +1,15 @@
+<div class="download-box">
+  <svg xmlns="http://www.w3.org/2000/svg" class="download-box__icon svg-icon svg-icon--download" focusable="false">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--download"></use>
+  </svg>
+  <h3 class="download-box__title">
+    <%= t('fincap.components.download.title') %>
+  </h3>
+  <ul class="download-box__list">
+    <% content.each do |element| %>
+      <li class="download-box__list-item">
+        <%= element.html_safe %>
+      </li>
+    <% end %>
+  </ul>
+</div>
