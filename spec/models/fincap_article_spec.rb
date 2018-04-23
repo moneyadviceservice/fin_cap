@@ -8,7 +8,7 @@ RSpec.describe FincapArticle do
     context 'when blocks is present' do
       let(:attributes) do
         {
-          extra_blocks: [
+          non_content_blocks: [
             Mas::Cms::Block.new(
               identifier: 'component_download',
               content: 'some content'
@@ -29,7 +29,7 @@ RSpec.describe FincapArticle do
 
     context 'when download blocks is not present' do
       let(:attributes) do
-        { extra_blocks: [] }
+        { non_content_blocks: [] }
       end
 
       it 'returns nil' do
@@ -42,7 +42,7 @@ RSpec.describe FincapArticle do
     context 'when blocks is present' do
       let(:attributes) do
         {
-          extra_blocks: [
+          non_content_blocks: [
             Mas::Cms::Block.new(
               identifier: 'component_cta_links',
               content: 'some content'
@@ -63,7 +63,7 @@ RSpec.describe FincapArticle do
 
     context 'when cta blocks is not present' do
       let(:attributes) do
-        { extra_blocks: [] }
+        { non_content_blocks: [] }
       end
 
       it 'returns nil' do

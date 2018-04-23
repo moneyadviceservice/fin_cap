@@ -8,9 +8,7 @@ gem 'rails', '~> 5.0.6'
 gem 'dough-ruby', '~> 5.27'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem 'mas-cms-client',
-    git: 'git@github.com:moneyadviceservice/mas-cms-client.git',
-    branch: 'feature/9161-article-download-component' # '1.10.0'
+gem 'mas-cms-client', '1.11.0'
 gem 'newrelic_rpm'
 gem 'nokogiri'
 gem 'pg', '~> 0.18'

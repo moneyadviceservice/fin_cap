@@ -4,7 +4,7 @@ class FincapArticle
 
   delegate :title,
            :body,
-           :extra_blocks,
+           :non_content_blocks,
            to: :article
 
   attr_reader :article
@@ -24,7 +24,7 @@ class FincapArticle
   private
 
   def find_block(identifier)
-    extra_blocks.find do |block|
+    non_content_blocks.find do |block|
       block.identifier == identifier
     end
   end
