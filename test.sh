@@ -1,16 +1,15 @@
 #!/bin/bash
 
-set -e -x
+set -e
 
+export PATH=./bin:$PATH
 export RAILS_ENV=test
 export BUNDLE_WITHOUT=development
 
-bundle install --quiet
-bundle exec bowndler install
-bundle exec brakeman -q --no-pager --ensure-latest
-bundle exec rubocop .
-bundle exec rspec -f progress
-bundle exec cucumber -f progress
-
+bundle install
 npm install
-./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js
+
+bundle exec bowndler update
+
+bundle exec rake db:drop db:create db:schema:load db:migrate
+bundle exec rake
