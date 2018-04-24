@@ -22,7 +22,10 @@ test: &test
 
 production:
   <<: *default
-  database: fin_cap_production
+  database: <%= ENV['FINCAP_DATABASE'] %>
+  username: <%= ENV['FINCAP_DATABASE_USER'] %>
+  password: <%= ENV['FINCAP_DATABASE_PASSWORD'] %>
+  host: <%= ENV['FINCAP_DATABASE_HOST'] %>
 
 cucumber:
   <<: *test
