@@ -10,9 +10,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'mas-cms-client', '1.10.0'
 gem 'newrelic_rpm'
+gem 'okcomputer'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
+gem 'syslog-logger'
 gem 'uglifier', '>= 1.3.0'
+gem 'unicorn-rails'
 
 group :development, :test do
   gem 'brakeman', require: false
