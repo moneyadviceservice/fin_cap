@@ -1,5 +1,5 @@
 class CtaLinksComponent < BaseComponent
-  def process
+  def build_markup
     links.map(&:to_s)
   end
 end

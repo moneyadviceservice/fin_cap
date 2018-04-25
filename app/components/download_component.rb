@@ -1,7 +1,7 @@
 class DownloadComponent < BaseComponent
   HTML_ITEM_CLASS = 'download-box__list-item-link'.freeze
 
-  def process
+  def build_markup
     return [] if block.blank?
 
     links.map do |element|

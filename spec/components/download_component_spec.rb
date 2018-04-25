@@ -3,8 +3,8 @@ RSpec.describe DownloadComponent do
     described_class.new(block)
   end
 
-  describe '#process' do
-    subject(:process) { component.process }
+  describe '#build_markup' do
+    subject(:build_markup) { component.build_markup }
 
     # rubocop:disable Metrics/LineLength
     context 'when articles has download content' do
@@ -22,7 +22,7 @@ RSpec.describe DownloadComponent do
       end
 
       it 'returns 4 links adding a html class to them' do
-        expect(process).to match_array(
+        expect(build_markup).to match_array(
           [
             '<a href="/financial+capability+strategy.pdf" class="download-box__list-item-link">UK Strategy</a>',
             '<a href="/detailed-strategy.pdf" class="download-box__list-item-link">UK Detailed Strategy</a>',
@@ -38,7 +38,7 @@ RSpec.describe DownloadComponent do
       let(:block) { double(content: nil) }
 
       it 'returns empty array' do
-        expect(process).to eq([])
+        expect(build_markup).to eq([])
       end
     end
   end

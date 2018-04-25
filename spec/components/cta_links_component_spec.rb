@@ -3,8 +3,8 @@ RSpec.describe CtaLinksComponent do
     described_class.new(block)
   end
 
-  describe '#process' do
-    subject(:process) { component.process }
+  describe '#build_markup' do
+    subject(:build_markup) { component.build_markup }
 
     context 'when content is present' do
       # rubocop:disable Metrics/LineLength
@@ -22,7 +22,7 @@ RSpec.describe CtaLinksComponent do
       end
 
       it 'returns an array of links' do
-        expect(process).to match_array(
+        expect(build_markup).to match_array(
           [
             '<a href="/financial+capability+strategy.pdf">UK Strategy</a>',
             '<a href="/detailed-strategy.pdf">UK Detailed Strategy</a>',
@@ -38,7 +38,7 @@ RSpec.describe CtaLinksComponent do
       let(:block) { double(content: nil) }
 
       it 'returns empty array' do
-        expect(process).to eq([])
+        expect(build_markup).to eq([])
       end
     end
   end

@@ -12,10 +12,10 @@ class ArticlePresenter < BasePresenter
   end
 
   def download_content
-    @download_content ||= DownloadComponent.new(download_block).process
+    @download_content ||= DownloadComponent.new(download_block).build_markup
   end
 
   def cta_links_content
-    @cta_links_content ||= CtaLinksComponent.new(cta_links_block).process
+    @cta_links_content ||= CtaLinksComponent.new(cta_links_block).build_markup
   end
 end

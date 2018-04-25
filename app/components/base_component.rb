@@ -8,4 +8,8 @@ class BaseComponent
   def links
     Nokogiri::HTML(block.content).xpath('//a')
   end
+
+  def build_markup
+    raise NotImplementedError
+  end
 end
