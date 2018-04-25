@@ -34,6 +34,14 @@ RSpec.describe DownloadComponent do
     end
     # rubocop:enable Metrics/LineLength
 
+    context 'when block is blank' do
+      let(:block) { nil }
+
+      it 'returns empty array' do
+        expect(build_markup).to eq([])
+      end
+    end
+
     context 'when article does not have download content' do
       let(:block) { double(content: nil) }
 
