@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'http://gems.dev.mas.local'
 
-ruby '2.4.1'
+ruby '2.4.2'
 
 gem 'rails', '~> 5.0.6'
 
@@ -11,9 +11,12 @@ gem 'jquery-rails'
 gem 'mas-cms-client', '1.11.0'
 gem 'newrelic_rpm'
 gem 'nokogiri'
+gem 'okcomputer'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
+gem 'syslog-logger'
 gem 'uglifier', '>= 1.3.0'
+gem 'unicorn-rails'
 
 group :development, :test do
   gem 'brakeman', require: false

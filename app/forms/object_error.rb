@@ -1,2 +1,2 @@
-class ObjectError < Dought::Forms::ObjectError
+class ObjectError < Dough::Forms::ObjectError
 end

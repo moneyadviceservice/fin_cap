@@ -8,6 +8,8 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
+  encoding: utf8
+  reconnect: true
 
 development:
   <<: *default
@@ -22,10 +24,7 @@ test: &test
 
 production:
   <<: *default
-  database: <%= ENV['FINCAP_DATABASE'] %>
-  username: <%= ENV['FINCAP_DATABASE_USER'] %>
-  password: <%= ENV['FINCAP_DATABASE_PASSWORD'] %>
-  host: <%= ENV['FINCAP_DATABASE_HOST'] %>
+  url: <%= ENV["MAS_FINCAP_DATABASE_URL"] %>
 
 cucumber:
   <<: *test
