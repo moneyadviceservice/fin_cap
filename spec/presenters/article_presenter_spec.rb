@@ -58,4 +58,32 @@ RSpec.describe ArticlePresenter do
       end
     end
   end
+
+  describe '#feedback_component' do
+    context 'when article has feedback component' do
+      let(:attributes) do
+        { feedback_block: double(content: 'email@moneyadviceservice.org.uk') }
+      end
+
+      it 'renders download component view' do
+        expect(view).to receive(:render).with(
+          'components/feedback',
+          title: 'Give us your feedback or ask a question',
+          email: 'email@moneyadviceservice.org.uk'
+        )
+        presenter.feedback_component
+      end
+    end
+
+    context 'when article does not have feedback component' do
+      let(:attributes) do
+        { feedback_block: nil }
+      end
+
+      it 'does not render the component' do
+        expect(view).to_not receive(:render)
+        presenter.feedback_component
+      end
+    end
+  end
 end

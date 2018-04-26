@@ -1,6 +1,7 @@
 class FincapArticle
   DOWNLOAD_COMPONENT_IDENTIFIER = 'component_download'.freeze
   CTA_LINKS_COMPONENT_IDENTIFIER = 'component_cta_links'.freeze
+  FEEDBACK_COMPONENT_IDENTIFIER = 'component_feedback'.freeze
 
   delegate :title,
            :body,
@@ -19,6 +20,10 @@ class FincapArticle
 
   def download_block
     find_block(DOWNLOAD_COMPONENT_IDENTIFIER)
+  end
+
+  def feedback_block
+    find_block(FEEDBACK_COMPONENT_IDENTIFIER)
   end
 
   private
