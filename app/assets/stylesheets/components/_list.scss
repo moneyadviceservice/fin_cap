@@ -38,6 +38,7 @@
 }
 
 .list--grouped-cta {
+  @include body(16, 22);
   margin: $baseline-unit 0;
   padding: 0;
 
@@ -56,9 +57,19 @@
     text-align: center;
     border: 2px solid $primary-orange;
     border-radius: $border-radius;
+    position: relative;
 
     &:hover {
       border-color: $primary-blue-dark;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: $baseline-unit;
+      top: $baseline-unit;
+      @extend %icon;
+      @extend .icon--arrow;
     }
   }
 }
