@@ -1,19 +1,21 @@
 class ArticlePresenter < BasePresenter
-  DOWNLOAD_COMPONENT_IDENTIFIER = 'component_download'.freeze
-
   def download_component
+    return if download_content.blank?
+
     view.render('components/download', content: download_content)
   end
 
-  def download_content
-    DownloadComponent.new(download_block).process
+  def cta_links_component
+    return if cta_links_content.blank?
+
+    view.render('components/cta_links', content: cta_links_content)
   end
 
-  private
+  def download_content
+    @download_content ||= DownloadComponent.new(download_block).build_markup
+  end
 
-  def download_block
-    extra_blocks.find do |block|
-      block.identifier == DOWNLOAD_COMPONENT_IDENTIFIER
-    end
+  def cta_links_content
+    @cta_links_content ||= CtaLinksComponent.new(cta_links_block).build_markup
   end
 end

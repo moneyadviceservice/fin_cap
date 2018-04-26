@@ -21,3 +21,9 @@ Feature: Article page
       | UK Detailed Strategy                      | /detailed-strategy.pdf             |
       | Key statistics on Financial Capability    | /key-statistics.pdf                |
       | Financial Capability Progress Report 2017 | /fincap+progress+report+2017.pdf   |
+    And I should see the call to action box containing the links
+      | text                             | link                         |
+      | Evidence Hub                     | /general_info                |
+      | Evaluation Toolkit               | /common-evaluation-toolkit   |
+      | The Steering Groups              | /steering-groups             |
+      | 2015 Financial Capability Survey | /financial-capability-survey |
