@@ -1,7 +1,7 @@
 <div class="l-constrained">
-  <div class="hero">
+  <div class="hero" style="background-image: url(<%= article.hero_image_component %>);">
     <h1 class="hero__heading">
-      HERO component
+      <%= article.hero_description_component.html_safe %>
     </h1>
   </div>
 </div>

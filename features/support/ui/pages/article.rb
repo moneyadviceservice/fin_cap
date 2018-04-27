@@ -11,6 +11,7 @@ module UI
     class Article < UI::Page
       set_url '/en/articles/{/slug}'
 
+      element :main_description, '.hero'
       element :feedback_box, '.feedback-box'
       sections :download_box,
                DownloadBoxSection,

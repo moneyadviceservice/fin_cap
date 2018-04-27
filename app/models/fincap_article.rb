@@ -1,4 +1,6 @@
 class FincapArticle
+  HERO_IMAGE_IDENTIFIER = 'component_hero_image'.freeze
+  HERO_DESCRIPTION_IDENTIFIER = 'component_hero_description'.freeze
   DOWNLOAD_COMPONENT_IDENTIFIER = 'component_download'.freeze
   CTA_LINKS_COMPONENT_IDENTIFIER = 'component_cta_links'.freeze
   FEEDBACK_COMPONENT_IDENTIFIER = 'component_feedback'.freeze
@@ -12,6 +14,14 @@ class FincapArticle
 
   def initialize(article)
     @article = article
+  end
+
+  def hero_image_block
+    find_block(HERO_IMAGE_IDENTIFIER)
+  end
+
+  def hero_description_block
+    find_block(HERO_DESCRIPTION_IDENTIFIER)
   end
 
   def cta_links_block
