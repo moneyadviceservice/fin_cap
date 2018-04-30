@@ -13,3 +13,5 @@ bundle exec bowndler update
 
 bundle exec rake db:drop db:create db:schema:load db:migrate
 bundle exec rake
+bundle exec brakeman -q --no-pager --ensure-latest
+bundle exec rubocop .
