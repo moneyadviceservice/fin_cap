@@ -1,8 +1,10 @@
 <div class="l-constrained">
-  <div class="hero">
-    <h1 class="hero__heading">
-      HERO component
-    </h1>
+  <div class="row">
+    <div class="hero" style="background-image: url(<%= article.hero_image_component %>);">
+      <h1 class="hero__heading">
+        <%= article.hero_description_component.html_safe %>
+      </h1>
+    </div>
   </div>
 </div>
 

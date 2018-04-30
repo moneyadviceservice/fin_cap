@@ -1,11 +1,11 @@
 <div class="feedback-box">
   <h3 class="feedback-box__title">
-    <%= title %>
+    <%= t('fincap.components.feedback.title') %>
   </h3>
   <svg xmlns="http://www.w3.org/2000/svg" class="feedback-box__icon svg-icon svg-icon--speech" focusable="false">
     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--speech"></use>
   </svg>
-  <a href="mailto:<%= "#{email}" %>" class="feedback-box__text">
-    <%= email.html_safe %>
+  <a href="mailto:<%= "#{content}" %>" class="feedback-box__text">
+    <%= content.html_safe %>
   </a>
 </div>
