@@ -30,31 +30,34 @@
         </div>
       </div>
       <div class="l-2col-main">
-        <ul class="search-results">
-          <% present_collection(@evidence_summaries).each do |document| %>
-            <li class="search-results__item">
-              <p class="search-results__title">
-                <%= document.link %>
-              </p>
-              <p class="search-results__description">
-                <%= document.stripped_overview %>
-              </p>
-              <p class="search-results__evidence-type">
-                <%= document.formatted_evidence_type_label %>
-                <%= render 'shared/evaluation_types', type: "#{document.evidence_type}" %>
-              </p>
-              <p class="search-results__topics">
-                <%= document.formatted_topics %>
-              </p>
-              <p class="search-results__countries">
-                <%= document.formatted_countries %>
-              </p>
-              <p class="search-results__year-of-publication">
-                <%= document.formatted_year_of_publication %>
-              </p>
-            </li>
-          <% end %>
-        </ul>
+        <%= render 'shared/error', error: @error if @error %>
+        <% if @evidence_summaries %>
+          <ul class="search-results">
+            <% present_collection(@evidence_summaries).each do |document| %>
+              <li class="search-results__item">
+                <p class="search-results__title">
+                  <%= document.link %>
+                </p>
+                <p class="search-results__description">
+                  <%= document.stripped_overview %>
+                </p>
+                <p class="search-results__evidence-type">
+                  <%= document.formatted_evidence_type_label %>
+                  <%= render 'shared/evaluation_types', type: "#{document.evidence_type}" %>
+                </p>
+                <p class="search-results__topics">
+                  <%= document.formatted_topics %>
+                </p>
+                <p class="search-results__countries">
+                  <%= document.formatted_countries %>
+                </p>
+                <p class="search-results__year-of-publication">
+                  <%= document.formatted_year_of_publication %>
+                </p>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
       </div>
     </div>
   </div>
