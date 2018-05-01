@@ -5,22 +5,22 @@ body {
 @font-face {
   font-family: "Museo Rounded";
   font-weight: 300;
-  src: url("/assets/museo-rounded_300.ttf") format('truetype');
-  src: url("/assets/museo-rounded_300.woff") format('woff');
+  src: url("fonts/museo-rounded_300.ttf") format('truetype');
+  src: url("fonts/museo-rounded_300.woff") format('woff');
 }
 
 @font-face {
   font-family: "Museo Rounded";
   font-weight: 500;
-  src: url("/assets/museo-rounded_500.ttf") format('truetype');
-  src: url("/assets/museo-rounded_500.woff") format('woff');
+  src: url("fonts/museo-rounded_500.ttf") format('truetype');
+  src: url("fonts/museo-rounded_500.woff") format('woff');
 }
 
 @font-face {
   font-family: "Museo Rounded";
   font-weight: 700;
-  src: url("/assets/museo-rounded_700.ttf") format('truetype');
-  src: url("/assets/museo-rounded_700.woff") format('woff');
+  src: url("fonts/museo-rounded_700.ttf") format('truetype');
+  src: url("fonts/museo-rounded_700.woff") format('woff');
 }
 
 body {
