@@ -1,4 +1,6 @@
 class EvidenceHubController < ApplicationController
+  rescue_from Mas::Cms::Errors::ClientError, with: :render_bad_request
+
   DOCUMENT_TYPES = ['Insight'].freeze
 
   def index
@@ -45,5 +47,12 @@ class EvidenceHubController < ApplicationController
 
   def clear_search?
     params[:reset]
+  end
+
+  def render_bad_request(e)
+    Rails.logger.warn(e)
+
+    @error = { status: 400, message: 'Bad request'}
+    render :index
   end
 end
