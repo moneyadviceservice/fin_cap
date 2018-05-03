@@ -195,4 +195,27 @@ RSpec.describe EvidenceSummary do
       end
     end
   end
+
+  describe '#data_types' do
+    context 'when data_types are present' do
+      let(:blocks) do
+        [
+          { 'identifier' => 'data_types', 'content' => 'qualitative' },
+          { 'identifier' => 'data_types', 'content' => 'quantitative' }
+        ]
+      end
+
+      it 'returns data_types content' do
+        expect(evidence_summary.data_types).to match_array(
+          %w[qualitative quantitative]
+        )
+      end
+    end
+
+    context 'when data_types are not present' do
+      it 'returns empty content' do
+        expect(evidence_summary.data_types).to be_empty
+      end
+    end
+  end
 end

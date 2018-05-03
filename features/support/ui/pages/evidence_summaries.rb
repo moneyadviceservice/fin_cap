@@ -9,6 +9,8 @@ module UI::Pages
       element :topics, '.search-results__topics'
       element :countries, '.search-results__countries'
       element :year_of_publication, '.search-results__year-of-publication'
+      element :qualitative_data_type, '.data-types__qualitative svg'
+      element :quantitative_data_type, '.data-types__quantitative svg'
     end
 
     set_url '{/locale}/evidence_hub'
@@ -21,6 +23,6 @@ module UI::Pages
     element :children_filter, '#evidence_summary_search_form_client_groups_children-3-11'
     element :clear_filters_button, '.sidepanel__clear-filters'
 
-    sections :search_results, SearchResult, '.search-results li'
+    sections :search_results, SearchResult, '.search-results__item'
   end
 end

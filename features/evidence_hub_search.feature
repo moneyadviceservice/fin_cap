@@ -13,6 +13,8 @@ Feature: Evidence Hub Search
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
+    And I should see the Qualitative data type with a "tick"
+    And I should see the Quantitative data type with a "cross"
     And I should see the "second" evidence summary as
       | Field               | Value                                                                              |
       | document title      | Moving forward together: peer support for people with problem debt                 |
@@ -21,6 +23,8 @@ Feature: Evidence Hub Search
       | topics              | Credit Use and Debt                                                                |
       | countries           | England                                                                            |
       | year of publication | 2017                                                                               |
+    And I should see the Qualitative data type with a "cross"
+    And I should see the Quantitative data type with a "cross"
 
   Scenario: Search by keyword
     Given I visit the evidence hub search page
@@ -34,6 +38,8 @@ Feature: Evidence Hub Search
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
+    And I should see the Qualitative data type with a "tick"
+    And I should see the Quantitative data type with a "cross"
 
   Scenario: Search by keyword and filters
     Given I visit the evidence hub search page

@@ -47,6 +47,18 @@ class EvidenceSummaryPresenter < BasePresenter
     "#{year_of_publication_field_name}: #{stripped_year_of_publication}"
   end
 
+  def data_type_keys
+    view.t('fincap.evidence_hub.insight_summary.data_types')
+  end
+
+  def data_type_icon(type)
+    stripped_data_types.include?(type) ? 'tick' : 'cross'
+  end
+
+  def stripped_data_types
+    strip_collection(data_types)
+  end
+
   def stripped_overview
     strip_text(overview)
   end
@@ -74,7 +86,7 @@ class EvidenceSummaryPresenter < BasePresenter
   end
 
   def strip_collection(collection)
-    collection.map { |element| strip_text(element) }
+    collection.map { |element| strip_text(element).strip }
   end
 
   def strip_text(text)

@@ -45,5 +45,15 @@ Then('I should see no filters checked') do
 end
 
 Then('I should see the keyword field cleared') do
-  expect(evidence_summaries_page.keyword.value).to eq("")
+  expect(evidence_summaries_page.keyword.value).to eq('')
+end
+
+Then('I should see the Qualitative data type with a {string}') do |icon_name|
+  icon = evidence_summaries_page.search_results.first.qualitative_data_type
+  expect(icon[:class]).to include("svg-icon--evidence-#{icon_name}")
+end
+
+Then('I should see the Quantitative data type with a {string}') do |icon_name|
+  icon = evidence_summaries_page.search_results.first.quantitative_data_type
+  expect(icon[:class]).to include("svg-icon--evidence-#{icon_name}")
 end

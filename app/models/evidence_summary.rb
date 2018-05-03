@@ -53,6 +53,10 @@ class EvidenceSummary
     find_block(:contact_information)
   end
 
+  def data_types
+    find_blocks(:data_types)
+  end
+
   private
 
   def find_blocks(block_identifier)
