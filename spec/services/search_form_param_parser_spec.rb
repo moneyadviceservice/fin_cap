@@ -6,7 +6,7 @@ RSpec.describe SearchFormParamParser, type: :model do
       let(:params) { { keyword: 'pension' } }
 
       it 'returns the keyword hash' do
-        expect(subject.parse).to eq(keyword: 'pension', blocks: [])
+        expect(subject.parse).to eq(keyword: 'pension')
       end
     end
 
@@ -14,7 +14,7 @@ RSpec.describe SearchFormParamParser, type: :model do
       let(:params) { { keyword: '' } }
 
       it 'returns the keyword hash' do
-        expect(subject.parse).to eq(keyword: '', blocks: [])
+        expect(subject.parse).to eq(keyword: '')
       end
     end
 
@@ -128,7 +128,7 @@ RSpec.describe SearchFormParamParser, type: :model do
 
       context 'set to All years' do
         let(:params) { { keyword: '', filter => 'All years' } }
-        let(:expected_result) { { keyword: '', blocks: [] } }
+        let(:expected_result) { { keyword: '' } }
 
         it 'returns a hash with the keyword hash' do
           expect(subject.parse).to eq(expected_result)

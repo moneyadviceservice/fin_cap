@@ -24,7 +24,11 @@ class SearchFormParamParser
   private
 
   def parse_filters(filters)
-    { blocks: blocks_hash(filters).flatten }
+    blocks = blocks_hash(filters).flatten
+
+    return {} if blocks.blank?
+
+    { blocks: blocks }
   end
 
   def blocks_hash(filters)

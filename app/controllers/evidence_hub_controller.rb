@@ -2,17 +2,27 @@ class EvidenceHubController < ApplicationController
   DOCUMENT_TYPES = ['Insight'].freeze
 
   def index
-    @search_form = EvidenceSummarySearchForm.new(search_params)
-    documents = Mas::Cms::Document.all(params: parse_params)
+    @search_form = EvidenceSummarySearchForm.new(form_params)
+    documents = Mas::Cms::Document.all(params: search_params)
     @evidence_summaries = EvidenceSummary.map(documents)
   end
 
   private
 
-  def search_params
-    {
+  def form_params
+    form_params = {
       document_type: DOCUMENT_TYPES
-    }.merge(form_params)
+    }
+
+    if clear_search?
+      form_params.merge(reset_all_params)
+    else
+      form_params.merge(evidence_summary_search_form_params)
+    end
+  end
+
+  def search_params
+    SearchFormParamParser.parse(form_params)
   end
 
   def evidence_summary_search_form_params
@@ -23,20 +33,6 @@ class EvidenceHubController < ApplicationController
       topics: [],
       countries_of_delivery: []
     )
-  end
-
-  def form_params
-    clear_search? ? reset_all_params : evidence_summary_search_form_params
-  end
-
-  def parse_params
-    return reset_all_params if clear_search?
-
-    if params[:evidence_summary_search_form].blank?
-      {}
-    else
-      SearchFormParamParser.parse(evidence_summary_search_form_params)
-    end
   end
 
   def reset_all_params
