@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/en/documents.json?&keyword=mortgage
+    uri: http://localhost:3000/api/en/documents.json?blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Children+%283+-+11%29&blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Older+people+%2865%2B%29&blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Social+housing+tenants&document_type%5B%5D=Insight&keyword=mortgage
     body:
       encoding: US-ASCII
       string: ''
@@ -10,15 +10,15 @@ http_interactions:
       Authorization:
       - Token token=""
       User-Agent:
-      - Mas-Cms-Client/1.10.0 (Will-Hall-00229.local; willhall; 32567) ruby/2.4.1
-        (111; x86_64-darwin17)
+      - Mas-Cms-Client/1.11.0 (Tomas-Destefi-00119.local; tomasdestefi; 30187) ruby/2.4.1
+        (111; x86_64-darwin16)
   response:
     status:
       code: 200
       message: 
     headers:
       date:
-      - Fri, 13 Apr 2018 12:58:14 GMT
+      - Thu, 03 May 2018 15:20:50 GMT
       status:
       - 200 OK
       connection:
@@ -36,12 +36,12 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 7f82f748-54fa-4a54-9759-e82c25ff91df
+      - 0f8588a6-e157-4867-9b18-440a730fed2d
       x-runtime:
-      - '0.111565'
+      - '0.041690'
     body:
       encoding: UTF-8
       string: '{"documents":[],"meta":{"results":0}}'
     http_version: 
-  recorded_at: Fri, 13 Apr 2018 12:58:14 GMT
+  recorded_at: Thu, 03 May 2018 15:20:50 GMT
 recorded_with: VCR 4.0.0
