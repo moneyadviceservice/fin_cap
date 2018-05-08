@@ -229,7 +229,11 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
     if (!this.atSmallViewport) {
       this.$navLevel_3.removeClass(this.activeClass);
       this.$navLevel_1_item.removeClass(this.activeClass);
-      $(index).parent('[data-nav-level-1-item]').addClass(this.activeClass);
+      $(index).parent('[data-nav-level-1-item]')
+        .addClass(this.activeClass)
+        .find('[data-nav-level-2-subcategory-heading], [data-nav-level-2-subcategory-link], [data-nav-level-2-extended-heading]').attr('tabindex', 0);
+      $(index).attr('aria-expanded', 'true');
+      $(index).parent().siblings().find('[data-nav-level-1-heading]').attr('aria-expanded', 'false');
     }
   };
 
@@ -238,17 +242,29 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
    */
   Nav.prototype._closeDesktopLevel2 = function() {
     this.$navLevel_3.removeClass(this.activeClass);
-    this.$navLevel_1_item.removeClass(this.activeClass);
+    this.$navLevel_1_item
+      .removeClass(this.activeClass)
+      .find('[data-nav-level-2-subcategory-heading], [data-nav-level-2-subcategory-link], [data-nav-level-2-extended-heading]').attr('tabindex', -1);
+    this.$navLevel_1_Heading.attr('aria-expanded', 'false');
+    this.$navLevel_2_Extended_Heading.attr('aria-expanded', 'false');
   };
 
   /**
    * Opens level 3 on desktop and sets active class on triggering item
    */
   Nav.prototype._openDesktopLevel3 = function(index) {
-    $(index).addClass(this.activeClass);
-    $(index).parents().siblings().find('[data-nav-level-2-extended-heading]').removeClass(this.activeClass);
-    this.$navLevel_3.removeClass(this.activeClass);
-    $(index).siblings('[data-nav-level-3]').addClass(this.activeClass);
+    $(index)
+      .addClass(this.activeClass)
+      .attr('aria-expanded', true);
+    $(index).parent().siblings().find('[data-nav-level-2-extended-heading]')
+      .removeClass(this.activeClass)
+      .attr('aria-expanded', false);
+    this.$navLevel_3
+      .removeClass(this.activeClass)
+      .find('[data-nav-level-3-link]').attr('tabindex', -1);
+    $(index).siblings('[data-nav-level-3]')
+      .addClass(this.activeClass)
+      .find('[data-nav-level-3-link]').attr('tabindex', 0);
   };
 
   /**

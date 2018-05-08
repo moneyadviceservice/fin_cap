@@ -296,7 +296,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: $baseline-unit * 2;
 
   @include respond-to($mq-m) {
     font-size: 1rem;
@@ -310,6 +309,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.nav__level-2__subcategory__heading {
+  color: $primary-orange;
 }
 
 /* FlexBox compliant -- */
