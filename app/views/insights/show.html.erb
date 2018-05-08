@@ -9,6 +9,7 @@
       <div class="l-2col">
         <div class="l-2col-main">
           <h1 class="evidence-hub__title"><%= evidence_summary.title %></h1>
+          <%= render 'shared/data_types', presenter: evidence_summary %>
           <div class="evidence-hub__content">
             <%= evidence_summary.content.html_safe %>
           </div>

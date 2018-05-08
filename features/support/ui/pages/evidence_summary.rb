@@ -11,6 +11,8 @@ module UI
       element :country, '.evidence-hub__country'
       element :contact_information, '.evidence-hub__contact_information'
       element :links, '.evidence-hub__links'
+      element :qualitative, '.data-types__qualitative svg'
+      element :quantitative, '.data-types__quantitative svg'
     end
   end
 end
