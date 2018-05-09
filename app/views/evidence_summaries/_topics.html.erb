@@ -1,0 +1,15 @@
+<div class="evidence-hub__topics">
+  <h5 class="sidepanel__subtitle">
+    <%= evidence_summary.topics_field_name %>
+  </h5>
+  <ul class="sidepanel__list">
+    <% evidence_summary.stripped_topics.each do |topic| %>
+      <li class="sidepanel__list-item">
+        <%= link_to topic,
+            '#',
+            class: 'sidepanel__list-item-link'
+        %>
+      </li>
+    <% end %>
+  </ul>
+</div>

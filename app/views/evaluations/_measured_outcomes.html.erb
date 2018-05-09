@@ -1,0 +1,15 @@
+<div class="evidence-hub__measured_outcomes">
+  <h5 class="sidepanel__subtitle">
+    <%= evidence_summary.measured_outcomes_field_name %>
+  </h5>
+  <ul class="sidepanel__list">
+    <% evidence_summary.stripped_measured_outcomes.each do |measured_outcome| %>
+      <li class="sidepanel__list-item">
+        <%= link_to measured_outcome,
+            '#',
+            class: 'sidepanel__list-item-link'
+        %>
+      </li>
+    <% end %>
+  </ul>
+</div>

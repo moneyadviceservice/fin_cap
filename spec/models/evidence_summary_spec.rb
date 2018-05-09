@@ -132,6 +132,52 @@ RSpec.describe EvidenceSummary do
     end
   end
 
+  describe '#activities_and_setting' do
+    context 'when node is present' do
+      let(:blocks) do
+        [
+          {
+            'identifier' => 'activities_and_setting',
+            'content' => 'some content'
+          }
+        ]
+      end
+
+      it 'returns content' do
+        expect(evidence_summary.activities_and_setting).to eq('some content')
+      end
+    end
+
+    context 'when node is not present' do
+      it 'returns empty content' do
+        expect(evidence_summary.activities_and_setting).to eq('')
+      end
+    end
+  end
+
+  describe '#programme_delivery' do
+    context 'when node is present' do
+      let(:blocks) do
+        [
+          {
+            'identifier' => 'programme_delivery',
+            'content' => 'Some company'
+          }
+        ]
+      end
+
+      it 'returns content' do
+        expect(evidence_summary.programme_delivery).to eq('Some company')
+      end
+    end
+
+    context 'when node is not present' do
+      it 'returns empty content' do
+        expect(evidence_summary.programme_delivery).to eq('')
+      end
+    end
+  end
+
   describe '#countries' do
     context 'when countries are present' do
       let(:blocks) do
@@ -171,6 +217,27 @@ RSpec.describe EvidenceSummary do
     context 'when client groups are not present' do
       it 'returns empty content' do
         expect(evidence_summary.client_group).to be_empty
+      end
+    end
+  end
+
+  describe '#measured_outcomes' do
+    context 'when nodes are present' do
+      let(:blocks) do
+        [
+          { 'identifier' => 'measured_outcomes', 'content' => '1' },
+          { 'identifier' => 'measured_outcomes', 'content' => '2' }
+        ]
+      end
+
+      it 'returns all content' do
+        expect(evidence_summary.measured_outcomes).to match_array(['1', '2'])
+      end
+    end
+
+    context 'when nodes are not present' do
+      it 'returns empty content' do
+        expect(evidence_summary.measured_outcomes).to be_empty
       end
     end
   end

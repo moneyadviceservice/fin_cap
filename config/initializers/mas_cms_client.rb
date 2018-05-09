@@ -9,3 +9,6 @@ end
 
 class Mas::Cms::Insight < Mas::Cms::Document
 end
+
+class Mas::Cms::Evaluation < Mas::Cms::Document
+end
