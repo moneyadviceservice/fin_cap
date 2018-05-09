@@ -231,7 +231,7 @@ RSpec.describe EvidenceSummary do
       end
 
       it 'returns all content' do
-        expect(evidence_summary.measured_outcomes).to match_array(['1', '2'])
+        expect(evidence_summary.measured_outcomes).to match_array(%w[1 2])
       end
     end
 
