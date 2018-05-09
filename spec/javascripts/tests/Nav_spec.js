@@ -43,7 +43,8 @@ describe('Nav', function() {
           setUpMobileAnimationStub = sinon.stub(this.obj, "_setUpMobileAnimation"),
           setUpMobileInteractionStub = sinon.stub(this.obj, "_setUpMobileInteraction"),
           setUpDesktopMouseInteractionStub = sinon.stub(this.obj, "_setUpDesktopMouseInteraction"),
-          setUpDesktopTouchInteractionStub = sinon.stub(this.obj, "_setUpDesktopTouchInteraction");
+          setUpDesktopTouchInteractionStub = sinon.stub(this.obj, "_setUpDesktopTouchInteraction"),
+          setUpDesktopKeyboardInteractionStub = sinon.stub(this.obj, "_setUpDesktopKeyboardInteraction");
 
       this.obj.init();
 
@@ -53,6 +54,7 @@ describe('Nav', function() {
       expect(setUpMobileInteractionStub.callCount).to.be.equal(1);
       expect(setUpDesktopMouseInteractionStub.callCount).to.be.equal(1);
       expect(setUpDesktopTouchInteractionStub.callCount).to.be.equal(1);
+      expect(setUpDesktopKeyboardInteractionStub.callCount).to.be.equal(1);
     });
   });
 

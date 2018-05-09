@@ -21,6 +21,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
     this.$navLevel_1_Heading = this.$nav.find('[data-nav-level-1-heading]');
     this.$navLevel_2 = this.$nav.find('[data-nav-level-2]');
     this.$navLevel_2_Heading = this.$nav.find('[data-nav-level-2-heading]');
+    this.$navLevel_2_Links = this.$nav.find('[data-nav-level-2-subcategory-heading], [data-nav-level-2-extended-heading], [data-nav-level-2-subcategory-link]');
     this.$navLevel_2_Extended_Heading = this.$nav.find('[data-nav-level-2-extended-heading]');
     this.$navLevel_3 = this.$nav.find('[data-nav-level-3]');
     this.$navLevel_3_Heading = this.$nav.find('[data-nav-level-3-heading]');
@@ -46,7 +47,205 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
     this._setUpMobileInteraction();
     this._setUpDesktopMouseInteraction();
     this._setUpDesktopTouchInteraction();
+    this._setUpDesktopKeyboardInteraction();
   };
+
+  /**
+  * Set up keyboard interaction for nav on desktop
+  */
+  Nav.prototype._setUpDesktopKeyboardInteraction = function() {
+    var self = this;
+
+    this.$nav.keyup(function(e) {
+      var index = e.target;
+
+      switch (e.which) {
+        // right arrow moves user across links
+        case 39:
+          // if on Level 1 --
+          if ($(index).data('nav-level-1-heading') == '') {
+            // -- if on last element wrap to first
+            if ($(index).parents('[data-nav-level-1-item]')[0] === self.$navLevel_1_item[self.$navLevel_1_item.length - 1]) {
+              $(index)
+                .blur()
+                .parents('[data-nav-level-1-item]').siblings().first().children('[data-nav-level-1-heading]').focus();
+            // -- else move to next
+            } else {
+              $(index)
+                .blur()
+                .parents('[data-nav-level-1-item]').next().children('[data-nav-level-1-heading]').focus();
+            }
+          // if on Level 2 --
+          } else {
+            //  -- move into level 3 if present
+            if ($(index).siblings().data('nav-level-3') === '') {
+              var $navLevel3Links = $(index).siblings('[data-nav-level-3]').find('[data-nav-level-3-link]');
+
+              $navLevel3Links.attr('tabindex', 0);
+              $navLevel3Links.get(0).focus();
+            //  -- move back to level 1
+            } else {
+              if ($(index).parents('[data-nav-level-1-item]').next().data('nav-level-1-item') === '') {
+                $(index).parents('[data-nav-level-1-item]').next().find('[data-nav-level-1-heading]').focus();
+              } else {
+                $(self.$navLevel_1_item[0]).find('[data-nav-level-1-heading]').get(0).focus();
+              }
+
+              self._closeDesktopLevel2();
+            }
+          }
+          break;
+
+        // left arrow moves user across links
+        case 37:
+          // if on Level 1
+          if ($(index).data('nav-level-1-heading') == '') {
+            // If on first element wrap to last
+            if ($(index).parents('[data-nav-level-1-item]')[0] === self.$navLevel_1_item[0]) {
+              $(index)
+                .blur()
+                .parents('[data-nav-level-1-item]').siblings('[data-nav-level-1-item]').last().children('[data-nav-level-1-heading]').focus();
+            // else move to previous
+            } else {
+              $(index)
+                .blur()
+                .parents('[data-nav-level-1-item]').prev().children('[data-nav-level-1-heading]').focus();
+            }
+          // if on Level 2
+          } else {
+            if ($(index).parents('[data-nav-level-1-item]').prev().data('nav-level-1-item') === '') {
+              $(index).parents('[data-nav-level-1-item]').prev().find('[data-nav-level-1-heading]').focus();
+            } else {
+              $(self.$navLevel_1_item[self.$navLevel_1_item.length - 1]).find('[data-nav-level-1-heading]').get(0).focus();
+            }
+
+            self._closeDesktopLevel2();
+          }
+          break;
+
+        // enter key activates Level 1
+        case 13:
+          self._openDesktopLevel2(index)
+          break;
+
+        // spacebar key activates Level 1
+        case 32:
+          self._openDesktopLevel2(index)
+          break;
+
+        // down arrow key --
+        case 40:
+          // if on Level 1
+          if ($(index).data('nav-level-1-heading') == '') {
+            // -- moves focus into Level 2 if Level 1 is open
+            if ($(index).parents('[data-nav-level-1-item]').hasClass(self.activeClass)) {
+              var heading =
+                $(index).siblings('[data-nav-level-2]').find('[data-nav-level-2-subcategory-heading]').get(0) ||
+                $(index).siblings('[data-nav-level-2-extended]').find('[data-nav-level-2-extended-heading]').get(0);
+
+                $(heading).focus();
+
+                // -- activates Level 3 if present
+                if ($(heading).siblings('[data-nav-level-3]').length > 0) {
+                  self._openDesktopLevel3(heading);
+                }
+            // -- activates Level 1 if Level 1 is not open
+            } else {
+              self._openDesktopLevel2(index);
+            }
+          // if on Level 2
+          } else if ($(index).data('nav-level-2-subcategory-heading') == '' || $(index).data('nav-level-2-subcategory-link') == '' || $(index).data('nav-level-2-extended-heading') == '') {
+            var thisLink = self.$navLevel_2_Links.index(index);
+            var thisLinkParent = $(self.$navLevel_2_Links[thisLink]).parents('[data-nav-level-2], [data-nav-level-2-extended]')[0];
+            var nextLinkParent = $(self.$navLevel_2_Links[thisLink + 1]).parents('[data-nav-level-2], [data-nav-level-2-extended]')[0];
+
+            // -- moves user through level 2
+            if (thisLinkParent === nextLinkParent) {
+              $(self.$navLevel_2_Links).get(thisLink + 1).focus();
+
+              if($(thisLinkParent).data('nav-level-2-extended') == '') {
+                self._openDesktopLevel3(self.$navLevel_2_Links[thisLink + 1]);
+              }
+            // -- moves user back to start of level 2
+            } else {
+              $(thisLinkParent).find('[data-nav-level-2-subcategory-heading], [data-nav-level-2-extended-heading], [data-nav-level-2-subcategory-link]').first().focus();
+
+              if($(thisLinkParent).data('nav-level-2-extended') == '') {
+                self._openDesktopLevel3(self.$navLevel_2_Extended_Heading[0]);
+              }
+            }
+          } else {
+            var links = $(index).parents('[data-nav-level-3]').find('[data-nav-level-3-link]');
+            var thisLinkIndex = $(links).index(index);
+
+            if (thisLinkIndex == links.length - 1) {
+              $(links).get(0).focus();
+            } else {
+              $(links).get(thisLinkIndex + 1).focus();
+            }
+          }
+          break;
+
+        // up arrow key --
+        case 38:
+          // if on Level 2
+          if ($(index).data('nav-level-2-subcategory-heading') == '' || $(index).data('nav-level-2-subcategory-link') == '' || $(index).data('nav-level-2-extended-heading') == '') {
+            var thisLink = self.$navLevel_2_Links.index(index);
+            var thisLinkParent = $(self.$navLevel_2_Links[thisLink]).parents('[data-nav-level-2], [data-nav-level-2-extended]')[0];
+            var prevLinkParent = $(self.$navLevel_2_Links[thisLink - 1]).parents('[data-nav-level-2], [data-nav-level-2-extended]')[0];
+
+            // -- moves user through level 2
+            if (thisLinkParent === prevLinkParent) {
+              $(self.$navLevel_2_Links).get(thisLink - 1).focus();
+
+              if($(thisLinkParent).data('nav-level-2-extended') == '') {
+                self._openDesktopLevel3(self.$navLevel_2_Links[thisLink - 1]);
+              }
+            // -- moves user back to end of level 2
+            } else {
+              $(thisLinkParent).find('[data-nav-level-2-subcategory-heading], [data-nav-level-2-extended-heading], [data-nav-level-2-subcategory-link]').last().focus();
+
+              if($(thisLinkParent).data('nav-level-2-extended') == '') {
+                self._openDesktopLevel3($(thisLinkParent).find('[data-nav-level-2-extended-heading]').last());
+              }
+            }
+          // if on Level 3
+          } else {
+            var links = $(index).parents('[data-nav-level-3]').find('[data-nav-level-3-link]');
+            var thisLinkIndex = $(links).index(index);
+
+            if (thisLinkIndex == 0) {
+              $(links).get(links.length - 1).focus();
+            } else {
+              $(links).get(thisLinkIndex - 1).focus();
+            }
+          }
+          break;
+
+        // tab key --
+        case 9:
+          // -- activates level 3 when moving through extended level 2
+          if ($(index).data('nav-level-2-extended-heading') === '') {
+            self._openDesktopLevel3(index);
+          // -- closes level 2 when returning user to level 1
+          } else if($(document.activeElement).data('nav-level-1-heading') === '') {
+            self._closeDesktopLevel2();
+          }
+
+          break;
+
+        // escape key closes active level 2 items
+        case 27:
+          self.$navLevel_1_item.each(function() {
+            if ($(this).hasClass(self.activeClass)) {
+              self._closeDesktopLevel2();
+              $(this).find('[data-nav-level-1-heading]').focus();
+            }
+          });
+          break;
+      }
+    });
+  }
 
   /**
    * Set up component
@@ -229,6 +428,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
     if (!this.atSmallViewport) {
       this.$navLevel_3.removeClass(this.activeClass);
       this.$navLevel_1_item.removeClass(this.activeClass);
+      $(index).parent('[data-nav-level-1-item]').addClass(this.activeClass);
       $(index).parent('[data-nav-level-1-item]')
         .addClass(this.activeClass)
         .find('[data-nav-level-2-subcategory-heading], [data-nav-level-2-subcategory-link], [data-nav-level-2-extended-heading]').attr('tabindex', 0);
@@ -242,6 +442,7 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
    */
   Nav.prototype._closeDesktopLevel2 = function() {
     this.$navLevel_3.removeClass(this.activeClass);
+    this.$navLevel_1_item.removeClass(this.activeClass);
     this.$navLevel_1_item
       .removeClass(this.activeClass)
       .find('[data-nav-level-2-subcategory-heading], [data-nav-level-2-subcategory-link], [data-nav-level-2-extended-heading]').attr('tabindex', -1);
@@ -265,6 +466,8 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
     $(index).siblings('[data-nav-level-3]')
       .addClass(this.activeClass)
       .find('[data-nav-level-3-link]').attr('tabindex', 0);
+    this.$navLevel_3.removeClass(this.activeClass);
+    $(index).siblings('[data-nav-level-3]').addClass(this.activeClass);
   };
 
   /**
