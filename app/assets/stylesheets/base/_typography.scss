@@ -45,7 +45,8 @@ a {
   }
 
   &[href^="http:"]:not([href*="#{$site}"]):after,
-  &[href^="https:"]:not([href*="#{$site}"]):after {
+  &[href^="https:"]:not([href*="#{$site}"]):after,
+  .evidence-types__item &:after {
     @extend %icon;
     @extend .icon--external-link;
     content: '';
