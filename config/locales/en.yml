@@ -88,3 +88,6 @@ en:
     evidence_hub:
       insight_summary:
         name: 'Insight'
+        data_types:
+          - Qualitative
+          - Quantitative

@@ -186,4 +186,44 @@ RSpec.describe EvidenceSummaryPresenter do
       )
     end
   end
+
+  describe '#data_type_keys' do
+    it 'returns an array of the different data_types' do
+      expect(presenter.data_type_keys).to match_array(
+        %w[Qualitative Quantitative]
+      )
+    end
+  end
+
+  describe '#data_type_icon' do
+    let(:attributes) do
+      { data_types: %w[qualitative] }
+    end
+
+    context 'when the data type is present' do
+      it 'returns "tick"' do
+        expect(presenter.data_type_icon('qualitative')).to eq('tick')
+      end
+    end
+
+    context 'when the data type is absent' do
+      it 'returns "cross"' do
+        expect(presenter.data_type_icon('quantitative')).to eq('cross')
+      end
+    end
+  end
+
+  describe '#stripped_data_types' do
+    let(:attributes) do
+      {
+        data_types: ["<p>Qualitative</p>\n"]
+      }
+    end
+
+    it 'strips all html tags from year of publication' do
+      expect(presenter.stripped_data_types).to eq(
+        ['Qualitative']
+      )
+    end
+  end
 end

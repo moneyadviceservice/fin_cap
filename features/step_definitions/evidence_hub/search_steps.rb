@@ -6,17 +6,17 @@ Given('I search based on some filters') do
   evidence_summaries_page.older_people_filter.set(true)
   evidence_summaries_page.social_housing_tenants_filter.set(true)
   evidence_summaries_page.children_filter.set(true)
-  step %{I press search}
+  step %(I press search)
 end
 
 When('I search the evidence hub with a keyword {string}') do |keyword|
   evidence_summaries_page.keyword.set(keyword)
-  step %{I press search}
+  step %(I press search)
 end
 
 When('I filter the search for the topic Saving') do
   evidence_summaries_page.saving_filter.set(true)
-  step %{I press search}
+  step %(I press search)
 end
 
 When('I press search') do
@@ -29,6 +29,20 @@ end
 
 Then('I should see {string} evidence summary') do |records_size|
   expect(evidence_summaries_page.search_results.size).to be(records_size.to_i)
+end
+
+Then(
+  'I should see the {string} evidence summary with data types as'
+) do |result_number, table|
+  search_result = evidence_summaries_page.search_results.send(result_number)
+
+  table.rows.each do |row|
+    data_type_element = search_result.send(row[0])
+    data_type_element_class = data_type_element['class']
+    icon_class_value = data_type_element_class[/tick|cross/]
+
+    expect(icon_class_value).to eq(row[1])
+  end
 end
 
 Then('I should see the {string} evidence summary as') do |result_number, table|
@@ -45,5 +59,5 @@ Then('I should see no filters checked') do
 end
 
 Then('I should see the keyword field cleared') do
-  expect(evidence_summaries_page.keyword.value).to eq("")
+  expect(evidence_summaries_page.keyword.value).to eq('')
 end

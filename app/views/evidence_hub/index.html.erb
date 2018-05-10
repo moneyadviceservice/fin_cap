@@ -39,10 +39,19 @@
               <p class="search-results__description">
                 <%= document.stripped_overview %>
               </p>
-              <p class="search-results__evidence-type">
+              <div class="search-results__evidence-type">
                 <%= document.formatted_evidence_type_label %>
                 <%= render 'shared/evaluation_types', type: "#{document.evidence_type}" %>
-              </p>
+              </div>
+              <div class="search-results__data-type">
+                <ul class="evidence-types">
+                  <% document.data_type_keys.each do |data_type| %>
+                    <li class="evidence-types__item data-types__<%= "#{data_type.downcase}" %>">
+                      <%= render 'shared/evidence_types', icon: document.data_type_icon(data_type), text: data_type %>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
               <p class="search-results__topics">
                 <%= document.formatted_topics %>
               </p>
