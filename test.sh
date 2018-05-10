@@ -10,7 +10,7 @@ bundle install
 npm install
 bundle exec bowndler update
 bundle exec rake db:drop db:create db:schema:load db:migrate
-bundle exec rake
-bundle exec brakeman -q --no-pager --ensure-latest
 bundle exec rubocop .
+bundle exec brakeman -q --no-pager --ensure-latest
+bundle exec rake
 ./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js

@@ -31,20 +31,17 @@ Then('I should see {string} evidence summary') do |records_size|
   expect(evidence_summaries_page.search_results.size).to be(records_size.to_i)
 end
 
-Then('I should see the {string} evidence summary with data types as') do |result_number, table|
+Then(
+  'I should see the {string} evidence summary with data types as'
+) do |result_number, table|
   search_result = evidence_summaries_page.search_results.send(result_number)
 
-  icon_classes = {
-    'tick' => 'evidence-types__item-icon--tick',
-    'cross' => 'evidence-types__item-icon--cross'
-  }
-
   table.rows.each do |row|
-    field_name = row[0]
-    icon = row[1]
-    data_type_field = search_result.send(field_name)
+    data_type_element = search_result.send(row[0])
+    data_type_element_class = data_type_element['class']
+    icon_class_value = data_type_element_class[/tick|cross/]
 
-    expect(data_type_field['class']).to include(icon_classes[icon])
+    expect(icon_class_value).to eq(row[1])
   end
 end
 
