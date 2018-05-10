@@ -1,0 +1,15 @@
+<div class='sidepanel'>
+  <h4 class="sidepanel__title">
+    <%= I18n.t('fincap.evidence_hub.key_info') %>
+  </h4>
+
+  <%= render 'key_info', evidence_summary: evidence_summary %>
+</div>
+
+<div class="sidepanel">
+  <%= render 'links_to_research', evidence_summary: evidence_summary %>
+</div>
+
+<div class="sidepanel">
+  <%= render 'contact_information', evidence_summary: evidence_summary %>
+</div>

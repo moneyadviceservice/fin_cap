@@ -29,12 +29,24 @@ class EvidenceSummary
     find_blocks(:topics)
   end
 
+  def measured_outcomes
+    find_blocks(:measured_outcomes)
+  end
+
+  def programme_delivery
+    find_block(:programme_delivery)
+  end
+
   def evidence_type
     layout_identifier.to_s.capitalize
   end
 
   def overview
     find_block(:overview)
+  end
+
+  def activities_and_setting
+    find_block(:activities_and_setting)
   end
 
   def countries

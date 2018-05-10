@@ -132,6 +132,18 @@ RSpec.describe EvidenceSummaryPresenter do
     end
   end
 
+  describe '#stripped_programme_delivery' do
+    let(:attributes) do
+      {
+        programme_delivery: '<p>Some company</p>'
+      }
+    end
+
+    it 'strips all html tags from attribute' do
+      expect(presenter.stripped_programme_delivery).to eq('Some company')
+    end
+  end
+
   describe '#stripped_client_group' do
     let(:attributes) do
       {
@@ -145,6 +157,24 @@ RSpec.describe EvidenceSummaryPresenter do
       )
     end
   end
+
+  describe '#stripped_measured_outcomes' do
+    let(:attributes) do
+      {
+        measured_outcomes: [
+          '<p>Financial capability (Mindset)</p>',
+          '<p>Financial capability (Ability)</p>'
+        ]
+      }
+    end
+
+    it 'strips all html tags from attribute' do
+      expect(presenter.stripped_measured_outcomes).to eq(
+        ['Financial capability (Mindset)', 'Financial capability (Ability)']
+      )
+    end
+  end
+
   describe '#stripped_topics' do
     let(:attributes) do
       {
@@ -169,6 +199,20 @@ RSpec.describe EvidenceSummaryPresenter do
     it 'strips all html tags from countries' do
       expect(presenter.stripped_countries).to eq(
         'United Kingdom'
+      )
+    end
+  end
+
+  describe '#stripped_activities_and_setting' do
+    let(:attributes) do
+      {
+        activities_and_setting: '<p>some content</p>'
+      }
+    end
+
+    it 'strips all html tags from attribute' do
+      expect(presenter.stripped_activities_and_setting).to eq(
+        'some content'
       )
     end
   end

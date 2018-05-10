@@ -9,6 +9,9 @@ en:
         client_group: 'Client group'
         contact_information: 'Contact information'
         links_to_research: 'Links to further information'
+        activities_and_setting: 'Activities and setting'
+        measured_outcomes: 'Measured outcomes'
+        programme_delivery: 'Programme delivered by'
       evidence_summary_search_form:
         keyword: 'keyword'
         year_of_publication:
@@ -87,7 +90,9 @@ en:
         url: '#'
     evidence_hub:
       insight_summary:
-        name: 'Insight'
         data_types:
           - Qualitative
           - Quantitative
+      key_info: 'Key info'
+      insight_summary_name: 'Insight'
+      evaluation_summary_name: 'Evaluation'

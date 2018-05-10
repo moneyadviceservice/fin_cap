@@ -15,12 +15,24 @@ class EvidenceSummaryPresenter < BasePresenter
     translate_field(:countries)
   end
 
+  def programme_delivery_field_name
+    translate_field(:programme_delivery)
+  end
+
   def year_of_publication_field_name
     translate_field(:year_of_publication)
   end
 
   def client_group_field_name
     translate_field(:client_group)
+  end
+
+  def activities_and_setting_field_name
+    translate_field(:activities_and_setting)
+  end
+
+  def measured_outcomes_field_name
+    translate_field(:measured_outcomes)
   end
 
   def formatted_evidence_type_label
@@ -59,8 +71,20 @@ class EvidenceSummaryPresenter < BasePresenter
     strip_collection(data_types)
   end
 
+  def stripped_activities_and_setting
+    strip_text(activities_and_setting)
+  end
+
   def stripped_overview
     strip_text(overview)
+  end
+
+  def stripped_measured_outcomes
+    strip_collection(measured_outcomes)
+  end
+
+  def stripped_programme_delivery
+    strip_text(programme_delivery)
   end
 
   def stripped_client_group

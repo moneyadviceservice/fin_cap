@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/en/documents.json?blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Children+%283+-+11%29&blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Older+people+%2865%2B%29&blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Social+housing+tenants&document_type%5B%5D=Insight&keyword=
+    uri: http://localhost:3000/api/en/documents.json?blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Children+%283+-+11%29&blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Older+people+%2865%2B%29&blocks%5B%5D%5Bidentifier%5D=client_groups&blocks%5B%5D%5Bvalue%5D=Social+housing+tenants&document_type%5B%5D=Insight&document_type%5B%5D=Evaluation&keyword=mortgage
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token=""
       User-Agent:
-      - Mas-Cms-Client/1.11.0 (Margo-Urey-00241.local; margourey; 46912) ruby/2.4.2
+      - Mas-Cms-Client/1.11.0 (Tomas-Destefi-00119.local; tomasdestefi; 31082) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Tue, 08 May 2018 11:38:24 GMT
+      - Thu, 10 May 2018 09:53:29 GMT
       status:
       - 200 OK
       connection:
@@ -36,12 +36,12 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - ef266cb8-8528-4c51-b23c-ff6150d069a2
+      - 29dd97b9-7e13-4fd0-9241-ccb86dcb1c4f
       x-runtime:
-      - '0.040645'
+      - '0.042023'
     body:
       encoding: UTF-8
       string: '{"documents":[],"meta":{"results":0}}'
     http_version: 
-  recorded_at: Tue, 08 May 2018 11:38:24 GMT
+  recorded_at: Thu, 10 May 2018 09:53:29 GMT
 recorded_with: VCR 4.0.0

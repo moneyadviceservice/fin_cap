@@ -1,0 +1,15 @@
+<div class="evidence-hub__client_groups">
+  <h5 class="sidepanel__subtitle">
+    <%= evidence_summary.client_group_field_name %>
+  </h5>
+  <ul class="sidepanel__list">
+    <% evidence_summary.stripped_client_group.each do |client_group| %>
+      <li class="sidepanel__list-item">
+        <%= link_to client_group,
+            '#',
+            class: 'sidepanel__list-item-link'
+        %>
+      </li>
+    <% end %>
+  </ul>
+</div>

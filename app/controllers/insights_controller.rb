@@ -1,6 +1,5 @@
-class InsightsController < ApplicationController
-  def show
-    document = Mas::Cms::Insight.find(params[:id])
-    @evidence_summary = EvidenceSummary.new(document)
+class InsightsController < EvidenceSummariesController
+  def resource
+    Mas::Cms::Insight.find(params[:id])
   end
 end

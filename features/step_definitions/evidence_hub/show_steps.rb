@@ -1,5 +1,8 @@
-Given('I entered into the Insight page {string}') do |title|
-  evidence_summary_page.load(page_type: 'insights', slug: title.parameterize)
+Given('I entered into the {string} page {string}') do |page_type, title|
+  evidence_summary_page.load(
+    page_type: page_type.parameterize.pluralize,
+    slug: title.parameterize
+  )
 end
 
 Then('I should see the evidence summary content') do |table|
