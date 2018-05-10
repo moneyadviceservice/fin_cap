@@ -11,6 +11,11 @@ module UI::Pages
       element :year_of_publication, '.search-results__year-of-publication'
       element :qualitative, '.data-types__qualitative svg'
       element :quantitative, '.data-types__quantitative svg'
+      element :programme_theory, '.data-types__programme-theory svg'
+      element :measured_outcomes, '.data-types__measured-outcomes svg'
+      element :causality, '.data-types__causality svg'
+      element :process_evaluation, '.data-types__process-evaluation svg'
+      element :value_for_money, '.data-types__value-for-money svg'
     end
 
     set_url '{/locale}/evidence_hub'

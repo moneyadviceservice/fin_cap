@@ -16,3 +16,7 @@ Feature: Evidence Hub: Insight Summary page
       | Country             | United Kingdom                                           |
       | Contact information | MASPD (in partnership with Company S.A)                  |
       | Links               | Financial well-being: the employee view - full report    |
+    And I should see the evidence summary data_types
+      | Field        | Content |
+      | qualitative  | tick    |
+      | quantitative | cross   |

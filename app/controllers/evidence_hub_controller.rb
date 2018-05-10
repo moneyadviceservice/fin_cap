@@ -1,4 +1,4 @@
-class EvidenceHubController < ApplicationController
+class EvidenceHubController < EvidenceSummariesController
   DOCUMENT_TYPES = %w[Insight Evaluation].freeze
 
   def index

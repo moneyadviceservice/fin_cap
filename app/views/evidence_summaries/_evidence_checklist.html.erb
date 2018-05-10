@@ -1,0 +1,9 @@
+<ul class="evidence-types">
+  <% evidence_summary.data_type_keys.each do |data_type| %>
+    <li class="evidence-types__item data-types__<%= "#{data_type.parameterize}" %>">
+      <%= render 'shared/evidence_types',
+                 icon: evidence_summary.data_type_icon(data_type),
+                 text: data_type %>
+    </li>
+  <% end %>
+</ul>

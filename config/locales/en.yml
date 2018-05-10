@@ -93,6 +93,13 @@ en:
         data_types:
           - Qualitative
           - Quantitative
+      evaluation_summary:
+        data_types:
+          - Programme Theory
+          - Measured Outcomes
+          - Causality
+          - Process Evaluation
+          - Value for money
       key_info: 'Key info'
       insight_summary_name: 'Insight'
       evaluation_summary_name: 'Evaluation'
