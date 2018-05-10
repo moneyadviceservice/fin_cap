@@ -4,6 +4,7 @@
 //= depend_on_asset dough/assets/js/lib/featureDetect
 //= depend_on_asset components/Nav
 //= depend_on_asset components/Tooltip
+//= depend_on_asset components/Header
 
 <%
   def requirejs_path(asset)
@@ -22,6 +23,7 @@
       # Components
       Nav: requirejs_path('components/Nav'),
       Tooltip: requirejs_path('components/Tooltip')
+      Header: requirejs_path('components/Header')
     }
   }
 

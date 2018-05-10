@@ -1,5 +1,4 @@
 // nav global variables
-$nav-transition-duration: 300ms;
 $nav-transition-ease: ease-out;
 $max-cols: 4; // the maximum number of categories in the subnav
 $num-elements: 5; // the number of top level links
@@ -43,7 +42,7 @@ $chevron-ratio: 1.5;
   }
   // -- temporarily over-ride the external link icon
 
-  transition: transform $nav-transition-duration $nav-transition-ease;
+  transition: transform $speed-transition $nav-transition-ease;
   position: fixed;
   overflow-x: hidden;
   z-index: 10;
@@ -51,6 +50,11 @@ $chevron-ratio: 1.5;
   transform: translateX(-100%);
   background: $grey-lighter;
   height: 100%;
+  top: 87px;
+  left: 0;
+  @include respond-to($mq-m) {
+    top: 0;
+  }
 
   &.no-transition {
     transition: none;
@@ -78,7 +82,7 @@ $chevron-ratio: 1.5;
 
 .nav__level-1 {
   box-sizing: border-box;
-  transition: transform $nav-transition-duration $nav-transition-ease;
+  transition: transform $speed-transition $nav-transition-ease;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -179,6 +183,7 @@ $chevron-ratio: 1.5;
 .nav__search-bar {
   background: none;
   display: none;
+  max-width: 196px;
 
   input {
     padding-top: $baseline-unit / 2;

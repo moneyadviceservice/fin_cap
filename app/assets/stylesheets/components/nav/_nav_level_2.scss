@@ -1,7 +1,7 @@
 .nav__level-2,
 .nav__level-3 {
   transition-property: visibility;
-  transition-delay: $nav-transition-duration;
+  transition-delay: $speed-transition;
   visibility: hidden;
   position: absolute;
   top: 0;
