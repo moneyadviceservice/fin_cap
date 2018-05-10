@@ -44,13 +44,7 @@
                 <%= render 'shared/evaluation_types', type: "#{document.evidence_type}" %>
               </div>
               <div class="search-results__data-type">
-                <ul class="evidence-types">
-                  <% document.data_type_keys.each do |data_type| %>
-                    <li class="evidence-types__item data-types__<%= "#{data_type.downcase}" %>">
-                      <%= render 'shared/evidence_types', icon: document.data_type_icon(data_type), text: data_type %>
-                    </li>
-                  <% end %>
-                </ul>
+                <%= render 'shared/data_types', presenter: document %>
               </div>
               <p class="search-results__topics">
                 <%= document.formatted_topics %>
