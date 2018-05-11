@@ -7,18 +7,14 @@
 
 .evidence-types__item {
   display: inline-block;
+  margin: 0 $baseline-unit*2 0 0;
 }
 
 .evidence-types__item-icon {
-  display: inline-block;
+  float: left;
   width: 20px;
   height: 20px;
-}
-
-.evidence-types__item-content {
-  display: inline-block;
-  vertical-align: 5px;
-  margin: 0 $baseline-unit 0 0;
+  padding-right: $baseline-unit;
 }
 
 .evidence-types__item-icon--tick {
