@@ -1,0 +1,8 @@
+<div class="tooltip" data-dough-component="Tooltip" role="tooltip">
+  <button class="tooltip__trigger" data-tooltip-button aria-describedby='<%= "#{id}" %>'>
+    <%= "#{trigger}".html_safe %>
+  </button>
+  <div class="tooltip__content js-is-hidden" data-tooltip-content id='<%= "#{id}" %>'>
+    <%= "#{content}".html_safe %>
+  </div>
+</div>
