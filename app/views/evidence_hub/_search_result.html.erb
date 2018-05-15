@@ -1,0 +1,23 @@
+<li class="search-results__item">
+  <p class="search-results__title">
+    <%= document.link %>
+  </p>
+  <p class="search-results__description">
+    <%= document.stripped_overview %>
+  </p>
+  <div class="search-results__evidence-type">
+    <%= render 'evidence_type', evidence_summary: document %>
+  </div>
+  <div class="search-results__data-type">
+    <%= render 'evidence_checklist', evidence_summary: document %>
+  </div>
+  <p class="search-results__topics">
+    <%= document.formatted_topics %>
+  </p>
+  <p class="search-results__countries">
+    <%= document.formatted_countries %>
+  </p>
+  <p class="search-results__year-of-publication">
+    <%= document.formatted_year_of_publication %>
+  </p>
+</li>

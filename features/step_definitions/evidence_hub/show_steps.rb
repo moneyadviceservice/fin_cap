@@ -13,3 +13,13 @@ Then('I should see the evidence summary content') do |table|
     expect(content).to include(row[1])
   end
 end
+
+Then('I should see the evidence summary data_types') do |table|
+  table.rows.each do |row|
+    data_type_element = evidence_summary_page.send(row[0])
+    data_type_element_class = data_type_element['class']
+    icon_class_value = data_type_element_class[/tick|cross/]
+
+    expect(icon_class_value).to eq(row[1])
+  end
+end

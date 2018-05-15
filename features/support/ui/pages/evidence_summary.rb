@@ -14,6 +14,13 @@ module UI
       element :country, '.evidence-hub__country'
       element :contact_information, '.evidence-hub__contact_information'
       element :links, '.evidence-hub__links'
+      element :qualitative, '.data-types__qualitative svg'
+      element :quantitative, '.data-types__quantitative svg'
+      element :programme_theory, '.data-types__programme-theory svg'
+      element :measured_outcomes_checklist, '.data-types__measured-outcomes svg'
+      element :causality, '.data-types__causality svg'
+      element :process_evaluation, '.data-types__process-evaluation svg'
+      element :value_for_money, '.data-types__value-for-money svg'
     end
   end
 end

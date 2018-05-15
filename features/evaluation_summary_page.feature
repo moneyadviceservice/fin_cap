@@ -19,3 +19,10 @@ Feature: Evidence Hub: Evaluation Summary page
       | Country                | United Kingdom                                        |
       | Contact information    | MASPD (in partnership with Company S.A)               |
       | Links                  | Looking after the pennies - full report               |
+    And I should see the evidence summary data_types
+      | Field                       | Value |
+      | programme_theory            | cross |
+      | measured_outcomes_checklist | tick  |
+      | causality                   | cross |
+      | process_evaluation          | cross |
+      | value_for_money             | cross |

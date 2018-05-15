@@ -232,10 +232,34 @@ RSpec.describe EvidenceSummaryPresenter do
   end
 
   describe '#data_type_keys' do
-    it 'returns an array of the different data_types' do
-      expect(presenter.data_type_keys).to match_array(
-        %w[Qualitative Quantitative]
-      )
+    context 'when evidence type is insight' do
+      let(:attributes) do
+        { evidence_type: 'Insight' }
+      end
+
+      it 'returns an array of the different data_types' do
+        expect(presenter.data_type_keys).to match_array(
+          %w[Qualitative Quantitative]
+        )
+      end
+    end
+
+    context 'when evidence type evaluation' do
+      let(:attributes) do
+        { evidence_type: 'Evaluation' }
+      end
+
+      it 'returns an array of the different data_types' do
+        expect(presenter.data_type_keys).to match_array(
+          [
+            'Programme Theory',
+            'Measured Outcomes',
+            'Causality',
+            'Process Evaluation',
+            'Value for money'
+          ]
+        )
+      end
     end
   end
 

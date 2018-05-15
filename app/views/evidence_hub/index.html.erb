@@ -12,56 +12,14 @@
       <div class="l-2col-side">
         <div class="sidepanel">
           <h4 class="sidepanel__title">Keyword search</h4>
-          <%= form_for(
-            @search_form, builder: FincapBuilder, url: evidence_hub_index_path, method: :get) do |f| %>
-            <%= f.text_field :keyword %>
-            <%= f.button 'Search', type: 'submit', class: 'btn btn--primary btn--full-width' %>
-            <%= link_to evidence_hub_index_path(reset: true, keyword: @search_form.keyword), class: 'sidepanel__clear-filters' do %>
-              <svg xmlns="http://www.w3.org/2000/svg" 
-                  class="sidepanel__clear-icon" 
-                  focusable="false">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--clear-filters"></use>
-              </svg>
-              <span>Clear search</span>
-            <% end %>
-            <div class="sidepanel__divider"></div>
-            <%= render 'filters', f: f, search_form: @search_form %>
-          <% end %>
+
+          <%= render 'search_form' %>
         </div>
       </div>
       <div class="l-2col-main">
         <ul class="search-results">
           <% present_collection(@evidence_summaries).each do |document| %>
-            <li class="search-results__item">
-              <p class="search-results__title">
-                <%= document.link %>
-              </p>
-              <p class="search-results__description">
-                <%= document.stripped_overview %>
-              </p>
-              <div class="search-results__evidence-type">
-                <%= document.formatted_evidence_type_label %>
-                <%= render 'shared/evaluation_types', type: "#{document.evidence_type}" %>
-              </div>
-              <div class="search-results__data-type">
-                <ul class="evidence-types">
-                  <% document.data_type_keys.each do |data_type| %>
-                    <li class="evidence-types__item data-types__<%= "#{data_type.downcase}" %>">
-                      <%= render 'shared/evidence_types', icon: document.data_type_icon(data_type), text: data_type %>
-                    </li>
-                  <% end %>
-                </ul>
-              </div>
-              <p class="search-results__topics">
-                <%= document.formatted_topics %>
-              </p>
-              <p class="search-results__countries">
-                <%= document.formatted_countries %>
-              </p>
-              <p class="search-results__year-of-publication">
-                <%= document.formatted_year_of_publication %>
-              </p>
-            </li>
+            <%= render 'search_result', document: document %>
           <% end %>
         </ul>
       </div>
