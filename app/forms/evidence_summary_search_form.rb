@@ -7,7 +7,9 @@ class EvidenceSummarySearchForm
                 :client_groups,
                 :countries_of_delivery,
                 :topics,
-                :year_of_publication
+                :year_of_publication,
+                :page,
+                :per_page
 
   CHECKBOX_FILTERS = %w[client_groups topics countries_of_delivery].freeze
   RADIO_BUTTON_FILTERS = %w[year_of_publication].freeze

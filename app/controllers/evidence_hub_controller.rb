@@ -1,17 +1,32 @@
 class EvidenceHubController < EvidenceSummariesController
   DOCUMENT_TYPES = %w[Insight Evaluation Review].freeze
+  PAGINATION_DEFAULT_PAGE = 1
+  PAGINATION_PER_PAGE = 20
 
   def index
     @search_form = EvidenceSummarySearchForm.new(form_params)
-    documents = Mas::Cms::Document.all(params: search_params)
-    @evidence_summaries = EvidenceSummary.map(documents)
+    @documents = Mas::Cms::Document.all(params: search_params)
+    @evidence_summaries = EvidenceSummary.map(@documents)
   end
+
+  def evidence_summary_search_form_params
+    params.fetch(:evidence_summary_search_form, {}).permit(
+      :keyword,
+      :year_of_publication,
+      client_groups: [],
+      topics: [],
+      countries_of_delivery: []
+    )
+  end
+  helper_method :evidence_summary_search_form_params
 
   private
 
   def form_params
     form_params = {
-      document_type: DOCUMENT_TYPES
+      document_type: DOCUMENT_TYPES,
+      page: params[:page] || PAGINATION_DEFAULT_PAGE,
+      per_page: params[:per_page] || PAGINATION_PER_PAGE
     }
 
     if clear_search?
@@ -23,16 +38,6 @@ class EvidenceHubController < EvidenceSummariesController
 
   def search_params
     SearchFormParamParser.parse(form_params)
-  end
-
-  def evidence_summary_search_form_params
-    params.fetch(:evidence_summary_search_form, {}).permit(
-      :keyword,
-      :year_of_publication,
-      client_groups: [],
-      topics: [],
-      countries_of_delivery: []
-    )
   end
 
   def reset_all_params

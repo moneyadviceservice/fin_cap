@@ -5,11 +5,22 @@ RSpec.describe ApplicationHelper do
 
     class AnExamplePresenter < BasePresenter
     end
+
+    class MyPresenter < BasePresenter
+    end
   end
 
   let(:model) { AnExample.new }
 
   describe '#present' do
+    context 'when passing the class' do
+      it 'returs the presenter passed in the arguments' do
+        expect(
+          helper.present(model, MyPresenter)
+        ).to be_instance_of(MyPresenter)
+      end
+    end
+
     context 'when not passing a block' do
       it 'returns the respective presenter for the object' do
         expect(helper.present(model)).to be_instance_of(AnExamplePresenter)

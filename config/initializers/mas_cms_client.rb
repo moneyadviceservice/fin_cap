@@ -1,7 +1,8 @@
 Mas::Cms::Client.config do |c|
   c.timeout = ENV['HTTP_REQUEST_TIMEOUT'].to_i
   c.open_timeout = ENV['HTTP_REQUEST_TIMEOUT'].to_i
-  c.host =  ENV['FINCAP_CMS_URL']
+  c.host = ENV['FINCAP_CMS_URL']
+  c.api_token = ENV['MAS_CMS_API_TOKEN']
   c.retries = 1
   c.cache = Rails.cache
   c.cache_gets = false

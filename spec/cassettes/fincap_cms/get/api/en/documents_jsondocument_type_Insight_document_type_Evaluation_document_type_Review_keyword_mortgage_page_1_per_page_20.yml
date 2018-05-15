@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/en/documents.json?document_type%5B%5D=Insight&document_type%5B%5D=Evaluation&document_type%5B%5D=Review&keyword=mortgage
+    uri: http://localhost:3000/api/en/documents.json?document_type%5B%5D=Insight&document_type%5B%5D=Evaluation&document_type%5B%5D=Review&keyword=mortgage&page=1&per_page=20
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Token token=""
+      - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.11.0 (Tomas-Destefi-00119.local; tomasdestefi; 68139) ruby/2.4.2
+      - Mas-Cms-Client/1.12.0 (Tomas-Destefi-00119.local; tomasdestefi; 49237) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Mon, 14 May 2018 21:50:00 GMT
+      - Tue, 22 May 2018 11:06:14 GMT
       status:
       - 200 OK
       connection:
@@ -32,16 +32,16 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"5d9b46804fcec4c1b75a847c482b279c"'
+      - '"976d4cb513c03f5ae7efa8505e6fd1b2"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 65f152d2-33d4-4260-b107-b4eec63a6486
+      - a19890ad-d4a6-46eb-b734-c382e11d1dab
       x-runtime:
-      - '0.048671'
+      - '0.043638'
     body:
       encoding: UTF-8
-      string: '{"documents":[],"meta":{"results":0}}'
+      string: '{"documents":[],"meta":{"results":0,"page":1,"per_page":20,"total_pages":0}}'
     http_version: 
-  recorded_at: Mon, 14 May 2018 21:50:00 GMT
+  recorded_at: Tue, 22 May 2018 11:06:14 GMT
 recorded_with: VCR 4.0.0

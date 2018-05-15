@@ -89,6 +89,9 @@ en:
         text: Strategy for Wales
         url: '#'
     evidence_hub:
+      pagination:
+        total_results: '%{total_results} documents found'
+        pagination_description: '%{current_page} of %{total_pages}'
       insight_summary:
         data_types:
           - Qualitative

@@ -9,6 +9,20 @@ Given('I search based on some filters') do
   step %(I press search)
 end
 
+Given(
+  'I am on the page {string} seeing {string} evidence summary per page'
+) do |page, per_page|
+  visit("/en/evidence_hub?page=#{page}&per_page=#{per_page}")
+end
+
+When('I go to the next evidence hub page') do
+  evidence_summaries_page.next_page.click
+end
+
+When('I go to the previous evidence hub page') do
+  evidence_summaries_page.previous_page.click
+end
+
 When('I search the evidence hub with a keyword {string}') do |keyword|
   evidence_summaries_page.keyword.set(keyword)
   step %(I press search)
