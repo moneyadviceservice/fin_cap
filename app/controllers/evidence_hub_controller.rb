@@ -1,5 +1,5 @@
 class EvidenceHubController < EvidenceSummariesController
-  DOCUMENT_TYPES = %w[Insight Evaluation].freeze
+  DOCUMENT_TYPES = %w[Insight Evaluation Review].freeze
 
   def index
     @search_form = EvidenceSummarySearchForm.new(form_params)

@@ -8,7 +8,7 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
 
       it 'sends the evidence hub document types' do
         expect(Mas::Cms::Document).to receive(:all).with(
-          params: { document_type: %w[Insight Evaluation] }
+          params: { document_type: %w[Insight Evaluation Review] }
         ).and_return([])
         get '/en/evidence_hub'
       end
@@ -27,7 +27,7 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
 
       let(:expected_params) do
         {
-          document_type: %w[Insight Evaluation],
+          document_type: %w[Insight Evaluation Review],
           'keyword' => '',
           blocks: [
             {
@@ -55,7 +55,7 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
     context 'when clear all filters' do
       it 'sends the evidence hub document types' do
         expect(Mas::Cms::Document).to receive(:all).with(
-          params: { document_type: %w[Insight Evaluation], keyword: '' }
+          params: { document_type: %w[Insight Evaluation Review], keyword: '' }
         ).and_return([])
 
         get '/en/evidence_hub', params: { reset: true }

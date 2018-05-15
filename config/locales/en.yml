@@ -100,6 +100,10 @@ en:
           - Causality
           - Process Evaluation
           - Value for money
+      review_summary:
+        data_types:
+          - Systematic review
+          - Literature review
       key_info: 'Key info'
       insight_summary_name: 'Insight'
       evaluation_summary_name: 'Evaluation'

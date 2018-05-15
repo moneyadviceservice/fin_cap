@@ -12,3 +12,6 @@ end
 
 class Mas::Cms::Evaluation < Mas::Cms::Document
 end
+
+class Mas::Cms::Review < Mas::Cms::Document
+end

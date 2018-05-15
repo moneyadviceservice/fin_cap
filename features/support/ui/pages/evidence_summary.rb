@@ -21,6 +21,8 @@ module UI
       element :causality, '.data-types__causality svg'
       element :process_evaluation, '.data-types__process-evaluation svg'
       element :value_for_money, '.data-types__value-for-money svg'
+      element :systematic_review, '.data-types__systematic-review svg'
+      element :literature_review, '.data-types__literature-review svg'
     end
   end
 end
