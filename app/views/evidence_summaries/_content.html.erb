@@ -1,11 +1,14 @@
 <h1 class="evidence-hub__title">
   <%= evidence_summary.title %>
 </h1>
-<div class="evidence_hub__evidence_type">
+
+<p class="evidence-hub__type">
   <%= render 'evidence_type', evidence_summary: evidence_summary %>
-</div>
+  <a href="http://www.fincap.org.uk/insight_checklist" class="icon--info">i</a>
+</p>
+
 <%= render 'evidence_checklist', evidence_summary: evidence_summary %>
+
 <div class="evidence-hub__content">
   <%= evidence_summary.content.html_safe %>
 </div>
-
