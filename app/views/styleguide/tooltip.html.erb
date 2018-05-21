@@ -1,0 +1,32 @@
+<h1>UI Components</h1>
+<h2>Tooltip</h2>
+
+<p>Developer notes: This component uses a partial view for the trigger and content which expects values.</p>
+<p>To render each of the triggers and content call the partial from "shared/tooltip.html.erb" and include the values:</p>
+<ul>
+  <li>render 'shared/tooltip', <strong>trigger:</strong> 'trigger', <strong>content:</strong> 'content', <strong>id:</strong> 'id'</li>
+</ul>
+
+<h2>Example Usage</h2>
+<h3 class="styleguide__subheading">Tooltip</h3>
+<div class="styleguide__example">
+  <%= render 'shared/tooltip',
+    trigger: (render 'shared/evidence_types', icon: 'cross', text: 'Programme Theory'),
+    content: 'Information about programme design and rationale, such as a Theory of Change or Logic Model.',
+    id: 'programme_theory' %>
+</div>
+
+<h3 class="styleguide__subheading">HTML Code</h3>
+<xmp>
+  <div class="tooltip" data-dough-component="Tooltip" role="tooltip">
+    <button class="tooltip__trigger" data-tooltip-button aria-describedby="programme_theory">
+      <svg xmlns="http://www.w3.org/2000/svg" class="evidence-types__item-icon evidence-types__item-icon--tick svg-icon svg-icon--evidence-tick" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--evidence-tick"></use>
+      </svg>
+      <span class="evidence-types__item-content">Qualitative</span>
+    </button>
+    <div class="tooltip__content js-is-hidden" data-tooltip-content id="programme_theory">
+      <p>Information about programme design and rationale, such as a Theory of Change or Logic Model.</p>
+    </div>
+  </div>
+</xmp>

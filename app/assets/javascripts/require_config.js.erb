@@ -3,6 +3,7 @@
 //= depend_on_asset dough/assets/js/lib/componentLoader
 //= depend_on_asset dough/assets/js/lib/featureDetect
 //= depend_on_asset components/Nav
+//= depend_on_asset components/Tooltip
 
 <%
   def requirejs_path(asset)
@@ -19,7 +20,8 @@
       rsvp: requirejs_path('rsvp/rsvp'),
 
       # Components
-      Nav: requirejs_path('components/Nav')
+      Nav: requirejs_path('components/Nav'),
+      Tooltip: requirejs_path('components/Tooltip')
     }
   }
 

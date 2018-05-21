@@ -42,7 +42,8 @@ module StyleguideHelper
     'Evaluation Types' => 'evaluation_types',
     'Info Icon' => 'info_icon',
     'Countries List' => 'countries',
-    'Life Stages' => 'lifestages'
+    'Life Stages' => 'lifestages',
+    'Tooltip' => 'tooltip'
   }.freeze
 
   PAGE_SPECIFIC = {
