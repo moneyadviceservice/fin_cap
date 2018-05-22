@@ -94,19 +94,28 @@ en:
         pagination_description: '%{current_page} of %{total_pages}'
       insight_summary:
         data_types:
-          - Qualitative
-          - Quantitative
+          - keyword: Qualitative
+            definition: Qualitative research is more exploratory, and uses a range of methods like interviews, focus groups and observation to gain a deeper understanding about specific issues - such as people’s experiences, behaviours and attitudes.
+          - keyword: Quantitative
+            definition: Quantitative research uses statistical or numerical analysis of survey data to answer questions about how much, how many, how often or to what extent particular characteristics are seen in a population. It is often used to look at changes over time and can identify relationships between characteristics like people’s attitudes and behaviours.
       evaluation_summary:
         data_types:
-          - Programme Theory
-          - Measured Outcomes
-          - Causality
-          - Process Evaluation
-          - Value for money
+          - keyword: Programme Theory
+            definition: Information about the programme design and rationale
+          - keyword: Measured Outcomes
+            definition: Evidence about Financial Capability outcomes for programme participants
+          - keyword: Causality
+            definition: Evidence that the Financial Capability outcomes were caused by the programme
+          - keyword: Process Evaluation
+            definition: Evidence about programme implementation, feasibility, and piloting
+          - keyword: Value for money
+            definition: Evidence about relative costs and benefits of the programme
       review_summary:
         data_types:
-          - Systematic review
-          - Literature review
+          - keyword: Systematic review
+            definition: A comprehensive and replicable review of all relevant studies on a topic with a summary of findings
+          - keyword: Literature review
+            definition: An indicative review of a sample of relevant studies on a topic with a summary of findings
       key_info: 'Key info'
       insight_summary_name: 'Insight'
       evaluation_summary_name: 'Evaluation'
