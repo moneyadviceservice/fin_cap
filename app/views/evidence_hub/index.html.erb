@@ -1,6 +1,6 @@
 <div class="l-constrained">
   <div class="row">
-    <div class="hero hero--blue">
+    <div class="hero hero--blue styleguide__hero">
       <h1 class="hero__heading">
         <%= t('evidence_hub.summaries.header') %>
       </h1>
@@ -17,6 +17,13 @@
         </div>
       </div>
       <div class="l-2col-main">
+        <% present(@documents, EvidenceSummariesPresenter) do |evidence_summaries_presenter| %>
+          <%= evidence_summaries_presenter.total_results_description %>
+          <%= evidence_summaries_presenter.pagination_description %>
+          <%= evidence_summaries_presenter.previous_page %>
+          <%= evidence_summaries_presenter.next_page %>
+        <% end %>
+
         <ul class="search-results">
           <% present_collection(@evidence_summaries).each do |document| %>
             <%= render 'search_result', document: document %>

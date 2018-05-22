@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def present(object)
-    klass = "#{object.class}Presenter".constantize
+  def present(object, presenter_klass = nil)
+    klass = presenter_klass || "#{object.class}Presenter".constantize
     presenter = klass.new(object, self)
 
     if block_given?

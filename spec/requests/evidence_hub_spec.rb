@@ -1,4 +1,18 @@
 RSpec.describe 'Evidence Hub Summaries', type: :request do
+  let(:meta) do
+    double(body: {
+             'meta' => {
+               'page' => 1,
+               'per_page' => 20,
+               'total_results' => 0
+             }
+           })
+  end
+
+  let(:evidence_summaries) do
+    Mas::Cms::ResponseCollection.new([], meta)
+  end
+
   describe 'GET /evidence_hub' do
     context 'arriving on the Evidence Hub page' do
       it 'responds successful' do
@@ -8,8 +22,12 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
 
       it 'sends the evidence hub document types' do
         expect(Mas::Cms::Document).to receive(:all).with(
-          params: { document_type: %w[Insight Evaluation Review] }
-        ).and_return([])
+          params: {
+            document_type: %w[Insight Evaluation Review],
+            page: 1,
+            per_page: 20
+          }
+        ).and_return(evidence_summaries)
         get '/en/evidence_hub'
       end
     end
@@ -28,6 +46,8 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
       let(:expected_params) do
         {
           document_type: %w[Insight Evaluation Review],
+          page: 1,
+          per_page: 20,
           'keyword' => '',
           blocks: [
             {
@@ -46,7 +66,7 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
         expect(Mas::Cms::Document)
           .to receive(:all)
           .with(params: expected_params)
-          .and_return([])
+          .and_return(evidence_summaries)
 
         get '/en/evidence_hub/', params: params
       end
@@ -55,8 +75,13 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
     context 'when clear all filters' do
       it 'sends the evidence hub document types' do
         expect(Mas::Cms::Document).to receive(:all).with(
-          params: { document_type: %w[Insight Evaluation Review], keyword: '' }
-        ).and_return([])
+          params: {
+            document_type: %w[Insight Evaluation Review],
+            keyword: '',
+            page: 1,
+            per_page: 20
+          }
+        ).and_return(evidence_summaries)
 
         get '/en/evidence_hub', params: { reset: true }
       end

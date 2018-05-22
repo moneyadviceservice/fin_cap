@@ -20,6 +20,9 @@ module UI::Pages
 
     set_url '{/locale}/evidence_hub'
 
+    element :previous_page, '.evidence-hub__previous-page'
+    element :next_page, '.evidence-hub__next-page'
+
     element :keyword, '#evidence_summary_search_form_keyword'
     element :search_button, '.sidepanel button[type="submit"]'
     element :saving_filter, '#evidence_summary_search_form_topics_saving'
