@@ -5,13 +5,29 @@
 .search__submit {
   cursor: pointer;
 }
+input.search__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 35px;
+}
 
-.search__submit--icon {
-  @extend %icon;
-  @extend .icon--search;
+.search__submit--icon {    
   position: absolute;
+  height: 1.6rem;
+  right: 0.375rem;
+  width: 30px;
   top: 50%;
-  right: $baseline-unit;
-  margin-top: -12.5px;
+  transform: translateY(-50%);
+  margin: 0;
   border: none;
+  background: none;
+  color: $primary-blue-dark;
+  .svg-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

@@ -1,7 +1,37 @@
-<header class="header">
-  <div class="l-constrained">
-    <div class="header">
-      <a data-mobile-nav-button href="#" role="button" class="mobile-nav-button">Menu</a>
+<header data-site-header data-dough-component="Header" data-dough-header-config='{"textClose":"Close Search"}' class="header">
+  <div class="l-constrained header-wrap">
+    <div class="header-content">
+      <div class="header-logo">
+        <a href="/" class="header-logo__link">
+          <%= image_tag("logo.png", alt: "t('layouts.base.title')", class: 'header-logo__img') %>
+        </a>
+      </div>
+      <ul class="header-links">
+        <li class="header-links__link">
+          <a href="#">Contact us</a>
+        </li>
+        <li class="header-links__link">
+          <a href="#">Get involved</a>
+        </li>
+      </ul>
+      <div class="mobile-header__content">
+        <a data-mobile-nav-button href="#" role="button" class="btn btn--orange mobile-header__nav-button">Menu</a>
+        <a data-mobile-search-button href="#" class="btn btn--primary search__submit--icon mobile-header__search-button" role="button" >
+          <svg xmlns="http://www.w3.org/2000/svg" class="search-icon__show svg-icon svg-icon--search" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--search"></use>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="search-icon__hide show svg-icon svg-icon--search" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--close"></use>
+          </svg>
+          <span data-mobile-search-text class="visually-hidden">Open Search</span>
+        </a>
+      </div>
+      
+    </div>
+    <div class="mobile-header__search">
+      <div class="mobile-header__search-bar">
+        <%= render 'shared/search', location: 'navigation-mobile' %>
+      </div>
     </div>
   </div>
 </header>
