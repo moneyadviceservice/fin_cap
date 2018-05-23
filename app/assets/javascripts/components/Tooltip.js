@@ -29,22 +29,25 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   Tooltip.prototype._setUpComponent = function() {
     var self = this;
+    var pause = false;
 
-    // Touch devices
-    $(document).on('touchend', function(e) {
-      if (e.target === self.$button[0]) {
-        if (self.$content.hasClass(self.hiddenClass)) {
-          self.$content.removeClass(self.hiddenClass);
-        } else {
-          self.$content.addClass(self.hiddenClass);
-        }
-      } else {
-        self.$content.addClass(self.hiddenClass);
+    // Default - show on click, hide on blur/second click
+    /* If mouse events aren't supported or if the user clicks while still "hovering" then we use click.
+    The pause variable makes sure if the mouseover event is triggered then click is not. */
+    this.$button.on('click', function() {
+      if (!pause){
+        self.$content.toggleClass(self.hiddenClass);
       }
+      pause = false;
+    });
+    /* In case the user clicks elsewhere on the page and mouseout hasn't fired */
+    this.$button.on('blur', function() {
+      self.$content.addClass(self.hiddenClass);
     });
 
-    // Non-touch devices
+    // Hover supported - show on hover
     this.$button.on('mouseover', function() {
+      pause = true;
       self.$content.removeClass(self.hiddenClass);
     });
 
