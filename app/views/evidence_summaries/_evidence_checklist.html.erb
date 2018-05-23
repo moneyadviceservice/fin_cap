@@ -2,7 +2,7 @@
   <% evidence_summary.data_type_keys.each do |data_type| %>
     <li class="evidence-types__item data-types__<%= data_type[:keyword].downcase %>">
       <div class="tooltip" data-dough-component="Tooltip" role="tooltip">
-        <button class="tooltip__trigger" data-tooltip-button aria-describedby="<%= data_type[:keyword] %>">
+        <button class="tooltip__trigger" aria-describedby="<%= data_type[:keyword] %>">
           <%= render 'shared/evidence_types',
                  icon: evidence_summary.data_type_icon(data_type[:keyword]),
                  text: data_type[:keyword] %>
