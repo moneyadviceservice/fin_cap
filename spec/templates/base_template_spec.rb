@@ -1,4 +1,4 @@
-RSpec.describe FincapArticle do
+RSpec.describe BaseTemplate do
   subject { described_class.new(article) }
   let(:article) do
     double('Mas::Cms::Article', attributes)

@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   root to: 'homepage#index'
 
   scope ':locale', locale: /en/ do
-    resources :evidence_hub, only: :index
+    resources :articles, only: :show
     resources :evaluations, only: :show
+    resources :evidence_hub, only: :index
     resources :insights, only: :show
     resources :reviews, only: :show
-    resources :articles, only: :show
+    resources :thematic_reviews, only: :show, path: 'thematic-reviews'
   end
 
   # Styleguide

@@ -1,10 +1,6 @@
-class ArticlesController < ApplicationController
-  def article
-    @article ||= ArticlePresenter.new(resource, view_context)
-  end
-  helper_method :article
-
+class ArticlesController < FincapTemplatesController
   def resource
-    FincapArticle.new(Mas::Cms::Article.find(params[:id]))
+    ArticleTemplate.new(Mas::Cms::Article.find(params[:id]))
   end
+  helper_method :resource
 end

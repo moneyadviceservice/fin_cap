@@ -1,4 +1,4 @@
-class ArticlePresenter < BasePresenter
+class TemplatePresenter < BasePresenter
   def hero_image_component
     view.strip_tags(hero_image_block.try(:content).to_s)
   end

@@ -5,6 +5,12 @@ Given('I entered into the {string} page {string}') do |page_type, title|
   )
 end
 
+Given('I entered into the Thematic review page {string}') do |title|
+  thematic_review_page.load(
+    slug: title.parameterize
+  )
+end
+
 Then('I should see the evidence summary content') do |table|
   table.rows.each do |row|
     field_name = row[0].parameterize.underscore

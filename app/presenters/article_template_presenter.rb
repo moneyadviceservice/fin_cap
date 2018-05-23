@@ -1,0 +1,2 @@
+class ArticleTemplatePresenter < TemplatePresenter
+end

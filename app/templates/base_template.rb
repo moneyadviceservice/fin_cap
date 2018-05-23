@@ -1,4 +1,4 @@
-class FincapArticle
+class BaseTemplate
   HERO_IMAGE_IDENTIFIER = 'component_hero_image'.freeze
   HERO_DESCRIPTION_IDENTIFIER = 'component_hero_description'.freeze
   DOWNLOAD_COMPONENT_IDENTIFIER = 'component_download'.freeze

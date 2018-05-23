@@ -1,0 +1,2 @@
+class ThematicReviewTemplate < BaseTemplate
+end

@@ -5,9 +5,10 @@ module World
     end
 
     pages = %w[
+      article
       evidence_summaries
       evidence_summary
-      article
+      thematic_review
     ]
 
     pages.each do |page|
