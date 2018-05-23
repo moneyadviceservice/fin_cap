@@ -1,4 +1,4 @@
-describe.only('Tooltip', function() {
+describe('Tooltip', function() {
   'use strict';
 
   beforeEach(function(done) {
@@ -13,7 +13,6 @@ describe.only('Tooltip', function() {
 
         self.$tooltip = $(fixture.el).find('[data-dough-component="Tooltip"]');
         self.obj = new Tooltip(self.$tooltip);
-        self.$button = self.$tooltip.find('[data-tooltip-button]');
         self.$content = self.$tooltip.find('[data-tooltip-content]');
         self.hiddenClass = self.obj.hiddenClass;
 
@@ -39,15 +38,15 @@ describe.only('Tooltip', function() {
     it('Displays/hides tooltip on touch', function() {
       this.obj.init();
 
-      // touch tooltip button shows/hides content
-      this.$button.trigger('touchend');
+      // clicking tooltip button shows/hides content
+      this.$tooltip.trigger('click');
       expect(this.$content.hasClass(this.hiddenClass)).to.be.false;
-      this.$button.trigger('touchend');
+      this.$tooltip.trigger('click');
       expect(this.$content.hasClass(this.hiddenClass)).to.be.true;
 
       // touch outside tooltip button hides content
-      this.$content.removeClass(this.hiddenClass);
-      $(document).trigger('touchend');
+      this.$tooltip.trigger('click');
+      this.$tooltip.trigger('blur');
       expect(this.$content.hasClass(this.hiddenClass)).to.be.true;
     });
   });
@@ -57,11 +56,11 @@ describe.only('Tooltip', function() {
       this.obj.init();
 
       // mouse over tooltip button
-      this.$button.trigger('mouseover');
+      this.$tooltip.trigger('mouseover');
       expect(this.$content.hasClass(this.hiddenClass)).to.be.false;
 
       // mouse away from tooltip button
-      this.$button.trigger('mouseout');
+      this.$tooltip.trigger('mouseout');
       expect(this.$content.hasClass(this.hiddenClass)).to.be.true;
     });
   });
