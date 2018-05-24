@@ -1,0 +1,2 @@
+class ThematicReviewTemplatePresenter < TemplatePresenter
+end

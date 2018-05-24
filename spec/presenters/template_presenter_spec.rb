@@ -1,12 +1,12 @@
-RSpec.describe ArticlePresenter do
+RSpec.describe TemplatePresenter do
   let(:view) { ActionView::Base.new }
-  let(:article) do
-    double('FincapArticle', attributes)
+  let(:object) do
+    double('BaseTemplate', attributes)
   end
-  subject(:presenter) { described_class.new(article, view) }
+  subject(:presenter) { described_class.new(object, view) }
 
   describe '#hero_description_component' do
-    context 'when article has hero description' do
+    context 'when object has hero description' do
       let(:attributes) do
         {
           hero_description_block: double(content: '<p>Financial capability</p>')
@@ -20,7 +20,7 @@ RSpec.describe ArticlePresenter do
       end
     end
 
-    context 'when article does not have hero description' do
+    context 'when object does not have hero description' do
       let(:attributes) do
         { hero_description_block: nil }
       end
@@ -32,7 +32,7 @@ RSpec.describe ArticlePresenter do
   end
 
   describe '#hero_image_component' do
-    context 'when article has hero image' do
+    context 'when object has hero image' do
       let(:attributes) do
         {
           hero_image_block: double(content: '<p>/assets/hero_image</p>')
@@ -44,7 +44,7 @@ RSpec.describe ArticlePresenter do
       end
     end
 
-    context 'when article does not have hero image' do
+    context 'when object does not have hero image' do
       let(:attributes) do
         { hero_image_block: nil }
       end
@@ -56,7 +56,7 @@ RSpec.describe ArticlePresenter do
   end
 
   describe '#download_component' do
-    context 'when article has download component' do
+    context 'when object has download component' do
       let(:attributes) do
         { download_block: double(content: '<a>some content</a>') }
       end
@@ -70,7 +70,7 @@ RSpec.describe ArticlePresenter do
       end
     end
 
-    context 'when article does not have download component' do
+    context 'when object does not have download component' do
       let(:attributes) do
         { download_block: double(content: '') }
       end
@@ -83,7 +83,7 @@ RSpec.describe ArticlePresenter do
   end
 
   describe '#cta_links_component' do
-    context 'when article has cta links component' do
+    context 'when object has cta links component' do
       let(:attributes) do
         { cta_links_block: double(content: '<a>some content</a>') }
       end
@@ -97,7 +97,7 @@ RSpec.describe ArticlePresenter do
       end
     end
 
-    context 'when article does not have cta links component' do
+    context 'when object does not have cta links component' do
       let(:attributes) do
         { cta_links_block: double(content: '') }
       end
@@ -110,7 +110,7 @@ RSpec.describe ArticlePresenter do
   end
 
   describe '#feedback_component' do
-    context 'when article has feedback component' do
+    context 'when object has feedback component' do
       let(:feedback_content) do
         double(content: '<p>email@moneyadviceservice.org.uk</p>')
       end
@@ -129,7 +129,7 @@ RSpec.describe ArticlePresenter do
       end
     end
 
-    context 'when article does not have feedback component' do
+    context 'when object does not have feedback component' do
       let(:attributes) do
         { feedback_block: nil }
       end

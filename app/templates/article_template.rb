@@ -1,0 +1,2 @@
+class ArticleTemplate < BaseTemplate
+end

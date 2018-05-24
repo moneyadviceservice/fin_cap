@@ -1,0 +1,2 @@
+class FincapTemplatesController < ApplicationController
+end

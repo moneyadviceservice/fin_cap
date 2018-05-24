@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/thematic_reviews/how-can-we-improve-the-financial-capability-of-young-adults.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.12.0 (Tomas-Destefi-00119.local; tomasdestefi; 15151) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 23 May 2018 15:40:54 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"dc793eac26c00dd8b4c52cc44a1aa209"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 573378c5-94d9-4338-b1e2-b71411399c55
+      x-runtime:
+      - '0.076890'
+    body:
+      encoding: UTF-8
+      string: '{"label":"How can we improve the financial capability of young adults?","slug":"how-can-we-improve-the-financial-capability-of-young-adults","full_path":"/en/thematic_reviews/how-can-we-improve-the-financial-capability-of-young-adults","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"thematic_review","related_content":{"latest_blog_post_links":[{"title":"Rise
+        of the banking apps","path":"https://www.moneyadviceservice.org.uk/blog/rise-of-the-banking-apps"},{"title":"The
+        dangers of pension release","path":"https://www.moneyadviceservice.org.uk/blog/the-dangers-of-pension-release"},{"title":"Money
+        and its links to mental health and wellbeing ","path":"https://www.moneyadviceservice.org.uk/blog/blank-for-mental-health-article"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"blocks":[{"identifier":"content","content":"\u003cp\u003eThematic
+        Review content\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"overview","content":"\u003cp\u003eSome
+        overview\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eFinancial
+        capability across the UK\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/en/evidence_hub?tag=how-can-we-improve-the-financial-capability-of-young-adults\"\u003eEvidence
+        Summaries Associated with this Thematic Review\u003c/a\u003e\n        \u003ca
+        href=\"/en/evidence_hub\"\u003eAll Evidence Summaries\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eYoung Adults Thematic review\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_feedback","content":"\u003cp\u003eemail@moneyadviceservice.org.uk\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"}],"translations":[]}'
+    http_version: 
+  recorded_at: Wed, 23 May 2018 15:40:54 GMT
+recorded_with: VCR 4.0.0
