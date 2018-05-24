@@ -16,14 +16,6 @@ Dir[
 
 ActiveRecord::Migration.maintain_test_schema!
 
-Mas::Cms::Client.config do |c|
-  c.timeout = '10'
-  c.open_timeout = '10'
-  c.api_token = 'mytoken'
-  c.host = ENV['FINCAP_CMS_URL']
-  c.retries = 1
-end
-
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true

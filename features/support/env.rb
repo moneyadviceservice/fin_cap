@@ -4,6 +4,7 @@
 # instead of editing this one.
 # Cucumber will automatically load all features/**/*.rb
 # files.
+ENV['FINCAP_CMS_URL'] = 'http://localhost:3000'
 
 require 'cucumber/rails'
 require Rails.root.join('spec', 'support', 'vcr')
