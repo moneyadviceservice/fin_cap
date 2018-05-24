@@ -1,6 +1,6 @@
 <ul class="evidence-types">
-  <% evidence_summary.data_type_keys.each do |data_type| %>
-    <li class="evidence-types__item data-types__<%= data_type[:keyword].downcase %>">
+  <% evidence_summary.data_type_definitions.each do |data_type| %>
+    <li class="evidence-types__item data-types__<%= data_type[:keyword].parameterize %>">
       <div class="tooltip" data-dough-component="Tooltip" role="tooltip">
         <button class="tooltip__trigger" aria-describedby="<%= data_type[:keyword] %>">
           <%= render 'shared/evidence_types',
