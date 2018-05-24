@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 ENV['RAILS_ENV'] ||= 'test'
+ENV['FINCAP_CMS_URL'] = 'http://localhost:3000'
 
 require File.expand_path('../config/environment', __dir__)
 require 'rspec/rails'
@@ -14,6 +15,14 @@ Dir[
 ].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
+
+Mas::Cms::Client.config do |c|
+  c.timeout = '10'
+  c.open_timeout = '10'
+  c.api_token = 'mytoken'
+  c.host = ENV['FINCAP_CMS_URL']
+  c.retries = 1
+end
 
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
