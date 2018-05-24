@@ -8,6 +8,14 @@ ENV['FINCAP_CMS_URL'] = 'http://localhost:3000'
 
 require 'cucumber/rails'
 require Rails.root.join('spec', 'support', 'vcr')
+ENV['FINCAP_CMS_URL'] = 'http://localhost:3000'
+Mas::Cms::Client.config do |c|
+  c.timeout = '10'
+  c.open_timeout = '10'
+  c.api_token = 'mytoken'
+  c.host = ENV['FINCAP_CMS_URL']
+  c.retries = 1
+end
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.
