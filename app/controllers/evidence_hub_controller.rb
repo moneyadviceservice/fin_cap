@@ -28,6 +28,7 @@ class EvidenceHubController < EvidenceSummariesController
       page: params[:page] || PAGINATION_DEFAULT_PAGE,
       per_page: params[:per_page] || PAGINATION_PER_PAGE
     }
+    form_params[:tag] = params[:tag] if params[:tag].present?
 
     if clear_search?
       form_params.merge(reset_all_params)

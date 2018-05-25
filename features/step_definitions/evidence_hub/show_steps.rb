@@ -11,6 +11,26 @@ Given('I entered into the Thematic review page {string}') do |title|
   )
 end
 
+When('I click {string}') do |text|
+  click_link(text)
+end
+
+Then('I should see the summaries related to {string}') do |title|
+  steps %{
+    Then I should see "2" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                                                    |
+      | document title      | Looking after the pennies                                |
+      | overview            | An evaluation, commissioned by Royal London              |
+      | evidence type       | Evaluation                                               |
+    And I should see the "second" evidence summary as
+      | Field               | Value                                                       |
+      | document title      | Raising household saving                                    |
+      | overview            | Based on an analysis of international evidence, this report |
+      | evidence type       | Review                                                      |
+  }
+end
+
 Then('I should see the evidence summary content') do |table|
   table.rows.each do |row|
     field_name = row[0].parameterize.underscore

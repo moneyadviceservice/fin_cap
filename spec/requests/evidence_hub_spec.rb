@@ -32,6 +32,20 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
       end
     end
 
+    context 'searching by tag' do
+      it 'sends the given tag to the api' do
+        expect(Mas::Cms::Document).to receive(:all).with(
+          params: {
+            document_type: %w[Insight Evaluation Review],
+            page: 1,
+            per_page: 20,
+            tag: 'some_tag'
+          }
+        ).and_return(evidence_summaries)
+        get '/en/evidence_hub', params: { tag: 'some_tag' }
+      end
+    end
+
     context 'searching with filters' do
       let(:params) do
         {
