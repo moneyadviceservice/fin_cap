@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :evidence_hub, only: :index
     resources :insights, only: :show
     resources :reviews, only: :show
-    resources :thematic_reviews, only: :show, path: 'thematic-reviews'
+    resources :thematic_reviews, only: :show
   end
 
   # Styleguide
