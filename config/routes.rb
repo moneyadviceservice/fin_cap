@@ -12,5 +12,5 @@ Rails.application.routes.draw do
 
   # Styleguide
   get '/styleguide', to: 'styleguide#home'
-  get "styleguide/:page" => "styleguide#show"
+  get 'styleguide/:page' => 'styleguide#show'
 end

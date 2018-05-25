@@ -17,4 +17,6 @@
   <% end %>
   <div class="sidepanel__divider"></div>
   <%= render 'filters', f: f, search_form: @search_form %>
+
+  <%= hidden_field_tag(:tag, params[:tag]) %>
 <% end %>
