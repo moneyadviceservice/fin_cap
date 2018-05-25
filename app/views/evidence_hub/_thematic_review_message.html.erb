@@ -1,0 +1,8 @@
+<p class='evidence-hub__thematic-review-message'>
+<% link = link_to(
+            thematic_review.title,
+            thematic_review_path(locale: params[:locale], id: thematic_review.slug)
+          )
+ %>
+  <%= raw I18n.t('fincap.evidence_hub.thematic_review.message_box_info', link: link) %>
+</p>

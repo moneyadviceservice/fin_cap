@@ -33,6 +33,8 @@ module UI::Pages
     element :children_filter,
             '#evidence_summary_search_form_client_groups_children-3-11'
     element :clear_filters_button, '.sidepanel__clear-filters'
+    element :thematic_review_message, '.evidence-hub__thematic-review-message'
+    element :thematic_review_message_link, '.evidence-hub__thematic-review-message a'
 
     sections :search_results, SearchResult, '.search-results__item'
   end

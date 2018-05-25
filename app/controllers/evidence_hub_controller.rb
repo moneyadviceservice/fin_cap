@@ -20,6 +20,11 @@ class EvidenceHubController < EvidenceSummariesController
   end
   helper_method :evidence_summary_search_form_params
 
+  def thematic_review
+    @thematic_review ||= Mas::Cms::ThematicReview.find(params[:tag])
+  end
+  helper_method :thematic_review
+
   private
 
   def form_params

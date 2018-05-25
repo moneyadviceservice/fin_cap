@@ -75,3 +75,15 @@ end
 Then('I should see the keyword field cleared') do
   expect(evidence_summaries_page.keyword.value).to eq('')
 end
+
+Then('I should see the thematic review message') do |message|
+  expect(
+    evidence_summaries_page.thematic_review_message.text
+  ).to include(message)
+end
+
+Then('I should see the thematic review link {string}') do |link|
+  expect(
+    evidence_summaries_page.thematic_review_message_link[:href]
+  ).to include(link)
+end

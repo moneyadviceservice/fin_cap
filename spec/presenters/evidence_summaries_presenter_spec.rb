@@ -5,6 +5,47 @@ RSpec.describe EvidenceSummariesPresenter do
   let(:attributes) { {} }
   subject(:presenter) { described_class.new(evidence_summaries, view) }
 
+  describe 'thematic_review_message' do
+    let(:view) { double(params: params) }
+
+    context 'when params tag is present' do
+      let(:params) do
+        { tag: 'tag-name' }
+      end
+
+      context 'when there is no evidence summaries' do
+        let(:attributes) do
+          { collection: [] }
+        end
+
+        it 'does not render the thematic review message' do
+          expect(view).to_not receive(:render).with('thematic_review_message')
+          presenter.thematic_review_message
+        end
+      end
+
+      context 'when there is evidence summaries' do
+        let(:attributes) do
+          { collection: [1, 2, 3] }
+        end
+
+        it 'renders thematic review message' do
+          expect(view).to receive(:render).with('thematic_review_message')
+          presenter.thematic_review_message
+        end
+      end
+    end
+
+    context 'when params tag is blank' do
+      let(:params) { {} }
+
+      it 'does not render the thematic review message' do
+        expect(view).to_not receive(:render).with('thematic_review_message')
+        presenter.thematic_review_message
+      end
+    end
+  end
+
   describe '#first_page?' do
     context 'when first page' do
       let(:attributes) do
