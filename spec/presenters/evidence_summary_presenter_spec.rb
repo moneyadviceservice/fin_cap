@@ -231,15 +231,22 @@ RSpec.describe EvidenceSummaryPresenter do
     end
   end
 
-  describe '#data_type_keys' do
+  describe '#data_type_definitions' do
     context 'when evidence type is insight' do
       let(:attributes) do
         { evidence_type: 'Insight' }
       end
 
-      it 'returns an array of the different data_types' do
-        expect(presenter.data_type_keys).to match_array(
-          %w[Qualitative Quantitative]
+      it 'returns array of hashes for the different data_types' do
+        # rubocop:disable Metrics/LineLength
+        qualitative_def = 'Qualitative research is more exploratory, and uses a range of methods like interviews, focus groups and observation to gain a deeper understanding about specific issues - such as people’s experiences, behaviours and attitudes.'
+        quantitative_def = 'Quantitative research uses statistical or numerical analysis of survey data to answer questions about how much, how many, how often or to what extent particular characteristics are seen in a population. It is often used to look at changes over time and can identify relationships between characteristics like people’s attitudes and behaviours.'
+        # rubocop:enable Metrics/LineLength
+        expect(presenter.data_type_definitions).to match_array(
+          [
+            { keyword: 'Qualitative', definition: qualitative_def },
+            { keyword: 'Quantitative', definition: quantitative_def }
+          ]
         )
       end
     end
@@ -249,14 +256,16 @@ RSpec.describe EvidenceSummaryPresenter do
         { evidence_type: 'Evaluation' }
       end
 
-      it 'returns an array of the different data_types' do
-        expect(presenter.data_type_keys).to match_array(
+      it 'returns array of hashes for the different data_types' do
+        expect(presenter.data_type_definitions).to match_array(
           [
-            'Programme Theory',
-            'Measured Outcomes',
-            'Causality',
-            'Process Evaluation',
-            'Value for money'
+            # rubocop:disable Metrics/LineLength
+            { keyword: 'Programme Theory', definition: 'Information about the programme design and rationale' },
+            { keyword: 'Measured Outcomes', definition: 'Evidence about Financial Capability outcomes for programme participants' },
+            { keyword: 'Causality', definition: 'Evidence that the Financial Capability outcomes were caused by the programme' },
+            { keyword: 'Process Evaluation', definition: 'Evidence about programme implementation, feasibility, and piloting' },
+            { keyword: 'Value for money', definition: 'Evidence about relative costs and benefits of the programme' }
+            # rubocop:enable Metrics/LineLength
           ]
         )
       end
