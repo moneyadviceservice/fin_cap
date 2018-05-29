@@ -44,6 +44,13 @@
 
   li {
     margin-top: $baseline-unit;
+    padding: $baseline-unit;
+    border: 2px solid $primary-orange;
+    border-radius: $border-radius;
+
+    &:hover {
+      border-color: $primary-blue-dark;
+    }
 
     &::before {
       display: none;
@@ -52,22 +59,16 @@
 
   a {
     display: block;
-    padding: $baseline-unit;
+    padding: 0 23px; // 18px for the arrow (_icons.scss) and a little extra for spacing
     color: $color-black;
     text-align: center;
-    border: 2px solid $primary-orange;
-    border-radius: $border-radius;
     position: relative;
-
-    &:hover {
-      border-color: $primary-blue-dark;
-    }
 
     &:after {
       content: '';
       position: absolute;
-      right: $baseline-unit;
-      top: $baseline-unit;
+      right: 0;
+      top: 0;
       @extend %icon;
       @extend .icon--arrow;
     }
