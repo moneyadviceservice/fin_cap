@@ -59,7 +59,7 @@ class EvidenceSummaryPresenter < BasePresenter
     "#{year_of_publication_field_name}: #{stripped_year_of_publication}"
   end
 
-  def data_type_keys
+  def data_type_definitions
     view.t("fincap.evidence_hub.#{evidence_type.downcase}_summary.data_types")
   end
 
