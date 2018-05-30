@@ -1,6 +1,6 @@
-class ThematicReviewsController < FincapTemplatesController
+class ThematicReviewsLandingPagesController < FincapTemplatesController
   def resource
-    ThematicReviewTemplate.new(Mas::Cms::ThematicReview.find(params[:id]))
+    Mas::Cms::Document.all(params: { document_type: ['thematic_reviews_landing_page'] })
   end
   helper_method :resource
 

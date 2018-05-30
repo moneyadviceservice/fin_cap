@@ -1,2 +1,2 @@
-class ArticleTemplatePresenter < TemplatePresenter
+class ArticleTemplatePresenter < BasePresenter
 end

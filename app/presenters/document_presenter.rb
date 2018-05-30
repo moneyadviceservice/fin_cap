@@ -1,0 +1,2 @@
+class DocumentPresenter < BasePresenter
+end
