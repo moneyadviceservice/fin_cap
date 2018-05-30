@@ -89,4 +89,100 @@ RSpec.describe EvidenceSummariesPresenter do
       end
     end
   end
+
+  describe '#pagination_description' do
+    context 'when no results pages' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 0 } }
+      end
+
+      it 'returns nil' do
+        expect(presenter.pagination_description).to be_nil
+      end
+    end
+
+    context 'when one results page' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 1 } }
+      end
+
+      it 'returns nil' do
+        expect(presenter.pagination_description).to be_nil
+      end
+    end
+
+    context 'when two results pages' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 2, 'page' => 1 } }
+      end
+
+      it 'returns pagination' do
+        expect(presenter.pagination_description).to eq('1 of 2')
+      end
+    end
+  end
+
+  describe '#previous_page' do
+    context 'when no results pages' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 0 } }
+      end
+
+      it 'returns nil' do
+        expect(presenter.previous_page).to be_nil
+      end
+    end
+
+    context 'when one results page' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 1 } }
+      end
+
+      it 'returns nil' do
+        expect(presenter.previous_page).to be_nil
+      end
+    end
+
+    context 'when two results pages' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 2, 'page' => 1 } }
+      end
+
+      it 'returns previous_page' do
+        expect(presenter.previous_page).to eq('<')
+      end
+    end
+  end
+
+  describe '#next_page' do
+    context 'when no results pages' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 0 } }
+      end
+
+      it 'returns nil' do
+        expect(presenter.next_page).to be_nil
+      end
+    end
+
+    context 'when one results page' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 1 } }
+      end
+
+      it 'returns nil' do
+        expect(presenter.next_page).to be_nil
+      end
+    end
+
+    context 'when two results pages' do
+      let(:attributes) do
+        { meta: { 'total_pages' => 2, 'page' => 2 } }
+      end
+
+      it 'returns next_page' do
+        expect(presenter.next_page).to eq('>')
+      end
+    end
+  end
 end
