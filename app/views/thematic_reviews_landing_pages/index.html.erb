@@ -1,0 +1,11 @@
+<div class='l-constrained'>
+  <% present(resource, DocumentPresenter).each do |document| %>
+    <h3><%= document.label %></h3>
+    <% document.blocks.each do |block| %>
+      <%= raw block['content'] %>
+    <% end %>
+  <% end %>
+</div>
+<div class='l-constrained'>
+
+</div>
