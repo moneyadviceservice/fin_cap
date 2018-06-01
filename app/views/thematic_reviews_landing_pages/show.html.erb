@@ -1,0 +1,26 @@
+<div class='l-constrained'>
+  <% present(resource, DocumentPresenter).each do |document| %>
+    <h3><%= document.label %></h3>
+    <% document.blocks.each do |block| %>
+      <%= raw block['content'] %>
+    <% end %>
+  <% end %>
+</div>
+<div class='l-constrained'>
+  <% @documents.each do |document| %>
+    <div class='l-2col'>
+      <div class='l-2col-side'>
+        <div class="hero" style="background-image: url(<%= document.hero_image_block %>);">
+          <h1 class="hero__heading">
+            <%= document.hero_description_component.html_safe %>
+          </h1>
+        </div>
+      </div>
+      <div class='l-2col-main'>
+        <h4><%= document.label %></h4>
+      </div>
+    </div>
+    <p><%= document.inspect  %></p>
+    
+  <% end %>
+</div>
