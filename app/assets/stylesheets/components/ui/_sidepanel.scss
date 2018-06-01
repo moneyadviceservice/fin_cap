@@ -4,6 +4,12 @@
   margin-bottom: $baseline-unit;
 }
 
+.sidepanel__fieldset {
+  margin: $baseline-unit*2 0;
+  border: none;
+  padding: 0;
+}
+
 .sidepanel__title {
   @include body(20, 24);
   color: $primary-blue-dark;
