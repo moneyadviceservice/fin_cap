@@ -8,8 +8,8 @@
 .evaluation-type__icon {
   @extend %border-radius;
   padding: $baseline-unit;
-  height: 20px;
-  width: 20px;
+  height: calc(20px + #{$baseline-unit*2});
+  width: calc(20px + #{$baseline-unit*2});
   vertical-align: middle;
 }
 

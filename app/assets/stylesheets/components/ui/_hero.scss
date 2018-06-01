@@ -13,7 +13,7 @@
   font-weight: 300;
   background-color: $primary-green-pale;
   color: $color-white;
-  padding: $baseline-unit*4 $baseline-unit*2;
+  padding: $baseline-unit*4 $baseline-unit*3;
   margin-top: 12.5rem;
   margin-bottom: 0;
 
@@ -29,7 +29,7 @@
   }
 
   @include respond-to($mq-m) {
-    width: 30%;
+    width: 40%;
   }
 
   .hero--blue & {

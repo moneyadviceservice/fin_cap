@@ -36,6 +36,13 @@
       border-bottom-color: $grey-lighter;
       pointer-events: none;
     }
+
+    p:first-of-type {
+      margin-top: 0;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .js &.js-is-hidden {
