@@ -1,11 +1,23 @@
 class ThematicReviewsLandingPagesController < FincapTemplatesController
+  LANDING_PAGE_DOCUMENT_TYPE = 'thematic_reviews_landing_page'.freeze
+  THEMATIC_REVIEWS_DOCUMENT_TYPE = 'thematic_review'.freeze
+
   def resource
-    Mas::Cms::Document.all(params: { document_type: ['thematic_reviews_landing_page'] })
+    get_documents(LANDING_PAGE_DOCUMENT_TYPE)
   end
   helper_method :resource
 
   def show
-    @thematic_reviews = Mas::Cms::Document.all(params: { document_type: ['thematic_review'] })
-    @documents = @thematic_reviews.map{|document| ThematicReviewTemplate.new(document)}
+    @thematic_reviews = get_documents(THEMATIC_REVIEWS_DOCUMENT_TYPE)
+  end
+
+  private
+
+  def get_documents(document_type)
+    documents = Mas::Cms::Document.all(
+      params: { document_type: [document_type] }
+    )
+
+    documents.map { |document| Document.new(document) }
   end
 end

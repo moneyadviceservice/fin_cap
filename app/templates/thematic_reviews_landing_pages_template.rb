@@ -1,2 +1,0 @@
-class ThematicReviewsLandingPageTemplate < BaseTemplate
-end

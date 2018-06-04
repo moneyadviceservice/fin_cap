@@ -1,26 +1,31 @@
 <div class='l-constrained'>
-  <% present(resource, DocumentPresenter).each do |document| %>
-    <h3><%= document.label %></h3>
-    <% document.blocks.each do |block| %>
-      <%= raw block['content'] %>
-    <% end %>
-  <% end %>
-</div>
-<div class='l-constrained'>
-  <% @documents.each do |document| %>
-    <div class='l-2col'>
-      <div class='l-2col-side'>
-        <div class="hero" style="background-image: url(<%= document.hero_image_block %>);">
-          <h1 class="hero__heading">
-            <%= document.hero_description_component.html_safe %>
-          </h1>
-        </div>
-      </div>
-      <div class='l-2col-main'>
-        <h4><%= document.label %></h4>
+  <div class='row'>
+    <% present_collection(resource).each do |document_presenter| %>
+      <div class='hero hero--blue styleguide__hero'>
+        <h1 class='hero__heading'>
+          <%= document_presenter.title %>
+        </h1>
       </div>
     </div>
-    <p><%= document.inspect  %></p>
-    
+    <div class='row'><%= document_presenter.content.html_safe %></div>
+  <% end %>
+  <% present_collection(@thematic_reviews).each do |document_presenter| %>
+    <div class='row'>
+      <div class='teaser-box--thematic-review'>
+        <img class='teaser-box__image'
+             src=<%= document_presenter.document_image_src %>
+             alt=''
+        />
+        <div class='teaser-box__content'>
+          <h3 class='teaser-box__title'>Thematic Review:</h3>
+          <a href=<%=document_presenter.full_path %> class='teaser-box__content-link'>
+            <%= document_presenter.title %>
+          </a>
+          <p class='teaser-box__content-text'>
+            <%= document_presenter.stripped_overview %> 
+          </p>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
