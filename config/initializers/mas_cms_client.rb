@@ -19,6 +19,3 @@ end
 
 class Mas::Cms::ThematicReview < Mas::Cms::Article
 end
-
-class Mas::Cms::ThematicReviewsLandingPage < Mas::Cms::Article
-end
