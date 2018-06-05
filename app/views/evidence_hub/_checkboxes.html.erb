@@ -1,13 +1,14 @@
 <% form_object.class.human_attribute_name(field).each do |option| %>
   <%= f.label "#{field}_#{option.parameterize}", {class: "checkbox-label"} do %>
-    <%= f.check_box field, 
+    <%= f.check_box field,
       { class: "checkbox",
         name: "#{form_object.class_name}[#{field}][]",
         id: "#{form_object.class_name}_#{field}_#{option.parameterize}",
-        checked: form_object.chosen_options?(option, field) 
-      }, 
-      option, 
-      nil 
+        checked: form_object.chosen_options?(option, field),
+        'data-form-filter-checkbox': true
+      },
+      option,
+      nil
     %>
     <%= option %>
   <% end %>

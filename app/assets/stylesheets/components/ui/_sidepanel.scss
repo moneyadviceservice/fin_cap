@@ -49,9 +49,9 @@
   text-decoration: underline;
 }
 
-.sidepanel__divider {
-  border-bottom: 1px solid $grey-light;
-  margin-bottom: $baseline-unit*3;
+.sidepanel__filters {
+  border-top: 1px solid $grey-light;
+  padding-top: $baseline-unit*3;
 }
 
 // Form Elements

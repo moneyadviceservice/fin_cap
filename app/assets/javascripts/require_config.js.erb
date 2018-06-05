@@ -5,6 +5,7 @@
 //= depend_on_asset components/Nav
 //= depend_on_asset components/Tooltip
 //= depend_on_asset components/Header
+//= depend_on_asset components/Filters
 
 <%
   def requirejs_path(asset)
@@ -23,7 +24,8 @@
       # Components
       Nav: requirejs_path('components/Nav'),
       Tooltip: requirejs_path('components/Tooltip'),
-      Header: requirejs_path('components/Header')
+      Header: requirejs_path('components/Header'),
+      Filters: requirejs_path('components/Filters')
     }
   }
 
