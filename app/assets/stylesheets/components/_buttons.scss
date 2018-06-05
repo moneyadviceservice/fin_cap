@@ -63,6 +63,10 @@ button.btn {
   background-color: $primary-purple;
 }
 
+.btn--disabled {
+  background-color: $color-blue-lighter;
+}
+
 // Modifiers
 // Full width button on all sreen sizes
 .btn--full-width {

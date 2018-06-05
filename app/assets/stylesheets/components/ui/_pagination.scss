@@ -1,0 +1,11 @@
+.pagination__prev-page,
+.pagination__next-page {
+  @extend .btn;
+  @extend .btn--primary;
+}
+
+.pagination__prev-page.disabled,
+.pagination__next-page.disabled {
+  @extend .btn--disabled;
+  cursor: default;
+}
