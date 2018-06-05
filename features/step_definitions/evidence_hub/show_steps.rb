@@ -11,6 +11,10 @@ Given('I entered into the Thematic review page {string}') do |title|
   )
 end
 
+When('I click {string}') do |text|
+  click_link(text)
+end
+
 Then('I should see the evidence summary content') do |table|
   table.rows.each do |row|
     field_name = row[0].parameterize.underscore

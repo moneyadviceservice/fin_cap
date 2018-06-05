@@ -75,3 +75,46 @@ end
 Then('I should see the keyword field cleared') do
   expect(evidence_summaries_page.keyword.value).to eq('')
 end
+
+# rubocop:disable Metrics/LineLength
+Then('I should see the summaries related to {string}') do |title|
+  steps %Q{
+    Then I should see "2" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                                                    |
+      | document title      | Looking after the pennies                                |
+      | overview            | An evaluation, commissioned by Royal London              |
+      | evidence type       | Evaluation                                               |
+    And I should see the "second" evidence summary as
+      | Field               | Value                                                       |
+      | document title      | Raising household saving                                    |
+      | overview            | Based on an analysis of international evidence, this report |
+      | evidence type       | Review                                                      |
+  }
+end
+
+Then('I should see the thematic review message') do |message|
+  expect(
+    evidence_summaries_page.thematic_review_message.text
+  ).to include(message)
+end
+
+Then('I should see the thematic review link {string}') do |link|
+  expect(
+    evidence_summaries_page.thematic_review_message_link[:href]
+  ).to include(link)
+end
+
+Then(
+  'I should see the summaries related to thematic review and has topic Saving'
+) do
+  steps %Q{
+    Then I should see "1" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                                                       |
+      | document title      | Raising household saving                                    |
+      | overview            | Based on an analysis of international evidence, this report |
+      | evidence type       | Review                                                      |
+  }
+  # rubocop:enable Metrics/LineLength
+end

@@ -119,3 +119,5 @@ en:
       key_info: 'Key info'
       insight_summary_name: 'Insight'
       evaluation_summary_name: 'Evaluation'
+      thematic_review:
+        message_box_info: 'You are viewing the relevant evidence summaries for thematic review: %{link}'

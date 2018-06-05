@@ -11,6 +11,10 @@
     <div class="l-2col">
       <div class="l-2col-side">
         <div class="sidepanel">
+          <% present(@documents, EvidenceSummariesPresenter) do |evidence_summaries_presenter| %>
+            <%= evidence_summaries_presenter.thematic_review_message %>
+          <% end %>
+
           <h4 class="sidepanel__title">Keyword search</h4>
 
           <%= render 'search_form' %>

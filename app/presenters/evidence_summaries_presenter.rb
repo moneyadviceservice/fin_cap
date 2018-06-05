@@ -3,6 +3,12 @@ class EvidenceSummariesPresenter < BasePresenter
   PAGINATION_NEXT_TEXT = '>'.freeze
   delegate :params, :evidence_summary_search_form_params, to: :view
 
+  def thematic_review_message
+    return unless params[:tag].present? && collection.present?
+
+    view.render 'thematic_review_message'
+  end
+
   def total_results_description
     view.t(
       'fincap.evidence_hub.pagination.total_results',

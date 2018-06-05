@@ -20,6 +20,11 @@ class EvidenceHubController < EvidenceSummariesController
   end
   helper_method :evidence_summary_search_form_params
 
+  def thematic_review
+    @thematic_review ||= Mas::Cms::ThematicReview.find(params[:tag])
+  end
+  helper_method :thematic_review
+
   private
 
   def form_params
@@ -28,6 +33,7 @@ class EvidenceHubController < EvidenceSummariesController
       page: params[:page] || PAGINATION_DEFAULT_PAGE,
       per_page: params[:per_page] || PAGINATION_PER_PAGE
     }
+    form_params[:tag] = params[:tag] if params[:tag].present?
 
     if clear_search?
       form_params.merge(reset_all_params)
