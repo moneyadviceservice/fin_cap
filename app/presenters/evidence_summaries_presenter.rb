@@ -17,6 +17,8 @@ class EvidenceSummariesPresenter < BasePresenter
   end
 
   def pagination_description
+    return nil unless show_pagination?
+
     view.t(
       'fincap.evidence_hub.pagination.pagination_description',
       current_page: current_page,
@@ -25,6 +27,8 @@ class EvidenceSummariesPresenter < BasePresenter
   end
 
   def previous_page
+    return nil unless show_pagination?
+
     if first_page?
       PAGINATION_PREVIOUS_TEXT
     else
@@ -39,6 +43,8 @@ class EvidenceSummariesPresenter < BasePresenter
   end
 
   def next_page
+    return nil unless show_pagination?
+
     if last_page?
       PAGINATION_NEXT_TEXT
     else
@@ -76,5 +82,9 @@ class EvidenceSummariesPresenter < BasePresenter
 
   def next_page_number
     current_page + 1
+  end
+
+  def show_pagination?
+    total_pages.to_i > 1
   end
 end
