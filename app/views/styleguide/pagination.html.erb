@@ -74,3 +74,33 @@
     <span class="pagination__next-page disabled">&gt;</span>
   </div>
 </xmp>
+
+<h3 class="styleguide__subheading">Pagination with Description</h3>
+<div class="styleguide__example">
+  <div class="pagination__wrap">
+    <div class="pagination__description">6 documents found</div>
+    <div class="pagination">
+      <a class="pagination__prev-page" href="#page=3">&lt;</a>
+      <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+        current_page: 4,
+        total_pages: 6) 
+      %>
+      <a class="pagination__next-page" href="#page=5">&gt;</a>
+    </div>
+  </div>
+</div>
+
+<h3 class="styleguide__subheading">HTML Code</h3>
+<xmp>
+  <div class="pagination__wrap">
+    <div class="pagination__description">6 documents found</div>
+    <div class="pagination">
+      <a class="pagination__prev-page" href="#page=3">&lt;</a>
+      <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+        current_page: 4,
+        total_pages: 6) 
+      %>
+      <a class="pagination__next-page" href="#page=5">&gt;</a>
+    </div>
+  </div>
+</xmp>
