@@ -117,7 +117,7 @@ RSpec.describe EvidenceSummariesPresenter do
       end
 
       it 'returns pagination' do
-        expect(presenter.pagination_description).to eq('1 of 2')
+        expect(presenter.pagination_description).to eq('Page 1 of 2')
       end
     end
   end
@@ -149,7 +149,7 @@ RSpec.describe EvidenceSummariesPresenter do
       end
 
       it 'returns previous_page' do
-        expect(presenter.previous_page).to eq('<')
+        expect(presenter.previous_page).to eq('<span class="pagination__prev-page disabled">&lt;</span>')
       end
     end
   end
@@ -181,7 +181,7 @@ RSpec.describe EvidenceSummariesPresenter do
       end
 
       it 'returns next_page' do
-        expect(presenter.next_page).to eq('>')
+        expect(presenter.next_page).to eq('<span class="pagination__next-page disabled">&gt;</span>')
       end
     end
   end
