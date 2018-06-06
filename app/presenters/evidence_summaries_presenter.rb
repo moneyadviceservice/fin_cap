@@ -30,14 +30,18 @@ class EvidenceSummariesPresenter < BasePresenter
     return nil unless show_pagination?
 
     if first_page?
-      PAGINATION_PREVIOUS_TEXT
+      view.content_tag(
+        :span,
+        PAGINATION_PREVIOUS_TEXT,
+        class: 'pagination__prev-page disabled'
+      )
     else
       view.link_to(
         PAGINATION_PREVIOUS_TEXT,
         view.evidence_hub_index_path(
           params.permit!.merge(page: previous_page_number)
         ),
-        class: 'evidence-hub__previous-page'
+        class: 'pagination__prev-page evidence-hub__previous-page'
       )
     end
   end
@@ -46,14 +50,18 @@ class EvidenceSummariesPresenter < BasePresenter
     return nil unless show_pagination?
 
     if last_page?
-      PAGINATION_NEXT_TEXT
+      view.content_tag(
+        :span,
+        PAGINATION_NEXT_TEXT,
+        class: 'pagination__next-page disabled'
+      )
     else
       view.link_to(
         PAGINATION_NEXT_TEXT,
         view.evidence_hub_index_path(
           params.permit!.merge(page: next_page_number)
         ),
-        class: 'evidence-hub__next-page'
+        class: 'pagination__next-page evidence-hub__next-page'
       )
     end
   end

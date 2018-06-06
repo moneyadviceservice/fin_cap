@@ -21,12 +21,16 @@
         </div>
       </div>
       <div class="l-2col-main">
-        <% present(@documents, EvidenceSummariesPresenter) do |evidence_summaries_presenter| %>
-          <%= evidence_summaries_presenter.total_results_description %>
-          <%= evidence_summaries_presenter.pagination_description %>
-          <%= evidence_summaries_presenter.previous_page %>
-          <%= evidence_summaries_presenter.next_page %>
-        <% end %>
+        <div class="pagination__wrap">
+          <% present(@documents, EvidenceSummariesPresenter) do |evidence_summaries_presenter| %>
+            <div class="pagination__description"><%= evidence_summaries_presenter.total_results_description %></div>
+            <div class="pagination">
+              <%= evidence_summaries_presenter.previous_page %>
+              <%= evidence_summaries_presenter.pagination_description %>
+              <%= evidence_summaries_presenter.next_page %>
+            </div>
+          <% end %>
+        </div>
 
         <ul class="search-results">
           <% present_collection(@evidence_summaries).each do |document| %>
