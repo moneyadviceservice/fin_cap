@@ -1,5 +1,17 @@
 <h1>UI Components</h1>
-<h2>Teaser box</h2>
+<h2>Teaser box variants</h2>
+<ul class="styleguide__list">
+  <li class="styleguide__list-item">
+    <a href="#default-teaser-box">Default Teaser box</a>
+  </li>
+  <li class="styleguide__list-item">
+    <a href="#horizontal-teaser-box-ew">Horizontal Teaser box (equal widths)</a>
+  </li>
+  <li class="styleguide__list-item">
+    <a href="#horizontal-teaser-box-tr">Horizontal Teaser box (Thematic Review)</a>
+  </li>
+</ul>
+<h2>Default Teaser box</h2>
 <p>The teaser box component comes in groups of 3 in all cases.</p>
 <p>To ensure the height of each image is consistent across all 3 teaser boxes, there are some basic requirements for the image used:</p>
 <ul>
@@ -7,7 +19,7 @@
   <li>Height: 250px</li>
 </ul>
 
-<h3 class="styleguide__subheading">Default Teaser box</h3>
+<h3 class="styleguide__subheading" id="default-teaser-box">Default Teaser box</h3>
 <div class="styleguide__example">
   <div class="teaser-box__group">
     <h2 class="teaser-box__group-title">Group title</h2>
@@ -77,7 +89,7 @@
   </div>
 </xmp>
 
-<h3 class="styleguide__subheading">Horizontal Teaser box (equal widths)</h3>
+<h3 class="styleguide__subheading" id="horizontal-teaser-box-ew">Horizontal Teaser box (equal widths)</h3>
 <div class="styleguide__example">
   <div class="teaser-box--horizontal">
     <%= image_tag 'styleguide/teaser-image.png', class: 'teaser-box__image' %>
@@ -100,7 +112,7 @@
     </div>
   </div>
 </xmp>
-<h3 class="styleguide__subheading">Horizontal Teaser box (Thematic Review)</h3>
+<h3 class="styleguide__subheading" id="horizontal-teaser-box-tr">Horizontal Teaser box (Thematic Review)</h3>
 <div class="styleguide__example">
   <div class="teaser-box--thematic-review">
     <%= image_tag 'styleguide/teaser-image.png', class: 'teaser-box__image' %>
