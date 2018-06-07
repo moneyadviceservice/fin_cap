@@ -39,8 +39,10 @@
   margin-left: $baseline-unit;
 }
 
-.pagination__prev-page.disabled,
-.pagination__next-page.disabled {
-  @extend .btn--disabled;
-  cursor: default;
+.pagination__prev-page,
+.pagination__next-page {
+  &.is-disabled {
+    @extend .btn--disabled;
+    cursor: default;
+  }
 }

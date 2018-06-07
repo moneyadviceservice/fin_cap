@@ -94,7 +94,7 @@ class EvidenceSummariesPresenter < BasePresenter
     view.content_tag(
       :span,
       pagination_text,
-      class: class_name + ' disabled'
+      class: class_name + ' is-disabled'
     )
   end
 

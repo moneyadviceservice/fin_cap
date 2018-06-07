@@ -150,7 +150,7 @@ RSpec.describe EvidenceSummariesPresenter do
 
       it 'returns previous_page' do
         expect(presenter.previous_page).to eq(
-          '<span class="pagination__prev-page disabled">&lt;</span>'
+          '<span class="pagination__prev-page is-disabled">&lt;</span>'
         )
       end
     end
@@ -184,7 +184,7 @@ RSpec.describe EvidenceSummariesPresenter do
 
       it 'returns next_page' do
         expect(presenter.next_page).to eq(
-          '<span class="pagination__next-page disabled">&gt;</span>'
+          '<span class="pagination__next-page is-disabled">&gt;</span>'
         )
       end
     end
