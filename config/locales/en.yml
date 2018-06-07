@@ -91,7 +91,7 @@ en:
     evidence_hub:
       pagination:
         total_results: '%{total_results} documents found'
-        pagination_description: '%{current_page} of %{total_pages}'
+        pagination_description: 'Page %{current_page} of %{total_pages}'
       insight_summary:
         data_types:
           - keyword: Qualitative

@@ -30,14 +30,15 @@ class EvidenceSummariesPresenter < BasePresenter
     return nil unless show_pagination?
 
     if first_page?
-      PAGINATION_PREVIOUS_TEXT
-    else
-      view.link_to(
+      pagination_no_link(
         PAGINATION_PREVIOUS_TEXT,
-        view.evidence_hub_index_path(
-          params.permit!.merge(page: previous_page_number)
-        ),
-        class: 'evidence-hub__previous-page'
+        'pagination__prev-page'
+      )
+    else
+      pagination_link(
+        PAGINATION_PREVIOUS_TEXT,
+        'pagination__prev-page evidence-hub__previous-page',
+        previous_page_number
       )
     end
   end
@@ -46,14 +47,15 @@ class EvidenceSummariesPresenter < BasePresenter
     return nil unless show_pagination?
 
     if last_page?
-      PAGINATION_NEXT_TEXT
-    else
-      view.link_to(
+      pagination_no_link(
         PAGINATION_NEXT_TEXT,
-        view.evidence_hub_index_path(
-          params.permit!.merge(page: next_page_number)
-        ),
-        class: 'evidence-hub__next-page'
+        'pagination__next-page'
+      )
+    else
+      pagination_link(
+        PAGINATION_NEXT_TEXT,
+        'pagination__next-page evidence-hub__next-page',
+        next_page_number
       )
     end
   end
@@ -86,5 +88,23 @@ class EvidenceSummariesPresenter < BasePresenter
 
   def show_pagination?
     total_pages.to_i > 1
+  end
+
+  def pagination_no_link(pagination_text, class_name)
+    view.content_tag(
+      :span,
+      pagination_text,
+      class: class_name + ' is-disabled'
+    )
+  end
+
+  def pagination_link(pagination_text, class_name, page_number)
+    view.link_to(
+      pagination_text,
+      view.evidence_hub_index_path(
+        params.permit!.merge(page: page_number)
+      ),
+      class: class_name
+    )
   end
 end

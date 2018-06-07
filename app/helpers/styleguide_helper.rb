@@ -43,7 +43,8 @@ module StyleguideHelper
     'Info Icon' => 'info_icon',
     'Countries List' => 'countries',
     'Life Stages' => 'lifestages',
-    'Tooltip' => 'tooltip'
+    'Tooltip' => 'tooltip',
+    'Pagination' => 'pagination'
   }.freeze
 
   PAGE_SPECIFIC = {

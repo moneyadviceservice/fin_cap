@@ -1,0 +1,106 @@
+<h1>UI Components</h1>
+<h2>Pagination</h2>
+
+<h2>Example Usage</h2>
+
+<h3 class="styleguide__subheading">Pagination First Page</h3>
+<div class="styleguide__example">
+  <div class="pagination">
+    <span class="pagination__prev-page disabled">&lt;</span>
+    <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+      current_page: 1,
+      total_pages: 6) 
+    %>
+    <a class="pagination__next-page" href="#page=2">&gt;</a>
+  </div>
+</div>
+
+<h3 class="styleguide__subheading">HTML Code</h3>
+<xmp>
+  <div class="pagination">
+    <span class="pagination__prev-page disabled">&lt;</span>
+    <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+      current_page: 1,
+      total_pages: 6) 
+    %>
+    <a class="pagination__next-page" href="#page=2">&gt;</a>
+  </div>
+</xmp>
+
+<h3 class="styleguide__subheading">Pagination Middle Pages</h3>
+<div class="styleguide__example">
+  <div class="pagination">
+    <a class="pagination__prev-page" href="#page=2">&lt;</a>
+    <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+      current_page: 3,
+      total_pages: 6) 
+    %>
+    <a class="pagination__next-page" href="#page=4">&gt;</a>
+  </div>
+</div>
+
+<h3 class="styleguide__subheading">HTML Code</h3>
+<xmp>
+  <div class="pagination">
+    <a class="pagination__prev-page" href="#page=2">&lt;</a>
+    <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+      current_page: 3,
+      total_pages: 6) 
+    %>
+    <a class="pagination__next-page" href="#page=4">&gt;</a>
+  </div>
+</xmp>
+
+<h3 class="styleguide__subheading">Pagination Last Page</h3>
+<div class="styleguide__example">
+  <div class="pagination">
+    <a class="pagination__prev-page" href="#page=5">&lt;</a>
+    <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+      current_page: 6,
+      total_pages: 6) 
+    %>
+    <span class="pagination__next-page disabled">&gt;</span>
+  </div>
+</div>
+
+<h3 class="styleguide__subheading">HTML Code</h3>
+<xmp>
+  <div class="pagination">
+    <a class="pagination__prev-page" href="#page=5">&lt;</a>
+    <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+      current_page: 6,
+      total_pages: 6) 
+    %>
+    <span class="pagination__next-page disabled">&gt;</span>
+  </div>
+</xmp>
+
+<h3 class="styleguide__subheading">Pagination with Description</h3>
+<div class="styleguide__example">
+  <div class="pagination__wrap">
+    <div class="pagination__description">6 documents found</div>
+    <div class="pagination">
+      <a class="pagination__prev-page" href="#page=3">&lt;</a>
+      <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+        current_page: 4,
+        total_pages: 6) 
+      %>
+      <a class="pagination__next-page" href="#page=5">&gt;</a>
+    </div>
+  </div>
+</div>
+
+<h3 class="styleguide__subheading">HTML Code</h3>
+<xmp>
+  <div class="pagination__wrap">
+    <div class="pagination__description">6 documents found</div>
+    <div class="pagination">
+      <a class="pagination__prev-page" href="#page=3">&lt;</a>
+      <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
+        current_page: 4,
+        total_pages: 6) 
+      %>
+      <a class="pagination__next-page" href="#page=5">&gt;</a>
+    </div>
+  </div>
+</xmp>

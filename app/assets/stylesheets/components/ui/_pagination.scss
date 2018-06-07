@@ -1,0 +1,48 @@
+.pagination__wrap {
+  margin: $baseline-unit 0;
+}
+
+.pagination,
+.pagination__description { 
+  display: block;
+}
+
+@include respond-to($mq-m) {
+  .pagination__wrap {
+    @include clearfix();
+    margin: 0;
+  }
+
+  .pagination__description {
+    float: left;
+    margin: $baseline-unit * 3 0;
+  } 
+
+  .pagination {
+    float: right;
+  }
+} 
+
+
+.pagination__prev-page,
+.pagination__next-page {
+  @extend .btn;
+  @extend .btn--primary;
+  display: inline-block;
+}
+
+.pagination__prev-page {
+  margin-right: $baseline-unit;
+}
+
+.pagination__next-page {
+  margin-left: $baseline-unit;
+}
+
+.pagination__prev-page,
+.pagination__next-page {
+  &.is-disabled {
+    @extend .btn--disabled;
+    cursor: default;
+  }
+}
