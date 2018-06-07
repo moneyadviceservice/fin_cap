@@ -40,6 +40,7 @@ require.config({
     Nav: 'app/assets/javascripts/components/Nav',
     Nav_A11Y: 'app/assets/javascripts/components/Nav_A11Y',
     Tooltip: 'app/assets/javascripts/components/Tooltip',
-    Header: 'app/assets/javascripts/components/Header'
+    Header: 'app/assets/javascripts/components/Header',
+    Filters: 'app/assets/javascripts/components/Filters'
   }
 })

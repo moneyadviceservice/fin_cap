@@ -1,10 +1,11 @@
 <% form_object.class.human_attribute_name(field).each do |option| %>
   <%= f.label "#{field}_#{option.parameterize}", {class: "radio-option"} do %>
     <%= f.radio_button field,
-      option, { 
+      option, {
         id: "#{form_object.class_name}_#{field}_#{option.parameterize}",
-        checked: form_object.chosen_options?(option, field)
-      } 
+        checked: form_object.chosen_options?(option, field),
+        'data-form-filter-radio': true
+      }
     %>
     <%= option %>
   <% end %>
