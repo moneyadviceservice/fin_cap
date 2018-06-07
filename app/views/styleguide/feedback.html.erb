@@ -1,19 +1,15 @@
 <h1>UI Components</h1>
 <h2>Feedback box</h2>
-<p>Developer notes: This component uses a partial view for the title and email address which expects values.</p>
-<p>To render in the view, call the partial from "shared/feedback.html.erb" and include the values:</p>
+<p>Developer notes: This component uses a partial view that requires the local 'content' which is the email address. It uses a translation key for the box title.</p>
+<p>To render in the view, call the partial "shared/feedback.html.erb" with a "content" value:</p>
 <p>
-  &lt;%= <strong>render</strong> 'shared/feedback', <strong>title:</strong> 'Feedback title', <strong>email:</strong> 'target@email' %>
+  &lt;%= <strong>render</strong> 'shared/feedback', <strong>content:</strong> 'target@email' %>
 </p>
 <h3 class="styleguide__subheading">Default Feedback box</h3>
 <div class="styleguide__example">
-  <%= render 'shared/feedback',
-      title: 'Give us your feedback or ask a question',
-      email: 'whatworks@fincap.org.uk' %>
+  <%= render 'shared/feedback', content: 'whatworks@fincap.org.uk' %>
 </div>
 <h3 class="styleguide__subheading">Code</h3>
 <xmp>
-  <%= render 'shared/feedback',
-      title: 'Give us your feedback or ask a question',
-      email: 'whatworks@fincap.org.uk' %>
+  <%= render 'shared/feedback', content: 'whatworks@fincap.org.uk' %>
 </xmp>
