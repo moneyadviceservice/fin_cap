@@ -1,0 +1,2 @@
+class ThematicReview < EvidenceSummary
+end

@@ -1,5 +1,5 @@
-class DocumentPresenter < EvidenceSummaryPresenter
-  def document_image_src
+class ThematicReviewPresenter < EvidenceSummaryPresenter
+  def hero_image_src
     hero_image_block ? view.strip_tags(hero_image_block['content'].squish) : ''
   end
 

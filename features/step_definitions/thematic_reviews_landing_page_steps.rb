@@ -8,7 +8,6 @@ Then("I should see the thematic reviews landing page content") do
 end
 
 Then('I should see the {string} thematic review as') do |result_number, table|
-  save_and_open_page
   tr = thematic_reviews_landing_page.thematic_reviews.send(result_number)
 
   table.rows.each do |row|

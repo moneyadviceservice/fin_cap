@@ -1,19 +1,17 @@
 <div class='l-constrained'>
-  <div class='row'>
-    <% present_collection(resource).each do |document_presenter| %>
+  <% present_collection(@index_page).each do |presenter| %>
+    <div class='row'>
       <div class='hero hero--blue styleguide__hero'>
-        <h1 class='hero__heading'>
-          <%= document_presenter.title %>
-        </h1>
+        <h1 class='hero__heading'><%= presenter.title %></h1>
       </div>
     </div>
-    <div class='row'><%= document_presenter.content.html_safe %></div>
+    <div class='row'><%= presenter.content.html_safe %></div>
   <% end %>
   <% present_collection(@thematic_reviews).each do |document_presenter| %>
     <div class='row'>
       <div class='teaser-box--thematic-review'>
         <img class='teaser-box__image'
-             src=<%= document_presenter.document_image_src %>
+             src=<%= document_presenter.hero_image_src %>
              alt=''
         />
         <div class='teaser-box__content'>

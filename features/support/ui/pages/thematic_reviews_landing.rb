@@ -7,7 +7,7 @@ module UI::Pages
       element :overview, '.teaser-box__content-text' 
     end
 
-    set_url '/en/thematic_reviews_landing_pages/show'
+    set_url '/en/thematic_reviews'
     element :heading, '.hero__heading'
 
     sections :thematic_reviews, ThematicReview, '.teaser-box--thematic-review'
