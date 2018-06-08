@@ -12,7 +12,7 @@ Feature: Thematic Reviews Landing Page
       | overview | Some overview                                               |
     And I should see the "first" thematic review link
     And I should see the "second" thematic review as
-      | Field    | Value                                                  |
-      | title    | How can we iencourage people to save, and to save more |
-      | overview | how-can-we-iencourage-people-to-save-and-to-save-more  |
+      | Field    | Value                                                |
+      | title    | How can we encourage people to save, and to save more |
+      | overview | A critical aspect of both financial capability and financial|
     And I should see the "second" thematic review link

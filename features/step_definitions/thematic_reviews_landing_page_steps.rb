@@ -1,14 +1,13 @@
-Given("I visit the thematic reviews landing page") do
+Given('I visit the thematic reviews landing page') do
   thematic_reviews_landing_page.load
 end
 
-Then("I should see the thematic reviews landing page content") do
+Then('I should see the thematic reviews landing page content') do
   expect(thematic_reviews_landing_page.heading)
     .to have_content('Thematic Reviews')
 end
 
 Then('I should see the {string} thematic review as') do |result_number, table|
-  save_and_open_page
   tr = thematic_reviews_landing_page.thematic_reviews.send(result_number)
 
   table.rows.each do |row|
@@ -17,7 +16,7 @@ Then('I should see the {string} thematic review as') do |result_number, table|
   end
 end
 
-Then("I should see the {string} thematic review link") do |result_number|
+Then('I should see the {string} thematic review link') do |result_number|
   tr = thematic_reviews_landing_page.thematic_reviews.send(result_number)
   title_link = tr.title.text.parameterize
   expect(tr.title['href']).to eq("/en/thematic_reviews/#{title_link}")
