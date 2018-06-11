@@ -12,7 +12,10 @@
 
 .teaser-box__group-content {
   @include respond-to($mq-s) {
-    display: flex;
+
+    .object-fit & {
+      display: flex;
+    }
   }
 }
 
@@ -27,14 +30,20 @@
   @include respond-to($mq-s) {
     @include column(4);
     margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
+
+    .object-fit & {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
 .teaser-box__image {
   width: 100%;
-  display: block;
+
+  .object-fit & {
+    object-fit: cover;
+  }
 }
 
 .teaser-box__title {
@@ -44,8 +53,11 @@
 .teaser-box__content {
   @include body(14, 22);
   margin: 0 $baseline-unit $baseline-unit*2;
-  flex: 1 0 auto;
-  flex-direction: column;
+
+  .object-fit & {
+    flex: 1 0 auto;
+    flex-direction: column;
+  }
 }
 
 .teaser-box__cta {
@@ -61,13 +73,19 @@
   background-color: $color-blue-lighter;
 
   @include respond-to($mq-m) {
-    display: flex;
+    .object-fit & {
+      display: flex;
+    }
   }
 
   .teaser-box__image {
+    float: left;
     @include respond-to($mq-m) {
       width: 50%;
-      flex: 1;
+
+      .object-fit & {
+        flex: 1;
+      }
     }
   }
 
@@ -75,7 +93,11 @@
     @include column(12);
 
     @include respond-to($mq-m) {
-      flex: 1;
+      @include column(6);
+
+      .object-fit & {
+        flex: 1;
+      }
     }
   }
 
@@ -98,14 +120,17 @@
   
   .teaser-box__image {
     @include respond-to($mq-m) {
-      width: 30%;
+      width: 33%;
     }
   }
 
   .teaser-box__content {
     @include respond-to($mq-m) {
-      width: 70%;
-      flex-grow: 2;
+      @include column(8);
+
+      .object-fit & {
+        flex-grow: 2;
+      }
     }
   }
 
