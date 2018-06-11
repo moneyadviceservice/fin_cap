@@ -1,2 +1,0 @@
-class ThematicReview < EvidenceSummary
-end
