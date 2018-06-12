@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resources :insights, only: :show
     resources :reviews, only: :show
     resources :thematic_reviews, only: [:index, :show]
+
+    get '/:page_type/:id/preview' => 'documents_preview#show',
+        page_type: /articles|evaluations|insights|reviews|thematic_reviews|thematic_reviews_landing_pages/
   end
 
   # Styleguide
