@@ -1,5 +1,19 @@
 <div class="sidepanel__filters">
-  <h4 class="sidepanel__title"><%= I18n.t('evidence_hub.filters_header') %></h4>
+  <a href="#" role="button" class="sidepanel__filter-toggle">
+    <h4 class="sidepanel__title">
+      <%= I18n.t('evidence_hub.filters_header') %>
+      <svg xmlns="http://www.w3.org/2000/svg"
+          class="sidepanel__filter-toggle-icon svg-icon--close"
+          focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--close"></use>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg"
+          class="sidepanel__filter-toggle-icon svg-icon--open show"
+          focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--close"></use>
+      </svg>
+    </h4>
+  </a>
 
   <% EvidenceSummarySearchForm.radio_button_filters.each do |filter| %>
     <fieldset class="sidepanel__fieldset">
