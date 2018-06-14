@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Museo Rounded";
+  font-weight: 300;
+  src: font-url("museo-rounded_300.ttf") format('truetype');
+  src: font-url("museo-rounded_300.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Museo Rounded";
+  font-weight: 500;
+  src: font-url("museo-rounded_500.ttf") format('truetype');
+  src: font-url("museo-rounded_500.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Museo Rounded";
+  font-weight: 700;
+  src: font-url("museo-rounded_700.ttf") format('truetype');
+  src: font-url("museo-rounded_700.woff") format('woff');
+}
+
+body {
+  @include body(16,24);
+  font-family: "Museo Rounded";
+  font-weight: 300;
+}
