@@ -1,0 +1,2 @@
+class ThematicReviewsLandingPageTemplatePresenter < TemplatePresenter
+end

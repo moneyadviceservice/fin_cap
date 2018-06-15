@@ -4,7 +4,7 @@ class TemplatePresenter < BasePresenter
   end
 
   def hero_description_component
-    hero_description_block.try(:content).to_s
+    view.strip_tags(hero_description_block.try(:content).to_s)
   end
 
   def download_component
@@ -17,6 +17,10 @@ class TemplatePresenter < BasePresenter
 
   def feedback_component
     render_component(:feedback, content: feedback_content)
+  end
+
+  def overview_content
+    view.strip_tags(overview_block.try(:content).to_s)
   end
 
   private

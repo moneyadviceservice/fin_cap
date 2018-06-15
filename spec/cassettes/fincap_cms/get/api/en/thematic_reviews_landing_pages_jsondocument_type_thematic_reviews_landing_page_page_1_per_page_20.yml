@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/thematic_reviews_landing_pages.json?document_type%5B%5D=thematic_reviews_landing_page&page=1&per_page=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.13.0 (Margo-Urey-00241.local; margourey; 37228) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Sat, 16 Jun 2018 08:22:22 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"d510d85dbbf475d49eb7d7b7cad08238"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 344eaba9-4186-4308-a1c2-21004cc5e0a9
+      x-runtime:
+      - '0.547341'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkb2N1bWVudHMiOlt7ImxhYmVsIjoiVGhlbWF0aWMgUmV2aWV3cyIsInNsdWciOiJ0aGVtYXRpYy1yZXZpZXdzIiwiZnVsbF9wYXRoIjoiL2VuL3RoZW1hdGljX3Jldmlld3NfbGFuZGluZ19wYWdlcy90aGVtYXRpYy1yZXZpZXdzIiwibWV0YV9kZXNjcmlwdGlvbiI6IiIsIm1ldGFfdGl0bGUiOiIiLCJjYXRlZ29yeV9uYW1lcyI6W10sImxheW91dF9pZGVudGlmaWVyIjoidGhlbWF0aWNfcmV2aWV3c19sYW5kaW5nX3BhZ2UiLCJyZWxhdGVkX2NvbnRlbnQiOnsibGF0ZXN0X2Jsb2dfcG9zdF9saW5rcyI6W3sidGl0bGUiOiJDYW4geW91IGxpdmUgd2l0aG91dCBhIGJhbmsgYnJhbmNoPyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvY2FuLXlvdS1saXZlLXdpdGhvdXQtYS1iYW5rLWJyYW5jaCJ9LHsidGl0bGUiOiJBcmUgWU9VIGRvaW5nIHRoZSAxMSB3b3JzdCB0aGluZ3MgZm9yIHlvdXIgY3JlZGl0IHNjb3JlPyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvMTEtd29yc3QtdGhpbmdzLWZvci15b3VyLWNyZWRpdC1zY29yZSJ9LHsidGl0bGUiOiJZb3UgYW5kIHlvdXIgcGFydG5lcuKAmXMgbGlmZSBjaGFuZ2luZyBtb25leSBzZWNyZXRzICIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvcGFydG5lcnMtbGlmZS1jaGFuZ2luZy1tb25leS1zZWNyZXRzIn1dLCJwb3B1bGFyX2xpbmtzIjpbXSwicmVsYXRlZF9saW5rcyI6W10sInByZXZpb3VzX2xpbmsiOnt9LCJuZXh0X2xpbmsiOnt9fSwicHVibGlzaGVkX2F0IjoiMjAxOC0wNi0xNVQyMTozNTo1MC4wMDBaIiwic3VwcG9ydHNfYW1wIjp0cnVlLCJibG9ja3MiOlt7ImlkZW50aWZpZXIiOiJjb250ZW50IiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VUaGVtYXRpYyBSZXZpZXdzIGFyZSBzaG9ydCBvdmVydmlld3Mgb2Yga2V5IGZpbmRpbmdzIGZyb20gbXVsdGlwbGUgVUstYmFzZWRcdTAwM2Niclx1MDAzZVxucmVzZWFyY2ggYW5kIGV2YWx1YXRpb24gcmVwb3J0cyBvbiBhIHBhcnRpY3VsYXIgdG9waWMuIEVhY2ggcmV2aWV3IHdpbGwgdmFyeVx1MDAzY2JyXHUwMDNlXG5kZXBlbmRpbmcgb24gdGhlIGF2YWlsYWJsZSBpbmZvcm1hdGlvbiwgYW5kIHdpbGwgYWltIHRvIGluY2x1ZGU6XHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjdWxcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VIZWFkbGluZXMgYWJvdXQgY29udGV4dCwgbGFuZHNjYXBlIGFuZCBuZWVkc1x1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZUFuIGludHJvZHVjdGlvbiB0byBldmlkZW5jZSBhYm91dCB3aGF0IHdvcmtzIHdlbGwgLSBhbmQgbGVzcyB3ZWxsIC0gdG8gaW1wcm92ZSBwZW9wbGXigJlzIGZpbmFuY2lhbCBjYXBhYmlsaXR5XHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlQXJlYXMgd2hlcmUgZnVydGhlciBpbnZlc3RpZ2F0aW9uIGlzIG5lZWRlZFx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZUxpbmtzIHRvIHNwZWNpZmljIHN0dWRpZXMgc3VtbWFyaXNlZCBlbHNld2hlcmUgb24gdGhlIEh1Ylx1MDAzYy9saVx1MDAzZVxuXHUwMDNjL3VsXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VXZSBob3BlIG91ciBUaGVtYXRpYyBSZXZpZXdzIHByb3ZpZGUgYSB1c2VmdWwgb3ZlcnZpZXcgdG8gaGVscCB5b3UgZ2V0IGEgcXVpY2sgdW5kZXJzdGFuZGluZyBvbiBhIHBhcnRpY3VsYXIgdG9waWMsXHUwMDNjYnJcdTAwM2Vcbm9yIHRvIGFjdCBhcyBhIOKAmHdheSBpbuKAmSB0byBtb3JlIGRldGFpbGVkIGluZm9ybWF0aW9uIGNvbnRhaW5lZCBpbiBzcGVjaWZpYyBcdTAwM2NhIGhyZWY9XCIvZXZpZGVuY2VfaHViX3NlYXJjaFwiXHUwMDNlRXZpZGVuY2UgU3VtbWFyaWVzXHUwMDNjL2FcdTAwM2UuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVBsZWFzZSBjb250YWN0IHVzIGF0IFx1MDAzY2EgaHJlZj1cIm1haWx0bzp3aGF0d29ya3NAZmluY2FwLm9yZy51a1wiXHUwMDNld2hhdHdvcmtzQGZpbmNhcC5vcmcudWtcdTAwM2MvYVx1MDAzZSBpZiB5b3UgaGF2ZSBhbnkgZmVlZGJhY2ssXHUwMDNjYnJcdTAwM2VcbmluY2x1ZGluZyBzdWdnZXN0aW9ucyBmb3IgcmVzZWFyY2ggdGhhdCB5b3UgdGhpbmsgc2hvdWxkIGJlIGNvdmVyZWRcdTAwM2Niclx1MDAzZVxuaW4gZnV0dXJlIHVwZGF0ZXMuXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA2LTE1VDE5OjAxOjA5LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNi0xNVQyMToyODozMi4wMDBaIn0seyJpZGVudGlmaWVyIjoiY29tcG9uZW50X2hlcm9faW1hZ2UiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZS9hc3NldHMvc3R5bGVndWlkZS9oZXJvLXNhbXBsZS5qcGdcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDYtMTVUMjE6Mjg6MzIuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA2LTE1VDIxOjM1OjUwLjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfaGVyb19kZXNjcmlwdGlvbiIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlVGhlbWF0aWMgUmV2aWV3c1x1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNi0xNVQyMToyODozMi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDYtMTVUMjE6MzU6NTAuMDAwWiJ9XSwidHJhbnNsYXRpb25zIjpbXX1dLCJtZXRhIjp7InJlc3VsdHMiOjEsInBhZ2UiOjEsInBlcl9wYWdlIjoyMCwidG90YWxfcGFnZXMiOjF9fQ==
+    http_version: 
+  recorded_at: Sat, 16 Jun 2018 08:22:22 GMT
+recorded_with: VCR 4.0.0
