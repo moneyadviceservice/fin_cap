@@ -9,6 +9,7 @@ module World
       evidence_summaries
       evidence_summary
       thematic_review
+      thematic_reviews_landing
     ]
 
     pages.each do |page|

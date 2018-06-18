@@ -5,7 +5,7 @@ RSpec.describe BaseTemplate do
   end
 
   describe '#feedback_block' do
-    context 'when blocks is present' do
+    context 'when block is present' do
       let(:attributes) do
         {
           non_content_blocks: [
@@ -27,7 +27,7 @@ RSpec.describe BaseTemplate do
       end
     end
 
-    context 'when blocks is not present' do
+    context 'when block is not present' do
       let(:attributes) do
         { non_content_blocks: [] }
       end
@@ -39,7 +39,7 @@ RSpec.describe BaseTemplate do
   end
 
   describe '.download_block' do
-    context 'when blocks is present' do
+    context 'when block is present' do
       let(:attributes) do
         {
           non_content_blocks: [
@@ -61,7 +61,7 @@ RSpec.describe BaseTemplate do
       end
     end
 
-    context 'when download blocks is not present' do
+    context 'when block is not present' do
       let(:attributes) do
         { non_content_blocks: [] }
       end
@@ -73,7 +73,7 @@ RSpec.describe BaseTemplate do
   end
 
   describe '.cta_links_block' do
-    context 'when blocks is present' do
+    context 'when block is present' do
       let(:attributes) do
         {
           non_content_blocks: [
@@ -95,13 +95,47 @@ RSpec.describe BaseTemplate do
       end
     end
 
-    context 'when cta blocks is not present' do
+    context 'when block is not present' do
       let(:attributes) do
         { non_content_blocks: [] }
       end
 
       it 'returns nil' do
         expect(subject.cta_links_block).to be_nil
+      end
+    end
+  end
+
+  describe '#overview_block' do
+    context 'when block is present' do
+      let(:attributes) do
+        {
+          non_content_blocks: [
+            Mas::Cms::Block.new(
+              identifier: 'overview',
+              content: 'overview content'
+            )
+          ]
+        }
+      end
+
+      it 'returns overview component' do
+        expect(subject.overview_block).to eq(
+          Mas::Cms::Block.new(
+            identifier: 'overview',
+            content: 'overview content'
+          )
+        )
+      end
+    end
+
+    context 'when block is not present' do
+      let(:attributes) do
+        { non_content_blocks: [] }
+      end
+
+      it 'returns nil' do
+        expect(subject.overview_block).to be_nil
       end
     end
   end

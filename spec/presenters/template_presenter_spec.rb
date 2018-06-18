@@ -15,7 +15,7 @@ RSpec.describe TemplatePresenter do
 
       it 'returns the hero description content' do
         expect(presenter.hero_description_component).to eq(
-          '<p>Financial capability</p>'
+          'Financial capability'
         )
       end
     end
@@ -137,6 +137,30 @@ RSpec.describe TemplatePresenter do
       it 'does not render the component' do
         expect(view).to_not receive(:render)
         presenter.feedback_component
+      end
+    end
+  end
+
+  describe '#overview_content' do
+    context 'when object has overview content' do
+      let(:attributes) do
+        {
+          overview_block: double(content: '<p>overview content</p>')
+        }
+      end
+
+      it 'returns the hero image content without tags' do
+        expect(presenter.overview_content).to eq('overview content')
+      end
+    end
+
+    context 'when object does not have overview content' do
+      let(:attributes) do
+        { overview_block: nil }
+      end
+
+      it 'returns empty' do
+        expect(presenter.overview_content).to be_empty
       end
     end
   end

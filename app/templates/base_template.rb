@@ -4,10 +4,12 @@ class BaseTemplate
   DOWNLOAD_COMPONENT_IDENTIFIER = 'component_download'.freeze
   CTA_LINKS_COMPONENT_IDENTIFIER = 'component_cta_links'.freeze
   FEEDBACK_COMPONENT_IDENTIFIER = 'component_feedback'.freeze
+  OVERVIEW_IDENTIFIER = 'overview'.freeze
 
   delegate :title,
            :body,
            :non_content_blocks,
+           :full_path,
            to: :article
 
   attr_reader :article
@@ -34,6 +36,10 @@ class BaseTemplate
 
   def feedback_block
     find_block(FEEDBACK_COMPONENT_IDENTIFIER)
+  end
+
+  def overview_block
+    find_block(OVERVIEW_IDENTIFIER)
   end
 
   private

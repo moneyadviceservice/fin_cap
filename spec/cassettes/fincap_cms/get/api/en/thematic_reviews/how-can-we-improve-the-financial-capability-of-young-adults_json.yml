@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.12.0 (Tomas-Destefi-00119.local; tomasdestefi; 15151) ruby/2.4.2
+      - Mas-Cms-Client/1.13.0 (Margo-Urey-00241.local; margourey; 46192) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Wed, 23 May 2018 15:40:54 GMT
+      - Sat, 16 Jun 2018 08:40:52 GMT
       status:
       - 200 OK
       connection:
@@ -32,26 +32,17 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"dc793eac26c00dd8b4c52cc44a1aa209"'
+      - '"033408b36831cb0ecb0c43f9bae17e1c"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 573378c5-94d9-4338-b1e2-b71411399c55
+      - a15acbc3-3b92-48f5-8484-0a7c9879a7ac
       x-runtime:
-      - '0.076890'
+      - '0.061183'
     body:
-      encoding: UTF-8
-      string: '{"label":"How can we improve the financial capability of young adults?","slug":"how-can-we-improve-the-financial-capability-of-young-adults","full_path":"/en/thematic_reviews/how-can-we-improve-the-financial-capability-of-young-adults","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"thematic_review","related_content":{"latest_blog_post_links":[{"title":"Rise
-        of the banking apps","path":"https://www.moneyadviceservice.org.uk/blog/rise-of-the-banking-apps"},{"title":"The
-        dangers of pension release","path":"https://www.moneyadviceservice.org.uk/blog/the-dangers-of-pension-release"},{"title":"Money
-        and its links to mental health and wellbeing ","path":"https://www.moneyadviceservice.org.uk/blog/blank-for-mental-health-article"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"blocks":[{"identifier":"content","content":"\u003cp\u003eThematic
-        Review content\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"overview","content":"\u003cp\u003eSome
-        overview\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eFinancial
-        capability across the UK\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
-        href=\"/en/evidence_hub?tag=how-can-we-improve-the-financial-capability-of-young-adults\"\u003eEvidence
-        Summaries Associated with this Thematic Review\u003c/a\u003e\n        \u003ca
-        href=\"/en/evidence_hub\"\u003eAll Evidence Summaries\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eYoung Adults Thematic review\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"},{"identifier":"component_feedback","content":"\u003cp\u003eemail@moneyadviceservice.org.uk\u003c/p\u003e\n","created_at":"2018-05-23T15:40:24.000Z","updated_at":"2018-05-23T15:40:25.000Z"}],"translations":[]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IkhvdyBjYW4gd2UgaW1wcm92ZSB0aGUgZmluYW5jaWFsIGNhcGFiaWxpdHkgb2YgeW91bmcgYWR1bHRzPyIsInNsdWciOiJob3ctY2FuLXdlLWltcHJvdmUtdGhlLWZpbmFuY2lhbC1jYXBhYmlsaXR5LW9mLXlvdW5nLWFkdWx0cyIsImZ1bGxfcGF0aCI6Ii9lbi90aGVtYXRpY19yZXZpZXdzL2hvdy1jYW4td2UtaW1wcm92ZS10aGUtZmluYW5jaWFsLWNhcGFiaWxpdHktb2YteW91bmctYWR1bHRzIiwibWV0YV9kZXNjcmlwdGlvbiI6bnVsbCwibWV0YV90aXRsZSI6bnVsbCwiY2F0ZWdvcnlfbmFtZXMiOltdLCJsYXlvdXRfaWRlbnRpZmllciI6InRoZW1hdGljX3JldmlldyIsInJlbGF0ZWRfY29udGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpbeyJ0aXRsZSI6IkNhbiB5b3UgbGl2ZSB3aXRob3V0IGEgYmFuayBicmFuY2g/IiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9jYW4teW91LWxpdmUtd2l0aG91dC1hLWJhbmstYnJhbmNoIn0seyJ0aXRsZSI6IkFyZSBZT1UgZG9pbmcgdGhlIDExIHdvcnN0IHRoaW5ncyBmb3IgeW91ciBjcmVkaXQgc2NvcmU/IiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy8xMS13b3JzdC10aGluZ3MtZm9yLXlvdXItY3JlZGl0LXNjb3JlIn0seyJ0aXRsZSI6IllvdSBhbmQgeW91ciBwYXJ0bmVy4oCZcyBsaWZlIGNoYW5naW5nIG1vbmV5IHNlY3JldHMgIiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9wYXJ0bmVycy1saWZlLWNoYW5naW5nLW1vbmV5LXNlY3JldHMifV0sInBvcHVsYXJfbGlua3MiOltdLCJyZWxhdGVkX2xpbmtzIjpbXSwicHJldmlvdXNfbGluayI6e30sIm5leHRfbGluayI6e319LCJwdWJsaXNoZWRfYXQiOm51bGwsInN1cHBvcnRzX2FtcCI6dHJ1ZSwiYmxvY2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlVGhlbWF0aWMgUmV2aWV3IGNvbnRlbnRcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDYtMTVUMTk6MDE6MDkuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA2LTE1VDE5OjAxOjA5LjAwMFoifSx7ImlkZW50aWZpZXIiOiJvdmVydmlldyIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlU29tZSBvdmVydmlld1x1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNi0xNVQxOTowMTowOS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDYtMTVUMTk6MDE6MDkuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNvbXBvbmVudF9oZXJvX2ltYWdlIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2UvYXNzZXRzL3N0eWxlZ3VpZGUvaGVyby1zYW1wbGUuanBnXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA2LTE1VDE5OjAxOjA5LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNi0xNVQxOTowMTowOS4wMDBaIn0seyJpZGVudGlmaWVyIjoiY29tcG9uZW50X2hlcm9fZGVzY3JpcHRpb24iLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZUZpbmFuY2lhbCBjYXBhYmlsaXR5IGFjcm9zcyB0aGUgVUtcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDYtMTVUMTk6MDE6MDkuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA2LTE1VDE5OjAxOjA5LjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfY3RhX2xpbmtzIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VcdTAwM2NhIGhyZWY9XCIvZW4vZXZpZGVuY2VfaHViP3RhZz1ob3ctY2FuLXdlLWltcHJvdmUtdGhlLWZpbmFuY2lhbC1jYXBhYmlsaXR5LW9mLXlvdW5nLWFkdWx0c1wiXHUwMDNlRXZpZGVuY2UgU3VtbWFyaWVzIEFzc29jaWF0ZWQgd2l0aCB0aGlzIFRoZW1hdGljIFJldmlld1x1MDAzYy9hXHUwMDNlXG4gICAgICAgIFx1MDAzY2EgaHJlZj1cIi9lbi9ldmlkZW5jZV9odWJcIlx1MDAzZUFsbCBFdmlkZW5jZSBTdW1tYXJpZXNcdTAwM2MvYVx1MDAzZVx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNi0xNVQxOTowMTowOS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDYtMTVUMTk6MDE6MDkuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNvbXBvbmVudF9kb3dubG9hZCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlXHUwMDNjYSBocmVmPVwiL2ZpbmFuY2lhbCtjYXBhYmlsaXR5K3N0cmF0ZWd5LnBkZlwiXHUwMDNlWW91bmcgQWR1bHRzIFRoZW1hdGljIHJldmlld1x1MDAzYy9hXHUwMDNlXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA2LTE1VDE5OjAxOjA5LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNi0xNVQxOTowMTowOS4wMDBaIn0seyJpZGVudGlmaWVyIjoiY29tcG9uZW50X2ZlZWRiYWNrIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VlbWFpbEBtb25leWFkdmljZXNlcnZpY2Uub3JnLnVrXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA2LTE1VDE5OjAxOjA5LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNi0xNVQxOTowMTowOS4wMDBaIn1dLCJ0cmFuc2xhdGlvbnMiOltdfQ==
     http_version: 
-  recorded_at: Wed, 23 May 2018 15:40:54 GMT
+  recorded_at: Sat, 16 Jun 2018 08:40:52 GMT
 recorded_with: VCR 4.0.0

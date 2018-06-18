@@ -1,12 +1,9 @@
 <% present(resource) do |template| %>
   <div class="l-constrained">
-    <div class="row">
-      <div class="hero" style="background-image: url(<%= template.hero_image_component %>);">
-        <h1 class="hero__heading">
-          <%= template.hero_description_component.html_safe %>
-        </h1>
-      </div>
-    </div>
+    <%= render '/components/hero', 
+      img_src: template.hero_image_component, 
+      description: template.hero_description_component 
+    %>
   </div>
 
   <div class="l-constrained">
