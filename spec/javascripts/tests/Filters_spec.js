@@ -16,6 +16,10 @@ describe('Filters', function() {
         self.$filters_radio = self.$component.find('[data-form-filter-radio]');
         self.$filters_checkbox = self.$component.find('[data-form-filter-checkbox]');
 
+        self.$toggle = self.$component.find('[data-form-filter-toggle]');
+
+        self.breakpoint = self.obj.breakpoint;
+
         done();
       }, done);
   });
@@ -47,6 +51,61 @@ describe('Filters', function() {
         callCount++;
         expect(submitStub.callCount).to.be.equal(callCount);
       });
+    });
+  });
+
+  describe('Filter Toggle Mobile', function() {
+    it('Toggle Open', function() {
+      viewport.set(this.breakpoint - 1);
+      this.obj.init();
+
+      expect(this.$component.hasClass("is-open")).to.be.equal(false);
+
+      this.$toggle.trigger('click');
+      expect(this.$component.hasClass("is-open")).to.be.equal(true);
+    });
+
+    it('Toggle Closed', function() {
+      viewport.set(this.breakpoint - 1);
+      this.obj.init();
+
+      this.$toggle.trigger('click');
+      this.$toggle.trigger('click');
+      expect(this.$component.hasClass("is-open")).to.be.equal(false);
+    });
+
+    it('Adjust to desktop', function() {      
+      this.obj.init();
+
+      viewport.set(this.breakpoint + 1);
+      this.$toggle.trigger('resize');
+      expect(this.$component.hasClass("is-open")).to.be.equal(false);
+
+      this.$toggle.trigger('click');
+      expect(this.$component.hasClass("is-open")).to.be.equal(false);
+    });
+  });
+
+  describe('Filter Toggle Desktop', function() {
+    it('Try to toggle', function() {
+      viewport.set(this.breakpoint + 1);
+      this.obj.init();
+
+      expect(this.$component.hasClass("is-open")).to.be.equal(false);
+
+      this.$toggle.trigger('click');
+      expect(this.$component.hasClass("is-open")).to.be.equal(false);
+    });
+
+    it('Adjust to mobile', function() {      
+      this.obj.init();
+
+      viewport.set(this.breakpoint - 1);
+      this.$toggle.trigger('resize');
+      expect(this.$component.hasClass("is-open")).to.be.equal(false);
+
+      this.$toggle.trigger('click');
+      expect(this.$component.hasClass("is-open")).to.be.equal(true);
     });
   });
 });

@@ -12,6 +12,9 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$wrap = $el.find('[data-form-filter-wrap]');
     this.$form = $el;
 
+    this.activeClass = "is-open";
+    this.breakpoint = 720;
+
     this.windowSize = $(window).width();
   };
 
@@ -56,7 +59,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   * Assign/Remove listner on toggle
   */
   Filter.prototype._toggleFilters = function(self, isLoad) {  
-    if ( $(window).width() < 720 ) {
+    if ( $(window).width() < this.breakpoint ) {
       self._toggleMobile(self, isLoad);
     } else {
       self._toggleDesktop(self, isLoad);
@@ -69,8 +72,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   *   was previously desktop, or page just loaded, so rest for mobile
   */
   Filter.prototype._toggleMobile = function(self, isLoad) {
-    if ( self.windowSize >720 || isLoad ) {
-      self.$form.removeClass('is-open');
+    if ( self.windowSize >this.breakpoint || isLoad ) {
+      self.$form.removeClass(this.activeClass);
       self.$wrap.slideUp(0);
 
       self.$toggle.on('click', function(e) {
@@ -84,7 +87,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   *   was previously mobile, or page just loaded, so rest for desktop
   */
   Filter.prototype._toggleDesktop = function(self, isLoad) {
-    if ( self.windowSize < 720 || isLoad ) {
+    if ( self.windowSize < this.breakpoint || isLoad ) {
       self.$toggle.off();
       self.$wrap.slideDown(0);
     }
@@ -96,7 +99,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   Filter.prototype._toggleAnimate = function() {
     var self = this;
 
-    self.$form.toggleClass('is-open');
+    self.$form.toggleClass(this.activeClass);
     self.$wrap.slideToggle(300);
   }
 
