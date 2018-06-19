@@ -27,9 +27,16 @@
   width: 20px;
   height: 22px;
   color: $primary-blue-dark;
-  transform-origin: 0% 0%;
+  transform-origin: 50% 0%;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
 }
 .sidepanel__filter-toggle {
+  &:visited {
+    color: $primary-blue-dark;
+  }
   .svg-icon--close {
     transition: none;
     transform: scale(0) translateY(-50%);
@@ -38,7 +45,7 @@
     transition: transform 300ms ease-out;
     transform: scale(1) translateY(-50%);
   }
-  &.is-open {
+  .new_evidence_summary_search_form.is-open & {
     .svg-icon--close {
       transition: transform 300ms ease-out;
       transform: scale(1) translateY(-50%);
@@ -46,6 +53,13 @@
     .svg-icon--open {
       transition: none;
       transform: scale(0) translateY(-50%);
+    }
+  }
+
+  @include respond-to($mq-m) {
+    cursor: auto;
+    &:focus, &:hover {
+      text-decoration: none;
     }
   }
 }

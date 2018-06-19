@@ -8,7 +8,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     Filter.baseConstructor.call(this, $el, config, defaultConfig);
 
     this.$filters = $el.find('[data-form-filter-radio], [data-form-filter-checkbox]');
+    this.$toggle = $el.find('[data-form-filter-toggle]');
+    this.$wrap = $el.find('[data-form-filter-wrap]');
     this.$form = $el;
+
+    this.windowSize = $(window).width();
   };
 
   /**
@@ -34,6 +38,11 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
         self._submitForm();
       });
     });
+
+    self._toggleFilters(self, true);
+    $(window).resize(function() {
+      self._toggleFilters(self)
+    });
   }
 
   /**
@@ -41,6 +50,54 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   */
   Filter.prototype._submitForm = function() {
     this.$form.submit();
+  }
+
+  /**
+  * Assign/Remove listner on toggle
+  */
+  Filter.prototype._toggleFilters = function(self, isLoad) {  
+    if ( $(window).width() < 720 ) {
+      self._toggleMobile(self, isLoad);
+    } else {
+      self._toggleDesktop(self, isLoad);
+    }
+    self.windowSize = $(window).width();
+  } 
+
+  /**
+  * Is Mobile
+  *   was previously desktop, or page just loaded, so rest for mobile
+  */
+  Filter.prototype._toggleMobile = function(self, isLoad) {
+    if ( self.windowSize >720 || isLoad ) {
+      self.$form.removeClass('is-open');
+      self.$wrap.slideUp(0);
+
+      self.$toggle.on('click', function(e) {
+        e.preventDefault();
+        self._toggleAnimate();
+      })
+    }
+  }
+  /**
+  * Is Desktop
+  *   was previously mobile, or page just loaded, so rest for desktop
+  */
+  Filter.prototype._toggleDesktop = function(self, isLoad) {
+    if ( self.windowSize < 720 || isLoad ) {
+      self.$toggle.off();
+      self.$wrap.slideDown(0);
+    }
+  }
+
+  /**
+  * Filter toggle
+  */
+  Filter.prototype._toggleAnimate = function() {
+    var self = this;
+
+    self.$form.toggleClass('is-open');
+    self.$wrap.slideToggle(300);
   }
 
   return Filter;
