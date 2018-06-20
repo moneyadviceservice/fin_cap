@@ -8,10 +8,13 @@ Mas::Cms::Client.config do |c|
   c.cache_gets = false
 end
 
+class Mas::Cms::Evaluation < Mas::Cms::Document
+end
+
 class Mas::Cms::Insight < Mas::Cms::Document
 end
 
-class Mas::Cms::Evaluation < Mas::Cms::Document
+class Mas::Cms::Lifestage < Mas::Cms::Article
 end
 
 class Mas::Cms::Review < Mas::Cms::Document
