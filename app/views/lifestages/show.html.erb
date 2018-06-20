@@ -1,0 +1,40 @@
+<% present(resource) do |template| %>
+  <div class="l-constrained">
+    <%= render "/components/hero", 
+      img_src: template.hero_image_component, 
+      description: template.hero_description_component 
+    %>
+  </div>
+  <div class="l-constrained">
+    <div class="l-2col">
+      <div class="l-2col-main">
+        <%= template.body.html_safe %>
+      </div>
+      <div class="l-2col-side">
+        <%= render "shared/latest_news" %>
+      </div>
+    </div>
+  </div>
+  <div class="l-constrained">
+    <h2><%= template.teaser_section_title_component %></h2>
+      <div class="l-3col-even">
+        <h3>1/3</h3>
+      </div>
+      <div class="l-3col-even">
+        <h3>1/3</h3>
+      </div>
+      <div class="l-3col-even">
+        <h3>1/3</h3>
+      </div>
+  </div>
+  <div class="l-constrained">
+    <div class="l-2col">
+      <div class="l-2col-main">
+        <%= render "shared/research" %>
+      </div>
+      <div class="l-2col-side">
+        <%= render "shared/life_stages" %>
+      </div>
+    </div>
+  </div>
+<% end %>

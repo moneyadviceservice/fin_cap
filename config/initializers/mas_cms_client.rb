@@ -14,6 +14,9 @@ end
 class Mas::Cms::Insight < Mas::Cms::Document
 end
 
+class Mas::Cms::Lifestage < Mas::Cms::Article
+end
+
 class Mas::Cms::News < Mas::Cms::Article
 end
 
