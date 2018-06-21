@@ -75,6 +75,19 @@ en:
         url: '#'
       - text: People trying to save
         url: '#'
+    research_evaluation:
+      findings:
+        - text: Existing Research
+          url: 'link-to/financial-capability-survey'
+        - text: Evidence hub
+          url: 'link-to/evidence_hub'
+      existing:
+        - text: Measure your performance
+          url: 'link-to/evaluate-your-programme'
+        - text: Evaluation toolkit
+          url: 'link-to/evaluation-toolkit-homepage'
+        - text: Outcomes Frameworks and question banks
+          url: 'link-to/outcome-framework'
     countries:
       title: The Strategy across the UK
       intro: As well as the UK Strategy, there are strategies for Northern Ireland, Scotland and Wales.

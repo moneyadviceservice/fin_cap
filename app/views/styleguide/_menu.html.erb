@@ -7,29 +7,13 @@
   <% end %>
 </ul>
 
-<ul class="styleguide-nav">
-  <li class="styleguide-nav__title">UI Components<li>
-  <%- @components.each do |label, path| %>
-    <li class="styleguide-nav__item">
-      <a href=<%= "/styleguide/#{path}" %> class="styleguide-nav__item-link"><%= label %></a>
-    </li>
-  <% end %>
-</ul>
-
-<ul class="styleguide-nav">
-  <li class="styleguide-nav__title">Page Specific<li>
-  <%- @page_specific.each do |label, path| %>
-    <li class="styleguide-nav__item">
-      <a href=<%= "/styleguide/#{path}" %> class="styleguide-nav__item-link"><%= label %></a>
-    </li>
-  <% end %>
-</ul>
-
-<ul class="styleguide-nav">
-  <li class="styleguide-nav__title">UI Helpers<li>
-  <%- @ui_helpers.each do |label, path| %>
-    <li class="styleguide-nav__item">
-      <a href=<%= "/styleguide/#{path}" %> class="styleguide-nav__item-link"><%= label %></a>
-    </li>
-  <% end %>
-</ul>
+<% @non_base_items.each do |title, elements| %>
+  <ul class="styleguide-nav">
+    <li class="styleguide-nav__title"><%= title %><li>
+    <%- instance_variable_get("@#{elements}").each do |label, path| %>
+      <li class="styleguide-nav__item">
+        <a href=<%= "/styleguide/#{path}" %> class="styleguide-nav__item-link"><%= label %></a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

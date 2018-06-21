@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/lifestages/young-adults.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.13.1 (Margo-Urey-00241.local; margourey; 88892) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Sat, 23 Jun 2018 17:35:45 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"547fcd4f47592df23b87e1e51b1ac615"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 96461e68-2154-4fa0-b427-598a03a8c184
+      x-runtime:
+      - '0.240719'
+    body:
+      encoding: UTF-8
+      string: '{"label":"Young Adults","slug":"young-adults","full_path":"/en/lifestages/young-adults","meta_description":"","meta_title":"","category_names":[],"layout_identifier":"lifestage","related_content":{"latest_blog_post_links":[{"title":"What
+        you need to know about credit cards when you are a young person","path":"https://www.moneyadviceservice.org.uk/blog/what-you-need-to-know-about-credit-cards-when-you-are-a-young-person"},{"title":"Can
+        you live without a bank branch?","path":"https://www.moneyadviceservice.org.uk/blog/can-you-live-without-a-bank-branch"},{"title":"Are
+        YOU doing the 11 worst things for your credit score?","path":"https://www.moneyadviceservice.org.uk/blog/11-worst-things-for-your-credit-score"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-06-23T17:30:25.000Z","supports_amp":true,"blocks":[{"identifier":"content","content":"\u003cp\u003eYoung
+        adults, as they leave school or other statutory settings, will face major
+        changes in the coming years to the policy, economic and social landscape within
+        which they will start managing money day to day and making critical financial
+        decisions about their future. The degree of financial capability they display
+        during this transition can have a major bearing on their resilience and wellbeing
+        throughout their adult lives.\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:15:28.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eResearch
+        suggests that young adults typically display lower levels of financial capability
+        than older age groups.\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eSome
+        title to tease you\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eLoads
+        of content to make you read more\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eAnother
+        title to entice you\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eA
+        bunch of well written content to make you click\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eTeasing
+        title\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eYou
+        want to read this, you need to read this\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"strategy_title","content":"\u003cp\u003eStrategy
+        extract\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"strategy_overview","content":"\u003cp\u003eYoung
+        adults in the coming years will face major changes to the policy, economic
+        and sociallandscape in which they have to manage their money day to day and
+        take important financialdecisions about their future.\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:18:59.000Z"},{"identifier":"strategy_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eLink to strategy\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"steering_group_title","content":"\u003cp\u003eSteering
+        group\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:14:05.000Z"},{"identifier":"steering_group_links","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eSteering group members\u003c/a\u003e        \u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eSteering group updates\u003c/a\u003e        \u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eAction plans\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-22T23:18:59.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eYoung Adults download\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-06-22T23:10:47.000Z","updated_at":"2018-06-23T17:30:26.000Z"},{"identifier":"component_teaser_section_title","content":"\n","created_at":"2018-06-22T23:14:05.000Z","updated_at":"2018-06-22T23:14:05.000Z"}],"translations":[]}'
+    http_version: 
+  recorded_at: Sat, 23 Jun 2018 17:35:45 GMT
+recorded_with: VCR 4.0.0
