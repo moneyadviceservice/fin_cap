@@ -32,6 +32,25 @@ $total-width: 100%;
   margin-right: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 }
 
+@mixin column-to-edge($x, $total, $columns: $columns) {
+  // @if ($x != 12) {
+    display: inline;
+    float: left;
+    width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width*0.5) / gridsystem-width($columns));
+    margin-left: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+    margin-right: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+    &:nth-child(#{$total}n - 1) {
+      margin-left: 0;
+    }
+    &:nth-child(#{$total}n) {
+      margin-right: 0;
+    }
+  // } 
+  // @else {
+  //   @include column(12);
+  // }
+}
+
 @mixin push($offset: 1) {
   margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 }

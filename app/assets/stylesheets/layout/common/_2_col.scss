@@ -1,11 +1,17 @@
 // Layout 2 columns
 //
 // Styleguide layout-2col
+.l-2col {
+  @extend %clearfix;
+}
 
 .l-2col-side {
 @include column(12);
   @include respond-to($mq-m) {
     @include column(4);
+    .l-2col-no-margin & {
+      @include column-to-edge(4, 2);
+    }
   }
 }
 
@@ -13,6 +19,9 @@
   @include column(12);
     @include respond-to($mq-m) {
     @include column(8);
+    .l-2col-no-margin & {
+      @include column-to-edge(8, 2);
+    }
   }
 }
 
@@ -21,6 +30,9 @@
 
   @include respond-to($mq-m) {
     @include column(6);
+    .l-2col-no-margin & {
+      @include column-to-edge(6, 2);
+    }
   }
 }
 
@@ -36,4 +48,15 @@
 .l-2col-even-right--unresponsive {
   @extend .l-2col-even--unresponsive;
   float: right;
+}
+
+.l-2col-flex {
+  @include respond-to($mq-m) {
+    display: flex;
+    .l-2col-side,
+    .l-2col-main,
+    .l-2col-even {
+      flex: 1;
+    }
+  }
 }
