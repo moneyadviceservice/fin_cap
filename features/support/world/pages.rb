@@ -8,6 +8,7 @@ module World
       article
       evidence_summaries
       evidence_summary
+      lifestage
       thematic_review
       thematic_reviews_landing
     ]

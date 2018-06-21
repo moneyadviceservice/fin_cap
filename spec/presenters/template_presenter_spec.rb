@@ -88,7 +88,7 @@ RSpec.describe TemplatePresenter do
         { cta_links_block: double(content: '<a>some content</a>') }
       end
 
-      it 'renders download component view' do
+      it 'renders cta component view' do
         expect(view).to receive(:render).with(
           'components/cta_links',
           content: ['<a>some content</a>']

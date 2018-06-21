@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :insights, only: :show
     resources :lifestages, only: :show
     resources :reviews, only: :show
-    resources :thematic_reviews, only: [:index, :show]
+    resources :thematic_reviews, only: %i[index show]
   end
 
   # Styleguide
