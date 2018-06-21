@@ -59,7 +59,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   * Assign/Remove listner on toggle
   */
   Filter.prototype._toggleFilters = function(self, isLoad) {  
-    if ($(window).width() < this.breakpoint) {
+    if (self._isMobile($(window).width())) {
       self._toggleMobile(self, isLoad);
     } else {
       self._toggleDesktop(self, isLoad);
@@ -72,7 +72,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   *   was previously desktop, or page just loaded, so rest for mobile
   */
   Filter.prototype._toggleMobile = function(self, isLoad) {
-    if (self.windowSize > this.breakpoint || isLoad) {
+    if (!self._isMobile(self.windowSize) || isLoad) {
       self.$form.removeClass(this.activeClass);
       self.$wrap.slideUp(0);
 
@@ -87,7 +87,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   *   was previously mobile, or page just loaded, so rest for desktop
   */
   Filter.prototype._toggleDesktop = function(self, isLoad) {
-    if (self.windowSize < this.breakpoint || isLoad) {
+    if (self._isMobile(self.windowSize) || isLoad) {
       self.$toggle.off();
       self.$wrap.slideDown(0);
     }
@@ -101,6 +101,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
     self.$form.toggleClass(this.activeClass);
     self.$wrap.slideToggle(300);
+  }
+
+  /**
+  * Checks if is mobile
+  */
+  Filter.prototype._isMobile = function(dim) {
+    return (dim < this.breakpoint);
   }
 
   return Filter;
