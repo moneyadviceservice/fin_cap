@@ -1,17 +1,35 @@
 <div class="sidepanel__filters">
-  <h4 class="sidepanel__title"><%= I18n.t('evidence_hub.filters_header') %></h4>
+  <a href="#" data-form-filter-toggle role="button" class="sidepanel__filter-toggle">
+    <h4 class="sidepanel__title">
+      <%= I18n.t('evidence_hub.filters_header') %>
+      <svg xmlns="http://www.w3.org/2000/svg"
+          class="sidepanel__filter-toggle-icon svg-icon--close"
+          focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--close"></use>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg"
+          class="sidepanel__filter-toggle-icon svg-icon--open show"
+          focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--plus"></use>
+      </svg>
+    </h4>
+  </a>
+  
+  <div data-form-filter-wrap class="sidepanel__filters-wrap">
+    <div class="sidepanel__filters-inner">
+      <% EvidenceSummarySearchForm.radio_button_filters.each do |filter| %>
+        <fieldset class="sidepanel__fieldset">
+          <legend class="sidepanel__subtitle"><%= search_form.filter_title(filter) %></legend>
+          <%= render 'radio_buttons', f: f, form_object: search_form, field: filter %>
+        </fieldset>
+      <% end %>
 
-  <% EvidenceSummarySearchForm.radio_button_filters.each do |filter| %>
-    <fieldset class="sidepanel__fieldset">
-      <legend class="sidepanel__subtitle"><%= search_form.filter_title(filter) %></legend>
-      <%= render 'radio_buttons', f: f, form_object: search_form, field: filter %>
-    </fieldset>
-  <% end %>
-
-  <% EvidenceSummarySearchForm.checkbox_filters.each do |filter| %>
-    <fieldset class="sidepanel__fieldset">
-      <legend class="sidepanel__subtitle"><%= search_form.filter_title(filter) %></legend>
-      <%= render 'checkboxes', f: f, form_object: search_form, field: filter %>
-    </fieldset>
-  <% end %>
+      <% EvidenceSummarySearchForm.checkbox_filters.each do |filter| %>
+        <fieldset class="sidepanel__fieldset">
+          <legend class="sidepanel__subtitle"><%= search_form.filter_title(filter) %></legend>
+          <%= render 'checkboxes', f: f, form_object: search_form, field: filter %>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
 </div>

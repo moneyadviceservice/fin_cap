@@ -12,10 +12,56 @@
 
 .sidepanel__title {
   @include body(20, 24);
+  position: relative;
   color: $primary-blue-dark;
   font-weight: 500;
   padding: 0 0 $baseline-unit*2;
   margin: 0;
+}
+
+.sidepanel__filter-toggle-icon {
+  position: absolute;
+  right: $baseline-unit;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 22px;
+  color: $primary-blue-dark;
+  transform-origin: 50% 0%;
+
+  @include respond-to($mq-m) {
+    display: none;
+  }
+}
+.sidepanel__filter-toggle {
+  &:visited {
+    color: $primary-blue-dark;
+  }
+  .svg-icon--close {
+    transition: none;
+    transform: scale(0) translateY(-50%);
+  }
+  .svg-icon--open {
+    transition: transform 300ms ease-out;
+    transform: scale(1) translateY(-50%);
+  }
+  .new_evidence_summary_search_form.is-open & {
+    .svg-icon--close {
+      transition: transform 300ms ease-out;
+      transform: scale(1) translateY(-50%);
+    }
+    .svg-icon--open {
+      transition: none;
+      transform: scale(0) translateY(-50%);
+    }
+  }
+
+  @include respond-to($mq-m) {
+    cursor: auto;
+    &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .sidepanel__subtitle {

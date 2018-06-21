@@ -8,7 +8,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'requirejs', 'chai', 'sinon', 'fixture'],
+    frameworks: ['mocha', 'requirejs', 'chai', 'sinon', 'fixture', 'viewport'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -59,6 +59,19 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+
+    // Brakpoints
+    viewport: {
+      breakpoints: [
+        {
+          name: "tablet",
+          size: {
+            width: 720,
+            height: 1024
+          }
+        }
+      ]
+    }
   })
 }
