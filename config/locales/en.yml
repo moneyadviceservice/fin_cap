@@ -47,6 +47,9 @@ en:
           - Wales
           - USA
           - Other
+  date:
+    formats:
+      to_word: "%A %e %B %Y"
   evidence_hub:
     summaries:
       header: 'Evidence Summaries'
