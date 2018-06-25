@@ -30,7 +30,8 @@ Then('I should see the teaser boxes with') do |table|
 end
 
 Then('I should see the research box') do
-  expect(lifestage_page).to have_content('Research & Evaluation')
+  expect(lifestage_page).to have_content('Research and findings')
+  expect(lifestage_page).to have_content('Evaluate your programme')
 end
 
 Then('I should see the strategy box with') do |table|
