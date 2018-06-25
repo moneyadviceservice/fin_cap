@@ -7,10 +7,10 @@ module UI
       element :link, '.teaser-box__cta'
     end
 
-    class StrategyBox < SitePrism::Section
-      element :title, '.bordered-box__title'
-      element :content, '.bordered-box__content'
-      element :link, 'a'
+    class SupplementaryInfoBox < SitePrism::Section
+      element :title, '.lifestage_info-box__title'
+      element :content, '.lifestage_info-box__content'
+      elements :links, 'a'
     end
 
     class Lifestage < ::UI::Pages::Article
@@ -18,9 +18,8 @@ module UI
 
       element :main_description, '.hero'
       element :latest_news, '.latest-news'
-      elements :steering_group_links, '.t-steering-group a'
       sections :teaser_boxes, TeaserBox, '.teaser-box'
-      section :strategy_box, StrategyBox, '.t-strategy-box'
+      sections :strategy_box, SupplementaryInfoBox, '.lifestage_info-box'
     end
   end
 end

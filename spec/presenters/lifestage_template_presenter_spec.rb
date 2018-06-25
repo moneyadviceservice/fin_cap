@@ -35,16 +35,21 @@ RSpec.describe LifestageTemplatePresenter do
     context 'when object has the block' do
       let(:attributes) do
         {
-          steering_group_links_block: double(content: '<a>some link</a>')
+          steering_group_links_block: double(
+            content: '<p><a href="href1">text1</a><a href="href2">text2</a><p>'
+          )
         }
       end
 
-      it 'renders the cta view with the steering group links' do
-        expect(view).to receive(:render).with(
-          'components/cta_links',
-          content: ['<a>some link</a>']
+      it 'returns array of hashes containing link attributes' do
+        expected_result = [
+          { href: 'href1', text: 'text1' },
+          { href: 'href2', text: 'text2' }
+        ]
+
+        expect(presenter.steering_group_links_component).to eq(
+          expected_result
         )
-        presenter.steering_group_links_component
       end
     end
 
@@ -53,9 +58,8 @@ RSpec.describe LifestageTemplatePresenter do
         { steering_group_links_block: double(content: '') }
       end
 
-      it 'does not render the view' do
-        expect(view).to_not receive(:render)
-        presenter.steering_group_links_component
+      it 'returns empty' do
+        expect(presenter.steering_group_links_component).to be_empty
       end
     end
   end
@@ -90,16 +94,17 @@ RSpec.describe LifestageTemplatePresenter do
     context 'when object has the block' do
       let(:attributes) do
         {
-          strategy_link_block: double(content: '<a>strategy link content</a>')
+          strategy_link_block: double(
+            content: '<p><a href="/strategy.pdf">strategy link content</a></p>'
+          )
         }
       end
 
-      it 'renders the cta view with the strategy link' do
-        expect(view).to receive(:render).with(
-          'components/cta_links',
-          content: ['<a>strategy link content</a>']
-        )
-        presenter.strategy_link_component
+      it 'returns array of hashes containing link attributes' do
+        expected_result = [
+          { href: '/strategy.pdf', text: 'strategy link content' }
+        ]
+        expect(presenter.strategy_link_component).to eq(expected_result)
       end
     end
 
@@ -108,9 +113,8 @@ RSpec.describe LifestageTemplatePresenter do
         { strategy_link_block: double(content: '') }
       end
 
-      it 'does not render the view' do
-        expect(view).to_not receive(:render)
-        presenter.strategy_link_component
+      it 'returns empty' do
+        expect(presenter.strategy_link_component).to be_empty
       end
     end
   end

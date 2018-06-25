@@ -1,10 +1,12 @@
 class LifestageTemplatePresenter < TemplatePresenter
+  LINK_CSS_SELECTOR = 'p a'.freeze
+
   def steering_group_title_component
     view.strip_tags(steering_group_title_block.try(:content).to_s)
   end
 
   def steering_group_links_component
-    render_component(:cta_links, content: steering_group_links_content)
+    extract_links(steering_group_links_block.try(:content).to_s)
   end
 
   def strategy_title_component
@@ -16,7 +18,7 @@ class LifestageTemplatePresenter < TemplatePresenter
   end
 
   def strategy_link_component
-    render_component(:cta_links, content: strategy_link_content)
+    extract_links(strategy_link_block.try(:content).to_s)
   end
 
   def teaser_section_title_component
@@ -37,15 +39,10 @@ class LifestageTemplatePresenter < TemplatePresenter
 
   private
 
-  def steering_group_links_content
-    @steering_group_links_content ||= CtaLinksComponent.new(
-      steering_group_links_block
-    ).build_markup
-  end
-
-  def strategy_link_content
-    @strategy_link_content ||= CtaLinksComponent.new(
-      strategy_link_block
-    ).build_markup
+  def extract_links(html_string)
+    document = Nokogiri::HTML(html_string)
+    document.css(LINK_CSS_SELECTOR).map do |anchor|
+      { text: anchor.text, href: anchor.attribute('href').value }
+    end
   end
 end

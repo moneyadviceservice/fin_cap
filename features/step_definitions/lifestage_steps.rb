@@ -30,16 +30,17 @@ Then('I should see the teaser boxes with') do |table|
 end
 
 Then('I should see the research box') do
-  expect(lifestage_page).to have_content('Research & Evaluation')
+  expect(lifestage_page).to have_content('Research and findings')
+  expect(lifestage_page).to have_content('Evaluate your programme')
 end
 
 Then('I should see the strategy box with') do |table|
-  strategy_box = lifestage_page.strategy_box
+  strategy_box = lifestage_page.strategy_box.first
 
   table.rows.each do |row|
     expect(row[0]).to eq(strategy_box.title.text)
     expect(strategy_box.content).to have_content(row[1])
-    expect(row[2]).to eq(strategy_box.link['href'])
+    expect(row[2]).to be_in(strategy_box.links.map { |link| link[:href] })
   end
 end
 
@@ -48,7 +49,7 @@ Then('I should see the lifestages box') do
 end
 
 Then('I should see the steering group links') do |table|
-  links = lifestage_page.steering_group_links
+  links = lifestage_page.strategy_box.last.links
 
   table.rows.each do |row|
     expect(row[0]).to be_in(links.map(&:text))
