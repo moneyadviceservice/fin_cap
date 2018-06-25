@@ -39,7 +39,10 @@
     <div class="l-constrained">
       <div class="l-2col">
         <div class="l-2col-main">      
-          <%= render "shared/research" %>   
+          <div class="row">
+              <%= render 'shared/research_and_evaluation' %>
+          </div>  
+
           <div class="row">
             <%= render "lifestages/strategy_box",
               title: template.strategy_title_component,
