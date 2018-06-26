@@ -1,5 +1,5 @@
 class StyleguideController < ApplicationController
-  before_action :components, :page_specific, :ui_helpers, :links
+  before_action :components, :page_specific, :ui_helpers, :links, :partials
   layout 'styleguide'
   include StyleguideHelper
   STYLEGUIDE_VIEWS = Rails.root.join(
@@ -49,6 +49,10 @@ class StyleguideController < ApplicationController
 
   def ui_helpers
     @ui_helpers = UI_HELPERS
+  end
+
+  def partials
+    @partials = PARTIALS
   end
 
   def links
