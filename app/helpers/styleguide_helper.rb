@@ -60,4 +60,11 @@ module StyleguideHelper
   }.freeze
 
   LINKS = %w[Layout Typography Links Lists Colours Buttons Forms].freeze
+
+  NON_BASE_ITEMS = {
+    'UI Components' => 'components',
+    'Page Specific' => 'page_specific',
+    'UI Helpers' => 'ui_helpers',
+    'Content Partials' => 'partials'
+  }.freeze
 end
