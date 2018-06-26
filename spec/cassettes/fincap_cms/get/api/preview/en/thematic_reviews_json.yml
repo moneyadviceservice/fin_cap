@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/preview/en/thematic_reviews.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.13.0 (Margo-Urey-00241.local; margourey; 88136) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 12 Jun 2018 17:02:31 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"ded25c46a2c90d147baca12c317afa28"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 6dde163c-1c98-4284-bf18-20a0ddf07f86
+      x-runtime:
+      - '0.045314'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYWJlbCI6IlRoZW1hdGljIFJldmlld3MiLCJzbHVnIjoidGhlbWF0aWNfcmV2aWV3cyIsImZ1bGxfcGF0aCI6Ii9lbi90aGVtYXRpY19yZXZpZXdzX2xhbmRpbmdfcGFnZXMvdGhlbWF0aWNfcmV2aWV3cyIsIm1ldGFfZGVzY3JpcHRpb24iOm51bGwsIm1ldGFfdGl0bGUiOm51bGwsImNhdGVnb3J5X25hbWVzIjpbXSwibGF5b3V0X2lkZW50aWZpZXIiOiJ0aGVtYXRpY19yZXZpZXdzX2xhbmRpbmdfcGFnZSIsInJlbGF0ZWRfY29udGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpbeyJ0aXRsZSI6IkFyZSBZT1UgZG9pbmcgdGhlIDExIHdvcnN0IHRoaW5ncyBmb3IgeW91ciBjcmVkaXQgc2NvcmU/IiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy8xMS13b3JzdC10aGluZ3MtZm9yLXlvdXItY3JlZGl0LXNjb3JlIn0seyJ0aXRsZSI6IllvdSBhbmQgeW91ciBwYXJ0bmVy4oCZcyBsaWZlIGNoYW5naW5nIG1vbmV5IHNlY3JldHMgIiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9wYXJ0bmVycy1saWZlLWNoYW5naW5nLW1vbmV5LXNlY3JldHMifSx7InRpdGxlIjoiQXJlIHlvdSBiZWluZyBjb25uZWQgYnkgYSDigJhwcm9mZXNzaW9uYWzigJkgc2NhbW1lcj8gVGhhdCBzYWxlc21hbiBvciBsYXd5ZXIgbWlnaHQgbm90IGJlIHdobyB0aGV5IHNheSB0aGV5IGFyZS4iLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2FyZS15b3UtYmVpbmctY29ubmVkLWJ5LWEtcHJvZmVzc2lvbmFsLXNjYW1tZXIifV0sInBvcHVsYXJfbGlua3MiOltdLCJyZWxhdGVkX2xpbmtzIjpbXSwicHJldmlvdXNfbGluayI6e30sIm5leHRfbGluayI6e319LCJwdWJsaXNoZWRfYXQiOm51bGwsInN1cHBvcnRzX2FtcCI6dHJ1ZSwiYmxvY2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlVGhlbWF0aWMgUmV2aWV3cyBhcmUgc2hvcnQgb3ZlcnZpZXdzIG9mIGtleSBmaW5kaW5ncyBmcm9tIG11bHRpcGxlIFVLLWJhc2VkXG5yZXNlYXJjaCBhbmQgZWFsdWF0aW9uIHJlcG9ydHMgb24gYSBwYXJ0aWN1bGFyIHRvcGljLiBFYWNoIHJldmlldyB3aWxsIHZhcnlcbmRlcGVuZGluZyBvbiB0aGUgYXZhaWxhYmxlIGluZm9ybWF0aW9uLCBhbmQgd2lsbCBhaW0gdG8gaW5jbHVkZTpcdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2N1bFx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZUhlYWRsaW5lcyBhYm91dCBjb250ZXh0LCBsYW5kc2NhcGUgYW5kIG5lZWRzXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlQW4gaW50cm9kdWN0aW9uIHRvIGV2aWRlbmNlIGFib3V0IHdoYXQgd29ya3Mgd2VsbCAtIGFuZCBsZXNzIHdlbGwgLSB0byBpbXByb3ZlIHBlb3BsZeKAmXMgZmluYW5jaWFsIGNhcGFiaWxpdHlcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VBcmVhcyB3aGVyZSBmdXJ0aGVyIGludmVzdGlnYXRpb24gaXMgbmVlZGVkXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlTGlua3MgdG8gc3BlY2lmaWMgc3R1ZGllcyBzdW1tYXJpc2VkIGVsc2V3aGVyZSBvbiB0aGUgSHViXHUwMDNjL2xpXHUwMDNlXG5cdTAwM2MvdWxcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVdlIGhvcGUgb3VyIFRoZW1hdGljIFJldmlld3MgcHJvdmlkZSBhIHVzZWZ1bCBvdmVydmlldyB0byBoZWxwIHlvdSBnZXQgYSBxdWljayB1bmRlcnN0YW5kaW5nIG9uIGEgcGFydGljdWxhciB0b3BpYyxcbm9yIHRvIGFjdCBhcyBhIOKAmHdheSBpbuKAmSB0byBtb3JlIGRldGFpbGVkIGluZm9ybWF0aW9uIGNvbnRhaW5lZCBpbiBzcGVjaWZpYyBcdTAwM2NhIGhyZWY9XCIvZXZpZGVuY2VfaHViX3NlYXJjaFwiXHUwMDNlRXZpZGVuY2UgU3VtbWFyaWVzXHUwMDNjL2FcdTAwM2UuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVBsZWFzZSBjb250YWN0IHVzIGF0IFx1MDAzY2EgaHJlZj1cIm1haWx0bzp3aGF0d29ya3NAZmluY2FwLm9yZy51a1wiXHUwMDNld2hhdHdvcmtzQGZpbmNhcC5vcmcudWtcdTAwM2MvYVx1MDAzZSBpZiB5b3UgaGF2ZSBhbnkgZmVlZGJhY2ssXG5pbmNsdWRpbmcgc3VnZ2VzdGlvbnMgZm9yIHJlc2VhcmNoIHRoYXQgeW91IHRoaW5rIHNob3VsZCBiZSBjb3ZlcmVkXG5pbiBmdXR1cmUgdXBkYXRlcy5cdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDYtMDdUMTU6NTk6MzYuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA2LTA3VDE1OjU5OjM2LjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W119
+    http_version: 
+  recorded_at: Tue, 12 Jun 2018 17:02:31 GMT
+recorded_with: VCR 4.0.0

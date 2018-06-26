@@ -7,7 +7,12 @@ Rails.application.routes.draw do
     resources :evidence_hub, only: :index
     resources :insights, only: :show
     resources :reviews, only: :show
-    resources :thematic_reviews, only: [:index, :show]
+    resources :thematic_reviews, only: %i[index show]
+
+    # rubocop:disable Metrics/LineLength
+    get '/:page_type/:id/preview' => 'documents_preview#show',
+        page_type: /articles|evaluations|insights|reviews|thematic_reviews|thematic_reviews_landing_pages/
+    # rubocop:enable Metrics/LineLength
   end
 
   # Styleguide
