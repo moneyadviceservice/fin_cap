@@ -41,8 +41,6 @@ module StyleguideHelper
     'Evidence Type Icons' => 'evidence_types',
     'Evaluation Types' => 'evaluation_types',
     'Info Icon' => 'info_icon',
-    'Countries List' => 'countries',
-    'Life Stages' => 'lifestages',
     'Tooltip' => 'tooltip',
     'Pagination' => 'pagination'
   }.freeze
@@ -53,6 +51,12 @@ module StyleguideHelper
 
   UI_HELPERS = {
     '"New" Label' => 'new_label'
+  }.freeze
+
+  PARTIALS = {
+    'Life Stages' => 'lifestages',
+    'Research and Evaluation' => 'research_evaluation',
+    'Countries List' => 'countries'
   }.freeze
 
   LINKS = %w[Layout Typography Links Lists Colours Buttons Forms].freeze
