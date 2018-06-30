@@ -9,6 +9,7 @@ module World
       evidence_summaries
       evidence_summary
       lifestage
+      latest_news
       news
       thematic_review
       thematic_reviews_landing
