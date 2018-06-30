@@ -1,6 +1,4 @@
 class LifestageTemplatePresenter < TemplatePresenter
-  LINK_CSS_SELECTOR = 'p a'.freeze
-
   def steering_group_title_component
     view.strip_tags(steering_group_title_block.try(:content).to_s)
   end
@@ -40,9 +38,6 @@ class LifestageTemplatePresenter < TemplatePresenter
   private
 
   def extract_links(html_string)
-    document = Nokogiri::HTML(html_string)
-    document.css(LINK_CSS_SELECTOR).map do |anchor|
-      { text: anchor.text, href: anchor.attribute('href').value }
-    end
+    HtmlParser.new(html_string).extract_links
   end
 end

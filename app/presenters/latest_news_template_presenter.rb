@@ -1,0 +1,2 @@
+class LatestNewsTemplatePresenter < TemplatePresenter
+end

@@ -1,0 +1,2 @@
+class LatestNewsTemplate < BaseTemplate
+end

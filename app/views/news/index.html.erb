@@ -1,0 +1,30 @@
+<div class='l-constrained'>
+  <% present(@index_page) do |template| %>
+    <%= render '/components/hero', 
+      img_src: template.hero_image_component, 
+      description: template.title 
+    %>
+    <div class='row'>
+      <div class="l-constrained">
+        <div class="l-2col">
+          <div class="l-2col-main">
+            <div class="body-content"><%= template.body.html_safe %></div>
+            <div class='row'>
+              <ul>
+                <% present_collection(resource_collection).each do |template| %>
+                  <li>
+                    <%= template.order_by_date_component %>
+                    <%= link_to template.title, template.full_path %>
+                  </li>
+                <% end %>
+              </div>
+            </ul>
+          </div>
+          <div class="l-2col-side">
+            <%= template.cta_links_component %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
