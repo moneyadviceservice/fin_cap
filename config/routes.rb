@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :evaluations, only: :show
     resources :evidence_hub, only: :index
     resources :insights, only: :show
+    resources :news, only: :show
     resources :reviews, only: :show
     resources :thematic_reviews, only: %i[index show]
 
