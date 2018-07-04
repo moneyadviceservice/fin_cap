@@ -1,0 +1,26 @@
+<div class="l-2col l-2col-no-margin l-2col-flex">
+  <div class="l-2col-even coloured-box">
+    <h2 class="coloured-box__title">Research and findings</h2>
+    <ul class="list list--links coloured-box__list">
+      <% I18n.t('fincap.research_evaluation.findings').each do |link| %>
+        <li>
+          <a href="<%= link[:url] %>">
+            <%= link[:text] %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="l-2col-even coloured-box">
+    <h2 class="coloured-box__title">Evaluate your programme</h2>
+    <ul class="list list--links coloured-box__list">
+      <% I18n.t('fincap.research_evaluation.existing').each do |link| %>
+        <li>
+          <a href="<%= link[:url] %>">
+            <%= link[:text] %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
