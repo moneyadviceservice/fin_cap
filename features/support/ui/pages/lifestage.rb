@@ -8,8 +8,8 @@ module UI
     end
 
     class SupplementaryInfoBox < SitePrism::Section
-      element :title, '.lifestage_info-box__title'
-      element :content, '.lifestage_info-box__content'
+      element :title, 'h2'
+      element :content, 'p'
       elements :links, 'a'
     end
 
@@ -19,7 +19,8 @@ module UI
       element :main_description, '.hero'
       element :latest_news, '.latest-news'
       sections :teaser_boxes, TeaserBox, '.teaser-box'
-      sections :strategy_box, SupplementaryInfoBox, '.lifestage_info-box'
+      sections :supplementary_info_box,
+               SupplementaryInfoBox, '.sidepanel .l-2col-even'
     end
   end
 end

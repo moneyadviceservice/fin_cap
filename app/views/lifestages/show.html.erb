@@ -1,8 +1,8 @@
 <% present(resource) do |template| %>
   <div class="l-constrained">
-    <%= render "/components/hero", 
-      img_src: template.hero_image_component, 
-      description: template.hero_description_component 
+    <%= render "/components/hero",
+      img_src: template.hero_image_component,
+      description: template.hero_description_component
     %>
   </div>
   <div class="l-constrained">
@@ -24,7 +24,7 @@
         </h2>
         <div class="teaser-box__group-content">
           <% (1..3).each do |n| %>
-            <%= render "lifestages/teaser_box", 
+            <%= render "lifestages/teaser_box",
               image: template.teaser_image_component(n),
               title: template.teaser_title_component(n),
               text: template.teaser_text_component(n)
@@ -37,19 +37,20 @@
   <div class="row">
     <div class="l-constrained">
       <div class="l-2col">
-        <div class="l-2col-main">      
-          <div class="row">   
+        <div class="l-2col-main">
+          <div class="row">
             <%= render 'shared/research_and_evaluation' %>
           </div>
           <div class="row">
-            <div class="l-constrained">
-              <%= render 'lifestages/supplementary_content',
-                template: template %>
+            <div class="l-2col l-2col-no-margin">
+              <%= render 'lifestages/supplementary_content', template: template %>
             </div>
           </div>
         </div>
         <div class="l-2col-side">
-          <%= render "shared/life_stages" %>
+          <div class="row">
+            <%= render "shared/life_stages" %>
+          </div>
         </div>
       </div>
     </div>

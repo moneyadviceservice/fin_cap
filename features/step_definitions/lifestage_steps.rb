@@ -35,7 +35,7 @@ Then('I should see the research box') do
 end
 
 Then('I should see the strategy box with') do |table|
-  strategy_box = lifestage_page.strategy_box.first
+  strategy_box = lifestage_page.supplementary_info_box.first
 
   table.rows.each do |row|
     expect(row[0]).to eq(strategy_box.title.text)
@@ -49,7 +49,7 @@ Then('I should see the lifestages box') do
 end
 
 Then('I should see the steering group links') do |table|
-  links = lifestage_page.strategy_box.last.links
+  links = lifestage_page.supplementary_info_box.last.links
 
   table.rows.each do |row|
     expect(row[0]).to be_in(links.map(&:text))

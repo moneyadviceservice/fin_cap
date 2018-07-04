@@ -1,21 +1,20 @@
-<div class="lifestage-info-group">
-  <div class="lifestage_info-box">
-    <h3 class="lifestage_info-box__title">
+<div class="sidepanel">
+  <div class="l-2col-even">
+    <h2 class="sidepanel__title">
       <%= template.strategy_title_component %>
-    </h3>
-    <p class="lifestage_info-box__content">
-      <%= template.strategy_overview_component %>
-    </p>
+    </h2>
+    <p><%= template.strategy_overview_component %></p>
     <% template.strategy_link_component.each do |link| %>
       <a href="<%= link[:href] %>" class="btn btn--secondary btn--full-width">
         <%= link[:text] %>
       </a>
     <% end %>
   </div>
-  <div class="lifestage_info-box">
-    <h3 class="lifestage_info-box__title">
+
+  <div class="l-2col-even">
+    <h2 class="sidepanel__title">
       <%= template.steering_group_title_component %>
-    </h3>
+    </h2>
     <ul class="list list--links">
       <%- template.steering_group_links_component.each do |link| %>
         <li>
