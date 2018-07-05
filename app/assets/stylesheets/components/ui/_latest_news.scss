@@ -1,34 +1,53 @@
 .latest-news {
-  @include column(12);
   position: relative;
 }
+.latest-news:not(.latest-news__snippet) {
+  @extend .latest-news;
+  @extend .bordered-box;
+}
 
-.latest-news__icon {
+.latest-news:not(.latest-news__snippet) .latest-news__icon {
   position: absolute;
   top: $baseline-unit*3;
   right: $baseline-unit*3;
 }
 
-.latest-news__inner {
-  border: 2px solid $grey-lighter;
+.latest-news:not(.latest-news__snippet) .latest-news__inner {
+  @extend .bordered-box__inner;
   padding: $baseline-unit*2;
 }
 
 .latest-news__title {
   color: $primary-orange;
-  margin: 0 0 $baseline-unit*2;
+  margin: 0 0 $baseline-unit*3;
   padding: 0 $baseline-unit*6 0 0;
 }
 
 .latest-news__list {
-  margin: $baseline-unit*3 0 $baseline-unit;
+  margin: 0 0 $baseline-unit;
   padding: 0;
   list-style: none;
 }
 
 .latest-news__list-item {
+  @include clearfix;
   @include body(14, 24);
   margin: $baseline-unit*2 0;
+}
+
+.latest-news__item-icon,
+.latest-news__content {
+  float: left;
+  display: inline-block;
+}
+
+.latest-news__item-icon {
+  width: 40px;
+}
+
+.latest-news__content {
+  margin-left: $baseline-unit * 2;
+  width: calc(100% - 40px - #{$baseline-unit * 2});
 }
 
 .latest-news__list-item__date {
@@ -40,8 +59,6 @@
 }
 
 .latest-news__list-item__cta {
-  position: relative;
-  display: block;
   margin-top: $baseline-unit;
   font-weight: 500;
 
@@ -49,6 +66,14 @@
     @extend %icon;
     @extend .icon--arrow;
     content: '';
+    margin-left: $baseline-unit;
+  }
+}
+.latest-news:not(.latest-news__snippet) .latest-news__list-item__cta {
+  position: relative;
+  display: block;
+
+  &:after {
     position: absolute;
     right: 0;
     top: 0;
