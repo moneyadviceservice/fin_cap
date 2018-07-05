@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/news.json?tag%5B%5D=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.15.0 (Margo-Urey-00241.local; margourey; 94617) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Fri, 13 Jul 2018 17:25:31 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"976d4cb513c03f5ae7efa8505e6fd1b2"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 3c19f620-b627-4a0a-b11b-fcef4ab320ea
+      x-runtime:
+      - '0.035646'
+    body:
+      encoding: UTF-8
+      string: '{"documents":[],"meta":{"results":0,"page":1,"per_page":20,"total_pages":0}}'
+    http_version: 
+  recorded_at: Fri, 13 Jul 2018 17:25:31 GMT
+recorded_with: VCR 4.0.0
