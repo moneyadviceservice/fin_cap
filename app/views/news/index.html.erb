@@ -2,23 +2,37 @@
   <% present(@index_page) do |template| %>
     <%= render '/components/hero', 
       img_src: template.hero_image_component, 
-      description: template.title 
+      description: template.title,
+      hero_colour: template.hero_colour_css_class
     %>
     <div class='row'>
       <div class="l-constrained">
         <div class="l-2col">
           <div class="l-2col-main">
             <div class="body-content"><%= template.body.html_safe %></div>
-            <div class='row'>
-              <ul>
+            <div class="latest-news__snippet l-constrained">
+              <ul class="latest-news__list">
                 <% present_collection(resource_collection).each do |template| %>
-                  <li>
-                    <%= template.order_by_date_component %>
-                    <%= link_to template.title, template.full_path %>
+                  <li class="latest-news__list-item">
+                    <div class="latest-news__item-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="latest-news__icon svg-icon svg-icon--latest-news" focusable="false">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
+                      </svg>
+                    </div>
+                    <div class="latest-news__content">
+                      <p class="latest-news__list-item__date">
+                        <%= template.order_by_date_component %>
+                      </p>
+                      <p class="latest-news__list-item__text">
+                        <%= template.title %>
+                      </p>
+                      <a href="<%= template.full_path %>" class="latest-news__list-item__cta"><%= I18n.t('fincap.news.more_individual') %></a>
+                    </div>
                   </li>
                 <% end %>
-              </div>
-            </ul>
+              </ul>
+              <a href="#" class="btn btn--primary btn--orange"><%= I18n.t('fincap.news.more_all') %></a>
+            </div>
           </div>
           <div class="l-2col-side">
             <%= template.cta_links_component %>

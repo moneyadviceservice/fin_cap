@@ -14,8 +14,8 @@ Then('I should see a list of all news article titles and dates') do |table|
   expect(latest_news_page.news_items.count).to eq(1)
 
   table.rows.each do |row|
-    expect(latest_news_page.news_items.first.text).to eq("#{row[0]} #{row[1]}")
-    expect(latest_news_page.news_items.first.link.text).to eq(row[1])
+    expect(latest_news_page.news_items.first.text).to eq("#{row[0]} #{row[1]} Read more")
+    expect(latest_news_page.news_items.first.link.text).to eq("Read more")
   end
 end
 
