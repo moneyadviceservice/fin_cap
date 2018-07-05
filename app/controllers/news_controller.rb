@@ -1,12 +1,12 @@
 class NewsController < FincapTemplatesController
   LATEST_NEWS_DOCUMENT_TYPE = 'latest_news'.freeze
   NEWS_DOCUMENT_TYPE = 'news'.freeze
-  
+
   def resource
     NewsTemplate.new(Mas::Cms::News.find(params[:id]))
   end
   helper_method :resource
-  
+
   def index
     document = Mas::Cms::LatestNews.all(
       params: { document_type: [LATEST_NEWS_DOCUMENT_TYPE] }

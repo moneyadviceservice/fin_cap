@@ -16,6 +16,6 @@ Feature: Latest News Page
       | Date                  | Title                            |
       | Thursday 26 July 2018 | Press Release: A new way to pay! |
       
-    And I should see a link to the "first" news list item
-     | Path                                   |
+    And I should see a link to the "first" news item
+     | Path                                    |
      | /en/news/press-release-a-new-way-to-pay |
