@@ -16,10 +16,18 @@ class NewsController < FincapTemplatesController
 
   def resource_collection
     documents = Mas::Cms::News.all(
-      params: { document_type: [NEWS_DOCUMENT_TYPE] }
+      params: { document_type: [NEWS_DOCUMENT_TYPE] }.merge(year_param)
     )
 
     documents.map { |document| NewsTemplate.new(document) }
   end
   helper_method :resource_collection
+
+  private
+
+  def year_param
+    return {} unless params[:year]
+
+    { keyword: params[:year] }
+  end
 end
