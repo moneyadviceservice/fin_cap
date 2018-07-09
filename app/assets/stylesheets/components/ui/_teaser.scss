@@ -1,7 +1,7 @@
 .teaser-box__group {
-  @include column(12);
+  @extend .l-constrained;
   @extend %clearfix;
-  padding: $baseline-unit*2 0;
+  padding: $baseline-unit*2;
   background-color: $color-blue-lighter;
 }
 
@@ -12,7 +12,6 @@
 
 .teaser-box__group-content {
   @include respond-to($mq-s) {
-
     .object-fit & {
       display: flex;
     }
@@ -20,7 +19,6 @@
 }
 
 .teaser-box {
-  @include column(12);
   margin-bottom: $baseline-unit*2;
 
   &:last-of-type {
@@ -28,7 +26,7 @@
   }
 
   @include respond-to($mq-s) {
-    @include column(4);
+    @include column(4, 3, $baseline-spacing);
     margin-bottom: 0;
 
     .object-fit & {
@@ -39,7 +37,7 @@
 }
 
 .teaser-box__image {
-  width: 100%;
+  @include column(12);
 
   .object-fit & {
     object-fit: cover;
@@ -51,8 +49,10 @@
 }
 
 .teaser-box__content {
+  @include column(12);
   @include body(14, 22);
-  margin: 0 $baseline-unit $baseline-unit*2;
+  margin: 0 $baseline-unit $baseline-unit*2 $baseline-unit;
+  padding: 0;
 
   .object-fit & {
     flex: 1 0 auto;
@@ -69,6 +69,7 @@
 
 .teaser-box--horizontal,
 .teaser-box--thematic-review {
+  @extend .row;
   @extend %clearfix;
   background-color: $color-blue-lighter;
 
@@ -79,7 +80,9 @@
   }
 
   .teaser-box__image {
+    @include column(12);
     float: left;
+
     @include respond-to($mq-m) {
       width: 50%;
 
@@ -91,10 +94,9 @@
 
   .teaser-box__content {
     @include column(12);
+    padding: 0 $baseline-spacing;
 
     @include respond-to($mq-m) {
-      @include column(6);
-
       .object-fit & {
         flex: 1;
       }
@@ -102,12 +104,11 @@
   }
 
   .teaser-box__title {
-    @include body(22, 24);
-    margin: $baseline-unit*3 0 0;
+    margin: $baseline-spacing 0 0;
   }
 
-  .teaser-box__content-text {
-    margin: 0;
+  .teaser-box__content-text { 
+    margin-top: 0;   
     padding: $baseline-unit 0;
   }
 
@@ -116,17 +117,29 @@
   }
 }
 
+.teaser-box--horizontal {
+  .teaser-box__image,
+  .teaser-box__content {
+    @include respond-to($mq-m) {
+      @include column(6, 2, 0px);
+    }
+  }
+
+  .teaser-box__title {
+    @include body(22, 24);
+  }
+}
+
 .teaser-box--thematic-review {
-  
   .teaser-box__image {
     @include respond-to($mq-m) {
-      width: 33%;
+      @include column(4, 2, 0px);
     }
   }
 
   .teaser-box__content {
     @include respond-to($mq-m) {
-      @include column(8);
+      @include column(8, 2, 0px);
 
       .object-fit & {
         flex-grow: 2;
