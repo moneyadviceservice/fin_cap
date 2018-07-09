@@ -27,6 +27,7 @@
 
 .nav__level-3__main {
   @extend %clearfix;
+  padding: 0 $baseline-unit * 2;
 
   @include respond-to($mq-m) {
     width: (($num-extended-level - 2) / ($num-extended-level - 1)  * 100%) - ($default-gutter * 2);
