@@ -28,7 +28,7 @@
 
 .coloured-box_info-box {
   @extend .coloured-box;
-  @extend .l-constrained__padded;
+  @extend .l-constrained;
   background: $color-blue-lighter;
   padding: $baseline-unit * 3;
   &, 

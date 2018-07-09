@@ -3,7 +3,8 @@ body {
 }
 
 .body-content {
-  @extend .l-constrained__padded;
+  @extend .l-constrained;
+  margin: $baseline-spacing 0;
   ul {
     list-style: inherit;
     list-style-position: inside;

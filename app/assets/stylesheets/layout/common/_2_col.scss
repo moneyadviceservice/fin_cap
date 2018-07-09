@@ -6,32 +6,31 @@
 }
 
 .l-2col-side {
-@include column(12);
+  @include column(12);
   @include respond-to($mq-m) {
     @include column(4);
     .l-2col-no-margin & {
-      @include column-to-edge(4, 2);
+      @include column(4, 2);
     }
   }
 }
 
 .l-2col-main {
   @include column(12);
-    @include respond-to($mq-m) {
+  @include respond-to($mq-m) {
     @include column(8);
     .l-2col-no-margin & {
-      @include column-to-edge(8, 2);
+      @include column(8, 2);
     }
   }
 }
 
 .l-2col-even {
   @include column(12);
-
   @include respond-to($mq-m) {
     @include column(6);
     .l-2col-no-margin & {
-      @include column-to-edge(6, 2);
+      @include column(6, 2);
     }
   }
 }

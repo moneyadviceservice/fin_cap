@@ -339,7 +339,7 @@
       flex-grow: 1;
 
       @include respond-to($mq-m) {
-        max-width: calc((#{gridsystem-width()} - (#{$default-gutter} * 4)  - 2px) / 3);
+        @include column(3, 2);
       }
     }
   }

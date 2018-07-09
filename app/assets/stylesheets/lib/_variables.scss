@@ -1,6 +1,7 @@
 $site: ("fincap.org.uk");
 $base-font-size: 16 !default;
 $baseline-unit: if($responsive, 0.375rem, 6px);
+$baseline-spacing: $baseline-unit * 3;
 $border-radius: 10px;
 
 // Primary Colours
