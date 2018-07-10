@@ -15,6 +15,12 @@ Given(
   visit("/en/evidence_hub?page=#{page}&per_page=#{per_page}")
 end
 
+When('I search the evidence hub for summaries published in the last 2 years') do
+  step %(I visit the evidence hub search page)
+  evidence_summaries_page.last_2_years_filter.set(true)
+  step %(I press search)
+end
+
 When('I go to the next evidence hub page') do
   evidence_summaries_page.next_page.click
 end
@@ -77,8 +83,8 @@ Then('I should see the keyword field cleared') do
 end
 
 # rubocop:disable Metrics/LineLength
-Then('I should see the summaries related to {string}') do |title|
-  steps %Q{
+Then('I should see the summaries related to {string}') do |_|
+  steps %(
     Then I should see "2" evidence summary
     And I should see the "first" evidence summary as
       | Field               | Value                                                    |
@@ -90,7 +96,7 @@ Then('I should see the summaries related to {string}') do |title|
       | document title      | Raising household saving                                    |
       | overview            | Based on an analysis of international evidence, this report |
       | evidence type       | Review                                                      |
-  }
+  )
 end
 
 Then('I should see the thematic review message') do |message|
@@ -108,13 +114,13 @@ end
 Then(
   'I should see the summaries related to thematic review and has topic Saving'
 ) do
-  steps %Q{
+  steps %(
     Then I should see "1" evidence summary
     And I should see the "first" evidence summary as
       | Field               | Value                                                       |
       | document title      | Raising household saving                                    |
       | overview            | Based on an analysis of international evidence, this report |
       | evidence type       | Review                                                      |
-  }
+  )
   # rubocop:enable Metrics/LineLength
 end
