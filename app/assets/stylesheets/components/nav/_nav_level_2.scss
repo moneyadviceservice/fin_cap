@@ -42,6 +42,14 @@
   }
 }
 
+.nav__level-2__wrap{
+  @extend %l-constrained__np;
+
+  @include respond-to($mq-m) {
+    @include constrained;
+  }
+}
+
 .nav__level-2__description {
   display: none;
 
