@@ -61,6 +61,17 @@ Feature: Evidence Hub Search
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
 
+  Scenario: Search by Year of Publication filter
+    When I search the evidence hub for summaries published in the last 2 years
+    Then I should see "2" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                                                              |
+      | document title      | Moving forward together: peer support for people with problem debt |
+      | evidence type       | Insight                                                            |
+      | topics              | Credit Use and Debt                                                |
+      | countries           | England                                                            |
+      | year of publication | 2017                                                               |
+
   Scenario: Clearing the filters for a filtered search
     Given I search based on some filters
     When I want to clear the filters

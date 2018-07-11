@@ -20,9 +20,11 @@ module UI::Pages
 
     set_url '{/locale}/evidence_hub'
 
+    # pagination elements
     element :previous_page, '.evidence-hub__previous-page'
     element :next_page, '.evidence-hub__next-page'
 
+    # searching/filtering elements
     element :keyword, '#evidence_summary_search_form_keyword'
     element :search_button, '.sidepanel button[type="submit"]'
     element :saving_filter, '#evidence_summary_search_form_topics_saving'
@@ -32,7 +34,10 @@ module UI::Pages
             '#evidence_summary_search_form_client_groups_social-housing-tenants'
     element :children_filter,
             '#evidence_summary_search_form_client_groups_children-3-11'
+    element :last_2_years_filter,
+            '#evidence_summary_search_form_year_of_publication_last-2-years'
     element :clear_filters_button, '.sidepanel__clear-filters'
+
     element :thematic_review_message, '.evidence-hub__thematic-review-message'
     element :thematic_review_message_link,
             '.evidence-hub__thematic-review-message a'
