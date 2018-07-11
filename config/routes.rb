@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :articles, only: :show
     resources :evaluations, only: :show
     resources :evidence_hub, only: :index
+    resources :get_involved, only: :index
     resources :insights, only: :show
     resources :lifestages, only: :show
     resources :news, only: %i[index show]
