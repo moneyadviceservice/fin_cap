@@ -27,6 +27,7 @@
 
 a.download-box__list-item-link {
   color: $color-white;
+  padding: 0 calc(40px + #{$baseline-unit*2}) 0 0;
 
   &:visited {
     color: $grey-lightest;

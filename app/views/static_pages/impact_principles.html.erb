@@ -1,0 +1,56 @@
+<div class="l-constrained">
+  <%= render '/components/hero',
+    img_src: '/assets/static_pages/hero-impact-principles.jpg',
+    description: t('fincap.impact_principles.title'),
+    hero_colour: 'hero--yellow'
+  %>
+  <div class="row">
+    <div class="l-2col-main body-content">
+      <%= t('fincap.impact_principles.intro_html', link: (link_to 'whatworks@fincap.org.uk', 'mailto:whatworks@fincap.org.uk')) %>
+      <ul class="list list--lettered">
+        <% t('fincap.impact_principles.list').each do |item| %>
+          <li class="list--lettered-item">
+            <div class="list--lettered-item__letter" aria-hidden="true">
+              <%= item[:letter] %>
+            </div>
+            <div class="list--lettered-item__content">
+              <p class="list--lettered-item__title">
+                <%= item[:heading] %>
+              </p>
+              <p class="list--lettered-item__inner-content">
+                <%= item[:content] %>
+              </p>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+      <h2><%= t('fincap.impact_principles.support.header') %></h2>
+      <p><%= t('fincap.impact_principles.support.intro') %></p>
+      <ul>
+        <% t('fincap.impact_principles.support.list',
+          link_insightAndResearch: (link_to 'insight and research', 'https://www.moneyadviceservice.org.uk/en/corporate/research')
+        ).each do |item| %>
+          <li><%= raw item %></li>
+        <% end %>
+      </ul>
+      <p><%= t('fincap.impact_principles.support.para_1') %></p>
+      <p><%= raw t('fincap.impact_principles.support.para_2', link: (link_to 'whatworks@fincap.org.uk', 'mailto:whatworks@fincap.org.uk')) %></p>
+    </div>
+    <div class="l-2col-side">
+      <ul class="list list--grouped-cta">
+        <li><%= link_to 'UK financial Capability Strategy', 'http://www.fincap.org.uk/uk_strategy' %></li>
+      </ul>
+      <div class="download-box">
+        <svg xmlns="http://www.w3.org/2000/svg" class="download-box__icon svg-icon svg-icon--download" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--download"></use>
+        </svg>
+        <h3 class="download-box__title">Downloads</h3>
+        <ul class="download-box__list">
+          <li class="download-box__list-item">
+            <%= link_to 'Evidence and Evaluation – Strategy Extract', '#', class: 'download-box__list-item-link' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

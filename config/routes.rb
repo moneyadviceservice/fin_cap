@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     # rubocop:enable Metrics/LineLength
 
     get 'get-involved' => 'static_pages#be_involved'
+    get 'impact-principles' => 'static_pages#impact_principles'
   end
 
   # Styleguide
