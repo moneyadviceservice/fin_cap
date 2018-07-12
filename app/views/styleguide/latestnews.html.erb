@@ -43,3 +43,49 @@
     </div>
   </div>
 </xmp>
+
+<h3 class="styleguide__subheading">Snippet news list</h3>
+<div class="styleguide__example">
+  <div class="latest-news__snippet">
+    <ul class="latest-news__list">
+      <%- 3.times.each do |_| %>
+        <li class="latest-news__list-item">
+          <div class="latest-news__item-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="latest-news__icon svg-icon svg-icon--latest-news" focusable="false">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
+            </svg>
+          </div>
+          <div class="latest-news__content">
+            <p class="latest-news__list-item__date">2 November 2017</p>
+            <p class="latest-news__list-item__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis arcu.
+            </p>
+            <a href="http://www.fincap.org.uk" class="latest-news__list-item__cta">Read more</a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<h3 class="styleguide__subheading">Code</h3>
+<xmp>
+  <div class="latest-news__snippet">
+    <ul class="latest-news__list">
+      <li class="latest-news__list-item">
+        <div class="latest-news__item-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="latest-news__icon svg-icon svg-icon--latest-news" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
+          </svg>
+        </div>
+        <div class="latest-news__content">
+          <p class="latest-news__list-item__date">2 November 2017</p>
+          <p class="latest-news__list-item__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis arcu.
+          </p>
+          <a href="http://www.fincap.org.uk" class="latest-news__list-item__cta">Read more</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</xmp>

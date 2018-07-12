@@ -138,3 +138,5 @@ en:
       thematic_review:
         message_box_info: 'You are viewing the relevant evidence summaries for thematic review: %{link}'
         evidence_hub_direct: 'Not what you were looking for? Go to %{link} for more information'
+    news:
+      more_individual: "Read more" 
