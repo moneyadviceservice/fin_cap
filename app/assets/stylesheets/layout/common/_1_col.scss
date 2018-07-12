@@ -1,0 +1,7 @@
+// Layout 1 column
+//
+// Styleguide layout-1col
+.l-1col {
+  @extend %clearfix;
+  @include column(12);
+}
