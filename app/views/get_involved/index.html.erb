@@ -1,7 +1,16 @@
 <div class="l-constrained">
   <div class="row">
     <div class="l-1col">
-      Stuff
+      <h1>Five ways to get involved with the Financial Capability Strategy</h1>
+
+      <dl class="list list--numbered">
+        <% I18n.t('fincap.get_involved.list').each do |item| %>
+          <dt class="list--numbered__title"><%= item[:title] %></dt>
+          <dd class="list--numbered__content"><%= raw item[:content_html] %></dd>
+        <% end %>
+      </dl>
+
+      <p><strong>Talk to us</strong> if you are planning research, organising a conference or event about how you can build financial capability and the strategy into the agenda – we can help with ideas for breakout sessions, suggestions for speakers or questions for research.</p>
     </div>
   </div>
 </div>
