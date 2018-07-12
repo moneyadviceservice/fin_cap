@@ -17,10 +17,10 @@ Feature: Lifestage page
     """
     And I should see the latest news box
     And I should see the teaser boxes with
-      | image                              | title                       | text                                              | link |
-      | /assets/styleguide/hero-sample.jpg | Some title to tease you     | Loads of content to make you read more            | #    |
-      | /assets/styleguide/hero-sample.jpg | Another title to entice you | A bunch of well written content to make you click | #    |
-      | /assets/styleguide/hero-sample.jpg | Teasing title               | You want to read this, you need to read this      | #    |
+      | title                       | text                                              | link |
+      | Some title to tease you     | Loads of content to make you read more            | #    |
+      | Another title to entice you | A bunch of well written content to make you click | #    |
+      | Teasing title               | You want to read this, you need to read this      | #    |
     And I should see the research box
     And I should see the strategy box with
       | title            | text                                                     | link                               |

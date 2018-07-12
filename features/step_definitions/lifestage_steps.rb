@@ -22,10 +22,9 @@ Then('I should see the teaser boxes with') do |table|
   teasers = lifestage_page.teaser_boxes
 
   table.rows.each do |row|
-    expect(row[0]).to be_in(teasers.map { |teaser| teaser.image['src'].chomp! })
-    expect(row[1]).to be_in(teasers.map { |teaser| teaser.title.text })
-    expect(row[2]).to be_in(teasers.map { |teaser| teaser.content.text })
-    expect(row[3]).to be_in(teasers.map { |teaser| teaser.link['href'] })
+    expect(row[0]).to be_in(teasers.map { |teaser| teaser.title.text })
+    expect(row[1]).to be_in(teasers.map { |teaser| teaser.content.text })
+    expect(row[2]).to be_in(teasers.map { |teaser| teaser.link['href'] })
   end
 end
 
