@@ -3,7 +3,7 @@
 
   li {
     &::before {
-      content: "•"; 
+      content: "•";
       color: $primary-blue-dark;
       display: inline-block; width: 1em;
       margin-left: -1em
@@ -81,7 +81,7 @@
 
   .list--numbered__title {
     font-weight: 500;
-  
+
     &:before {
       @include body(20, 24);
       content: counter(list-numbered-counter);
@@ -93,12 +93,12 @@
       text-align: center;
       display: inline-block;
       margin-right: 10px;
-      width: 20px;
-      height: 20px;
+      width: 45px;
+      height: 45px;
       font-weight: 500;
     }
   }
-  
+
   .list--numbered__content {
     margin-left: $baseline-unit*9;
     margin-bottom: $baseline-unit*2;
@@ -173,11 +173,11 @@
     position: absolute;
     z-index: 9;
   }
-  
+
   .list--lettered-item__content {
     padding-left: $baseline-unit*10;
   }
-  
+
   .list--lettered-item__inner-content {
     margin: 0;
   }
