@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resources :articles, only: :show
     resources :evaluations, only: :show
     resources :evidence_hub, only: :index
-    resources :get_involved, only: :index
     resources :insights, only: :show
     resources :lifestages, only: :show
     resources :news, only: %i[index show]
@@ -16,6 +15,8 @@ Rails.application.routes.draw do
     get '/:page_type/:id/preview' => 'documents_preview#show',
         page_type: /articles|evaluations|insights|reviews|thematic_reviews|thematic_reviews_landing_pages/
     # rubocop:enable Metrics/LineLength
+
+    get 'get-involved' => 'static_pages#be_involved'
   end
 
   # Styleguide
