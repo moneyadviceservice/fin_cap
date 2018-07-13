@@ -1,0 +1,4 @@
+#Use `rake autoprefixer:info` to see what will be prefixed
+#Use `rake tmp:clear` if update not being applied
+    browsers:
+      - "IE > 8"
