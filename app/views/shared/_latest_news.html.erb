@@ -1,8 +1,9 @@
+<% num_of_items = 3 if local_assigns[:num_of_items].nil? %>
 <div class="latest-news">
   <div class="latest-news__inner">
     <h3 class="latest-news__title">Latest News</h3>
     <ul class="latest-news__list">
-      <% present_collection(latest_news.first(number)).each do |item| %>
+      <% present_collection(latest_news.first(num_of_items)).each do |item| %>
         <li class="latest-news__list-item">
           <svg xmlns="http://www.w3.org/2000/svg" class="latest-news__icon svg-icon svg-icon--latest-news" focusable="false">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
