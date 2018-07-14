@@ -1,0 +1,64 @@
+<% present(resource) do |template| %>
+  <div class="l-constrained">
+    <%= render "/components/hero",
+      img_src: template.hero_image_component,
+      description: template.hero_description_component
+    %>
+  </div>
+  <div class="l-constrained">
+    <div class="l-2col">
+      <div class="l-2col-main">
+        <h1><%= template.title %></h1>
+        <%= template.body.html_safe %>
+        <%= render 'shared/research_and_evaluation' %>
+      </div>
+      <div class="l-2col-side">
+        <%= render "shared/latest_news", latest_news: @latest_news %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="l-constrained">
+      <div class="l-3col-even">
+        <h3><%= template.strategy_title_component %></h3>
+        <p><%= template.strategy_text_component %></p>
+      </div>
+      <div class="l-3col-even">
+        <h3><%= template.forum_title_component %></h3>
+        <ul class="list list--links">
+          <% template.forum_links_component.each do |link| %>
+            <li><%= link_to link[:text], link[:href] %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="l-3col-even">
+        <h3><%= render 'shared/country_list' %></h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="l-constrained">
+      <div class="teaser-box__group">
+        <h2 class="teaser-box__group-title">
+          <%= template.teaser_section_title_component %>
+        </h2>
+        <div class="teaser-box__group-content">
+          <% (1..3).each do |n| %>
+            <%= render "lifestages/teaser_box",
+              image: template.teaser_image_component(n),
+              title: template.teaser_title_component(n),
+              text: template.teaser_text_component(n)
+            %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="l-constrained">
+    <div class= "l-2col">
+      <div class="l-2col-main">
+        <%= template.download_component %>
+      </div>
+    </div>
+  </div>
+<% end %>

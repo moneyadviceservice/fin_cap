@@ -1,4 +1,4 @@
-class NewsTemplatePresenter < TemplatePresenter
+class NewsTemplatePresenter < ArticleTemplatePresenter
   def order_by_date_component
     format_date(
       view.strip_tags(order_by_date_block.try(:content))
@@ -13,9 +13,5 @@ class NewsTemplatePresenter < TemplatePresenter
 
   def format_date(date_string)
     date_string ? view.l(date_string.to_s.to_date, format: :to_word) : ''
-  end
-
-  def extract_links(html_string)
-    HtmlParser.new(html_string).extract_links
   end
 end

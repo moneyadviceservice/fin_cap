@@ -23,6 +23,12 @@ class TemplatePresenter < BasePresenter
     view.strip_tags(overview_block.try(:content).to_s)
   end
 
+  protected
+
+  def extract_links(html_string)
+    HtmlParser.new(html_string).extract_links
+  end
+
   private
 
   def download_content
