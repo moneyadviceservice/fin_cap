@@ -29,6 +29,9 @@ end
 class Mas::Cms::Review < Mas::Cms::Document
 end
 
+class Mas::Cms::RegionalStrategy < Mas::Cms::Article
+end
+
 class Mas::Cms::ThematicReview < Mas::Cms::Article
 end
 

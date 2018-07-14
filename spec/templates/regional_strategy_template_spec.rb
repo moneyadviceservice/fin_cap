@@ -1,27 +1,27 @@
-RSpec.describe LifestageTemplate do
+RSpec.describe RegionalStrategyTemplate do
   subject { described_class.new(article) }
   let(:article) do
     double('Mas::Cms::Article', attributes)
   end
 
-  describe '.steering_group_title_block' do
+  describe '.forum_title_block' do
     context 'when block is present' do
       let(:attributes) do
         {
           non_content_blocks: [
             Mas::Cms::Block.new(
-              identifier: 'steering_group_title',
-              content: 'Steering Groups'
+              identifier: 'forum_title',
+              content: 'Forum'
             )
           ]
         }
       end
 
-      it 'returns steering_group_title block' do
-        expect(subject.steering_group_title_block).to eq(
+      it 'returns forum_title block' do
+        expect(subject.forum_title_block).to eq(
           Mas::Cms::Block.new(
-            identifier: 'steering_group_title',
-            content: 'Steering Groups'
+            identifier: 'forum_title',
+            content: 'Forum'
           )
         )
       end
@@ -33,28 +33,28 @@ RSpec.describe LifestageTemplate do
       end
 
       it 'returns nil' do
-        expect(subject.steering_group_title_block).to be_nil
+        expect(subject.forum_title_block).to be_nil
       end
     end
   end
 
-  describe '.steering_group_links_block' do
+  describe '.forum_links_block' do
     context 'when block is present' do
       let(:attributes) do
         {
           non_content_blocks: [
             Mas::Cms::Block.new(
-              identifier: 'steering_group_links',
+              identifier: 'forum_links',
               content: 'bunch of links'
             )
           ]
         }
       end
 
-      it 'returns steering_group_links block' do
-        expect(subject.steering_group_links_block).to eq(
+      it 'returns forum_links block' do
+        expect(subject.forum_links_block).to eq(
           Mas::Cms::Block.new(
-            identifier: 'steering_group_links',
+            identifier: 'forum_links',
             content: 'bunch of links'
           )
         )
@@ -67,7 +67,7 @@ RSpec.describe LifestageTemplate do
       end
 
       it 'returns nil' do
-        expect(subject.steering_group_links_block).to be_nil
+        expect(subject.forum_links_block).to be_nil
       end
     end
   end
@@ -79,7 +79,7 @@ RSpec.describe LifestageTemplate do
           non_content_blocks: [
             Mas::Cms::Block.new(
               identifier: 'strategy_title',
-              content: 'strategy extract'
+              content: 'Strategy Title'
             )
           ]
         }
@@ -89,7 +89,7 @@ RSpec.describe LifestageTemplate do
         expect(subject.strategy_title_block).to eq(
           Mas::Cms::Block.new(
             identifier: 'strategy_title',
-            content: 'strategy extract'
+            content: 'Strategy Title'
           )
         )
       end
@@ -106,24 +106,24 @@ RSpec.describe LifestageTemplate do
     end
   end
 
-  describe '.strategy_overview_block' do
+  describe '.strategy_text_block' do
     context 'when block is present' do
       let(:attributes) do
         {
           non_content_blocks: [
             Mas::Cms::Block.new(
-              identifier: 'strategy_overview',
-              content: 'some content'
+              identifier: 'strategy_text',
+              content: 'some text'
             )
           ]
         }
       end
 
       it 'returns strategy overview block' do
-        expect(subject.strategy_overview_block).to eq(
+        expect(subject.strategy_text_block).to eq(
           Mas::Cms::Block.new(
-            identifier: 'strategy_overview',
-            content: 'some content'
+            identifier: 'strategy_text',
+            content: 'some text'
           )
         )
       end
@@ -135,7 +135,7 @@ RSpec.describe LifestageTemplate do
       end
 
       it 'returns nil' do
-        expect(subject.strategy_overview_block).to be_nil
+        expect(subject.strategy_text_block).to be_nil
       end
     end
   end
