@@ -7,10 +7,6 @@ Given('I click the {string} link') do |year|
   link.click
 end
 
-Then('I should see the latest news main description {string}') do |description|
-  expect(latest_news_page.main_description.text).to eq(description)
-end
-
 Then('I should see the latest news content') do |content|
   expect(latest_news_page).to have_content(content)
 end

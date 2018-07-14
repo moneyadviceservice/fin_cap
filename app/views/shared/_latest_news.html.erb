@@ -8,7 +8,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="latest-news__icon svg-icon svg-icon--latest-news" focusable="false">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
           </svg>
-          <span class="latest-news__list-item__date"><%= item.order_by_date_component %></span>
+          <span class="latest-news__list-item__date"><%= item.official_published_date_component %></span>
           <p class="latest-news__list-item__text"><%= item.title %></p>
           <%= link_to 'Read more', item.full_path, class: "latest-news__list-item__cta" %>
         </li>

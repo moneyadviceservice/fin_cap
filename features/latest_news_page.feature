@@ -5,7 +5,7 @@ Feature: Latest News Page
 
   Scenario: Latest News Page
     Given I visit the latest news page
-    Then I should see the latest news main description "Latest News"
+    Then I should see the hero description "Latest News"
     And I should see the latest news content
     """
     Here you will find all the latest news and press releases relating to the Financial Capability Strategy for the UK.

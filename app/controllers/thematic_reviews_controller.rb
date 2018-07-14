@@ -13,8 +13,16 @@ class ThematicReviewsController < FincapTemplatesController
     @index_page = ThematicReviewsLandingPageTemplate.new(document)
   end
 
+  def show
+    @thematic_review = Mas::Cms::ThematicReview.find(params[:id])
+    @latest_news = TaggedNews.all(@thematic_review).map do |news_item|
+      NewsTemplate.new(news_item)
+    end
+
+  end
+
   def resource
-    ThematicReviewTemplate.new(Mas::Cms::ThematicReview.find(params[:id]))
+    ThematicReviewTemplate.new(@thematic_review)
   end
   helper_method :resource
 

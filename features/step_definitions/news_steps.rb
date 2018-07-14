@@ -6,10 +6,6 @@ Then('I should see the news title {string}') do |title|
   expect(news_page).to have_content(title)
 end
 
-Then('I should see the news description {string}') do |description|
-  expect(news_page.description.text).to eq(description)
-end
-
 Then('I should see the order by date {string}') do |date|
   expect(news_page.order_by_date.text).to eq(date)
 end

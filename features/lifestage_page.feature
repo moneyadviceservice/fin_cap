@@ -6,11 +6,7 @@ Feature: Lifestage page
   Scenario: Visiting an Lifestage page
     Given I entered into the Lifestage page "Young Adults"
     Then I should see the lifestage title "Young Adults"
-    And I should see the lifestage description
-    """
-    Research suggests that young adults typically display
-    lower levels of financial capability than older age groups.
-    """
+    And I should see the hero description "Research suggests that young adults typically display lower levels of financial capability than older age groups."
     And I should see the lifestage content
     """
     Between the ages of 16 to 18 and continuing into their mid-20’s, the 
@@ -19,7 +15,7 @@ Feature: Lifestage page
     requiring financial decisions to be made that could have a major impact
     on their future adult lives.
     """
-    And I should see the latest news box with "3" news items
+    And I should see the latest news box with "1" news items
     And I should see the news items details
       | title                            | date                  | link                                    |
       | Press Release: A new way to pay! | Thursday 26 July 2018 | /en/news/press-release-a-new-way-to-pay |

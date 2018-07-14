@@ -6,10 +6,6 @@ Then('I should see the article title {string}') do |title|
   expect(article_page).to have_content(title)
 end
 
-Then('I should see the main description {string}') do |description|
-  expect(article_page.main_description.text).to eq(description)
-end
-
 Then('I should see the article content') do |content|
   expect(article_page).to have_content(content)
 end

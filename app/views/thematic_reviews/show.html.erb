@@ -1,6 +1,6 @@
 <% present(resource) do |template| %>
   <div class="l-constrained">
-    <%= render '/components/hero', 
+    <%= render "/components/hero", 
       img_src: template.hero_image_component, 
       description: template.hero_description_component 
     %>
@@ -10,15 +10,16 @@
     <div class="l-2col">
       <div class="l-2col-main">
         <h2><%= template.title %></h2>
-        <p class="news-date"><%= template.official_published_date_component %></p>
+
         <%= template.body.html_safe %>
       </div>
       <div class="l-2col-side">
-        <ul class="list list--links">
-          <%- template.news_cta_links_component.each do |link| %>
-            <li><%= link_to link[:text], link[:href] %></li>
-          <% end %>
-        </ul>
+        <div class="row">
+          <%= render 'shared/latest_news', latest_news: @latest_news %>
+        </div>
+        <%= template.cta_links_component %>
+        <%= template.download_component %>
+        <%= template.feedback_component %>
       </div>
     </div>
   </div>
