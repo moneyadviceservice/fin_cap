@@ -13,9 +13,16 @@ Feature: Lifestage page
     """
     And I should see the lifestage content
     """
-    Young adults, as they leave school or other statutory settings, will face major changes in the coming years to the policy, economic and social landscape within which they will start managing money day to day and making critical financial decisions about their future. The degree of financial capability they display during this transition can have a major bearing on their resilience and wellbeing throughout their adult lives.
+    Between the ages of 16 to 18 and continuing into their mid-20’s, the 
+    transition into independent living and the working environment is a 
+    critical moment in a young adult’s life, presenting new challenges and 
+    requiring financial decisions to be made that could have a major impact
+    on their future adult lives.
     """
-    And I should see the latest news box
+    And I should see the latest news box with "3" news items
+    And I should see the news items details
+      | title                            | date                  | link                                    |
+      | Press Release: A new way to pay! | Thursday 26 July 2018 | /en/news/press-release-a-new-way-to-pay |
     And I should see the teaser boxes with
       | title                       | text                                              | link |
       | Some title to tease you     | Loads of content to make you read more            | #    |
@@ -23,8 +30,8 @@ Feature: Lifestage page
       | Teasing title               | You want to read this, you need to read this      | #    |
     And I should see the research box
     And I should see the strategy box with
-      | title            | text                                                     | link                               |
-      | Strategy extract | Young adults in the coming years will face major changes | /financial+capability+strategy.pdf | 
+      | title            | text                                         | link                               |
+      | Strategy extract | Adult financial capability is a direct resul | /financial+capability+strategy.pdf | 
     And I should see the lifestages box
     And I should see the steering group links
       | text                   | link                               |

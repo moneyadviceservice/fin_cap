@@ -1,17 +1,18 @@
+<% num_of_items = 3 if local_assigns[:num_of_items].nil? %>
 <div class="latest-news">
   <div class="latest-news__inner">
     <h3 class="latest-news__title">Latest News</h3>
-    <svg xmlns="http://www.w3.org/2000/svg" class="latest-news__icon svg-icon svg-icon--latest-news" focusable="false">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
-    </svg>
     <ul class="latest-news__list">
-      <li class="latest-news__list-item">
-        <p class="latest-news__list-item__date">2 November 2017</p>
-        <p class="latest-news__list-item__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a felis arcu.
-        </p>
-        <a href="http://www.fincap.org.uk" class="latest-news__list-item__cta">Read more</a>
-      </li>
+      <% present_collection(latest_news.first(num_of_items)).each do |item| %>
+        <li class="latest-news__list-item">
+          <svg xmlns="http://www.w3.org/2000/svg" class="latest-news__icon svg-icon svg-icon--latest-news" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--latest-news"></use>
+          </svg>
+          <span class="latest-news__list-item__date"><%= item.order_by_date_component %></span>
+          <p class="latest-news__list-item__text"><%= item.title %></p>
+          <%= link_to 'Read more', item.full_path, class: "latest-news__list-item__cta" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>

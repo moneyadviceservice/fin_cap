@@ -12,7 +12,7 @@
         <%= template.body.html_safe %>
       </div>
       <div class="l-2col-side">
-        <%= render "shared/latest_news" %>
+        <%= render "shared/latest_news", latest_news: @latest_news %>
       </div>
     </div>
   </div>

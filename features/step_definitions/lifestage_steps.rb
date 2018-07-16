@@ -11,11 +11,21 @@ Then('I should see the lifestage description') do |description|
 end
 
 Then('I should see the lifestage content') do |content|
-  expect(lifestage_page).to have_content(content)
+  expect(lifestage_page.main_content.first).to have_content(content)
 end
 
-Then('I should see the latest news box') do
-  expect(lifestage_page).to have_latest_news
+Then('I should see the latest news box with {string} news items') do |number|
+  expect(lifestage_page.latest_news_item.count).to eq(1)
+end
+
+Then('I should see the news items details') do |table|
+  news_items = lifestage_page.latest_news_item
+
+  table.rows.each do |row|
+    expect(row[0]).to be_in(news_items.map { |item| item.title.text })
+    expect(row[1]).to be_in(news_items.map { |item| item.date.text })
+    expect(row[2]).to be_in(news_items.map { |item| item.link['href'] })
+  end
 end
 
 Then('I should see the teaser boxes with') do |table|

@@ -1,5 +1,11 @@
 module UI
   module Pages
+    class LatestNewsItem < SitePrism::Section
+      element :title, '.latest-news__list-item__text'
+      element :date, '.latest-news__list-item__date'
+      element :link, '.latest-news__list-item__cta'
+    end
+
     class TeaserBox < SitePrism::Section
       element :title, '.teaser-box__title'
       element :image, '.teaser-box__image'
@@ -17,7 +23,8 @@ module UI
       set_url '/en/lifestages/{/slug}'
 
       element :main_description, '.hero'
-      element :latest_news, '.latest-news'
+      elements :main_content, '.l-2col-main p'
+      sections :latest_news_item, LatestNewsItem, '.latest-news__list-item'
       sections :teaser_boxes, TeaserBox, '.teaser-box'
       sections :supplementary_info_box,
                SupplementaryInfoBox, '.sidepanel .l-2col-even'
