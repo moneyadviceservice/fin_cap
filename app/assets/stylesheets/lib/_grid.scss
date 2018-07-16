@@ -1,9 +1,5 @@
 $default-gutter: 1.66667%;
 
-$column-width: 60px !default;
-$gutter-width: 40px !default;
-$columns: 12 !default;
-
 @function px($px) {
   @return ($px / $base-font-size) * 1em
 }
@@ -18,51 +14,22 @@ $mq-l: px(960) !default;
 $mq-l-max: px(1199) !default;
 $mq-xl: px(1200) !default;
 
-@function gridsystem-width($columns: $columns) {
-  @return ($column-width * $columns) + ($gutter-width * $columns);
-}
-
+// THIS IS THE ACTUAL GRID CODE
+$columns: 12 !default;
 $total-width: 100%;
 
-@mixin column($x, $columns: $columns) {
+@mixin column($x, $total: 2, $column-margin: $baseline-spacing * 1.5) {
+  @if ($x == 12) { $total: 1; }
   display: inline;
   float: left;
-  width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
-  margin-left: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-  margin-right: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-}
-
-@mixin column-to-edge($x, $total, $columns: $columns) {
-  // @if ($x != 12) {
-    display: inline;
-    float: left;
-    width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width*0.5) / gridsystem-width($columns));
-    margin-left: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-    margin-right: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-    &:nth-child(#{$total}n - 1) {
-      margin-left: 0;
-    }
-    &:nth-child(#{$total}n) {
-      margin-right: 0;
-    }
-  // } 
-  // @else {
-  //   @include column(12);
-  // }
-}
-
-@mixin push($offset: 1) {
-  margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-}
-
-@mixin pull($offset: 1) {
-  margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-}
-
-@mixin row($columns: $columns) {
-  @include clearfix();
-  display: block;
-  width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
-  margin-left: $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1);
-  margin-right: $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1);
+  width: calc( #{($total-width / $columns) * $x} - #{$column-margin * ($columns - $x) / $columns} );
+  margin-left: 0;
+  box-sizing: border-box;
+  // This is because of precedent in media
+  &:nth-child(1n) {
+    margin-right: $column-margin;
+  }
+  &:nth-child(#{$total}n) {
+    margin-right: 0;
+  }
 }

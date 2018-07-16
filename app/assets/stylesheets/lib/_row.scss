@@ -1,4 +1,5 @@
 .row {
   @extend %clearfix;
-  margin: $baseline-unit*2 0;
+  position: relative;
+  margin: $baseline-spacing 0;
 }

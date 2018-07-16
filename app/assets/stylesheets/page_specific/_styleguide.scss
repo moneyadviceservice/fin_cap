@@ -68,6 +68,7 @@
 
 .styleguide__example {
   @extend %clearfix;
+  @extend .l-constrained;
   padding: $baseline-unit;
   border: 1px solid $grey-light;
 }
@@ -84,11 +85,11 @@
   margin-bottom: $baseline-unit*2;
 
   @include respond-to($mq-m) {
-    @include column(3);
+    @include column(3, 4);
   }
 
   @include respond-to($mq-l) {
-    @include column(2);
+    @include column(2, 6);
   }
 }
 

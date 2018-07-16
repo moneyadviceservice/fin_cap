@@ -1,7 +1,5 @@
-.l-constrained {
-  @extend %clearfix;
+@mixin constrained {
   margin: 0 auto;
-
   // restricts the maximum width of the website for IE8 users and below
   @if $responsive {
     max-width: $mq-xl;
@@ -11,6 +9,13 @@
   }
 }
 
-.l-constrained__padded {
-  @include column(12);
+%l-constrained__np {
+  @extend %clearfix;
+  @include constrained;
+}
+
+.l-constrained {  
+  @extend %clearfix;
+  @include constrained;
+  padding: 0 $baseline-spacing;
 }

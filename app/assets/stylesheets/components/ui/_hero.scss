@@ -1,7 +1,5 @@
 .hero {
-  @include column(12);
-  @extend %clearfix;
-  position: relative;
+  @extend .row;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;

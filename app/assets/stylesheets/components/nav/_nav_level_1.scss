@@ -132,6 +132,7 @@ $chevron-ratio: 1.5;
   line-height: 1;
   color: $color-white;
   background: $primary-blue-dark;
+  padding: 0 $baseline-unit;
 
   @include respond-to($mq-m) {
     border-bottom: 0;

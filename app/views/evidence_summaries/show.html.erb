@@ -1,9 +1,7 @@
 <% present(@evidence_summary) do |evidence_summary| %>
   <div class="l-constrained">
-    <div class="row">
       <%= render 'evidence_hub_hero',
                  evidence_type_name: evidence_summary.evidence_type.downcase %>
-    </div>
 
     <div class="row">
       <div class="l-2col">

@@ -42,6 +42,14 @@
   }
 }
 
+.nav__level-2__wrap{
+  @extend %l-constrained__np;
+
+  @include respond-to($mq-m) {
+    @include constrained;
+  }
+}
+
 .nav__level-2__description {
   display: none;
 
@@ -137,6 +145,7 @@
 
 .nav__level-2__category {
   @include column(12);
+  padding: 0 $baseline-unit * 2;
 
   margin-top: $baseline-unit * 2;
   margin-bottom: $baseline-unit * 2;
@@ -339,7 +348,7 @@
       flex-grow: 1;
 
       @include respond-to($mq-m) {
-        max-width: calc((#{gridsystem-width()} - (#{$default-gutter} * 4)  - 2px) / 3);
+        @include column(3, 2);
       }
     }
   }
