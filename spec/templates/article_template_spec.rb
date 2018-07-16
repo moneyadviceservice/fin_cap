@@ -1,7 +1,75 @@
-RSpec.describe TeaserTemplate do
+RSpec.describe ArticleTemplate do
   subject { described_class.new(article) }
   let(:article) do
     double('Mas::Cms::Article', attributes)
+  end
+
+  describe '.strategy_title_block' do
+    context 'when block is present' do
+      let(:attributes) do
+        {
+          non_content_blocks: [
+            Mas::Cms::Block.new(
+              identifier: 'strategy_title',
+              content: 'strategy extract'
+            )
+          ]
+        }
+      end
+
+      it 'returns strategy title block' do
+        expect(subject.strategy_title_block).to eq(
+          Mas::Cms::Block.new(
+            identifier: 'strategy_title',
+            content: 'strategy extract'
+          )
+        )
+      end
+    end
+
+    context 'when block is not present' do
+      let(:attributes) do
+        { non_content_blocks: [] }
+      end
+
+      it 'returns nil' do
+        expect(subject.strategy_title_block).to be_nil
+      end
+    end
+  end
+
+  describe '.strategy_link_block' do
+    context 'when block is present' do
+      let(:attributes) do
+        {
+          non_content_blocks: [
+            Mas::Cms::Block.new(
+              identifier: 'strategy_link',
+              content: 'some link'
+            )
+          ]
+        }
+      end
+
+      it 'returns strategy link block' do
+        expect(subject.strategy_link_block).to eq(
+          Mas::Cms::Block.new(
+            identifier: 'strategy_link',
+            content: 'some link'
+          )
+        )
+      end
+    end
+
+    context 'when block is not present' do
+      let(:attributes) do
+        { non_content_blocks: [] }
+      end
+
+      it 'returns nil' do
+        expect(subject.strategy_link_block).to be_nil
+      end
+    end
   end
 
   describe '.teaser_section_title_block' do
@@ -173,4 +241,6 @@ RSpec.describe TeaserTemplate do
       end
     end
   end
+
 end
+

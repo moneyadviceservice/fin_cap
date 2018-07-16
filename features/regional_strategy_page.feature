@@ -1,9 +1,9 @@
 Feature: Regional Strategy page
   As a user, 
-  I want to be able to read a lifestage page and easily find related content, 
+  I want to be able to read a regional strategy page and easily find related content, 
   so that I can gather as much information as I require on this subject.
 
-  Scenario: Visiting an Regionals Strategy page
+  Scenario: Visiting an Regional Strategy page
     Given I entered into the Regional Strategy page "Wales"
     Then I should see the regional strategy title "Wales"
     And I should see the regional strategy description

@@ -44,11 +44,11 @@ Then('I should see the strategy box with') do |table|
 end
 
 Then('I should see the lifestages box') do
-  expect(lifestage_page).to have_content('Life stages across the UK')
+  expect(regional_strategy_page).to have_content('Life stages across the UK')
 end
 
 Then('I should see the steering group links') do |table|
-  links = lifestage_page.supplementary_info_box.last.links
+  links = regional_strategy_page.supplementary_info_box.last.links
 
   table.rows.each do |row|
     expect(row[0]).to be_in(links.map(&:text))
@@ -57,7 +57,7 @@ Then('I should see the steering group links') do |table|
 end
 
 Then('I should see the lifestage download links') do |table|
-  download_box_links = lifestage_page.download_box.map(&:link)
+  download_box_links = regional_strategy_page.download_box.map(&:link)
 
   table.rows.each do |row|
     expect(row[0]).to be_in(download_box_links.map(&:text))
