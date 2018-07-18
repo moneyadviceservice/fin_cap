@@ -10,10 +10,7 @@
   @include column(12);
 
   @include respond-to($mq-m) {
-    @include column(4);
-    .l-2col-no-margin & {
-      @include column(4, 3);
-    }
+    @include column(4, 3);
   }
 }
 
