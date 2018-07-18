@@ -1,10 +1,6 @@
 .bordered-box {
   @include column(12);
-  padding-bottom: $baseline-unit*2;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+  margin-bottom: $baseline_spacing;
 }
 
 .bordered-box__group {
