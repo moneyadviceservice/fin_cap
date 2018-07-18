@@ -46,7 +46,7 @@
   @extend %l-constrained__np;
 
   @include respond-to($mq-m) {
-    @include constrained;
+    padding: 0 $baseline-spacing;
   }
 }
 
