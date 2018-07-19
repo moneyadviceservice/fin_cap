@@ -18,7 +18,6 @@ class ThematicReviewsController < FincapTemplatesController
     @latest_news = TaggedNews.all(@thematic_review).map do |news_item|
       NewsTemplate.new(news_item)
     end
-
   end
 
   def resource

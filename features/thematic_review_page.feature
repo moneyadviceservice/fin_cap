@@ -11,12 +11,10 @@ Feature: Thematic review page
     """
     Thematic Review content
     """
-    And I should see the latest news box with "3" news items
+    And I should see the latest news box with "1" news items
     And I should see the news items details
-      | title                                                              | date | link                                                                           |
-      | UK Strategy                                                        |      | /en/articles/uk-strategy                                                       |
-      | Financial well-being: the employee view                            |      | /en/insights/financial-well-being-the-employee-view                            |
-      | Moving forward together: peer support for people with problem debt |      | /en/insights/moving-forward-together-peer-support-for-people-with-problem-debt |
+      | title                            | date | link                                                     |
+      | Press Release: A new way to pay! | Thursday 26 July 2018 | /en/news/press-release-a-new-way-to-pay |
     And I should see the call to action box containing the links
       | text                                                    | link                                                                             |
       | Evidence Summaries Associated with this Thematic Review | /en/evidence_hub?tag=how-can-we-improve-the-financial-capability-of-young-adults |

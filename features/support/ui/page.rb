@@ -6,7 +6,7 @@ module UI
     element :date, '.latest-news__list-item__date'
     element :link, '.latest-news__list-item__cta'
   end
-  
+
   class Page < SitePrism::Page
     element :hero_description, '.hero__heading'
 

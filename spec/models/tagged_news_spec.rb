@@ -8,6 +8,12 @@ RSpec.describe TaggedNews, type: :model do
       expect(subject.include?(article)).to be_falsey
     end
 
+    it 'only returns News type pages' do
+      subject.each do |news_item|
+        expect(news_item.is_a?(Mas::Cms::News)).to be_truthy
+      end
+    end
+
     context 'when the article has associated tags' do
       it 'returns news items with the same tags as the article' do
         subject.each do |news_item|
@@ -21,7 +27,7 @@ RSpec.describe TaggedNews, type: :model do
       let(:article) { Mas::Cms::Article.find('uk-strategy') }
 
       it 'returns all the news items' do
-        expect(subject.count).to eq(10)
+        expect(subject.count).to eq(1)
       end
     end
   end
