@@ -1,0 +1,57 @@
+<div class="l-constrained">
+  <%= render '/components/hero',
+   img_src: '/assets/static_pages/hero-get-involved.jpg',
+   description: t('fincap.get_involved.title')
+  %>
+
+  <div class="row">
+    <div class="l-2col-main">
+      <h1><%= t('fincap.get_involved.head') %></h1>
+      <dl class="list list--numbered">
+        <dt class="list--numbered__title">
+          <%= t('fincap.get_involved.list.sign_up.title') %>
+        </dt>
+        <dd class="list--numbered__content">
+          <%= raw t(
+            'fincap.get_involved.list.sign_up.content_html',
+            link: (link_to 'IMPACT principles', 'impact-principles')) %>
+        </dd>
+        <dt class="list--numbered__title">
+          <%= t('fincap.get_involved.list.use.title') %>
+        </dt>
+        <dd class="list--numbered__content">
+          <%= raw t(
+            'fincap.get_involved.list.use.content_html',
+            link_evaluation_toolkit: (link_to 'Evaluation Toolkit', 'evaluation-toolkit-homepage'),
+            link_evidence_hub: (link_to 'Evidence Hub', evidence_hub_index_path)) %>
+        </dd>
+        <dt class="list--numbered__title">
+            <%= t('fincap.get_involved.list.talk_money_week.title') %>
+        </dt>
+        <dd class="list--numbered__content">
+          <%= raw t('fincap.get_involved.list.talk_money_week.content_html',
+            link: (link_to 'here', 'fincap-week')) %>
+        </dd>
+        <dt class="list--numbered__title">
+          <%= t('fincap.get_involved.list.up_to_date.title') %>
+        </dt>
+        <dd class="list--numbered__content">
+          <%= raw t('fincap.get_involved.list.up_to_date.content_html',
+            link_themes: (link_to 'Themes page', 'themes'),
+            link_twitter: (link_to 'Twitter', t('fincap.links_external.twitter')),
+            link_linkedin: (link_to 'LinkedIn', t('fincap.links_external.linkedin'))) %>
+        </dd>
+        <dt class="list--numbered__title">
+          <%= t('fincap.get_involved.list.share.title') %>
+        </dt>
+        <dd class="list--numbered__content">
+          <%= raw t('fincap.get_involved.list.share.content_html',
+            link: (link_to 'linkedin@fincap.org.uk', 'mailto:linkedin@fincap.org.uk')) %>
+        </dd>
+      </dl>
+      <h2><%= t('fincap.get_involved.talk.title') %></h2>
+      <p><%= raw t('fincap.get_involved.talk.para_1', url: (link_to 'whatworks@fincap.org.uk', 'mailto:whatworks@fincap.org.uk')) %></p>
+      <p><%= raw t('fincap.get_involved.talk.para_2', url: (link_to 'talkmoneyweek@fincap.org.uk', 'mailto:talkmoneyweek@fincap.org.uk')) %></p>
+    </div>
+  </div>
+</div>

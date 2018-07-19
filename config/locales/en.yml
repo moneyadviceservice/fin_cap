@@ -139,4 +139,30 @@ en:
         message_box_info: 'You are viewing the relevant evidence summaries for thematic review: %{link}'
         evidence_hub_direct: 'Not what you were looking for? Go to %{link} for more information'
     news:
-      more_individual: "Read more" 
+      more_individual: "Read more"
+    get_involved:
+      title: Get involved
+      head: Five ways to get involved with the Financial Capability Strategy
+      list:
+        sign_up:
+          title: Sign up to the IMPACT Principles
+          content_html: 'Evidence and evaluation is key to the aims of the Financial Capability Strategy – we want to help organisations generate more evidence around which financial capability interventions are most effective. The IMPACT principles set out the approach to evidence and evaluation the Strategy wants to embed in all organisations it works with. Signatories to the %{link} will act as “impact champions” helping to embed best practice within their organisations.'
+        use:
+          title: Use our Evidence Hub
+          content_html: 'The %{link_evaluation_toolkit} contains guidance and practical tools (including a set of Outcomes Frameworks) that you can use to plan and carry out your evaluation. The %{link_evidence_hub} is a focal point for evidence on the effectiveness of financial capability interventions. Any evaluation activity carried out with the %{link_evaluation_toolkit} can be uploaded and shared to the %{link_evidence_hub}. That allows you to share your evaluation findings and best practice with the sector.'
+        talk_money_week:
+          title: Get involved in Talk Money Week
+          content_html: 'This themed week raises awareness of the importance of financial capability, what it means and the organisations involved in making a change. We’d love to hear from organisations interested in getting involved – more information is available %{link}.'
+        up_to_date:
+          title: Keep up to date
+          content_html: 'Read our research and get updates from the steering group on our %{link_themes}, and don’t forget to follow the Strategy’s official %{link_twitter} and %{link_linkedin} profile.'
+        share:
+          title: Share your news
+          content_html: 'Whatever you’re up to, we want to hear from you. We’re always on the lookout for news from across the world of Financial Capability. If your organisation has any relevant news you’d like to share, or if you would like to write a guest blog, get in touch at %{link}.'
+      talk:
+        title: Talk to us
+        para_1: 'If you are planning research, organising a conference or event, talk to us about how you can build financial capability and the Strategy into the agenda. We can help with ideas for breakout sessions, suggestions for speakers or questions for research. Please contact us at %{url}'
+        para_2: 'If you would like to find out how you can be involved in this year’s Talk Money Week email %{url}'
+    links_external:
+      twitter: https://twitter.com/FinCapStrategy
+      linkedin: https://www.linkedin.com/company/the-financial-capability-strategy-for-the-uk?trk=biz-companies-cym
