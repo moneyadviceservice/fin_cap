@@ -6,7 +6,7 @@ Feature: Article page
   Scenario: Visiting an article page
     Given I entered into the Article page "UK Strategy"
     Then I should see the article title "UK Strategy"
-    And I should see the main description "Financial capability across the UK"
+    And I should see the hero description "Financial capability across the UK"
     And I should see the article content
     """
     This Strategy aims to improve financial capability across the UK.

@@ -1,0 +1,26 @@
+<% present(resource) do |template| %>
+  <div class="l-constrained">
+    <%= render "/components/hero", 
+      img_src: template.hero_image_component, 
+      description: template.hero_description_component 
+    %>
+  </div>
+
+  <div class="l-constrained">
+    <div class="l-2col">
+      <div class="l-2col-main">
+        <div class="body-content">
+          <h2><%= template.title %></h2>
+
+          <%= template.body.html_safe %>
+        </div>
+      </div>
+      <div class="l-2col-side">
+        <%= render 'shared/latest_news', latest_news: @latest_news %>
+        <%= template.cta_links_component %>
+        <%= template.download_component %>
+        <%= template.feedback_component %>
+      </div>
+    </div>
+  </div>
+<% end %>

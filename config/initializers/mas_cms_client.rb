@@ -21,6 +21,7 @@ class Mas::Cms::News < Mas::Cms::Article
 end
 
 class Mas::Cms::News < Mas::Cms::Article
+  PAGE_TYPE = 'news'.freeze
 end
 
 class Mas::Cms::LatestNews < Mas::Cms::Article

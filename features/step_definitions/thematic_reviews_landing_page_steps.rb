@@ -3,8 +3,11 @@ Given('I visit the thematic reviews landing page') do
 end
 
 Then('I should see the thematic reviews landing page content') do
-  expect(thematic_reviews_landing_page.heading)
-    .to have_content('Thematic Reviews')
+  # rubocop:disable Metrics/LineLength
+  expect(thematic_reviews_landing_page).to have_content(
+    'Thematic Reviews are short overviews of key findings from multiple UK-based'
+  )
+  # rubocop:enable Metrics/LineLength
 end
 
 Then('I should see the {string} thematic review as') do |result_number, table|
