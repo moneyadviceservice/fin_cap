@@ -34,7 +34,6 @@ Feature: Lifestage page
       | Steering group members | /financial+capability+strategy.pdf |
       | Steering group updates | /financial+capability+strategy.pdf |
       | Action plans           | /financial+capability+strategy.pdf |
-    And I should see the lifestage download links
+    And I should see the download links
       | text                  | link                               |
       | Young Adults download | /financial+capability+strategy.pdf |
-      

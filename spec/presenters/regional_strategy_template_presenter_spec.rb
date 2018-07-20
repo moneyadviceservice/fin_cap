@@ -1,41 +1,41 @@
-RSpec.describe LifestageTemplatePresenter do
+RSpec.describe RegionalStrategyTemplatePresenter do
   let(:view) { ActionView::Base.new }
   let(:object) do
-    double('LifestageTemplate', attributes)
+    double('RegionalStrategyTemplate', attributes)
   end
   subject(:presenter) { described_class.new(object, view) }
 
-  describe '#steering_group_title_component' do
+  describe '#forum_title_component' do
     context 'when object has the block' do
       let(:attributes) do
         {
-          steering_group_title_block: double(content: '<p>Steering group</p>')
+          forum_title_block: double(content: '<p>Forum</p>')
         }
       end
 
-      it 'returns the steering group title' do
-        expect(presenter.steering_group_title_component).to eq(
-          'Steering group'
+      it 'returns the forum title' do
+        expect(presenter.forum_title_component).to eq(
+          'Forum'
         )
       end
     end
 
     context 'when object does not have the block' do
       let(:attributes) do
-        { steering_group_title_block: nil }
+        { forum_title_block: nil }
       end
 
       it 'returns empty' do
-        expect(presenter.steering_group_title_component).to be_empty
+        expect(presenter.forum_title_component).to be_empty
       end
     end
   end
 
-  describe '#steering_group_links_component' do
+  describe '#forum_links_component' do
     context 'when object has the block' do
       let(:attributes) do
         {
-          steering_group_links_block: double(
+          forum_links_block: double(
             content: '<p><a href="href1">text1</a><a href="href2">text2</a><p>'
           )
         }
@@ -47,7 +47,7 @@ RSpec.describe LifestageTemplatePresenter do
           { href: 'href2', text: 'text2' }
         ]
 
-        expect(presenter.steering_group_links_component).to eq(
+        expect(presenter.forum_links_component).to eq(
           expected_result
         )
       end
@@ -55,37 +55,37 @@ RSpec.describe LifestageTemplatePresenter do
 
     context 'when object does not have the block' do
       let(:attributes) do
-        { steering_group_links_block: double(content: '') }
+        { forum_links_block: double(content: '') }
       end
 
       it 'returns empty' do
-        expect(presenter.steering_group_links_component).to be_empty
+        expect(presenter.forum_links_component).to be_empty
       end
     end
   end
 
-  describe '#strategy_overview_component' do
+  describe '#strategy_text_component' do
     context 'when object has the block' do
       let(:attributes) do
         {
-          strategy_overview_block: double(content: '<p>Strategy overview</p>')
+          strategy_text_block: double(content: '<p>Strategy text</p>')
         }
       end
 
-      it 'returns the strategy overview content' do
-        expect(presenter.strategy_overview_component).to eq(
-          'Strategy overview'
+      it 'returns the strategy text content' do
+        expect(presenter.strategy_text_component).to eq(
+          'Strategy text'
         )
       end
     end
 
     context 'when object does not have the block' do
       let(:attributes) do
-        { strategy_overview_block: nil }
+        { strategy_text_block: nil }
       end
 
       it 'returns empty' do
-        expect(presenter.strategy_overview_component).to be_empty
+        expect(presenter.strategy_text_component).to be_empty
       end
     end
   end

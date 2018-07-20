@@ -1,5 +1,8 @@
 .list {
-  list-style: none;
+  &,
+  .body-content & { 
+    list-style: none;
+  }
 
   li {
     &::before {
@@ -141,9 +144,12 @@
 
   .list--lettered-item {
     @extend %clearfix;
-    list-style: none;
     padding-bottom: $baseline-unit*4;
     position: relative;
+    &,
+    .body-content & { 
+      list-style: none;
+    }
 
     &:before {
       content: '';

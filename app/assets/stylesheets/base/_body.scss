@@ -4,7 +4,7 @@ body {
 
 .body-content {
   @extend .l-constrained;
-  margin: $baseline-spacing 0;
+  margin: $baseline-spacing auto;
   ul {
     list-style: inherit;
     list-style-position: inside;

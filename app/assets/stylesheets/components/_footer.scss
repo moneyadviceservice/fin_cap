@@ -58,8 +58,6 @@
 
 // Footer contact
 .footer__box {
-  margin-top: $baseline-spacing;
-
   @include respond-to($mq-m) {
     @include column(4);
     float: right;

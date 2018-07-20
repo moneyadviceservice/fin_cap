@@ -2,12 +2,35 @@ Then('I should see the hero description {string}') do |description|
   expect(current_page.hero_description.text).to eq(description)
 end
 
-Then('I should see the news items details') do |table|
-  news_items = current_page.latest_news_item
+Then('I should see the download links') do |table|
+  download_box_links = current_page.download_box.map(&:link)
 
   table.rows.each do |row|
-    expect(row[0]).to be_in(news_items.map { |item| item.title.text })
-    expect(row[1]).to be_in(news_items.map { |item| item.date.text })
-    expect(row[2]).to be_in(news_items.map { |item| item.link['href'] })
+    expect(row[0]).to be_in(download_box_links.map(&:text))
+    expect(row[1]).to be_in(download_box_links.map { |link| link[:href] })
+  end
+end
+
+Then('I should see the research box') do
+  expect(current_page).to have_content('Research and findings')
+  expect(current_page).to have_content('Evaluate your programme')
+end
+
+Then('I should see the strategy box with') do |table|
+  strategy_box = current_page.supplementary_info_box.first
+  table.rows.each do |row|
+    expect(row[0]).to eq(strategy_box.title.text)
+    expect(strategy_box.content).to have_content(row[1])
+    expect(row[2]).to be_in(strategy_box.links.map { |link| link[:href] })
+  end
+end
+
+Then('I should see the teaser boxes with') do |table|
+  teasers = current_page.teaser_boxes
+
+  table.rows.each do |row|
+    expect(row[0]).to be_in(teasers.map { |teaser| teaser.title.text })
+    expect(row[1]).to be_in(teasers.map { |teaser| teaser.content.text })
+    expect(row[2]).to be_in(teasers.map { |teaser| teaser.link['href'] })
   end
 end

@@ -11,6 +11,7 @@ module World
       lifestage
       latest_news
       news
+      regional_strategy
       thematic_review
       thematic_reviews_landing
     ]

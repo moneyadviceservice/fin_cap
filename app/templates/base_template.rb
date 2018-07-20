@@ -10,6 +10,7 @@ class BaseTemplate
            :body,
            :non_content_blocks,
            :full_path,
+           :slug,
            to: :article
 
   attr_reader :article
