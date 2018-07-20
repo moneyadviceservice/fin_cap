@@ -8,6 +8,7 @@ module World
       article
       evidence_summaries
       evidence_summary
+      home
       lifestage
       latest_news
       news

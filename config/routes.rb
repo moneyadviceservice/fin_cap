@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'homepage#index'
+  root to: 'homepages#show', locale: 'en'
 
   scope ':locale', locale: /en/ do
     resources :articles, only: :show

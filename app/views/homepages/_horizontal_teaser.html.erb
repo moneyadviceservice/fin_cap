@@ -1,0 +1,15 @@
+<div class="teaser-box--horizontal">
+  <img src="<%= template.horizontal_teaser_image_component %>" class="teaser-box__image" />
+  <div class="teaser-box__content">
+    <h3 class="teaser-box__title"><%= template.horizontal_teaser_title_component %></h3>
+    <p class="teaser-box__content-text">
+      <%= template.horizontal_teaser_text_component %>
+    </p>
+    <% template.horizontal_teaser_link_component.each do |link|  %>
+      <%= link_to link[:text], 
+          link[:href], 
+          class: "teaser-box__cta btn btn--primary"
+      %>
+    <% end %>
+  </div>
+</div>
