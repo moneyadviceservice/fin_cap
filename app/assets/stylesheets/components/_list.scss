@@ -180,6 +180,11 @@
     z-index: 9;
   }
 
+  .list--lettered-item__title {
+    font-weight: 500;
+    margin: 0;
+  }
+
   .list--lettered-item__content {
     padding-left: $baseline-unit*10;
   }
