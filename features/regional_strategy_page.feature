@@ -8,30 +8,24 @@ Feature: Regional Strategy page
     Then I should see the regional strategy title "Wales"
     And I should see the regional strategy description
     """
-    Research suggests that young adults typically display
-    lower levels of financial capability than older age groups.
+    The Welsh Government has long recognised that financial exclusion 
+    and over-indebtedness are issues that need concerted action
     """
     And I should see the regional strategy content
     """
-    Young adults, as they leave school or other statutory settings, will face major changes in the coming years to the policy, economic and social landscape within which they will start managing money day to day and making critical financial decisions about their future. The degree of financial capability they display during this transition can have a major bearing on their resilience and wellbeing throughout their adult lives.
+    The usually resident population of Wales was 3.1 million people living in 1.3 million households in 2011, with nearly one in five of residents aged 65 or over. Wales had a higher percentage of residents with a long-term health problem or disability. One in four of those aged 16 and over reported having no recognised qualification. There are 700,000 people in poverty in Wales, equivalent to 23 per cent of the population.
     """
     And I should see the latest news box
     And I should see the teaser boxes with
-      | title                       | text                                              | link |
-      | Some title to tease you     | Loads of content to make you read more            | #    |
-      | Another title to entice you | A bunch of well written content to make you click | #    |
-      | Teasing title               | You want to read this, you need to read this      | #    |
+      | title                     | text                                                                                                                        | link |
+      | Child Poverty Strategy    | New objectives for improving the outcomes of children and young people living in low income households.                     | #    |
+      | Strategy for Older People | Delivery Action Plan for Living Longer, Living Better focuses on the three priorities for the Strategy for Older People.    | #    |
+      | Warm Homes programme      | The government has made considerable investment to address home energy efficiency in low income communities and households. | #    |
     And I should see the research box
     And I should see the strategy box with
-      | title            | text                                                     | link                               |
-      | Strategy extract | Young adults in the coming years will face major changes | /financial+capability+strategy.pdf | 
-    And I should see the lifestages box
-    And I should see the steering group links
-      | text                   | link                               |
-      | Steering group members | /financial+capability+strategy.pdf |
-      | Steering group updates | /financial+capability+strategy.pdf |
-      | Action plans           | /financial+capability+strategy.pdf |
-    And I should see the lifestage download links
+      | title                               | text                                                                    | link                               |
+      | Wales Financial Capability Strategy | There is general agreement that there should be one Strategy for Wales. | /financial+capability+strategy.pdf | 
+    And I should see the countries box
+    And I should see the download links
       | text                  | link                               |
       | Young Adults download | /financial+capability+strategy.pdf |
-      

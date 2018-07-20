@@ -34,32 +34,36 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="l-constrained">
-      <div class="l-2col">
-        <div class="l-2col-main">
-          <div class="row">
-            <%= render 'shared/research_and_evaluation' %>
-          </div>
-          <div class="row">
-            <div class="l-2col l-2col-no-margin">
-              <%= render 'lifestages/supplementary_content', template: template %>
-            </div>
-          </div>
+
+  <div class="l-constrained">
+    <div class="l-2col">
+      <div class="l-2col-main">
+        <div class="row">
+          <%= render 'shared/research_and_evaluation' %>
         </div>
-        <div class="l-2col-side">
-          <div class="row">
-            <%= render "shared/life_stages" %>
+        <div class="row">
+          <div class="l-2col l-2col-no-margin">
+            <%= render 'lifestages/supplementary_content', template: template,
+              strategy_title: template.strategy_title_component,
+              strategy_content: template.strategy_overview_component,
+              strategy_links: template.strategy_link_component,
+              working_group_title: template.steering_group_title_component,
+              working_group_links: template.steering_group_links_component
+            %>
           </div>
         </div>
       </div>
+      <div class="l-2col-side">
+        <div class="row">
+          <%= render "shared/life_stages" %>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="l-constrained">
-    <div class= "l-2col">
+
+    <div class= "row l-2col">
       <div class="l-2col-main">
         <%= template.download_component %>
       </div>
     </div>
-  </div>
+</div>
 <% end %>

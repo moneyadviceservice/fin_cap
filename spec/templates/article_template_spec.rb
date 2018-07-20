@@ -241,6 +241,4 @@ RSpec.describe ArticleTemplate do
       end
     end
   end
-
 end
-

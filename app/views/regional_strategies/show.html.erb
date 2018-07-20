@@ -14,23 +14,16 @@
           <%= template.body.html_safe %>
         </div>
         <%= render 'shared/research_and_evaluation' %>
-
-        <div class="row bordered-box">
-          <div class="l-2col bordered-box__inner">
-            <div class="bordered-box__content">
-              <div class="l-2col-even">
-                <h3><%= template.strategy_title_component %></h3>
-                <p><%= template.strategy_text_component %></p>
-              </div>
-              <div class="l-2col-even">
-                <h3><%= template.forum_title_component %></h3>
-                <ul class="list list--links">
-                  <% template.forum_links_component.each do |link| %>
-                    <li><%= link_to link[:text], link[:href] %></li>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
+        
+        <div class="row">
+          <div class="l-2col l-2col-no-margin">
+            <%= render 'lifestages/supplementary_content', template: template,
+              strategy_title: template.strategy_title_component,
+              strategy_content: template.strategy_text_component,
+              strategy_links: template.strategy_link_component,
+              working_group_title: template.forum_title_component,
+              working_group_links: template.forum_links_component
+            %>
           </div>
         </div>
 

@@ -11,5 +11,4 @@ class RegionalStrategiesController < FincapTemplatesController
     RegionalStrategyTemplate.new(@regional_strategy)
   end
   helper_method :resource
-
 end

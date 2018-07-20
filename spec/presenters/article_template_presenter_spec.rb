@@ -59,7 +59,7 @@ RSpec.describe ArticleTemplatePresenter do
       end
     end
   end
-  
+
   describe '#teaser_section_title_component' do
     context 'when object has the block' do
       let(:attributes) do
