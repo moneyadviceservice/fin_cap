@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   root to: 'homepages#show', locale: 'en'
 
+  CMS_PAGES = %w[
+    articles
+    evaluations
+    insights
+    latest_news
+    news
+    reviews
+  ].freeze
+
   scope ':locale', locale: /en/ do
     resources :articles, only: :show
     resources :evaluations, only: :show
@@ -12,13 +21,13 @@ Rails.application.routes.draw do
     resources :reviews, only: :show
     resources :thematic_reviews, only: %i[index show]
 
-    # rubocop:disable Metrics/LineLength
-    get '/:page_type/:id/preview' => 'documents_preview#show',
-        page_type: /articles|evaluations|insights|reviews|thematic_reviews|thematic_reviews_landing_pages/
-    # rubocop:enable Metrics/LineLength
-
+    # Static pages
     get 'get-involved' => 'static_pages#be_involved'
     get 'impact-principles' => 'static_pages#impact_principles'
+
+    # Preview pages
+    get '/:page_type/:id/preview' => 'documents_preview#show',
+        page_type: Regexp.union(CMS_PAGES)
   end
 
   # Styleguide

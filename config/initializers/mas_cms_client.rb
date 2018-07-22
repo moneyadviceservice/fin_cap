@@ -17,17 +17,15 @@ end
 class Mas::Cms::Homepage < Mas::Cms::Article
 end
 
+class Mas::Cms::LatestNews < Mas::Cms::Article
+  PAGE_TYPE = 'latest_news'.freeze
+end
+
 class Mas::Cms::Lifestage < Mas::Cms::Article
 end
 
 class Mas::Cms::News < Mas::Cms::Article
-end
-
-class Mas::Cms::News < Mas::Cms::Article
   PAGE_TYPE = 'news'.freeze
-end
-
-class Mas::Cms::LatestNews < Mas::Cms::Article
 end
 
 class Mas::Cms::Review < Mas::Cms::Document
