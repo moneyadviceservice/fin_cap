@@ -163,6 +163,42 @@ en:
         title: Talk to us
         para_1: 'If you are planning research, organising a conference or event, talk to us about how you can build financial capability and the Strategy into the agenda. We can help with ideas for breakout sessions, suggestions for speakers or questions for research. Please contact us at %{url}'
         para_2: 'If you would like to find out how you can be involved in this year’s Talk Money Week email %{url}'
+    impact_principles:
+      title: IMPACT Principles
+      intro_html: |
+        <p>The IMPACT principles set out the high-level approach to evidence and evaluation that the Strategy wants to embed in all organisations at all levels. They have been developed to encourage organisations across the sector to publicly commit to building the evidence base and ensuring that robust evidence is at the heart of everything they do. Signatories to the IMPACT principles will act as impact champions and will help to share and embed best practice across the sector.</p>
+        <p>If you would like to sign-up, please contact us at %{link}.</p>
+      list:
+        - letter: I
+          heading: Impact champion
+          content: 'You are an IMPACT champion: you consider evidence and evaluation at every stage of commissioning and delivering your financial capability programme(s). This includes factoring evidence of need and what works into funding decisions, building evaluation in from the start of new interventions, and sharing your effective evidence and evaluation practice with others.'
+        - letter: M
+          heading: Mind the gap
+          content: 'When making decisions about the programme(s) you fund or deliver, you take into account the ‘gaps’ in current provision and knowledge about what works. This ensures that your initiatives complement programme(s) that are already being delivered, and will enable you to focus research and evaluation activity on filling key gaps in knowledge about the most effective approaches for different groups.'
+        - letter: P
+          heading: Properly resource it
+          content: 'You allocate sufficient resources to impact and process evaluation activity to ensure it is high quality and that the findings are reliable. You also make sure the scale of the evaluation is proportionate to the programme(s) in question. If you are a funder, this involves building resource for evaluation into funding arrangements.'
+        - letter: A
+          heading: Add to the wider evidence base
+          content: 'You are committed to sharing evaluation findings about what has worked well and less well from the evaluation of your programme(s) with the wider financial capability sector through the Financial Capability Evidence Hub (and other channels). This involves sharing information on the nature of the programme(s) or initiative you deliver, the resources required to deliver it, the number of people it reaches, as well as what impact it has had.'
+        - letter: C
+          heading: Consistency when measuring outcomes
+          content: 'You use the Financial Capability Outcome Frameworks when developing your new programme evaluations (unless there is a clear justification for not doing so). This will help to improve consistency in the way the sector measures its impact and will enable stronger conclusions to be made about the most effective means of improving people’s financial capability.'
+        - letter: T
+          heading: Take time to understand the results and their implications
+          content: 'You learn from, and act on, lessons from your evaluations to ensure you continuously improve the programme(s) you fund or deliver. You use the evaluation findings to help adapt and refine ongoing initiatives, as well as to inform the design and commissioning of new ones. You change demonstrably as a result of what you have learnt, showing that you are a true IMPACT champion.'
+      support:
+        header: Support for signatories
+        intro: In return for committing your organisation to our Principles and working to improve the financial capability community, the Money Advice Service can give you bespoke support from its Insight &amp; Evaluation team. Our staff can offer various support such as
+        list:
+          - helping to build evaluation into a new financial capability funding programme;
+          - technical help with using the Evaluation Toolkit;
+          - assistance with developing a plan for your evaluation;
+          - help to create a theory of change for your programme;
+          - supporting you to commission an external evaluation expert;
+          - helping you to make the best use of our own %{link_insightAndResearch}.
+        para_1: We tailor our support to the specific circumstances and needs of an organisation, with the overall aim of improving evidence and evaluation capacity across the financial capability community.
+        para_2: If you would like to sign-up, please contact us at %{link}.
     links_external:
       twitter: https://twitter.com/FinCapStrategy
       linkedin: https://www.linkedin.com/company/the-financial-capability-strategy-for-the-uk?trk=biz-companies-cym
