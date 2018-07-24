@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/homepages/root.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.15.0 (Margo-Urey-00241.local; margourey; 11256) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Sat, 21 Jul 2018 15:47:03 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"29285464eedb03080c402a744c868d1a"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - ee86cfbc-c208-47db-9ded-3bfa50c3b058
+      x-runtime:
+      - '0.229169'
+    body:
+      encoding: UTF-8
+      string: '{"label":"Financial Capability","slug":"root","full_path":"/en/homepages/root","meta_description":"","meta_title":"","category_names":[],"layout_identifier":"homepage","related_content":{"latest_blog_post_links":[{"title":"What
+        is the average cost to have a baby?","path":"https://www.moneyadviceservice.org.uk/blog/what-is-the-average-cost-to-have-a-baby"},{"title":"What
+        is a Ponzi scheme and is it a scam?","path":"https://www.moneyadviceservice.org.uk/blog/what-is-a-ponzi-scheme-and-is-it-a-scam"},{"title":"What
+        is the average cost of utility bills per month?","path":"https://www.moneyadviceservice.org.uk/blog/what-is-the-average-cost-of-utility-bills-per-month"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-07-21T15:45:43.000Z","supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eWelcome
+        to the Financial Capability website, which provides the latest updates on
+        the development\u003cbr\u003e\nof the Financial Capability Strategy for the
+        UK, as well as resources and practical tools to help\u003cbr\u003e\nshare
+        learning about what works.\u003c/p\u003e\n\n\u003cp\u003eClick \u003ca href=\"https://www.fincap.org.uk/fincapweek\"\u003ehere\u003c/a\u003e
+        for information about Talk Money Week, the annual event which showcases and
+        celebrates\u003cbr\u003e\nhow organisations are improving financial wellbeing
+        and supporting the work of the Financial\u003cbr\u003e\nCapability Strategy.\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T20:14:27.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eWelcome
+        to the Financial Capability website\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eFirst
+        teaser title\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eA
+        bunch of ipsem lorem\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eSecond
+        teaser title\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:04.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eKitchen
+        sink ipsem lorem text\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eThird
+        teaser title\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eI
+        have run out of ipsem lorem ideas.\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"horizontal_teaser_title","content":"\u003cp\u003eHorizontal
+        teaser title\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"horizontal_teaser_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"horizontal_teaser_text","content":"\u003cp\u003eHorizontal
+        teaser content\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T20:46:39.000Z"},{"identifier":"horizontal_teaser_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-20T17:30:05.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eFinancial capability document\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-20T17:27:16.000Z","updated_at":"2018-07-21T15:45:43.000Z"},{"identifier":"component_teaser_section_title","content":"\n","created_at":"2018-07-20T17:30:05.000Z","updated_at":"2018-07-20T17:30:05.000Z"}],"translations":[]}'
+    http_version: 
+  recorded_at: Sat, 21 Jul 2018 15:47:03 GMT
+recorded_with: VCR 4.0.0
