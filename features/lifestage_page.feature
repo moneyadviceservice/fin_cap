@@ -21,9 +21,9 @@ Feature: Lifestage page
       | Press Release: A new way to pay! | Thursday 26 July 2018 | /en/news/press-release-a-new-way-to-pay |
     And I should see the teaser boxes with
       | title                       | text                                              | link |
-      | Some title to tease you     | Loads of content to make you read more            | #    |
-      | Another title to entice you | A bunch of well written content to make you click | #    |
-      | Teasing title               | You want to read this, you need to read this      | #    |
+      | Some title to tease you     | Loads of content to make you read more            | /financial+capability+strategy.pdf    |
+      | Another title to entice you | A bunch of well written content to make you click | /financial+capability+strategy.pdf    |
+      | Teasing title               | You want to read this, you need to read this      | /financial+capability+strategy.pdf    |
     And I should see the research box
     And I should see the strategy box with
       | title            | text                                         | link                               |

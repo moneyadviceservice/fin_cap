@@ -136,6 +136,35 @@ RSpec.describe ArticleTemplatePresenter do
     end
   end
 
+  describe '#teaser_link_component' do
+    context 'when object has teaser link' do
+      let(:attributes) do
+        {
+          teaser3_link_block: teaser3_link_block
+        }
+      end
+
+      let(:teaser3_link_block) do
+        double(:block,
+               identifier: 'teaser3_link_block',
+               content: '<p><a href= "#">teaser text</a></p>')
+      end
+
+      it 'returns the teaser link content' do
+        expect(object)
+          .to receive(:teaser_link_block)
+          .with(3)
+          .and_return(teaser3_link_block)
+
+        expect(HtmlParser)
+          .to receive_message_chain(%i[new extract_links])
+          .with(teaser3_link_block).with(no_args)
+
+        presenter.teaser_link_component(3)
+      end
+    end
+  end
+
   describe '#teaser_text_component' do
     context 'when object has teaser text' do
       let(:attributes) do
