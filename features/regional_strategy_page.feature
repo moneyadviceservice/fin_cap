@@ -18,9 +18,9 @@ Feature: Regional Strategy page
     And I should see the latest news box
     And I should see the teaser boxes with
       | title                     | text                                                                                                                        | link |
-      | Child Poverty Strategy    | New objectives for improving the outcomes of children and young people living in low income households.                     | #    |
-      | Strategy for Older People | Delivery Action Plan for Living Longer, Living Better focuses on the three priorities for the Strategy for Older People.    | #    |
-      | Warm Homes programme      | The government has made considerable investment to address home energy efficiency in low income communities and households. | #    |
+      | Child Poverty Strategy    | New objectives for improving the outcomes of children and young people living in low income households.                     | /financial+capability+strategy.pdf    |
+      | Strategy for Older People | Delivery Action Plan for Living Longer, Living Better focuses on the three priorities for the Strategy for Older People.    | /financial+capability+strategy.pdf    |
+      | Warm Homes programme      | The government has made considerable investment to address home energy efficiency in low income communities and households. | /financial+capability+strategy.pdf    |
     And I should see the research box
     And I should see the strategy box with
       | title                               | text                                                                    | link                               |

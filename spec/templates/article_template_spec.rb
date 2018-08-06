@@ -106,6 +106,40 @@ RSpec.describe ArticleTemplate do
     end
   end
 
+  describe '.teaser_link_block' do
+    context 'when block is present' do
+      let(:attributes) do
+        {
+          non_content_blocks: [
+            Mas::Cms::Block.new(
+              identifier: 'teaser2_link',
+              content: 'Read more'
+            )
+          ]
+        }
+      end
+
+      it 'returns the numbered teaser image block for a given number' do
+        expect(subject.teaser_link_block(2)).to eq(
+          Mas::Cms::Block.new(
+            identifier: 'teaser2_link',
+            content: 'Read more'
+          )
+        )
+      end
+    end
+
+    context 'when block is not present' do
+      let(:attributes) do
+        { non_content_blocks: [] }
+      end
+
+      it 'returns nil' do
+        expect(subject.teaser_link_block(2)).to be_nil
+      end
+    end
+  end
+
   describe '.teaser_image_block' do
     context 'when block is present' do
       let(:attributes) do

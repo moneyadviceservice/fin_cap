@@ -11,6 +11,10 @@ class ArticleTemplatePresenter < TemplatePresenter
     view.strip_tags(teaser_section_title_block.try(:content).to_s)
   end
 
+  def teaser_link_component(number)
+    extract_links(teaser_link_block(number).try(:content).to_s)
+  end
+
   def teaser_image_component(number)
     view.strip_tags(teaser_image_block(number).try(:content).to_s)
   end

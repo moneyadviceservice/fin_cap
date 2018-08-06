@@ -1,0 +1,12 @@
+<% (1..3).each do |n| %>
+  <div class="teaser-box">
+    <img src="<%= template.teaser_image_component(n) %>" class="teaser-box__image" />
+    <div class="teaser-box__content">
+      <h3 class="teaser-box__title"><%= template.teaser_title_component(n) %></h3>
+      <p class="teaser-box__content-text"><%= template.teaser_text_component(n) %></p>
+      <a href="<%= template.teaser_link_component(n).first[:href] %>" class="teaser-box__cta btn btn--primary">
+        <%= template.teaser_link_component(n).first[:text] %>
+      </a>
+    </div>
+  </div>
+<% end %>

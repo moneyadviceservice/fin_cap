@@ -18,12 +18,9 @@ Feature: Homepage
       | Horizontal teaser title  | Horizontal teaser content | Click here | /financial+capability+strategy.pdf |
     And I should see the teaser boxes with
       | title               | text                                 | link |
-      | First teaser title  | A bunch of ipsem lorem               | #    |
-      | Second teaser title | Kitchen sink ipsem lorem text        | #    |
-      | Third teaser title  | I have run out of ipsem lorem ideas. | #    |
+      | First teaser title  | A bunch of ipsem lorem               | /financial+capability+strategy.pdf    |
+      | Second teaser title | Kitchen sink ipsem lorem text        | /financial+capability+strategy.pdf    |
+      | Third teaser title  | I have run out of ipsem lorem ideas. | /financial+capability+strategy.pdf    |
     And I should see the countries box
     And I should see the lifestages box
     And I should see the latest news box
-    And I should see the download links
-      | text                          | link                               |
-      | Financial capability document | /financial+capability+strategy.pdf |
