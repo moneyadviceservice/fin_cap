@@ -39,5 +39,14 @@
         <%= render 'shared/latest_news', latest_news: @latest_news %>
       </div>
     </div>
+
+    <div class="l-2col">
+      <div class="l-2col-even">
+        <%= render 'shared/large_cta', url: article_path(id: 'our-approach', locale: 'en'), icon: 'document', text: 'I am interested in research and evaluation' %>
+      </div>
+      <div class="l-2col-even">
+        <%= render 'shared/large_cta', url: 'https://moneyadviceservice.org.uk', icon: 'money', text: 'I need help to manage my money' %>
+      </div>
+    </div>
   </div>
 <% end %>
