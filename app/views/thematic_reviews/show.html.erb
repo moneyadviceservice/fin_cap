@@ -16,7 +16,9 @@
         </div>
       </div>
       <div class="l-2col-side">
-        <%= render 'shared/latest_news', latest_news: @latest_news %>
+        <div class="row">
+          <%= render 'shared/latest_news', latest_news: @latest_news %>
+        </div>
         <%= template.cta_links_component %>
         <%= template.download_component %>
         <%= template.feedback_component %>
