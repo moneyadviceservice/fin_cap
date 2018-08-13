@@ -8,8 +8,10 @@
   <div class="l-constrained">
     <div class="l-2col">
       <div class="l-2col-main">
-        <h1><%= template.title %></h1>
-        <%= template.body.html_safe %>
+        <div class="body-content">
+          <h1><%= template.title %></h1>
+          <%= template.body.html_safe %>
+        </div>
       </div>
       <div class="l-2col-side">
         <%= render "shared/latest_news", latest_news: @latest_news %>
