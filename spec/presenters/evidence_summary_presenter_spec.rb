@@ -303,4 +303,28 @@ RSpec.describe EvidenceSummaryPresenter do
       )
     end
   end
+
+  describe '#client_group_filter_params' do
+    it 'returns a hash of search params with the given value' do
+      expected_result = {
+        'evidence_summary_search_form' => {
+          'client_groups' => ['foo']
+        }
+      }
+
+      expect(presenter.client_group_filter_params('foo')).to eq expected_result
+    end
+  end
+
+  describe '#topic_filter_params' do
+    it 'returns a hash of search params with the given value' do
+      expected_result = {
+        'evidence_summary_search_form' => {
+          'topics' => ['bar']
+        }
+      }
+
+      expect(presenter.topic_filter_params('bar')).to eq expected_result
+    end
+  end
 end

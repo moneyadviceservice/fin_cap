@@ -6,7 +6,9 @@
     <% evidence_summary.stripped_topics.each do |topic| %>
       <li class="sidepanel__list-item">
         <%= link_to topic,
-            '#',
+            evidence_hub_index_path(
+              params: evidence_summary.topic_filter_params(topic)
+            ),
             class: 'sidepanel__list-item-link'
         %>
       </li>
