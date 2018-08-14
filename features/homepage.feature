@@ -22,5 +22,5 @@ Feature: Homepage
       | Second teaser title | Kitchen sink ipsem lorem text        | /financial+capability+strategy.pdf    |
       | Third teaser title  | I have run out of ipsem lorem ideas. | /financial+capability+strategy.pdf    |
     And I should see the countries box
-    And I should see the lifestages box
+    And I should see the life stages box
     And I should see the latest news box

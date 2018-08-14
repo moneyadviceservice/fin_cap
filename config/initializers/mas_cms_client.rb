@@ -39,3 +39,6 @@ end
 
 class Mas::Cms::ThematicReviewsLandingPage < Mas::Cms::Article
 end
+
+class Mas::Cms::UkStrategy < Mas::Cms::Article
+end

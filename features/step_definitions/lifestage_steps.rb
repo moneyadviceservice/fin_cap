@@ -10,10 +10,6 @@ Then('I should see the lifestage content') do |content|
   expect(lifestage_page.main_content.first).to have_content(content)
 end
 
-Then('I should see the lifestages box') do
-  expect(lifestage_page).to have_content('Life stages across the UK')
-end
-
 Then('I should see the steering group links') do |table|
   links = lifestage_page.supplementary_info_box.last.links
 

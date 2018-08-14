@@ -15,6 +15,7 @@ module World
       regional_strategy
       thematic_review
       thematic_reviews_landing
+      uk_strategy
     ]
 
     pages.each do |page|
