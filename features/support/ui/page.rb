@@ -32,5 +32,6 @@ module UI
     sections :supplementary_info_box,
              SupplementaryInfoBox, '.sidepanel .l-2col-even'
     element :hero_description, '.hero__heading'
+    element :country_list, 'ul.list--countries'
   end
 end

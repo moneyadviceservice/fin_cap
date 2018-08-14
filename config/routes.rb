@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :regional_strategies, only: %i[show]
     resources :reviews, only: :show
     resources :thematic_reviews, only: %i[index show]
+    resources :uk_strategies, only: :show
 
     # Static pages
     get 'get-involved' => 'static_pages#be_involved'

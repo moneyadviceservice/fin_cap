@@ -28,7 +28,7 @@ Feature: Lifestage page
     And I should see the strategy box with
       | title            | text                                         | link                               |
       | Strategy extract | Adult financial capability is a direct resul | /financial+capability+strategy.pdf | 
-    And I should see the lifestages box
+    And I should see the life stages box
     And I should see the steering group links
       | text                   | link                               |
       | Steering group members | /financial+capability+strategy.pdf |
