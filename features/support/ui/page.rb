@@ -38,5 +38,6 @@ module UI
     sections :lifestage_rows, LifestageRow, '.bordered-box--green li'
     element :title, '.l-2col-main h1'
     element :hero_description, '.hero__heading'
+    element :country_list, 'ul.list--countries'
   end
 end

@@ -34,3 +34,16 @@ Then('I should see the teaser boxes with') do |table|
     expect(row[2]).to be_in(teasers.map { |teaser| teaser.link['href'] })
   end
 end
+
+Then('I should see the life stages box') do
+  expect(current_page).to have_content('Life stages across the UK')
+end
+
+Then('I should see the latest news box') do
+  expect(current_page).to have_latest_news_item
+end
+
+Then('I should see the countries box') do
+  expect(current_page).to have_content('The Strategy across the UK')
+  expect(current_page).to have_country_list
+end
