@@ -15,6 +15,16 @@ When('I click {string}') do |text|
   click_link(text)
 end
 
+# rubocop:disable Metrics/LineLength
+When('I click on the {string} client group in the key info panel') do |client_group|
+# rubocop:enable Metrics/LineLength
+  click_link(client_group)
+end
+
+When('I click on the {string} topic in the key info panel') do |topic|
+  click_link(topic)
+end
+
 Then('I should see the evidence summary content') do |table|
   table.rows.each do |row|
     field_name = row[0].parameterize.underscore
@@ -39,4 +49,12 @@ Then('I should see the evidence summary data_types') do |table|
 
     expect(icon_class_value).to eq(row[1])
   end
+end
+
+Then('I should return to the search results page') do
+  expect(evidence_summaries_page).to be_displayed
+end
+
+Then('I should see {string} evidence summaries') do |number|
+  expect(evidence_summaries_page.search_results.count).to eq(number.to_i)
 end

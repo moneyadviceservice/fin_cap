@@ -6,7 +6,9 @@
     <% evidence_summary.stripped_client_group.each do |client_group| %>
       <li class="sidepanel__list-item">
         <%= link_to client_group,
-            '#',
+            evidence_hub_index_path(
+              params: evidence_summary.client_group_filter_params(client_group)
+            ),
             class: 'sidepanel__list-item-link'
         %>
       </li>
