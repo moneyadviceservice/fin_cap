@@ -111,6 +111,10 @@ class EvidenceSummaryPresenter < BasePresenter
     search_form_params('topics' => [value])
   end
 
+  def measured_outcome_filter_params(value)
+    search_form_params('measured_outcomes' => [value])
+  end
+
   private
 
   def translate_field(field)
