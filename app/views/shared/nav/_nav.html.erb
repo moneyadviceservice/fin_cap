@@ -1,0 +1,481 @@
+<nav class="nav uninitialised" data-dough-component="Nav" role="navigation">
+  <div class="l-constrained">
+    <ul class="nav__level-1" data-nav-level-1 role="menubar" aria-label="main site navigation">
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+        <%= render 'shared/nav/level_1_heading', text: 'What Is Financial Capability?' %>
+
+        <div class="nav__level-2" data-nav-level-2>
+          <div class="nav__level-2__wrap">
+            <p href="#" class="nav__level-2__description" role="category description">The concept of financial capability, why it is important and who can benefit</p>
+
+            <ul class="nav__level-2__categories">
+              <li class="nav__level-2__heading">
+                <%= render 'shared/nav/level_2_heading', text: 'What Is Financial Capability?' %>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="What is financial capability?">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'What Is Financial Capability?', url: article_path('en', 'what-is-financial-capability') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability levels in the UK', url: article_path('en', 'levels-uk') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability - a global issue', url: article_path('en', 'global-issue') %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is this website for?">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is this website for?', url: article_path('en', 'who-is-this-website-for') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial services', url: article_path('en', 'financial-services') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Charities and third-sector organisations', url: article_path('en', 'charities-third-sector-organisations') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Employers', url: article_path('en', 'employers') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Researchers', url: article_path('en', 'researchers') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Schools', url: article_path('en', 'schools') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Parents', url: article_path('en', 'parents') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Childrens services', url: article_path('en', 'childrens-services') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Youth and students', url: article_path('en', 'youth-students') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Individuals', url: article_path('en', 'individuals') %>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+        <%= render 'shared/nav/level_1_heading', text: 'About The Strategy' %>
+
+        <div class="nav__level-2" data-nav-level-2>
+          <div class="nav__level-2__wrap">
+            <p class="nav__level-2__description" role="category description">Who is involved, why it is needed and how it will help millions of people across the UK</p>
+
+            <ul class="nav__level-2__categories">
+              <li class="nav__level-2__heading">
+                <%= render 'shared/nav/level_2_heading', text: 'About The Strategy' %>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="What is The Strategy?">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'What is The Strategy?', url: article_path('en', 'strategy') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'UK Strategy', url: '/en/uk_strategies/uk-strategy' %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Northern Ireland ', url: regional_strategy_path('en', 'northern-ireland') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Scotland', url: regional_strategy_path('en', 'scotland') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Wales', url: regional_strategy_path('en', 'wales') %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Why is The Strategy needed?">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Why is The Strategy needed?', url: article_path('en', 'why-strategy-needed') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'What The Strategy needs to achieve', url: article_path('en', 'what-strategy-needs-achieve') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence and analysis', url: article_path('en', 'evidence-analysis') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Summary of key statistics on Financial Capability', url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf' %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Strategy development', url: article_path('en', 'development-strategy') %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="How the Strategy will be delivered">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'How The Strategy will be delivered', url: article_path('en', 'how-strategy-delivered') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of the steering groups', url: article_path('en', 'role-steering-groups') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of Money Advice Service', url: article_path('en', 'role-money-advice-service') %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is involved?">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is involved?', url: article_path('en', 'whos-involved') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'The Financial capability Board', url: article_path('en', 'financial-capabilty-board') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Steering Group and forums', url: article_path('en', 'steering-group-forums') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'IMPACT Principle Signatories', url: article_path('en', 'impact-principle-signatories') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'What Works Fund Grantees', url: article_path('en', 'what-works-grant-funded-projects') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Get Involved', url: '/en/get-involved' %>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+        <%= render 'shared/nav/level_1_heading', text: 'Life Stages' %>
+
+        <div class="nav__level-2 nav__level-2--extended" data-nav-level-2-extended>
+          <div class="nav__level-2__wrap">
+            <p class="nav__level-2__description" role="category description">Groups, areas and themes the strategy focuses on</p>
+
+            <ul class="nav__level-2__categories" data-nav-level-2-extended-items role="menu" aria-label="Life stages">
+              <li class="nav__level-2__heading" role="none">
+                <%= render 'shared/nav/level_2_heading', text: 'Life Stages' %>
+              </li>
+
+              <li class="nav__level-2__category" role="none">
+                <%= render 'shared/nav/level_2_extended_heading', text: 'Children and Young People', url: lifestage_path('en', 'children-and-young-people') %>
+
+                <div class="nav__level-3" data-nav-level-3>
+                  <div class="nav__level-3__main">
+                    <div class="children-and-young-people nav__level-3__image"></div>
+
+                    <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
+
+                    <%= render 'shared/nav/level_3_heading', text: 'Children and Young People' %>
+
+                    <ul class="nav__level-3__categories" role="menu">
+                      <%= render 'shared/nav/level_3_subcategory_btn',
+                        text: 'Find out more about children and young people',
+                        url: lifestage_path('en', 'children-and-young-people')
+                      %>
+
+                      <li class="nav__level-3__category" role="none">
+                        <ul class="nav__level-3__subcategories" role="menu" aria-label="Children and young people">
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Children and Young people steering group',
+                            url: article_path('en', 'children-young-people-steering-group')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Steering group updates',
+                            url: article_path('en', 'children-young-people-steering-group-updates')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Action Plan',
+                            url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/093/original/Children___Young_People_Action_Plan.pdf'
+                          %>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav__level-2__category" role="none">
+                <%= render 'shared/nav/level_2_extended_heading', text: 'Young Adults', url: lifestage_path('en', 'young-adults') %>
+
+                <div class="nav__level-3" data-nav-level-3>
+                  <div class="nav__level-3__main">
+                    <div class="young-adults nav__level-3__image"></div>
+
+                    <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
+
+                    <%= render 'shared/nav/level_3_heading', text: 'Young Adults' %>
+
+                    <ul class="nav__level-3__categories" role="menu">
+                      <%= render 'shared/nav/level_3_subcategory_btn',
+                        text: 'Find out more about young adults',
+                        url: lifestage_path('en', 'young-adults')
+                      %>
+
+                      <li class="nav__level-3__category" role="none">
+                        <ul class="nav__level-3__subcategories" role="menu" aria-label="Young Adults">
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Young Adults steering group',
+                            url: article_path('en', 'young-adults-steering-group')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Steering group updates',
+                            url: article_path('en', 'young-adults-steering-group-updates')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Action plan',
+                            url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/094/original/Young_Adults_Action_Plan.pdf'
+                          %>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav__level-2__category" role="none">
+                <%= render 'shared/nav/level_2_extended_heading', text: 'Working Age', url: lifestage_path('en', 'working-age') %>
+
+                <div class="nav__level-3" data-nav-level-3>
+                  <div class="nav__level-3__main">
+                    <div class="working-age nav__level-3__image"></div>
+
+                    <p class="nav__level-3__description">Working life starts when we enter the workplace, and stretches through to retirement – covering many life events from ages 16 to 70</p>
+
+                    <%= render 'shared/nav/level_3_heading', text: 'Working Age' %>
+
+                    <ul class="nav__level-3__categories" role="menu">
+                      <%= render 'shared/nav/level_3_subcategory_btn',
+                        text: 'Find out more about working age adults',
+                        url: lifestage_path('en', 'working-age')
+                      %>
+
+                      <li class="nav__level-3__category" role="none">
+                        <ul class="nav__level-3__subcategories" role="menu" aria-label="Working Age Adults">
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Workplace steering group',
+                            url: article_path('en', 'workplace-steering-group')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Steering group updates',
+                            url: article_path('en', 'workplace-steering-group-updates')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Action plan',
+                            url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/095/original/Workplace_Action_Plan.pdf'
+                          %>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav__level-2__category" role="none">
+                <%= render 'shared/nav/level_2_extended_heading', text: 'Retirement Planning', url: lifestage_path('en', 'retirement-planning') %>
+
+                <div class="nav__level-3" data-nav-level-3>
+                  <div class="nav__level-3__main">
+                    <div class="retirement-planning nav__level-3__image"></div>
+
+                    <p class="nav__level-3__description">Here we focus on people who are already retired and drawing an income from pensions and other savings</p>
+
+                    <%= render 'shared/nav/level_3_heading', text: 'Retirement Planning' %>
+
+                    <ul class="nav__level-3__categories" role="menu">
+                      <%= render 'shared/nav/level_3_subcategory_btn',
+                        text: 'Find out more about people planning to retire',
+                        url: lifestage_path('en', 'retirement-planning')
+                      %>
+
+                      <li class="nav__level-3__category" role="none">
+                        <ul class="nav__level-3__subcategories" role="menu" aria-label="Older People in Retirement">
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Retirement Planning steering group',
+                            url: article_path('en', 'retirement-planning-steering-group')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Steering group updates',
+                            url: article_path('en', 'people-planning-retire-steering-group-updates')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Action plan',
+                            url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/096/original/Retirement_Planning_Action_Plan.pdf'
+                          %>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav__level-2__category" role="none">
+                <%= render 'shared/nav/level_2_extended_heading', text: 'People in retirement', url: lifestage_path('en', 'people-retirement') %>
+
+                <div class="nav__level-3" data-nav-level-3>
+                  <div class="nav__level-3__main">
+                    <div class="people-retirement nav__level-3__image"></div>
+
+                    <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
+
+                    <%= render 'shared/nav/level_3_heading', text: 'People in retirement' %>
+
+                    <ul class="nav__level-3__categories" role="menu">
+                      <%= render 'shared/nav/level_3_subcategory_btn',
+                        text: 'Find out more about older people in retirement',
+                        url: lifestage_path('en', 'people-retirement')
+                      %>
+
+                      <li class="nav__level-3__category" role="none">
+                        <ul class="nav__level-3__subcategories" role="menu" aria-label="People in retirement">
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'People in retirement steering group',
+                            url: article_path('en', 'people-retirement-steering-group')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Steering group updates',
+                            url: article_path('en', 'people-retirement-steering-group-updates')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Action plan',
+                            url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/097/original/People_in_Retirement_Action_Plan.pdf'
+                          %>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav__level-2__category" role="none">
+                <%= render 'shared/nav/level_2_extended_heading', text: 'People in Financial Difficulties', url: lifestage_path('en', 'people-financial-difficulties') %>
+
+                <div class="nav__level-3" data-nav-level-3>
+                  <div class="nav__level-3__main">
+                    <div class="people-financial-difficulties nav__level-3__image"></div>
+
+                    <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
+
+                    <%= render 'shared/nav/level_3_heading', text: 'People in Financial Difficulties' %>
+
+                    <ul class="nav__level-3__categories" role="menu">
+                      <%= render 'shared/nav/level_3_subcategory_btn',
+                        text: 'Find out more about people in financial difficulties',
+                        url: lifestage_path('en', 'people-financial-difficulties')
+                      %>
+
+                      <li class="nav__level-3__category" role="none">
+                        <ul class="nav__level-3__subcategories" role="menu" aria-label="People in Financial difficulties">
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Debt advice steering group',
+                            url: article_path('en', 'debt-advice-steering-group')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Steering group updates',
+                            url: article_path('en', 'people-financial-difficulties-steering-group-updates')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Action plan',
+                            url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/098/original/People_in_Financial_Difficulties_action_plan.pdf'
+                          %>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav__level-2__category" role="none">
+                <%= render 'shared/nav/level_2_extended_heading', text: 'People trying to save', url: lifestage_path('en', 'people-trying-save') %>
+
+                <div class="nav__level-3" data-nav-level-3>
+                  <div class="nav__level-3__main">
+                    <div class="people-trying-save nav__level-3__image"></div>
+
+                    <p class="nav__level-3__description">As a nation, very few of us have enough savings. This section looks at ways to tackle this</p>
+
+                    <%= render 'shared/nav/level_3_heading', text: 'People trying to save' %>
+
+                    <ul class="nav__level-3__categories" role="menu">
+                      <%= render 'shared/nav/level_3_subcategory_btn',
+                        text: 'Find out more about people trying to save',
+                        url: lifestage_path('en', 'people-trying-save')
+                      %>
+
+                      <li class="nav__level-3__category" role="none">
+                        <ul class="nav__level-3__subcategories" role="menu" aria-label="People trying to save">
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Savings Steering group (members)',
+                            url: article_path('en', 'savings-steering-group')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Steering group updates',
+                            url: article_path('en', 'savings-steering-group-updates')
+                          %>
+                          <%= render 'shared/nav/level_3_subcategory_link',
+                            text: 'Action plan',
+                            url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/099/original/Savings_Action_Plan.pdf'
+                          %>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+        <%= render 'shared/nav/level_1_heading', text: 'Research &amp; Evaluation' %>
+
+        <div class="nav__level-2" data-nav-level-2>
+          <div class="nav__level-2__wrap">
+            <p class="nav__level-2__description" role="category description">Discover existing evidence and find out how to evaluate your own efforts</p>
+
+            <ul class="nav__level-2__categories">
+              <li class="nav__level-2__heading">
+                <%= render 'shared/nav/level_2_heading', text: 'Research &amp; Evaluation' %>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Our Approach">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Our approach', url: article_path('en', 'our-approach') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'How to get involved', url: '/en/get-involved' %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Find evidence">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Find Evidence', url: article_path('en', 'find-evidence') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence  Hub', url: article_path('en', 'financial-capability-evidence-hub') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability in the UK', url: article_path('en', 'financial-capability-uk') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Fincap Survey', url: article_path('en', 'financial-capability-survey') %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Evaluate your programme">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Evaluate your programme', url: article_path('en', 'evaluate-your-programme') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Evaluation Toolkit', url: article_path('en', 'evaluation-toolkit-overview') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Impact Principles', url: '/en/impact-principles' %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Funding', url: article_path('en', 'funding') %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="What Works Programme">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'What Works Programme', url: '/en/what-works/programme' %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'What Works Fund', url: article_path('en', 'what-works-fund') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Funded Projects', url: article_path('en', 'what-works-grant-funded-projects') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'FinCap Labs ', url: article_path('en', 'the-financial-capability-lab') %>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+        <%= render 'shared/nav/level_1_heading', text: 'News &amp; Events' %>
+
+        <div class="nav__level-2" data-nav-level-2>
+          <div class="nav__level-2__wrap">
+            <p class="nav__level-2__description" role="category description">Get all the latest news, events and join in the conversation</p>
+
+            <ul class="nav__level-2__categories">
+              <li class="nav__level-2__heading">
+                <%= render 'shared/nav/level_2_heading', text: 'News &amp; Events' %>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Events">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Evaluate your programme', url: article_path('en', 'evaluate-your-programme') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Talk Money Week', url: '/en/talkmoneyweek' %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Latest news">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Latest News', url: '/en/news' %>
+                </ul>
+              </li>
+
+              <li class="nav__level-2__category">
+                <ul class="nav__level-2__subcategories" role="menu" aria-label="Blog">
+                  <%= render 'shared/nav/level_2_subcategory_heading', text: 'Blog', url: 'http://blog.fincap.org.uk/' %>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav__search-bar" data-nav-search-bar>
+        <%= render 'shared/search', location: 'navigation' %>
+      </li>
+
+      <li class="nav__close-button">
+        <a href="#" class="nav__close-button__text" data-mobile-nav-close>
+          Close
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav__close-button__icon" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="mobile-nav-overlay" data-mobile-nav-overlay=""></div>
