@@ -9,18 +9,11 @@ RSpec.describe 'Previewing documents', type: :request do
       end
     end
 
-    context 'supported page type: thematic_reviews' do
+    context 'supported page type: news' do
       let(:id) { 'how-can-we-improve-the-financial-capability-of-young-adults' }
 
       it 'responds successfully' do
-        get "/en/thematic_reviews/#{id}/preview"
-        expect(response).to be_ok
-      end
-    end
-
-    context 'supported page type: thematic_reviews_landing_pages' do
-      it 'responds successfully' do
-        get '/en/thematic_reviews_landing_pages/thematic_reviews/preview'
+        get "/en/news/#{id}/preview"
         expect(response).to be_ok
       end
     end

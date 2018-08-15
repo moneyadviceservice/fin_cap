@@ -1,0 +1,229 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/preview/en/news.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Margo-Urey-00241.local; margourey; 39394) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      date:
+      - Tue, 14 Aug 2018 10:18:01 GMT
+      status:
+      - 500 Internal Server Error
+      connection:
+      - close
+      content-type:
+      - text/html; charset=utf-8
+      content-length:
+      - '16473'
+      x-request-id:
+      - 26a627f5-e71d-4a06-9499-f41a450a71fe
+      x-runtime:
+      - '0.120229'
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
+        />\n  <title>Action Controller: Exception caught</title>\n  <style>\n    body
+        {\n      background-color: #FAFAFA;\n      color: #333;\n      margin: 0px;\n
+        \   }\n\n    body, p, ol, ul, td {\n      font-family: helvetica, verdana,
+        arial, sans-serif;\n      font-size:   13px;\n      line-height: 18px;\n    }\n\n
+        \   pre {\n      font-size: 11px;\n      white-space: pre-wrap;\n    }\n\n
+        \   pre.box {\n      border: 1px solid #EEE;\n      padding: 10px;\n      margin:
+        0px;\n      width: 958px;\n    }\n\n    header {\n      color: #F0F0F0;\n
+        \     background: #C52F24;\n      padding: 0.5em 1.5em;\n    }\n\n    h1 {\n
+        \     margin: 0.2em 0;\n      line-height: 1.1em;\n      font-size: 2em;\n
+        \   }\n\n    h2 {\n      color: #C52F24;\n      line-height: 25px;\n    }\n\n
+        \   .details {\n      border: 1px solid #D0D0D0;\n      border-radius: 4px;\n
+        \     margin: 1em 0px;\n      display: block;\n      width: 978px;\n    }\n\n
+        \   .summary {\n      padding: 8px 15px;\n      border-bottom: 1px solid #D0D0D0;\n
+        \     display: block;\n    }\n\n    .details pre {\n      margin: 5px;\n      border:
+        none;\n    }\n\n    #container {\n      box-sizing: border-box;\n      width:
+        100%;\n      padding: 0 1.5em;\n    }\n\n    .source * {\n      margin: 0px;\n
+        \     padding: 0px;\n    }\n\n    .source {\n      border: 1px solid #D9D9D9;\n
+        \     background: #ECECEC;\n      width: 978px;\n    }\n\n    .source pre
+        {\n      padding: 10px 0px;\n      border: none;\n    }\n\n    .source .data
+        {\n      font-size: 80%;\n      overflow: auto;\n      background-color: #FFF;\n
+        \   }\n\n    .info {\n      padding: 0.5em;\n    }\n\n    .source .data .line_numbers
+        {\n      background-color: #ECECEC;\n      color: #AAA;\n      padding: 1em
+        .5em;\n      border-right: 1px solid #DDD;\n      text-align: right;\n    }\n\n
+        \   .line {\n      padding-left: 10px;\n    }\n\n    .line:hover {\n      background-color:
+        #F6F6F6;\n    }\n\n    .line.active {\n      background-color: #FFCCCC;\n
+        \   }\n\n    a { color: #980905; }\n    a:visited { color: #666; }\n    a:hover
+        { color: #C52F24; }\n\n    \n  </style>\n\n  <script>\n    var toggle = function(id)
+        {\n      var s = document.getElementById(id).style;\n      s.display = s.display
+        == 'none' ? 'block' : 'none';\n      return false;\n    }\n    var show =
+        function(id) {\n      document.getElementById(id).style.display = 'block';\n
+        \   }\n    var hide = function(id) {\n      document.getElementById(id).style.display
+        = 'none';\n    }\n    var toggleTrace = function() {\n      return toggle('blame_trace');\n
+        \   }\n    var toggleSessionDump = function() {\n      return toggle('session_dump');\n
+        \   }\n    var toggleEnvDump = function() {\n      return toggle('env_dump');\n
+        \   }\n  </script>\n</head>\n<body>\n\n<header>\n  <h1>\n    Mysql2::Error\n
+        \ </h1>\n</header>\n\n<div id=\"container\">\n  <h2>Can&#39;t connect to local
+        MySQL server through socket &#39;/tmp/mysql.sock&#39; (2)</h2>\n\n  \n  \n<p><code>Rails.root:
+        /Users/margourey/dev/cms</code></p>\n\n<div id=\"traces\">\n    <a href=\"#\"
+        onclick=\"hide(&#39;Framework-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Application-Trace&#39;);;
+        return false;\">Application Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Framework-Trace&#39;);;
+        return false;\">Framework Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Framework-Trace&#39;);show(&#39;Full-Trace&#39;);;
+        return false;\">Full Trace</a> \n\n    <div id=\"Application-Trace\" style=\"display:
+        block;\">\n      <pre><code></code></pre>\n    </div>\n    <div id=\"Framework-Trace\"
+        style=\"display: none;\">\n      <pre><code>mysql2 (0.3.21) lib/mysql2/client.rb:70:in
+        `connect&#39;\nmysql2 (0.3.21) lib/mysql2/client.rb:70:in `initialize&#39;\nactiverecord
+        (4.1.16) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new&#39;\nactiverecord
+        (4.1.16) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection&#39;\nactiverecord
+        (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in
+        `new_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in
+        `checkout_new_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in
+        `acquire_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in
+        `block in checkout&#39;\n/Users/margourey/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in
+        `mon_synchronize&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in
+        `checkout&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in
+        `block in connection&#39;\n/Users/margourey/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in
+        `mon_synchronize&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in
+        `connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in
+        `retrieve_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_handling.rb:113:in
+        `retrieve_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_handling.rb:87:in
+        `connection&#39;\nactiverecord (4.1.16) lib/active_record/migration.rb:388:in
+        `check_pending!&#39;\nactiverecord (4.1.16) lib/active_record/migration.rb:377:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:29:in
+        `block in call&#39;\nactivesupport (4.1.16) lib/active_support/callbacks.rb:82:in
+        `run_callbacks&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:27:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/reloader.rb:73:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/remote_ip.rb:76:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nbugsnag (2.8.12) lib/bugsnag/rack.rb:33:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/debug_exceptions.rb:17:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/show_exceptions.rb:30:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrailties (4.1.16) lib/rails/rack/logger.rb:38:in `call_app&#39;\nrailties
+        (4.1.16) lib/rails/rack/logger.rb:20:in `block in call&#39;\nactivesupport
+        (4.1.16) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;\nactivesupport
+        (4.1.16) lib/active_support/tagged_logging.rb:26:in `tagged&#39;\nactivesupport
+        (4.1.16) lib/active_support/tagged_logging.rb:68:in `tagged&#39;\nrailties
+        (4.1.16) lib/rails/rack/logger.rb:20:in `call&#39;\nnewrelic_rpm (4.0.0.332)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in `call&#39;\nactionpack
+        (4.1.16) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/methodoverride.rb:21:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/runtime.rb:17:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactivesupport (4.1.16) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/lock.rb:17:in `call&#39;\nnewrelic_rpm (4.0.0.332)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in `call&#39;\nactionpack
+        (4.1.16) lib/action_dispatch/middleware/static.rb:84:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/sendfile.rb:112:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrailties (4.1.16) lib/rails/engine.rb:514:in `call&#39;\nrailties
+        (4.1.16) lib/rails/application.rb:144:in `call&#39;\nnewrelic_rpm (4.0.0.332)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in `call&#39;\nrack
+        (1.5.5) lib/rack/content_length.rb:14:in `call&#39;\nunicorn (4.8.3) lib/unicorn/http_server.rb:576:in
+        `process_client&#39;\nunicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop&#39;\nunicorn
+        (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers&#39;\nunicorn
+        (4.8.3) lib/unicorn/http_server.rb:140:in `start&#39;\nunicorn-rails (2.2.0)
+        lib/unicorn_rails.rb:33:in `run&#39;\nrack (1.5.5) lib/rack/server.rb:264:in
+        `start&#39;\nrailties (4.1.16) lib/rails/commands/server.rb:69:in `start&#39;\nrailties
+        (4.1.16) lib/rails/commands/commands_tasks.rb:81:in `block in server&#39;\nrailties
+        (4.1.16) lib/rails/commands/commands_tasks.rb:76:in `tap&#39;\nrailties (4.1.16)
+        lib/rails/commands/commands_tasks.rb:76:in `server&#39;\nrailties (4.1.16)
+        lib/rails/commands/commands_tasks.rb:40:in `run_command!&#39;\nrailties (4.1.16)
+        lib/rails/commands.rb:17:in `&lt;top (required)&gt;&#39;\nbin/rails:8:in `require&#39;\nbin/rails:8:in
+        `&lt;main&gt;&#39;</code></pre>\n    </div>\n    <div id=\"Full-Trace\" style=\"display:
+        none;\">\n      <pre><code>mysql2 (0.3.21) lib/mysql2/client.rb:70:in `connect&#39;\nmysql2
+        (0.3.21) lib/mysql2/client.rb:70:in `initialize&#39;\nactiverecord (4.1.16)
+        lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new&#39;\nactiverecord
+        (4.1.16) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection&#39;\nactiverecord
+        (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in
+        `new_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in
+        `checkout_new_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in
+        `acquire_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in
+        `block in checkout&#39;\n/Users/margourey/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in
+        `mon_synchronize&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in
+        `checkout&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in
+        `block in connection&#39;\n/Users/margourey/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in
+        `mon_synchronize&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in
+        `connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in
+        `retrieve_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_handling.rb:113:in
+        `retrieve_connection&#39;\nactiverecord (4.1.16) lib/active_record/connection_handling.rb:87:in
+        `connection&#39;\nactiverecord (4.1.16) lib/active_record/migration.rb:388:in
+        `check_pending!&#39;\nactiverecord (4.1.16) lib/active_record/migration.rb:377:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:29:in
+        `block in call&#39;\nactivesupport (4.1.16) lib/active_support/callbacks.rb:82:in
+        `run_callbacks&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/callbacks.rb:27:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/reloader.rb:73:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/remote_ip.rb:76:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nbugsnag (2.8.12) lib/bugsnag/rack.rb:33:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/debug_exceptions.rb:17:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactionpack (4.1.16) lib/action_dispatch/middleware/show_exceptions.rb:30:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrailties (4.1.16) lib/rails/rack/logger.rb:38:in `call_app&#39;\nrailties
+        (4.1.16) lib/rails/rack/logger.rb:20:in `block in call&#39;\nactivesupport
+        (4.1.16) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;\nactivesupport
+        (4.1.16) lib/active_support/tagged_logging.rb:26:in `tagged&#39;\nactivesupport
+        (4.1.16) lib/active_support/tagged_logging.rb:68:in `tagged&#39;\nrailties
+        (4.1.16) lib/rails/rack/logger.rb:20:in `call&#39;\nnewrelic_rpm (4.0.0.332)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in `call&#39;\nactionpack
+        (4.1.16) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/methodoverride.rb:21:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/runtime.rb:17:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nactivesupport (4.1.16) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
+        `call&#39;\nnewrelic_rpm (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/lock.rb:17:in `call&#39;\nnewrelic_rpm (4.0.0.332)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in `call&#39;\nactionpack
+        (4.1.16) lib/action_dispatch/middleware/static.rb:84:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrack (1.5.5) lib/rack/sendfile.rb:112:in `call&#39;\nnewrelic_rpm
+        (4.0.0.332) lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in
+        `call&#39;\nrailties (4.1.16) lib/rails/engine.rb:514:in `call&#39;\nrailties
+        (4.1.16) lib/rails/application.rb:144:in `call&#39;\nnewrelic_rpm (4.0.0.332)
+        lib/new_relic/agent/instrumentation/middleware_tracing.rb:92:in `call&#39;\nrack
+        (1.5.5) lib/rack/content_length.rb:14:in `call&#39;\nunicorn (4.8.3) lib/unicorn/http_server.rb:576:in
+        `process_client&#39;\nunicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop&#39;\nunicorn
+        (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers&#39;\nunicorn
+        (4.8.3) lib/unicorn/http_server.rb:140:in `start&#39;\nunicorn-rails (2.2.0)
+        lib/unicorn_rails.rb:33:in `run&#39;\nrack (1.5.5) lib/rack/server.rb:264:in
+        `start&#39;\nrailties (4.1.16) lib/rails/commands/server.rb:69:in `start&#39;\nrailties
+        (4.1.16) lib/rails/commands/commands_tasks.rb:81:in `block in server&#39;\nrailties
+        (4.1.16) lib/rails/commands/commands_tasks.rb:76:in `tap&#39;\nrailties (4.1.16)
+        lib/rails/commands/commands_tasks.rb:76:in `server&#39;\nrailties (4.1.16)
+        lib/rails/commands/commands_tasks.rb:40:in `run_command!&#39;\nrailties (4.1.16)
+        lib/rails/commands.rb:17:in `&lt;top (required)&gt;&#39;\nbin/rails:8:in `require&#39;\nbin/rails:8:in
+        `&lt;main&gt;&#39;</code></pre>\n    </div>\n</div>\n\n  \n\n<h2 style=\"margin-top:
+        30px\">Request</h2>\n<p><b>Parameters</b>:</p> <pre>None</pre>\n\n<div class=\"details\">\n
+        \ <div class=\"summary\"><a href=\"#\" onclick=\"return toggleSessionDump()\">Toggle
+        session dump</a></div>\n  <div id=\"session_dump\" style=\"display:none\"><pre></pre></div>\n</div>\n\n<div
+        class=\"details\">\n  <div class=\"summary\"><a href=\"#\" onclick=\"return
+        toggleEnvDump()\">Toggle env dump</a></div>\n  <div id=\"env_dump\" style=\"display:none\"><pre>HTTP_ACCEPT:
+        &quot;*/*&quot;\nHTTP_ACCEPT_ENCODING: &quot;gzip;q=1.0,deflate;q=0.6,identity;q=0.3&quot;\nREMOTE_ADDR:
+        &quot;127.0.0.1&quot;\nSERVER_NAME: &quot;localhost&quot;\nSERVER_PROTOCOL:
+        &quot;HTTP/1.1&quot;</pre></div>\n</div>\n\n<h2 style=\"margin-top: 30px\">Response</h2>\n<p><b>Headers</b>:</p>
+        <pre>None</pre>\n\n</div>\n\n\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Tue, 14 Aug 2018 10:18:01 GMT
+recorded_with: VCR 4.0.0
