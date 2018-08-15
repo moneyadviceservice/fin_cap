@@ -8,10 +8,12 @@
 
   <div class="l-constrained">
     <div class="l-2col">
-      <div class="l-2col-main">
-        <h2><%= template.title %></h2>
-        <p class="news-date"><%= template.order_by_date_component %></p>
-        <%= template.body.html_safe %>
+      <div class="l-2col-main">        
+        <div class="body-content">
+          <h2><%= template.title %></h2>
+          <p class="news-date"><%= template.order_by_date_component %></p>
+          <%= template.body.html_safe %>
+        </div>
       </div>
       <div class="l-2col-side">
         <ul class="list list--links">
