@@ -47,11 +47,11 @@ Feature: Evidence Summary Page: Key Info filters
     Given I entered into the "Evaluation" page "Looking after the pennies"
     When I click on the "Financial capability (Mindset)" measured outcome in the key info panel
     Then I should return to the search results page
-    And I should see "4" evidence summaries
+    And I should see "1" evidence summaries
     And I should see the "first" evidence summary as
-      | Field               | Value                                                                             |
-      | document title      | Raising household saving                                                          |
-      | evidence type       | Evaluation                                                                        |
-      | topics              | Measured outcomes: Financial capability (Mindset), Financial capability (Ability) |
-      | countries           | United Kingdom                                                                    |
-      | year of publication | 2017                                                                              |
+      | Field               | Value                               |
+      | document title      | Looking after the pennies           |
+      | evidence type       | Evaluation                          |
+      | topics              | Topics: Budgeting and keeping track |
+      | countries           | United Kingdom                      |
+      | year of publication | 2017                                |

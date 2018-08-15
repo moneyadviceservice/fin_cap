@@ -172,5 +172,19 @@ RSpec.describe SearchFormParamParser, type: :model do
         end
       end
     end
+
+    context 'with a single measured outcome filter' do
+      let(:params) { { 'measured_outcomes' => ['Foo'] } }
+
+      let(:expected_result) do
+        {
+          blocks: [{ identifier: 'measured_outcomes', value: 'Foo' }]
+        }
+      end
+
+      it 'returns a hash with the measured outcome values formatted' do
+        expect(subject.parse).to eq(expected_result)
+      end
+    end
   end
 end
