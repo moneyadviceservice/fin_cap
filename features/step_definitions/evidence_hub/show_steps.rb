@@ -22,12 +22,18 @@ Then('I should see a list of all search filters') do |table|
   end
 # rubocop:disable Metrics/LineLength
 When('I click on the {string} client group in the key info panel') do |client_group|
-# rubocop:enable Metrics/LineLength
+  # rubocop:enable Metrics/LineLength
   click_link(client_group)
 end
 
 When('I click on the {string} topic in the key info panel') do |topic|
   click_link(topic)
+end
+
+# rubocop:disable Metrics/LineLength
+When("I click on the {string} measured outcome in the key info panel") do |outcome|
+  # rubocop:enable Metrics/LineLength
+  click_link(outcome)
 end
 
 Then('I should see the evidence summary content') do |table|
