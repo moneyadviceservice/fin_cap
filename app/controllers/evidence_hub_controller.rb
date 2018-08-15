@@ -15,7 +15,8 @@ class EvidenceHubController < EvidenceSummariesController
       :year_of_publication,
       client_groups: [],
       topics: [],
-      countries_of_delivery: []
+      countries_of_delivery: [],
+      measured_outcomes: []
     )
   end
   helper_method :evidence_summary_search_form_params
