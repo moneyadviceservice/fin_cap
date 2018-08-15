@@ -1,7 +1,7 @@
-<nav class="nav uninitialised" data-dough-component="Nav" role="navigation">
+<nav class="nav uninitialised is-active" data-dough-component="Nav" role="navigation">
   <div class="l-constrained">
-    <ul class="nav__level-1" data-nav-level-1 role="menubar" aria-label="main site navigation">
-      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+    <ul class="nav__level-1 is-active" data-nav-level-1 role="menubar" aria-label="main site navigation">
+      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
         <%= link_to(
           '#',
           {
@@ -21,9 +21,14 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
-                <a href="#" data-nav-level-2-heading tabindex="-1">
-                  <span class="nav__level-2__heading__text">What is financial capability?</span>
-                </a>
+                <%= link_to(
+                  '#',
+                  {
+                    'data-nav-level-2-heading': true,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__heading__text">What Is Financial Capability?</span>
+                <% end %>
               </li>
 
               <li class="nav__level-2__category">
@@ -90,9 +95,14 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
-                <a href="#" data-nav-level-2-heading tabindex="-1">
+                <%= link_to(
+                  '#',
+                  {
+                    'data-nav-level-2-heading': true,
+                    'tabindex': -1
+                  }) do %>
                   <span class="nav__level-2__heading__text">About The Strategy</span>
-                </a>
+                <% end %>
               </li>
 
               <li class="nav__level-2__category">
@@ -193,9 +203,14 @@
 
             <ul class="nav__level-2__categories" data-nav-level-2-extended-items role="menu" aria-label="Life stages">
               <li class="nav__level-2__heading" role="none">
-                <a href="#" data-nav-level-2-heading tabindex="-1">
-                  <span class="nav__level-2__heading__text">Life stages</span>
-                </a>
+                <%= link_to(
+                  '#',
+                  {
+                    'data-nav-level-2-heading': true,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__heading__text">Life Stages</span>
+                <% end %>
               </li>
 
               <li class="nav__level-2__category" role="none">
@@ -485,9 +500,14 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
-                <a href="#" data-nav-level-2-heading tabindex="-1">
-                  <span class="nav__level-2__heading__text">Research &amp; evaluation</span>
-                </a>
+                <%= link_to(
+                  '#',
+                  {
+                    'data-nav-level-2-heading': true,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__heading__text">Research &amp; Evaluation</span>
+                <% end %>
               </li>
 
               <li class="nav__level-2__category">
@@ -573,6 +593,15 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
+                <%= link_to(
+                  '#',
+                  {
+                    'data-nav-level-2-heading': true,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__heading__text">Research &amp; Evaluation</span>
+                <% end %>
+
                 <a href="#" data-nav-level-2-heading tabindex="-1">
                   <span class="nav__level-2__heading__text">News &amp; Events</span>
                 </a>
