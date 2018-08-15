@@ -31,7 +31,7 @@ When('I click on the {string} topic in the key info panel') do |topic|
 end
 
 # rubocop:disable Metrics/LineLength
-When("I click on the {string} measured outcome in the key info panel") do |outcome|
+When('I click on the {string} measured outcome in the key info panel') do |outcome|
   # rubocop:enable Metrics/LineLength
   click_link(outcome)
 end

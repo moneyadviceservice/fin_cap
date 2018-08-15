@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/ClassLength
 class EvidenceSummaryPresenter < BasePresenter
   def link
     view.link_to title, full_path
@@ -135,3 +136,4 @@ class EvidenceSummaryPresenter < BasePresenter
     }
   end
 end
+# rubocop:enable Metrics/ClassLength
