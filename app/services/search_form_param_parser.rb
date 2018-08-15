@@ -2,6 +2,7 @@ class SearchFormParamParser
   FINCAP_START_YEAR = 2000
   IGNORED_OPTION = 'All years'.freeze
   YEAR_OF_PUBLICATION_FILTER = 'year_of_publication'.freeze
+  KEY_INFO_FILTER = 'measured_outcomes'.freeze
 
   attr_accessor :params
 
@@ -14,11 +15,15 @@ class SearchFormParamParser
   end
 
   def parse
-    filter_params, non_filter_params = params.to_h.partition do |k, _|
+    filter_params, additional_params = params.to_h.partition do |k, _|
       filter_keys.include?(k)
     end
 
-    non_filter_params.to_h.merge(parse_filters(filter_params))
+    if key_info_filters(additional_params.to_h)
+      convert_key_info_filters(key_info_filters(additional_params.to_h))
+    else
+      additional_params.to_h.merge(parse_filters(filter_params))
+    end
   end
 
   private
@@ -70,5 +75,17 @@ class SearchFormParamParser
       'Last 5 years' => (0..4),
       'More than 5 years ago' => (5..(Time.current.year - FINCAP_START_YEAR))
     }
+  end
+
+  def key_info_filters(hash)
+    hash[KEY_INFO_FILTER]
+  end
+
+  def convert_key_info_filters(key_info)
+    blocks = key_info.map do |value|
+      identifier_hash(KEY_INFO_FILTER, value)
+    end
+
+    { blocks: blocks }
   end
 end
