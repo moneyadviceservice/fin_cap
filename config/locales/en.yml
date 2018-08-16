@@ -62,19 +62,19 @@ en:
         title: 'Give us your feedback or ask a question'
     life_stages:
       - text: Children and young people
-        url: '#'
+        slug: 'children-and-young-people'
       - text: Young adults
-        url: '#'
+        slug: 'young-adults'
       - text: Working age adults
-        url: '#'
+        slug: 'working-age'
       - text: People planning to retire
-        url: '#'
+        slug: 'retirement-planning'
       - text: Older people in retirement
-        url: '#'
+        slug: 'people-retirement'
       - text: People in financial difficulties
-        url: '#'
+        slug: 'people-financial-difficulties'
       - text: People trying to save
-        url: '#'
+        slug: 'people-trying-save'
     research_evaluation:
       findings:
         - text: Existing Research

@@ -6,9 +6,7 @@
       <ul class="list list--links">
         <% I18n.t('fincap.life_stages').each do |stage| %>
           <li>
-            <a href="<%= stage[:url] %>">
-              <%= stage[:text] %>
-            </a>
+            <%= link_to(stage[:text], lifestage_path(locale: 'en', id: stage[:slug]), id: stage[:slug] ) %>
           </li>
         <% end %>
       </ul>
