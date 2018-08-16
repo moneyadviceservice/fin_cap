@@ -8,5 +8,10 @@ body {
   ul {
     list-style: inherit;
     list-style-position: inside;
+    list-style-type: disc;
+
+    ul {
+      margin-left: $baseline-unit * 3;
+    }
   }
 }
