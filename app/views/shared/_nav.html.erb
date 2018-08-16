@@ -1,7 +1,7 @@
 <nav class="nav uninitialised is-active" data-dough-component="Nav" role="navigation">
   <div class="l-constrained">
     <ul class="nav__level-1 is-active" data-nav-level-1 role="menubar" aria-label="main site navigation">
-      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
         <%= link_to(
           '#',
           {
@@ -34,7 +34,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="What is financial capability?">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">What is financial capability?</a>
+                    <%= link_to(
+                      'What is Financial Capability?',
+                      article_path('en', 'what-is-financial-capability'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">The current situation in the UK</a>
@@ -48,7 +56,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is this website for?">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Who is this website for?</a>
+                    <%= link_to(
+                      'Who is this website for?',
+                      article_path('en', 'who-is-this-website-for'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Financial Services</a>
@@ -108,7 +124,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="What is The Strategy?">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">What is The Strategy?</a>
+                    <%= link_to(
+                      'What is The Strategy?',
+                      article_path('en', 'strategy'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">UK strategy</a>
@@ -128,7 +152,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Why is The Strategy needed?">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Why is The Strategy needed?</a>
+                    <%= link_to(
+                      'Why is The Strategy needed?',
+                      article_path('en', 'why-strategy-needed'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">What The Strategy aims to achieve</a>
@@ -145,7 +177,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="How the Strategy will be delivered">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">How the Strategy will be delivered</a>
+                    <%= link_to(
+                      'How The Strategy will be delivered',
+                      article_path('en', 'how-strategy-delivered'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">The role of steering groups</a>
@@ -159,7 +199,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is involved?">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Who is involved?</a>
+                    <%= link_to(
+                      'Who is involved?',
+                      article_path('en', 'whos-involved'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Fincancial Capability board</a>
@@ -513,7 +561,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Our Approach">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Our Approach</a>
+                    <%= link_to(
+                      'Our approach',
+                      article_path('en', 'our-approach'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">How to get involved</a>
@@ -524,7 +580,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Find evidence">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Find evidence</a>
+                    <%= link_to(
+                      'Find Evidence',
+                      article_path('en', 'find-evidence'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Evidence hub</a>
@@ -538,7 +602,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Evaluate your programme">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Evaluate your programme</a>
+                    <%= link_to(
+                      'Evaluate your programme',
+                      article_path('en', 'evaluate-your-programme'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Evaluation toolkit</a>
@@ -555,7 +627,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="What Works Programme">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">What Works Programme</a>
+                    <%= link_to(
+                      'What Works Programme',
+                      '/en/what-works/programme',
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">What Works Fund</a>
@@ -573,7 +653,7 @@
         </div>
       </li>
 
-      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
         <%= link_to(
           '#',
           {
@@ -610,7 +690,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Events">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Events</a>
+                    <%= link_to(
+                      'Evaluate your programme',
+                      article_path('en', 'events'),
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                   <li class="nav__level-2__subcategory" role="none">
                     <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">FinCap Week</a>
@@ -621,13 +709,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Latest news">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Latest news</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">News archive</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Press releases</a>
+                    <%= link_to(
+                      'Latest News',
+                      'http://fincap.org.uk/latest-news',
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                 </ul>
               </li>
@@ -635,7 +725,15 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Blog">
                   <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" class="nav__level-2__subcategory__heading" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-heading tabindex="-1">Blog</a>
+                    <%= link_to(
+                      'Blog',
+                      'http://blog.fincap.org.uk/',
+                      'data-nav-level-2-subcategory-heading': true,
+                      'class': 'nav__level-2__subcategory__heading',
+                      'role': 'menuitem',
+                      'aria-haspopup': false,
+                      'tabindex': -1
+                    ) %>
                   </li>
                 </ul>
               </li>
