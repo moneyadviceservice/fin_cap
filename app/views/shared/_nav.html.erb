@@ -231,7 +231,7 @@
         </div>
       </li>
 
-      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
         <%= link_to(
           '#',
           {
@@ -262,9 +262,18 @@
               </li>
 
               <li class="nav__level-2__category" role="none">
-                <a href="#" class="nav__level-2__category__heading" data-nav-level-2-extended-heading role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
-                  <span class="nav__level-2__category__heading__text">Children &amp; young people</span>
-                </a>
+                <%= link_to(
+                  lifestage_path('en', 'children-and-young-people'),
+                  {
+                    'data-nav-level-2-extended-heading': true,
+                    'class': 'nav__level-2__category__heading',
+                    'role': 'menuitem',
+                    'aria-haspopup': true,
+                    'aria-expanded': false,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__category__heading__text">Children and Young People</span>
+                <% end %>
 
                 <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
@@ -300,9 +309,18 @@
               </li>
 
               <li class="nav__level-2__category" role="none">
-                <a href="#" class="nav__level-2__category__heading" data-nav-level-2-extended-heading role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                <%= link_to(
+                  lifestage_path('en', 'young-adults'),
+                  {
+                    'data-nav-level-2-extended-heading': true,
+                    'class': 'nav__level-2__category__heading',
+                    'role': 'menuitem',
+                    'aria-haspopup': true,
+                    'aria-expanded': false,
+                    'tabindex': -1
+                  }) do %>
                   <span class="nav__level-2__category__heading__text">Young Adults</span>
-                </a>
+                <% end %>
 
                 <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
@@ -338,9 +356,18 @@
               </li>
 
               <li class="nav__level-2__category" role="none">
-                <a href="#" class="nav__level-2__category__heading" data-nav-level-2-extended-heading role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                <%= link_to(
+                  lifestage_path('en', 'working-age'),
+                  {
+                    'data-nav-level-2-extended-heading': true,
+                    'class': 'nav__level-2__category__heading',
+                    'role': 'menuitem',
+                    'aria-haspopup': true,
+                    'aria-expanded': false,
+                    'tabindex': -1
+                  }) do %>
                   <span class="nav__level-2__category__heading__text">Working Age Adults</span>
-                </a>
+                <% end %>
 
                 <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
@@ -376,9 +403,18 @@
               </li>
 
               <li class="nav__level-2__category" role="none">
-                <a href="#" class="nav__level-2__category__heading" data-nav-level-2-extended-heading role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
-                  <span class="nav__level-2__category__heading__text">Older People in Retirement</span>
-                </a>
+                <%= link_to(
+                  lifestage_path('en', 'retirement-planning'),
+                  {
+                    'data-nav-level-2-extended-heading': true,
+                    'class': 'nav__level-2__category__heading',
+                    'role': 'menuitem',
+                    'aria-haspopup': true,
+                    'aria-expanded': false,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__category__heading__text">Retirement Planning</span>
+                <% end %>
 
                 <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
@@ -414,9 +450,18 @@
               </li>
 
               <li class="nav__level-2__category" role="none">
-                <a href="#" class="nav__level-2__category__heading" data-nav-level-2-extended-heading role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
-                  <span class="nav__level-2__category__heading__text">People planning to retire</span>
-                </a>
+                <%= link_to(
+                  lifestage_path('en', 'people-retirement'),
+                  {
+                    'data-nav-level-2-extended-heading': true,
+                    'class': 'nav__level-2__category__heading',
+                    'role': 'menuitem',
+                    'aria-haspopup': true,
+                    'aria-expanded': false,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__category__heading__text">People in retirement</span>
+                <% end %>
 
                 <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
@@ -452,9 +497,18 @@
               </li>
 
               <li class="nav__level-2__category" role="none">
-                <a href="#" class="nav__level-2__category__heading" data-nav-level-2-extended-heading role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
-                  <span class="nav__level-2__category__heading__text">People in Financial difficulties</span>
-                </a>
+                <%= link_to(
+                  lifestage_path('en', 'people-financial-difficulties'),
+                  {
+                    'data-nav-level-2-extended-heading': true,
+                    'class': 'nav__level-2__category__heading',
+                    'role': 'menuitem',
+                    'aria-haspopup': true,
+                    'aria-expanded': false,
+                    'tabindex': -1
+                  }) do %>
+                  <span class="nav__level-2__category__heading__text">People in Financial Difficulties</span>
+                <% end %>
 
                 <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
@@ -490,9 +544,18 @@
               </li>
 
               <li class="nav__level-2__category" role="none">
-                <a href="#" class="nav__level-2__category__heading" data-nav-level-2-extended-heading role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                <%= link_to(
+                  lifestage_path('en', 'people-trying-save'),
+                  {
+                    'data-nav-level-2-extended-heading': true,
+                    'class': 'nav__level-2__category__heading',
+                    'role': 'menuitem',
+                    'aria-haspopup': true,
+                    'aria-expanded': false,
+                    'tabindex': -1
+                  }) do %>
                   <span class="nav__level-2__category__heading__text">People trying to save</span>
-                </a>
+                <% end %>
 
                 <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
@@ -653,7 +716,7 @@
         </div>
       </li>
 
-      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
         <%= link_to(
           '#',
           {
