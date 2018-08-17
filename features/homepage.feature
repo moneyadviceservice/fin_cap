@@ -24,3 +24,12 @@ Feature: Homepage
     And I should see the countries box
     And I should see the lifestages box
     And I should see the latest news box
+    And I should see the call to action buttons
+      | text                                       | link                              |
+      | I am interested in research and evaluation | /en/articles/our-approach         |
+      | I need help to manage my money             | https://moneyadviceservice.org.uk |
+
+  Scenario: Call to Action buttons
+    Given I entered into the Homepage
+    When I click the "I am interested in research and evaluation" cta
+    Then I should see the "our-approach" article
