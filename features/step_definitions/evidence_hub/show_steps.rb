@@ -24,6 +24,13 @@ Then('I should see the evidence summary content') do |table|
   end
 end
 
+Then('I should see an icon linking to {string} article') do |evidence_type|
+  path = "/en/articles/evidence-type-#{evidence_type.downcase}"
+
+  expect(evidence_summary_page).to have_info_icon
+  expect(evidence_summary_page.info_icon[:href]).to eq(path)
+end
+
 Then('I should see the evidence summary data_types') do |table|
   table.rows.each do |row|
     data_type_element = evidence_summary_page.send(row[0])

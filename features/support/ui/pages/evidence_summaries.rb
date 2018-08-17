@@ -16,6 +16,7 @@ module UI::Pages
       element :causality, '.data-types__causality svg'
       element :process_evaluation, '.data-types__process-evaluation svg'
       element :value_for_money, '.data-types__value-for-money svg'
+      element :info_icon, 'a.icon--info'
     end
 
     set_url '{/locale}/evidence_hub'

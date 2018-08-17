@@ -19,6 +19,7 @@ Feature: Evidence Hub: Review Summary page
       | Country             | International review                   |
       | Contact information | John Smith                             |
       | Links               | Raising household saving - full report |
+    And I should see an icon linking to "Review" article
     And I should see the evidence summary data_types
       | Field             | Content |
       | systematic_review | tick    |

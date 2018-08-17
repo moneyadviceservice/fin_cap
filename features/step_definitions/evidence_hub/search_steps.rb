@@ -52,6 +52,16 @@ Then('I should see {string} evidence summary') do |records_size|
 end
 
 Then(
+  'I should see the {string} evidence summary icon linking to {string} article'
+) do |result_number, evidence_type|
+  search_result = evidence_summaries_page.search_results.send(result_number)
+  path = "/en/articles/evidence-type-#{evidence_type.downcase}"
+
+  expect(search_result).to have_info_icon
+  expect(search_result.info_icon[:href]).to eq(path)
+end
+
+Then(
   'I should see the {string} evidence summary with data types as'
 ) do |result_number, table|
   search_result = evidence_summaries_page.search_results.send(result_number)
