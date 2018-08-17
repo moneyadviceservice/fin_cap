@@ -1,6 +1,6 @@
 <nav class="nav uninitialised is-active" data-dough-component="Nav" role="navigation">
   <div class="l-constrained">
-    <ul class="nav__level-1" data-nav-level-1 role="menubar" aria-label="main site navigation">
+    <ul class="nav__level-1 is-active" data-nav-level-1 role="menubar" aria-label="main site navigation">
       <li class="nav__level-1__element" data-nav-level-1-item role="none">
         <%= render 'shared/nav/level_1_heading', text: 'What Is Financial Capability?' %>
 
@@ -10,14 +10,7 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
-                <%= link_to(
-                  '#',
-                  {
-                    'data-nav-level-2-heading': true,
-                    'tabindex': -1
-                  }) do %>
-                  <span class="nav__level-2__heading__text">What Is Financial Capability?</span>
-                <% end %>
+                <%= render 'shared/nav/level_2_heading', text: 'What Is Financial Capability?' %>
               </li>
 
               <li class="nav__level-2__category">
@@ -89,14 +82,7 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
-                <%= link_to(
-                  '#',
-                  {
-                    'data-nav-level-2-heading': true,
-                    'tabindex': -1
-                  }) do %>
-                  <span class="nav__level-2__heading__text">About The Strategy</span>
-                <% end %>
+                <%= render 'shared/nav/level_2_heading', text: 'About The Strategy' %>
               </li>
 
               <li class="nav__level-2__category">
@@ -218,14 +204,7 @@
 
             <ul class="nav__level-2__categories" data-nav-level-2-extended-items role="menu" aria-label="Life stages">
               <li class="nav__level-2__heading" role="none">
-                <%= link_to(
-                  '#',
-                  {
-                    'data-nav-level-2-heading': true,
-                    'tabindex': -1
-                  }) do %>
-                  <span class="nav__level-2__heading__text">Life Stages</span>
-                <% end %>
+                <%= render 'shared/nav/level_2_heading', text: 'Life Stages' %>
               </li>
 
               <li class="nav__level-2__category" role="none">
@@ -567,14 +546,7 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
-                <%= link_to(
-                  '#',
-                  {
-                    'data-nav-level-2-heading': true,
-                    'tabindex': -1
-                  }) do %>
-                  <span class="nav__level-2__heading__text">Research &amp; Evaluation</span>
-                <% end %>
+                <%= render 'shared/nav/level_2_heading', text: 'Research &amp; Evaluation' %>
               </li>
 
               <li class="nav__level-2__category">
@@ -672,7 +644,7 @@
         </div>
       </li>
 
-      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
         <%= render 'shared/nav/level_1_heading', text: 'News &amp; Events' %>
 
         <div class="nav__level-2" data-nav-level-2>
@@ -681,18 +653,7 @@
 
             <ul class="nav__level-2__categories">
               <li class="nav__level-2__heading">
-                <%= link_to(
-                  '#',
-                  {
-                    'data-nav-level-2-heading': true,
-                    'tabindex': -1
-                  }) do %>
-                  <span class="nav__level-2__heading__text">Research &amp; Evaluation</span>
-                <% end %>
-
-                <a href="#" data-nav-level-2-heading tabindex="-1">
-                  <span class="nav__level-2__heading__text">News &amp; Events</span>
-                </a>
+                <%= render 'shared/nav/level_2_heading', text: 'News &amp; Events' %>
               </li>
 
               <li class="nav__level-2__category">
