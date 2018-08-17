@@ -23,6 +23,7 @@ module UI
       element :value_for_money, '.data-types__value-for-money svg'
       element :systematic_review, '.data-types__systematic-review svg'
       element :literature_review, '.data-types__literature-review svg'
+      element :info_icon, 'a.icon--info'
     end
   end
 end

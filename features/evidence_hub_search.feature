@@ -15,6 +15,7 @@ Feature: Evidence Hub Search
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
+    And I should see the "first" evidence summary icon linking to "Insight" article
     And I should see the "first" evidence summary with data types as
       | Field         | Value |
       | qualitative   | tick  |
@@ -27,6 +28,7 @@ Feature: Evidence Hub Search
       | topics              | Credit Use and Debt                                                                |
       | countries           | England                                                                            |
       | year of publication | 2017                                                                               |
+    And I should see the "second" evidence summary icon linking to "Insight" article
     And I should see the "second" evidence summary with data types as
       | Field         | Value |
       | qualitative   | cross |
@@ -43,6 +45,7 @@ Feature: Evidence Hub Search
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
+    And I should see the "first" evidence summary icon linking to "Insight" article
     And I should see the "first" evidence summary with data types as
       | Field         | Value |
       | qualitative   | tick  |
@@ -60,6 +63,7 @@ Feature: Evidence Hub Search
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
       | year of publication | 2015                                                     |
+    And I should see the "first" evidence summary icon linking to "Insight" article
 
   Scenario: Search by Year of Publication filter
     When I search the evidence hub for summaries published in the last 2 years
@@ -71,6 +75,7 @@ Feature: Evidence Hub Search
       | topics              | Credit Use and Debt                                                |
       | countries           | England                                                            |
       | year of publication | 2017                                                               |
+    And I should see the "first" evidence summary icon linking to "Insight" article
 
   Scenario: Clearing the filters for a filtered search
     Given I search based on some filters
@@ -94,6 +99,7 @@ Feature: Evidence Hub Search
       | evidence type       | Insight                                                  |
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
+    And I should see an icon linking to "Insight" article
 
   Scenario: Going to the next page
     Given I am on the page "1" seeing "1" evidence summary per page
@@ -107,6 +113,7 @@ Feature: Evidence Hub Search
       | topics              | Credit Use and Debt                                                                |
       | countries           | England                                                                            |
       | year of publication | 2017                                                                               |
+    And I should see the "first" evidence summary icon linking to "Insight" article
 
   Scenario: Return to the previous page
     Given I am on the page "2" seeing "1" evidence summary per page
@@ -119,3 +126,4 @@ Feature: Evidence Hub Search
       | evidence type       | Insight                                                  |
       | topics              | Saving                                                   |
       | countries           | United Kingdom                                           |
+    And I should see the "first" evidence summary icon linking to "Insight" article
