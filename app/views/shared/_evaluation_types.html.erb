@@ -5,4 +5,9 @@
      focusable="false">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--<%= "#{type.downcase}" %>-icon"></use>
 </svg>
-<span class="evaluation-type__text evaluation-type__text--<%= "#{type.downcase}" %>"><%= type %></span>
+<span class="evaluation-type__text evaluation-type__text--<%= "#{type.downcase}" %>">
+  <%= type %>
+</span>
+<span>
+  <%= link_to 'i', article_path(locale: "en", id: "evidence-type-#{type.downcase}"), class: "icon--info" %>
+</span>

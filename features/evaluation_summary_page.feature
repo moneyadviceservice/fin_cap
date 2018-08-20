@@ -19,6 +19,7 @@ Feature: Evidence Hub: Evaluation Summary page
       | Country                | United Kingdom                                        |
       | Contact information    | MASPD (in partnership with Company S.A)               |
       | Links                  | Looking after the pennies - full report               |
+    And I should see an icon linking to "Evaluation" article
     And I should see the evidence summary data_types
       | Field                       | Value |
       | programme_theory            | cross |
