@@ -24,6 +24,10 @@ module UI
     element :link, '.teaser-box__cta'
   end
 
+  class LifestageRow < SitePrism::Section
+    element :link, 'a'
+  end
+
   class Page < SitePrism::Page
     sections :download_box,
              DownloadBoxSection, '.download-box ul.download-box__list li'
@@ -31,6 +35,8 @@ module UI
     sections :teaser_boxes, TeaserBox, '.teaser-box__content'
     sections :supplementary_info_box,
              SupplementaryInfoBox, '.sidepanel .l-2col-even'
+    sections :lifestage_rows, LifestageRow, '.bordered-box--green li'
+    element :title, '.l-2col-main h1'
     element :hero_description, '.hero__heading'
   end
 end

@@ -9,11 +9,9 @@ Feature: Lifestage page
     And I should see the hero description "Research suggests that young adults typically display lower levels of financial capability than older age groups."
     And I should see the lifestage content
     """
-    Between the ages of 16 to 18 and continuing into their mid-20’s, the 
-    transition into independent living and the working environment is a 
-    critical moment in a young adult’s life, presenting new challenges and 
-    requiring financial decisions to be made that could have a major impact
-    on their future adult lives.
+    Young adults are those who have left compulsory education or other statutory settings,
+    such as care. They are transitioning towards independent living and financial independence,
+    beginning between the ages of 16 to 18 and continuing to their mid-20s.
     """
     And I should see the latest news box with "1" news items
     And I should see the news items details
@@ -27,7 +25,7 @@ Feature: Lifestage page
     And I should see the research box
     And I should see the strategy box with
       | title            | text                                         | link                               |
-      | Strategy extract | Adult financial capability is a direct resul | /financial+capability+strategy.pdf | 
+      | Strategy Title   | Adult financial capability is a direct resul | /financial+capability+strategy.pdf | 
     And I should see the lifestages box
     And I should see the steering group links
       | text                   | link                               |
