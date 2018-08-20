@@ -1,6 +1,6 @@
 <nav class="nav uninitialised is-active" data-dough-component="Nav" role="navigation">
   <div class="l-constrained">
-    <ul class="nav__level-1 is-active" data-nav-level-1 role="menubar" aria-label="main site navigation">
+    <ul class="nav__level-1 is-active is-open" data-nav-level-1 role="menubar" aria-label="main site navigation">
       <li class="nav__level-1__element" data-nav-level-1-item role="none">
         <%= render 'shared/nav/level_1_heading', text: 'What Is Financial Capability?' %>
 
@@ -156,9 +156,7 @@
 
                     <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
 
-                    <a href="#" class="nav__level-3__heading" data-nav-level-3-heading tabindex="-1">
-                      <span class="nav__level-3__heading__text">Children &amp; young people</span>
-                    </a>
+                    <%= render 'shared/nav/level_3_heading', text: 'Children and Young People' %>
 
                     <ul class="nav__level-3__categories" role="menu">
                       <li class="nav__level-3__category" role="none">
@@ -192,9 +190,7 @@
 
                     <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
 
-                    <a href="#" class="nav__level-3__heading" data-nav-level-3-heading tabindex="-1">
-                      <span class="nav__level-3__heading__text">Young Adults</span>
-                    </a>
+                    <%= render 'shared/nav/level_3_heading', text: 'Young Adults' %>
 
                     <ul class="nav__level-3__categories" role="menu">
                       <li class="nav__level-3__category" role="none">
@@ -228,9 +224,7 @@
 
                     <p class="nav__level-3__description">Working life starts when we enter the workplace, and stretches through to retirement – covering many life events from ages 16 to 70</p>
 
-                    <a href="#" class="nav__level-3__heading" data-nav-level-3-heading tabindex="-1">
-                      <span class="nav__level-3__heading__text">Working Age Adults</span>
-                    </a>
+                    <%= render 'shared/nav/level_3_heading', text: 'Working Age' %>
 
                     <ul class="nav__level-3__categories" role="menu">
                       <li class="nav__level-3__category" role="none">
@@ -264,9 +258,7 @@
 
                     <p class="nav__level-3__description">Here we focus on people who are already retired and drawing an income from pensions and other savings</p>
 
-                    <a href="#" class="nav__level-3__heading" data-nav-level-3-heading tabindex="-1">
-                      <span class="nav__level-3__heading__text">Older People in Retirement</span>
-                    </a>
+                    <%= render 'shared/nav/level_3_heading', text: 'Retirement Planning' %>
 
                     <ul class="nav__level-3__categories" role="menu">
                       <li class="nav__level-3__category" role="none">
@@ -300,9 +292,7 @@
 
                     <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
 
-                    <a href="#" class="nav__level-3__heading" data-nav-level-3-heading tabindex="-1">
-                      <span class="nav__level-3__heading__text">People planning to retire</span>
-                    </a>
+                    <%= render 'shared/nav/level_3_heading', text: 'People in retirement' %>
 
                     <ul class="nav__level-3__categories" role="menu">
                       <li class="nav__level-3__category" role="none">
@@ -336,9 +326,7 @@
 
                     <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
 
-                    <a href="#" class="nav__level-3__heading" data-nav-level-3-heading tabindex="-1">
-                      <span class="nav__level-3__heading__text">People in Financial difficulties</span>
-                    </a>
+                    <%= render 'shared/nav/level_3_heading', text: 'People in Financial Difficulties' %>
 
                     <ul class="nav__level-3__categories" role="menu">
                       <li class="nav__level-3__category" role="none">
@@ -366,15 +354,13 @@
               <li class="nav__level-2__category" role="none">
                 <%= render 'shared/nav/level_2_extended_heading', text: 'People trying to save' %>
 
-                <div class="nav__level-3" data-nav-level-3>
+                <div class="nav__level-3 is-active" data-nav-level-3>
                   <div class="nav__level-3__main">
                     <div class="nav__level-3__image"></div>
 
                     <p class="nav__level-3__description">As a nation, very few of us have enough savings. This section looks at ways to tackle this</p>
 
-                    <a href="#" class="nav__level-3__heading" data-nav-level-3-heading tabindex="-1">
-                      <span class="nav__level-3__heading__text">People trying to save</span>
-                    </a>
+                    <%= render 'shared/nav/level_3_heading', text: 'People trying to save' %>
 
                     <ul class="nav__level-3__categories" role="menu">
                       <li class="nav__level-3__category" role="none">
