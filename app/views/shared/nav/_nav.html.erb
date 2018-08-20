@@ -1,6 +1,6 @@
 <nav class="nav uninitialised is-active" data-dough-component="Nav" role="navigation">
   <div class="l-constrained">
-    <ul class="nav__level-1 is-active is-open" data-nav-level-1 role="menubar" aria-label="main site navigation">
+    <ul class="nav__level-1 is-active" data-nav-level-1 role="menubar" aria-label="main site navigation">
       <li class="nav__level-1__element" data-nav-level-1-item role="none">
         <%= render 'shared/nav/level_1_heading', text: 'What Is Financial Capability?' %>
 
@@ -16,36 +16,23 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="What is financial capability?">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'What Is Financial Capability?', url: article_path('en', 'what-is-financial-capability') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">The current situation in the UK</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Financial capability - a global issue</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability levels in the UK', url: article_path('en', 'levels-uk') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability - a global issue', url: article_path('en', 'global-issue') %>
                 </ul>
               </li>
 
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is this website for?">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is this website for?', url: article_path('en', 'who-is-this-website-for') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Financial Services</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Charities &amp; third-sector organsations</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Employers</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Researchers</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Teachers</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Individuals</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial services', url: article_path('en', 'financial-services') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Charities and third-sector organisations', url: article_path('en', 'charities-third-sector-organisations') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Employers', url: article_path('en', 'employers') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Researchers', url: article_path('en', 'researchers') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Schools', url: article_path('en', 'schools') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Parents', url: article_path('en', 'parents') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Childrens services', url: article_path('en', 'childrens-services') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Youth and students', url: article_path('en', 'youth-students') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Individuals', url: article_path('en', 'individuals') %>
                 </ul>
               </li>
             </ul>
@@ -68,66 +55,39 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="What is The Strategy?">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'What is The Strategy?', url: article_path('en', 'strategy') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">UK strategy</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Northern Ireland strategy</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Scotland strategy</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Wales strategy</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'UK Strategy', url: article_path('en', 'uk-strategy') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Northern Ireland ', url: article_path('en', 'northern-ireland') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Scotland', url: article_path('en', 'scotland') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Wales', url: article_path('en', 'wales') %>
                 </ul>
               </li>
 
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Why is The Strategy needed?">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'Why is The Strategy needed?', url: article_path('en', 'why-strategy-needed') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">What The Strategy aims to achieve</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Summary of key statistics on financial capability</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Strategy development</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'What The Strategy needs to achieve', url: article_path('en', 'what-strategy-needs-achieve') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence and analysis', url: article_path('en', 'evidence-analysis') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Summary of key statistics on Financial Capability', url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf' %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Strategy development', url: article_path('en', 'development-strategy') %>
                 </ul>
               </li>
 
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="How the Strategy will be delivered">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'How The Strategy will be delivered', url: article_path('en', 'how-strategy-delivered') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">The role of steering groups</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">The role of the Money Advice Service</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of the steering groups', url: article_path('en', 'role-steering-groups') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of Money Advice Service', url: article_path('en', 'role-money-advice-service') %>
                 </ul>
               </li>
 
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is involved?">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is involved?', url: article_path('en', 'whos-involved') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Fincancial Capability board</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Steering groups and forums</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">IMPACT principle signatories</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">What Works fund grantees</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Get involved</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'The Financial capability Board', url: article_path('en', 'financial-capabilty-board') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Steering Group and forums', url: article_path('en', 'steering-group-forums') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'IMPACT Principle Signatories', url: article_path('en', 'impact-principle-signatories') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'What Works Fund Grantees', url: article_path('en', 'what-works-grant-funded-projects') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Get Involved', url: 'http://fincap.org.uk/get-involved' %>
                 </ul>
               </li>
             </ul>
@@ -135,7 +95,7 @@
         </div>
       </li>
 
-      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
+      <li class="nav__level-1__element" data-nav-level-1-item role="none">
         <%= render 'shared/nav/level_1_heading', text: 'Life Stages' %>
 
         <div class="nav__level-2 nav__level-2--extended" data-nav-level-2-extended>
@@ -372,7 +332,7 @@
               <li class="nav__level-2__category" role="none">
                 <%= render 'shared/nav/level_2_extended_heading', text: 'People trying to save' %>
 
-                <div class="nav__level-3 is-active" data-nav-level-3>
+                <div class="nav__level-3" data-nav-level-3>
                   <div class="nav__level-3__main">
                     <div class="nav__level-3__image"></div>
 
@@ -425,51 +385,34 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Our Approach">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'Our approach', url: article_path('en', 'our-approach') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">How to get involved</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'How to get involved', url: article_path('en', 'get-involved') %>
                 </ul>
               </li>
 
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Find evidence">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'Find Evidence', url: article_path('en', 'find-evidence') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Evidence hub</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Financial Capability in the UK</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence  Hub', url: article_path('en', 'financial-capability-evidence-hub') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Secondary navigation', url: article_path('en', 'financial-capability-uk') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Fincap Survey', url: article_path('en', 'financial-capability-survey') %>
                 </ul>
               </li>
 
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Evaluate your programme">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'Evaluate your programme', url: article_path('en', 'evaluate-your-programme') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Evaluation toolkit</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">IMPACT principles</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Funding</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Evaluation Toolkit', url: article_path('en', 'evaluation-toolkit-overview') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Impact Principles', url: 'http://fincap.org.uk/impact-principles' %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Funding', url: article_path('en', 'funding') %>
                 </ul>
               </li>
 
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="What Works Programme">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'What Works Programme', url: '/en/what-works/programme' %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">What Works Fund</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">Funded projects</a>
-                  </li>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">FinCap labs</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'What Works Fund', url: article_path('en', 'what-works-fund') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Funded Projects', url: article_path('en', 'what-works-grant-funded-projects') %>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'FinCap Labs ', url: article_path('en', 'the-financial-capability-lab') %>
                 </ul>
               </li>
             </ul>
@@ -477,7 +420,7 @@
         </div>
       </li>
 
-      <li class="nav__level-1__element" data-nav-level-1-item role="none">
+      <li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
         <%= render 'shared/nav/level_1_heading', text: 'News &amp; Events' %>
 
         <div class="nav__level-2" data-nav-level-2>
@@ -492,9 +435,7 @@
               <li class="nav__level-2__category">
                 <ul class="nav__level-2__subcategories" role="menu" aria-label="Events">
                   <%= render 'shared/nav/level_2_subcategory_heading', text: 'Evaluate your programme', url: article_path('en', 'evaluate-your-programme') %>
-                  <li class="nav__level-2__subcategory" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="false" data-nav-level-2-subcategory-link tabindex="-1">FinCap Week</a>
-                  </li>
+                  <%= render 'shared/nav/level_2_subcategory_link', text: 'Talk Money Week', url: '/en/talkmoneyweek' %>
                 </ul>
               </li>
 
