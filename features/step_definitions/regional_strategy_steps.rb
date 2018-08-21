@@ -13,12 +13,3 @@ end
 Then('I should see the regional strategy content') do |content|
   expect(regional_strategy_page).to have_content(content)
 end
-
-Then('I should see the latest news box') do
-  expect(regional_strategy_page).to have_latest_news
-end
-
-Then('I should see the countries box') do
-  expect(regional_strategy_page).to have_content('The Strategy across the UK')
-  expect(regional_strategy_page).to have_country_list
-end

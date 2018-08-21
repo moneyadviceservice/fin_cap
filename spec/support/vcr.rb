@@ -18,4 +18,11 @@ VCR.configure do |c|
       )
     end
   end
+
+  # As we deal with API responses in JSON only, we have to enforce UTF-8
+  # in order to avoid the body to be stored as a binary string
+  # More info: https://stackoverflow.com/a/25571825
+  c.before_record do |i|
+    i.response.body.force_encoding('UTF-8')
+  end
 end
