@@ -19,6 +19,19 @@ module UI::Pages
       element :info_icon, 'a.icon--info'
     end
 
+    class FilterInput < SitePrism::Section
+      element :input, 'input'
+    end
+
+    class SearchFilter < SitePrism::Section
+      element :title, 'legend'
+      sections :filter_input, FilterInput, 'label'
+
+      def find_filter(value)
+        filter_input.find {|label| label.input.value == value}
+      end
+    end
+
     set_url '{/locale}/evidence_hub'
 
     # pagination elements
@@ -44,5 +57,10 @@ module UI::Pages
             '.evidence-hub__thematic-review-message a'
 
     sections :search_results, SearchResult, '.search-results__item'
+    sections :search_filters, SearchFilter, '.sidepanel__filters-inner .sidepanel__fieldset'
+
+    def find_filter_group(title)
+      search_filters.find { |filter| filter.title.text == title }
+    end
   end
 end
