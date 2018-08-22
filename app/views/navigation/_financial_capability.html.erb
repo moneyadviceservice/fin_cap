@@ -1,0 +1,38 @@
+<li class="nav__level-1__element" data-nav-level-1-item role="none">
+  <%= render 'shared/nav/level_1_heading', text: 'What Is Financial Capability?' %>
+
+  <div class="nav__level-2" data-nav-level-2>
+    <div class="nav__level-2__wrap">
+      <p href="#" class="nav__level-2__description" role="category description">The concept of financial capability, why it is important and who can benefit</p>
+
+      <ul class="nav__level-2__categories">
+        <li class="nav__level-2__heading">
+          <%= render 'shared/nav/level_2_heading', text: 'What Is Financial Capability?' %>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="What is financial capability?">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'What Is Financial Capability?', url: article_path('en', 'what-is-financial-capability') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability levels in the UK', url: article_path('en', 'levels-uk') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability - a global issue', url: article_path('en', 'global-issue') %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is this website for?">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is this website for?', url: article_path('en', 'who-is-this-website-for') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial services', url: article_path('en', 'financial-services') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Charities and third-sector organisations', url: article_path('en', 'charities-third-sector-organisations') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Employers', url: article_path('en', 'employers') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Researchers', url: article_path('en', 'researchers') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Schools', url: article_path('en', 'schools') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Parents', url: article_path('en', 'parents') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Childrens services', url: article_path('en', 'childrens-services') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Youth and students', url: article_path('en', 'youth-students') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Individuals', url: article_path('en', 'individuals') %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,54 @@
+<li class="nav__level-1__element" data-nav-level-1-item role="none">
+  <%= render 'shared/nav/level_1_heading', text: 'About The Strategy' %>
+
+  <div class="nav__level-2" data-nav-level-2>
+    <div class="nav__level-2__wrap">
+      <p class="nav__level-2__description" role="category description">Who is involved, why it is needed and how it will help millions of people across the UK</p>
+
+      <ul class="nav__level-2__categories">
+        <li class="nav__level-2__heading">
+          <%= render 'shared/nav/level_2_heading', text: 'About The Strategy' %>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="What is The Strategy?">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'What is The Strategy?', url: article_path('en', 'strategy') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'UK Strategy', url: article_path('en', 'uk-strategy') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Northern Ireland ', url: article_path('en', 'northern-ireland') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Scotland', url: article_path('en', 'scotland') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Wales', url: article_path('en', 'wales') %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Why is The Strategy needed?">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Why is The Strategy needed?', url: article_path('en', 'why-strategy-needed') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'What The Strategy needs to achieve', url: article_path('en', 'what-strategy-needs-achieve') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence and analysis', url: article_path('en', 'evidence-analysis') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Summary of key statistics on Financial Capability', url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf' %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Strategy development', url: article_path('en', 'development-strategy') %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="How the Strategy will be delivered">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'How The Strategy will be delivered', url: article_path('en', 'how-strategy-delivered') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of the steering groups', url: article_path('en', 'role-steering-groups') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of Money Advice Service', url: article_path('en', 'role-money-advice-service') %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is involved?">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is involved?', url: article_path('en', 'whos-involved') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'The Financial capability Board', url: article_path('en', 'financial-capabilty-board') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Steering Group and forums', url: article_path('en', 'steering-group-forums') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'IMPACT Principle Signatories', url: article_path('en', 'impact-principle-signatories') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'What Works Fund Grantees', url: article_path('en', 'what-works-grant-funded-projects') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Get Involved', url: 'http://fincap.org.uk/get-involved' %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
