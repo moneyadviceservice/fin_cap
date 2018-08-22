@@ -10,20 +10,20 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Events">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Evaluate your programme', url: article_path('en', 'evaluate-your-programme') %>
+            <%= render_level_2_subcategory_heading('Evaluate your programme', article_path('en', 'evaluate-your-programme')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Talk Money Week', url: '/en/talkmoneyweek' %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Latest news">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Latest News', url: 'http://fincap.org.uk/latest-news' %>
+            <%= render_level_2_subcategory_heading('Latest News', 'http://fincap.org.uk/latest-news') %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Blog">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Blog', url: 'http://blog.fincap.org.uk/' %>
+            <%= render_level_2_subcategory_heading('Blog', 'http://blog.fincap.org.uk/') %>
           </ul>
         </li>
       </ul>

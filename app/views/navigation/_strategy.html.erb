@@ -10,7 +10,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="What is The Strategy?">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'What is The Strategy?', url: article_path('en', 'strategy') %>
+            <%= render_level_2_subcategory_heading('What is The Strategy?', article_path('en', 'strategy')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'UK Strategy', url: article_path('en', 'uk-strategy') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Northern Ireland ', url: article_path('en', 'northern-ireland') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Scotland', url: article_path('en', 'scotland') %>
@@ -20,7 +20,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Why is The Strategy needed?">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Why is The Strategy needed?', url: article_path('en', 'why-strategy-needed') %>
+            <%= render_level_2_subcategory_heading('Why is The Strategy needed?', article_path('en', 'why-strategy-needed')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'What The Strategy needs to achieve', url: article_path('en', 'what-strategy-needs-achieve') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence and analysis', url: article_path('en', 'evidence-analysis') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Summary of key statistics on Financial Capability', url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf' %>
@@ -30,7 +30,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="How the Strategy will be delivered">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'How The Strategy will be delivered', url: article_path('en', 'how-strategy-delivered') %>
+            <%= render_level_2_subcategory_heading('How The Strategy will be delivered', article_path('en', 'how-strategy-delivered')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of the steering groups', url: article_path('en', 'role-steering-groups') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of Money Advice Service', url: article_path('en', 'role-money-advice-service') %>
           </ul>
@@ -38,7 +38,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is involved?">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is involved?', url: article_path('en', 'whos-involved') %>
+            <%= render_level_2_subcategory_heading('Who is involved?', article_path('en', 'whos-involved')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'The Financial capability Board', url: article_path('en', 'financial-capabilty-board') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Steering Group and forums', url: article_path('en', 'steering-group-forums') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'IMPACT Principle Signatories', url: article_path('en', 'impact-principle-signatories') %>

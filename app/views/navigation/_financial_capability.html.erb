@@ -10,7 +10,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="What is financial capability?">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'What Is Financial Capability?', url: article_path('en', 'what-is-financial-capability') %>
+            <%= render_level_2_subcategory_heading('What Is Financial Capability?', article_path('en', 'what-is-financial-capability')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability levels in the UK', url: article_path('en', 'levels-uk') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability - a global issue', url: article_path('en', 'global-issue') %>
           </ul>
@@ -18,7 +18,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is this website for?">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Who is this website for?', url: article_path('en', 'who-is-this-website-for') %>
+            <%= render_level_2_subcategory_heading('Who is this website for?', article_path('en', 'who-is-this-website-for')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial services', url: article_path('en', 'financial-services') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Charities and third-sector organisations', url: article_path('en', 'charities-third-sector-organisations') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Employers', url: article_path('en', 'employers') %>
