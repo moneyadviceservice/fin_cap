@@ -1,0 +1,34 @@
+<li class="nav__level-1__element" data-nav-level-1-item role="none">
+  <%= render 'shared/nav/level_1_heading', text: 'News &amp; Events' %>
+
+  <div class="nav__level-2" data-nav-level-2>
+    <div class="nav__level-2__wrap">
+      <p class="nav__level-2__description" role="category description">Get all the latest news, events and join in the conversation</p>
+
+      <ul class="nav__level-2__categories">
+        <li class="nav__level-2__heading">
+          <%= render 'shared/nav/level_2_heading', text: 'News &amp; Events' %>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Events">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Evaluate your programme', url: article_path('en', 'evaluate-your-programme') %>
+            <%= render 'shared/nav/level_2_subcategory_link', text: 'Talk Money Week', url: '/en/talkmoneyweek' %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Latest news">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Latest News', url: 'http://fincap.org.uk/latest-news' %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Blog">
+            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Blog', url: 'http://blog.fincap.org.uk/' %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>

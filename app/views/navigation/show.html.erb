@@ -1,0 +1,26 @@
+<nav class="nav uninitialised is-active" data-dough-component="Nav" role="navigation">
+  <div class="l-constrained">
+    <ul class="nav__level-1" data-nav-level-1 role="menubar" aria-label="main site navigation">
+      <%= render 'navigation/financial_capability' %>
+      <%= render 'navigation/strategy' %>
+      <%= render 'navigation/life_stages' %>
+      <%= render 'navigation/research_evaluation' %>
+      <%= render 'navigation/news_events' %>
+
+      <li class="nav__search-bar" data-nav-search-bar>
+        <%= render 'shared/search', location: 'navigation' %>
+      </li>
+
+      <li class="nav__close-button">
+        <a href="#" class="nav__close-button__text" data-mobile-nav-close>
+          Close
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav__close-button__icon" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="mobile-nav-overlay" data-mobile-nav-overlay=""></div>

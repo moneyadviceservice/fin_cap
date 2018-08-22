@@ -1,0 +1,281 @@
+<li class="nav__level-1__element" data-nav-level-1-item role="none">
+  <%= render 'shared/nav/level_1_heading', text: 'Life Stages' %>
+
+  <div class="nav__level-2 nav__level-2--extended" data-nav-level-2-extended>
+    <div class="nav__level-2__wrap">
+      <p class="nav__level-2__description" role="category description">Groups, areas and themes the strategy focuses on</p>
+
+      <ul class="nav__level-2__categories" data-nav-level-2-extended-items role="menu" aria-label="Life stages">
+        <li class="nav__level-2__heading" role="none">
+          <%= render 'shared/nav/level_2_heading', text: 'Life Stages' %>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render 'shared/nav/level_2_extended_heading', text: 'Children and Young People' %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
+
+              <%= render 'shared/nav/level_3_heading', text: 'Children and Young People' %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render 'shared/nav/level_3_subcategory_btn',
+                  text: 'Find out more about children and young people',
+                  url: lifestage_path('en', 'children-and-young-people')
+                %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Children and young people">
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Children and Young people steering group',
+                      url: article_path('en', 'children-young-people-steering-group')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Steering group updates',
+                      url: article_path('en', 'children-young-people-steering-group-updates')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Action Plan',
+                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/093/original/Children___Young_People_Action_Plan.pdf'
+                    %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render 'shared/nav/level_2_extended_heading', text: 'Young Adults' %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
+
+              <%= render 'shared/nav/level_3_heading', text: 'Young Adults' %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render 'shared/nav/level_3_subcategory_btn',
+                  text: 'Find out more about young adults',
+                  url: lifestage_path('en', 'young-adults')
+                %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Young Adults">
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Young Adults steering group',
+                      url: article_path('en', 'young-adults-steering-group')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Steering group updates',
+                      url: article_path('en', 'young-adults-steering-group-updates')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Action plan',
+                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/094/original/Young_Adults_Action_Plan.pdf'
+                    %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render 'shared/nav/level_2_extended_heading', text: 'Working Age' %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Working life starts when we enter the workplace, and stretches through to retirement – covering many life events from ages 16 to 70</p>
+
+              <%= render 'shared/nav/level_3_heading', text: 'Working Age' %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render 'shared/nav/level_3_subcategory_btn',
+                  text: 'Find out more about working age adults',
+                  url: lifestage_path('en', 'working-age')
+                %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Working Age Adults">
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Workplace steering group',
+                      url: article_path('en', 'workplace-steering-group')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Steering group updates',
+                      url: article_path('en', 'workplace-steering-group-updates')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Action plan',
+                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/095/original/Workplace_Action_Plan.pdf'
+                    %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render 'shared/nav/level_2_extended_heading', text: 'Retirement Planning' %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Here we focus on people who are already retired and drawing an income from pensions and other savings</p>
+
+              <%= render 'shared/nav/level_3_heading', text: 'Retirement Planning' %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render 'shared/nav/level_3_subcategory_btn',
+                  text: 'Find out more about people planning to retire',
+                  url: lifestage_path('en', 'retirement-planning')
+                %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Older People in Retirement">
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Retirement Planning steering group',
+                      url: article_path('en', 'retirement-planning-steering-group')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Steering group updates',
+                      url: article_path('en', 'people-planning-retire-steering-group-updates')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Action plan',
+                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/096/original/Retirement_Planning_Action_Plan.pdf'
+                    %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render 'shared/nav/level_2_extended_heading', text: 'People in retirement' %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
+
+              <%= render 'shared/nav/level_3_heading', text: 'People in retirement' %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render 'shared/nav/level_3_subcategory_btn',
+                  text: 'Find out more about older people in retirement',
+                  url: lifestage_path('en', 'people-retirement')
+                %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="People in retirement">
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'People in retirement steering group',
+                      url: article_path('en', 'people-retirement-steering-group')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Steering group updates',
+                      url: article_path('en', 'people-retirement-steering-group-updates')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Action plan',
+                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/097/original/People_in_Retirement_Action_Plan.pdf'
+                    %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render 'shared/nav/level_2_extended_heading', text: 'People in Financial Difficulties' %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
+
+              <%= render 'shared/nav/level_3_heading', text: 'People in Financial Difficulties' %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render 'shared/nav/level_3_subcategory_btn',
+                  text: 'Find out more about people in financial difficulties',
+                  url: lifestage_path('en', 'people-financial-difficulties')
+                %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="People in Financial difficulties">
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Debt advice steering group',
+                      url: article_path('en', 'debt-advice-steering-group')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Steering group updates',
+                      url: article_path('en', 'people-financial-difficulties-steering-group-updates')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Action plan',
+                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/098/original/People_in_Financial_Difficulties_action_plan.pdf'
+                    %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render 'shared/nav/level_2_extended_heading', text: 'People trying to save' %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">As a nation, very few of us have enough savings. This section looks at ways to tackle this</p>
+
+              <%= render 'shared/nav/level_3_heading', text: 'People trying to save' %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render 'shared/nav/level_3_subcategory_btn',
+                  text: 'Find out more about people trying to save',
+                  url: lifestage_path('en', 'people-trying-save')
+                %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="People trying to save">
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Savings Steering group (members)',
+                      url: article_path('en', 'savings-steering-group')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Steering group updates',
+                      url: article_path('en', 'savings-steering-group-updates')
+                    %>
+                    <%= render 'shared/nav/level_3_subcategory_link',
+                      text: 'Action plan',
+                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/099/original/Savings_Action_Plan.pdf'
+                    %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
