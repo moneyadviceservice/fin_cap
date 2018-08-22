@@ -10,14 +10,14 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Our Approach">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Our approach', url: article_path('en', 'our-approach') %>
+            <%= render_level_2_subcategory_heading('Our approach', article_path('en', 'our-approach')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'How to get involved', url: article_path('en', 'get-involved') %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Find evidence">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Find Evidence', url: article_path('en', 'find-evidence') %>
+            <%= render_level_2_subcategory_heading('Find Evidence', article_path('en', 'find-evidence')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence  Hub', url: article_path('en', 'financial-capability-evidence-hub') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Financial capability in the UK', url: article_path('en', 'financial-capability-uk') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Fincap Survey', url: article_path('en', 'financial-capability-survey') %>
@@ -26,7 +26,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Evaluate your programme">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'Evaluate your programme', url: article_path('en', 'evaluate-your-programme') %>
+            <%= render_level_2_subcategory_heading('Evaluate your programme', article_path('en', 'evaluate-your-programme')) %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Evaluation Toolkit', url: article_path('en', 'evaluation-toolkit-overview') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Impact Principles', url: 'http://fincap.org.uk/impact-principles' %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Funding', url: article_path('en', 'funding') %>
@@ -35,7 +35,7 @@
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="What Works Programme">
-            <%= render 'shared/nav/level_2_subcategory_heading', text: 'What Works Programme', url: '/en/what-works/programme' %>
+            <%= render_level_2_subcategory_heading('What Works Programme', '/en/what-works/programme') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'What Works Fund', url: article_path('en', 'what-works-fund') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'Funded Projects', url: article_path('en', 'what-works-grant-funded-projects') %>
             <%= render 'shared/nav/level_2_subcategory_link', text: 'FinCap Labs ', url: article_path('en', 'the-financial-capability-lab') %>
