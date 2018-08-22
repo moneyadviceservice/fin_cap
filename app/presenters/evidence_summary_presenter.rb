@@ -105,15 +105,15 @@ class EvidenceSummaryPresenter < BasePresenter
   end
 
   def client_group_filter_params(value)
-    search_form_params('client_groups' => [value])
+    search_form_params('client_groups' => [value.humanize])
   end
 
   def topic_filter_params(value)
-    search_form_params('topics' => [value])
+    search_form_params('topics' => [value.humanize])
   end
 
   def measured_outcome_filter_params(value)
-    search_form_params('measured_outcomes' => [value])
+    search_form_params('measured_outcomes' => [value.humanize])
   end
 
   private

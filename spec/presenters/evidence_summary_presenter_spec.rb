@@ -308,7 +308,7 @@ RSpec.describe EvidenceSummaryPresenter do
     it 'returns a hash of search params with the given value' do
       expected_result = {
         'evidence_summary_search_form' => {
-          'client_groups' => ['foo']
+          'client_groups' => ['Foo']
         }
       }
 
@@ -320,7 +320,7 @@ RSpec.describe EvidenceSummaryPresenter do
     it 'returns a hash of search params with the given value' do
       expected_result = {
         'evidence_summary_search_form' => {
-          'topics' => ['bar']
+          'topics' => ['Bar']
         }
       }
 
