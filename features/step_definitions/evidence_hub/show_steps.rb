@@ -20,6 +20,8 @@ Then('I should see a list of all search filters') do |table|
     filters = evidence_summaries_page.find_filter_group(row[0]).filter_inputs
     expect(filters.map(&:text)).to eq(row[1].split(', '))
   end
+end
+
 # rubocop:disable Metrics/LineLength
 When('I click on the {string} client group in the key info panel') do |client_group|
   # rubocop:enable Metrics/LineLength
