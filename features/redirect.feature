@@ -22,3 +22,8 @@
   Scenario: Visiting an old site news page
     Given I visit the page '/en/news/old-news'
     Then I should be reading the page '/en/news/press-release-a-new-way-to-pay'
+
+  @allow-rescue
+  Scenario: Visiting a page that does not exist and does not have a redirect
+    Given I visit the page '/this-page-dont-exist-anywhere'
+    Then I should see the page not found
