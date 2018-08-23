@@ -11,39 +11,59 @@
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="What is The Strategy?">
             <%= render_level_2_subcategory_heading('What is The Strategy?', article_path('en', 'strategy')) %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'UK Strategy', url: article_path('en', 'uk-strategy') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Northern Ireland ', url: article_path('en', 'northern-ireland') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Scotland', url: article_path('en', 'scotland') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Wales', url: article_path('en', 'wales') %>
+
+            <% {
+              'UK Strategy' => article_path('en', 'uk-strategy'),
+              'Northern Ireland' => article_path('en', 'northern-ireland'),
+              'Scotland' => article_path('en', 'scotland'),
+              'Wales' => article_path('en', 'wales')
+            }.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Why is The Strategy needed?">
             <%= render_level_2_subcategory_heading('Why is The Strategy needed?', article_path('en', 'why-strategy-needed')) %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'What The Strategy needs to achieve', url: article_path('en', 'what-strategy-needs-achieve') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Evidence and analysis', url: article_path('en', 'evidence-analysis') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Summary of key statistics on Financial Capability', url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf' %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Strategy development', url: article_path('en', 'development-strategy') %>
+
+            <% {
+              'What The Strategy needs to achieve' => article_path('en', 'what-strategy-needs-achieve'),
+              'Evidence and analysis' => article_path('en', 'evidence-analysis'),
+              'Summary of key statistics on Financial Capability' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf',
+              'Strategy development' => article_path('en', 'development-strategy')
+            }.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="How the Strategy will be delivered">
             <%= render_level_2_subcategory_heading('How The Strategy will be delivered', article_path('en', 'how-strategy-delivered')) %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of the steering groups', url: article_path('en', 'role-steering-groups') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'The role of Money Advice Service', url: article_path('en', 'role-money-advice-service') %>
+
+            <% {
+              'The role of the steering groups' => article_path('en', 'role-steering-groups'),
+              'The role of Money Advice Service' => article_path('en', 'role-money-advice-service')
+            }.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is involved?">
             <%= render_level_2_subcategory_heading('Who is involved?', article_path('en', 'whos-involved')) %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'The Financial capability Board', url: article_path('en', 'financial-capabilty-board') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Steering Group and forums', url: article_path('en', 'steering-group-forums') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'IMPACT Principle Signatories', url: article_path('en', 'impact-principle-signatories') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'What Works Fund Grantees', url: article_path('en', 'what-works-grant-funded-projects') %>
-            <%= render 'shared/nav/level_2_subcategory_link', text: 'Get Involved', url: 'http://fincap.org.uk/get-involved' %>
+
+            <% {
+              'The Financial capability Board' => article_path('en', 'financial-capabilty-board'),
+              'Steering Group and forums' => article_path('en', 'steering-group-forums'),
+              'IMPACT Principle Signatories' => article_path('en', 'impact-principle-signatories'),
+              'What Works Fund Grantees' => article_path('en', 'what-works-grant-funded-projects'),
+              'Get Involved' => 'http://fincap.org.uk/get-involved'
+            }.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
           </ul>
         </li>
       </ul>
