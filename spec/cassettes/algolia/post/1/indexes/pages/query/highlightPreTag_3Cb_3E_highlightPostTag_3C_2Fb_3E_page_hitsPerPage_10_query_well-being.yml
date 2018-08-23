@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://f3tip4p8lj-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=well-being"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby (1.23.2); Ruby (2.4.2)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 23 Aug 2018 16:43:07 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 23 Aug 2018 16:43:07 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Timing-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Financial well-being: the employee view","description":null,"keywords":[],"content":"<p>Context</p>\n\n<p>The
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of financial awareness or absence of\nemployee benefits
+        can affect work performance.\nIn addition, the perception that their contributions
+        are not being\nacknowledged can have an impact on employee self-esteem, health
+        and\nproductivity.</p>\n","published_at":null,"objectID":"/en/insights/financial-well-being-the-employee-view","_highlightResult":{"title":{"value":"Financial
+        <b>well-being</b>: the employee view","matchLevel":"full","fullyHighlighted":false,"matchedWords":["well","being"]},"content":{"value":"<p>Context</p>\n\n<p>The
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of financial awareness or absence of\nemployee benefits
+        can affect work performance.\nIn addition, the perception that their contributions
+        are not being\nacknowledged can have an impact on employee self-esteem, health
+        and\nproductivity.</p>\n","matchLevel":"none","matchedWords":[]}}},{"title":"Financial
+        Capability","description":null,"keywords":[],"content":"<p>Welcome to the
+        Financial Capability website, which provides the latest updates on the development
+        \nof the Financial Capability Strategy for the UK, as well as resources and
+        practical tools to help \nshare learning about what works.\nClick <a href=\"https://www.fincap.org.uk/fincapweek\">here</a>
+        for information about Talk Money Week, the annual event which showcases and
+        celebrates \nhow organisations are improving financial wellbeing and supporting
+        the work of the Financial \nCapability Strategy.</p>\n","published_at":null,"objectID":"/en/homepages/root","_highlightResult":{"title":{"value":"Financial
+        Capability","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>Welcome
+        to the Financial Capability website, which provides the latest updates on
+        the development \nof the Financial Capability Strategy for the UK, as well
+        as resources and practical tools to help \nshare learning about what works.\nClick
+        <a href=\"https://www.fincap.org.uk/fincapweek\">here</a> for information
+        about Talk Money Week, the annual event which showcases and celebrates \nhow
+        organisations are improving financial <b>wellbeing</b> and supporting the
+        work of the Financial \nCapability Strategy.</p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["well","being"]}}},{"title":"UK
+        Strategy","description":null,"keywords":[],"content":"<p>This Strategy aims
+        to improve financial capability across the UK.\n        That means improving
+        people’s ability to manage money well,\n        both day to day and through
+        significant life events, and their ability\n        to handle periods of financial
+        difficulty. It will focus on developing\n        people’s financial skills
+        and knowledge, and improving their attitudes\n        and motivation. This,
+        combined with an inclusive financial system,\n        can help people achieve
+        the best possible financial wellbeing.</p>\n","published_at":null,"objectID":"/en/uk_strategies/uk-strategy","_highlightResult":{"title":{"value":"UK
+        Strategy","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        Strategy aims to improve financial capability across the UK.\n        That
+        means improving people’s ability to manage money well,\n        both day to
+        day and through significant life events, and their ability\n        to handle
+        periods of financial difficulty. It will focus on developing\n        people’s
+        financial skills and knowledge, and improving their attitudes\n        and
+        motivation. This, combined with an inclusive financial system,\n        can
+        help people achieve the best possible financial <b>wellbeing.</b></p>\n","matchLevel":"partial","fullyHighlighted":false,"matchedWords":["well"]}}}],"nbHits":3,"page":0,"nbPages":1,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"well-being","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=well-being"}
+
+'
+    http_version: 
+  recorded_at: Thu, 23 Aug 2018 16:43:07 GMT
+recorded_with: VCR 4.0.0

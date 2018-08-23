@@ -5,6 +5,7 @@ ruby '2.4.2'
 
 gem 'rails', '~> 5.0.6'
 
+gem 'algoliasearch'
 gem 'autoprefixer-rails'
 gem 'dough-ruby', '~> 5.28'
 gem 'jbuilder', '~> 2.5'
@@ -15,6 +16,8 @@ gem 'nokogiri'
 gem 'okcomputer'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
+gem 'site_search', git: 'git@github.com:moneyadviceservice/site_search.git',
+                   branch: '9508-site-search'
 gem 'syslog-logger'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
@@ -30,12 +33,14 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'pry-rails'
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop', '~> 0.54.0', require: false
   gem 'site_prism'
   gem 'sqlite3'
   gem 'tzinfo-data'
   gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

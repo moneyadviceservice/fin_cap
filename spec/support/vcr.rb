@@ -1,9 +1,15 @@
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
-  c.hook_into :faraday
+  c.hook_into :webmock, :faraday
 
   c.around_http_request do |request|
     uri = URI(request.uri)
+
+    if uri.host.match?(/algolia/)
+      query = JSON.parse(request.body)['params']
+      cassette = "/algolia/#{request.method}#{uri.path}#{uri.query}/#{query}"
+      VCR.use_cassette(cassette, match_requests_on: [:body], &request)
+    end
 
     if ENV['FINCAP_CMS_URL'].match?(/#{uri.host}/)
       raw_query = uri.query || ''
@@ -25,4 +31,7 @@ VCR.configure do |c|
   c.before_record do |i|
     i.response.body.force_encoding('UTF-8')
   end
+
+  c.filter_sensitive_data('<API_KEY>') { ENV['FINCAP_ALGOLIA_SEARCH_API_KEY'] }
+  c.filter_sensitive_data('<APP_ID>') { ENV['FINCAP_ALGOLIA_APP_ID'] }
 end
