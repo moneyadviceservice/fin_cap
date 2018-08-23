@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.17.0 (Margo-Urey-00241.local; margourey; 40273) ruby/2.4.2
+      - Mas-Cms-Client/1.17.0 (Margo-Urey-00241.local; margourey; 52256) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Thu, 16 Aug 2018 20:07:41 GMT
+      - Tue, 28 Aug 2018 09:20:26 GMT
       status:
       - 200 OK
       connection:
@@ -32,42 +32,46 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"c8c2b657b122a9cafc3774ad38824e45"'
+      - '"1569e92ce955f7092da5816e9e5534d7"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 7c77cdf0-4bd9-4360-be3c-a5be8ce28c61
+      - 61dc4a74-fdfb-41fe-948a-295c88b8afdc
       x-runtime:
-      - '0.105606'
+      - '0.271617'
     body:
       encoding: UTF-8
       string: '{"label":"Young Adults","slug":"young-adults","full_path":"/en/lifestages/young-adults","meta_description":"","meta_title":"","category_names":[],"layout_identifier":"lifestage","related_content":{"latest_blog_post_links":[{"title":"How
-        to spot and avoid PayPal scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-paypal-scams"},{"title":"How
-        to spot and avoid bank scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-bank-scams"},{"title":"How
-        to spot and avoid TV licence refund scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-tv-licence-refund-scams"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-08-16T19:02:55.000Z","supports_amp":true,"tags":["mobile-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eYoung
+        to spot and avoid DVLA scams","path":"https://www.moneyadviceservice.org.uk/blog/dvla-scams"},{"title":"What
+        my daughter really needs to know about money and university","path":"https://www.moneyadviceservice.org.uk/blog/money-and-university"},{"title":"What
+        to take to university (and what to leave behind)","path":"https://www.moneyadviceservice.org.uk/blog/what-to-take-to-university-and-what-to-leave-behind"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-08-28T09:19:47.000Z","supports_amp":true,"tags":["mobile-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eYoung
         adults are those who have left compulsory education or other statutory settings,\u003cbr\u003e\nsuch
         as care. They are transitioning towards independent living and financial\u003cbr\u003e\nindependence,
-        beginning between the ages of 16 to 18 and continuing to their mid-20s.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eResearch
+        beginning between the ages of 16 to 18 and continuing to their mid-20s.\u003c/p\u003e\n","created_at":"2018-08-20T15:29:29.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eResearch
         suggests that young adults typically display lower levels of financial capability
-        than older age groups.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eSome
-        title to tease you\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eLoads
-        of content to make you read more\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eAnother
-        title to entice you\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eA
-        bunch of well written content to make you click\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eTeasing
-        title\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eYou
-        want to read this, you need to read this\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"strategy_title","content":"\u003cp\u003eStrategy
-        Title\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"strategy_overview","content":"\u003cp\u003eAdult
-        financial capability is a direct resul\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"strategy_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eLink to strategy\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"steering_group_title","content":"\u003cp\u003eSteering
-        group\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"steering_group_links","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eSteering group members\u003c/a\u003e        \u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eSteering group updates\u003c/a\u003e        \u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eAction plans\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eYoung Adults download\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-16T19:02:55.000Z"},{"identifier":"component_teaser_section_title","content":"\u003cp\u003eFinancial
-        capability in action\u003c/p\u003e\n","created_at":"2018-08-16T19:02:55.000Z","updated_at":"2018-08-16T19:02:55.000Z"}],"translations":[]}'
+        than older age groups.\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"component_teaser_section_title","content":"\u003cp\u003eFinancial
+        Capability in action\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eTeaser
+        3 title\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eResearch
+        suggests that young adults typically display lower levels of financial capability
+        than older age groups.\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
+        href=\"/exectutive+summary.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eTeaser
+        3 title\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eResearch
+        suggests that young adults typically display lower levels of financial capability
+        than older age groups.\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
+        href=\"/exectutive+summary.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eTeaser
+        3 title\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eResearch
+        suggests that young adults typically display lower levels of financial capability
+        than older age groups.\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
+        href=\"/exectutive+summary.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"strategy_title","content":"\u003cp\u003eStrategy
+        title\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"strategy_overview","content":"\u003cp\u003eResearch
+        suggests that young adults typically display lower levels of financial capability
+        than older age groups.\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"strategy_link","content":"\u003cp\u003e\u003ca
+        href=\"/exectutive+summary.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"steering_group_title","content":"\u003cp\u003eSteering
+        group title\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"steering_group_links","content":"\u003cp\u003e\u003ca
+        href=\"/general_info\"\u003eEvidence Hub\u003c/a\u003e        \u003ca href=\"/common-evaluation-toolkit\"\u003eEvaluation
+        Toolkit\u003c/a\u003e        \u003ca href=\"/steering-groups\"\u003eThe Steering
+        Groups\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"/general_info\"\u003eEvidence Hub\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"}],"translations":[]}'
     http_version: 
-  recorded_at: Thu, 16 Aug 2018 20:07:41 GMT
+  recorded_at: Tue, 28 Aug 2018 09:20:26 GMT
 recorded_with: VCR 4.0.0

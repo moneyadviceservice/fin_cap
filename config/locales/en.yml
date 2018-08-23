@@ -78,16 +78,21 @@ en:
     research_evaluation:
       findings:
         - text: Existing Research
-          url: 'link-to/financial-capability-survey'
+          slug: find-evidence
+          page_type: article
         - text: Evidence hub
-          url: 'link-to/evidence_hub'
+          slug: financial-capability-evidence-hub
+          page_type: article
       existing:
-        - text: Measure your performance
-          url: 'link-to/evaluate-your-programme'
         - text: Evaluation toolkit
-          url: 'link-to/evaluation-toolkit-homepage'
+          slug: evaluation-toolkit-overview
+          page_type: article
+        - text: IMPACT Principles
+          slug: impact-principles
+          page_type: static
         - text: Outcomes Frameworks and question banks
-          url: 'link-to/outcome-framework'
+          slug: outcomes-frameworks-and-question-banks
+          page_type: article
     countries:
       title: The Strategy across the UK
       intro: As well as the UK Strategy, there are strategies for Northern Ireland, Scotland and Wales.

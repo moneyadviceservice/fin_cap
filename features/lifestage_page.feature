@@ -18,20 +18,20 @@ Feature: Lifestage page
       | title                            | date                  | link                                    |
       | Press Release: A new way to pay! | Thursday 26 July 2018 | /en/news/press-release-a-new-way-to-pay |
     And I should see the teaser boxes with
-      | title                       | text                                              | link |
-      | Some title to tease you     | Loads of content to make you read more            | /financial+capability+strategy.pdf    |
-      | Another title to entice you | A bunch of well written content to make you click | /financial+capability+strategy.pdf    |
-      | Teasing title               | You want to read this, you need to read this      | /financial+capability+strategy.pdf    |
+      | title          | text                                                                                                              | link                    |
+      | Teaser 3 title | Research suggests that young adults typically display lower levels of financial capability than older age groups. | /exectutive+summary.pdf |
+      | Teaser 3 title | Research suggests that young adults typically display lower levels of financial capability than older age groups. | /exectutive+summary.pdf |
+      | Teaser 3 title | Research suggests that young adults typically display lower levels of financial capability than older age groups. | /exectutive+summary.pdf |
     And I should see the research box
     And I should see the strategy box with
       | title            | text                                         | link                               |
-      | Strategy Title   | Adult financial capability is a direct resul | /financial+capability+strategy.pdf | 
+      | Strategy title   | Research suggests that young adults typically display lower levels of financial capability than older age groups. | /exectutive+summary.pdf | 
     And I should see the life stages box
     And I should see the steering group links
-      | text                   | link                               |
-      | Steering group members | /financial+capability+strategy.pdf |
-      | Steering group updates | /financial+capability+strategy.pdf |
-      | Action plans           | /financial+capability+strategy.pdf |
+      | text                | link                       |
+      | Evidence Hub        | /general_info              |
+      | Evaluation Toolkit  | /common-evaluation-toolkit |
+      | The Steering Groups | /steering-groups           |
     And I should see the download links
-      | text                  | link                               |
-      | Young Adults download | /financial+capability+strategy.pdf |
+      | text         | link          |
+      | Evidence Hub | /general_info |
