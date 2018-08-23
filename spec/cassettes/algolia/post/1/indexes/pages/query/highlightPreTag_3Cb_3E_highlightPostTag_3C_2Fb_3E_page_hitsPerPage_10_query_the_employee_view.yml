@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://f3tip4p8lj-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=the+employee+view"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby (1.23.2); Ruby (2.4.2)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 23 Aug 2018 16:43:06 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 23 Aug 2018 16:43:07 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Timing-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Financial well-being: the employee view","description":null,"keywords":[],"content":"<p>Context</p>\n\n<p>The
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of financial awareness or absence of\nemployee benefits
+        can affect work performance.\nIn addition, the perception that their contributions
+        are not being\nacknowledged can have an impact on employee self-esteem, health
+        and\nproductivity.</p>\n","published_at":null,"objectID":"/en/insights/financial-well-being-the-employee-view","_highlightResult":{"title":{"value":"Financial
+        well-being: <b>the</b> <b>employee</b> <b>view</b>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["the","employee","view"]},"content":{"value":"<p>Context</p>\n\n<p><b>The</b>
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of financial awareness or absence of\n<b>employee</b>
+        benefits can affect work performance.\nIn addition, <b>the</b> perception
+        that their contributions are not being\nacknowledged can have an impact on
+        <b>employee</b> self-esteem, health and\nproductivity.</p>\n","matchLevel":"partial","fullyHighlighted":false,"matchedWords":["the","employee"]}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"the
+        employee view","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=the+employee+view"}
+
+'
+    http_version: 
+  recorded_at: Thu, 23 Aug 2018 16:43:07 GMT
+recorded_with: VCR 4.0.0

@@ -29,6 +29,9 @@ Rails.application.routes.draw do
     # Preview pages
     get '/:page_type/:id/preview' => 'documents_preview#show',
         page_type: Regexp.union(CMS_PAGES)
+
+    # Search page
+    resources :search_results, only: 'index', path: 'search'
   end
 
   # Styleguide

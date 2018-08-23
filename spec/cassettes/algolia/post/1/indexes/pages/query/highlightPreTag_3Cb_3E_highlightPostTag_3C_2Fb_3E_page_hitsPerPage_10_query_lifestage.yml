@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://f3tip4p8lj-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=lifestage"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby (1.23.2); Ruby (2.4.2)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Fri, 24 Aug 2018 15:43:39 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 24 Aug 2018 15:43:40 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Timing-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Young Adults","description":null,"keywords":[],"content":"<p>This
+        is an example paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/young_adults","_highlightResult":{"title":{"value":"Young
+        Adults","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"Working
+        Age Adults","description":null,"keywords":[],"content":"<p>This is an example
+        paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/working_age_adults","_highlightResult":{"title":{"value":"Working
+        Age Adults","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"Dummy
+        category 5","description":null,"keywords":[],"content":"<p>This is an example
+        paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/dummy_category_5","_highlightResult":{"title":{"value":"Dummy
+        category 5","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"Dummy
+        category 4","description":null,"keywords":[],"content":"<p>This is an example
+        paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/dummy_category_4","_highlightResult":{"title":{"value":"Dummy
+        category 4","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"Dummy
+        category 3","description":null,"keywords":[],"content":"<p>This is an example
+        paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/dummy_category_3","_highlightResult":{"title":{"value":"Dummy
+        category 3","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"Dummy
+        category 2","description":null,"keywords":[],"content":"<p>This is an example
+        paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/dummy_category_2","_highlightResult":{"title":{"value":"Dummy
+        category 2","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"Dummy
+        category 1","description":null,"keywords":[],"content":"<p>This is an example
+        paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/dummy_category_1","_highlightResult":{"title":{"value":"Dummy
+        category 1","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"People
+        trying to save","description":null,"keywords":[],"content":"<p>This is an
+        example paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/people_trying_to_save","_highlightResult":{"title":{"value":"People
+        trying to save","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"People
+        planning to retire","description":null,"keywords":[],"content":"<p>This is
+        an example paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/people_planning_to_retire","_highlightResult":{"title":{"value":"People
+        planning to retire","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}},{"title":"People
+        in Financial difficulties","description":null,"keywords":[],"content":"<p>This
+        is an example paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/people_in_financial_difficulties","_highlightResult":{"title":{"value":"People
+        in Financial difficulties","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific <b>lifestage.</b></p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["lifestage"]}}}],"nbHits":12,"page":0,"nbPages":2,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"lifestage","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=lifestage"}
+
+'
+    http_version: 
+  recorded_at: Fri, 24 Aug 2018 15:43:40 GMT
+recorded_with: VCR 4.0.0

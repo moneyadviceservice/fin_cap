@@ -3,14 +3,10 @@ module ApplicationHelper
     klass = presenter_klass || "#{object.class}Presenter".constantize
     presenter = klass.new(object, self)
 
-    if block_given?
-      yield(presenter)
-    else
-      presenter
-    end
+    block_given? ? yield(presenter) : presenter
   end
 
-  def present_collection(collection)
-    collection.map { |element| present(element) }
+  def present_collection(collection, presenter_klass = nil)
+    collection.map { |element| present(element, presenter_klass) }
   end
 end

@@ -1,0 +1,19 @@
+<div class="l-pagination">
+  <% unless search_results.first_page? %>
+    <%= link_to search_results_path(query: params[:query], page: search_results.previous_page), class: 'button button--compact button--previous' do %>
+      <span class="icon icon--left-chevron"></span>
+      <span class="button--compact__text"> Previous</span>
+    <% end %>
+  <% end %>
+
+  <p class="pagination__counter pagination__counter">
+    <span> Page <%= search_results.page %> of <%= search_results.number_of_pages %> </span>
+  </p>
+
+  <% unless search_results.last_page? %>
+    <%= link_to search_results_path(query: params[:query], page: search_results.next_page), class: 'button button--compact button--next' do %>
+      <span class="button--compact__text">Next</span>
+      <span class="icon icon--right-chevron"></span>
+    <% end %>
+  <% end %>
+</div>

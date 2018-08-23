@@ -1,10 +1,11 @@
-<form class="search">
-  <label class="visually-hidden" for="search_<%= "#{location}" %>">Search</label>
-  <input type="text" placeholder="Seach Fincap" id="search_<%= "#{location}" %>" class="search__input" />
-  <button class="search__submit search__submit--icon" type="submit">
+<%= form_tag search_results_path(locale: 'en'), method: :get do %>
+  <%= label_tag 'Search', nil, for: "search", class: 'visually-hidden' %>
+  <%= text_field_tag 'query', nil, placeholder: 'Search Fincap', id: "search", class: 'search__input' %>
+  <%= button_tag class: 'search__submit search__submit--icon', type: 'submit' do %>
+    <span class="visually-hidden">Search</span>
     <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--search" focusable="false">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--search"></use>
     </svg>
-    <span class="visually-hidden">Search</span>
-  </button>
-</form>
+  <% end %>
+<% end %>
+
