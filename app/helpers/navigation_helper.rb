@@ -14,4 +14,8 @@ module NavigationHelper
   def render_level_2_extended_heading(text)
     render 'navigation/level_2_extended_heading', text: text
   end
+
+  def render_level_2_subcategory_link(text, link)
+    render 'navigation/level_2_subcategory_link', text: text, link: link
+  end
 end
