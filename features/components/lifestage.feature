@@ -1,6 +1,6 @@
 Feature: Lifestage
-  As a fincap website user visiting an evidence summary
-  I want to be able to see all a summary of lifestages
+  As a fincap website user
+  I want to be able to see a summary of all lifestages
   So that I can learn about the issues relevant to different lifestages
 
   Scenario: Visiting a page with the component

@@ -19,7 +19,3 @@ Then('I should see each lifestage with a link to its page') do |table|
     expect(row[1]).to be_in(lifestages.map { |ls| ls.link[:href] })
   end
 end
-
-Then('I should see the {string} page') do |string|
-  expect(current_page.title.text).to eq(string)
-end

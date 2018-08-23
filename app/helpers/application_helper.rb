@@ -13,4 +13,8 @@ module ApplicationHelper
   def present_collection(collection)
     collection.map { |element| present(element) }
   end
+
+  def region_uk?(string)
+    string == 'uk'
+  end
 end

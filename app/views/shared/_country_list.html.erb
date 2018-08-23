@@ -9,10 +9,24 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--<%= country[:region] %>"></use>
             </svg>
-            <%= link_to "#{country[:text]}", "#{country[:url]}", class: 'list--countries-link' %>
+            <% if region_uk?(country[:region]) %>
+              <%= link_to( 
+                  country[:text],
+                  uk_strategy_path(id: country[:slug], locale: 'en'),
+                  class: 'list--countries-link'
+              )%>
+              <% else %>
+                <%= link_to( 
+                    country[:text],
+                    regional_strategy_path(id: country[:slug], locale: 'en'),
+                    class: 'list--countries-link'
+                )%>
+            <% end %>
           </li>
         <% end %>
       </ul>
     </div>
   </div>
 </div>
+
+

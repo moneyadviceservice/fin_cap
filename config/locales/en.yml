@@ -94,16 +94,16 @@ en:
     countries_list:
       - region: uk
         text: Strategy for United Kingdom
-        url: '#'
+        slug: 'uk-strategy'
       - region: northern-ireland
         text: Strategy for Northern Ireland
-        url: '#'
+        slug: 'northern-ireland'
       - region: scotland
         text: Strategy for Scotland
-        url: '#'
+        slug: 'scotland'
       - region: wales
         text: Strategy for Wales
-        url: '#'
+        slug: 'wales'
     evidence_hub:
       pagination:
         total_results: '%{total_results} documents found'
