@@ -10,15 +10,15 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.17.0 (M-C02W80LWGWN.local; giuseppelobraico; 9790) ruby/2.4.2
-        (198; x86_64-darwin17)
+      - Mas-Cms-Client/1.17.0 (Margo-Urey-00241.local; margourey; 63748) ruby/2.4.2
+        (198; x86_64-darwin16)
   response:
     status:
       code: 200
       message: 
     headers:
       date:
-      - Thu, 16 Aug 2018 11:20:40 GMT
+      - Thu, 23 Aug 2018 12:24:35 GMT
       status:
       - 200 OK
       connection:
@@ -32,45 +32,45 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"ef952f8b8df93299354f057d6eeb011e"'
+      - '"de08d468e6216c42110da6a115bdcd01"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 0ef6528a-9747-4db0-9e82-c6a96739d5e6
+      - cf222da1-34c9-435e-a6c9-c4b177d17ad9
       x-runtime:
-      - '0.314537'
+      - '0.114159'
     body:
       encoding: UTF-8
-      string: '{"label":"UK Strategy","slug":"uk-strategy","full_path":"/en/uk_strategies/uk-strategy","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"uk_strategy","related_content":{"latest_blog_post_links":[{"title":"How
-        to spot and avoid PayPal scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-paypal-scams"},{"title":"How
-        to spot and avoid bank scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-bank-scams"},{"title":"How
-        to spot and avoid TV licence refund scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-tv-licence-refund-scams"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eThis
-        Strategy aims to improve financial capability across the UK.\n        That
-        means improving people’s ability to manage money well,\n        both day to
-        day and through significant life events, and their ability\n        to handle
-        periods of financial difficulty. It will focus on developing\n        people’s
-        financial skills and knowledge, and improving their attitudes\n        and
-        motivation. This, combined with an inclusive financial system,\n        can
-        help people achieve the best possible financial wellbeing.\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eFinancial
-        capability across the UK\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser_section_title","content":"\u003cp\u003eFinancial
-        capability across the UK in action\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eExecutive
-        Summary\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eThis
-        is the executive summary content\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
-        href=\"/exectutive+summary.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eThe
-        Strategy\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eThis
-        is the strategy content\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
-        href=\"/the+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eThe
-        Full Strategy\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eThis
-        is the full strategy content\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
-        href=\"/the+full+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"regional_strategy_title","content":"\u003cp\u003eRegional
-        strategy article\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"regional_strategy_text","content":"\u003cp\u003eTo
-        find out more about the regional strategy follow the link below\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"regional_strategy_link","content":"\u003cp\u003e\u003ca
-        href=\"/regional-strategy-link\"\u003eRegional strategy\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eUK Strategy\u003c/a\u003e\n      \u003ca
-        href=\"/detailed-strategy.pdf\"\u003eUK Detailed Strategy\u003c/a\u003e\n      \u003ca
-        href=\"/key-statistics.pdf\"\u003eKey statistics on Financial Capability\u003c/a\u003e\n      \u003ca
-        href=\"/fincap+progress+report+2017.pdf\"\u003eFinancial Capability Progress
-        Report 2017\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-16T11:12:36.000Z","updated_at":"2018-08-16T11:12:36.000Z"}],"translations":[]}'
+      string: '{"label":"Uk Strategy","slug":"uk-strategy","full_path":"/en/uk_strategies/uk-strategy","meta_description":"","meta_title":"","category_names":[],"layout_identifier":"uk_strategy","related_content":{"latest_blog_post_links":[{"title":"What
+        my daughter really needs to know about money and university","path":"https://www.moneyadviceservice.org.uk/blog/money-and-university"},{"title":"What
+        to take to university (and what to leave behind)","path":"https://www.moneyadviceservice.org.uk/blog/what-to-take-to-university-and-what-to-leave-behind"},{"title":"How
+        to spot and avoid Facebook scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-facebook-scams"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-08-23T12:16:42.000Z","supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eThis
+        Strategy aims to improve financial capability across the UK. That means improving
+        people’s ability to manage money well, both day to day and through significant
+        life events, and their ability to handle periods of financial difficulty.
+        It will focus on developing people’s financial skills and knowledge, and improving
+        their attitudes and motivation. This, combined with an inclusive financial
+        system, can help people achieve the best possible financial wellbeing.\u003c/p\u003e\n","created_at":"2018-08-23T12:10:32.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eIn
+        the UK: four out of ten of us can’t manage our money around 16 million working
+        age people have less than £300 in savings eight million of us are in serious
+        debt These are the problems the Financial Capability Strategy sets out to
+        fix\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser_section_title","content":"\u003cp\u003eFinancial
+        Capability in Action\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eTeaser
+        1 Title\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eSome
+        copy for promo 1\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eteaser 1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eTalk
+        Money Week\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eFrom
+        12-18 November 2018, celebrate, showcase and amplify your work to improve
+        financial capability and improve financial wellbeing.\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eteaser 2 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eKnow
+        what works\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eWe
+        research hundreds of approaches to building financial capability, and publish
+        evaluations so that you can choose the most effective approach for your organisation.\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eteaser 3 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"regional_strategy_title","content":"\u003cp\u003eRegional
+        strategy title\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"regional_strategy_text","content":"\u003cp\u003eStrategies
+        for each devolved nation are viewable in the countries box\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"regional_strategy_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eread more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003edownload\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-23T12:16:35.000Z","updated_at":"2018-08-23T12:16:35.000Z"}],"translations":[]}'
     http_version: 
-  recorded_at: Thu, 16 Aug 2018 11:20:40 GMT
+  recorded_at: Thu, 23 Aug 2018 12:24:35 GMT
 recorded_with: VCR 4.0.0

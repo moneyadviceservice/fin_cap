@@ -28,6 +28,10 @@ module UI
     element :link, 'a'
   end
 
+  class CountryRow < SitePrism::Section
+    element :link, 'a'
+  end
+
   class Page < SitePrism::Page
     sections :download_box,
              DownloadBoxSection, '.download-box ul.download-box__list li'
@@ -36,6 +40,7 @@ module UI
     sections :supplementary_info_box,
              SupplementaryInfoBox, '.sidepanel .l-2col-even'
     sections :lifestage_rows, LifestageRow, '.bordered-box--green li'
+    sections :country_rows, CountryRow, '.list--countries-item'
     element :title, '.l-2col-main h1'
     element :hero_description, '.hero__heading'
     element :country_list, 'ul.list--countries'
