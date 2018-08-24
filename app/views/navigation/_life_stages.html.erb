@@ -12,7 +12,7 @@
           <%= render_level_2_extended_heading('Children and Young People') %>
 
           <div class="nav__level-3" data-nav-level-3>
-            <div class="nav__level-3__main is-active">
+            <div class="nav__level-3__main">
               <div class="nav__level-3__image"></div>
 
               <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
@@ -24,18 +24,13 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Children and young people">
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Children and Young people steering group',
-                      url: article_path('en', 'children-young-people-steering-group')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Steering group updates',
-                      url: article_path('en', 'children-young-people-steering-group-updates')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Action Plan',
-                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/093/original/Children___Young_People_Action_Plan.pdf'
-                    %>
+                    <% {
+                      'Children and Young people steering group' => article_path('en', 'children-young-people-steering-group'),
+                      'Steering group updates' => article_path('en', 'children-young-people-steering-group-updates'),
+                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/093/original/Children___Young_People_Action_Plan.pdf'
+                    }.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
                   </ul>
                 </li>
               </ul>
@@ -59,18 +54,13 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Young Adults">
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Young Adults steering group',
-                      url: article_path('en', 'young-adults-steering-group')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Steering group updates',
-                      url: article_path('en', 'young-adults-steering-group-updates')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Action plan',
-                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/094/original/Young_Adults_Action_Plan.pdf'
-                    %>
+                    <% {
+                      'Young Adults steering group' => article_path('en', 'young-adults-steering-group'),
+                      'Steering group updates' => article_path('en', 'young-adults-steering-group-updates'),
+                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/094/original/Young_Adults_Action_Plan.pdf'
+                    }.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
                   </ul>
                 </li>
               </ul>
@@ -81,7 +71,7 @@
         <li class="nav__level-2__category" role="none">
           <%= render_level_2_extended_heading('Working Age') %>
 
-          <div class="nav__level-3 is-active" data-nav-level-3>
+          <div class="nav__level-3" data-nav-level-3>
             <div class="nav__level-3__main">
               <div class="nav__level-3__image"></div>
 
@@ -94,18 +84,13 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Working Age Adults">
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Workplace steering group',
-                      url: article_path('en', 'workplace-steering-group')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Steering group updates',
-                      url: article_path('en', 'workplace-steering-group-updates')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Action plan',
-                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/095/original/Workplace_Action_Plan.pdf'
-                    %>
+                    <% {
+                      'Workplace steering group' => article_path('en', 'workplace-steering-group'),
+                      'Steering group updates' => article_path('en', 'workplace-steering-group-updates'),
+                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/095/original/Workplace_Action_Plan.pdf'
+                    }.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
                   </ul>
                 </li>
               </ul>
@@ -129,18 +114,13 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Older People in Retirement">
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Retirement Planning steering group',
-                      url: article_path('en', 'retirement-planning-steering-group')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Steering group updates',
-                      url: article_path('en', 'people-planning-retire-steering-group-updates')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Action plan',
-                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/096/original/Retirement_Planning_Action_Plan.pdf'
-                    %>
+                    <% {
+                      'Retirement Planning steering group' => article_path('en', 'retirement-planning-steering-group'),
+                      'Steering group updates' => article_path('en', 'people-planning-retire-steering-group-updates'),
+                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/096/original/Retirement_Planning_Action_Plan.pdf'
+                    }.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
                   </ul>
                 </li>
               </ul>
@@ -151,7 +131,7 @@
         <li class="nav__level-2__category" role="none">
           <%= render_level_2_extended_heading('People in retirement') %>
 
-          <div class="nav__level-3 is-active" data-nav-level-3>
+          <div class="nav__level-3" data-nav-level-3>
             <div class="nav__level-3__main">
               <div class="nav__level-3__image"></div>
 
@@ -164,18 +144,13 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="People in retirement">
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'People in retirement steering group',
-                      url: article_path('en', 'people-retirement-steering-group')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Steering group updates',
-                      url: article_path('en', 'people-retirement-steering-group-updates')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Action plan',
-                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/097/original/People_in_Retirement_Action_Plan.pdf'
-                    %>
+                    <% {
+                      'People in retirement steering group' => article_path('en', 'retirement-planning-steering-group'),
+                      'Steering group updates' => article_path('en', 'people-retirement-steering-group'),
+                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/097/original/People_in_Retirement_Action_Plan.pdf'
+                    }.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
                   </ul>
                 </li>
               </ul>
@@ -199,18 +174,13 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="People in Financial difficulties">
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Debt advice steering group',
-                      url: article_path('en', 'debt-advice-steering-group')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Steering group updates',
-                      url: article_path('en', 'people-financial-difficulties-steering-group-updates')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Action plan',
-                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/098/original/People_in_Financial_Difficulties_action_plan.pdf'
-                    %>
+                    <% {
+                      'Debt advice steering group' => article_path('en', 'debt-advice-steering-group'),
+                      'Steering group updates' => article_path('en', 'people-financial-difficulties-steering-group-updates'),
+                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/098/original/People_in_Financial_Difficulties_action_plan.pdf'
+                    }.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
                   </ul>
                 </li>
               </ul>
@@ -221,7 +191,7 @@
         <li class="nav__level-2__category" role="none">
           <%= render_level_2_extended_heading('People trying to save') %>
 
-          <div class="nav__level-3" data-nav-level-3>
+          <div class="nav__level-3 is-active" data-nav-level-3>
             <div class="nav__level-3__main">
               <div class="nav__level-3__image"></div>
 
@@ -234,18 +204,13 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="People trying to save">
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Savings Steering group (members)',
-                      url: article_path('en', 'savings-steering-group')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Steering group updates',
-                      url: article_path('en', 'savings-steering-group-updates')
-                    %>
-                    <%= render 'shared/nav/level_3_subcategory_link',
-                      text: 'Action plan',
-                      url: 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/099/original/Savings_Action_Plan.pdf'
-                    %>
+                    <% {
+                      'Savings Steering group (members)' => article_path('en', 'savings-steering-group'),
+                      'Steering group updates' => article_path('en', 'savings-steering-group-updates'),
+                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/099/original/Savings_Action_Plan.pdf'
+                    }.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
                   </ul>
                 </li>
               </ul>
