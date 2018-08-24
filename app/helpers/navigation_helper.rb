@@ -26,4 +26,8 @@ module NavigationHelper
   def render_level_3_subcategory_btn(text, link)
     render 'navigation/level_3_subcategory_btn', text: text, link: link
   end
+
+  def render_level_3_subcategory_link (text, link)
+    render 'navigation/level_3_subcategory_link', text: text, link: link
+  end
 end
