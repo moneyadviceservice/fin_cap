@@ -8,7 +8,7 @@ Scenario: Visiting a UK Strategy Page
   Then I should see the UK Strategy title "UK Strategy"
   And I should see the UK Strategy description
   """
-  Financial capability across the UK
+  In the UK: four out of ten of us can’t manage our money around 16 million working age people have less than £300 in savings eight million of us are in serious debt These are the problems the Financial Capability Strategy sets out to fix
   """
   And I should see the UK Strategy content
   """
@@ -24,8 +24,6 @@ Scenario: Visiting a UK Strategy Page
   And I should see the countries box
   And I should see the life stages box
   And I should see the download links
-    | text                                      | link                               |
-    | UK Strategy                               | /financial+capability+strategy.pdf |
-    | UK Detailed Strategy                      | /detailed-strategy.pdf             |
-    | Key statistics on Financial Capability    | /key-statistics.pdf                |
-    | Financial Capability Progress Report 2017 | /fincap+progress+report+2017.pdf   |
+    | text     | link                               |
+    | download | /financial+capability+strategy.pdf |
+

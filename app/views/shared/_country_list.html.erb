@@ -9,10 +9,12 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="list--countries-icon svg-icon svg-icon--country" focusable="false">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--<%= country[:region] %>"></use>
             </svg>
-            <%= link_to "#{country[:text]}", "#{country[:url]}", class: 'list--countries-link' %>
+            <%= link_to(country[:text], strategy_path(country), class: 'list--countries-link') %>
           </li>
         <% end %>
       </ul>
     </div>
   </div>
 </div>
+
+

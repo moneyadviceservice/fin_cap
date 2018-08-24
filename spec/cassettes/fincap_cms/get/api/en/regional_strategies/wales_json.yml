@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.15.0 (Margo-Urey-00241.local; margourey; 55779) ruby/2.4.2
+      - Mas-Cms-Client/1.17.0 (Margo-Urey-00241.local; margourey; 75567) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Fri, 20 Jul 2018 10:45:58 GMT
+      - Thu, 23 Aug 2018 12:48:47 GMT
       status:
       - 200 OK
       connection:
@@ -32,48 +32,46 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"bdd4704c07332786db63e19a31d4ef60"'
+      - '"040a582a8a8d6ac7b6e4250e6faae4e9"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 7d456b13-dd67-46f8-bcff-7cbd307219a7
+      - 53a2a795-6715-4102-926d-27f5ae32c46f
       x-runtime:
-      - '0.190517'
+      - '0.106885'
     body:
       encoding: UTF-8
-      string: '{"label":"Wales","slug":"wales","full_path":"/en/regional_strategies/wales","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"regional_strategy","related_content":{"latest_blog_post_links":[{"title":"What
-        is the average cost to have a baby?","path":"https://www.moneyadviceservice.org.uk/blog/what-is-the-average-cost-to-have-a-baby"},{"title":"What
-        is a Ponzi scheme and is it a scam?","path":"https://www.moneyadviceservice.org.uk/blog/what-is-a-ponzi-scheme-and-is-it-a-scam"},{"title":"What
-        is the average cost of utility bills per month?","path":"https://www.moneyadviceservice.org.uk/blog/what-is-the-average-cost-of-utility-bills-per-month"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":["mobile-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThe
+      string: '{"label":"Wales","slug":"wales","full_path":"/en/regional_strategies/wales","meta_description":"","meta_title":"","category_names":[],"layout_identifier":"regional_strategy","related_content":{"latest_blog_post_links":[],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-08-23T12:46:59.000Z","supports_amp":true,"tags":["mobile-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThe
         usually resident population of Wales was 3.1 million people living in 1.3
-        million households\nin 2011, with nearly one in five of residents aged 65
-        or over. Wales had a higher percentage of\nresidents with a long-term health
-        problem or disability. One in four of those aged 16 and over\nreported having
-        no recognised qualification. There are 700,000 people in poverty in Wales,\nequivalent
-        to 23 per cent of the population.\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eThe
+        million households\u003cbr\u003e\nin 2011, with nearly one in five of residents
+        aged 65 or over. Wales had a higher percentage of\u003cbr\u003e\nresidents
+        with a long-term health problem or disability. One in four of those aged 16
+        and over\u003cbr\u003e\nreported having no recognised qualification. There
+        are 700,000 people in poverty in Wales,\u003cbr\u003e\nequivalent to 23 per
+        cent of the population.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eThe
         Welsh Government has long recognised that financial exclusion and over-indebtedness
-        are issues that need concerted action\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser_section_title","content":"\u003cp\u003eFinancial
-        capability in action\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eChild
-        Poverty Strategy\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eNew
+        are issues that need concerted action\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eChild
+        Poverty Strategy\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eNew
         objectives for improving the outcomes of children and young people living
-        in low income households.\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eStrategy
-        for Older People\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eDelivery
+        in low income households.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eStrategy
+        for Older People\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eDelivery
         Action Plan for Living Longer, Living Better focuses on the three priorities
-        for the Strategy for Older People.\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eWarm
-        Homes programme\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eThe
+        for the Strategy for Older People.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eWarm
+        Homes programme\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eThe
         government has made considerable investment to address home energy efficiency
-        in low income communities and households.\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eYoung Adults download\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"strategy_title","content":"\u003cp\u003eWales
-        Financial Capability Strategy\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"strategy_text","content":"\u003cp\u003eThere
-        is general agreement that there should be one Strategy for Wales.\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"strategy_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eLink to strategy\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"forum_title","content":"\u003cp\u003eForum\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"},{"identifier":"forum_links","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eWelsh Forum\u003c/a\u003e\n        \u003ca
+        in low income communities and households.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eYoung Adults download\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T12:46:59.000Z"},{"identifier":"strategy_title","content":"\u003cp\u003eWales
+        Financial Capability Strategy\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"strategy_text","content":"\u003cp\u003eThere
+        is general agreement that there should be one Strategy for Wales.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"strategy_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eLink to strategy\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"forum_title","content":"\u003cp\u003eForum\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T11:39:31.000Z"},{"identifier":"forum_links","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eWelsh Forum\u003c/a\u003e        \u003ca
         href=\"/financial+capability+strategy.pdf\"\u003eMoney Advice Service Wales
-        Forum\u003c/a\u003e\n        \u003ca href=\"/financial+capability+strategy.pdf\"\u003eDevelopment
-        Group\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-07-18T13:35:12.000Z","updated_at":"2018-07-18T13:35:13.000Z"}],"translations":[]}'
+        Forum\u003c/a\u003e        \u003ca href=\"/financial+capability+strategy.pdf\"\u003eDevelopment
+        Group\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:32.000Z","updated_at":"2018-08-23T12:46:59.000Z"},{"identifier":"component_teaser_section_title","content":"\u003cp\u003eFinancial
+        capability strategy in action\u003c/p\u003e\n","created_at":"2018-08-23T11:39:31.000Z","updated_at":"2018-08-23T11:39:31.000Z"}],"translations":[]}'
     http_version: 
-  recorded_at: Fri, 20 Jul 2018 10:45:58 GMT
+  recorded_at: Thu, 23 Aug 2018 12:48:47 GMT
 recorded_with: VCR 4.0.0
