@@ -13,7 +13,6 @@ end
 
 Then('I should see a list of all news article titles and dates') do |table|
   items = latest_news_page.news_items
-  expect(items.count).to eq(2)
 
   table.rows.each do |row|
     expect("#{row[0]} #{row[1]} Read more").to be_in(items.map(&:text))

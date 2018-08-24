@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.15.0 (Margo-Urey-00241.local; margourey; 68726) ruby/2.4.2
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 99209) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Thu, 19 Jul 2018 16:58:00 GMT
+      - Tue, 28 Aug 2018 14:50:15 GMT
       status:
       - 200 OK
       connection:
@@ -32,17 +32,36 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"d49bbdc43bf7e18839d2a8af1199da65"'
+      - '"16fb781f70f3acef2ea149140fe6e583"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - d58f1158-5bb5-48c9-aa68-731c9576ec44
+      - c2172c0f-76ea-4d2d-aa2b-76ca0cdf75ad
       x-runtime:
-      - '0.057722'
+      - '0.070884'
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkb2N1bWVudHMiOlt7ImxhYmVsIjoiUHJlc3MgUmVsZWFzZTogQSBuZXcgd2F5IHRvIHBheSEiLCJzbHVnIjoicHJlc3MtcmVsZWFzZS1hLW5ldy13YXktdG8tcGF5IiwiZnVsbF9wYXRoIjoiL2VuL25ld3MvcHJlc3MtcmVsZWFzZS1hLW5ldy13YXktdG8tcGF5IiwibWV0YV9kZXNjcmlwdGlvbiI6bnVsbCwibWV0YV90aXRsZSI6bnVsbCwiY2F0ZWdvcnlfbmFtZXMiOltdLCJsYXlvdXRfaWRlbnRpZmllciI6Im5ld3MiLCJyZWxhdGVkX2NvbnRlbnQiOnsibGF0ZXN0X2Jsb2dfcG9zdF9saW5rcyI6W3sidGl0bGUiOiJXaGF0IGlzIHRoZSBhdmVyYWdlIGNvc3QgdG8gaGF2ZSBhIGJhYnk/IiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy93aGF0LWlzLXRoZS1hdmVyYWdlLWNvc3QtdG8taGF2ZS1hLWJhYnkifSx7InRpdGxlIjoiV2hhdCBpcyBhIFBvbnppIHNjaGVtZSBhbmQgaXMgaXQgYSBzY2FtPyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvd2hhdC1pcy1hLXBvbnppLXNjaGVtZS1hbmQtaXMtaXQtYS1zY2FtIn0seyJ0aXRsZSI6IldoYXQgaXMgdGhlIGF2ZXJhZ2UgY29zdCBvZiB1dGlsaXR5IGJpbGxzIHBlciBtb250aD8iLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL3doYXQtaXMtdGhlLWF2ZXJhZ2UtY29zdC1vZi11dGlsaXR5LWJpbGxzLXBlci1tb250aCJ9XSwicG9wdWxhcl9saW5rcyI6W10sInJlbGF0ZWRfbGlua3MiOltdLCJwcmV2aW91c19saW5rIjp7fSwibmV4dF9saW5rIjp7fX0sInB1Ymxpc2hlZF9hdCI6bnVsbCwic3VwcG9ydHNfYW1wIjp0cnVlLCJ0YWdzIjpbIm1vYmlsZS1wYXltZW50cyIsInNlY3VyZS1wYXltZW50cyJdLCJibG9ja3MiOlt7ImlkZW50aWZpZXIiOiJjb250ZW50IiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VUaGUgd2F5IGluIHdoaWNoIHBheW1lbnRzIGFyZSBtYWRlIGluIHRoZSBVSyBpcyBzZXQgdG8gdW5kZXJnbyB0aGUgbW9zdCByYWRpY2FsXG5jaGFuZ2Ugc2luY2UgdGhlIDE5NjBzLiBUaGlzIGZvbGxvd3MgdGhlIFx1MDAzY2EgaHJlZj1cImh0dHBzOi8vd3d3LnBheW1lbnRzZm9ydW0udWsvZmluYWwtc3RyYXRlZ3lcIlx1MDAzZWxhdW5jaCBvZiBhIG5ldyBzdHJhdGVneVx1MDAzYy9hXHUwMDNlIHRvIGdpdmUgcGVvcGxlXG5ncmVhdGVyIGNvbnRyb2wgb3ZlciBob3cgdGhleSBtYW5hZ2UgdGhlaXIgZGF5LXRvLWRheSBmaW5hbmNlcyBhbmQgaGVscCBzdGFtcFxub3V0IGZpbmFuY2lhbCBmcmF1ZC5cbkluIHRoZSBmaXJzdCBpbmR1c3RyeS13aWRlIGluaXRpYXRpdmUgb2YgaXRzIGtpbmQsIHRoZSBQYXltZW50cyBTdHJhdGVneSBGb3J1bSxcbndob3NlIG1lbWJlcnMgaW5jbHVkZSBjb25zdW1lciBncm91cHMsIGJ1c2luZXNzZXMsIGZpbnRlY2hzLCBVSyBiYW5rcyBhbmRcbmJ1aWxkaW5nIHNvY2lldGllcywgdG9kYXkgcmVjb21tZW5kcyBhIG5ldyB3YXkgb2YgbWFraW5nIHBheW1lbnRzIHRoYXQgcHJvbWlzZXNcbmdyZWF0ZXIgcHJvdGVjdGlvbiBhbmQgc2VjdXJpdHkgZm9yIGNvbnN1bWVycyBhbmQgYnVzaW5lc3Nlcy4oMilcblRoZSBTdHJhdGVneSBnaXZlczogXG4qICAgTW9yZSBjb250cm9sIGFuZCBhc3N1cmFuY2UgZm9yIGNvbnN1bWVycyBvdmVyIGhvdyB0aGV5IG1hbmFnZSB0aGVpciBmaW5hbmNlcyBcbiogICBTYWZlciBhbmQgbW9yZSBzZWN1cmUgYmFua2luZyBcbiogICBPcHBvcnR1bml0aWVzIGZvciBuZXcgYmFua3MgYW5kIEZpbnRlY2hzIHRvIGNvbXBldGUgYW5kIG9mZmVyIGlubm92YXRpdmUgc2VydmljZXMgdGhhdCBtZWV0IHRoZSBuZWVkcyBvZiB0b21vcnJvd+KAmXMgdXNlcnNcbk5vdGVzIHRvIGVkaXRvcnMgXG4xLiAgU291cmNlOiBUaGUgUGF5bWVudCBTeXN0ZW1zIFJlZ3VsYXRvciBcbjIuICBUaGUgUGF5bWVudHMgU3RyYXRlZ3kgRm9ydW0gKHRoZSBGb3J1bSkgd2FzIGFubm91bmNlZCBieSB0aGUgUGF5bWVudCBTeXN0ZW1zIFJlZ3VsYXRvciAoUFNSKSBpbiBpdHMgXG5Qb2xpY3kgU3RhdGVtZW50IHB1Ymxpc2hlZCBpbiBNYXJjaCAyMDE1Llx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNy0xOFQxMzozNToxMi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDctMThUMTM6MzU6MTIuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNvbXBvbmVudF9oZXJvX2ltYWdlIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2UvYXNzZXRzL3N0eWxlZ3VpZGUvaGVyby1zYW1wbGUuanBnXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA3LTE4VDEzOjM1OjEyLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNy0xOFQxMzozNToxMi4wMDBaIn0seyJpZGVudGlmaWVyIjoiY29tcG9uZW50X2hlcm9fZGVzY3JpcHRpb24iLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZU5ldyBzdHJhdGVneSBsYXVuY2hlZCB0byBtYWtlIFVLIHBheW1lbnRzIGZpdCBmb3IgdGhlIDIxc3QgQ2VudHVyeVx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNy0xOFQxMzozNToxMi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDctMThUMTM6MzU6MTIuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNvbXBvbmVudF9jdGFfbGlua3MiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZVx1MDAzY2EgaHJlZj1cIi9uZXdzXCJcdTAwM2VMYXRlc3QgTmV3c1x1MDAzYy9hXHUwMDNlXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA3LTE4VDEzOjM1OjEyLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNy0xOFQxMzozNToxMi4wMDBaIn0seyJpZGVudGlmaWVyIjoib3JkZXJfYnlfZGF0ZSIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlMjAxOC0wNy0yNiAwMDowMDowMFx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNy0xOFQxMzozNToxMi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDctMThUMTM6MzU6MTIuMDAwWiJ9XSwidHJhbnNsYXRpb25zIjpbXX1dLCJtZXRhIjp7InJlc3VsdHMiOjEsInBhZ2UiOjEsInBlcl9wYWdlIjoyMCwidG90YWxfcGFnZXMiOjF9fQ==
+      encoding: UTF-8
+      string: '{"documents":[{"label":"Press Release: A new way to pay!","slug":"press-release-a-new-way-to-pay","full_path":"/en/news/press-release-a-new-way-to-pay","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":["mobile-payments","secure-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThe
+        way in which payments are made in the UK is set to undergo the most radical\nchange
+        since the 1960s. This follows the \u003ca href=\"https://www.paymentsforum.uk/final-strategy\"\u003elaunch
+        of a new strategy\u003c/a\u003e to give people\ngreater control over how they
+        manage their day-to-day finances and help stamp\nout financial fraud.\nIn
+        the first industry-wide initiative of its kind, the Payments Strategy Forum,\nwhose
+        members include consumer groups, businesses, fintechs, UK banks and\nbuilding
+        societies, today recommends a new way of making payments that promises\ngreater
+        protection and security for consumers and businesses.(2)\nThe Strategy gives:\n*   More
+        control and assurance for consumers over how they manage their finances\n*   Safer
+        and more secure banking\n*   Opportunities for new banks and Fintechs to compete
+        and offer innovative services that meet the needs of tomorrow’s users\nNotes
+        to editors\n1.  Source: The Payment Systems Regulator\n2.  The Payments Strategy
+        Forum (the Forum) was announced by the Payment Systems Regulator (PSR) in
+        its\nPolicy Statement published in March 2015.\u003c/p\u003e\n","created_at":"2018-08-28T14:50:03.000Z","updated_at":"2018-08-28T14:50:03.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-28T14:50:03.000Z","updated_at":"2018-08-28T14:50:03.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-08-28T14:50:03.000Z","updated_at":"2018-08-28T14:50:03.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-28T14:50:03.000Z","updated_at":"2018-08-28T14:50:03.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-07-26
+        00:00:00\u003c/p\u003e\n","created_at":"2018-08-28T14:50:03.000Z","updated_at":"2018-08-28T14:50:03.000Z"}],"translations":[]}],"meta":{"results":1,"page":1,"per_page":20,"total_pages":1}}'
     http_version: 
-  recorded_at: Thu, 19 Jul 2018 16:58:00 GMT
+  recorded_at: Tue, 28 Aug 2018 14:50:15 GMT
 recorded_with: VCR 4.0.0

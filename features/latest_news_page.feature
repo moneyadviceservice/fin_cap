@@ -16,17 +16,13 @@ Feature: Latest News Page
       | Date                    | Title                             |
       | Thursday 26 July 2018   | Press Release: A new way to pay!  |
       | Wednesday 15 March 2017 | Scottish Financial Education Week |
-      
-    And I should see a link to the "first" news item
-     | Path                                    |
-     | /en/news/press-release-a-new-way-to-pay |
-
-    And I should see a link to the "second" news item
-     | Path                                       |
-     | /en/news/scottish-financial-education-week |
-
     And I should see the articles ordered by most recently published
-
+    And I should see a link to the "first" news item
+     | Path            |
+     | /en/news/news-1 |
+    And I should see a link to the "second" news item
+     | Path            |
+     | /en/news/news-2 |
     And I should see links to previous years' news
      | Text     | Path               |
      | All news | /en/news           |
