@@ -17,7 +17,14 @@
 .l-3col-flex {
   @include respond-to($mq-m) {
     display: flex;
-    .l-3col-even {
+    .l-3col-equal {
+      display: flex;
+    }
+    .bordered-box {
+      display: flex;
+      flex-direction: column;
+    }
+    .bordered-box__inner {
       flex: 1;
     }
   }

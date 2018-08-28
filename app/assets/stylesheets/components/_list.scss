@@ -19,24 +19,13 @@
   padding: 0;
 
   li {
-    position: relative;
-    padding-right: 20px;
-
     &::before {
       display: none;
-    }
-
-    &:after {
-      @extend %icon;
-      @extend .icon--arrow;
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
     }
   }
 
   a {
+    @extend .icon--arrow;
     display: block;
   }
 }
@@ -62,20 +51,10 @@
   }
 
   a {
+    @extend .icon--arrow;
     display: block;
-    padding: 0 23px; // 18px for the arrow (_icons.scss) and a little extra for spacing
     color: $color-black;
     text-align: center;
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      @extend %icon;
-      @extend .icon--arrow;
-    }
   }
 }
 
@@ -125,15 +104,8 @@
 
   .list--countries-link {
     vertical-align: $baseline-unit*2;
-
-    &:after {
-      @extend %icon;
-      @extend .icon--arrow;
-      content: '';
-      position: absolute;
-      right: 0;
-      top: $baseline-unit*2;
-    }
+    @extend .icon--arrow;
+    position: static;
   }
 }
 
