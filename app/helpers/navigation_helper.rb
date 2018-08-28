@@ -16,6 +16,33 @@ module NavigationHelper
     'Individuals' => Rails.application.routes.url_helpers.article_path('en', 'individuals')
   }
 
+  WHAT_IS_STRATEGY = {
+    'UK Strategy' => Rails.application.routes.url_helpers.article_path('en', 'uk-strategy'),
+    'Northern Ireland' => Rails.application.routes.url_helpers.article_path('en', 'northern-ireland'),
+    'Scotland' => Rails.application.routes.url_helpers.article_path('en', 'scotland'),
+    'Wales' => Rails.application.routes.url_helpers.article_path('en', 'wales')
+  }
+
+  WHY_STRATEGY_NEEDED = {
+    'What The Strategy needs to achieve' => Rails.application.routes.url_helpers.article_path('en', 'what-strategy-needs-achieve'),
+    'Evidence and analysis' => Rails.application.routes.url_helpers.article_path('en', 'evidence-analysis'),
+    'Summary of key statistics on Financial Capability' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf',
+    'Strategy development' => Rails.application.routes.url_helpers.article_path('en', 'development-strategy')
+  }
+
+  HOW_STRATEGY_DELIVERED = {
+    'The role of the steering groups' => Rails.application.routes.url_helpers.article_path('en', 'role-steering-groups'),
+    'The role of Money Advice Service' => Rails.application.routes.url_helpers.article_path('en', 'role-money-advice-service')
+  }
+
+  WHO_INVOLVED = {
+    'The Financial capability Board' => Rails.application.routes.url_helpers.article_path('en', 'financial-capabilty-board'),
+    'Steering Group and forums' => Rails.application.routes.url_helpers.article_path('en', 'steering-group-forums'),
+    'IMPACT Principle Signatories' => Rails.application.routes.url_helpers.article_path('en', 'impact-principle-signatories'),
+    'What Works Fund Grantees' => Rails.application.routes.url_helpers.article_path('en', 'what-works-grant-funded-projects'),
+    'Get Involved' => 'http://fincap.org.uk/get-involved'
+  }
+
   def render_level_1_heading(text)
     render 'navigation/level_1_heading', text: text
   end
