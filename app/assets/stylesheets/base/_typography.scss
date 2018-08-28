@@ -24,8 +24,30 @@ th {
   font-weight: 500;
 }
 
+h2, h3, h4 {
+  margin-top: $baseline-unit*4;
+}
+
 h1 {
   @include body(30, 40);
+  margin-bottom: $baseline-unit*4;
+}
+h2 {
+  @include body(25, 35);
+  margin-bottom: $baseline-unit*3;
+}
+h3 {
+  @include body(20, 30);
+  margin-bottom: $baseline-unit*2;
+}
+h4 {
+  @extend %type;
+  margin-bottom: $baseline-unit*2;
+}
+
+p {
+  @extend %type;
+  margin: $baseline-unit*2 0;
 }
 
 a {
