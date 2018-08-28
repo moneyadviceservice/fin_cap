@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/document/WOuEzCsAAIaQ8tXy/financial-well-being-the-employee-view
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 12392) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 301
+      message: 
+    headers:
+      date:
+      - Wed, 22 Aug 2018 17:22:28 GMT
+      status:
+      - 301 Moved Permanently
+      connection:
+      - close
+      location:
+      - http://localhost:5000/en/insights/financial-well-being-the-employee-view
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 449438b0-9089-4e9d-ad50-934da3a9331d
+      x-runtime:
+      - '0.037286'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 22 Aug 2018 17:22:28 GMT
+recorded_with: VCR 4.0.0

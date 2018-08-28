@@ -34,4 +34,5 @@ Rails.application.routes.draw do
   # Styleguide
   get '/styleguide', to: 'styleguide#home'
   get 'styleguide/:page' => 'styleguide#show'
+  get '*path', to: 'catch_all#index'
 end

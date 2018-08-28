@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/document/WTVdRSkAAOsYaAQx/raising-household-saving
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 12475) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 301
+      message: 
+    headers:
+      date:
+      - Wed, 22 Aug 2018 17:23:09 GMT
+      status:
+      - 301 Moved Permanently
+      connection:
+      - close
+      location:
+      - http://localhost:5000/en/reviews/raising-household-saving
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 79273edc-f31a-478c-99c2-3f177cb7e052
+      x-runtime:
+      - '0.039269'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 22 Aug 2018 17:23:09 GMT
+recorded_with: VCR 4.0.0

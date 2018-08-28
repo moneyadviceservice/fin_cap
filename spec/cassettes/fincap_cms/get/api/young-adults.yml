@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/young-adults
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 12475) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 301
+      message: 
+    headers:
+      date:
+      - Wed, 22 Aug 2018 17:23:09 GMT
+      status:
+      - 301 Moved Permanently
+      connection:
+      - close
+      location:
+      - http://localhost:5000/en/lifestages/young-adults
+      cache-control:
+      - no-cache
+      x-request-id:
+      - c66ae519-dd96-4411-86f2-12eedc3f1ddf
+      x-runtime:
+      - '0.039014'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 22 Aug 2018 17:23:09 GMT
+recorded_with: VCR 4.0.0

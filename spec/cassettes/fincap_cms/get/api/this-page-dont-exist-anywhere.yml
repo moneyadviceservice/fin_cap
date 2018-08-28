@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/this-page-dont-exist-anywhere
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 18330) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      date:
+      - Thu, 23 Aug 2018 10:10:17 GMT
+      status:
+      - 404 Not Found
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 517db334-35c2-4e36-8c97-307b9c19c9b5
+      x-runtime:
+      - '0.245517'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Site \"api\" not found"}'
+    http_version: 
+  recorded_at: Thu, 23 Aug 2018 10:10:17 GMT
+recorded_with: VCR 4.0.0
