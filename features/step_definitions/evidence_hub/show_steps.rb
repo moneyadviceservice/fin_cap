@@ -15,6 +15,13 @@ When('I click {string}') do |text|
   click_link(text)
 end
 
+Then('I should see a list of all search filters') do |table|
+  table.rows.each do |row|
+    filters = evidence_summaries_page.find_filter_group(row[0]).filter_inputs
+    expect(filters.map(&:text)).to eq(row[1].split(', '))
+  end
+end
+
 Then('I should see the evidence summary content') do |table|
   table.rows.each do |row|
     field_name = row[0].parameterize.underscore

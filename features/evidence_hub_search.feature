@@ -7,7 +7,14 @@ Feature: Evidence Hub Search
     Given I visit the evidence hub search page
 
   Scenario: Visit the landing page
-    Then I should see the "first" evidence summary as
+    Then I should see a list of all search filters
+      | Field               | Value                                                        |
+      | Year of publication | All years, Last 2 years, Last 5 years, More than 5 years ago |
+      | Client group        | Children (3 - 11), Young people (12 - 16), Parents/families, Young adults (17 - 24), Working age (18 - 65), Older people (65+), Over-indebted people, Social housing tenants, Teachers/practitioners, Other |
+      | Topic               | Saving, Pensions and retirement planning, Credit use and debt, Budgeting and keeping track, Insurance and protection, Financial education, Financial capability |
+      | Country of delivery | United Kingdom, England, Northern Ireland, Scotland, Wales, USA, Other |
+    
+    And I should see the "first" evidence summary as
       | Field               | Value                                                    |
       | document title      | Financial well-being: the employee view                  |
       | overview            | Stress caused by pay levels, lack of financial awareness |
