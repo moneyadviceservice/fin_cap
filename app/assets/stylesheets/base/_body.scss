@@ -7,7 +7,6 @@ body {
   margin: $baseline-spacing auto;
   ul {
     list-style: inherit;
-    list-style-position: inside;
     list-style-type: disc;
 
     li p {
@@ -17,5 +16,16 @@ body {
     ul {
       margin-left: $baseline-unit * 3;
     }
+  }
+  ul, ol {
+    margin-left: $baseline-unit * 3;
+  }
+
+  td {
+    border: 1px solid black;
+    vertical-align: top;
+  }
+  td, th {
+    padding: 0.35rem;
   }
 }
