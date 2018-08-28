@@ -16,4 +16,22 @@ RSpec.describe ComponentsHelper do
       end
     end
   end
+
+  describe '#define_path' do
+    context 'for article pages' do
+      let(:page_link) { { page_type: 'foo', slug: 'some-slug' } }
+      it 'returns an article path formatted with locale and slug' do
+        expect(helper.define_path(page_link)).to eq(
+          '/en/articles/some-slug'
+        )
+      end
+    end
+
+    context 'for static pages' do
+      let(:page_link) { { page_type: 'static', slug: 'impact-principles' } }
+      it 'returns a static_pages path actioned to the slug' do
+        expect(helper.define_path(page_link)).to eq('/en/impact-principles')
+      end
+    end
+  end
 end

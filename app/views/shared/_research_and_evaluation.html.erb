@@ -4,9 +4,7 @@
     <ul class="list list--links coloured-box__list">
       <% I18n.t('fincap.research_evaluation.findings').each do |link| %>
         <li>
-          <a href="<%= link[:url] %>">
-            <%= link[:text] %>
-          </a>
+          <%= link_to(link[:text], article_path(locale: 'en', id: link[:slug])) %>
         </li>
       <% end %>
     </ul>
@@ -14,12 +12,8 @@
   <div class="l-2col-even coloured-box">
     <h2 class="coloured-box__title">Evaluate your programme</h2>
     <ul class="list list--links coloured-box__list">
-      <% I18n.t('fincap.research_evaluation.existing').each do |link| %>
-        <li>
-          <a href="<%= link[:url] %>">
-            <%= link[:text] %>
-          </a>
-        </li>
+      <% I18n.t('fincap.research_evaluation.existing').each do |page| %>
+        <li><%= link_to(page[:text], define_path(page)) %></li>
       <% end %>
     </ul>
   </div>
