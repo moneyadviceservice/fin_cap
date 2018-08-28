@@ -4,6 +4,7 @@
 .latest-news:not(.latest-news__snippet) {
   @extend .latest-news;
   @extend .bordered-box;
+  float: none;
 }
 
 .latest-news:not(.latest-news__snippet) .latest-news__icon {
@@ -14,6 +15,7 @@
 
 .latest-news:not(.latest-news__snippet) .latest-news__inner {
   @extend .bordered-box__inner;
+  position: relative;
   padding: $baseline-unit*2;
 }
 
@@ -59,23 +61,11 @@
 }
 
 .latest-news__list-item__cta {
+  @extend .icon--arrow;
   margin-top: $baseline-unit;
   font-weight: 500;
-
-  &:after {
-    @extend %icon;
-    @extend .icon--arrow;
-    content: '';
-    margin-left: $baseline-unit;
-  }
 }
 .latest-news:not(.latest-news__snippet) .latest-news__list-item__cta {
   position: relative;
   display: block;
-
-  &:after {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
 }
