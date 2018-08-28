@@ -20,4 +20,12 @@ body {
   ul, ol {
     margin-left: $baseline-unit * 3;
   }
+
+  td {
+    border: 1px solid black;
+    vertical-align: top;
+  }
+  td, th {
+    padding: 0.35rem;
+  }
 }
