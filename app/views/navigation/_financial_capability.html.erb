@@ -1,4 +1,4 @@
-<li class="nav__level-1__element" data-nav-level-1-item role="none">
+<li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
   <%= render_level_1_heading('What Is Financial Capability?') %>
 
   <div class="nav__level-2" data-nav-level-2>
@@ -12,10 +12,7 @@
           <ul class="nav__level-2__subcategories" role="menu" aria-label="What is financial capability?">
             <%= render_level_2_subcategory_heading('What Is Financial Capability?', article_path('en', 'what-is-financial-capability')) %>
 
-            <% {
-              'Financial capability levels in the UK' => article_path('en', 'levels-uk'),
-              'Financial capability - a global issue' => article_path('en', 'global-issue')
-            }.each do |text, link| %>
+            <% NavigationHelper::WHAT_FIN_CAP.each do |text, link| %>
               <%= render_level_2_subcategory_link(text, link) %>
             <% end %>
           </ul>
@@ -25,17 +22,7 @@
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is this website for?">
             <%= render_level_2_subcategory_heading('Who is this website for?', article_path('en', 'who-is-this-website-for')) %>
 
-            <% {
-              'Financial services' => article_path('en', 'financial-services'),
-              'Charities and third-sector organisations' => article_path('en', 'charities-third-sector-organisations'),
-              'Employers' => article_path('en', 'employers'),
-              'Researchers' => article_path('en', 'researchers'),
-              'Schools' => article_path('en', 'schools'),
-              'Parents' => article_path('en', 'parents'),
-              'Childrens services' => article_path('en', 'childrens-services'),
-              'Youth and students' => article_path('en', 'youth-students'),
-              'Individuals' => article_path('en', 'individuals')
-            }.each do |text, link| %>
+            <% NavigationHelper::WHO_FOR.each do |text, link| %>
               <%= render_level_2_subcategory_link(text, link) %>
             <% end %>
           </ul>
