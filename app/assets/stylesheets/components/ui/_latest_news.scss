@@ -4,6 +4,7 @@
 .latest-news:not(.latest-news__snippet) {
   @extend .latest-news;
   @extend .bordered-box;
+  float: none;
 }
 
 .latest-news:not(.latest-news__snippet) .latest-news__icon {
@@ -14,6 +15,7 @@
 
 .latest-news:not(.latest-news__snippet) .latest-news__inner {
   @extend .bordered-box__inner;
+  position: relative;
   padding: $baseline-unit*2;
 }
 
