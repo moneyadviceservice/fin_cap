@@ -1,6 +1,7 @@
 .footer {
   @include column(12);
   @extend %clearfix;
+  margin-top: $baseline-spacing;
   background: transparent image_url('footer/footer-bg.png') no-repeat left top;
   background-size: cover;
 
