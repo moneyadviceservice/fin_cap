@@ -17,10 +17,10 @@ module NavigationHelper
   }
 
   WHAT_IS_STRATEGY = {
-    'UK Strategy' => Rails.application.routes.url_helpers.article_path('en', 'uk-strategy'),
-    'Northern Ireland' => Rails.application.routes.url_helpers.article_path('en', 'northern-ireland'),
-    'Scotland' => Rails.application.routes.url_helpers.article_path('en', 'scotland'),
-    'Wales' => Rails.application.routes.url_helpers.article_path('en', 'wales')
+    'UK Strategy' => '/uk_strategies/uk-strategy',
+    'Northern Ireland' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'northern-ireland'),
+    'Scotland' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'scotland'),
+    'Wales' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'wales')
   }
 
   WHY_STRATEGY_NEEDED = {
