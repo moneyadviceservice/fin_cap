@@ -112,7 +112,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    dough-ruby (5.27.0.306)
+    dough-ruby (5.28.0.307)
       activemodel
       activesupport
       rails (>= 3.2, <= 5.0.6)
@@ -332,7 +332,7 @@ DEPENDENCIES
   danger-rubocop
   database_cleaner
   dotenv-rails
-  dough-ruby (~> 5.27)
+  dough-ruby (~> 5.28)
   factory_bot_rails
   jbuilder (~> 2.5)
   jquery-rails
