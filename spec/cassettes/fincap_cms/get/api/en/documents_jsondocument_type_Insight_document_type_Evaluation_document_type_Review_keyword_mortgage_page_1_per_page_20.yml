@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.12.0 (Tomas-Destefi-00119.local; tomasdestefi; 49237) ruby/2.4.2
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 12929) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Tue, 22 May 2018 11:06:14 GMT
+      - Wed, 29 Aug 2018 11:19:40 GMT
       status:
       - 200 OK
       connection:
@@ -36,12 +36,12 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - a19890ad-d4a6-46eb-b734-c382e11d1dab
+      - 7bdc1698-c6ae-490f-b605-15d3d4445b0c
       x-runtime:
-      - '0.043638'
+      - '0.046499'
     body:
       encoding: UTF-8
       string: '{"documents":[],"meta":{"results":0,"page":1,"per_page":20,"total_pages":0}}'
     http_version: 
-  recorded_at: Tue, 22 May 2018 11:06:14 GMT
+  recorded_at: Wed, 29 Aug 2018 11:19:40 GMT
 recorded_with: VCR 4.0.0
