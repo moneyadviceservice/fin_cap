@@ -1,0 +1,53 @@
+<li class="nav__level-1__element" data-nav-level-1-item role="none">
+  <%= render_level_1_heading('Research &amp; Evaluation') %>
+
+  <div class="nav__level-2" data-nav-level-2>
+    <div class="nav__level-2__wrap">
+      <p class="nav__level-2__description" role="category description">Discover existing evidence and find out how to evaluate your own efforts</p>
+
+      <ul class="nav__level-2__categories">
+        <%= render_level_2_heading('Research &amp; Evaluation') %>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Our Approach">
+            <%= render_level_2_subcategory_heading('Our approach', article_path('en', 'our-approach')) %>
+
+            <% NavigationHelper::OUR_APPROACH.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Find evidence">
+            <%= render_level_2_subcategory_heading('Find Evidence', article_path('en', 'find-evidence')) %>
+
+            <% NavigationHelper::FIND_EVIDENCE.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="Evaluate your programme">
+            <%= render_level_2_subcategory_heading('Evaluate your programme', article_path('en', 'evaluate-your-programme')) %>
+
+            <% NavigationHelper::EVALUATE_PROGRAMME.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
+          </ul>
+        </li>
+
+        <li class="nav__level-2__category">
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="What Works Programme">
+            <%= render_level_2_subcategory_heading('What Works Programme', '/en/what-works/programme') %>
+
+            <% NavigationHelper::WHAT_WORKS.each do |text, link| %>
+              <%= render_level_2_subcategory_link(text, link) %>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,195 @@
+<li class="nav__level-1__element" data-nav-level-1-item role="none">
+  <%= render_level_1_heading('Life Stages') %>
+
+  <div class="nav__level-2 nav__level-2--extended" data-nav-level-2-extended>
+    <div class="nav__level-2__wrap">
+      <p class="nav__level-2__description" role="category description">Groups, areas and themes the strategy focuses on</p>
+
+      <ul class="nav__level-2__categories" data-nav-level-2-extended-items role="menu" aria-label="Life stages">
+        <%= render_level_2_heading('Life Stages') %>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render_level_2_extended_heading('Children and Young People') %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
+
+              <%= render_level_3_heading('Children and Young People') %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render_level_3_subcategory_btn('Find out more about children and young people', lifestage_path('en', 'children-and-young-people')) %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Children and young people">
+                    <% NavigationHelper::LIFE_STAGES_CHILDREN_YOUNG.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render_level_2_extended_heading('Young Adults') %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Focussing on ages 3 to 18, to give young people the excellent financial education they need to transform our nation’s financial future</p>
+
+              <%= render_level_3_heading('Young Adults') %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render_level_3_subcategory_btn('Find out more about young adults', lifestage_path('en', 'young-adults')) %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Young Adults">
+                    <% NavigationHelper::LIFE_STAGES_YOUNG_ADULT.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render_level_2_extended_heading('Working Age') %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Working life starts when we enter the workplace, and stretches through to retirement – covering many life events from ages 16 to 70</p>
+
+              <%= render_level_3_heading('Working Age') %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render_level_3_subcategory_btn('Find out more about working age adults', lifestage_path('en', 'working-age')) %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Working Age Adults">
+                    <% NavigationHelper::LIFE_STAGES_WORKING_AGE.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render_level_2_extended_heading('Retirement Planning') %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">Here we focus on people who are already retired and drawing an income from pensions and other savings</p>
+
+              <%= render_level_3_heading('Retirement Planning') %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render_level_3_subcategory_btn('Find out more about people planning to retire', lifestage_path('en', 'retirement-planning')) %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="Older People in Retirement">
+                    <% NavigationHelper::LIFE_STAGES_RETIREMENT_PLANNING.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render_level_2_extended_heading('People in retirement') %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
+
+              <%= render_level_3_heading('People in retirement') %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render_level_3_subcategory_btn('Find out more about older people in retirement', lifestage_path('en', 'people-retirement')) %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="People in retirement">
+                    <% NavigationHelper::LIFE_STAGES_RETIREMENT.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render_level_2_extended_heading('People in Financial Difficulties') %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">People can experience financial difficulties at any stage in life. This section covers early intervention, crisis support and building resilience to future financial shocks.</p>
+
+              <%= render_level_3_heading('People in Financial Difficulties') %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render_level_3_subcategory_btn('Find out more about people in financial difficulties', lifestage_path('en', 'people-financial-difficulties')) %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="People in Financial difficulties">
+                    <% NavigationHelper::LIFE_STAGES_FINANCIAL_DIFFICULTIES.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__level-2__category" role="none">
+          <%= render_level_2_extended_heading('People trying to save') %>
+
+          <div class="nav__level-3" data-nav-level-3>
+            <div class="nav__level-3__main">
+              <div class="nav__level-3__image"></div>
+
+              <p class="nav__level-3__description">As a nation, very few of us have enough savings. This section looks at ways to tackle this</p>
+
+              <%= render_level_3_heading('People trying to save') %>
+
+              <ul class="nav__level-3__categories" role="menu">
+                <%= render_level_3_subcategory_btn('Find out more about people trying to save', lifestage_path('en', 'people-trying-save')) %>
+
+                <li class="nav__level-3__category" role="none">
+                  <ul class="nav__level-3__subcategories" role="menu" aria-label="People trying to save">
+                    <% NavigationHelper::LIFE_STAGES_SAVING.each do |text, link| %>
+                      <%= render_level_3_subcategory_link(text, link) %>
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
