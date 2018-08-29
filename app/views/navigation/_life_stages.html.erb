@@ -24,11 +24,7 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Children and young people">
-                    <% {
-                      'Children and Young people steering group' => article_path('en', 'children-young-people-steering-group'),
-                      'Steering group updates' => article_path('en', 'children-young-people-steering-group-updates'),
-                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/093/original/Children___Young_People_Action_Plan.pdf'
-                    }.each do |text, link| %>
+                    <% NavigationHelper::LIFE_STAGES_CHILDREN_YOUNG.each do |text, link| %>
                       <%= render_level_3_subcategory_link(text, link) %>
                     <% end %>
                   </ul>
@@ -54,11 +50,7 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Young Adults">
-                    <% {
-                      'Young Adults steering group' => article_path('en', 'young-adults-steering-group'),
-                      'Steering group updates' => article_path('en', 'young-adults-steering-group-updates'),
-                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/094/original/Young_Adults_Action_Plan.pdf'
-                    }.each do |text, link| %>
+                    <% NavigationHelper::LIFE_STAGES_YOUNG_ADULT.each do |text, link| %>
                       <%= render_level_3_subcategory_link(text, link) %>
                     <% end %>
                   </ul>
@@ -84,11 +76,7 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Working Age Adults">
-                    <% {
-                      'Workplace steering group' => article_path('en', 'workplace-steering-group'),
-                      'Steering group updates' => article_path('en', 'workplace-steering-group-updates'),
-                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/095/original/Workplace_Action_Plan.pdf'
-                    }.each do |text, link| %>
+                    <% NavigationHelper::LIFE_STAGES_WORKING_AGE.each do |text, link| %>
                       <%= render_level_3_subcategory_link(text, link) %>
                     <% end %>
                   </ul>
@@ -114,11 +102,7 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="Older People in Retirement">
-                    <% {
-                      'Retirement Planning steering group' => article_path('en', 'retirement-planning-steering-group'),
-                      'Steering group updates' => article_path('en', 'people-planning-retire-steering-group-updates'),
-                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/096/original/Retirement_Planning_Action_Plan.pdf'
-                    }.each do |text, link| %>
+                    <% NavigationHelper::LIFE_STAGES_RETIREMENT_PLANNING.each do |text, link| %>
                       <%= render_level_3_subcategory_link(text, link) %>
                     <% end %>
                   </ul>
@@ -144,11 +128,7 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="People in retirement">
-                    <% {
-                      'People in retirement steering group' => article_path('en', 'retirement-planning-steering-group'),
-                      'Steering group updates' => article_path('en', 'people-retirement-steering-group'),
-                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/097/original/People_in_Retirement_Action_Plan.pdf'
-                    }.each do |text, link| %>
+                    <% NavigationHelper::LIFE_STAGES_RETIREMENT.each do |text, link| %>
                       <%= render_level_3_subcategory_link(text, link) %>
                     <% end %>
                   </ul>
@@ -174,11 +154,7 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="People in Financial difficulties">
-                    <% {
-                      'Debt advice steering group' => article_path('en', 'debt-advice-steering-group'),
-                      'Steering group updates' => article_path('en', 'people-financial-difficulties-steering-group-updates'),
-                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/098/original/People_in_Financial_Difficulties_action_plan.pdf'
-                    }.each do |text, link| %>
+                    <% NavigationHelper::LIFE_STAGES_FINANCIAL_DIFFICULTIES.each do |text, link| %>
                       <%= render_level_3_subcategory_link(text, link) %>
                     <% end %>
                   </ul>
@@ -204,11 +180,7 @@
 
                 <li class="nav__level-3__category" role="none">
                   <ul class="nav__level-3__subcategories" role="menu" aria-label="People trying to save">
-                    <% {
-                      'Savings Steering group (members)' => article_path('en', 'savings-steering-group'),
-                      'Steering group updates' => article_path('en', 'savings-steering-group-updates'),
-                      'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/099/original/Savings_Action_Plan.pdf'
-                    }.each do |text, link| %>
+                    <% NavigationHelper::LIFE_STAGES_SAVING.each do |text, link| %>
                       <%= render_level_3_subcategory_link(text, link) %>
                     <% end %>
                   </ul>

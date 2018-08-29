@@ -69,6 +69,48 @@ module NavigationHelper
     'Talk Money Week' => '/en/talkmoneyweek'
   }
 
+  LIFE_STAGES_CHILDREN_YOUNG = {
+    'Children and Young people steering group' => Rails.application.routes.url_helpers.article_path('en', 'children-young-people-steering-group'),
+    'Steering group updates' => Rails.application.routes.url_helpers.article_path('en', 'children-young-people-steering-group-updates'),
+    'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/093/original/Children___Young_People_Action_Plan.pdf'
+  }
+
+  LIFE_STAGES_YOUNG_ADULT = {
+    'Young Adults steering group' => Rails.application.routes.url_helpers.article_path('en', 'young-adults-steering-group'),
+    'Steering group updates' => Rails.application.routes.url_helpers.article_path('en', 'young-adults-steering-group-updates'),
+    'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/094/original/Young_Adults_Action_Plan.pdf'
+  }
+
+  LIFE_STAGES_WORKING_AGE = {
+    'Workplace steering group' => Rails.application.routes.url_helpers.article_path('en', 'workplace-steering-group'),
+    'Steering group updates' => Rails.application.routes.url_helpers.article_path('en', 'workplace-steering-group-updates'),
+    'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/095/original/Workplace_Action_Plan.pdf'
+  }
+
+  LIFE_STAGES_RETIREMENT_PLANNING = {
+    'Retirement Planning steering group' => Rails.application.routes.url_helpers.article_path('en', 'retirement-planning-steering-group'),
+    'Steering group updates' => Rails.application.routes.url_helpers.article_path('en', 'people-planning-retire-steering-group-updates'),
+    'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/096/original/Retirement_Planning_Action_Plan.pdf'
+  }
+
+  LIFE_STAGES_RETIREMENT = {
+    'People in retirement steering group' => Rails.application.routes.url_helpers.article_path('en', 'retirement-planning-steering-group'),
+    'Steering group updates' => Rails.application.routes.url_helpers.article_path('en', 'people-retirement-steering-group'),
+    'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/097/original/People_in_Retirement_Action_Plan.pdf'
+  }
+
+  LIFE_STAGES_FINANCIAL_DIFFICULTIES = {
+    'Debt advice steering group' => Rails.application.routes.url_helpers.article_path('en', 'debt-advice-steering-group'),
+    'Steering group updates' => Rails.application.routes.url_helpers.article_path('en', 'people-financial-difficulties-steering-group-updates'),
+    'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/098/original/People_in_Financial_Difficulties_action_plan.pdf'
+  }
+
+  LIFE_STAGES_SAVING = {
+    'Savings Steering group (members)' => Rails.application.routes.url_helpers.article_path('en', 'savings-steering-group'),
+    'Steering group updates' => Rails.application.routes.url_helpers.article_path('en', 'savings-steering-group-updates'),
+    'Action Plan' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/099/original/Savings_Action_Plan.pdf'
+  }
+
   def render_level_1_heading(text)
     render 'navigation/level_1_heading', text: text
   end
