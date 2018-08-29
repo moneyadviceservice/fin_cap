@@ -34,6 +34,9 @@ services:
       - HTTP_REQUEST_TIMEOUT=10
       - FINCAP_CMS_URL=http://localhost:3000
       - LANG=C.UTF-8
+      - FINCAP_ALGOLIA_APP_ID=test
+      - FINCAP_ALGOLIA_SEARCH_API_KEY=test
+
     links:
       - postgres
 volumes:
