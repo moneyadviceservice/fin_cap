@@ -27,3 +27,16 @@ Feature: Evidence Hub: Evaluation Summary page
       | causality                   | cross |
       | process_evaluation          | cross |
       | value_for_money             | cross |
+
+  Scenario: Key Info panel: Measured Outcome
+    Given I entered into the "Evaluation" page "Looking after the pennies"
+    When I click on the "Financial capability (Mindset)" measured outcome in the key info panel
+    Then I should return to the search results page
+    And I should see "1" evidence summaries
+    And I should see the "first" evidence summary as
+      | Field               | Value                               |
+      | document title      | Looking after the pennies           |
+      | evidence type       | Evaluation                          |
+      | topics              | Topics: Budgeting and keeping track |
+      | countries           | United Kingdom                      |
+      | year of publication | 2017                                |
