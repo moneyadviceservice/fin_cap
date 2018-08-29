@@ -75,6 +75,12 @@ a {
     margin-left: 6px;
     display: inline-block;
   }
+
+  // because buttons are extended we cannot include it as a not
+  &.btn--primary[href^="http:"]:not([href*="#{$site}"]):after,
+  &.btn--primary[href^="https:"]:not([href*="#{$site}"]):after {
+    display: none;
+  }
 }
 
 strong {
