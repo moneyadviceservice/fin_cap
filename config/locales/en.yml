@@ -1,4 +1,39 @@
 en:
+  navigation:
+    what_fin_cap:
+      title: What Is Financial Capability?
+      description: The concept of financial capability, why it is important and who can benefit
+      subcategory_what_fin_cap:
+        heading: What Is Financial Capability?
+        link: what-is-financial-capability
+        level_2_subcategory_link:
+          - text: Financial capability levels in the UK
+            url: levels-uk
+          - text: Financial capability - a global issue
+            url: global-issue
+      subcategory_who_website_for:
+        heading: Who is this website for?
+        link: who-is-this-website-for
+        level_2_subcategory_link:
+          - text: Financial services
+            url: financial-services
+          - text: Charities and third-sector organisations
+            url: charities-third-sector-organisations
+          - text: Employers
+            url: employers
+          - text: Researchers
+            url: researchers
+          - text: Schools
+            url: schools
+          - text: Parents
+            url: parents
+          - text: Childrens services
+            url: childrens-services
+          - text: Youth and students
+            url: youth-students
+          - text: Individuals
+            url: individuals
+
   activemodel:
     attributes:
       evidence_summary:

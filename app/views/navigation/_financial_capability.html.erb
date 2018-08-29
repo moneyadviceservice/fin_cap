@@ -1,29 +1,35 @@
-<li class="nav__level-1__element" data-nav-level-1-item role="none">
-  <%= render_level_1_heading('What Is Financial Capability?') %>
+<li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
+  <%= render_level_1_heading(t('navigation.what_fin_cap.title')) %>
 
   <div class="nav__level-2" data-nav-level-2>
     <div class="nav__level-2__wrap">
-      <p href="#" class="nav__level-2__description" role="category description">The concept of financial capability, why it is important and who can benefit</p>
+      <p href="#" class="nav__level-2__description" role="category description"><%= t('navigation.what_fin_cap.description') %></p>
 
       <ul class="nav__level-2__categories">
-        <%= render_level_2_heading('What Is Financial Capability?') %>
+        <%= render_level_2_heading(t('navigation.what_fin_cap.title')) %>
 
         <li class="nav__level-2__category">
-          <ul class="nav__level-2__subcategories" role="menu" aria-label="What is financial capability?">
-            <%= render_level_2_subcategory_heading('What Is Financial Capability?', article_path('en', 'what-is-financial-capability')) %>
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="<%= t('navigation.what_fin_cap.subcategory_what_fin_cap.heading') %>">
+            <%= render_level_2_subcategory_heading(
+              t('navigation.what_fin_cap.subcategory_what_fin_cap.heading'),
+              article_path('en', t('navigation.what_fin_cap.subcategory_what_fin_cap.link'))
+            ) %>
 
-            <% NavigationHelper::WHAT_FIN_CAP.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+            <% t('navigation.what_fin_cap.subcategory_what_fin_cap.level_2_subcategory_link').each do |link| %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", article_path('en', "#{link[:url]}")) %>
             <% end %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
-          <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is this website for?">
-            <%= render_level_2_subcategory_heading('Who is this website for?', article_path('en', 'who-is-this-website-for')) %>
+          <ul class="nav__level-2__subcategories" role="menu" aria-label="<%= t('navigation.what_fin_cap.subcategory_who_website_for.heading') %>">
+            <%= render_level_2_subcategory_heading(
+              t('navigation.what_fin_cap.subcategory_who_website_for.heading'),
+              article_path('en', t('navigation.what_fin_cap.subcategory_who_website_for.link'))
+            ) %>
 
-            <% NavigationHelper::WHO_FOR.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+            <% t('navigation.what_fin_cap.subcategory_who_website_for.level_2_subcategory_link').each do |link| %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", article_path('en', "#{link[:url]}")) %>
             <% end %>
           </ul>
         </li>
