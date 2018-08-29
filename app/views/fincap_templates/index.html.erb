@@ -10,9 +10,9 @@
   <% end %>
 
   <% present_collection(resource_collection).each do |template| %>
-    <div class='teaser-box--thematic-review'>
-      <%= image_tag template.hero_image_component, class: 'teaser-box__image' %>
-      <div class='teaser-box__content'>
+    <div class='teaser-box--thematic-review' data-dough-component="Teaser">
+      <%= image_tag template.hero_image_component, class: 'teaser-box__image', 'data-teaser-image':true %>
+      <div class='teaser-box__content' data-teaser-content>
         <h3 class='teaser-box__title'>Thematic Review:</h3>
         <%= link_to template.title, template.full_path, class: "teaser-box__content-link" %>
         <p class='teaser-box__content-text'>
