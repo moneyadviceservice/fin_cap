@@ -43,6 +43,28 @@ module NavigationHelper
     'Get Involved' => 'http://fincap.org.uk/get-involved'
   }
 
+  OUR_APPROACH = {
+    'How to get involved' => Rails.application.routes.url_helpers.article_path('en', 'get-involved')
+  }
+
+  FIND_EVIDENCE = {
+    'Evidence  Hub' => Rails.application.routes.url_helpers.article_path('en', 'financial-capability-evidence-hub'),
+    'Financial capability in the UK' => Rails.application.routes.url_helpers.article_path('en', 'financial-capability-uk'),
+    'Fincap Survey' => Rails.application.routes.url_helpers.article_path('en', 'financial-capability-survey')
+  }
+
+  EVALUATE_PROGRAMME = {
+    'Evaluation Toolkit' => Rails.application.routes.url_helpers.article_path('en', 'evaluation-toolkit-overview'),
+    'Impact Principles' => 'http://fincap.org.uk/impact-principles',
+    'Funding' => Rails.application.routes.url_helpers.article_path('en', 'funding')
+  }
+
+  WHAT_WORKS = {
+    'What Works Fund' => Rails.application.routes.url_helpers.article_path('en', 'what-works-fund'),
+    'Funded Projects' => Rails.application.routes.url_helpers.article_path('en', 'what-works-grant-funded-projects'),
+    'FinCap Labs' => Rails.application.routes.url_helpers.article_path('en', 'the-financial-capability-lab')
+  }
+
   def render_level_1_heading(text)
     render 'navigation/level_1_heading', text: text
   end
