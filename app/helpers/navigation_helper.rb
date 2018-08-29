@@ -65,6 +65,10 @@ module NavigationHelper
     'FinCap Labs' => Rails.application.routes.url_helpers.article_path('en', 'the-financial-capability-lab')
   }
 
+  EVALUATE = {
+    'Talk Money Week' => '/en/talkmoneyweek'
+  }
+
   def render_level_1_heading(text)
     render 'navigation/level_1_heading', text: text
   end
