@@ -1,4 +1,4 @@
-<li class="nav__level-1__element" data-nav-level-1-item role="none">
+<li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
   <%= render_level_1_heading('News &amp; Events') %>
 
   <div class="nav__level-2" data-nav-level-2>
@@ -12,9 +12,7 @@
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Events">
             <%= render_level_2_subcategory_heading('Evaluate your programme', article_path('en', 'evaluate-your-programme')) %>
 
-            <% {
-              'Talk Money Week' => '/en/talkmoneyweek'
-            }.each do |text, link| %>
+            <% NavigationHelper::EVALUATE.each do |text, link| %>
               <%= render_level_2_subcategory_link(text, link) %>
             <% end %>
           </ul>
