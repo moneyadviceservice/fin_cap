@@ -1,4 +1,4 @@
-Feature: Key Info filters
+Feature: Key Info filters: Client group
   As a fincap website user visiting an evidence summary
   I want to be able to find all related summaries
   So that I can read, analyse and learn about the related themes
