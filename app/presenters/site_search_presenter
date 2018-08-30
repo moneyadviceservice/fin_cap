@@ -1,0 +1,2 @@
+class SiteSearchPresenter < BasePresenter
+end

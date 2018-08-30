@@ -1,2 +1,8 @@
-<%= render(partial: 'search_result', collection: @search_results) %>
-<%= render 'pagination', search_results: @search_results %>
+<div class="l-constrained">
+  <ul class="search-results">
+    <%= render(partial: 'search_result', collection: @search_results) %>
+  </ul>
+  <div class="pagination__wrap">
+    <%= render 'pagination', search_results: @search_results %>
+  </div>
+</div>
