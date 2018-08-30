@@ -1,4 +1,4 @@
-class TaggedNews < SimpleDelegator
+class TaggedNews
   def self.all(article)
     news_items = Mas::Cms::News.all(
       params: {
@@ -11,16 +11,6 @@ class TaggedNews < SimpleDelegator
   end
 
   def self.sort_by_published_date(news_items)
-    news_items.map do |news_item|
-      new(news_item)
-    end.sort_by(&:published_date).reverse
-  end
-
-  def published_date
-    content = non_content_blocks.find do |block|
-      block.identifier == 'order_by_date'
-    end.content
-
-    Date.parse(ActionView::Base.full_sanitizer.sanitize(content.strip))
+    news_items.sort_by(&:published_date).reverse
   end
 end
