@@ -4,7 +4,7 @@ class TemplatePresenter < BasePresenter
   end
 
   def hero_description_component
-    view.strip_tags(hero_description_block.try(:content).to_s)
+    hero_description_block.try(:content).to_s.strip
   end
 
   def download_component

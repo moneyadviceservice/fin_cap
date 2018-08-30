@@ -15,7 +15,7 @@ RSpec.describe TemplatePresenter do
 
       it 'returns the hero description content' do
         expect(presenter.hero_description_component).to eq(
-          'Financial capability'
+          '<p>Financial capability</p>'
         )
       end
     end
