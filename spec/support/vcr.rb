@@ -4,14 +4,12 @@ VCR.configure do |c|
 
   c.around_http_request do |request|
     uri = URI(request.uri)
-    puts "A request catch by the VCR '#{uri}'"
 
     if ENV['FINCAP_CMS_URL'].match?(/#{uri.host}/)
       raw_query = uri.query || ''
       query = CGI.unescape(raw_query).gsub(
-        'blocks[][identifier]=client_groups&blocks[][value]=', 'filter'
+        /blocks\[\]\[identifier\]=.*&blocks\[\]\[value\]=/, 'filter'
       )
-      puts "Using cassette /fincap_cms/#{request.method}#{uri.path}#{query}"
 
       VCR.use_cassette(
         "/fincap_cms/#{request.method}#{uri.path}#{query}",

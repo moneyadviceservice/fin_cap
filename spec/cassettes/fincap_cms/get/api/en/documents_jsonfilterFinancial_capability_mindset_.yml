@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/documents.json?blocks%5B%5D%5Bidentifier%5D=measured_outcomes&blocks%5B%5D%5Bvalue%5D=Financial+capability+%28mindset%29
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 12047) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Thu, 30 Aug 2018 16:23:17 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"93f03564e003d89f384c78451a582727"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - d9129f59-ba1b-49a5-86f3-274c881ae3ac
+      x-runtime:
+      - '0.069542'
+    body:
+      encoding: UTF-8
+      string: '{"documents":[{"label":"Looking after the pennies","slug":"looking-after-the-pennies","full_path":"/en/evaluations/looking-after-the-pennies","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"evaluation","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":["how-can-we-improve-the-financial-capability-of-young-adults"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThe
+        trackers are all available as free smartphone apps (although at the\ntime
+        of writing, Toshl is discontinued). Overall user numbers of the apps\nare
+        not given. However, 797 customers entered into the project (by\ncompleting
+        a first questionnaire and downloading an app) from across\nthe UK between
+        July and November 2016.\u003c/p\u003e\n\n\u003cp\u003eThe intervention was
+        undertaken in participants’ own time as part their\ndaily lives.\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"overview","content":"\u003cp\u003eAn
+        evaluation, commissioned by Royal London, of the impacts of using\n        simple
+        budgeting tools on customers’ money management attitudes and\n        behaviours.\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eWorking
+        age (18 - 65)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eOlder
+        people (65+)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"topics","content":"\u003cp\u003eBudgeting
+        and keeping track\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"activities_and_setting","content":"\u003cp\u003eComparison
+        of budgeting apps vs. pen and paper methods\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"programme_delivery","content":"\u003cp\u003eMoney
+        Advice\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"countries","content":"\u003cp\u003eUnited
+        Kingdom\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2017\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"data_types","content":"\u003cp\u003eMeasured
+        Outcomes\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://www.royallondon.com/Documents/PDFs/2017/Royal%20London%20-%20Looking%20after%20the%20pennies.pdf\"\u003eLooking
+        after the pennies - full report\u003c/a\u003e\u003c/p\u003e\n\n\u003cpre\u003e\u003ccode\u003e  [Follow-up
+        report](https://fincap-two.cdn.prismic.io/fincap-two%2F0efeee0b-252a-4b13-b7f5-d05e66bdc6aa_final+report+-+royal+london+fincap.pptx)\n\u003c/code\u003e\u003c/pre\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"contact_information","content":"\u003cp\u003eMASPD
+        (in partnership with Company S.A)\n        T +44 (0)20 1234 5678 F +44 (0)20
+        4567 1234\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"measured_outcomes","content":"\u003cp\u003eFinancial
+        capability (Mindset)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"measured_outcomes","content":"\u003cp\u003eFinancial
+        capability (Ability)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"}],"translations":[]}],"meta":{"results":1,"page":1,"per_page":20,"total_pages":1}}'
+    http_version: 
+  recorded_at: Thu, 30 Aug 2018 16:23:17 GMT
+recorded_with: VCR 4.0.0
