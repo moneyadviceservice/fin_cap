@@ -18,7 +18,7 @@ class NewsController < FincapTemplatesController
     documents = Mas::Cms::News.all(
       params: { document_type: [NEWS_DOCUMENT_TYPE] }.merge(year_param)
     )
-
+    documents = TaggedNews.sort_by_published_date(documents)
     documents.map { |document| NewsTemplate.new(document) }
   end
   helper_method :resource_collection

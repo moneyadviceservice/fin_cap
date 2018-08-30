@@ -8,9 +8,29 @@ RSpec.describe TaggedNews, type: :model do
       expect(subject.include?(article)).to be_falsey
     end
 
-    it 'only returns News type pages' do
-      subject.each do |news_item|
-        expect(news_item.is_a?(Mas::Cms::News)).to be_truthy
+    context 'sorting news by the published date' do
+      let(:article) { Mas::Cms::Homepage.find('root') }
+      let(:news_dates) do
+        subject.map(&:published_date)
+      end
+
+      it 'sorts news by date' do
+        expect(news_dates).to eq(
+          [
+            Date.new(2018, 11, 19),
+            Date.new(2018, 10, 18),
+            Date.new(2018, 9, 17),
+            Date.new(2018, 8, 16),
+            Date.new(2018, 7, 26),
+            Date.new(2018, 7, 15),
+            Date.new(2018, 6, 14),
+            Date.new(2018, 5, 13),
+            Date.new(2018, 4, 12),
+            Date.new(2018, 3, 11),
+            Date.new(2018, 2, 10),
+            Date.new(2017, 3, 15)
+          ]
+        )
       end
     end
 
@@ -27,7 +47,7 @@ RSpec.describe TaggedNews, type: :model do
       let(:article) { Mas::Cms::Article.find('uk-strategy') }
 
       it 'returns all the news items' do
-        expect(subject.count).to eq(1)
+        expect(subject.count).to eq(12)
       end
     end
   end

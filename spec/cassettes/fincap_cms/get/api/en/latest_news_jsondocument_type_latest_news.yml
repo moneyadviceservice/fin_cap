@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.17.0 (Margo-Urey-00241.local; margourey; 53575) ruby/2.4.2
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 97058) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Tue, 14 Aug 2018 10:47:42 GMT
+      - Tue, 28 Aug 2018 13:56:40 GMT
       status:
       - 200 OK
       connection:
@@ -32,17 +32,33 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"e7143b5d4f49efef2709d38cca337554"'
+      - '"f1a38b37de94b6e8324a9d819f700c11"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 6163ee28-9e40-4f74-a453-8e1f8cbdba32
+      - b5a693e9-ca1e-48e2-a317-8d0d395e1670
       x-runtime:
-      - '0.481475'
+      - '0.069130'
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkb2N1bWVudHMiOlt7ImxhYmVsIjoiTGF0ZXN0IE5ld3MiLCJzbHVnIjoibmV3cyIsImZ1bGxfcGF0aCI6Ii9lbi9sYXRlc3RfbmV3cy9uZXdzIiwibWV0YV9kZXNjcmlwdGlvbiI6IiIsIm1ldGFfdGl0bGUiOiIiLCJjYXRlZ29yeV9uYW1lcyI6W10sImxheW91dF9pZGVudGlmaWVyIjoibGF0ZXN0X25ld3MiLCJyZWxhdGVkX2NvbnRlbnQiOnsibGF0ZXN0X2Jsb2dfcG9zdF9saW5rcyI6W3sidGl0bGUiOiJIb3cgdG8gc3BvdCBhbmQgYXZvaWQgYmFuayBzY2FtcyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvaG93LXRvLXNwb3QtYW5kLWF2b2lkLWJhbmstc2NhbXMifSx7InRpdGxlIjoiSG93IHRvIHNwb3QgYW5kIGF2b2lkIFRWIGxpY2VuY2UgcmVmdW5kIHNjYW1zIiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9ob3ctdG8tc3BvdC1hbmQtYXZvaWQtdHYtbGljZW5jZS1yZWZ1bmQtc2NhbXMifSx7InRpdGxlIjoiSG93IHRvIHNwb3QgYW5kIHJlcG9ydCBmYWtlIHRleHQgbWVzc2FnZSBhbmQgc21pc2hpbmcgc2NhbXMiLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2hvdy10by1zcG90LWFuZC1yZXBvcnQtZmFrZS10ZXh0LW1lc3NhZ2UtYW5kLXNtaXNoaW5nLXNjYW1zIn1dLCJwb3B1bGFyX2xpbmtzIjpbXSwicmVsYXRlZF9saW5rcyI6W10sInByZXZpb3VzX2xpbmsiOnt9LCJuZXh0X2xpbmsiOnt9fSwicHVibGlzaGVkX2F0IjoiMjAxOC0wOC0xM1QxNzowNDo1MS4wMDBaIiwic3VwcG9ydHNfYW1wIjp0cnVlLCJ0YWdzIjpbXSwiYmxvY2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlSGVyZSB5b3Ugd2lsbCBmaW5kIGFsbCB0aGUgbGF0ZXN0IG5ld3MgYW5kIHByZXNzIHJlbGVhc2VzIHJlbGF0aW5nIHRvIHRoZSBGaW5hbmNpYWwgQ2FwYWJpbGl0eSBTdHJhdGVneSBmb3IgdGhlIFVLLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VPdXIgcmVzZWFyY2ggZW5hYmxlcyB1cyB0byBnaXZlIHBlb3BsZSB0aGUgYmVzdCBhZHZpY2Ugb24gdW5kZXJzdGFuZGluZyBmaW5hbmNpYWwgbWF0dGVycyBhbmQgbWFraW5nIGNob2ljZXMgd2hlbiBtYW5hZ2luZyBtb25leS4gVmlzaXQgb3VyIGNvcnBvcmF0ZSBzaXRlIGZvciBhbGwgb3VyIGxhdGVzdCBcdTAwM2NhIGhyZWY9XCJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2VuL2NvcnBvcmF0ZS9yZXNlYXJjaFwiXHUwMDNlUmVzZWFyY2ggUmVwb3J0c1x1MDAzYy9hXHUwMDNlLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VPciwgZm9yIGEgd2lkZSByYW5nZSBvZiBldmFsdWF0aW9uIGV2aWRlbmNlLCBpbnNpZ2h0IGFuZCBtYXJrZXQgcmVzZWFyY2ggZG9u4oCZdCBmb3JnZXQgdG8gdmlzaXQgdGhlIG5ldyBhbmQgaW1wcm92ZWQgRmluYW5jaWFsIENhcGFiaWxpdHkgXHUwMDNjYSBocmVmPVwiaHR0cDovL3d3dy5maW5jYXAub3JnLnVrL2V2aWRlbmNlX2h1YlwiXHUwMDNlRXZpZGVuY2UgSHViXHUwMDNjL2FcdTAwM2UuXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMyLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wOC0xM1QxNTozMjo1My4wMDBaIn0seyJpZGVudGlmaWVyIjoiY29tcG9uZW50X2hlcm9faW1hZ2UiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZS9hc3NldHMvc3R5bGVndWlkZS9oZXJvLXNhbXBsZS5qcGdcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzIuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA4LTEzVDE1OjMyOjUzLjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfaGVyb19kZXNjcmlwdGlvbiIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlUmVzZWFyY2ggc3VnZ2VzdHMgdGhhdCB5b3VuZyBhZHVsdHMgdHlwaWNhbGx5IGRpc3BsYXkgbG93ZXIgbGV2ZWxzIG9mIGZpbmFuY2lhbCBjYXBhYmlsaXR5IHRoYW4gb2xkZXIgYWdlIGdyb3Vwcy5cdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzIuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA4LTEzVDE1OjMyOjUzLjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfY3RhX2xpbmtzIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VcdTAwM2NhIGhyZWY9XCIvZW4vbmV3c1wiXHUwMDNlQWxsIG5ld3NcdTAwM2MvYVx1MDAzZVx1MDAzY2EgaHJlZj1cIi9lbi9uZXdzP3llYXI9MjAxOFwiXHUwMDNlMjAxOFx1MDAzYy9hXHUwMDNlXHUwMDNjYSBocmVmPVwiL2VuL25ld3M/eWVhcj0yMDE3XCJcdTAwM2UyMDE3XHUwMDNjL2FcdTAwM2VcdTAwM2NhIGhyZWY9XCIvZW4vbmV3cz95ZWFyPTIwMTZcIlx1MDAzZTIwMTZcdTAwM2MvYVx1MDAzZVx1MDAzY2EgaHJlZj1cIi9lbi9uZXdzP3llYXI9MjAxNVwiXHUwMDNlMjAxNVx1MDAzYy9hXHUwMDNlXHUwMDNjYSBocmVmPVwiL2VuL25ld3M/eWVhcj0yMDE0XCJcdTAwM2UyMDE0XHUwMDNjL2FcdTAwM2VcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzIuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA4LTEzVDE2OjE5OjE2LjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W119XSwibWV0YSI6eyJyZXN1bHRzIjoxLCJwYWdlIjoxLCJwZXJfcGFnZSI6MjAsInRvdGFsX3BhZ2VzIjoxfX0=
+      encoding: UTF-8
+      string: '{"documents":[{"label":"Latest News","slug":"news","full_path":"/en/latest_news/news","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"latest_news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eHere
+        you will find all the latest news and press releases relating to the Financial
+        Capability Strategy for the UK.\u003c/p\u003e\n\n\u003cp\u003eOur research
+        enables us to give people the best advice on understanding financial matters
+        and making choices when managing money. Visit our corporate site for all our
+        latest \u003ca href=\"https://www.moneyadviceservice.org.uk/en/corporate/research\"\u003eResearch
+        Reports\u003c/a\u003e.\u003c/p\u003e\n\n\u003cp\u003eOr, for a wide range
+        of evaluation evidence, insight and market research don’t forget to visit
+        the new and improved Financial Capability \u003ca href=\"http://www.fincap.org.uk/evidence_hub\"\u003eEvidence
+        Hub\u003c/a\u003e.\u003c/p\u003e\n","created_at":"2018-08-28T10:16:02.000Z","updated_at":"2018-08-28T10:16:03.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-28T10:16:02.000Z","updated_at":"2018-08-28T10:16:03.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eResearch
+        suggests that young adults typically display lower levels of financial capability
+        than older age groups.\u003c/p\u003e\n","created_at":"2018-08-28T10:16:02.000Z","updated_at":"2018-08-28T10:16:03.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/en/news\"\u003eAll news\u003c/a\u003e\u003ca href=\"/en/news?year=2018\"\u003e2018\u003c/a\u003e\u003ca
+        href=\"/en/news?year=2017\"\u003e2017\u003c/a\u003e\u003ca href=\"/en/news?year=2016\"\u003e2016\u003c/a\u003e\u003ca
+        href=\"/en/news?year=2015\"\u003e2015\u003c/a\u003e\u003ca href=\"/en/news?year=2014\"\u003e2014\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-28T10:16:02.000Z","updated_at":"2018-08-28T10:16:03.000Z"}],"translations":[]}],"meta":{"results":1,"page":1,"per_page":20,"total_pages":1}}'
     http_version: 
-  recorded_at: Tue, 14 Aug 2018 10:47:42 GMT
+  recorded_at: Tue, 28 Aug 2018 13:56:40 GMT
 recorded_with: VCR 4.0.0

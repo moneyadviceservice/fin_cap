@@ -11,10 +11,11 @@ Feature: Thematic review page
     """
     Thematic Review content
     """
-    And I should see the latest news box with "1" news items
     And I should see the news items details
-      | title                            | date | link                                                     |
-      | Press Release: A new way to pay! | Thursday 26 July 2018 | /en/news/press-release-a-new-way-to-pay |
+      | title  | published date           | link            |
+      | News 1 | Monday 19 November 2018  | /en/news/news-1 |
+      | News 2 | Thursday 18 October 2018 | /en/news/news-2 |
+      | News 3 | Monday 17 September 2018 | /en/news/news-3 |
     And I should see the call to action box containing the links
       | text                                                    | link                                                                             |
       | Evidence Summaries Associated with this Thematic Review | /en/evidence_hub?tag=how-can-we-improve-the-financial-capability-of-young-adults |

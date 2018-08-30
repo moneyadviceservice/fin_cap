@@ -23,7 +23,11 @@ Feature: Homepage
       | Third teaser title  | I have run out of ipsem lorem ideas. | /financial+capability+strategy.pdf    |
     And I should see the countries box
     And I should see the life stages box
-    And I should see the latest news box
+    And I should see the news items details
+      | title  | published date           | link            |
+      | News 1 | Monday 19 November 2018  | /en/news/news-1 |
+      | News 2 | Thursday 18 October 2018 | /en/news/news-2 |
+      | News 3 | Monday 17 September 2018 | /en/news/news-3 |
     And I should see the call to action buttons
       | text                                       | link                              |
       | I am interested in research and evaluation | /en/articles/our-approach         |
