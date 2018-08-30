@@ -8,7 +8,7 @@ VCR.configure do |c|
     if ENV['FINCAP_CMS_URL'].match?(/#{uri.host}/)
       raw_query = uri.query || ''
       query = CGI.unescape(raw_query).gsub(
-        'blocks[][identifier]=client_groups&blocks[][value]=', 'filter'
+        /blocks\[\]\[identifier\]=.*&blocks\[\]\[value\]=/, 'filter'
       )
 
       VCR.use_cassette(

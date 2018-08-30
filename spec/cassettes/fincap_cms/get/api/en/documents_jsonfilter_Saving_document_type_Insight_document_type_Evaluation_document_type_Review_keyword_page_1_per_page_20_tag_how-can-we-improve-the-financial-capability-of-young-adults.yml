@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/documents.json?blocks%5B%5D%5Bidentifier%5D=topics&blocks%5B%5D%5Bvalue%5D=Saving&document_type%5B%5D=Insight&document_type%5B%5D=Evaluation&document_type%5B%5D=Review&keyword=&page=1&per_page=20&tag=how-can-we-improve-the-financial-capability-of-young-adults
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 10747) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Thu, 30 Aug 2018 16:07:22 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"493671e753dfaabd64df8a0490a51a51"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 495867f9-bb05-452d-a1f6-fb220ccfde24
+      x-runtime:
+      - '0.079789'
+    body:
+      encoding: UTF-8
+      string: '{"documents":[{"label":"Raising household saving","slug":"raising-household-saving","full_path":"/en/reviews/raising-household-saving","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"review","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":["how-can-we-improve-the-financial-capability-of-young-adults"],"blocks":[{"identifier":"content","content":"\u003cp\u003eContext\u003c/p\u003e\n\n\u003cp\u003eThere
+        is continuing concern in the UK and internationally that many individuals
+        are making insufficient savings, especially for retirement. This has long
+        been a key issue in UK policy discussions – demonstrated by the continual
+        modifications to the retirement pension system throughout the 21st century
+        (and before).\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2012\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://www.britac.ac.uk/sites/default/files/BRI1089_household_saving_report_02.12_WEB_FINAL.pdf\"\u003eRaising
+        household saving - full report\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"contact_information","content":"\u003cp\u003eJohn
+        Smith, John Smith\u003c/p\u003e\n\n\u003cp\u003eInstitute for Studies\u003c/p\u003e\n\n\u003cp\u003ehttps://www.company-name.org.uk/\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"overview","content":"\u003cp\u003eBased
+        on an analysis of international evidence, this report examines in detail what
+        is known – and what is not known – about the effectiveness of different sorts
+        of interventions designed to raise household savings.\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"countries","content":"\u003cp\u003eInternational
+        review\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"topics","content":"\u003cp\u003eSaving\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"topics","content":"\u003cp\u003ePensions
+        and Retirement Planning\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"topics","content":"\u003cp\u003eFinancial
+        Education\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eChildren
+        (3 - 11)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eYoung
+        people (12 - 16)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eParents
+        / families\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eYoung
+        adults (17 - 24)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"data_types","content":"\u003cp\u003eSystematic
+        review\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"}],"translations":[]}],"meta":{"results":1,"page":1,"per_page":20,"total_pages":1}}'
+    http_version: 
+  recorded_at: Thu, 30 Aug 2018 16:07:22 GMT
+recorded_with: VCR 4.0.0

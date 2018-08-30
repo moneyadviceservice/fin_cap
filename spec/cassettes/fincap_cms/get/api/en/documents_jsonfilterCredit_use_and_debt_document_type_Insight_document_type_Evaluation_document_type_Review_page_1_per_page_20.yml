@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/documents.json?blocks%5B%5D%5Bidentifier%5D=topics&blocks%5B%5D%5Bvalue%5D=Credit+use+and+debt&document_type%5B%5D=Insight&document_type%5B%5D=Evaluation&document_type%5B%5D=Review&page=1&per_page=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 12047) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Thu, 30 Aug 2018 16:23:17 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"6928e70afd18a4e80cad93766a2f8fc6"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 565f491b-a465-4e60-86be-57fb38871d7b
+      x-runtime:
+      - '0.064839'
+    body:
+      encoding: UTF-8
+      string: '{"documents":[{"label":"Moving forward together: peer support for people
+        with problem debt","slug":"moving-forward-together-peer-support-for-people-with-problem-debt","full_path":"/en/insights/moving-forward-together-peer-support-for-people-with-problem-debt","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"insight","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eContext\u003c/p\u003e\n\n\u003cp\u003eResearch
+        has found that there remains a real stigma around seeking advice\nfor debt,
+        with many people feeling that doing so means that they have\n ‘failed’, but
+        that talking about debt problems is also cathartic.\nThis suggests there is
+        potential value in peer-support for over-indebted\npeople, based on models
+        in other fields such as weight loss.\u003c/p\u003e\n\n\u003cp\u003ePeer support
+        is usually intended to encourage behaviour change and is\nprovided by peer
+        mentors (those who have led or given support within\npeer support programmes).\u003c/p\u003e\n\n\u003cp\u003eSuch
+        innovation, however, needs an evidence base, so research was needed\nto explore
+        the peer-support landscape and establish how it helps people\nto resolve their
+        difficulties and change their behaviour.\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2017\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://masassets.blob.core.windows.net/cms/files/000/000/631/original/MAS_MovingForwardTogether_Report.pdf\"\u003eMoving
+        forward together: peer support for people with problem debt - full report\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"contact_information","content":"\u003cp\u003epeersupport@moneyadviceservice.org.uk\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"overview","content":"\u003cp\u003eResearch
+        has found that there remains a real stigma around seeking\n        advice
+        for debt, with many people feeling that doing so means that\n        they
+        have ‘failed’, but that talking about debt problems is also\n        cathartic.\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"countries","content":"\u003cp\u003eEngland\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"topics","content":"\u003cp\u003eCredit
+        Use and Debt\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eOver-indebted
+        people\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eWorking
+        age (18 - 65)\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"}],"translations":[]}],"meta":{"results":1,"page":1,"per_page":20,"total_pages":1}}'
+    http_version: 
+  recorded_at: Thu, 30 Aug 2018 16:23:17 GMT
+recorded_with: VCR 4.0.0
