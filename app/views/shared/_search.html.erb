@@ -1,10 +1,14 @@
-<%= form_tag search_results_path(locale: 'en'), method: :get do %>
-  <%= label_tag 'Search', nil, for: "search", class: 'visually-hidden' %>
-  <%= text_field_tag 'query', nil, placeholder: 'Search Fincap', id: "search", class: 'search__input' %>
+<%= form_tag search_results_path(locale: 'en'), method: :get, class: 'search' do %>
+  <%= label_tag 'Search', nil, for: "search_#{location}", class: 'visually-hidden' %>
+  <%= text_field_tag 'query',
+                     nil,
+                     placeholder: 'Search FinCap',
+                     id: "search_#{location}",
+                     class: "search__input search__input--#{location}"
+  %>
 
   <button class='search__submit search__submit--icon' type="submit">
     <span class="visually-hidden">Search</span>
     <span class="icon icon--search"></span>
   </button>
 <% end %>
-

@@ -2,8 +2,8 @@ module UI
   module Pages
     class Pagination < SitePrism::Section
       element :page_info, '.pagination__counter'
-      element :previous_button, '.button--previous'
-      element :next_button, '.button--next'
+      element :previous_button, '.pagination__prev-page'
+      element :next_button, '.pagination__next-page'
     end
 
     class SearchResults < UI::Page

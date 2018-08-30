@@ -1,4 +1,9 @@
-<div class="l-2col-main">
-  <div class="l-main__row">
+<section class="search__container">
+  <div class="l-constrained inpage">
+    <h1 role="heading">Search results</h1>
+    <%= render 'shared/search', location: 'inpage' %>
   </div>
-</div>
+  <div class="l-constrained" data-dough-component="SearchFocus">
+    <p>No results were found. Please try a different search.</p>
+  </div>
+</section>

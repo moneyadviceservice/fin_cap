@@ -6,10 +6,10 @@
 <h3 class="styleguide__subheading">Pagination First Page</h3>
 <div class="styleguide__example">
   <div class="pagination">
-    <span class="pagination__prev-page disabled">&lt;</span>
+    <span class="pagination__prev-page is-disabled">&lt;</span>
     <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
       current_page: 1,
-      total_pages: 6) 
+      total_pages: 6)
     %>
     <a class="pagination__next-page" href="#page=2">&gt;</a>
   </div>
@@ -18,10 +18,10 @@
 <h3 class="styleguide__subheading">HTML Code</h3>
 <xmp>
   <div class="pagination">
-    <span class="pagination__prev-page disabled">&lt;</span>
+    <span class="pagination__prev-page is-disabled">&lt;</span>
     <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
       current_page: 1,
-      total_pages: 6) 
+      total_pages: 6)
     %>
     <a class="pagination__next-page" href="#page=2">&gt;</a>
   </div>
@@ -33,7 +33,7 @@
     <a class="pagination__prev-page" href="#page=2">&lt;</a>
     <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
       current_page: 3,
-      total_pages: 6) 
+      total_pages: 6)
     %>
     <a class="pagination__next-page" href="#page=4">&gt;</a>
   </div>
@@ -45,7 +45,7 @@
     <a class="pagination__prev-page" href="#page=2">&lt;</a>
     <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
       current_page: 3,
-      total_pages: 6) 
+      total_pages: 6)
     %>
     <a class="pagination__next-page" href="#page=4">&gt;</a>
   </div>
@@ -57,9 +57,9 @@
     <a class="pagination__prev-page" href="#page=5">&lt;</a>
     <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
       current_page: 6,
-      total_pages: 6) 
+      total_pages: 6)
     %>
-    <span class="pagination__next-page disabled">&gt;</span>
+    <span class="pagination__next-page is-disabled">&gt;</span>
   </div>
 </div>
 
@@ -69,9 +69,9 @@
     <a class="pagination__prev-page" href="#page=5">&lt;</a>
     <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
       current_page: 6,
-      total_pages: 6) 
+      total_pages: 6)
     %>
-    <span class="pagination__next-page disabled">&gt;</span>
+    <span class="pagination__next-page is-disabled">&gt;</span>
   </div>
 </xmp>
 
@@ -83,7 +83,7 @@
       <a class="pagination__prev-page" href="#page=3">&lt;</a>
       <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
         current_page: 4,
-        total_pages: 6) 
+        total_pages: 6)
       %>
       <a class="pagination__next-page" href="#page=5">&gt;</a>
     </div>
@@ -98,7 +98,7 @@
       <a class="pagination__prev-page" href="#page=3">&lt;</a>
       <%= I18n.t('fincap.evidence_hub.pagination.pagination_description',
         current_page: 4,
-        total_pages: 6) 
+        total_pages: 6)
       %>
       <a class="pagination__next-page" href="#page=5">&gt;</a>
     </div>
