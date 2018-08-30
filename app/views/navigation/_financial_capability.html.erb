@@ -1,4 +1,4 @@
-<li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
+<li class="nav__level-1__element" data-nav-level-1-item role="none">
   <%= render_level_1_heading(t('navigation.what_fin_cap.title')) %>
 
   <div class="nav__level-2" data-nav-level-2>
@@ -16,7 +16,7 @@
             ) %>
 
             <% t('navigation.what_fin_cap.subcategory_what_fin_cap.level_2_subcategory_link').each do |link| %>
-              <%= render_level_2_subcategory_link("#{link[:text]}", article_path('en', "#{link[:url]}")) %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", article_path('en', "#{link[:url]}"), 'article') %>
             <% end %>
           </ul>
         </li>
@@ -29,7 +29,7 @@
             ) %>
 
             <% t('navigation.what_fin_cap.subcategory_who_website_for.level_2_subcategory_link').each do |link| %>
-              <%= render_level_2_subcategory_link("#{link[:text]}", article_path('en', "#{link[:url]}")) %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", article_path('en', "#{link[:url]}"), 'article') %>
             <% end %>
           </ul>
         </li>

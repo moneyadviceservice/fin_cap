@@ -33,6 +33,54 @@ en:
             url: youth-students
           - text: Individuals
             url: individuals
+    what_is_strategy:
+      title: About The Strategy
+      description: Who is involved, why it is needed and how it will help millions of people across the UK
+      subcategory_what_is_strategy:
+        heading: What is The Strategy?
+        link: strategy
+        level_2_subcategory_link:
+          - text: UK Strategy
+            url: /uk_strategies/uk-strategy
+            page_type: static
+          - text: Northern Ireland
+            url: northern-ireland
+            page_type: regional_strategy
+          - text: Scotland
+            url: scotland
+            page_type: regional_strategy
+          - text: Wales
+            url: wales
+            page_type: regional_strategy
+      subcategory_why_strategy_needed:
+        heading: What The Strategy needs to achieve
+        link: why-strategy-needed
+        level_2_subcategory_link:
+          - text: UK Strategy
+            url: what-strategy-needs-achieve
+            page_type: article
+          - text: Evidence and analysis
+            url: evidence-analysis
+            page_type: article
+          - text: Summary of key statistics on Financial Capability
+            url: https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf
+            page_type: static
+          - text: Strategy development
+            url: development-strategy
+            page_type: article
+      subcategory_why_strategy_needed:
+        heading: What The Strategy needs to achieve
+        link: why-strategy-needed
+        level_2_subcategory_link:
+          - text: UK Strategy
+            url: what-strategy-needs-achieve
+            page_type: article
+
+  HOW_STRATEGY_DELIVERED = {
+    'The role of the steering groups' => Rails.application.routes.url_helpers.article_path('en', 'role-steering-groups'),
+    'The role of Money Advice Service' => Rails.application.routes.url_helpers.article_path('en', 'role-money-advice-service')
+  }
+
 
   activemodel:
     attributes:

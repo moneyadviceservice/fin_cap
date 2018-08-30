@@ -1,30 +1,48 @@
-<li class="nav__level-1__element" data-nav-level-1-item role="none">
-  <%= render_level_1_heading('About The Strategy') %>
+<li class="nav__level-1__element is-active" data-nav-level-1-item role="none">
+  <%= render_level_1_heading(t('navigation.what_is_strategy.title')) %>
 
   <div class="nav__level-2" data-nav-level-2>
     <div class="nav__level-2__wrap">
-      <p class="nav__level-2__description" role="category description">Who is involved, why it is needed and how it will help millions of people across the UK</p>
+      <p class="nav__level-2__description" role="category description"><%= t('navigation.what_is_strategy.description') %></p>
 
       <ul class="nav__level-2__categories">
-        <%= render_level_2_heading('About The Strategy') %>
+        <%= render_level_2_heading(t('navigation.what_is_strategy.title')) %>
 
         <li class="nav__level-2__category">
-          <ul class="nav__level-2__subcategories" role="menu" aria-label="What is The Strategy?">
-            <%= render_level_2_subcategory_heading('What is The Strategy?', article_path('en', 'strategy')) %>
+          <ul
+            class="nav__level-2__subcategories"
+            role="menu"
+            aria-label="<%= t('navigation.what_is_strategy.subcategory_what_is_strategy.heading') %>"
+          >
+            <%= render_level_2_subcategory_heading(
+              t('navigation.what_is_strategy.subcategory_what_is_strategy.heading'),
+              article_path('en', t('navigation.what_is_strategy.subcategory_what_is_strategy.link'))
+            ) %>
 
-            <% NavigationHelper::WHAT_IS_STRATEGY.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+            <% t('navigation.what_is_strategy.subcategory_what_is_strategy.level_2_subcategory_link').each do |link| %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", "#{link[:url]}", "#{link[:page_type]}") %>
             <% end %>
           </ul>
         </li>
 
         <li class="nav__level-2__category">
-          <ul class="nav__level-2__subcategories" role="menu" aria-label="Why is The Strategy needed?">
-            <%= render_level_2_subcategory_heading('Why is The Strategy needed?', article_path('en', 'why-strategy-needed')) %>
+          <ul
+            class="nav__level-2__subcategories"
+            role="menu"
+            aria-label="<%= t('navigation.what_is_strategy.subcategory_why_strategy_needed.heading') %>"
+          >
+            <%= render_level_2_subcategory_heading(
+              t('navigation.what_is_strategy.subcategory_why_strategy_needed.heading'),
+              article_path('en', t('navigation.what_is_strategy.subcategory_why_strategy_needed.link'))
+            ) %>
 
-            <% NavigationHelper::WHY_STRATEGY_NEEDED.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+            <% t('navigation.what_is_strategy.subcategory_why_strategy_needed.level_2_subcategory_link').each do |link| %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", "#{link[:url]}", "#{link[:page_type]}") %>
             <% end %>
+
+            <%# NavigationHelper::WHY_STRATEGY_NEEDED.each do |text, link| %>
+              <%# render_level_2_subcategory_link(text, link) %>
+            <%# end %>
           </ul>
         </li>
 
@@ -32,9 +50,13 @@
           <ul class="nav__level-2__subcategories" role="menu" aria-label="How the Strategy will be delivered">
             <%= render_level_2_subcategory_heading('How The Strategy will be delivered', article_path('en', 'how-strategy-delivered')) %>
 
-            <% NavigationHelper::HOW_STRATEGY_DELIVERED.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+            <% t('navigation.what_is_strategy.subcategory_what_is_strategy.level_2_subcategory_link').each do |link| %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", "#{link[:url]}", "#{link[:page_type]}") %>
             <% end %>
+
+            <%# NavigationHelper::HOW_STRATEGY_DELIVERED.each do |text, link| %>
+              <%# render_level_2_subcategory_link(text, link) %>
+            <%# end %>
           </ul>
         </li>
 
@@ -42,9 +64,13 @@
           <ul class="nav__level-2__subcategories" role="menu" aria-label="Who is involved?">
             <%= render_level_2_subcategory_heading('Who is involved?', article_path('en', 'whos-involved')) %>
 
-            <% NavigationHelper::WHO_INVOLVED.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+            <% t('navigation.what_is_strategy.subcategory_what_is_strategy.level_2_subcategory_link').each do |link| %>
+              <%= render_level_2_subcategory_link("#{link[:text]}", "#{link[:url]}", "#{link[:page_type]}") %>
             <% end %>
+
+            <%# NavigationHelper::WHO_INVOLVED.each do |text, link| %>
+              <%# render_level_2_subcategory_link(text, link) %>
+            <%# end %>
           </ul>
         </li>
       </ul>

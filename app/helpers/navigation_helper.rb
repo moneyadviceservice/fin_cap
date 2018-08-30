@@ -16,19 +16,19 @@ module NavigationHelper
   #   'Individuals' => Rails.application.routes.url_helpers.article_path('en', 'individuals')
   # }
 
-  WHAT_IS_STRATEGY = {
-    'UK Strategy' => '/uk_strategies/uk-strategy',
-    'Northern Ireland' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'northern-ireland'),
-    'Scotland' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'scotland'),
-    'Wales' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'wales')
-  }
+  # WHAT_IS_STRATEGY = {
+  #   'UK Strategy' => '/uk_strategies/uk-strategy',
+  #   'Northern Ireland' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'northern-ireland'),
+  #   'Scotland' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'scotland'),
+  #   'Wales' => Rails.application.routes.url_helpers.regional_strategy_path('en', 'wales')
+  # }
 
-  WHY_STRATEGY_NEEDED = {
-    'What The Strategy needs to achieve' => Rails.application.routes.url_helpers.article_path('en', 'what-strategy-needs-achieve'),
-    'Evidence and analysis' => Rails.application.routes.url_helpers.article_path('en', 'evidence-analysis'),
-    'Summary of key statistics on Financial Capability' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf',
-    'Strategy development' => Rails.application.routes.url_helpers.article_path('en', 'development-strategy')
-  }
+  # WHY_STRATEGY_NEEDED = {
+  #   'What The Strategy needs to achieve' => Rails.application.routes.url_helpers.article_path('en', 'what-strategy-needs-achieve'),
+  #   'Evidence and analysis' => Rails.application.routes.url_helpers.article_path('en', 'evidence-analysis'),
+  #   'Summary of key statistics on Financial Capability' => 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/070/original/Finanical_Capability_-_Key_Statistics.pdf',
+  #   'Strategy development' => Rails.application.routes.url_helpers.article_path('en', 'development-strategy')
+  # }
 
   HOW_STRATEGY_DELIVERED = {
     'The role of the steering groups' => Rails.application.routes.url_helpers.article_path('en', 'role-steering-groups'),
@@ -127,8 +127,8 @@ module NavigationHelper
     render 'navigation/level_2_extended_heading', text: text
   end
 
-  def render_level_2_subcategory_link(text, link)
-    render 'navigation/level_2_subcategory_link', text: text, link: link
+  def render_level_2_subcategory_link(text, link, page_type)
+    render 'navigation/level_2_subcategory_link', text: text, link: path(link, page_type)
   end
 
   def render_level_3_heading(text)
@@ -141,5 +141,15 @@ module NavigationHelper
 
   def render_level_3_subcategory_link (text, link)
     render 'navigation/level_3_subcategory_link', text: text, link: link
+  end
+
+  private
+
+  def path(link, page_type)
+    case page_type
+      when 'regional_strategy' then regional_strategy_path('en', link)
+      when 'article' then article_path('en', link)
+      when 'static' then link
+    end
   end
 end

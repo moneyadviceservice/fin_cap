@@ -13,7 +13,7 @@
             <%= render_level_2_subcategory_heading('Our approach', article_path('en', 'our-approach')) %>
 
             <% NavigationHelper::OUR_APPROACH.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+              <%= render_level_2_subcategory_link(text, link, 'article') %>
             <% end %>
           </ul>
         </li>
@@ -23,7 +23,7 @@
             <%= render_level_2_subcategory_heading('Find Evidence', article_path('en', 'find-evidence')) %>
 
             <% NavigationHelper::FIND_EVIDENCE.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+              <%= render_level_2_subcategory_link(text, link, 'article') %>
             <% end %>
           </ul>
         </li>
@@ -33,7 +33,7 @@
             <%= render_level_2_subcategory_heading('Evaluate your programme', article_path('en', 'evaluate-your-programme')) %>
 
             <% NavigationHelper::EVALUATE_PROGRAMME.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+              <%= render_level_2_subcategory_link(text, link, 'article') %>
             <% end %>
           </ul>
         </li>
@@ -43,7 +43,7 @@
             <%= render_level_2_subcategory_heading('What Works Programme', '/en/what-works/programme') %>
 
             <% NavigationHelper::WHAT_WORKS.each do |text, link| %>
-              <%= render_level_2_subcategory_link(text, link) %>
+              <%= render_level_2_subcategory_link(text, link, 'article') %>
             <% end %>
           </ul>
         </li>
