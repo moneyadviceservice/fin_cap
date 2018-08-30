@@ -19,6 +19,32 @@ $chevron-ratio: 1.5;
   }
 }
 
+$size: 5px;
+$circleSize: 17px;
+.icon--arrow {
+  position: relative;
+  padding-right: 20px;
+
+  &:before, 
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:before {
+    content: '';
+    background-color: $primary-blue-dark;
+    border-radius: 50%;
+    width: $circleSize;
+    height: $circleSize;
+  }
+  &:after {
+    @include chevron(right, $color-white, $size);
+    transform: translate(-3px, -5px);
+  }
+}
+
 %icon {
   // prevent IE8 from breaking when extending .icon into a :before it doesn't understand
   background-image: image_url('icon-sprite.png');
@@ -41,12 +67,6 @@ $chevron-ratio: 1.5;
 .icon--external-link--white {
   background-position: 0px -15px;
   width: 16px;
-  height: 18px;
-}
-
-.icon--arrow {
-  background-position: -15px 2px;
-  width: 18px;
   height: 18px;
 }
 
