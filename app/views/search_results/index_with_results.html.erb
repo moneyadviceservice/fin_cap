@@ -1,8 +1,11 @@
-<div class="l-constrained">
-  <ul class="search-results">
-    <%= render(partial: 'search_result', collection: @search_results) %>
-  </ul>
-  <div class="pagination__wrap">
-    <%= render 'pagination', search_results: @search_results %>
-  </div>
+<div class="l-constrained inpage">
+  <h1 role="heading">Search results</h1>
+  <%= render 'shared/search', search_in_page_header: false %>
 </div>
+<div class="l-constrained" data-dough-component="SearchFocus">
+  <ol class="search-results">
+    <%= render partial: 'search_result', collection: @search_results %>
+  </ol>
+  <%= render 'pagination', search_results: @search_results %>
+</div>
+

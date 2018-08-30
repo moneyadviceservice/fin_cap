@@ -40,3 +40,8 @@ label input[type=checkbox] {
   margin: 0 $baseline-unit;
 }
 
+.inpage {
+  display: block;
+  padding: $baseline-unit*8 $baseline-unit*4;
+}
+
