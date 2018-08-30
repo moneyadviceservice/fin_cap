@@ -1,3 +1,24 @@
+$chevron-ratio: 1.5;
+
+@mixin chevron($direction, $colour, $size: 0.375rem) {
+  content: "";
+  border: $size solid transparent;
+
+  @if $direction == right {
+    border-left-color: $colour;
+    border-left-width: $size * $chevron-ratio;
+    border-right: none;
+  } @else if $direction == down {
+    border-top-color: $colour;
+    border-top-width: $size * $chevron-ratio;
+    border-bottom: none;
+  } @else if $direction == left {
+    border-right-color: $colour;
+    border-right-width: $size * $chevron-ratio;
+    border-left: none;
+  }
+}
+
 %icon {
   // prevent IE8 from breaking when extending .icon into a :before it doesn't understand
   background-image: image_url('icon-sprite.png');
