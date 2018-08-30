@@ -25,3 +25,19 @@
 .search-results__evidence-type {
   margin: $baseline-unit*3 0;
 }
+
+input.search__input--inpage {
+  box-sizing: border-box;
+  border: #aaa 1px solid;
+  width: 100%;
+  padding-right: 35px;
+  padding-left: 20px;
+
+  @include respond-to($mq-m) {
+    width: 50%;
+  }
+}
+
+.search__submit--icon {
+  display: none;
+}
