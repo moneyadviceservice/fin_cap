@@ -1,19 +1,7 @@
-<div class='l-pagination'>
+<div class='l-pagination pagination'>
   <% present(search_results, SiteSearchPresenter) do |template| %>
-    <% unless template.first_page? %>
-      <%= link_to search_results_path(query: params[:query], page: template.previous_page), class: 'btn btn--primary button--previous' do %>
-        <span class="button--compact__text">Previous</span>
-        <span class="icon icon--left-chevron"></span>
-      <% end %>
-    <% end %>
-
+    <%= template.previous_page %>
     <%= template.pagination_information %>
-
-    <% unless template.last_page? %>
-      <%= link_to search_results_path(query: params[:query], page: template.next_page), class: 'btn btn--primary button--next' do %>
-        <span class="button--compact__text">Next</span>
-        <span class="icon icon--left-chevron"></span>
-      <% end %>
-    <% end %>
+    <%= template.next_page %>
   <% end %>
 </div>
