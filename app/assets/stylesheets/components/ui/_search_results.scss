@@ -25,3 +25,15 @@
 .search-results__evidence-type {
   margin: $baseline-unit*3 0;
 }
+
+.search__container .search__input {
+  box-sizing: border-box;
+  border: #aaa 1px solid;
+  width: 50%;
+  padding-right: 35px;
+  padding-left: 20px;
+}
+
+.search__container .search__submit--icon {
+  display: none;
+}
