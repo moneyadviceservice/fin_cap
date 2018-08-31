@@ -67,7 +67,36 @@
   @include respond-to($mq-m) {
     display: block;
     padding: 0 0 30%;
-    background: gray;
+    background: no-repeat center;
+    background-size: cover;
+
+    &.children-and-young-people {
+      background-image: image-url('nav/Children_522w.jpg');
+    }
+
+    &.young-adults {
+      background-image: image-url('nav/YoungAdult_522w.jpg');
+    }
+
+    &.working-age {
+      background-image: image-url('nav/WorkingAge_522w.jpg');
+    }
+
+    &.retirement-planning {
+      background-image: image-url('nav/RetirementPlanning_522w.jpg');
+    }
+
+    &.people-retirement {
+      background-image: image-url('nav/Retirement_522w.jpg');
+    }
+
+    &.people-financial-difficulties {
+      background-image: image-url('nav/Struggling_522w.jpg');
+    }
+
+    &.people-trying-save {
+      background-image: image-url('nav/Saving_522w.jpg');
+    }
   }
 }
 
