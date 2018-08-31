@@ -1,7 +1,10 @@
 class TaggedNews
+  UNLIMITED = 999_999
+
   def self.all(article)
     news_items = Mas::Cms::News.all(
       params: {
+        per_page: UNLIMITED,
         document_type: [Mas::Cms::News::PAGE_TYPE],
         tag: Array(article.tags)
       }
