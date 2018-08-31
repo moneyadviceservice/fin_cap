@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/documents.json?blocks%5B%5D%5Bidentifier%5D=topics&blocks%5B%5D%5Bvalue%5D=Saving&document_type%5B%5D=Insight&document_type%5B%5D=Evaluation&document_type%5B%5D=Review&keyword=Financial+well-being%3A+the+employee&page=1&per_page=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 10747) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Thu, 30 Aug 2018 16:07:17 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"8f410ab9362478be043637b897a84b42"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 349afc28-a161-4ec6-ae52-9371cbe9e1db
+      x-runtime:
+      - '0.235224'
+    body:
+      encoding: UTF-8
+      string: '{"documents":[{"label":"Financial well-being: the employee view","slug":"financial-well-being-the-employee-view","full_path":"/en/insights/financial-well-being-the-employee-view","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"insight","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eContext\u003c/p\u003e\n\n\u003cp\u003eThe
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of financial awareness or absence of\nemployee benefits
+        can affect work performance.\nIn addition, the perception that their contributions
+        are not being\nacknowledged can have an impact on employee self-esteem, health
+        and\nproductivity.\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"overview","content":"\u003cp\u003eThe
+        survey explores employees’ views on attitudes to finances.\n        Stress
+        caused by pay levels, lack of financial awareness or absence of\n        employee
+        benefits can affect work performance.\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"countries","content":"\u003cp\u003eUnited
+        Kingdom\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://www.cipd.co.uk/Images/financial-well-being-employee-view-report_tcm18-17439.pdf\"\u003eFinancial
+        well-being: the employee view - full report\u003c/a\u003e’\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"contact_information","content":"\u003cp\u003eMASPD
+        (in partnership with Company S.A)\n        T +44 (0)20 1234 5678 F +44 (0)20
+        4567 1234\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2015\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"topics","content":"\u003cp\u003eSaving\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"topics","content":"\u003cp\u003eFinancial
+        Capability\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eOver-indebted
+        people\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"},{"identifier":"data_types","content":"\u003cp\u003eQualitative\u003c/p\u003e\n","created_at":"2018-08-30T14:25:56.000Z","updated_at":"2018-08-30T14:25:57.000Z"}],"translations":[]}],"meta":{"results":1,"page":1,"per_page":20,"total_pages":1}}'
+    http_version: 
+  recorded_at: Thu, 30 Aug 2018 16:07:17 GMT
+recorded_with: VCR 4.0.0

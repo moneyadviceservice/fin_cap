@@ -26,6 +26,10 @@ module UI::Pages
     class SearchFilter < SitePrism::Section
       element :title, 'legend'
       sections :filter_inputs, FilterInput, 'label'
+
+      def find_filter(value)
+        filter_inputs.find {|label| label.input.value == value}
+      end
     end
 
     set_url '{/locale}/evidence_hub'

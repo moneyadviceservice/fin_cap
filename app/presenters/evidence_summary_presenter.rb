@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/ClassLength
 class EvidenceSummaryPresenter < BasePresenter
   def link
     view.link_to title, full_path
@@ -103,6 +104,18 @@ class EvidenceSummaryPresenter < BasePresenter
     strip_text(countries)
   end
 
+  def client_group_filter_params(value)
+    search_form_params('client_groups' => [value.humanize])
+  end
+
+  def topic_filter_params(value)
+    search_form_params('topics' => [value.humanize])
+  end
+
+  def measured_outcome_filter_params(value)
+    search_form_params('measured_outcomes' => [value.humanize])
+  end
+
   private
 
   def translate_field(field)
@@ -116,4 +129,11 @@ class EvidenceSummaryPresenter < BasePresenter
   def strip_text(text)
     view.strip_tags(text)
   end
+
+  def search_form_params(filter_params)
+    {
+      'evidence_summary_search_form' => filter_params
+    }
+  end
 end
+# rubocop:enable Metrics/ClassLength
