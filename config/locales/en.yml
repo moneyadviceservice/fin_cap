@@ -30,6 +30,10 @@ en:
           - Social housing tenants
           - Teachers / practitioners
           - Other
+        evidence_types:
+          - Evaluation
+          - Insight
+          - Review
         topics:
           - Saving
           - Pensions and retirement planning
