@@ -43,18 +43,19 @@ This is a standalone application  and requires data from the [MAS CMS](https://g
   Navigate to your local CMS directory and start the application, e.g.
 
   ```sh
-  $ rails s
+  $ APP_NAME='FINCAP' rails s
   ```
-  Ensure that the FinCap application and the CMS application run on different
-  servers. By running `rails s` the FinCap application will be available on the
-  default port of `3000`. You can set the port for your local CMS in your `.env`
-  file.
 
   2. Start the application on a port which is different to the port you started the CMS on, e.g.
 
   ```sh
-  $ foreman start
+  $ rails s -p 5000
   ```
+
+  Ensure that the FinCap application and the CMS application run on different
+  servers. By running `rails s` the FinCap application will be available on the
+  default port of `3000`. You can set the port for your local CMS in your `.env`
+  file. Eg `PORT=5000`
 
   To access the application locally in your browser, navigate to the port on which you started the application, e.g. [http://localhost:5000/](http://localhost:5000).
 
