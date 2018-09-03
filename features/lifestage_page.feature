@@ -1,6 +1,6 @@
 Feature: Lifestage page
-  As a user, 
-  I want to be able to read a lifestage page and easily find related content, 
+  As a user,
+  I want to be able to read a lifestage page and easily find related content,
   so that I can gather as much information as I require on this subject.
 
   Scenario: Visiting an Lifestage page
@@ -25,7 +25,7 @@ Feature: Lifestage page
     And I should see the research box
     And I should see the strategy box with
       | title            | text                                         | link                               |
-      | Strategy title   | Research suggests that young adults typically display lower levels of financial capability than older age groups. | /exectutive+summary.pdf | 
+      | Strategy title   | Research suggests that young adults typically display lower levels of financial capability than older age groups. | /exectutive+summary.pdf |
     And I should see the life stages box
     And I should see the steering group links
       | text                | link                       |

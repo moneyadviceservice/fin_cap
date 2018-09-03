@@ -26,14 +26,6 @@ end
 
 class Mas::Cms::News < Mas::Cms::Article
   PAGE_TYPE = 'news'.freeze
-
-  def published_date
-    content = non_content_blocks.find do |block|
-      block.identifier == 'order_by_date'
-    end.content
-
-    Date.parse(ActionView::Base.full_sanitizer.sanitize(content.strip))
-  end
 end
 
 class Mas::Cms::Review < Mas::Cms::Document

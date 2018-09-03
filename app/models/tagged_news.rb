@@ -1,16 +1,11 @@
 class TaggedNews
-  def self.all(article)
-    news_items = Mas::Cms::News.all(
+  def self.all(page)
+    Mas::Cms::News.all(
       params: {
         document_type: [Mas::Cms::News::PAGE_TYPE],
-        tag: Array(article.tags)
+        tag: Array(page.tags),
+        order_by_date: true
       }
-    ).reject { |news_item| news_item.slug == article.slug }
-
-    sort_by_published_date(news_items)
-  end
-
-  def self.sort_by_published_date(news_items)
-    news_items.sort_by(&:published_date).reverse
+    ).reject { |news_item| news_item.slug == page.slug }
   end
 end
