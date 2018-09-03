@@ -3,7 +3,7 @@ RSpec.describe EvidenceSummarySearchForm do
 
   describe '.checkbox_filters' do
     it 'returns an array of the multi-select filters' do
-      filters = %w[client_groups topics countries_of_delivery]
+      filters = %w[client_groups evidence_types topics countries_of_delivery]
 
       expect(described_class.checkbox_filters).to eq(filters)
     end

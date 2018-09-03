@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/documents.json?document_type%5B%5D=Insight&document_type%5B%5D=Review&keyword=&page=1&per_page=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (bichito; marc; 16515) ruby/2.4.2 (198; x86_64-linux)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Thu, 06 Sep 2018 13:22:37 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"bed9ec4523a20ce70ecf28d082bd8b53"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - '02106922-7cc9-401d-a074-247126ebb460'
+      x-runtime:
+      - '0.235995'
+    body:
+      encoding: UTF-8
+      string: '{"documents":[{"label":"Financial well-being: the employee view","slug":"financial-well-being-the-employee-view","full_path":"/en/insights/financial-well-being-the-employee-view","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"insight","related_content":{"latest_blog_post_links":[{"title":"How
+        much deposit do I need for a mortgage?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-deposit-need-mortgage"},{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eContext\u003c/p\u003e\n\n\u003cp\u003eThe
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of financial awareness or absence of\nemployee benefits
+        can affect work performance.\nIn addition, the perception that their contributions
+        are not being\nacknowledged can have an impact on employee self-esteem, health
+        and\nproductivity.\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"overview","content":"\u003cp\u003eThe
+        survey explores employees’ views on attitudes to finances.\n        Stress
+        caused by pay levels, lack of financial awareness or absence of\n        employee
+        benefits can affect work performance.\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"countries","content":"\u003cp\u003eUnited
+        Kingdom\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://www.cipd.co.uk/Images/financial-well-being-employee-view-report_tcm18-17439.pdf\"\u003eFinancial
+        well-being: the employee view - full report\u003c/a\u003e’\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"contact_information","content":"\u003cp\u003eMASPD
+        (in partnership with Company S.A)\n        T +44 (0)20 1234 5678 F +44 (0)20
+        4567 1234\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2015\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"topics","content":"\u003cp\u003eSaving\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"topics","content":"\u003cp\u003eFinancial
+        Capability\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eOver-indebted
+        people\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"data_types","content":"\u003cp\u003eQualitative\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"}],"translations":[]},{"label":"Moving
+        forward together: peer support for people with problem debt","slug":"moving-forward-together-peer-support-for-people-with-problem-debt","full_path":"/en/insights/moving-forward-together-peer-support-for-people-with-problem-debt","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"insight","related_content":{"latest_blog_post_links":[{"title":"How
+        much deposit do I need for a mortgage?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-deposit-need-mortgage"},{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eContext\u003c/p\u003e\n\n\u003cp\u003eResearch
+        has found that there remains a real stigma around seeking advice\nfor debt,
+        with many people feeling that doing so means that they have\n ‘failed’, but
+        that talking about debt problems is also cathartic.\nThis suggests there is
+        potential value in peer-support for over-indebted\npeople, based on models
+        in other fields such as weight loss.\u003c/p\u003e\n\n\u003cp\u003ePeer support
+        is usually intended to encourage behaviour change and is\nprovided by peer
+        mentors (those who have led or given support within\npeer support programmes).\u003c/p\u003e\n\n\u003cp\u003eSuch
+        innovation, however, needs an evidence base, so research was needed\nto explore
+        the peer-support landscape and establish how it helps people\nto resolve their
+        difficulties and change their behaviour.\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2017\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://masassets.blob.core.windows.net/cms/files/000/000/631/original/MAS_MovingForwardTogether_Report.pdf\"\u003eMoving
+        forward together: peer support for people with problem debt - full report\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"contact_information","content":"\u003cp\u003epeersupport@moneyadviceservice.org.uk\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"overview","content":"\u003cp\u003eResearch
+        has found that there remains a real stigma around seeking\n        advice
+        for debt, with many people feeling that doing so means that\n        they
+        have ‘failed’, but that talking about debt problems is also\n        cathartic.\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"countries","content":"\u003cp\u003eEngland\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"topics","content":"\u003cp\u003eCredit
+        Use and Debt\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eOver-indebted
+        people\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eWorking
+        age (18 - 65)\u003c/p\u003e\n","created_at":"2018-08-30T19:44:13.000Z","updated_at":"2018-08-30T19:44:15.000Z"}],"translations":[]},{"label":"Raising
+        household saving","slug":"raising-household-saving","full_path":"/en/reviews/raising-household-saving","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"review","related_content":{"latest_blog_post_links":[{"title":"How
+        much deposit do I need for a mortgage?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-deposit-need-mortgage"},{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":["how-can-we-improve-the-financial-capability-of-young-adults"],"blocks":[{"identifier":"content","content":"\u003cp\u003eContext\u003c/p\u003e\n\n\u003cp\u003eThere
+        is continuing concern in the UK and internationally that many individuals
+        are making insufficient savings, especially for retirement. This has long
+        been a key issue in UK policy discussions – demonstrated by the continual
+        modifications to the retirement pension system throughout the 21st century
+        (and before).\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2012\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://www.britac.ac.uk/sites/default/files/BRI1089_household_saving_report_02.12_WEB_FINAL.pdf\"\u003eRaising
+        household saving - full report\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"contact_information","content":"\u003cp\u003eJohn
+        Smith, John Smith\u003c/p\u003e\n\n\u003cp\u003eInstitute for Studies\u003c/p\u003e\n\n\u003cp\u003ehttps://www.company-name.org.uk/\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"overview","content":"\u003cp\u003eBased
+        on an analysis of international evidence, this report examines in detail what
+        is known – and what is not known – about the effectiveness of different sorts
+        of interventions designed to raise household savings.\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"countries","content":"\u003cp\u003eInternational
+        review\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"topics","content":"\u003cp\u003eSaving\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"topics","content":"\u003cp\u003ePensions
+        and Retirement Planning\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"topics","content":"\u003cp\u003eFinancial
+        Education\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eChildren
+        (3 - 11)\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eYoung
+        people (12 - 16)\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eParents
+        / families\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eYoung
+        adults (17 - 24)\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"},{"identifier":"data_types","content":"\u003cp\u003eSystematic
+        review\u003c/p\u003e\n","created_at":"2018-08-30T19:44:14.000Z","updated_at":"2018-08-30T19:44:16.000Z"}],"translations":[]}],"meta":{"results":3,"page":1,"per_page":20,"total_pages":1}}'
+    http_version: 
+  recorded_at: Thu, 06 Sep 2018 13:22:37 GMT
+recorded_with: VCR 4.0.0
