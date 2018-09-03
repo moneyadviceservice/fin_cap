@@ -56,7 +56,7 @@
   padding-left: calc(#{$chevron-size * $chevron-ratio} + #{$default-gutter});
 
   &:before {
-    @include chevron(left, $primary-orange);
+    @include chevron(left, $primary-orange, $chevron-size);
     left: 0;
   }
 }

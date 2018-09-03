@@ -107,7 +107,7 @@
   color: $color-white;
 
   &:before {
-    @include chevron(left, $color-white);
+    @include chevron(left, $color-white, $chevron-size);
 
     display: block;
     position: absolute;
@@ -286,7 +286,7 @@
   }
 
   &:after {
-    @include chevron(right, $primary-orange);
+    @include chevron(right, $primary-orange, $chevron-size);
 
     display: block;
     position: absolute;

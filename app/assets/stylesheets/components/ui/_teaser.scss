@@ -39,6 +39,13 @@
 
 .teaser-box__image {
   @include column(12);
+  max-height: 150px; // This will be removed via js if the content is bigger
+  min-height: 150px; 
+  
+  @include respond-to($mq-s) {
+    max-height: 300px; // This will be removed via js if the content is bigger
+    min-height: 300px; 
+  }
 
   .object-fit & {
     object-fit: cover;
@@ -50,12 +57,13 @@
   padding: $baseline-unit*2 $baseline-unit;
   .object-fit & {
     display: flex;
-    flex-direction: column;
-    flex-grow: 2;
+    flex-direction: column; 
+    flex-grow: 1;
   }
 }
 
 .teaser-box__title {
+  margin-top: 0;
   margin-bottom: $baseline-unit;
 }
 
@@ -88,6 +96,7 @@
   }
 
   .teaser-box__image {
+    background: yellow;
     @include respond-to($mq-m) {
       width: 50%;
 
