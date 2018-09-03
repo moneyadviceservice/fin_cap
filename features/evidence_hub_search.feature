@@ -11,6 +11,7 @@ Feature: Evidence Hub Search
       | Field               | Value                                                        |
       | Year of publication | All years, Last 2 years, Last 5 years, More than 5 years ago |
       | Client group        | Children (3 - 11), Young people (12 - 16), Parents / families, Young adults (17 - 24), Working age (18 - 65), Older people (65+), Over-indebted people, Social housing tenants, Teachers / practitioners, Other |
+      | Evidence type       | Evaluation, Insight, Review |
       | Topic               | Saving, Pensions and retirement planning, Credit use and debt, Budgeting and keeping track, Insurance and protection, Financial education, Financial capability |
       | Country of delivery | United Kingdom, England, Northern Ireland, Scotland, Wales, USA, Other |
     And I should see the "first" evidence summary as
@@ -83,6 +84,40 @@ Feature: Evidence Hub Search
       | countries           | England                                                            |
       | year of publication | 2017                                                               |
     And I should see the "first" evidence summary icon linking to "Insight" article
+
+  Scenario: Search by single evidence type filter
+    When I search the evidence hub for summaries of type "Evaluation"
+    Then I should see "1" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                       |
+      | document title      | Looking after the pennies   |
+      | evidence type       | Evaluation                  |
+      | topics              | Budgeting and keeping track |
+      | countries           | United Kingdom              |
+      | year of publication | 2017                        |
+    And I should see the "first" evidence summary icon linking to "Evaluation" article
+
+  Scenario: Search by multiple evidence types filter
+    When I search the evidence hub for summaries of types "Insight" and "Review"
+    Then I should see "3" evidence summary
+    And I should see the "first" evidence summary as
+      | Field               | Value                                                    |
+      | document title      | Financial well-being: the employee view                  |
+      | overview            | Stress caused by pay levels, lack of financial awareness |
+      | evidence type       | Insight                                                  |
+      | topics              | Saving                                                   |
+      | countries           | United Kingdom                                           |
+      | year of publication | 2015                                                     |
+    And I should see the "first" evidence summary icon linking to "Insight" article
+    And I should see the "third" evidence summary as
+      | Field               | Value                                                         |
+      | document title      | Raising household saving                                      |
+      | overview            | Based on an analysis of international evidence                |
+      | evidence type       | Review                                                        |
+      | topics              | Saving, Pensions and Retirement Planning, Financial Education |
+      | countries           | International review                                          |
+      | year of publication | 2012                                                          |
+    And I should see the "third" evidence summary icon linking to "Review" article
 
   Scenario: Clearing the filters for a filtered search
     Given I search based on some filters

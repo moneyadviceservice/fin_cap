@@ -187,5 +187,20 @@ RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
         expect(subject.parse).to eq(expected_result)
       end
     end
+
+    context 'with a filter included in the list of ignored' do
+      let(:params) do
+        {
+          'evidence_types' => ['Insight'],
+          'topics' => ['Saving']
+        }
+      end
+
+      it 'excludes it from the parsed output' do
+        expect(subject.parse).to eq(
+          blocks: [{ identifier: 'topics', value: 'Saving' }]
+        )
+      end
+    end
   end
 end

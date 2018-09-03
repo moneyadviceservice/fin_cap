@@ -19,6 +19,19 @@ When('I search the evidence hub for summaries published in the last 2 years') do
   step %(I press search)
 end
 
+When('I search the evidence hub for summaries of type {string}') do |type|
+  step %(I visit the evidence hub search page)
+  evidence_summaries_page.send("#{type.downcase}_filter").set(true)
+  step %(I press search)
+end
+
+When('I search the evidence hub for summaries of types {string} and {string}') do |first_type, second_type|
+  step %(I visit the evidence hub search page)
+  evidence_summaries_page.send("#{first_type.downcase}_filter").set(true)
+  evidence_summaries_page.send("#{second_type.downcase}_filter").set(true)
+  step %(I press search)
+end
+
 When('I go to the next evidence hub page') do
   evidence_summaries_page.next_page.click
 end

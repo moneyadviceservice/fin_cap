@@ -1,6 +1,7 @@
 class EvidenceHub::SearchFormParamParser
   KEY_INFO_FILTER = 'measured_outcomes'.freeze
   MULTI_OPTION_FILTERS = EvidenceSummarySearchForm.checkbox_filters
+  IGNORED_FILTERS = ['evidence_types'].freeze
 
   attr_accessor :params
 
@@ -27,7 +28,7 @@ class EvidenceHub::SearchFormParamParser
   private
 
   def parse_filters(filters)
-    blocks = blocks_hash(filters).flatten
+    blocks = blocks_hash(allowed_filters(filters)).flatten
 
     return {} if blocks.blank?
 
@@ -66,6 +67,10 @@ class EvidenceHub::SearchFormParamParser
 
   def key_info_filters(hash)
     hash[KEY_INFO_FILTER]
+  end
+
+  def allowed_filters(filters)
+    filters.reject { |k, _| IGNORED_FILTERS.include? k }
   end
 
   def convert_key_info_filters(key_info)

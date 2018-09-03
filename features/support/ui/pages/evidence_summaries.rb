@@ -51,6 +51,12 @@ module UI::Pages
             '#evidence_summary_search_form_client_groups_children-3-11'
     element :last_2_years_filter,
             '#evidence_summary_search_form_year_of_publication_last-2-years'
+    element :evaluation_filter,
+            '#evidence_summary_search_form_evidence_types_evaluation'
+    element :insight_filter,
+            '#evidence_summary_search_form_evidence_types_insight'
+    element :review_filter,
+            '#evidence_summary_search_form_evidence_types_review'
     element :clear_filters_button, '.sidepanel__clear-filters'
 
     element :thematic_review_message, '.evidence-hub__thematic-review-message'

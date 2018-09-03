@@ -13,6 +13,7 @@ class EvidenceHubController < EvidenceSummariesController
     params.fetch(:evidence_summary_search_form, {}).permit(
       :keyword,
       :year_of_publication,
+      evidence_types: [],
       client_groups: [],
       topics: [],
       countries_of_delivery: [],
@@ -29,11 +30,7 @@ class EvidenceHubController < EvidenceSummariesController
   private
 
   def form_params
-    form_params = {
-      document_type: DOCUMENT_TYPES,
-      page: params[:page] || PAGINATION_DEFAULT_PAGE,
-      per_page: params[:per_page] || PAGINATION_PER_PAGE
-    }
+    form_params = form_base_params
     form_params[:tag] = params[:tag] if params[:tag].present?
 
     if clear_search?
@@ -41,6 +38,15 @@ class EvidenceHubController < EvidenceSummariesController
     else
       form_params.merge(evidence_summary_search_form_params)
     end
+  end
+
+  def form_base_params
+    {
+      document_type:
+        evidence_summary_search_form_params[:evidence_types] || DOCUMENT_TYPES,
+      page: params[:page] || PAGINATION_DEFAULT_PAGE,
+      per_page: params[:per_page] || PAGINATION_PER_PAGE
+    }
   end
 
   def search_params
