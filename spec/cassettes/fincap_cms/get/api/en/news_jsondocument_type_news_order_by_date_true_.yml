@@ -1,0 +1,155 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/news.json?document_type%5B%5D=news&order_by_date=true&
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (M-C02W80LWGWN.local; giuseppelobraico; 36434) ruby/2.4.2
+        (198; x86_64-darwin17)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Mon, 03 Sep 2018 12:01:49 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"efc2c3ee7fd2892d4c17830646f5a1e8"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - cbdeeeeb-865e-4ff4-b3cf-731b919b240e
+      x-runtime:
+      - '2.649742'
+    body:
+      encoding: UTF-8
+      string: '{"documents":[{"label":"News 1","slug":"news-1","full_path":"/en/news/news-1","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-11-19
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        2","slug":"news-2","full_path":"/en/news/news-2","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-10-18
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        3","slug":"news-3","full_path":"/en/news/news-3","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-09-17
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        4","slug":"news-4","full_path":"/en/news/news-4","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-08-16
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"Press
+        Release: A new way to pay!","slug":"press-release-a-new-way-to-pay","full_path":"/en/news/press-release-a-new-way-to-pay","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":["mobile-payments","secure-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThe
+        way in which payments are made in the UK is set to undergo the most radical\nchange
+        since the 1960s. This follows the \u003ca href=\"https://www.paymentsforum.uk/final-strategy\"\u003elaunch
+        of a new strategy\u003c/a\u003e to give people\ngreater control over how they
+        manage their day-to-day finances and help stamp\nout financial fraud.\nIn
+        the first industry-wide initiative of its kind, the Payments Strategy Forum,\nwhose
+        members include consumer groups, businesses, fintechs, UK banks and\nbuilding
+        societies, today recommends a new way of making payments that promises\ngreater
+        protection and security for consumers and businesses.(2)\nThe Strategy gives:\n*   More
+        control and assurance for consumers over how they manage their finances\n*   Safer
+        and more secure banking\n*   Opportunities for new banks and Fintechs to compete
+        and offer innovative services that meet the needs of tomorrow’s users\nNotes
+        to editors\n1.  Source: The Payment Systems Regulator\n2.  The Payments Strategy
+        Forum (the Forum) was announced by the Payment Systems Regulator (PSR) in
+        its\nPolicy Statement published in March 2015.\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-07-26
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        5","slug":"news-5","full_path":"/en/news/news-5","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-07-15
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        6","slug":"news-6","full_path":"/en/news/news-6","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-06-14
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        7","slug":"news-7","full_path":"/en/news/news-7","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-05-13
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:53.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        8","slug":"news-8","full_path":"/en/news/news-8","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-04-12
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        9","slug":"news-9","full_path":"/en/news/news-9","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-03-11
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"News
+        10","slug":"news-10","full_path":"/en/news/news-10","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-02-10
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]},{"label":"Scottish
+        Financial Education Week","slug":"scottish-financial-education-week","full_path":"/en/news/scottish-financial-education-week","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"},{"title":"Release
+        your inner star baker and save","path":"https://www.moneyadviceservice.org.uk/blog/release-your-inner-star-baker-and-save"},{"title":"5
+        things students can teach YOU about money","path":"https://www.moneyadviceservice.org.uk/blog/5-things-students-can-teach-you-about-money"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eA
+        great news!\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2017-03-15
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-03T10:42:54.000Z","updated_at":"2018-09-03T10:42:54.000Z"}],"translations":[]}],"meta":{"results":12,"page":1,"per_page":20,"total_pages":1}}'
+    http_version: 
+  recorded_at: Mon, 03 Sep 2018 12:01:49 GMT
+recorded_with: VCR 4.0.0

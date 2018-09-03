@@ -1,7 +1,4 @@
 class NewsController < FincapTemplatesController
-  LATEST_NEWS_DOCUMENT_TYPE = 'latest_news'.freeze
-  NEWS_DOCUMENT_TYPE = 'news'.freeze
-
   def resource
     NewsTemplate.new(Mas::Cms::News.find(params[:id]))
   end
@@ -9,16 +6,18 @@ class NewsController < FincapTemplatesController
 
   def index
     document = Mas::Cms::LatestNews.all(
-      params: { document_type: [LATEST_NEWS_DOCUMENT_TYPE] }
+      params: { document_type: [Mas::Cms::LatestNews::PAGE_TYPE] }
     ).first
     @index_page = LatestNewsTemplate.new(document)
   end
 
   def resource_collection
     documents = Mas::Cms::News.all(
-      params: { document_type: [NEWS_DOCUMENT_TYPE] }.merge(year_param)
+      params: {
+        document_type: [Mas::Cms::News::PAGE_TYPE],
+        order_by_date: true
+      }.merge(year_param)
     )
-    documents = TaggedNews.sort_by_published_date(documents)
     documents.map { |document| NewsTemplate.new(document) }
   end
   helper_method :resource_collection
