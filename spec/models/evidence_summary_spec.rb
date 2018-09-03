@@ -285,4 +285,38 @@ RSpec.describe EvidenceSummary do
       end
     end
   end
+
+  describe '#recent?' do
+    let(:blocks) do
+      [
+        {
+          'identifier' => 'content', 'content' => '<p>Content</p>'
+        }.merge(created_at)
+      ]
+    end
+
+    context 'when the date is later than 90 days ago' do
+      let(:created_at) { { 'created_at' => (Time.current - 5.days).to_s } }
+
+      it 'returns true' do
+        expect(evidence_summary.recent?).to be_truthy
+      end
+    end
+
+    context 'when the date is earlier than 90 days ago' do
+      let(:created_at) { { 'created_at' => (Time.current - 90.days).to_s } }
+
+      it 'returns true' do
+        expect(evidence_summary.recent?).to be_falsey
+      end
+    end
+
+    context 'when there is no content block' do
+      let(:created_at) { {} }
+
+      it 'returns empty string' do
+        expect(evidence_summary.recent?).to be_falsey
+      end
+    end
+  end
 end

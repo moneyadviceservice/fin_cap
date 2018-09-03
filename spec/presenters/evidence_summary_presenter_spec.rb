@@ -327,4 +327,26 @@ RSpec.describe EvidenceSummaryPresenter do
       expect(presenter.topic_filter_params('bar')).to eq expected_result
     end
   end
+
+  describe '#new_css_class' do
+    before do
+      allow(evidence_summary).to receive(:recent?).and_return(recent?)
+    end
+
+    context 'when the evidence_summary is recently created' do
+      let(:recent?) { true }
+
+      it 'returns "is_new"' do
+        expect(presenter.new_css_class).to eq('is-new')
+      end
+    end
+
+    context 'when the evidence_summary has been around for awhile' do
+      let(:recent?) { false }
+
+      it 'returns an empty string' do
+        expect(presenter.new_css_class).to eq('')
+      end
+    end
+  end
 end
