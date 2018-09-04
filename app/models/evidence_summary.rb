@@ -1,6 +1,8 @@
 class EvidenceSummary
   extend ActiveModel::Translation
 
+  IS_NEW_PERIOD = 90
+
   def self.map(documents)
     documents.map { |document| new(document) }
   end
@@ -69,6 +71,10 @@ class EvidenceSummary
     find_blocks(:data_types)
   end
 
+  def recent?
+    created_at.present? && created_at > (Time.current - IS_NEW_PERIOD.days)
+  end
+
   private
 
   def find_blocks(block_identifier)
@@ -91,5 +97,9 @@ class EvidenceSummary
     else
       fields['content']
     end
+  end
+
+  def created_at
+    blocks.find(:content).first&.fetch('created_at', nil)
   end
 end

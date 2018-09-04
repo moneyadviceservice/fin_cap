@@ -116,6 +116,10 @@ class EvidenceSummaryPresenter < BasePresenter
     search_form_params('measured_outcomes' => [value.humanize])
   end
 
+  def new_css_class
+    recent? ? 'is-new' : ''
+  end
+
   private
 
   def translate_field(field)
