@@ -34,7 +34,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-  gem 'rubocop', '~> 0.54.0', require: false
+  gem 'rubocop', '~> 0.58.2', require: false
   gem 'site_prism'
   gem 'sqlite3'
   gem 'tzinfo-data'
