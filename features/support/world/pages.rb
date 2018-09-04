@@ -13,6 +13,7 @@ module World
       latest_news
       news
       regional_strategy
+      search_results
       thematic_review
       thematic_reviews_landing
       uk_strategy

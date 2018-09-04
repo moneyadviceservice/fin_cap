@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://f3tip4p8lj-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=Financial"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby (1.23.2); Ruby (2.4.2)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Tue, 28 Aug 2018 12:58:24 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 28 Aug 2018 12:58:25 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Timing-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Financial well-being: the employee view","description":"This
+        is an example description about a specific evidence summary.","keywords":[],"content":"<p>Context</p>\n\n<p>The
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of financial awareness or absence of\nemployee benefits
+        can affect work performance.\nIn addition, the perception that their contributions
+        are not being\nacknowledged can have an impact on employee self-esteem, health
+        and\nproductivity.</p>\n","published_at":null,"objectID":"/en/insights/financial-well-being-the-employee-view","_highlightResult":{"title":{"value":"<b>Financial</b>
+        well-being: the employee view","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]},"description":{"value":"This
+        is an example description about a specific evidence summary.","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>Context</p>\n\n<p>The
+        survey explores employees’ views on attitudes to finances.\nStress caused
+        by pay levels, lack of <b>financial</b> awareness or absence of\nemployee
+        benefits can affect work performance.\nIn addition, the perception that their
+        contributions are not being\nacknowledged can have an impact on employee self-esteem,
+        health and\nproductivity.</p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]}}},{"title":"Financial
+        Capability","description":null,"keywords":[],"content":"<p>Welcome to the
+        Financial Capability website, which provides the latest updates on the development
+        \nof the Financial Capability Strategy for the UK, as well as resources and
+        practical tools to help \nshare learning about what works.\nClick <a href=\"https://www.fincap.org.uk/fincapweek\">here</a>
+        for information about Talk Money Week, the annual event which showcases and
+        celebrates \nhow organisations are improving financial wellbeing and supporting
+        the work of the Financial \nCapability Strategy.</p>\n","published_at":null,"objectID":"/en/homepages/root","_highlightResult":{"title":{"value":"<b>Financial</b>
+        Capability","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]},"content":{"value":"<p>Welcome
+        to the <b>Financial</b> Capability website, which provides the latest updates
+        on the development \nof the <b>Financial</b> Capability Strategy for the UK,
+        as well as resources and practical tools to help \nshare learning about what
+        works.\nClick <a href=\"https://www.fincap.org.uk/fincapweek\">here</a> for
+        information about Talk Money Week, the annual event which showcases and celebrates
+        \nhow organisations are improving <b>financial</b> wellbeing and supporting
+        the work of the <b>Financial</b> \nCapability Strategy.</p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]}}},{"title":"People
+        in Financial difficulties","description":"This is an example paragraph containing
+        a description about a specific lifestage.","keywords":[],"content":"<p>This
+        is an example paragraph containing information about a specific lifestage.</p>\n","published_at":null,"objectID":"/en/lifestages/people_in_financial_difficulties","_highlightResult":{"title":{"value":"People
+        in <b>Financial</b> difficulties","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]},"description":{"value":"This
+        is an example paragraph containing a description about a specific lifestage.","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        is an example paragraph containing information about a specific lifestage.</p>\n","matchLevel":"none","matchedWords":[]}}},{"title":"How
+        can we improve the financial capability of young adults?","description":null,"keywords":[],"content":"<p>Thematic
+        Review content</p>\n","published_at":null,"objectID":"/en/thematic_reviews/how-can-we-improve-the-financial-capability-of-young-adults","_highlightResult":{"title":{"value":"How
+        can we improve the <b>financial</b> capability of young adults?","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]},"content":{"value":"<p>Thematic
+        Review content</p>\n","matchLevel":"none","matchedWords":[]}}},{"title":"UK
+        Strategy","description":null,"keywords":[],"content":"<p>This Strategy aims
+        to improve financial capability across the UK.\n        That means improving
+        people’s ability to manage money well,\n        both day to day and through
+        significant life events, and their ability\n        to handle periods of financial
+        difficulty. It will focus on developing\n        people’s financial skills
+        and knowledge, and improving their attitudes\n        and motivation. This,
+        combined with an inclusive financial system,\n        can help people achieve
+        the best possible financial wellbeing.</p>\n","published_at":null,"objectID":"/en/uk_strategies/uk-strategy","_highlightResult":{"title":{"value":"UK
+        Strategy","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>This
+        Strategy aims to improve <b>financial</b> capability across the UK.\n        That
+        means improving people’s ability to manage money well,\n        both day to
+        day and through significant life events, and their ability\n        to handle
+        periods of <b>financial</b> difficulty. It will focus on developing\n        people’s
+        <b>financial</b> skills and knowledge, and improving their attitudes\n        and
+        motivation. This, combined with an inclusive <b>financial</b> system,\n        can
+        help people achieve the best possible <b>financial</b> wellbeing.</p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]}}},{"title":"Latest
+        News","description":null,"keywords":[],"content":"<p>Here you will find all
+        the latest news and press releases relating to the Financial Capability Strategy
+        for the UK.</p>\n\n<p>Our research enables us to give people the best advice
+        on understanding financial matters and making choices when managing money.
+        Visit our corporate site for all our latest <a href=\"https://www.moneyadviceservice.org.uk/en/corporate/research\">Research
+        Reports</a>.</p>\n\n<p>Or, for a wide range of evaluation evidence, insight
+        and market research don’t forget to visit the new and improved Financial Capability
+        <a href=\"http://www.fincap.org.uk/evidence_hub\">Evidence Hub</a>.</p>\n","published_at":null,"objectID":"/en/latest_news/news","_highlightResult":{"title":{"value":"Latest
+        News","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>Here you
+        will find all the latest news and press releases relating to the <b>Financial</b>
+        Capability Strategy for the UK.</p>\n\n<p>Our research enables us to give
+        people the best advice on understanding <b>financial</b> matters and making
+        choices when managing money. Visit our corporate site for all our latest <a
+        href=\"https://www.moneyadviceservice.org.uk/en/corporate/research\">Research
+        Reports</a>.</p>\n\n<p>Or, for a wide range of evaluation evidence, insight
+        and market research don’t forget to visit the new and improved <b>Financial</b>
+        Capability <a href=\"http://www.fincap.org.uk/evidence_hub\">Evidence Hub</a>.</p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]}}},{"title":"Thematic
+        Reviews","description":null,"keywords":[],"content":"<p>Thematic Reviews are
+        short overviews of key findings from multiple UK-based\nresearch and ealuation
+        reports on a particular topic. Each review will vary\ndepending on the available
+        information, and will aim to include:</p>\n\n<ul>\n  <li>Headlines about context,
+        landscape and needs</li>\n  <li>An introduction to evidence about what works
+        well - and less well - to improve people’s financial capability</li>\n  <li>Areas
+        where further investigation is needed</li>\n  <li>Links to specific studies
+        summarised elsewhere on the Hub</li>\n</ul>\n\n<p>We hope our Thematic Reviews
+        provide a useful overview to help you get a quick understanding on a particular
+        topic,\nor to act as a ‘way in’ to more detailed information contained in
+        specific <a href=\"/evidence_hub_search\">Evidence Summaries</a>.</p>\n\n<p>Please
+        contact us at <a href=\"mailto:whatworks@fincap.org.uk\">whatworks@fincap.org.uk</a>
+        if you have any feedback,\nincluding suggestions for research that you think
+        should be covered\nin future updates.</p>\n","published_at":null,"objectID":"/en/thematic_reviews_landing_pages/thematic_reviews","_highlightResult":{"title":{"value":"Thematic
+        Reviews","matchLevel":"none","matchedWords":[]},"content":{"value":"<p>Thematic
+        Reviews are short overviews of key findings from multiple UK-based\nresearch
+        and ealuation reports on a particular topic. Each review will vary\ndepending
+        on the available information, and will aim to include:</p>\n\n<ul>\n  <li>Headlines
+        about context, landscape and needs</li>\n  <li>An introduction to evidence
+        about what works well - and less well - to improve people’s <b>financial</b>
+        capability</li>\n  <li>Areas where further investigation is needed</li>\n  <li>Links
+        to specific studies summarised elsewhere on the Hub</li>\n</ul>\n\n<p>We hope
+        our Thematic Reviews provide a useful overview to help you get a quick understanding
+        on a particular topic,\nor to act as a ‘way in’ to more detailed information
+        contained in specific <a href=\"/evidence_hub_search\">Evidence Summaries</a>.</p>\n\n<p>Please
+        contact us at <a href=\"mailto:whatworks@fincap.org.uk\">whatworks@fincap.org.uk</a>
+        if you have any feedback,\nincluding suggestions for research that you think
+        should be covered\nin future updates.</p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["financial"]}}}],"nbHits":7,"page":0,"nbPages":1,"hitsPerPage":10,"processingTimeMS":1,"exhaustiveNbHits":true,"query":"Financial","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=Financial"}
+
+'
+    http_version: 
+  recorded_at: Tue, 28 Aug 2018 12:58:25 GMT
+recorded_with: VCR 4.0.0

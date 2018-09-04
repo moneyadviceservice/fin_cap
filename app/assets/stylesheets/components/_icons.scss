@@ -89,11 +89,11 @@ $circleSize: 17px;
   vertical-align: middle;
   margin-left: $baseline-unit;
   font-weight: 500;
-  
+
   &:visited {
     color: $color-white;
   }
-  
+
   &:hover {
     background: lighten($primary-blue-dark, 30%);
     text-decoration: none;

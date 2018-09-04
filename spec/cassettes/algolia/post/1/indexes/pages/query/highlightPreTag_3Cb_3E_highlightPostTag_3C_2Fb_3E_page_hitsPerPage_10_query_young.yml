@@ -1,0 +1,1091 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vtpmj8yrfy-dsn.algolia.net/1/indexes/pages/query
+    body:
+      encoding: UTF-8
+      string: '{"params":"highlightPreTag=%3Cb%3E\u0026highlightPostTag=%3C%2Fb%3E\u0026page=\u0026hitsPerPage=10\u0026query=young"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby (1.23.2); Ruby (2.4.2)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 23 Aug 2018 17:16:35 GMT
+      X-Algolia-Api-Key:
+      - "<API_KEY>"
+      X-Algolia-Application-Id:
+      - "<APP_ID>"
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 23 Aug 2018 17:16:36 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Timing-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - inline; filename=a.txt
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"hits":[{"title":"Young Adults","description":null,"keywords":[],"content":"<p>Young
+        adults are those who have left compulsory education or other statutory settings,
+        \nsuch as care. They are transitioning towards independent living and financial
+        \nindependence, beginning between the ages of 16 to 18 and continuing to their
+        mid-20s.</p>\n","published_at":null,"objectID":"/en/lifestages/young-adults","_highlightResult":{"title":{"value":"<b>Young</b>
+        Adults","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<p><b>Young</b>
+        adults are those who have left compulsory education or other statutory settings,
+        \nsuch as care. They are transitioning towards independent living and financial
+        \nindependence, beginning between the ages of 16 to 18 and continuing to their
+        mid-20s.</p>\n","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        Persons’ Money Index 2016: Examining the financial educational landscape for
+        teenagers and young people","description":null,"keywords":[],"content":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>This is an annual
+        survey that began in 2014, when financial education was introduced into the
+        National Curriculum. The 2016 report pays particular attention to: the introduction
+        of new education policies pre- and post-16 level, the Money Advice Service’s
+        new Financial Capability Strategy (2015), and recommendations of the All-Party
+        Parliamentary Group (APPG) on Financial Education for Young People in their
+        report ‘Financial Education in Schools: Two Years On – Job Done?’ (2016).</p><h2
+        id=\"the-study\">The study</h2><p>An online UK-wide survey of 2,036 young
+        people aged 15-18 in full-time education. The sample was weighted to be representative
+        of age, gender, regional make-up and education. The report focuses on: </p><ul><li>The
+        current state of financial education and its delivery in schools and colleges
+        in the 2015/16 academic year;</li><li>Young people’s financial confidence
+        and behaviours, and;</li><li>The relevance of findings to the APPG’s recommendations
+        on improving financial capability.</li></ul><p>As well as linking the findings
+        to APPG and MAS initiatives, the survey seeks to better appreciate young people’s
+        attitudes and behaviour.</p><h2 id=\"key-findings\">Key findings</h2><ul><li><strong>Financial
+        education:</strong> Most students (58 per cent) did not receive any form of
+        financial education – indicating little improvement from previous surveys.
+        Fewer girls (36 per cent) than boys (45 per cent) received financial education,
+        and those aged 17-18 were less likely to than those aged 15-16. Economics,
+        PSHE, Maths and Citizenship are the main subjects for the delivery of financial
+        education, but more students are learning financial education through Maths
+        and Citizenship following its inclusion in their curricula.</li><li><strong>Financial
+        confidence and behaviour:</strong> 80 per cent of students name their parents
+        or family as their prime source of financial understanding, with mothers generally
+        seen as “better” with managing household finances than fathers. In areas where
+        financial education is more widespread students are less likely to be reliant
+        on parents for gaining understanding. While half feel they have the knowledge
+        to manage their own money, 61 per cent report money worries. A lack of financial
+        education is leading to unrealistic expectations - most believe they will
+        earn far more than the national average by the age of 30.</li><li><strong>Findings
+        in the context of APPG recommendations:</strong> More students are receiving
+        financial education through Maths and Citizenship than previously, and very
+        few rely on banks for financial education. Seven per cent see teachers as
+        a source of financial education and two per cent talk to teachers about money.
+        There are marked differences in the provision of financial education between
+        regions and countries of the UK, and fewer girls than boys receive financial
+        education at school. While a strengthening of the provision of financial education
+        in schools is required, there is however an emerging culture of personal financial
+        understanding among teenagers, and financial education appears to improve
+        teenagers’ confidence and understanding where it is delivered. Overall there
+        has been progress in financial education in schools but there is more to do.\n</li></ul><h2
+        id=\"points\">Points to consider</h2><ul><li><strong>Methodological limitations:
+        </strong>The survey notes that it is a ''snapshot''. This short report gives
+        little specific detail about the methodological approach and while it tracks
+        some changes over the three surveys (with figures) no details are provided
+        about the previous surveys. The assertion that financial education appears
+        to have an impact is based on regional correlations and do not definitively
+        show a cause and effect; the report does call for a longitudinal evaluation
+        of impact.</li><li><strong>Relevance:</strong> The survey is clearly related
+        to priorities for financial education established by MAS and particularly
+        the APPG and contains a useful further breakdown of statistics, as well as
+        discussion of the implications of findings in light of those wider priorities.</li><li><strong>Generalisability/transferability:</strong>
+        Despite the limitations, the report offers a good overview of provision, views
+        and behaviours that could be the basis for further research. There are useful
+        figures about regional (and gender) disparities in provision of financial
+        education.</li></ul><h2>Full report</h2><p><a href=\"http://www.libf.ac.uk/docs/default-source/research/young-persons-money-index-2016.pdf?sfvrsn=2\">Young
+        Person''s Money Index 2016: Examining the financial educational landscape
+        for teenagers and young people - full report </a></p>","published_at":null,"objectID":"/en/insights/young-persons-money-index-2016-examining-the-financial-educational-landscape-for-teenagers-and-young-people","_highlightResult":{"title":{"value":"<b>Young</b>
+        Persons’ Money Index 2016: Examining the financial educational landscape for
+        teenagers and <b>young</b> people","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>This is an annual
+        survey that began in 2014, when financial education was introduced into the
+        National Curriculum. The 2016 report pays particular attention to: the introduction
+        of new education policies pre- and post-16 level, the Money Advice Service’s
+        new Financial Capability Strategy (2015), and recommendations of the All-Party
+        Parliamentary Group (APPG) on Financial Education for <b>Young</b> People
+        in their report ‘Financial Education in Schools: Two Years On – Job Done?’
+        (2016).</p><h2 id=\"the-study\">The study</h2><p>An online UK-wide survey
+        of 2,036 <b>young</b> people aged 15-18 in full-time education. The sample
+        was weighted to be representative of age, gender, regional make-up and education.
+        The report focuses on: </p><ul><li>The current state of financial education
+        and its delivery in schools and colleges in the 2015/16 academic year;</li><li><b>Young</b>
+        people’s financial confidence and behaviours, and;</li><li>The relevance of
+        findings to the APPG’s recommendations on improving financial capability.</li></ul><p>As
+        well as linking the findings to APPG and MAS initiatives, the survey seeks
+        to better appreciate <b>young</b> people’s attitudes and behaviour.</p><h2
+        id=\"key-findings\">Key findings</h2><ul><li><strong>Financial education:</strong>
+        Most students (58 per cent) did not receive any form of financial education
+        – indicating little improvement from previous surveys. Fewer girls (36 per
+        cent) than boys (45 per cent) received financial education, and those aged
+        17-18 were less likely to than those aged 15-16. Economics, PSHE, Maths and
+        Citizenship are the main subjects for the delivery of financial education,
+        but more students are learning financial education through Maths and Citizenship
+        following its inclusion in their curricula.</li><li><strong>Financial confidence
+        and behaviour:</strong> 80 per cent of students name their parents or family
+        as their prime source of financial understanding, with mothers generally seen
+        as “better” with managing household finances than fathers. In areas where
+        financial education is more widespread students are less likely to be reliant
+        on parents for gaining understanding. While half feel they have the knowledge
+        to manage their own money, 61 per cent report money worries. A lack of financial
+        education is leading to unrealistic expectations - most believe they will
+        earn far more than the national average by the age of 30.</li><li><strong>Findings
+        in the context of APPG recommendations:</strong> More students are receiving
+        financial education through Maths and Citizenship than previously, and very
+        few rely on banks for financial education. Seven per cent see teachers as
+        a source of financial education and two per cent talk to teachers about money.
+        There are marked differences in the provision of financial education between
+        regions and countries of the UK, and fewer girls than boys receive financial
+        education at school. While a strengthening of the provision of financial education
+        in schools is required, there is however an emerging culture of personal financial
+        understanding among teenagers, and financial education appears to improve
+        teenagers’ confidence and understanding where it is delivered. Overall there
+        has been progress in financial education in schools but there is more to do.\n</li></ul><h2
+        id=\"points\">Points to consider</h2><ul><li><strong>Methodological limitations:
+        </strong>The survey notes that it is a ''snapshot''. This short report gives
+        little specific detail about the methodological approach and while it tracks
+        some changes over the three surveys (with figures) no details are provided
+        about the previous surveys. The assertion that financial education appears
+        to have an impact is based on regional correlations and do not definitively
+        show a cause and effect; the report does call for a longitudinal evaluation
+        of impact.</li><li><strong>Relevance:</strong> The survey is clearly related
+        to priorities for financial education established by MAS and particularly
+        the APPG and contains a useful further breakdown of statistics, as well as
+        discussion of the implications of findings in light of those wider priorities.</li><li><strong>Generalisability/transferability:</strong>
+        Despite the limitations, the report offers a good overview of provision, views
+        and behaviours that could be the basis for further research. There are useful
+        figures about regional (and gender) disparities in provision of financial
+        education.</li></ul><h2>Full report</h2><p><a href=\"http://www.libf.ac.uk/docs/default-source/research/young-persons-money-index-2016.pdf?sfvrsn=2\"><b>Young</b>
+        Person''s Money Index 2016: Examining the financial educational landscape
+        for teenagers and <b>young</b> people - full report </a></p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        people and savings: a route to improved resilience","description":null,"keywords":[],"content":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>The transition
+        from childhood to adulthood can be a tough one, particularly for young people
+        from low-income families. Young people face the challenges and upheaval of
+        leaving their parental home, moving into the world of work and beginning to
+        build a family. But for young people today the challenge is even more difficult
+        because they must do all of this in the midst of a struggling economy.</p><p>The
+        financial climate, including recession, government spending cuts and structural
+        problems such as the high cost of housing are impacting on young people and
+        it is possible that the current generation of young people in the UK will
+        be the first since the second world war to fare worse in economic terms than
+        their parents. </p><p>Those on low incomes, in insecure employment or not
+        in work may be more vulnerable to financial shocks and lack the safety net
+        that would help them deal with emergencies.\n</p><h2 id=\"the-study\">The
+        study</h2><p>The paper reports the results of a programme of research that
+        included a literature review and three primary research components:</p><ul><li>An
+        online poll conducted on behalf of IPPR by YouGov of 1,504 young people aged
+        16 to 29 on incomes less than the national median</li><li>Three deliberative
+        workshops with 18 young people in attendance at each: 16 to 22-year-olds in
+        Manchester on less than median incomes, 19 to 25-year-olds in London with
+        a range of incomes, and 22 to 29-year-olds in Midsomer Norton (a small town
+        just south of Bath) on less than median incomes </li><li>Interviews with 10
+        stakeholders with expert knowledge of the financial challenges facing young
+        people including government officials, academics, representatives from youth
+        organisations and people involved in delivering financial education services</li></ul><p>This
+        paper presents evidence to show the extent of young people’s vulnerability
+        to financial shocks and argues that savings have an important role to play
+        in enabling them to better weather periods of difficulty.</p><p>Findings are
+        interwoven with contextual data from other sources such as ONS data on ratio
+        of youth to adult unemployment.</p><p>Detailed findings from the poll were
+        published in a separate briefing in February 2012 (Bradley 2012).\n</p><h2
+        id=\"key-findings\">Key findings</h2><ul><li><strong>Outlook:</strong> 44
+        per cent of young people believe their financial prospects are worse than
+        their parents’ when they were young compared to just over a quarter (28 per
+        cent) who thought that their own prospects were better</li><li><strong>Financial
+        resilience: </strong> If they became suddenly unemployed, over half (55 per
+        cent) of survey respondents said they would make ends meet using savings,
+        but answers to other questions suggest most have savings significantly below
+        the minimum level recommended in case of financial emergencies by financial
+        advisers (three months of post-tax income). Less than one-third of respondents
+        had £3,000 or more – the level of savings that would be appropriate for an
+        after-tax income of £12,000 a year, roughly equivalent to gross earnings of
+        £14,000 (around 25th percentile of the income distribution). The concern is
+        that without an effective safety net young people are more likely to turn
+        to short-term or doorstep lenders who charge high rates of interest.</li><li><strong>Influences
+        on savings behaviour: </strong>Key influences include the unaffordability
+        of saving given the rising cost of living; spending and saving priorities
+        (including prevailing culture around debt and spending):  family influence;
+        financial literacy and education and upbringing; and the type of savings products
+        available.</li><li><strong>Recommendations to improve the financial resilience
+        of young people:</strong> </li><li>=When local authorities become responsible
+        for providing crisis loans, they should require young people to participate
+        in coaching to reduce the likelihood of future loans. </li><li>=The government
+        should make contributions into Junior ISAs (or bringing back Child Trust Funds)
+        and introduce a new life-course savings account with an incentive that matches
+        savings up to a certain level. </li><li>=Policymakers should make a positive
+        case for asset-based welfare policies, particularly those that focus on giving
+        young people a better start to their working life, in conjunction with developing
+        the concept of financial citizenship.</li><li>=The Money Advice Service (MAS)
+        should develop a campaign targeted specifically at young people to explain
+        the basic financial products they will require during their lifetime.</li><li>=There
+        should be an overhaul of financial education – in conjunction with the MAS
+        campaign – to ensure that all 16 to 18-year-olds are literate in basic financial
+        acumen. </li><li>=Financial providers, particularly banks, money advice organisations
+        and voluntary bodies, should take a more proactive approach to promoting saving.
+        </li></ul><h2 id=\"points\">Points to consider</h2><ul><li><strong>Methodological
+        limitations:</strong></li><li>=The methodology provides a single snapshot
+        of the views and issues facing young people in relation to saving.</li><li>=No
+        information on the sampling methodology and size of sampling errors.</li><li>=There
+        is evidence from other studies that financial resilience increases with age
+        and some discussion of the findings within this context would have been useful.</li><li><strong>Relevance:
+        </strong></li><li>=The financial policy context has changed since 2012 and
+        so at least some of the recommendations (on welfare policies, financial products)
+        may no longer be relevant.</li><li><strong>Generalisability:</strong></li><li>=Limitations
+        due to age of study and fast-changing context.</li></ul><h2>Full report</h2><p><a
+        href=\"http://http://www.ippr.org/files/images/media/files/publication/2012/11/young-people-savings_Nov2012_9849.pdf?noredirect=1\">Young
+        people and savings - full report </a></p>","published_at":null,"objectID":"/en/insights/young-people-and-savings-a-route-to-improved-resilience","_highlightResult":{"title":{"value":"<b>Young</b>
+        people and savings: a route to improved resilience","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>The transition
+        from childhood to adulthood can be a tough one, particularly for <b>young</b>
+        people from low-income families. <b>Young</b> people face the challenges and
+        upheaval of leaving their parental home, moving into the world of work and
+        beginning to build a family. But for <b>young</b> people today the challenge
+        is even more difficult because they must do all of this in the midst of a
+        struggling economy.</p><p>The financial climate, including recession, government
+        spending cuts and structural problems such as the high cost of housing are
+        impacting on <b>young</b> people and it is possible that the current generation
+        of <b>young</b> people in the UK will be the first since the second world
+        war to fare worse in economic terms than their parents. </p><p>Those on low
+        incomes, in insecure employment or not in work may be more vulnerable to financial
+        shocks and lack the safety net that would help them deal with emergencies.\n</p><h2
+        id=\"the-study\">The study</h2><p>The paper reports the results of a programme
+        of research that included a literature review and three primary research components:</p><ul><li>An
+        online poll conducted on behalf of IPPR by YouGov of 1,504 <b>young</b> people
+        aged 16 to 29 on incomes less than the national median</li><li>Three deliberative
+        workshops with 18 <b>young</b> people in attendance at each: 16 to 22-year-olds
+        in Manchester on less than median incomes, 19 to 25-year-olds in London with
+        a range of incomes, and 22 to 29-year-olds in Midsomer Norton (a small town
+        just south of Bath) on less than median incomes </li><li>Interviews with 10
+        stakeholders with expert knowledge of the financial challenges facing <b>young</b>
+        people including government officials, academics, representatives from youth
+        organisations and people involved in delivering financial education services</li></ul><p>This
+        paper presents evidence to show the extent of <b>young</b> people’s vulnerability
+        to financial shocks and argues that savings have an important role to play
+        in enabling them to better weather periods of difficulty.</p><p>Findings are
+        interwoven with contextual data from other sources such as ONS data on ratio
+        of youth to adult unemployment.</p><p>Detailed findings from the poll were
+        published in a separate briefing in February 2012 (Bradley 2012).\n</p><h2
+        id=\"key-findings\">Key findings</h2><ul><li><strong>Outlook:</strong> 44
+        per cent of <b>young</b> people believe their financial prospects are worse
+        than their parents’ when they were <b>young</b> compared to just over a quarter
+        (28 per cent) who thought that their own prospects were better</li><li><strong>Financial
+        resilience: </strong> If they became suddenly unemployed, over half (55 per
+        cent) of survey respondents said they would make ends meet using savings,
+        but answers to other questions suggest most have savings significantly below
+        the minimum level recommended in case of financial emergencies by financial
+        advisers (three months of post-tax income). Less than one-third of respondents
+        had £3,000 or more – the level of savings that would be appropriate for an
+        after-tax income of £12,000 a year, roughly equivalent to gross earnings of
+        £14,000 (around 25th percentile of the income distribution). The concern is
+        that without an effective safety net <b>young</b> people are more likely to
+        turn to short-term or doorstep lenders who charge high rates of interest.</li><li><strong>Influences
+        on savings behaviour: </strong>Key influences include the unaffordability
+        of saving given the rising cost of living; spending and saving priorities
+        (including prevailing culture around debt and spending):  family influence;
+        financial literacy and education and upbringing; and the type of savings products
+        available.</li><li><strong>Recommendations to improve the financial resilience
+        of <b>young</b> people:</strong> </li><li>=When local authorities become responsible
+        for providing crisis loans, they should require <b>young</b> people to participate
+        in coaching to reduce the likelihood of future loans. </li><li>=The government
+        should make contributions into Junior ISAs (or bringing back Child Trust Funds)
+        and introduce a new life-course savings account with an incentive that matches
+        savings up to a certain level. </li><li>=Policymakers should make a positive
+        case for asset-based welfare policies, particularly those that focus on giving
+        <b>young</b> people a better start to their working life, in conjunction with
+        developing the concept of financial citizenship.</li><li>=The Money Advice
+        Service (MAS) should develop a campaign targeted specifically at <b>young</b>
+        people to explain the basic financial products they will require during their
+        lifetime.</li><li>=There should be an overhaul of financial education – in
+        conjunction with the MAS campaign – to ensure that all 16 to 18-year-olds
+        are literate in basic financial acumen. </li><li>=Financial providers, particularly
+        banks, money advice organisations and voluntary bodies, should take a more
+        proactive approach to promoting saving. </li></ul><h2 id=\"points\">Points
+        to consider</h2><ul><li><strong>Methodological limitations:</strong></li><li>=The
+        methodology provides a single snapshot of the views and issues facing <b>young</b>
+        people in relation to saving.</li><li>=No information on the sampling methodology
+        and size of sampling errors.</li><li>=There is evidence from other studies
+        that financial resilience increases with age and some discussion of the findings
+        within this context would have been useful.</li><li><strong>Relevance: </strong></li><li>=The
+        financial policy context has changed since 2012 and so at least some of the
+        recommendations (on welfare policies, financial products) may no longer be
+        relevant.</li><li><strong>Generalisability:</strong></li><li>=Limitations
+        due to age of study and fast-changing context.</li></ul><h2>Full report</h2><p><a
+        href=\"http://http://www.ippr.org/files/images/media/files/publication/2012/11/young-people-savings_Nov2012_9849.pdf?noredirect=1\"><b>Young</b>
+        people and savings - full report </a></p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        New Zealanders’ perceptions of political and financial wellbeing","description":null,"keywords":[],"content":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>This report is
+        part of a 20-year longitudinal study (launched in 2012) exploring New Zealanders’
+        financial knowledge and financial education experiences. Main updates happen
+        every 5 years with smaller ‘keeping-in-touch’ (KIT) surveys happening periodically.
+        This KIT survey coincides with the 2014 New Zealand general election and helps
+        provide a periodic snapshot of participants’ financial knowledge progression
+        and financial wellbeing. Participants were aged 18-22 at the time of the first
+        survey and are 20-24 years old at the time of this update. </p><p>The purpose
+        of this research is: </p><ol><li>To help maintain ongoing communications and
+        contacts with participants in the longitudinal study, thus maintaining the
+        integrity of the study.</li><li>To help inform the longitudinal study’s long-term
+        objectives and understand indicators within a topical framework (e.g. an election).  \n</li></ol><h2
+        id=\"the-study\">The study</h2><p>An online interim survey comprising of 16
+        questions was sent to all 266 participants of the full longitudinal study,
+        who were originally selected at random from six regions in New Zealand: Auckland,
+        Christchurch, Nelson, New Plymouth, Palmerston North and Wellington. From
+        that group, 148 (56%) participants completed the survey. </p><p>The survey
+        seeks to explore individuals’ perceptions of: </p><ol><li>financial decisions
+        and the decision-making process.</li><li>current financial wellbeing and outlook
+        on financial futures, including the potential impact of the 2014 election.
+        </li></ol><h2 id=\"key-findings\">Key findings</h2><ul><li>71% feel ‘in control’
+        of their financial situation, with 69% feeling good about their money management
+        skills and 39% reporting being satisfied with their current financial status.</li><li>Most
+        (70%) had taken no steps to improve their money management skills, feeling
+        it was unnecessary. Of those who took steps to improve their money management
+        skills (29%), 45% said they spoke with family, 40% spoke with friends but
+        nobody sought professional help or advice, showing that young adults rely
+        on informal sources of information.</li><li>36% said they made at least one
+        major financial decision over the last 12 months. Of those, 31% changed jobs
+        and 27% gave up their job to travel. Of those who made a major financial decision
+        in the last 12 months, only 4% bought a house.</li><li>41% believe they are
+        better off over the previous 12 months, while 35% think they are worse off,
+        leaving 24% feeling their situation is about the same.</li><li>78% think financial
+        inequality is a problem in New Zealand. This finding is emphasised with only
+        26% saying they feel included in the financial direction of New Zealand.</li><li>41%
+        believe they and their friends are worse off financially than similar groups
+        were 15 years ago.</li><li>32% reported that lower rent would have the most
+        impact on their financial wellbeing.</li></ul><h2 id=\"points\">Points to
+        consider</h2><p><strong>Methodological limitations:</strong> findings are
+        generally descriptive in nature and do not allow for in-depth analysis at
+        this stage in the research. The next full update of the report will take place
+        in 2017. Caution must be exercised when interpreting the percentages here
+        as some of them refer to very low numbers (less than 20 people in some cases).\n<strong>Relevance
+        / transferability:</strong> this study focuses on the views and experiences
+        of young adults in New Zealand, and so has limited transferability for people
+        interested in young adults in other countries such as the UK.</p><h2>Full
+        report</h2><p><a href=\"http://www.cffc.org.nz/assets/Documents/LS-Study-Update-2014-final-10-March-2015-rev2.pdf\">Young
+        New Zealanders'' perceptions of political and financial wellbeing - full report
+        </a></p>","published_at":null,"objectID":"/en/insights/young-new-zealanders-perceptions-of-political-and-financial-wellbeing","_highlightResult":{"title":{"value":"<b>Young</b>
+        New Zealanders’ perceptions of political and financial wellbeing","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>This report is
+        part of a 20-year longitudinal study (launched in 2012) exploring New Zealanders’
+        financial knowledge and financial education experiences. Main updates happen
+        every 5 years with smaller ‘keeping-in-touch’ (KIT) surveys happening periodically.
+        This KIT survey coincides with the 2014 New Zealand general election and helps
+        provide a periodic snapshot of participants’ financial knowledge progression
+        and financial wellbeing. Participants were aged 18-22 at the time of the first
+        survey and are 20-24 years old at the time of this update. </p><p>The purpose
+        of this research is: </p><ol><li>To help maintain ongoing communications and
+        contacts with participants in the longitudinal study, thus maintaining the
+        integrity of the study.</li><li>To help inform the longitudinal study’s long-term
+        objectives and understand indicators within a topical framework (e.g. an election).  \n</li></ol><h2
+        id=\"the-study\">The study</h2><p>An online interim survey comprising of 16
+        questions was sent to all 266 participants of the full longitudinal study,
+        who were originally selected at random from six regions in New Zealand: Auckland,
+        Christchurch, Nelson, New Plymouth, Palmerston North and Wellington. From
+        that group, 148 (56%) participants completed the survey. </p><p>The survey
+        seeks to explore individuals’ perceptions of: </p><ol><li>financial decisions
+        and the decision-making process.</li><li>current financial wellbeing and outlook
+        on financial futures, including the potential impact of the 2014 election.
+        </li></ol><h2 id=\"key-findings\">Key findings</h2><ul><li>71% feel ‘in control’
+        of their financial situation, with 69% feeling good about their money management
+        skills and 39% reporting being satisfied with their current financial status.</li><li>Most
+        (70%) had taken no steps to improve their money management skills, feeling
+        it was unnecessary. Of those who took steps to improve their money management
+        skills (29%), 45% said they spoke with family, 40% spoke with friends but
+        nobody sought professional help or advice, showing that <b>young</b> adults
+        rely on informal sources of information.</li><li>36% said they made at least
+        one major financial decision over the last 12 months. Of those, 31% changed
+        jobs and 27% gave up their job to travel. Of those who made a major financial
+        decision in the last 12 months, only 4% bought a house.</li><li>41% believe
+        they are better off over the previous 12 months, while 35% think they are
+        worse off, leaving 24% feeling their situation is about the same.</li><li>78%
+        think financial inequality is a problem in New Zealand. This finding is emphasised
+        with only 26% saying they feel included in the financial direction of New
+        Zealand.</li><li>41% believe they and their friends are worse off financially
+        than similar groups were 15 years ago.</li><li>32% reported that lower rent
+        would have the most impact on their financial wellbeing.</li></ul><h2 id=\"points\">Points
+        to consider</h2><p><strong>Methodological limitations:</strong> findings are
+        generally descriptive in nature and do not allow for in-depth analysis at
+        this stage in the research. The next full update of the report will take place
+        in 2017. Caution must be exercised when interpreting the percentages here
+        as some of them refer to very low numbers (less than 20 people in some cases).\n<strong>Relevance
+        / transferability:</strong> this study focuses on the views and experiences
+        of <b>young</b> adults in New Zealand, and so has limited transferability
+        for people interested in <b>young</b> adults in other countries such as the
+        UK.</p><h2>Full report</h2><p><a href=\"http://www.cffc.org.nz/assets/Documents/LS-Study-Update-2014-final-10-March-2015-rev2.pdf\"><b>Young</b>
+        New Zealanders'' perceptions of political and financial wellbeing - full report
+        </a></p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        adults'' financial capability","description":null,"keywords":[],"content":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>The Money Advice
+        Service carried out the Adult Financial Capability in the UK survey in 2015.
+        In 2016 they undertook more in-depth analysis around particular groups of
+        the UK population with specific financial capability needs, including young
+        adults.</p><p>Young adults (aged 18-24) have traditionally not been a key
+        focus in British policy to improve consumer financial capability. They are
+        in a transitional period of their lives often moving to independent living
+        and increased financial responsibility whilst being faced with an increasingly
+        difficult housing market, pensions and employment patterns.  Earlier MAS research,
+        the study ‘It’s Time to Talk: Young People and Money Regrets (2014), highlighted
+        that young people are far more likely to say they experienced financial difficulty
+        ‘all the time’; and around ¾ of individuals in their twenties admit to making
+        money mistakes in their first years of financial independence.\n</p><h2 id=\"the-study\">The
+        study</h2><p>This study combines analysis of the Adult Financial Capability
+        in the UK (2015) survey data with other research and interview findings:    \n</p><ul><li><strong>Secondary
+        analysis of the Adult Financial Capability in the UK (2015) survey data -</strong>
+        looking at the 744 complete responses from young adults (aged 18-24) taken
+        the total research population of 3,461 respondents from across the UK.</li><li><strong>Review
+        of  existing research on young adults and financial capability.</strong></li><li><strong>Primary
+        qualitative research </strong>- five focus groups with a total of 23 young
+        adults.</li></ul><h2 id=\"key-findings\">Key findings</h2><p>Key factors that
+        affect young adults’ ability to manage money day-to-day, to plan ahead, and
+        to negotiate difficulties can be grouped under 1) Goals and planning 2) Financial
+        Confidence 3) Engagement and barriers to engaging young adults.</p><ul><li><strong>Goals
+        and Planning:</strong></li><li>=Young adults can be put into three groups,
+        namely: Planners, Drifters and Dreamers, who approach money management differently.
+        Planners have financial goals that are supported by plans, they save more
+        and are feel more financially confident. Dreamers have financial goals, but
+        no plans and are less confident and tend to be anxious about the future. Drifters
+        are the least likely to have financial goals and plans, have little confidence
+        with their money and tend to be the most dependent on family financial support.
+        </li><li>=Young adults were both more likely to have financial goals over
+        the next five years (69%) and to have plans to achieve those goals (41%) (compared
+        to all adults aged 18+). However, planning in the main tended to be focussed
+        on the achievement of short-term goals and ‘save to spend’ planning - sometimes
+        down to a ‘you’re only young once’ attitude. </li><li><strong>Financial confidence:
+        </strong></li><li>=There are a number of factors that influence young adults’
+        financial confidence including age, gender, education, financial dependency
+        and financial goals and planning. Young adults have the lowest levels of financial
+        confidence compared to other age groups; only 45% rated themselves as ‘very
+        confident’ (compared to 58% of all adults aged 18+) and females rated themselves
+        as less confident then males.</li><li>=Financial confidence grows not only
+        with age, but also through learning from positive and negative experiences
+        and exposure to a range of financial products and decision-making. </li><li><strong>Engagement
+        and barriers to engagement:</strong></li><li>=Where young people go for financial
+        advice was influenced by financial confidence. For example, financially confident
+        young adults were more likely to consult professional sources. However, for
+        all young adults the main trusted source of information and guidance on financial
+        matters was parents and family. Beyond this, particularly drifters did not
+        know where to go for financial guidance. Peers were consulted, but mostly
+        around shared financial experiences, such as comparing insurance for holidays.
+        Banks were mentioned as another source of information, but they were also
+        often mistrusted and perceived as “self-serving”.</li><li>=Young adults are
+        more likely to be over-indebted compared to other age groups, but less likely
+        to seek debt advice. There are a number of reasons for this, such as thinking
+        that things will improve in the future; that they will be able to overcome
+        this on their own (particularly amongst men), plus the assumption that one
+        needs to pay for financial advice. </li><li>=Self-advising using the internet
+        was common amongst all groups, particularly the use of Google. Yet, many young
+        people felt overwhelmed by the quantity of information.</li></ul><p>The report
+        makes a range of recommendations for how to engage and support young adults.</p><h2
+        id=\"points\">Points to consider</h2><ul><li><strong>Relevance:</strong> This
+        timely research highlights many relevant challenges and opportunities for
+        young adults in the UK.</li><li><strong>Generalisability:</strong> This study
+        looks at young adults across the UK aged 18-24 in particular and can therefore
+        not be generalised to other groups. However, some of the specific findings
+        are likely to apply to older adolescents (16-18). For example, young people
+        who live with their parents often remain financially dependent on family.
+        </li><li><strong>Applicability:</strong> The study results can be used by
+        organisations working with young people to understand how they are perceived
+        and what young adults need help with. It offers a wealth of practical advice
+        for helping young people to increase their financial capability, and suggests
+        opportunities for established organisations to improve the effectiveness of
+        their work.</li><li><strong>Methodological strengths or limitations:</strong>  The
+        fact that this study uses a mixed method approach is a real strength as it
+        allows a deeper understanding of the quantitative findings, providing the
+        contextual data that can make this research a valuable resource for practitioners.\n</li></ul><h2>Full
+        report</h2><p><a href=\"https://masassets.blob.core.windows.net/cms/files/000/000/525/original/2016_08_YA_Deep_Dive_Report_Final.pdf\">Young
+        adults'' financial capability - full report</a></p>","published_at":null,"objectID":"/en/insights/young-adults-financial-capability","_highlightResult":{"title":{"value":"<b>Young</b>
+        adults'' financial capability","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>The Money Advice
+        Service carried out the Adult Financial Capability in the UK survey in 2015.
+        In 2016 they undertook more in-depth analysis around particular groups of
+        the UK population with specific financial capability needs, including <b>young</b>
+        adults.</p><p><b>Young</b> adults (aged 18-24) have traditionally not been
+        a key focus in British policy to improve consumer financial capability. They
+        are in a transitional period of their lives often moving to independent living
+        and increased financial responsibility whilst being faced with an increasingly
+        difficult housing market, pensions and employment patterns.  Earlier MAS research,
+        the study ‘It’s Time to Talk: <b>Young</b> People and Money Regrets (2014),
+        highlighted that <b>young</b> people are far more likely to say they experienced
+        financial difficulty ‘all the time’; and around ¾ of individuals in their
+        twenties admit to making money mistakes in their first years of financial
+        independence.\n</p><h2 id=\"the-study\">The study</h2><p>This study combines
+        analysis of the Adult Financial Capability in the UK (2015) survey data with
+        other research and interview findings:    \n</p><ul><li><strong>Secondary
+        analysis of the Adult Financial Capability in the UK (2015) survey data -</strong>
+        looking at the 744 complete responses from <b>young</b> adults (aged 18-24)
+        taken the total research population of 3,461 respondents from across the UK.</li><li><strong>Review
+        of  existing research on <b>young</b> adults and financial capability.</strong></li><li><strong>Primary
+        qualitative research </strong>- five focus groups with a total of 23 <b>young</b>
+        adults.</li></ul><h2 id=\"key-findings\">Key findings</h2><p>Key factors that
+        affect <b>young</b> adults’ ability to manage money day-to-day, to plan ahead,
+        and to negotiate difficulties can be grouped under 1) Goals and planning 2)
+        Financial Confidence 3) Engagement and barriers to engaging <b>young</b> adults.</p><ul><li><strong>Goals
+        and Planning:</strong></li><li>=<b>Young</b> adults can be put into three
+        groups, namely: Planners, Drifters and Dreamers, who approach money management
+        differently. Planners have financial goals that are supported by plans, they
+        save more and are feel more financially confident. Dreamers have financial
+        goals, but no plans and are less confident and tend to be anxious about the
+        future. Drifters are the least likely to have financial goals and plans, have
+        little confidence with their money and tend to be the most dependent on family
+        financial support. </li><li>=<b>Young</b> adults were both more likely to
+        have financial goals over the next five years (69%) and to have plans to achieve
+        those goals (41%) (compared to all adults aged 18+). However, planning in
+        the main tended to be focussed on the achievement of short-term goals and
+        ‘save to spend’ planning - sometimes down to a ‘you’re only <b>young</b> once’
+        attitude. </li><li><strong>Financial confidence: </strong></li><li>=There
+        are a number of factors that influence <b>young</b> adults’ financial confidence
+        including age, gender, education, financial dependency and financial goals
+        and planning. <b>Young</b> adults have the lowest levels of financial confidence
+        compared to other age groups; only 45% rated themselves as ‘very confident’
+        (compared to 58% of all adults aged 18+) and females rated themselves as less
+        confident then males.</li><li>=Financial confidence grows not only with age,
+        but also through learning from positive and negative experiences and exposure
+        to a range of financial products and decision-making. </li><li><strong>Engagement
+        and barriers to engagement:</strong></li><li>=Where <b>young</b> people go
+        for financial advice was influenced by financial confidence. For example,
+        financially confident <b>young</b> adults were more likely to consult professional
+        sources. However, for all <b>young</b> adults the main trusted source of information
+        and guidance on financial matters was parents and family. Beyond this, particularly
+        drifters did not know where to go for financial guidance. Peers were consulted,
+        but mostly around shared financial experiences, such as comparing insurance
+        for holidays. Banks were mentioned as another source of information, but they
+        were also often mistrusted and perceived as “self-serving”.</li><li>=<b>Young</b>
+        adults are more likely to be over-indebted compared to other age groups, but
+        less likely to seek debt advice. There are a number of reasons for this, such
+        as thinking that things will improve in the future; that they will be able
+        to overcome this on their own (particularly amongst men), plus the assumption
+        that one needs to pay for financial advice. </li><li>=Self-advising using
+        the internet was common amongst all groups, particularly the use of Google.
+        Yet, many <b>young</b> people felt overwhelmed by the quantity of information.</li></ul><p>The
+        report makes a range of recommendations for how to engage and support <b>young</b>
+        adults.</p><h2 id=\"points\">Points to consider</h2><ul><li><strong>Relevance:</strong>
+        This timely research highlights many relevant challenges and opportunities
+        for <b>young</b> adults in the UK.</li><li><strong>Generalisability:</strong>
+        This study looks at <b>young</b> adults across the UK aged 18-24 in particular
+        and can therefore not be generalised to other groups. However, some of the
+        specific findings are likely to apply to older adolescents (16-18). For example,
+        <b>young</b> people who live with their parents often remain financially dependent
+        on family. </li><li><strong>Applicability:</strong> The study results can
+        be used by organisations working with <b>young</b> people to understand how
+        they are perceived and what <b>young</b> adults need help with. It offers
+        a wealth of practical advice for helping <b>young</b> people to increase their
+        financial capability, and suggests opportunities for established organisations
+        to improve the effectiveness of their work.</li><li><strong>Methodological
+        strengths or limitations:</strong>  The fact that this study uses a mixed
+        method approach is a real strength as it allows a deeper understanding of
+        the quantitative findings, providing the contextual data that can make this
+        research a valuable resource for practitioners.\n</li></ul><h2>Full report</h2><p><a
+        href=\"https://masassets.blob.core.windows.net/cms/files/000/000/525/original/2016_08_YA_Deep_Dive_Report_Final.pdf\"><b>Young</b>
+        adults'' financial capability - full report</a></p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        adults and money management","description":null,"keywords":[],"content":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>As young adults
+        leave school, college or university and enter the workforce, they can face
+        many changes and challenges. In particular, making financial decisions – such
+        as accessing credit or saving for a house deposit – is important for improving
+        financial resilience and capability. However, getting young adults to access
+        and act on guidance and advice that helps financial decision-making continues
+        to be a challenge, and more evidence is needed to understand how young adults
+        engage with their finances, in order to understand how best to help them.</p><h2
+        id=\"the-study\">The study</h2><p>In 2017, the Money Advice Service commissioned
+        BritainThinks to conduct research with young adults aged 16 to 25 and living
+        in the UK. The research aimed to understand how young adults think about their
+        money in the context of their lives, what strategies they use to manage their
+        money, and what they would like to know to be able to manage their money better.</p><p>BritainThinks
+        used a mixed-method approach to address this research aim. They held four
+        qualitative workshops across two locations (London and Manchester), with a
+        group of school leavers or university leavers in each location. Alongside
+        the workshops, BritainThinks conducted an online quantitative survey of 470
+        young adults aged 16 to 25 to understand their attitudes and behaviours around
+        managing their money.</p><h2 id=\"key-findings\">Key findings</h2><p>The report
+        presents findings in relation to the following themes: </p><ul><li> <strong>Thinking
+        about money:</strong> </li><li>=Young adults thought that managing money was
+        important, but not as important as having social relationships. </li><li>=Young
+        adults view money management as a part of growing up, which is both exciting
+        and daunting. Over a fifth of young adults (22%) were not confident with managing
+        their money. </li><li>=Young adults often perceived that talking about money
+        with friends or family was ‘taboo’. Nearly a fifth of respondents (19%) said
+        they would feel embarrassed talking to friends or family about it. Many young
+        adults also spoke of feeling social pressures around money, for example feeling
+        the need to spend money to keep up with certain images on social media. </li><li><strong>Managing
+        money</strong>:</li><li>=Most young people reported managing their money,
+        for example by budgeting or in short-term savings, but often this was ad hoc
+        and short-term.  </li><li>=Nearly three quarters of young adults (72%) agreed
+        that self-control was more important than knowledge in relation to managing
+        money. </li><li>=Many young adults highlighted using ‘barriers’ between them
+        and their money – for example by using a savings account that has a notice
+        period for withdrawals.  </li><li>=Two-fifths of young adults do not usually
+        seek guidance when making financial decisions. </li><li>=Young adults thought
+        that living within their financial means was a key element of effective money
+        management. They recognised being organised and planning their spending as
+        important aspects of managing money well but felt that this often inhibits
+        their social life. </li><li><strong>Tips and guidance:</strong></li><li>=Young
+        adults found the concept of money ‘tips’ appealing and understandable. </li><li>=Around
+        half of workshop participants could not recall receiving tips or guidance
+        about managing their money. </li><li>=85% of young adults wished they had
+        been taught more about money management while at school or university, particularly
+        in relation to credit, investments and budgeting.  </li></ul><h2 id=\"points\">Points
+        to consider</h2><ul><li><strong>Methodological limitations:</strong>  Although
+        the quantitative research is representative of all young people in the UK, BritainThinks only
+        conducted the qualitative research in two locations in England. The study
+        may have benefitted from capturing the experiences of young people living
+        in other parts of the UK. </li><li><strong>Relevance: </strong>  The report
+        is relevant to all those interested in how to reach and influence the financial
+        capability of young adults at key transition points in their lives.  </li><li><strong>Generalisability/
+        transferability: </strong>  The survey findings are generalisable to all young
+        adults aged 16 to 25 in the UK; BritainThinks weighted the data by age, gender
+        and region to ensure it was representative off all young adults in the UK. </li></ul><h2>Full
+        report</h2><p><a href=\"https://www.moneyadviceservice.org.uk/en/corporate/young-adults-and-money-management/previe\">Young
+        adults and money management - full report</a></p>","published_at":null,"objectID":"/en/insights/young-adults-and-money-management","_highlightResult":{"title":{"value":"<b>Young</b>
+        adults and money management","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>As <b>young</b>
+        adults leave school, college or university and enter the workforce, they can
+        face many changes and challenges. In particular, making financial decisions
+        – such as accessing credit or saving for a house deposit – is important for
+        improving financial resilience and capability. However, getting <b>young</b>
+        adults to access and act on guidance and advice that helps financial decision-making
+        continues to be a challenge, and more evidence is needed to understand how
+        <b>young</b> adults engage with their finances, in order to understand how
+        best to help them.</p><h2 id=\"the-study\">The study</h2><p>In 2017, the Money
+        Advice Service commissioned BritainThinks to conduct research with <b>young</b>
+        adults aged 16 to 25 and living in the UK. The research aimed to understand
+        how <b>young</b> adults think about their money in the context of their lives,
+        what strategies they use to manage their money, and what they would like to
+        know to be able to manage their money better.</p><p>BritainThinks used a mixed-method
+        approach to address this research aim. They held four qualitative workshops
+        across two locations (London and Manchester), with a group of school leavers
+        or university leavers in each location. Alongside the workshops, BritainThinks
+        conducted an online quantitative survey of 470 <b>young</b> adults aged 16
+        to 25 to understand their attitudes and behaviours around managing their money.</p><h2
+        id=\"key-findings\">Key findings</h2><p>The report presents findings in relation to
+        the following themes: </p><ul><li> <strong>Thinking about money:</strong> </li><li>=<b>Young</b>
+        adults thought that managing money was important, but not as important as
+        having social relationships. </li><li>=<b>Young</b> adults view money management
+        as a part of growing up, which is both exciting and daunting. Over a fifth
+        of <b>young</b> adults (22%) were not confident with managing their money. </li><li>=<b>Young</b>
+        adults often perceived that talking about money with friends or family was ‘taboo’.
+        Nearly a fifth of respondents (19%) said they would feel embarrassed talking
+        to friends or family about it. Many <b>young</b> adults also spoke of feeling
+        social pressures around money, for example feeling the need to spend money
+        to keep up with certain images on social media. </li><li><strong>Managing
+        money</strong>:</li><li>=Most <b>young</b> people reported managing their
+        money, for example by budgeting or in short-term savings, but often this was
+        ad hoc and short-term.  </li><li>=Nearly three quarters of <b>young</b> adults
+        (72%) agreed that self-control was more important than knowledge in relation
+        to managing money. </li><li>=Many <b>young</b> adults highlighted using ‘barriers’
+        between them and their money – for example by using a savings account that has
+        a notice period for withdrawals.  </li><li>=Two-fifths of <b>young</b> adults
+        do not usually seek guidance when making financial decisions. </li><li>=<b>Young</b>
+        adults thought that living within their financial means was a key element
+        of effective money management. They recognised being organised and planning
+        their spending as important aspects of managing money well but felt that this
+        often inhibits their social life. </li><li><strong>Tips and guidance:</strong></li><li>=<b>Young</b>
+        adults found the concept of money ‘tips’ appealing and understandable. </li><li>=Around
+        half of workshop participants could not recall receiving tips or guidance
+        about managing their money. </li><li>=85% of <b>young</b> adults wished they
+        had been taught more about money management while at school or university,
+        particularly in relation to credit, investments and budgeting.  </li></ul><h2
+        id=\"points\">Points to consider</h2><ul><li><strong>Methodological limitations:</strong>  Although
+        the quantitative research is representative of all <b>young</b> people in
+        the UK, BritainThinks only conducted the qualitative research in two locations
+        in England. The study may have benefitted from capturing the experiences of
+        <b>young</b> people living in other parts of the UK. </li><li><strong>Relevance: </strong>  The
+        report is relevant to all those interested in how to reach and influence the
+        financial capability of <b>young</b> adults at key transition points in their
+        lives.  </li><li><strong>Generalisability/ transferability: </strong>  The
+        survey findings are generalisable to all <b>young</b> adults aged 16 to 25 in
+        the UK; BritainThinks weighted the data by age, gender and region to ensure
+        it was representative off all <b>young</b> adults in the UK. </li></ul><h2>Full
+        report</h2><p><a href=\"https://www.moneyadviceservice.org.uk/en/corporate/young-adults-and-money-management/previe\"><b>Young</b>
+        adults and money management - full report</a></p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        people still face a worrying gap between school maths and real-life maths","description":null,"keywords":[],"content":"<p><strong>Thursday
+        20th October 2016</strong>\n\nYoung people still face a worrying gap between
+        school maths and real-life maths, says charity as it unveils new approach
+        to hooking 16-25 year-olds into maths through the medium of gaming.\n\nSchool
+        maths is leaving too many young people unprepared for the workplace and for
+        running their lives, according to the education charity, National Numeracy.
+        The charity is calling for changes that ensure all teenagers learn to apply
+        maths in practical contexts and see the relevance of it to their lives.\n\nNational
+        Numeracy says there is now a compelling body of evidence to support new approaches
+        to school and college maths. It cites:\n\n- The mismatch between the two-thirds
+        of young people who pass GCSE maths at A*-C and the less than one-quarter
+        who demonstrate practical maths skills at the same level;</p><p>- Findings
+        from a 2016 YouGov opinion poll showing nearly half (47%) of 18-24 year-olds
+        who took GCSE (or equivalent) maths felt it did not prepare them for managing
+        their money and over a third (36%) of those who work felt it did not prepare
+        them for their current job;\n\n- OECD data showing England as one of very
+        few countries where on average young people do no better at maths than the
+        over-55s;\n\n- The low pass rate (fewer than one in five) among 17-year-olds
+        obliged to re-take maths GCSE.\n\nIn its recent submission to the House of
+        Commons education committee’s enquiry into the purpose of education, National
+        Numeracy argued that while GCSE maths prepared young people reasonably well
+        for advanced maths, it failed to equip many of them for life and work in the
+        broadest sense. Although maths has become the most popular A-level subject,
+        there is no evidence of a significant shift among those at the other end of
+        the achievement range – the young people who struggle with GCSE, who display
+        poor functional numeracy and lack mathematical confidence. The charity believes
+        that the government’s current review of functional skills presents real opportunities
+        – if handled well – to improve maths post-16, but believes that functional
+        maths also needs bringing into school pre-16.\n\nNational Numeracy makes its
+        demands for changes to school maths as it launches its own novel approach
+        to hooking in young adults who lack confidence in maths, showing them how
+        maths pervades the real world and helping them to improve their skills.\nIt
+        has produced a free new mobile app – Star Dash Studios – a runner game based
+        in a virtual film set. Players find themselves on their first day as a runner
+        with a challenging to-do list, and as they run through the various departments,
+        they meet more experienced members of the crew, each with jobs that need their
+        help involving numeracy. The action is fast and furious, the problems are
+        highly visual and engaging, and the whole experience is served up with a large
+        dollop of humour.\n\nAlthough first and foremost a game (aimed at 16-25 year-olds)
+        and not a formal education resource, the app encourages players to think mathematically
+        and use everyday numeracy to tackle embedded number problems (relating to
+        time, money, percentages, measurements, angles and estimation) – and so move
+        up to the next level, an essential feature of gaming. It also offers the option
+        of linking to the online National Numeracy Challenge, which lets people assess
+        and improve their numeracy skills.\n\nNational Numeracy believes that its
+        approach – ‘maths by stealth’ in a gaming app for young adults – is unique.\n\nStar
+        Dash Studios draws on academic work showing a correlation between gaming and
+        mathematical behaviour and is based on National Numeracy’s own ‘Essentials
+        of Numeracy’ model. It is the result of a collaboration between the charity’s
+        maths education specialists and award-winning games developers Plug-In Media,
+        in consultation with young job-seekers, apprentices and further education
+        students. Voice-over is by comedian and writer Chris Kendall.\n\nNational
+        Numeracy chief executive Mike Ellicock said: “All the evidence shows that
+        too many teenagers feel disengaged from school maths and don’t see its relevance
+        to their future lives. We urgently need to crack this problem – and that means
+        a better thought through approach to functional maths, in order to build young
+        people’s confidence, interest and practical skills.\n\n“It’s against this
+        background that we have developed our new app. This is the perfect medium
+        for persuading young people that numeracy is part of every job – whether that’s
+        on a film set, in an office or on a building site.\n\n“What’s more, the resilience
+        everyone needs to improve at everyday maths is akin to the resilience demanded
+        by gaming. Persistence pays in both. Try again – and you go up a level.”\n\nThe
+        new app is backed by TV presenter and mathematician Rachel Riley. She said:
+        “Gaming is a great way to get kids thinking mathematically - without labouring
+        the point. And Star Dash Studios brings in maths in an exciting context -
+        it’s the maths that you really might encounter working on a film set. If this
+        app can build young people’s confidence and start to make them realise that
+        maths is something they have to do in everyday life, and something they can
+        do, then that’s a great achievement.”\n\nStar Dash Studios can be downloaded
+        for free from Google Play, Amazon and App Store from October 20. Its development
+        has been funded through a grant from the Ufi Trust and it will be exhibited
+        at the Skills Show at the NEC in Birmingham next month.\n</p>","published_at":null,"objectID":"/en/articles/young-people-still-face-a-worrying-gap-between-school-maths-and-real-life-maths","_highlightResult":{"title":{"value":"<b>Young</b>
+        people still face a worrying gap between school maths and real-life maths","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<p><strong>Thursday
+        20th October 2016</strong>\n\n<b>Young</b> people still face a worrying gap
+        between school maths and real-life maths, says charity as it unveils new approach
+        to hooking 16-25 year-olds into maths through the medium of gaming.\n\nSchool
+        maths is leaving too many <b>young</b> people unprepared for the workplace
+        and for running their lives, according to the education charity, National
+        Numeracy. The charity is calling for changes that ensure all teenagers learn
+        to apply maths in practical contexts and see the relevance of it to their
+        lives.\n\nNational Numeracy says there is now a compelling body of evidence
+        to support new approaches to school and college maths. It cites:\n\n- The
+        mismatch between the two-thirds of <b>young</b> people who pass GCSE maths
+        at A*-C and the less than one-quarter who demonstrate practical maths skills
+        at the same level;</p><p>- Findings from a 2016 YouGov opinion poll showing
+        nearly half (47%) of 18-24 year-olds who took GCSE (or equivalent) maths felt
+        it did not prepare them for managing their money and over a third (36%) of
+        those who work felt it did not prepare them for their current job;\n\n- OECD
+        data showing England as one of very few countries where on average <b>young</b>
+        people do no better at maths than the over-55s;\n\n- The low pass rate (fewer
+        than one in five) among 17-year-olds obliged to re-take maths GCSE.\n\nIn
+        its recent submission to the House of Commons education committee’s enquiry
+        into the purpose of education, National Numeracy argued that while GCSE maths
+        prepared <b>young</b> people reasonably well for advanced maths, it failed
+        to equip many of them for life and work in the broadest sense. Although maths
+        has become the most popular A-level subject, there is no evidence of a significant
+        shift among those at the other end of the achievement range – the <b>young</b>
+        people who struggle with GCSE, who display poor functional numeracy and lack
+        mathematical confidence. The charity believes that the government’s current
+        review of functional skills presents real opportunities – if handled well
+        – to improve maths post-16, but believes that functional maths also needs
+        bringing into school pre-16.\n\nNational Numeracy makes its demands for changes
+        to school maths as it launches its own novel approach to hooking in <b>young</b>
+        adults who lack confidence in maths, showing them how maths pervades the real
+        world and helping them to improve their skills.\nIt has produced a free new
+        mobile app – Star Dash Studios – a runner game based in a virtual film set.
+        Players find themselves on their first day as a runner with a challenging
+        to-do list, and as they run through the various departments, they meet more
+        experienced members of the crew, each with jobs that need their help involving
+        numeracy. The action is fast and furious, the problems are highly visual and
+        engaging, and the whole experience is served up with a large dollop of humour.\n\nAlthough
+        first and foremost a game (aimed at 16-25 year-olds) and not a formal education
+        resource, the app encourages players to think mathematically and use everyday
+        numeracy to tackle embedded number problems (relating to time, money, percentages,
+        measurements, angles and estimation) – and so move up to the next level, an
+        essential feature of gaming. It also offers the option of linking to the online
+        National Numeracy Challenge, which lets people assess and improve their numeracy
+        skills.\n\nNational Numeracy believes that its approach – ‘maths by stealth’
+        in a gaming app for <b>young</b> adults – is unique.\n\nStar Dash Studios
+        draws on academic work showing a correlation between gaming and mathematical
+        behaviour and is based on National Numeracy’s own ‘Essentials of Numeracy’
+        model. It is the result of a collaboration between the charity’s maths education
+        specialists and award-winning games developers Plug-In Media, in consultation
+        with <b>young</b> job-seekers, apprentices and further education students.
+        Voice-over is by comedian and writer Chris Kendall.\n\nNational Numeracy chief
+        executive Mike Ellicock said: “All the evidence shows that too many teenagers
+        feel disengaged from school maths and don’t see its relevance to their future
+        lives. We urgently need to crack this problem – and that means a better thought
+        through approach to functional maths, in order to build <b>young</b> people’s
+        confidence, interest and practical skills.\n\n“It’s against this background
+        that we have developed our new app. This is the perfect medium for persuading
+        <b>young</b> people that numeracy is part of every job – whether that’s on
+        a film set, in an office or on a building site.\n\n“What’s more, the resilience
+        everyone needs to improve at everyday maths is akin to the resilience demanded
+        by gaming. Persistence pays in both. Try again – and you go up a level.”\n\nThe
+        new app is backed by TV presenter and mathematician Rachel Riley. She said:
+        “Gaming is a great way to get kids thinking mathematically - without labouring
+        the point. And Star Dash Studios brings in maths in an exciting context -
+        it’s the maths that you really might encounter working on a film set. If this
+        app can build <b>young</b> people’s confidence and start to make them realise
+        that maths is something they have to do in everyday life, and something they
+        can do, then that’s a great achievement.”\n\nStar Dash Studios can be downloaded
+        for free from Google Play, Amazon and App Store from October 20. Its development
+        has been funded through a grant from the Ufi Trust and it will be exhibited
+        at the Skills Show at the NEC in Birmingham next month.\n</p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        Adults - Steering Group","description":null,"keywords":[],"content":"<p>The
+        Young Adults Steering Group is responsible for supporting and guiding Money
+        Advice Service and the sector in the delivery of the England and UK-wide elements
+        of the Financial Capability Strategy for their age group. Minutes of the meeting
+        are available for download. </p><p>The Steering Group membership currently
+        includes:</p><p></p><ul><li><strong>Clarion Futures</strong>                                                                               
+        Stephanie Noyce           </li><li><strong>Lloyds Banking Group<em>                                             
+        </em></strong>                       Alan Nichols                   </li><li><strong>NASMA-National
+        Association of Student Money Advisers<em>      </em>   </strong>Anita Bailey                    </li><li><strong>National
+        Youth Agency</strong>                                                                  
+        Jon Boagey               </li><li><strong>NSAFS -</strong> <strong>National
+        Skills      Academy for Financial Services<em>  </em></strong>            
+        Peter Pledger <strong><em>(Chair)  </em></strong></li><li><strong>RBS</strong>
+                                                                                                         
+        Veda Harrison  </li><li><strong>The Mix</strong>                                                                                         
+           Chris Martin                   </li><li><strong>UK Youth</strong>                                                                                       
+          Anna Smee / Christina Hicks              </li><li><strong>University of
+        Edinburgh</strong>                                                                 
+        Tina Harrison                 </li><li><strong>Young Scot</strong>                                                                                      
+        Alison  Hardie            </li></ul><p></p><p>\n<em><strong> \n\n\n \n</strong></em>\n</p><p>
+        </p><p>\n\n</p>","published_at":null,"objectID":"/en/articles/young-adults-steering-group","_highlightResult":{"title":{"value":"<b>Young</b>
+        Adults - Steering Group","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<p>The
+        <b>Young</b> Adults Steering Group is responsible for supporting and guiding
+        Money Advice Service and the sector in the delivery of the England and UK-wide
+        elements of the Financial Capability Strategy for their age group. Minutes
+        of the meeting are available for download. </p><p>The Steering Group membership
+        currently includes:</p><p></p><ul><li><strong>Clarion Futures</strong>                                                                               
+        Stephanie Noyce           </li><li><strong>Lloyds Banking Group<em>                                             
+        </em></strong>                       Alan Nichols                   </li><li><strong>NASMA-National
+        Association of Student Money Advisers<em>      </em>   </strong>Anita Bailey                    </li><li><strong>National
+        Youth Agency</strong>                                                                  
+        Jon Boagey               </li><li><strong>NSAFS -</strong> <strong>National
+        Skills      Academy for Financial Services<em>  </em></strong>            
+        Peter Pledger <strong><em>(Chair)  </em></strong></li><li><strong>RBS</strong>
+                                                                                                         
+        Veda Harrison  </li><li><strong>The Mix</strong>                                                                                         
+           Chris Martin                   </li><li><strong>UK Youth</strong>                                                                                       
+          Anna Smee / Christina Hicks              </li><li><strong>University of
+        Edinburgh</strong>                                                                 
+        Tina Harrison                 </li><li><strong><b>Young</b> Scot</strong>
+                                                                                             
+        Alison  Hardie            </li></ul><p></p><p>\n<em><strong> \n\n\n \n</strong></em>\n</p><p>
+        </p><p>\n\n</p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"Young
+        Adults","description":null,"keywords":[],"content":"<img src=\"https://prismic-io.s3.amazonaws.com/fincap-two/4b8fbdf687748c3ca0e3ba0bf7ebe45770816815_three_people_laughing_on_sofa_with_laptop.jpg\"
+        width=\"1440\" height=\"961\" /><p>Young adults are those who have left compulsory
+        education or other statutory settings, such as care. They are transitioning
+        towards independent living and financial independence, beginning between the
+        ages of 16 to 18 and continuing to their mid-20s.</p><p>Research suggests
+        that young adults typically display lower levels of financial capability than
+        older age groups.</p><p>Online and offline support does exist to help them,
+        but many providers report that they struggle to engage them on day-to-day
+        money management, including on sensible credit use, or on important financial
+        decisions that will have an impact on their future wellbeing.</p><p>Young
+        adults in the coming years will face major changes to the policy, economic
+        and social landscape in which they have to manage their money day-to-day and
+        take important financial decisions about their future. These will affect young
+        adults from many walks of life, yet is likely to have a disproportionate impact
+        on those who come from more marginalised backgrounds.</p><p>A key aim of the
+        Strategy will be to listen to and understand more fully the differing capabilities
+        of, or barriers faced by, young adults in order to enable more effective,
+        sustainable and engaging financial capability approaches to be developed to
+        help them.</p><p><strong>In devising approaches to trial and measure, the
+        Strategy will focus on three interlinked areas:</strong></p><ul><li>welfare
+        reform;</li><li>changes to further and higher education funding; and </li><li>developments
+        in the jobs market, such as an increase in apprenticeships</li></ul><p><strong>Find
+        out more:</strong></p><ul><li>You can read specific priorities for young adults
+        in the devolved nations on the pages for <a href=\"\">Northern Ireland</a>,
+        <a href=\"\">Scotland</a> and <a href=\"\">Wales</a></li><li>If you would
+        like to get more involved in this area of the Strategy please contact us at
+        <a href=\"\">enquiries@fincap.org.uk </a></li></ul>","published_at":null,"objectID":"/en/articles/young-adults","_highlightResult":{"title":{"value":"<b>Young</b>
+        Adults","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<img
+        src=\"https://prismic-io.s3.amazonaws.com/fincap-two/4b8fbdf687748c3ca0e3ba0bf7ebe45770816815_three_people_laughing_on_sofa_with_laptop.jpg\"
+        width=\"1440\" height=\"961\" /><p><b>Young</b> adults are those who have
+        left compulsory education or other statutory settings, such as care. They
+        are transitioning towards independent living and financial independence, beginning
+        between the ages of 16 to 18 and continuing to their mid-20s.</p><p>Research
+        suggests that <b>young</b> adults typically display lower levels of financial
+        capability than older age groups.</p><p>Online and offline support does exist
+        to help them, but many providers report that they struggle to engage them
+        on day-to-day money management, including on sensible credit use, or on important
+        financial decisions that will have an impact on their future wellbeing.</p><p><b>Young</b>
+        adults in the coming years will face major changes to the policy, economic
+        and social landscape in which they have to manage their money day-to-day and
+        take important financial decisions about their future. These will affect <b>young</b>
+        adults from many walks of life, yet is likely to have a disproportionate impact
+        on those who come from more marginalised backgrounds.</p><p>A key aim of the
+        Strategy will be to listen to and understand more fully the differing capabilities
+        of, or barriers faced by, <b>young</b> adults in order to enable more effective,
+        sustainable and engaging financial capability approaches to be developed to
+        help them.</p><p><strong>In devising approaches to trial and measure, the
+        Strategy will focus on three interlinked areas:</strong></p><ul><li>welfare
+        reform;</li><li>changes to further and higher education funding; and </li><li>developments
+        in the jobs market, such as an increase in apprenticeships</li></ul><p><strong>Find
+        out more:</strong></p><ul><li>You can read specific priorities for <b>young</b>
+        adults in the devolved nations on the pages for <a href=\"\">Northern Ireland</a>,
+        <a href=\"\">Scotland</a> and <a href=\"\">Wales</a></li><li>If you would
+        like to get more involved in this area of the Strategy please contact us at
+        <a href=\"\">enquiries@fincap.org.uk </a></li></ul>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}},{"title":"How
+        young New Zealanders learn about personal finance","description":null,"keywords":[],"content":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>This 20-year longitudinal
+        study is designed to contribute to a better understanding of issues related
+        to the level of financial literacy in New Zealand. In particular, the study
+        explores New Zealanders’ experience of financial education and its contribution
+        to their financial literacy. While the study builds on previous studies in
+        New Zealand and around the world, its approach differs by taking a cohort
+        of young New Zealanders and following them over a 20-year period at five-yearly
+        intervals. This longitudinal element is unique in the New Zealand context,
+        and will enable tracking of pathways to improved financial literacy over time.</p><h2
+        id=\"the-study\">The study</h2><p>The study comprises a cohort of 300 New
+        Zealanders aged 18-22 years.\n A baseline survey of participants’ financial
+        literacy and experience of financial education has been undertaken. This stage
+        of the study collected data in two ways: an online questionnaire and face-to-face
+        interviews. Participants were drawn from the New Zealand electoral rolls on
+        a national basis but with some regional clustering for practical reasons.
+        The locations were: Auckland, New Plymouth, Palmerston North, Wellington,
+        Nelson, and Christchurch.</p><h2 id=\"key-findings\">Key findings</h2><p>This
+        is an interim report on the baseline stage of the study. Key findings, drawn
+        from an online questionnaire and face-to-face interviews are:</p><ul><li>There
+        is a relatively low level of financial knowledge compared to studies in other
+        countries.</li><li>Young New Zealanders lack opportunities for formal financial
+        education to assist their development of sound personal financial management
+        skills.</li><li>Based on responses to an online questionnaire and interviews,
+        it is evident that young New Zealanders are exposed to informal financial
+        education, such as the promotions undertaken by the Commission for Financial
+        Literacy and Retirement Income in relation to credit card debt, and that this
+        is having an impact although individuals may not recognise the influence.</li><li>Parents
+        remain the key source of informal financial education for young New Zealanders,
+        although in some cases the parents’ own personal financial knowledge may be
+        limited, restricting their ability to provide the knowledge required by their
+        children.</li><li>Young New Zealanders often know the key elements of good
+        financial management, such as the need to save, but may not be putting it
+        into practice.</li><li>Young New Zealanders are scared of debt, particularly
+        in the form of credit cards.\n</li></ul><h2 id=\"points\">Points to consider</h2><p><strong>Methodological
+        limitations:</strong></p><ul><li>The authors point out that there is an urban
+        and female bias to the sample and that no attempt has been made to ensure
+        the sample is demographically representative in terms of gender, age or ethnicity.
+        There is likely to also be a self-selection bias in the sample, because those
+        more interested in the study subject and those with a higher level of self-motivation
+        are more likely to have agreed to participate in the study. This bias is stronger
+        due to the low response rate, but the effect of the bias is unknown.</li><li>Looking
+        forward, a cohort of 300 is a small sample size for a long-term longitudinal
+        study.</li></ul><p><strong>Relevance: </strong></p><ul><li>This is an interim
+        report – full results were due to be published in 2013, to include additional
+        results such as retirement planning, wellbeing and financial situation. \n</li></ul><h2>Full
+        report</h2><p><a href=\"http://www.massey.ac.nz/massey/fms/Colleges/College%20of%20Business/School%20of%20Economics%20&%20Finance/Long_Study_Interim_Report_Final.pdf\">How
+        young New Zealanders learn about personal finance - full report</a></p>","published_at":null,"objectID":"/en/insights/how-young-new-zealanders-learn-about-personal-finance","_highlightResult":{"title":{"value":"How
+        <b>young</b> New Zealanders learn about personal finance","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]},"content":{"value":"<ol><li><a
+        href=\"#context\">Context</a></li><li><a href=\"#the-study\">The study</a></li><li><a
+        href=\"#key-findings\">Key findings</a></li><li><a href=\"#points\">Points
+        to consider</a></li></ol><h2 id=\"context\">Context</h2><p>This 20-year longitudinal
+        study is designed to contribute to a better understanding of issues related
+        to the level of financial literacy in New Zealand. In particular, the study
+        explores New Zealanders’ experience of financial education and its contribution
+        to their financial literacy. While the study builds on previous studies in
+        New Zealand and around the world, its approach differs by taking a cohort
+        of <b>young</b> New Zealanders and following them over a 20-year period at
+        five-yearly intervals. This longitudinal element is unique in the New Zealand
+        context, and will enable tracking of pathways to improved financial literacy
+        over time.</p><h2 id=\"the-study\">The study</h2><p>The study comprises a
+        cohort of 300 New Zealanders aged 18-22 years.\n A baseline survey of participants’
+        financial literacy and experience of financial education has been undertaken.
+        This stage of the study collected data in two ways: an online questionnaire
+        and face-to-face interviews. Participants were drawn from the New Zealand
+        electoral rolls on a national basis but with some regional clustering for
+        practical reasons. The locations were: Auckland, New Plymouth, Palmerston
+        North, Wellington, Nelson, and Christchurch.</p><h2 id=\"key-findings\">Key
+        findings</h2><p>This is an interim report on the baseline stage of the study.
+        Key findings, drawn from an online questionnaire and face-to-face interviews
+        are:</p><ul><li>There is a relatively low level of financial knowledge compared
+        to studies in other countries.</li><li><b>Young</b> New Zealanders lack opportunities
+        for formal financial education to assist their development of sound personal
+        financial management skills.</li><li>Based on responses to an online questionnaire
+        and interviews, it is evident that <b>young</b> New Zealanders are exposed
+        to informal financial education, such as the promotions undertaken by the
+        Commission for Financial Literacy and Retirement Income in relation to credit
+        card debt, and that this is having an impact although individuals may not
+        recognise the influence.</li><li>Parents remain the key source of informal
+        financial education for <b>young</b> New Zealanders, although in some cases
+        the parents’ own personal financial knowledge may be limited, restricting
+        their ability to provide the knowledge required by their children.</li><li><b>Young</b>
+        New Zealanders often know the key elements of good financial management, such
+        as the need to save, but may not be putting it into practice.</li><li><b>Young</b>
+        New Zealanders are scared of debt, particularly in the form of credit cards.\n</li></ul><h2
+        id=\"points\">Points to consider</h2><p><strong>Methodological limitations:</strong></p><ul><li>The
+        authors point out that there is an urban and female bias to the sample and
+        that no attempt has been made to ensure the sample is demographically representative
+        in terms of gender, age or ethnicity. There is likely to also be a self-selection
+        bias in the sample, because those more interested in the study subject and
+        those with a higher level of self-motivation are more likely to have agreed
+        to participate in the study. This bias is stronger due to the low response
+        rate, but the effect of the bias is unknown.</li><li>Looking forward, a cohort
+        of 300 is a small sample size for a long-term longitudinal study.</li></ul><p><strong>Relevance: </strong></p><ul><li>This
+        is an interim report – full results were due to be published in 2013, to include
+        additional results such as retirement planning, wellbeing and financial situation. \n</li></ul><h2>Full
+        report</h2><p><a href=\"http://www.massey.ac.nz/massey/fms/Colleges/College%20of%20Business/School%20of%20Economics%20&%20Finance/Long_Study_Interim_Report_Final.pdf\">How
+        <b>young</b> New Zealanders learn about personal finance - full report</a></p>","matchLevel":"full","fullyHighlighted":false,"matchedWords":["young"]}}}],"nbHits":154,"page":0,"nbPages":16,"hitsPerPage":10,"processingTimeMS":8,"exhaustiveNbHits":true,"query":"young","params":"highlightPreTag=%3Cb%3E&highlightPostTag=%3C%2Fb%3E&page=&hitsPerPage=10&query=young"}
+
+'
+    http_version: 
+  recorded_at: Thu, 23 Aug 2018 17:16:36 GMT
+recorded_with: VCR 4.0.0

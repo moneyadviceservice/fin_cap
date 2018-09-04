@@ -1,0 +1,7 @@
+<div class='l-pagination pagination'>
+  <% present(@search_results, SiteSearchPresenter) do |template| %>
+    <%= template.previous_page %>
+    <%= template.pagination_information %>
+    <%= template.next_page %>
+  <% end %>
+</div>
