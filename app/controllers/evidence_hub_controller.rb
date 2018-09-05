@@ -44,7 +44,7 @@ class EvidenceHubController < EvidenceSummariesController
   end
 
   def search_params
-    SearchFormParamParser.parse(form_params)
+    EvidenceHub::SearchFormParamParser.parse(form_params)
   end
 
   def reset_all_params

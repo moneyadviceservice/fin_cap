@@ -1,4 +1,6 @@
-RSpec.describe SearchFormParamParser, type: :model do
+RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
+  include ActiveSupport::Testing::TimeHelpers
+
   let(:subject) { described_class.new(params) }
 
   describe '#parse' do
@@ -126,6 +128,9 @@ RSpec.describe SearchFormParamParser, type: :model do
     context 'with a publication year filter' do
       let(:filter) { 'year_of_publication' }
 
+      before { travel_to Time.zone.local(2018, 8, 4, 1, 15, 30) }
+      after { travel_back }
+
       context 'set to All years' do
         let(:params) { { keyword: '', filter => 'All years' } }
         let(:expected_result) { { keyword: '' } }
@@ -139,9 +144,7 @@ RSpec.describe SearchFormParamParser, type: :model do
         let(:params) { { keyword: '', filter => 'Last 2 years' } }
         let(:expected_result) { { keyword: '', blocks: blocks } }
         let(:blocks) { [{ identifier: filter, value: years }] }
-        let(:years) do
-          ((Time.current.year - 1)..(Time.current.year)).to_a.reverse
-        end
+        let(:years) { [2018, 2017] }
 
         it 'returns an array of 2 year values and the keyword hash' do
           expect(subject.parse).to eq(expected_result)
@@ -152,9 +155,7 @@ RSpec.describe SearchFormParamParser, type: :model do
         let(:params) { { keyword: '', filter => 'Last 5 years' } }
         let(:expected_result) { { keyword: '', blocks: blocks } }
         let(:blocks) { [{ identifier: filter, value: years }] }
-        let(:years) do
-          ((Time.current.year - 4)..(Time.current.year)).to_a.reverse
-        end
+        let(:years) { [2018, 2017, 2016, 2015, 2014] }
 
         it 'returns array of 5 year values and the keyword hash' do
           expect(subject.parse).to eq(expected_result)
@@ -165,7 +166,7 @@ RSpec.describe SearchFormParamParser, type: :model do
         let(:params) { { keyword: '', filter => 'More than 5 years ago' } }
         let(:expected_result) { { keyword: '', blocks: blocks } }
         let(:blocks) { [{ identifier: filter, value: years }] }
-        let(:years) { (2000..(Time.current.year - 5)).to_a.reverse }
+        let(:years) { 2013.downto(2000).to_a }
 
         it 'returns array of years btwn (now - 5) to 2000 and keyword hash' do
           expect(subject.parse).to eq(expected_result)
