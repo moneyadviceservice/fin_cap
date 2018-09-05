@@ -290,7 +290,6 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
     this._attachBoundHelper(this.$mobileNavClose, this._toggleMobileNav, this);
     this._attachBoundHelper(this.$navLevel_1_Heading, this._openMobileLevel2, this);
     this._attachBoundHelper(this.$navLevel_2_Heading, this._closeMobileLevel2, this);
-    this._attachBoundHelper(this.$navLevel_2_Extended_Heading, this._toggleMobileLevel3, this);
     this._attachBoundHelper(this.$navLevel_3_Heading, this._toggleMobileLevel3, this);
   };
 
