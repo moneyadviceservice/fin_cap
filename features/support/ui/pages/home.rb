@@ -15,6 +15,12 @@ module UI
       element :submit, '.search__submit'
     end
 
+    class StayInTouchBox < SitePrism::Section
+      element :title, 'h2'
+      element :content, 'p'
+      element :link, 'a'
+    end
+
     class Home < UI::Page
       set_url '/'
 
@@ -23,6 +29,7 @@ module UI
       sections :ctas, Ctas, '.l-2col-even'
       section :top_search_box, SearchBox, '.nav__search-bar'
       section :bottom_search_box, SearchBox, '.footer__search'
+      section :stay_in_touch_box, StayInTouchBox, '.footer__box-inner'
     end
   end
 end

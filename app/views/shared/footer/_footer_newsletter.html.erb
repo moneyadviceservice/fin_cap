@@ -2,12 +2,11 @@
   <div class="footer__box-inner">
     <h2 class="footer__box-title">Stay in touch</h2>
     <p>Subscribe to our newsletter</p>
-    <form>
-      <a 
-        href="https://forms.office.com/Pages/ResponsePage.aspx?id=NBUaP4MKZUy1wr4a_vFI5d0WGIwI8X5OtKDnEfbzjC9UQ0NXTEZOMDAxTFZMMlJNVUpWN0NLU0o3Ry4u" 
-        target="_blank"
-        class="btn btn--primary btn--full-width"
-      >Subscribe</a>
-    </form>
+    <%= link_to(
+      'Subscribe',
+      t('fincap.links_external.newsletter'),
+      target: '_blank',
+      class: 'btn btn--primary btn--full-width'
+    ) %>
   </div>
 </div>
