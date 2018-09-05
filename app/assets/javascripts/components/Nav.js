@@ -410,17 +410,6 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
   }
 
   /**
-  * Toggles nav level 3 on mobile
-  */
-  Nav.prototype._toggleMobileLevel3 = function(index) {
-    if (this.atSmallViewport) {
-      this.$navLevel_1.toggleClass(this.openClass);
-      this.$navLevel_3.removeClass(this.activeClass);
-      $(index).siblings('[data-nav-level-3]').toggleClass(this.activeClass)
-    }
-  };
-
-  /**
    * Opens Level 2 on desktop
    */
   Nav.prototype._openDesktopLevel2 = function(index) {
