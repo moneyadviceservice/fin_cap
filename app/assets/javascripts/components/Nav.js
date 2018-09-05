@@ -290,7 +290,6 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
     this._attachBoundHelper(this.$mobileNavClose, this._toggleMobileNav, this);
     this._attachBoundHelper(this.$navLevel_1_Heading, this._openMobileLevel2, this);
     this._attachBoundHelper(this.$navLevel_2_Heading, this._closeMobileLevel2, this);
-    this._attachBoundHelper(this.$navLevel_2_Extended_Heading, this._toggleMobileLevel3, this);
     this._attachBoundHelper(this.$navLevel_3_Heading, this._toggleMobileLevel3, this);
   };
 
@@ -409,17 +408,6 @@ define(['jquery', 'DoughBaseComponent', 'utilities', 'mediaQueries'], function($
       .parents('[data-nav-level-1-item]').toggleClass(this.activeClass)
       .parents('[data-nav-level-1]').toggleClass(this.activeClass);
   }
-
-  /**
-  * Toggles nav level 3 on mobile
-  */
-  Nav.prototype._toggleMobileLevel3 = function(index) {
-    if (this.atSmallViewport) {
-      this.$navLevel_1.toggleClass(this.openClass);
-      this.$navLevel_3.removeClass(this.activeClass);
-      $(index).siblings('[data-nav-level-3]').toggleClass(this.activeClass)
-    }
-  };
 
   /**
    * Opens Level 2 on desktop
