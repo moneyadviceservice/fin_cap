@@ -21,7 +21,7 @@ pipeline {
           when { branch 'PR-*' }
             environment {
               DANGER_CHANGE_ID = "${env.CHANGE_ID}"
-              DANGER_CHANGE_URL = "${env.CHANGE_URL}"
+              DANGER_GIT_URL = "${env.GIT_URL}"
               DANGER_JENKINS_URL = "${env.JENKINS_URL}"
             }
             steps {
