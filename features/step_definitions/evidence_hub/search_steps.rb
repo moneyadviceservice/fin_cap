@@ -9,9 +9,7 @@ Given('I search based on some filters') do
   step %(I press search)
 end
 
-Given(
-  'I am on the page {string} seeing {string} evidence summary per page'
-) do |page, per_page|
+Given('I am on the page {string} seeing {string} evidence summary per page') do |page, per_page|
   visit("/en/evidence_hub?page=#{page}&per_page=#{per_page}")
 end
 
@@ -51,9 +49,7 @@ Then('I should see {string} evidence summary') do |records_size|
   expect(evidence_summaries_page.search_results.size).to be(records_size.to_i)
 end
 
-Then(
-  'I should see the {string} evidence summary icon linking to {string} article'
-) do |result_number, evidence_type|
+Then('I should see the {string} evidence summary icon linking to {string} article') do |result_number, evidence_type|
   search_result = evidence_summaries_page.search_results.send(result_number)
   path = "/en/articles/evidence-type-#{evidence_type.downcase}"
 
@@ -61,9 +57,7 @@ Then(
   expect(search_result.info_icon[:href]).to eq(path)
 end
 
-Then(
-  'I should see the {string} evidence summary with data types as'
-) do |result_number, table|
+Then('I should see the {string} evidence summary with data types as') do |result_number, table|
   search_result = evidence_summaries_page.search_results.send(result_number)
 
   table.rows.each do |row|
@@ -84,6 +78,10 @@ Then('I should see the {string} evidence summary as') do |result_number, table|
   end
 end
 
+Then('I should see {string} pagination sections') do |count|
+  expect(evidence_summaries_page.pagination.count).to eq(count.to_i)
+end
+
 Then('I should see no filters checked') do
   expect(evidence_summaries_page.older_people_filter.checked?).to be_falsey
 end
@@ -100,15 +98,14 @@ Then('I should see the keyword field cleared') do
   expect(evidence_summaries_page.keyword.value).to eq('')
 end
 
-# rubocop:disable Metrics/LineLength
 Then('I should see the summaries related to {string}') do |_|
   steps %(
     Then I should see "2" evidence summary
     And I should see the "first" evidence summary as
-      | Field               | Value                                                    |
-      | document title      | Looking after the pennies                                |
-      | overview            | An evaluation, commissioned by Royal London              |
-      | evidence type       | Evaluation                                               |
+      | Field               | Value                                                       |
+      | document title      | Looking after the pennies                                   |
+      | overview            | An evaluation, commissioned by Royal London                 |
+      | evidence type       | Evaluation                                                  |
     And I should see the "second" evidence summary as
       | Field               | Value                                                       |
       | document title      | Raising household saving                                    |
@@ -118,20 +115,14 @@ Then('I should see the summaries related to {string}') do |_|
 end
 
 Then('I should see the thematic review message') do |message|
-  expect(
-    evidence_summaries_page.thematic_review_message.text
-  ).to include(message)
+  expect(evidence_summaries_page.thematic_review_message.text).to include(message)
 end
 
 Then('I should see the thematic review link {string}') do |link|
-  expect(
-    evidence_summaries_page.thematic_review_message_link[:href]
-  ).to include(link)
+  expect(evidence_summaries_page.thematic_review_message_link[:href]).to include(link)
 end
 
-Then(
-  'I should see the summaries related to thematic review and has topic Saving'
-) do
+Then('I should see the summaries related to thematic review and has topic Saving') do
   steps %(
     Then I should see "1" evidence summary
     And I should see the "first" evidence summary as
@@ -140,5 +131,4 @@ Then(
       | overview            | Based on an analysis of international evidence, this report |
       | evidence type       | Review                                                      |
   )
-  # rubocop:enable Metrics/LineLength
 end
