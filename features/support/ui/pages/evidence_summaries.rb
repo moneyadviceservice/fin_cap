@@ -28,15 +28,16 @@ module UI::Pages
       sections :filter_inputs, FilterInput, 'label'
 
       def find_filter(value)
-        filter_inputs.find {|label| label.input.value == value}
+        filter_inputs.find { |label| label.input.value == value }
       end
     end
 
-    set_url '{/locale}/evidence_hub'
+    class Pagination < SitePrism::Section
+      element :previous_button, '.pagination__prev-page'
+      element :next_button, '.pagination__next-page'
+    end
 
-    # pagination elements
-    element :previous_page, '.evidence-hub__previous-page'
-    element :next_page, '.evidence-hub__next-page'
+    set_url '{/locale}/evidence_hub'
 
     # searching/filtering elements
     element :keyword, '#evidence_summary_search_form_keyword'
@@ -59,8 +60,18 @@ module UI::Pages
     sections :search_results, SearchResult, '.search-results__item'
     sections :search_filters, SearchFilter, '.sidepanel__filters-inner .sidepanel__fieldset'
 
+    sections :pagination, Pagination, '.pagination__wrap'
+
     def find_filter_group(title)
       search_filters.find { |filter_group| filter_group.title.text == title }
+    end
+
+    def previous_page
+      pagination.first.previous_button
+    end
+
+    def next_page
+      pagination.first.next_button
     end
   end
 end

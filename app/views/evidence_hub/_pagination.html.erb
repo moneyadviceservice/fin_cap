@@ -1,0 +1,12 @@
+<% present(documents, EvidenceSummariesPresenter) do |evidence_summaries_presenter| %>
+  <% if show_total_results %>
+    <div class="pagination__description">
+      <%= evidence_summaries_presenter.total_results_description %>
+    </div>
+  <% end %>
+  <div class="pagination">
+    <%= evidence_summaries_presenter.previous_page %>
+    <%= evidence_summaries_presenter.pagination_description %>
+    <%= evidence_summaries_presenter.next_page %>
+  </div>
+<% end %>
