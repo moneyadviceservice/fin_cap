@@ -19,14 +19,7 @@
     </div>
     <div class="l-2col-main">
       <div class="pagination__wrap">
-        <% present(@documents, EvidenceSummariesPresenter) do |evidence_summaries_presenter| %>
-          <div class="pagination__description"><%= evidence_summaries_presenter.total_results_description %></div>
-          <div class="pagination">
-            <%= evidence_summaries_presenter.previous_page %>
-            <%= evidence_summaries_presenter.pagination_description %>
-            <%= evidence_summaries_presenter.next_page %>
-          </div>
-        <% end %>
+        <%= render 'pagination', documents: @documents, show_total_results: true %>
       </div>
 
       <ul class="search-results">
@@ -34,6 +27,10 @@
           <%= render 'search_result', document: document %>
         <% end %>
       </ul>
+
+      <div class="pagination__wrap">
+        <%= render 'pagination', documents: @documents, show_total_results: false %>
+      </div>
     </div>
   </div>
 </div>

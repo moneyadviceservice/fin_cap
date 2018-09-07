@@ -13,7 +13,6 @@ Feature: Evidence Hub Search
       | Client group        | Children (3 - 11), Young people (12 - 16), Parents / families, Young adults (17 - 24), Working age (18 - 65), Older people (65+), Over-indebted people, Social housing tenants, Teachers / practitioners, Other |
       | Topic               | Saving, Pensions and retirement planning, Credit use and debt, Budgeting and keeping track, Insurance and protection, Financial education, Financial capability |
       | Country of delivery | United Kingdom, England, Northern Ireland, Scotland, Wales, USA, Other |
-    
     And I should see the "first" evidence summary as
       | Field               | Value                                                    |
       | document title      | Financial well-being: the employee view                  |
@@ -40,6 +39,7 @@ Feature: Evidence Hub Search
       | Field         | Value |
       | qualitative   | cross |
       | quantitative  | cross |
+    And I should see "2" pagination sections
 
   Scenario: Search by keyword
     When I search the evidence hub with a keyword "Financial well-being: the employee"
