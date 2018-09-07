@@ -95,13 +95,7 @@ describe('Nav', function() {
       this.toggleMobileNavStub = sinon.stub(this.obj, "_toggleMobileNav");
       this.openMobileLevel2Stub = sinon.stub(this.obj, "_openMobileLevel2");
       this.closeMobileLevel2Stub = sinon.stub(this.obj, "_closeMobileLevel2");
-      this.toggleMobileLevel3Stub = sinon.stub(this.obj, "_toggleMobileLevel3");
       this.obj.init();
-    });
-
-    it('Calls the _toggleMobileNav method when the mobile nav button is clicked', function() {
-      this.mobileNavButton.trigger('click');
-      expect(this.toggleMobileNavStub.callCount).to.be.equal(1);
     });
 
     it('Calls the _toggleMobileNav method when the mobile nav overlay is clicked', function() {
@@ -122,16 +116,6 @@ describe('Nav', function() {
     it('Calls the _closeMobileLevel2 method when each Level 2 Heading is clicked', function() {
       var count = countCalls(this.$navLevel2, 'data-nav-level-2-heading');
       expect(this.closeMobileLevel2Stub.callCount).to.be.equal(count);
-    });
-
-    it('Calls the _toggleMobileLevel3 method when each Level 2 Extended Heading is clicked', function() {
-      var count = countCalls(this.$navLevel2ExtendedItems, 'data-nav-level-2-extended-heading');
-      expect(this.toggleMobileLevel3Stub.callCount).to.be.equal(count);
-    });
-
-    it('Calls the _toggleMobileLevel3 method when each Level 3 Heading is clicked', function() {
-      var count = countCalls(this.$navLevel3, 'data-nav-level-3-heading');
-      expect(this.toggleMobileLevel3Stub.callCount).to.be.equal(count);
     });
   });
 
@@ -435,64 +419,6 @@ describe('Nav', function() {
       callCloseMobileLevel2();
       this.obj.atSmallViewport = false;
       callCloseMobileLevel2();
-    });
-  });
-
-  describe('Calls _toggleMobileLevel3 to open level', function() {
-    it('Displays the level 3 menu associated with the level 2 target element at mobile view', function() {
-      var self = this;
-      var callOpenMobileLevel3 = function() {
-        self.$navLevel2ExtendedItems.each(function() {
-          $(this).find('[data-nav-level-2-extended-heading]').each(function() {
-            self.$navLevel1.removeClass(self.openClass);
-            self.$navLevel3.removeClass(self.activeClass);
-
-            self.obj._toggleMobileLevel3(this);
-
-            if (self.obj.atSmallViewport) {
-              expect($(this).siblings('[data-nav-level-3]').hasClass(self.activeClass)).to.be.true;
-              expect($(this).parents('[data-nav-level-1]').hasClass(self.openClass)).to.be.true;
-            } else {
-              expect($(this).siblings('[data-nav-level-3]').hasClass(self.activeClass)).to.be.false;
-              expect($(this).parents('[data-nav-level-1]').hasClass(self.openClass)).to.be.false;
-            }
-          });
-        });
-      }
-
-      this.obj.atSmallViewport = true;
-      callOpenMobileLevel3();
-      this.obj.atSmallViewport = false;
-      callOpenMobileLevel3();
-    });
-  });
-
-  describe('Calls _toggleMobileLevel3 to close level', function() {
-    it('Closes the live level 3 menu and displays the parent level 2 menu at mobile view', function() {
-      var self = this;
-      var callCloseMobileLevel3 = function() {
-        self.$navLevel3.each(function() {
-          var index = $(this).find('[data-nav-level-3-heading]');
-
-          self.$navLevel1.addClass(self.openClass);
-          $(this).addClass(self.activeClass);
-
-          self.obj._toggleMobileLevel3($(index).parents('[data-nav-level-3]'));
-
-          if (self.obj.atSmallViewport == true) {
-            expect(self.$navLevel1.hasClass(self.openClass)).to.be.false;
-            expect($(this).hasClass(self.activeClass)).to.be.false;
-          } else {
-            expect(self.$navLevel1.hasClass(self.openClass)).to.be.true;
-            expect($(this).hasClass(self.activeClass)).to.be.true;
-          }
-        });
-      }
-
-      this.obj.atSmallViewport = true;
-      callCloseMobileLevel3();
-      this.obj.atSmallViewport = false;
-      callCloseMobileLevel3();
     });
   });
 
