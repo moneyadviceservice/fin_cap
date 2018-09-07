@@ -67,6 +67,14 @@ Update link for the styleguide when the site is deployed.
 
 [Styleguide](http://localhost:5000/styleguide)
 
+## Docker testing
+
+You can run the tests locally within a docker container. This will setup all of the required dependencies within the container and replicates how the tests are executed in Jenkins. Please run the following command:
+
+```sh
+docker-compose down && docker-compose build && docker-compose -f docker-compose.yml run --rm rails ./script/test
+```
+
 ## Hooks
 
 This project uses git hooks to ensure every commit follows best practices.

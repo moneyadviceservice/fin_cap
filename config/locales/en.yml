@@ -159,7 +159,7 @@ en:
           content_html: 'This themed week raises awareness of the importance of financial capability, what it means and the organisations involved in making a change. We’d love to hear from organisations interested in getting involved – more information is available %{link}.'
         up_to_date:
           title: Keep up to date
-          content_html: 'Read our research and get updates from the steering group on our %{link_themes}, and don’t forget to follow the Strategy’s official %{link_twitter} and %{link_linkedin} profile.'
+          content_html: 'Read our research and get updates from the steering group on our Lifestages pages, and don’t forget to follow the Strategy’s official %{link_twitter} and %{link_linkedin} profile.'
         share:
           title: Share your news
           content_html: 'Whatever you’re up to, we want to hear from you. We’re always on the lookout for news from across the world of Financial Capability. If your organisation has any relevant news you’d like to share, or if you would like to write a guest blog, get in touch at %{link}.'

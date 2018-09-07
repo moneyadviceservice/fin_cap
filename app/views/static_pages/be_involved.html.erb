@@ -22,7 +22,7 @@
         <dd class="list--numbered__content">
           <%= raw t(
             'fincap.get_involved.list.use.content_html',
-            link_evaluation_toolkit: (link_to 'Evaluation Toolkit', 'evaluation-toolkit-homepage'),
+            link_evaluation_toolkit: (link_to 'Evaluation Toolkit', article_path('en', 'evaluation-toolkit-overview')),
             link_evidence_hub: (link_to 'Evidence Hub', evidence_hub_index_path)) %>
         </dd>
         <dt class="list--numbered__title">
@@ -30,14 +30,13 @@
         </dt>
         <dd class="list--numbered__content">
           <%= raw t('fincap.get_involved.list.talk_money_week.content_html',
-            link: (link_to 'here', 'fincap-week')) %>
+            link: (link_to 'here', article_path('en', 'talk-money-week'))) %>
         </dd>
         <dt class="list--numbered__title">
           <%= t('fincap.get_involved.list.up_to_date.title') %>
         </dt>
         <dd class="list--numbered__content">
           <%= raw t('fincap.get_involved.list.up_to_date.content_html',
-            link_themes: (link_to 'Themes page', 'themes'),
             link_twitter: (link_to 'Twitter', t('fincap.links_external.twitter')),
             link_linkedin: (link_to 'LinkedIn', t('fincap.links_external.linkedin'))) %>
         </dd>
