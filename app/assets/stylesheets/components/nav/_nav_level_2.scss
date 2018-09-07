@@ -35,7 +35,7 @@
     &:after {
       content: '';
       display: block;
-      @include box-shadow($spread: 6px);
+      @include box-shadow($spread: 6px); 
       position: relative;
       z-index: -1
     }
@@ -283,17 +283,20 @@
 
   @include respond-to($mq-m) {
     padding-right: calc(#{$chevron-size * $chevron-ratio} + #{$default-gutter * 8});
+  }
 
-    &:after {
-      @include chevron(right, $primary-orange, $chevron-size);
+  &:after {
+    @include chevron(right, $primary-orange, $chevron-size);
 
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: $default-gutter;
+    transform: translateY(-$chevron-size * 2);
+
+    @include respond-to($mq-m) {
       right: $default-gutter * 4;
       transform: translateY(-$chevron-size * 1);
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: $default-gutter;
-      transform: translateY(-$chevron-size * 2);
     }
   }
 }
