@@ -1,0 +1,2 @@
+class WhatWorksTemplate < LifestageTemplate
+end

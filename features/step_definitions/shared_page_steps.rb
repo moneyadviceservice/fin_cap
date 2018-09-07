@@ -60,3 +60,12 @@ Then('I should see the countries box') do
   expect(current_page).to have_content('The Strategy across the UK')
   expect(current_page).to have_country_list
 end
+
+Then('I should see the steering group links') do |table|
+  links = current_page.supplementary_info_box.last.links
+
+  table.rows.each do |row|
+    expect(row[0]).to be_in(links.map(&:text))
+    expect(row[1]).to be_in(links.map { |link| link[:href] })
+  end
+end
