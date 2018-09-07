@@ -34,6 +34,16 @@ Then('I should see the call to action buttons') do |table|
   end
 end
 
+Then('I should see the stay in touch box') do |table|
+  stay_in_touch_box = home_page.stay_in_touch_box
+
+  table.rows.each do |row|
+    expect(row[0]).to eq(stay_in_touch_box.title.text)
+    expect(row[1]).to eq(stay_in_touch_box.content.text)
+    expect(row[2]).to eq(stay_in_touch_box.link['href'])
+  end
+end
+
 Then('I should see the {string} article') do |slug|
   steps %(
     I entered into the Article page {slug}
