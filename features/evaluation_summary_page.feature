@@ -27,3 +27,11 @@ Feature: Evidence Hub: Evaluation Summary page
       | causality                   | cross |
       | process_evaluation          | cross |
       | value_for_money             | cross |
+
+  Scenario: Remove key info if blank values
+    Given I entered into the "Evaluation" page "Evaluation without some blocks"
+    Then I should not see the evidence summary field
+      | Field                  |
+      | Activities and setting |
+      | Measured outcomes      |
+      | Programme delivery     |
