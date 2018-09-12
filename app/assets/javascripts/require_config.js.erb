@@ -1,6 +1,6 @@
 //= depend_on_asset rsvp/rsvp
 //= depend_on_asset dough/assets/js/components/DoughBaseComponent
-//= depend_on_asset components/componentLoader
+//= depend_on_asset dough/assets/js/lib/componentLoader
 //= depend_on_asset dough/assets/js/lib/featureDetect
 //= depend_on_asset components/Nav
 //= depend_on_asset components/Tooltip
@@ -35,7 +35,7 @@
   requirejs_config[:paths].merge!({
     utilities: requirejs_path('dough/assets/js/lib/utilities'),
     DoughBaseComponent: requirejs_path('dough/assets/js/components/DoughBaseComponent'),
-    componentLoader: requirejs_path('components/componentLoader'),
+    componentLoader: requirejs_path('dough/assets/js/lib/componentLoader'),
     featureDetect: requirejs_path('dough/assets/js/lib/featureDetect'),
     mediaQueries: requirejs_path('dough/assets/js/lib/mediaQueries')
   })
