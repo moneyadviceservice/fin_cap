@@ -40,9 +40,7 @@ define(['jquery', 'rsvp', 'utilities'], function ($, RSVP, utilities) {
          * initialised successfully
          */
         init: function ($container, includeDeferred) {
-            var componentsToCreate,
-                instantiatedList,
-                initialisedList,
+            var componentsToCreate, instantiatedList, initialisedList,
                 self = this,
                 promises;
 
