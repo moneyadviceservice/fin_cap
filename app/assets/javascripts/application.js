@@ -10,10 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require requirejs/require
 //= require require_config
 //= require lib/modernizr-custom
-//= require jquery
 
 // Component Loader
 require(['jquery', 'componentLoader'], function ($, componentLoader) {
