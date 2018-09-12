@@ -12,6 +12,7 @@ Rails.application.config.assets.paths << Rails.root.join('bower_components')
 Rails.application.config.assets.precompile += %w[
   components/*.js
   dough/assets/js/components/*.js
+  rsvp/*.js
 ]
 
 # Vendor JavaScript
