@@ -52,7 +52,6 @@ define(['jquery', 'rsvp', 'utilities'], function ($, RSVP, utilities) {
             componentsToCreate = this._listComponentsToCreate($container, includeDeferred || false);
             instantiatedList = this._createPromises(componentsToCreate);
             initialisedList = this._createPromises(componentsToCreate);
-
             console.log('Components to create >>>>>', componentsToCreate);
             console.log('instantiatedList >>>>', instantiatedList);
 
@@ -60,9 +59,7 @@ define(['jquery', 'rsvp', 'utilities'], function ($, RSVP, utilities) {
                 this._instantiateComponents(componentsToCreate, instantiatedList.deferreds);
                 // Wait until all components are instantiated before initialising them in a second pass
                 RSVP.allSettled(instantiatedList.promises).then(function (results) {
-
                     console.log('++++++++++ In all settled ++++++++++');
-
                     self._checkForFailedInstantiations(results, initialisedList.deferreds);
                     self._initialiseComponents(self.components, initialisedList.deferreds);
                 });
@@ -70,7 +67,6 @@ define(['jquery', 'rsvp', 'utilities'], function ($, RSVP, utilities) {
             promises = RSVP.allSettled(initialisedList.promises);
             promises.then(function () {
                 console.log('$$$$$$$$ Adding in the all loaded $$$$$$$$$$');
-
                 $('body').attr('data-dough-component-loader-all-loaded', 'yes');
             });
             return promises;
