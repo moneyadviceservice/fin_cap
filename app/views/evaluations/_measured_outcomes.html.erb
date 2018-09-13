@@ -1,17 +1,19 @@
-<div class="evidence-hub__measured_outcomes">
-  <h5 class="sidepanel__subtitle">
-    <%= evidence_summary.measured_outcomes_field_name %>
-  </h5>
-  <ul class="sidepanel__list">
-    <% evidence_summary.stripped_measured_outcomes.each do |outcome| %>
-      <li class="sidepanel__list-item">
-        <%= link_to outcome,
-            evidence_hub_index_path(
-              params: evidence_summary.measured_outcome_filter_params(outcome)
-            ),
-            class: 'sidepanel__list-item-link'
-        %>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<% if evidence_summary.stripped_measured_outcomes.present? %>
+  <div class="evidence-hub__measured_outcomes">
+    <h5 class="sidepanel__subtitle">
+      <%= evidence_summary.measured_outcomes_field_name %>
+    </h5>
+    <ul class="sidepanel__list">
+      <% evidence_summary.stripped_measured_outcomes.each do |outcome| %>
+        <li class="sidepanel__list-item">
+          <%= link_to outcome,
+              evidence_hub_index_path(
+                params: evidence_summary.measured_outcome_filter_params(outcome)
+              ),
+              class: 'sidepanel__list-item-link'
+          %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

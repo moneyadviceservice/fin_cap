@@ -71,3 +71,10 @@ end
 Then('I should see {string} evidence summaries') do |number|
   expect(evidence_summaries_page.search_results.count).to eq(number.to_i)
 end
+
+Then("I should not see the evidence summary field") do |table|
+  table.rows.each do |row|
+    field = row[0].parameterize.underscore
+    expect(evidence_summary_page).to_not send("have_#{field}")
+  end
+end

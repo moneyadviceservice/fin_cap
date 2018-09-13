@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/evaluations/evaluation-without-some-blocks.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (Tomas-Destefi-00119.local; tomasdestefi; 80673) ruby/2.4.2
+        (198; x86_64-darwin16)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Wed, 12 Sep 2018 14:37:22 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"599f662bb52b84b7454f2b5173ed22df"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 8796a717-54e2-4ebe-a11e-9cba1e0a3998
+      x-runtime:
+      - '0.070765'
+    body:
+      encoding: UTF-8
+      string: '{"label":"Evaluation without some blocks","slug":"evaluation-without-some-blocks","full_path":"/en/evaluations/evaluation-without-some-blocks","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":null,"category_names":[],"layout_identifier":"evaluation","related_content":{"latest_blog_post_links":[{"title":"How
+        much does it cost to keep a dog?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-it-cost-to-keep-a-dog"},{"title":"How
+        much does a divorce cost?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-a-divorce-cost"},{"title":"How
+        much deposit do I need for a mortgage?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-deposit-need-mortgage"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eThe
+        trackers are all available as free smartphone apps (although at the\ntime
+        of writing, Toshl is discontinued). Overall user numbers of the apps\nare
+        not given. However, 797 customers entered into the project (by\ncompleting
+        a first questionnaire and downloading an app) from across\nthe UK between
+        July and November 2016.\u003c/p\u003e\n\n\u003cp\u003eThe intervention was
+        undertaken in participants’ own time as part their\ndaily lives.\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"overview","content":"\u003cp\u003eAn
+        evaluation, commissioned by Royal London, of the impacts of using\n        simple
+        budgeting tools on customers’ money management attitudes and\n        behaviours.\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eWorking
+        age (18 - 65)\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eOlder
+        people (65+)\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"topics","content":"\u003cp\u003eBudgeting
+        and keeping track\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"countries","content":"\u003cp\u003eUnited
+        Kingdom\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2017\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"data_types","content":"\u003cp\u003eMeasured
+        Outcomes\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"links_to_research","content":"\u003cp\u003e\u003ca
+        href=\"https://www.royallondon.com/Documents/PDFs/2017/Royal%20London%20-%20Looking%20after%20the%20pennies.pdf\"\u003eLooking
+        after the pennies - full report\u003c/a\u003e\u003c/p\u003e\n\n\u003cpre\u003e\u003ccode\u003e  [Follow-up
+        report](https://fincap-two.cdn.prismic.io/fincap-two%2F0efeee0b-252a-4b13-b7f5-d05e66bdc6aa_final+report+-+royal+london+fincap.pptx)\n\u003c/code\u003e\u003c/pre\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"},{"identifier":"contact_information","content":"\u003cp\u003eMASPD
+        (in partnership with Company S.A)\n        T +44 (0)20 1234 5678 F +44 (0)20
+        4567 1234\u003c/p\u003e\n","created_at":"2018-09-12T14:34:45.000Z","updated_at":"2018-09-12T14:34:45.000Z"}],"translations":[]}'
+    http_version: 
+  recorded_at: Wed, 12 Sep 2018 14:37:22 GMT
+recorded_with: VCR 4.0.0
