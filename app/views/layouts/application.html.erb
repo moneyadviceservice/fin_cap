@@ -12,14 +12,6 @@
     <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
       <%= render 'shared/svg/icon_sprite' %>
     <!--<![endif]-->
-
-    <%# START MAS JAVASCRIPT SETUP
-        Any JS that is required before DOM is created should be in this block
-        includes feature detection, analytics setup, JSON bootstrap %>
-    <script type="text/javascript">
-      <%# // Inline custom Modernizr %>
-      <%= raw Rails.application.assets['lib/modernizr-custom'] %>
-    </script>
   </head>
 
   <body>
