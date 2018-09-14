@@ -18,7 +18,7 @@
     margin-bottom: 0;
   }
 
-  @include respond-to($mq-s) {
+  @include respond-to($mq-m) {
     @include column(4, 3, $baseline-spacing);
     margin-bottom: 0;
 
@@ -30,26 +30,43 @@
 }
 
 .teaser-box__group-content {
-  @include respond-to($mq-s) {
+  @include respond-to($mq-m) {
     .object-fit & {
       display: flex;
     }
   }
 }
 
+
+.teaser-box__image-ratio {
+  @include column(12);
+  max-height: 300px;
+
+  @include respond-to($mq-m) {
+    .object-fit & {
+      object-fit: cover;
+    }
+  }
+  .object-fit & {
+    object-fit: contain;
+  }
+}
+
+
 .teaser-box__image {
+  border: 1px solid green;
   @include column(12);
   max-height: 150px; // This will be removed via js if the content is bigger
-  min-height: 150px; 
+  min-height: 150px;
   
-  @include respond-to($mq-s) {
+  @include respond-to($mq-m) {
     max-height: 300px; // This will be removed via js if the content is bigger
-    min-height: 300px; 
+    min-height: 300px;
   }
-
   .object-fit & {
     object-fit: cover;
   }
+
 }
 
 .teaser-box__content {
