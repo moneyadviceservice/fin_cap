@@ -54,7 +54,6 @@
 
 
 .teaser-box__image {
-  border: 1px solid green;
   @include column(12);
   max-height: 150px; // This will be removed via js if the content is bigger
   min-height: 150px;
@@ -113,7 +112,8 @@
   }
 
   .teaser-box__image {
-    background: yellow;
+
+
     @include respond-to($mq-m) {
       width: 50%;
 
