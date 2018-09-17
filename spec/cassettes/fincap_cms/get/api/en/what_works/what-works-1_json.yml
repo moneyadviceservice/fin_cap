@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/en/what_works/what-works-1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Token token="mytoken"
+      User-Agent:
+      - Mas-Cms-Client/1.17.0 (M-C02W705RG8WN.local; mbagnasco; 5294) ruby/2.4.2 (198;
+        x86_64-darwin17)
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Tue, 11 Sep 2018 08:27:58 GMT
+      status:
+      - 200 OK
+      connection:
+      - close
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"1891b41da2a82fcd30f57af52b122863"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 491f8d9b-5d04-4039-a136-a87db76a72fb
+      x-runtime:
+      - '0.312365'
+    body:
+      encoding: UTF-8
+      string: '{"label":"What Works 1","slug":"what-works-1","full_path":"/en/what_works/what-works-1","meta_description":"This
+        is an example paragraph containing a description about a specific ''What Works''
+        page.","meta_title":null,"category_names":[],"layout_identifier":"what_works","related_content":{"latest_blog_post_links":[{"title":"How
+        much does a divorce cost?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-a-divorce-cost"},{"title":"How
+        much deposit do I need for a mortgage?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-deposit-need-mortgage"},{"title":"How
+        to minimise the biggest costs of going to university","path":"https://www.moneyadviceservice.org.uk/blog/how-to-minimise-the-biggest-costs-of-going-to-university"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":["mobile-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThis
+        is an example paragraph containing information about a specific what works
+        page.\n          It will contain useful information and searchable text.\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eResearch
+        suggests that What Works 1 typically display useful information that can be
+        extremely useful when used appropriately.\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser_section_title","content":"\u003cp\u003eWhat
+        Works\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eSome
+        title to tease you\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eLoads
+        of content to make you read more\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eteaser1 link text\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eAnother
+        title to entice you\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eA
+        bunch of well written content to make you click\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eTeasing
+        title\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eYou
+        want to read this, you need to read this\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"strategy_title","content":"\u003cp\u003eStrategy
+        Title\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"strategy_overview","content":"\u003cp\u003eAdult
+        financial capability is a direct resul\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"strategy_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eLink to strategy\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"steering_group_title","content":"\u003cp\u003eSteering
+        group\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"steering_group_links","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eSteering group members\u003c/a\u003e\n          \u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eSteering group updates\u003c/a\u003e\n          \u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eAction plans\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eWhat works category download\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:48.000Z","updated_at":"2018-09-07T14:06:48.000Z"}],"translations":[]}'
+    http_version: 
+  recorded_at: Tue, 11 Sep 2018 08:27:58 GMT
+recorded_with: VCR 4.0.0

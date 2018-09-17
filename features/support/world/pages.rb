@@ -17,6 +17,7 @@ module World
       thematic_review
       thematic_reviews_landing
       uk_strategy
+      what_works
     ]
 
     pages.each do |page|

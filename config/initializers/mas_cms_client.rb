@@ -42,3 +42,6 @@ end
 
 class Mas::Cms::UkStrategy < Mas::Cms::Article
 end
+
+class Mas::Cms::WhatWorks < Mas::Cms::Article
+end

@@ -1,6 +1,8 @@
-<div class="evidence-hub__activities_and_setting">
-  <h5 class="sidepanel__subtitle">
-    <%= evidence_summary.activities_and_setting_field_name %>
-  </h5>
-  <%= evidence_summary.stripped_activities_and_setting %>
-</div>
+<% if evidence_summary.stripped_activities_and_setting.present? %>
+  <div class="evidence-hub__activities_and_setting">
+    <h5 class="sidepanel__subtitle">
+      <%= evidence_summary.activities_and_setting_field_name %>
+    </h5>
+    <%= evidence_summary.stripped_activities_and_setting %>
+  </div>
+<% end %>
