@@ -321,6 +321,12 @@
   color: $primary-orange;
 }
 
+.nav__level-2__subcategory__link {
+  &:visited {
+    color: $primary-blue;
+  }
+}
+
 /* FlexBox compliant -- */
 .flexbox {
   @include respond-to($mq-m) {
