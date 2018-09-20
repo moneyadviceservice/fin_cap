@@ -38,16 +38,18 @@
     </div>
     <div class="l-2col-side">
       <ul class="list list--grouped-cta">
-        <li><%= link_to 'UK financial Capability Strategy', 'http://www.fincap.org.uk/uk_strategy' %></li>
+        <li>
+          <%= link_to 'UK Financial Capability Strategy', uk_strategy_path(locale: params[:locale], id: 'uk-strategy') %>
+        </li>
       </ul>
       <div class="download-box">
         <svg xmlns="http://www.w3.org/2000/svg" class="download-box__icon svg-icon svg-icon--download" focusable="false">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--download"></use>
         </svg>
-        <h3 class="download-box__title">Downloads</h3>
+        <h3 class="download-box__title">Download</h3>
         <ul class="download-box__list">
           <li class="download-box__list-item">
-            <%= link_to 'Evidence and Evaluation – Strategy Extract', '#', class: 'download-box__list-item-link' %>
+            <%= link_to 'Evidence and Evaluation – Strategy Extract', 'https://masassets.blob.core.windows.net/fincap-cms/files/000/000/112/original/Evidence_and_Evaluation_Strategy_Extract.pdf', class: 'download-box__list-item-link' %>
           </li>
         </ul>
       </div>
