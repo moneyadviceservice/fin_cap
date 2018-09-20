@@ -6,6 +6,36 @@ RSpec.describe EvidenceSummaryPresenter do
   subject(:presenter) { described_class.new(evidence_summary, view) }
   let(:attributes) { {} }
 
+  describe 'delegated methods' do
+    let(:document) { double('Mas::Cms::EvidenceSummary') }
+
+    context '#meta_title' do
+      it 'delegates to object' do
+        expect(evidence_summary)
+          .to receive(:document)
+          .and_return(document)
+
+        expect(document)
+          .to receive(:meta_title)
+
+        presenter.meta_title
+      end
+    end
+
+    context '#meta_description' do
+      it 'delegates to object' do
+        expect(evidence_summary)
+          .to receive(:document)
+          .and_return(document)
+
+        expect(document)
+          .to receive(:meta_description)
+
+        presenter.meta_description
+      end
+    end
+  end
+
   before do
     allow(evidence_summary).to receive(:class).and_return(EvidenceSummary)
   end

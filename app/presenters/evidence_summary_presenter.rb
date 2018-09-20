@@ -1,5 +1,7 @@
 # rubocop:disable Metrics/ClassLength
 class EvidenceSummaryPresenter < BasePresenter
+  delegate :meta_description, :meta_title, to: :document
+
   def link
     view.link_to title, full_path
   end

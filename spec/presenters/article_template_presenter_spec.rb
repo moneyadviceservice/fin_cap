@@ -5,6 +5,37 @@ RSpec.describe ArticleTemplatePresenter do
   end
   subject(:presenter) { described_class.new(object, view) }
 
+  describe 'delegated methods' do
+    let(:article) { double('Mas::Cms::Article') }
+    let(:attributes) { {} }
+
+    context '#meta_title' do
+      it 'delegates to object' do
+        expect(object)
+          .to receive(:article)
+          .and_return(article)
+
+        expect(article)
+          .to receive(:meta_title)
+
+        presenter.meta_title
+      end
+    end
+
+    context '#meta_description' do
+      it 'delegates to object' do
+        expect(object)
+          .to receive(:article)
+          .and_return(article)
+
+        expect(article)
+          .to receive(:meta_description)
+
+        presenter.meta_description
+      end
+    end
+  end
+
   describe '#strategy_title_component' do
     context 'when object has the block' do
       let(:attributes) do

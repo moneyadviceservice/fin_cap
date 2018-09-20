@@ -1,2 +1,2 @@
-class ThematicReviewsLandingPageTemplatePresenter < TemplatePresenter
+class ThematicReviewsLandingPageTemplatePresenter < ArticleTemplatePresenter
 end

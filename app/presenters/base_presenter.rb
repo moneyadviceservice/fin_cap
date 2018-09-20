@@ -11,4 +11,11 @@ class BasePresenter < SimpleDelegator
 
     super(@object)
   end
+
+  def render_meta_tags
+    view.set_meta_tags(
+      title: meta_title,
+      description: meta_description
+    )
+  end
 end

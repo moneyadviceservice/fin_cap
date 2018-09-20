@@ -10,15 +10,15 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.16.0 (Margo-Urey-00241.local; margourey; 63200) ruby/2.4.2
-        (198; x86_64-darwin16)
+      - Mas-Cms-Client/1.17.0 (M-C02W705RG8WN.local; mbagnasco; 8103) ruby/2.4.2 (198;
+        x86_64-darwin17)
   response:
     status:
       code: 200
       message: 
     headers:
       date:
-      - Tue, 14 Aug 2018 15:58:21 GMT
+      - Thu, 20 Sep 2018 10:00:14 GMT
       status:
       - 200 OK
       connection:
@@ -32,17 +32,35 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"0ee828cd212271c1b93f74da656b6bed"'
+      - '"ebdb3319e17704987b630c22da51a657"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 2e75d4ef-fdc1-4c6b-b1e0-2e50fd2d2475
+      - ec72a92d-ef21-42fe-a499-1fde40dcb921
       x-runtime:
-      - '0.178585'
+      - '0.582093'
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJsYWJlbCI6IkZpbmFuY2lhbCB3ZWxsLWJlaW5nOiB0aGUgZW1wbG95ZWUgdmlldyIsInNsdWciOiJmaW5hbmNpYWwtd2VsbC1iZWluZy10aGUtZW1wbG95ZWUtdmlldyIsImZ1bGxfcGF0aCI6Ii9lbi9pbnNpZ2h0cy9maW5hbmNpYWwtd2VsbC1iZWluZy10aGUtZW1wbG95ZWUtdmlldyIsIm1ldGFfZGVzY3JpcHRpb24iOm51bGwsIm1ldGFfdGl0bGUiOm51bGwsImNhdGVnb3J5X25hbWVzIjpbXSwibGF5b3V0X2lkZW50aWZpZXIiOiJpbnNpZ2h0IiwicmVsYXRlZF9jb250ZW50Ijp7ImxhdGVzdF9ibG9nX3Bvc3RfbGlua3MiOlt7InRpdGxlIjoiSG93IHRvIHNwb3QgYW5kIGF2b2lkIGJhbmsgc2NhbXMiLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2hvdy10by1zcG90LWFuZC1hdm9pZC1iYW5rLXNjYW1zIn0seyJ0aXRsZSI6IkhvdyB0byBzcG90IGFuZCBhdm9pZCBUViBsaWNlbmNlIHJlZnVuZCBzY2FtcyIsInBhdGgiOiJodHRwczovL3d3dy5tb25leWFkdmljZXNlcnZpY2Uub3JnLnVrL2Jsb2cvaG93LXRvLXNwb3QtYW5kLWF2b2lkLXR2LWxpY2VuY2UtcmVmdW5kLXNjYW1zIn0seyJ0aXRsZSI6IkhvdyB0byBzcG90IGFuZCByZXBvcnQgZmFrZSB0ZXh0IG1lc3NhZ2UgYW5kIHNtaXNoaW5nIHNjYW1zIiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9ob3ctdG8tc3BvdC1hbmQtcmVwb3J0LWZha2UtdGV4dC1tZXNzYWdlLWFuZC1zbWlzaGluZy1zY2FtcyJ9XSwicG9wdWxhcl9saW5rcyI6W10sInJlbGF0ZWRfbGlua3MiOltdLCJwcmV2aW91c19saW5rIjp7fSwibmV4dF9saW5rIjp7fX0sInB1Ymxpc2hlZF9hdCI6bnVsbCwic3VwcG9ydHNfYW1wIjp0cnVlLCJ0YWdzIjpbXSwiYmxvY2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlQ29udGV4dFx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3BcdTAwM2VUaGUgc3VydmV5IGV4cGxvcmVzIGVtcGxveWVlc+KAmSB2aWV3cyBvbiBhdHRpdHVkZXMgdG8gZmluYW5jZXMuXG5TdHJlc3MgY2F1c2VkIGJ5IHBheSBsZXZlbHMsIGxhY2sgb2YgZmluYW5jaWFsIGF3YXJlbmVzcyBvciBhYnNlbmNlIG9mXG5lbXBsb3llZSBiZW5lZml0cyBjYW4gYWZmZWN0IHdvcmsgcGVyZm9ybWFuY2UuXG5JbiBhZGRpdGlvbiwgdGhlIHBlcmNlcHRpb24gdGhhdCB0aGVpciBjb250cmlidXRpb25zIGFyZSBub3QgYmVpbmdcbmFja25vd2xlZGdlZCBjYW4gaGF2ZSBhbiBpbXBhY3Qgb24gZW1wbG95ZWUgc2VsZi1lc3RlZW0sIGhlYWx0aCBhbmRcbnByb2R1Y3Rpdml0eS5cdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzEuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMxLjAwMFoifSx7ImlkZW50aWZpZXIiOiJvdmVydmlldyIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlVGhlIHN1cnZleSBleHBsb3JlcyBlbXBsb3llZXPigJkgdmlld3Mgb24gYXR0aXR1ZGVzIHRvIGZpbmFuY2VzLlxuICAgICAgICBTdHJlc3MgY2F1c2VkIGJ5IHBheSBsZXZlbHMsIGxhY2sgb2YgZmluYW5jaWFsIGF3YXJlbmVzcyBvciBhYnNlbmNlIG9mXG4gICAgICAgIGVtcGxveWVlIGJlbmVmaXRzIGNhbiBhZmZlY3Qgd29yayBwZXJmb3JtYW5jZS5cdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzEuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMxLjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb3VudHJpZXMiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZVVuaXRlZCBLaW5nZG9tXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMxLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wOC0wM1QxOTowOTozMS4wMDBaIn0seyJpZGVudGlmaWVyIjoibGlua3NfdG9fcmVzZWFyY2giLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZVx1MDAzY2EgaHJlZj1cImh0dHBzOi8vd3d3LmNpcGQuY28udWsvSW1hZ2VzL2ZpbmFuY2lhbC13ZWxsLWJlaW5nLWVtcGxveWVlLXZpZXctcmVwb3J0X3RjbTE4LTE3NDM5LnBkZlwiXHUwMDNlRmluYW5jaWFsIHdlbGwtYmVpbmc6IHRoZSBlbXBsb3llZSB2aWV3IC0gZnVsbCByZXBvcnRcdTAwM2MvYVx1MDAzZeKAmVx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wOC0wM1QxOTowOTozMS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzEuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNvbnRhY3RfaW5mb3JtYXRpb24iLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZU1BU1BEIChpbiBwYXJ0bmVyc2hpcCB3aXRoIENvbXBhbnkgUy5BKVxuICAgICAgICBUICs0NCAoMCkyMCAxMjM0IDU2NzggRiArNDQgKDApMjAgNDU2NyAxMjM0XHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMxLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wOC0wM1QxOTowOTozMS4wMDBaIn0seyJpZGVudGlmaWVyIjoieWVhcl9vZl9wdWJsaWNhdGlvbiIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlMjAxNVx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wOC0wM1QxOTowOTozMS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzEuMDAwWiJ9LHsiaWRlbnRpZmllciI6InRvcGljcyIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlU2F2aW5nXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMxLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wOC0wM1QxOTowOTozMS4wMDBaIn0seyJpZGVudGlmaWVyIjoidG9waWNzIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VGaW5hbmNpYWwgQ2FwYWJpbGl0eVx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wOC0wM1QxOTowOTozMS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzEuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNsaWVudF9ncm91cHMiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZU92ZXItaW5kZWJ0ZWQgcGVvcGxlXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMxLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wOC0wM1QxOTowOTozMS4wMDBaIn0seyJpZGVudGlmaWVyIjoiZGF0YV90eXBlcyIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlUXVhbGl0YXRpdmVcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDgtMDNUMTk6MDk6MzEuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA4LTAzVDE5OjA5OjMxLjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W119
+      encoding: UTF-8
+      string: '{"label":"Financial well-being: the employee view","slug":"financial-well-being-the-employee-view","full_path":"/en/insights/financial-well-being-the-employee-view","meta_description":"This
+        is an example description about a specific evidence summary.","meta_title":"Meta
+        Title test","category_names":[],"layout_identifier":"insight","related_content":{"latest_blog_post_links":[{"title":"Gumtree
+        scams: How to spot fake messages and avoid Gumtree scams","path":"https://www.moneyadviceservice.org.uk/blog/gumtree-scams"},{"title":"How
+        much does it cost to keep a dog?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-it-cost-to-keep-a-dog"},{"title":"How
+        much does a divorce cost?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-a-divorce-cost"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-09-20T08:12:30.000Z","supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eContext\u003c/p\u003e\n\n\u003cp\u003eThe
+        survey explores employees’ views on attitudes to finances.\u003cbr\u003e\nStress
+        caused by pay levels, lack of financial awareness or absence of\u003cbr\u003e\nemployee
+        benefits can affect work performance.\u003cbr\u003e\nIn addition, the perception
+        that their contributions are not being\u003cbr\u003e\nacknowledged can have
+        an impact on employee self-esteem, health and\u003cbr\u003e\nproductivity.\u003c/p\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-20T08:12:30.000Z"},{"identifier":"overview","content":"\u003cpre\u003e\u003ccode\u003e    The
+        survey explores employees’ views on attitudes to finances.        Stress caused
+        by pay levels, lack of financial awareness or absence of        employee benefits
+        can affect work performance.\n\u003c/code\u003e\u003c/pre\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-20T08:12:30.000Z"},{"identifier":"countries","content":"\u003cp\u003eUnited
+        Kingdom\u003c/p\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-20T08:12:30.000Z"},{"identifier":"links_to_research","content":"\u003cpre\u003e\u003ccode\u003e    [Financial
+        well-being: the employee view - full report](https://www.cipd.co.uk/Images/financial-well-being-employee-view-report_tcm18-17439.pdf)''\n\u003c/code\u003e\u003c/pre\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-20T08:12:30.000Z"},{"identifier":"contact_information","content":"\u003cpre\u003e\u003ccode\u003e    MASPD
+        (in partnership with Company S.A)        T +44 (0)20 1234 5678 F +44 (0)20
+        4567 1234\n\u003c/code\u003e\u003c/pre\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-20T08:12:30.000Z"},{"identifier":"year_of_publication","content":"\u003cp\u003e2015\u003c/p\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-20T08:12:30.000Z"},{"identifier":"topics","content":"\u003cp\u003eSaving\u003c/p\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-07T14:06:54.000Z"},{"identifier":"topics","content":"\u003cp\u003eFinancial
+        Capability\u003c/p\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-07T14:06:54.000Z"},{"identifier":"client_groups","content":"\u003cp\u003eOver-indebted
+        people\u003c/p\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-07T14:06:54.000Z"},{"identifier":"data_types","content":"\u003cp\u003eQualitative\u003c/p\u003e\n","created_at":"2018-09-07T14:06:53.000Z","updated_at":"2018-09-07T14:06:54.000Z"}],"translations":[]}'
     http_version: 
-  recorded_at: Tue, 14 Aug 2018 15:58:21 GMT
+  recorded_at: Thu, 20 Sep 2018 10:00:14 GMT
 recorded_with: VCR 4.0.0

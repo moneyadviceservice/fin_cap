@@ -1,14 +1,16 @@
 <% present(resource) do |template| %>
+  <% template.render_meta_tags %>
+
   <div class="l-constrained">
-    <%= render '/components/hero', 
-      img_src: template.hero_image_component, 
-      description: template.hero_description_component 
+    <%= render '/components/hero',
+      img_src: template.hero_image_component,
+      description: template.hero_description_component
     %>
   </div>
 
   <div class="l-constrained">
     <div class="l-2col">
-      <div class="l-2col-main">        
+      <div class="l-2col-main">
         <div class="body-content">
           <h2><%= template.title %></h2>
           <p class="news-date"><%= template.order_by_date_component %></p>

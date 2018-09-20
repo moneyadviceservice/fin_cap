@@ -8,17 +8,17 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Token token=""
+      - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.11.0 (Tomas-Destefi-00119.local; tomasdestefi; 31861) ruby/2.4.2
-        (198; x86_64-darwin16)
+      - Mas-Cms-Client/1.17.0 (M-C02W705RG8WN.local; mbagnasco; 10592) ruby/2.4.2
+        (198; x86_64-darwin17)
   response:
     status:
       code: 200
       message: 
     headers:
       date:
-      - Thu, 10 May 2018 10:00:07 GMT
+      - Thu, 20 Sep 2018 11:02:18 GMT
       status:
       - 200 OK
       connection:
@@ -32,17 +32,35 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"5be747df10f6ce7ab51a52f3df8ff16b"'
+      - '"46950db5e3ef5acdd0f6e1d6046f4bdd"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - d8194e5a-ddf8-441c-98e6-97dc6018f6b7
+      - e8061427-5eda-4e5a-aa25-9bd0e0d9e86e
       x-runtime:
-      - '0.463580'
+      - '0.398570'
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJsYWJlbCI6IlVLIFN0cmF0ZWd5Iiwic2x1ZyI6InVrLXN0cmF0ZWd5IiwiZnVsbF9wYXRoIjoiL2VuL2FydGljbGVzL3VrLXN0cmF0ZWd5IiwibWV0YV9kZXNjcmlwdGlvbiI6IiIsIm1ldGFfdGl0bGUiOiIiLCJjYXRlZ29yeV9uYW1lcyI6W10sImxheW91dF9pZGVudGlmaWVyIjoiYXJ0aWNsZSIsInJlbGF0ZWRfY29udGVudCI6eyJsYXRlc3RfYmxvZ19wb3N0X2xpbmtzIjpbeyJ0aXRsZSI6IldoYXQgd291bGQgeW91IGRvIHdpdGggwqMxMGs/IiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy93aGF0LXdvdWxkLXlvdS1kby13aXRoLTEwayJ9LHsidGl0bGUiOiJBbGwgeW91IG5lZWQgdG8ga25vdyBhYm91dCBKdXJ5IFNlcnZpY2UiLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2FsbC15b3UtbmVlZC10by1rbm93LWFib3V0LWp1cnktc2VydmljZSJ9LHsidGl0bGUiOiJIb3cgdG8gc2F2ZSBtb25leSBnYXJkZW5pbmcgIiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9ob3ctdG8tc2F2ZS1tb25leS1nYXJkZW5pbmcifV0sInBvcHVsYXJfbGlua3MiOltdLCJyZWxhdGVkX2xpbmtzIjpbXSwicHJldmlvdXNfbGluayI6e30sIm5leHRfbGluayI6e319LCJwdWJsaXNoZWRfYXQiOiIyMDE4LTA1LTEwVDA5OjU4OjI3LjAwMFoiLCJzdXBwb3J0c19hbXAiOnRydWUsImJsb2NrcyI6W3siaWRlbnRpZmllciI6ImNvbnRlbnQiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZVRoaXMgU3RyYXRlZ3kgYWltcyB0byBpbXByb3ZlIGZpbmFuY2lhbCBjYXBhYmlsaXR5IGFjcm9zcyB0aGUgVUsuXHUwMDNjYnJcdTAwM2VcblRoYXQgbWVhbnMgaW1wcm92aW5nIHBlb3BsZeKAmXMgYWJpbGl0eSB0byBtYW5hZ2UgbW9uZXkgd2VsbCxcdTAwM2Niclx1MDAzZVxuYm90aCBkYXkgdG8gZGF5IGFuZCB0aHJvdWdoIHNpZ25pZmljYW50IGxpZmUgZXZlbnRzLCBhbmQgdGhlaXIgYWJpbGl0eVx1MDAzY2JyXHUwMDNlXG50byBoYW5kbGUgcGVyaW9kcyBvZiBmaW5hbmNpYWwgZGlmZmljdWx0eS4gSXQgd2lsbCBmb2N1cyBvbiBkZXZlbG9waW5nXHUwMDNjYnJcdTAwM2VcbnBlb3BsZeKAmXMgZmluYW5jaWFsIHNraWxscyBhbmQga25vd2xlZGdlLCBhbmQgaW1wcm92aW5nIHRoZWlyIGF0dGl0dWRlc1x1MDAzY2JyXHUwMDNlXG5hbmQgbW90aXZhdGlvbi4gVGhpcywgY29tYmluZWQgd2l0aCBhbiBpbmNsdXNpdmUgZmluYW5jaWFsIHN5c3RlbSxcdTAwM2Niclx1MDAzZVxuY2FuIGhlbHAgcGVvcGxlIGFjaGlldmUgdGhlIGJlc3QgcG9zc2libGUgZmluYW5jaWFsIHdlbGxiZWluZy5cdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlVGhlIGJlbGllZiwgYW5kIHRoZSBjb25zaXN0ZW50IG1lc3NhZ2UgZnJvbSBzdGFrZWhvbGRlcnMsIGlzIHRoYXQgbGV2ZWxzXHUwMDNjYnJcdTAwM2Vcbm9mIGZpbmFuY2lhbCBjYXBhYmlsaXR5IG11c3QgYmUgaW1wcm92ZWQgZnJvbSB0aGVpciBjdXJyZW50IGxvdyBsZXZlbHMsXHUwMDNjYnJcdTAwM2VcbmFuZCB0aGF0IGlmIGV2ZXJ5Ym9keSB3b3JrcyB0b2dldGhlciBpdCBpcyBwb3NzaWJsZSB0byByaXNlIHRvIHRoZVx1MDAzY2JyXHUwMDNlXG5jaGFsbGVuZ2UuIFRoZSBjaGFuZ2luZyBmaW5hbmNpYWwgZW52aXJvbm1lbnQgbWFrZXMgdGhpcyBtb3JlIGltcG9ydGFudFx1MDAzY2JyXHUwMDNlXG50aGFuIGV2ZXIgYmVmb3JlLlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3VsXHUwMDNlXG5cdTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJlZj1cIiN3aHktaXMtaXQtc28taW1wb3J0YW50XCJcdTAwM2VXaHkgaXMgaXQgc28gaW1wb3J0YW50P1x1MDAzYy9hXHUwMDNlXHUwMDNjL2xpXHUwMDNlXG5cdTAwM2NsaVx1MDAzZVx1MDAzY2EgaHJlZj1cIiN3aGF0LWlzLWluLXRoZS1zdHJhdGVneVwiXHUwMDNlV2hhdCBpcyBpbiB0aGUgU3RyYXRlZ3k/XHUwMDNjL2FcdTAwM2VcdTAwM2MvbGlcdTAwM2Vcblx1MDAzYy91bFx1MDAzZVxuXHUwMDNjaDIgaWQ9XCJ3aHktaXMtaXQtc28taW1wb3J0YW50XCJcdTAwM2VcdTAwM2NzdHJvbmdcdTAwM2VXaHkgaXMgaXQgc28gaW1wb3J0YW50P1x1MDAzYy9zdHJvbmdcdTAwM2VcdTAwM2MvaDJcdTAwM2VcblxuXHUwMDNjaWZyYW1lIGZyYW1lYm9yZGVyPVwiMFwiIGhlaWdodD1cIjQxM1wiIHdpZHRoPVwiNjgwXCIgc3JjPVwiaHR0cHM6Ly93d3cueW91dHViZS5jb20vZW1iZWQvSmtobWZWR0JrUE0/cmVsPTBcIiB0aXRsZT1cIlRoZSBGaW5hbmNpYWwgQ2FwYWJpbGl0eSBTdHJhdGVneSBmb3IgdGhlIFVLIFdoeSBpcyBpdCBuZWVkZWQ/XCJcdTAwM2Vcblx1MDAzYy9pZnJhbWVcdTAwM2VcblxuXHUwMDNjaDIgaWQ9XCJ3aGF0LWlzLWluLXRoZS1zdHJhdGVneVwiXHUwMDNlXHUwMDNjc3Ryb25nXHUwMDNlV2hhdCBpcyBpbiB0aGUgU3RyYXRlZ3k/XHUwMDNjL3N0cm9uZ1x1MDAzZVx1MDAzYy9oMlx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlVGhlIFN0cmF0ZWd5IHNldHMgb3V0IGEgY2xlYXIgZGVzY3JpcHRpb24gb2YgdGhlIHByb2JsZW0gdGhhdCBuZWVkcyB0b1x1MDAzY2JyXHUwMDNlXG5iZSBzb2x2ZWQgYW5kIHdoeSBpdCBtYXR0ZXJzLiBJdCBkZXNjcmliZXMgd2hhdCBzdWNjZXNzIGxvb2tzIGxpa2Ugb3Zlclx1MDAzY2JyXHUwMDNlXG50aGUgbGlmZXRpbWUgb2YgdGhlIFN0cmF0ZWd5IGFuZCBob3cgdGhlIGFpbXMgb2YgdGhlIFN0cmF0ZWd5IHdpbGwgYmVcdTAwM2Niclx1MDAzZVxuYWNoaWV2ZWQuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZUZvciB0aGUgU3RyYXRlZ3kgdG8gYmUgYSBzdWNjZXNzIGl0IGlzIGltcG9ydGFudCB0aGF0IHJlc291cmNlcyBhcmVcdTAwM2Niclx1MDAzZVxuYWxsb2NhdGVkIHRvIGludGVydmVudGlvbnMgdGhhdCBhcmUgcHJvdmVuIHRvIHdvcmsuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZVRoZSBTdHJhdGVneSBzZXRzIG91dCB0aGUgaXNzdWVzIGFjcm9zcyBhIG51bWJlciBvZiBkaWZmZXJlbnQgdGhlbWVzXHUwMDNjYnJcdTAwM2VcbmFuZCBmb3IgZWFjaCBvZiB0aGUgZGV2b2x2ZWQgbmF0aW9ucyAoTm9ydGhlcm4gSXJlbGFuZCwgU2NvdGxhbmQgYW5kXHUwMDNjYnJcdTAwM2VcbldhbGVzKS4gV2UgaGF2ZSBwcm9kdWNlZCBhIHJhbmdlIG9mIGRvY3VtZW50cyB0byBhbGxvdyBzdGFrZWhvbGRlcnNcdTAwM2Niclx1MDAzZVxudG8gdW5kZXJzdGFuZCB0aGUgZGlmZmVyZW50IGF1ZGllbmNlczpcdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NvbFx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZUV4ZWN1dGl2ZSBTdW1tYXJ5ICg0IHBhZ2VzKVx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVRoZSBTdHJhdGVneSAoNTAgcGFnZXMpXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlVGhlIEZ1bGwgU3RyYXRlZ3kgKDE1MCBwYWdlcylcdTAwM2MvbGlcdTAwM2Vcblx1MDAzYy9vbFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlVGhlIEZ1bGwgU3RyYXRlZ3kgaGFzIGJlZW4gYnJva2VuIGRvd24gaW50byBjaGFwdGVycyBmb3IgdGhvc2Ugd2l0aCBhXHUwMDNjYnJcdTAwM2VcbnNwZWNpZmljIGludGVyZXN0IGluIGFueSBvZiB0aGUgZm9sbG93aW5nIGFyZWFzOlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3VsXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlSW50cm9kdWN0aW9uIGFuZCBjb250ZXh0XHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlRXZpZGVuY2UgYW5kIGV2YWx1YXRpb25cdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VDaGlsZHJlbiBhbmQgeW91bmcgcGVvcGxlXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlWW91bmcgQWR1bHRzXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlV29ya2luZyBBZ2VcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VPbGRlciBQZW9wbGUgaW4gUmV0aXJlbWVudFx1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVJldGlyZW1lbnQgUGxhbm5pbmdcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VQZW9wbGUgaW4gRmluYW5jaWFsIERpZmZpY3VsdGllc1x1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZUVhc2UgYW5kIGFjY2Vzc2liaWxpdHlcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VOb3J0aGVybiBJcmVsYW5kXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlU2NvdGxhbmRcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VXYWxlc1x1MDAzYy9saVx1MDAzZVxuXHUwMDNjL3VsXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNS0xMFQwOTo1NToxOC4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDUtMTBUMDk6NTg6MjcuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNvbXBvbmVudF9oZXJvX2ltYWdlIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2UvYXNzZXRzL3N0eWxlZ3VpZGUvaGVyby1zYW1wbGUuanBnXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA1LTEwVDA5OjU1OjE4LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNS0xMFQwOTo1NToxOC4wMDBaIn0seyJpZGVudGlmaWVyIjoiY29tcG9uZW50X2hlcm9fZGVzY3JpcHRpb24iLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZUZpbmFuY2lhbCBjYXBhYmlsaXR5IGFjcm9zcyB0aGUgVUtcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDUtMTBUMDk6NTU6MTguMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA1LTEwVDA5OjU1OjE4LjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfY3RhX2xpbmtzIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VcdTAwM2NhIGhyZWY9XCIvZ2VuZXJhbF9pbmZvXCJcdTAwM2VFdmlkZW5jZSBIdWJcdTAwM2MvYVx1MDAzZSAgICAgICAgXHUwMDNjYSBocmVmPVwiL2NvbW1vbi1ldmFsdWF0aW9uLXRvb2xraXRcIlx1MDAzZUV2YWx1YXRpb24gVG9vbGtpdFx1MDAzYy9hXHUwMDNlICAgICAgICBcdTAwM2NhIGhyZWY9XCIvc3RlZXJpbmctZ3JvdXBzXCJcdTAwM2VUaGUgU3RlZXJpbmcgR3JvdXBzXHUwMDNjL2FcdTAwM2UgICAgICAgIFx1MDAzY2EgaHJlZj1cIi9maW5hbmNpYWwtY2FwYWJpbGl0eS1zdXJ2ZXlcIlx1MDAzZTIwMTUgRmluYW5jaWFsIENhcGFiaWxpdHkgU3VydmV5XHUwMDNjL2FcdTAwM2VcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDUtMTBUMDk6NTU6MTguMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA1LTEwVDA5OjU4OjI3LjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfZG93bmxvYWQiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZVx1MDAzY2EgaHJlZj1cIi9maW5hbmNpYWwrY2FwYWJpbGl0eStzdHJhdGVneS5wZGZcIlx1MDAzZVVLIFN0cmF0ZWd5XHUwMDNjL2FcdTAwM2UgICAgICBcdTAwM2NhIGhyZWY9XCIvZGV0YWlsZWQtc3RyYXRlZ3kucGRmXCJcdTAwM2VVSyBEZXRhaWxlZCBTdHJhdGVneVx1MDAzYy9hXHUwMDNlICAgICAgXHUwMDNjYSBocmVmPVwiL2tleS1zdGF0aXN0aWNzLnBkZlwiXHUwMDNlS2V5IHN0YXRpc3RpY3Mgb24gRmluYW5jaWFsIENhcGFiaWxpdHlcdTAwM2MvYVx1MDAzZSAgICAgIFx1MDAzY2EgaHJlZj1cIi9maW5jYXArcHJvZ3Jlc3MrcmVwb3J0KzIwMTcucGRmXCJcdTAwM2VGaW5hbmNpYWwgQ2FwYWJpbGl0eSBQcm9ncmVzcyBSZXBvcnQgMjAxN1x1MDAzYy9hXHUwMDNlXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA1LTEwVDA5OjU1OjE4LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNS0xMFQwOTo1ODoyNy4wMDBaIn0seyJpZGVudGlmaWVyIjoiY29tcG9uZW50X2ZlZWRiYWNrIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VlbWFpbEBtb25leWFkdmljZXNlcnZpY2Uub3JnLnVrXHUwMDNjL3BcdTAwM2VcbiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA1LTEwVDA5OjU1OjE4LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNS0xMFQwOTo1NToxOC4wMDBaIn1dLCJ0cmFuc2xhdGlvbnMiOltdfQ==
+      encoding: UTF-8
+      string: '{"label":"UK Strategy","slug":"uk-strategy","full_path":"/en/articles/uk-strategy","meta_description":"Testing
+        meta description","meta_title":"testing title","category_names":[],"layout_identifier":"article","related_content":{"latest_blog_post_links":[{"title":"Gumtree
+        scams: How to spot fake messages and avoid Gumtree scams","path":"https://www.moneyadviceservice.org.uk/blog/gumtree-scams"},{"title":"How
+        much does it cost to keep a dog?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-it-cost-to-keep-a-dog"},{"title":"How
+        much does a divorce cost?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-a-divorce-cost"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-09-20T11:01:46.000Z","supports_amp":false,"tags":["mobile-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThis
+        Strategy aims to improve financial capability across the UK.\u003cbr\u003e\n
+        That means improving people’s ability to manage money well,\u003cbr\u003e\n
+        both day to day and through significant life events, and their ability\u003cbr\u003e\n
+        to handle periods of financial difficulty. It will focus on developing\u003cbr\u003e\n
+        people’s financial skills and knowledge, and improving their attitudes\u003cbr\u003e\n
+        and motivation. This, combined with an inclusive financial system,\u003cbr\u003e\n
+        can help people achieve the best possible financial wellbeing.\u003c/p\u003e\n","created_at":"2018-09-07T14:06:49.000Z","updated_at":"2018-09-20T10:04:37.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:49.000Z","updated_at":"2018-09-20T10:04:37.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eFinancial
+        capability across the UK\u003c/p\u003e\n","created_at":"2018-09-07T14:06:49.000Z","updated_at":"2018-09-20T10:04:37.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
+        href=\"UK_Financial_Capability_Strategy.pdf\"\u003eUK Financial Capability
+        Strategy\u003c/a\u003e\u003ca href=\"UK_detailed_strategy.pdf\"\u003eUK detailed
+        strategy\u003c/a\u003e\u003ca href=\"Financial_Capability_Progress_Report_2017.pdf\"\u003eFinancial
+        Capability Progress Report 2017\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:49.000Z","updated_at":"2018-09-20T10:57:24.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/general_info\"\u003eEvidence Hub\u003c/a\u003e\n\u003ca href=\"/common-evaluation-toolkit\"\u003eEvaluation
+        Toolkit\u003c/a\u003e\n\u003ca href=\"/steering-groups\"\u003eThe Steering
+        Groups\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-20T10:25:11.000Z","updated_at":"2018-09-20T11:01:46.000Z"},{"identifier":"component_feedback","content":"\u003cp\u003eemail@moneyadviceservice.org.uk\u003c/p\u003e\n","created_at":"2018-09-20T10:25:11.000Z","updated_at":"2018-09-20T10:29:38.000Z"}],"translations":[]}'
     http_version: 
-  recorded_at: Thu, 10 May 2018 10:00:07 GMT
+  recorded_at: Thu, 20 Sep 2018 11:02:18 GMT
 recorded_with: VCR 4.0.0

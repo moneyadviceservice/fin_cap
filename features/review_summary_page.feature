@@ -11,7 +11,6 @@ Feature: Evidence Hub: Review Summary page
       | Evidence Title      | Raising household saving               |
       | Content             | There is continuing concern in the UK  |
       | Client groups       | Children (3 - 11)                      |
-      | Client groups       | Young people (12 - 16)                 |
       | Topics              | Saving                                 |
       | Topics              | Pensions and Retirement Planning       |
       | Topics              | Financial Education                    |
@@ -24,3 +23,6 @@ Feature: Evidence Hub: Review Summary page
       | Field             | Content |
       | systematic_review | tick    |
       | literature_review | cross   |
+
+    And The "description" meta tag should be present
+    And The "title" meta tag should be present

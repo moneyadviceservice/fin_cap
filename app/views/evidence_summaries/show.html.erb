@@ -1,4 +1,6 @@
 <% present(@evidence_summary) do |evidence_summary| %>
+  <% evidence_summary.render_meta_tags %>
+
   <div class="l-constrained">
       <%= render 'evidence_hub_hero',
                  evidence_type_name: evidence_summary.evidence_type.downcase %>

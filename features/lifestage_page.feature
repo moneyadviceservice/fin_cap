@@ -35,3 +35,6 @@ Feature: Lifestage page
     And I should see the download links
       | text         | link          |
       | Evidence Hub | /general_info |
+
+    And The "description" meta tag should be present
+    And The "title" meta tag should be present
