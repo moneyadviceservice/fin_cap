@@ -9,6 +9,7 @@ module World
       evidence_summaries
       evidence_summary
       home
+      impact_principles
       lifestage
       latest_news
       news

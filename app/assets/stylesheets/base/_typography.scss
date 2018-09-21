@@ -24,30 +24,32 @@ th {
   font-weight: 500;
 }
 
-h2, h3, h4 {
-  margin-top: $baseline-unit*4;
+h2,
+h3,
+h4 {
+  margin-top: $baseline-unit * 4;
 }
 
 h1 {
   @include body(30, 40);
-  margin-bottom: $baseline-unit*4;
+  margin-bottom: $baseline-unit * 4;
 }
 h2 {
   @include body(25, 35);
-  margin-bottom: $baseline-unit*3;
+  margin-bottom: $baseline-unit * 3;
 }
 h3 {
   @include body(20, 30);
-  margin-bottom: $baseline-unit*2;
+  margin-bottom: $baseline-unit * 2;
 }
 h4 {
   @extend %type;
-  margin-bottom: $baseline-unit*2;
+  margin-bottom: $baseline-unit * 2;
 }
 
 p {
   @extend %type;
-  margin: $baseline-unit*2 0;
+  margin: $baseline-unit * 2 0;
 }
 
 a {
@@ -67,8 +69,8 @@ a {
     color: $primary-orange;
   }
 
-  &[href^="http:"]:not([href*="#{$site}"]):after,
-  &[href^="https:"]:not([href*="#{$site}"]):after {
+  &[href^='http:']:not([href*='#{$site}']):after,
+  &[href^='https:']:not([href*='#{$site}']):after {
     @extend %icon;
     @extend .icon--external-link;
     content: '';
@@ -77,12 +79,16 @@ a {
   }
 
   // because buttons are extended we cannot include it as a not
-  &.btn--primary[href^="http:"]:not([href*="#{$site}"]):after,
-  &.btn--primary[href^="https:"]:not([href*="#{$site}"]):after {
+  &.btn--primary[href^='http:']:not([href*='#{$site}']):after,
+  &.btn--primary[href^='https:']:not([href*='#{$site}']):after {
+    display: none;
+  }
+
+  &.download-box__list-item-link[href^='https:']:not([href*='masassets.blop.core.windows.net']):after {
     display: none;
   }
 }
 
 strong {
-  font-weight: 400;  
+  font-weight: 400;
 }
