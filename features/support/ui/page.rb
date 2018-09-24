@@ -50,12 +50,15 @@ module UI
              SupplementaryInfoBox, '.sidepanel .l-2col-even'
     sections :lifestage_rows, LifestageRow, '.bordered-box--green li'
     sections :country_rows, CountryRow, '.list--countries-item'
-    sections :research_and_evaluation_boxes, 
+    sections :research_and_evaluation_boxes,
              ResearchEvaluationBox, '.coloured-box'
 
     element :title, '.l-2col-main h1'
     element :hero_description, '.hero__heading'
     element :country_list, 'ul.list--countries'
+
+    element :meta_title, 'title', visible: false
+    element :meta_description, 'meta[name="description"]', visible: false
 
     def find_box(title)
       research_and_evaluation_boxes.find { |box| box.title.text == title }

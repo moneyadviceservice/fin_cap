@@ -17,15 +17,16 @@ Feature: Article page
     motivation.
     """
     And I should see the download box containing the links
-      | text                                      | link                               |
-      | UK Strategy                               | /financial+capability+strategy.pdf |
-      | UK Detailed Strategy                      | /detailed-strategy.pdf             |
-      | Key statistics on Financial Capability    | /key-statistics.pdf                |
-      | Financial Capability Progress Report 2017 | /fincap+progress+report+2017.pdf   |
+      | text                                                     | link                                             |
+      | UK Financial Capability Strategy                         | UK_Financial_Capability_Strategy.pdf             |
+      | UK detailed strategy                                     | UK_detailed_strategy.pdf                         |
+      | Financial Capability Progress Report 2017                | Financial_Capability_Progress_Report_2017.pdf   |
     And I should see the call to action box containing the links
       | text                             | link                         |
       | Evidence Hub                     | /general_info                |
       | Evaluation Toolkit               | /common-evaluation-toolkit   |
       | The Steering Groups              | /steering-groups             |
-      | 2015 Financial Capability Survey | /financial-capability-survey |
     And I should see the feedback box with the email "email@moneyadviceservice.org.uk"
+
+    And The "description" meta tag should be present
+    And The "title" meta tag should be present

@@ -15,7 +15,7 @@ http_interactions:
   response:
     status:
       code: 200
-      message: 
+      message:
     headers:
       date:
       - Tue, 28 Aug 2018 09:20:26 GMT
@@ -41,7 +41,7 @@ http_interactions:
       - '0.271617'
     body:
       encoding: UTF-8
-      string: '{"label":"Young Adults","slug":"young-adults","full_path":"/en/lifestages/young-adults","meta_description":"","meta_title":"","category_names":[],"layout_identifier":"lifestage","related_content":{"latest_blog_post_links":[{"title":"How
+      string: '{"label":"Young Adults","slug":"young-adults","full_path":"/en/lifestages/young-adults","meta_description":"testing","meta_title":"test","category_names":[],"layout_identifier":"lifestage","related_content":{"latest_blog_post_links":[{"title":"How
         to spot and avoid DVLA scams","path":"https://www.moneyadviceservice.org.uk/blog/dvla-scams"},{"title":"What
         my daughter really needs to know about money and university","path":"https://www.moneyadviceservice.org.uk/blog/money-and-university"},{"title":"What
         to take to university (and what to leave behind)","path":"https://www.moneyadviceservice.org.uk/blog/what-to-take-to-university-and-what-to-leave-behind"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-08-28T09:19:47.000Z","supports_amp":true,"tags":["mobile-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eYoung
@@ -72,6 +72,6 @@ http_interactions:
         Toolkit\u003c/a\u003e        \u003ca href=\"/steering-groups\"\u003eThe Steering
         Groups\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
         href=\"/general_info\"\u003eEvidence Hub\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-20T15:32:50.000Z","updated_at":"2018-08-20T15:32:50.000Z"}],"translations":[]}'
-    http_version: 
+    http_version:
   recorded_at: Tue, 28 Aug 2018 09:20:26 GMT
 recorded_with: VCR 4.0.0

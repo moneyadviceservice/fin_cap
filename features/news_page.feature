@@ -13,5 +13,8 @@ Feature: News page
     The way in which payments are made in the UK is set to undergo the most radical change since the 1960s. This follows the launch of a new strategy to give people greater control over how they manage their day-to-day finances and help stamp out financial fraud.
     """
     And I should see the news call to action links
-      | text       | link  | 
-      | Latest news| /news |
+      | text       | link  |
+      | Latest News| /news |
+
+    And The "description" meta tag should be present
+    And The "title" meta tag should be present

@@ -10,15 +10,15 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.17.0 (Margo-Urey-00241.local; margourey; 39653) ruby/2.4.2
-        (198; x86_64-darwin16)
+      - Mas-Cms-Client/1.17.0 (M-C02W705RG8WN.local; mbagnasco; 7371) ruby/2.4.2 (198;
+        x86_64-darwin17)
   response:
     status:
       code: 200
       message: 
     headers:
       date:
-      - Fri, 17 Aug 2018 21:18:12 GMT
+      - Thu, 20 Sep 2018 09:33:13 GMT
       status:
       - 200 OK
       connection:
@@ -32,41 +32,41 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"07baac00048faa683d8e9c6e2775cd9b"'
+      - '"15c99e9b376d427c92257eb6b5266dc5"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 6e6a5491-c319-480e-a172-dda4be05647d
+      - 7b839b69-af84-42c6-9e88-f314e88ce970
       x-runtime:
-      - '0.564782'
+      - '0.640203'
     body:
       encoding: UTF-8
-      string: '{"label":"Financial Capability","slug":"root","full_path":"/en/homepages/root","meta_description":null,"meta_title":null,"category_names":[],"layout_identifier":"homepage","related_content":{"latest_blog_post_links":[{"title":"How
-        to spot and avoid Facebook scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-facebook-scams"},{"title":"How
-        to spot and avoid pension scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-avoid-pension-scams"},{"title":"How
-        to spot and avoid PayPal scams","path":"https://www.moneyadviceservice.org.uk/blog/how-to-spot-and-avoid-paypal-scams"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":null,"supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eWelcome
+      string: '{"label":"Financial Capability","slug":"root","full_path":"/en/homepages/root","meta_description":"this
+        is a meta description for the home page","meta_title":"Meta title","category_names":[],"layout_identifier":"homepage","related_content":{"latest_blog_post_links":[{"title":"Gumtree
+        scams: How to spot fake messages and avoid Gumtree scams","path":"https://www.moneyadviceservice.org.uk/blog/gumtree-scams"},{"title":"How
+        much does it cost to keep a dog?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-it-cost-to-keep-a-dog"},{"title":"How
+        much does a divorce cost?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-a-divorce-cost"}],"popular_links":[],"related_links":[],"previous_link":{},"next_link":{}},"published_at":"2018-09-19T14:19:55.000Z","supports_amp":true,"tags":[],"blocks":[{"identifier":"content","content":"\u003cp\u003eWelcome
         to the Financial Capability website, which provides the latest updates on
-        the development \nof the Financial Capability Strategy for the UK, as well
-        as resources and practical tools to help \nshare learning about what works.\nClick
-        \u003ca href=\"https://www.fincap.org.uk/fincapweek\"\u003ehere\u003c/a\u003e
+        the development\u003cbr\u003e\nof the Financial Capability Strategy for the
+        UK, as well as resources and practical tools to help\u003cbr\u003e\nshare
+        learning about what works.\u003cbr\u003e\nClick \u003ca href=\"https://www.fincap.org.uk/fincapweek\"\u003ehere\u003c/a\u003e
         for information about Talk Money Week, the annual event which showcases and
-        celebrates \nhow organisations are improving financial wellbeing and supporting
-        the work of the Financial \nCapability Strategy.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eWelcome
-        to the Financial Capability website\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser_section_title","content":"\u003cp\u003eFinancial
-        capability in action\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eFirst
-        teaser title\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eA
-        bunch of ipsem lorem\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eSecond
-        teaser title\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eKitchen
-        sink ipsem lorem text\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eCall to action\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eThird
-        teaser title\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eI
-        have run out of ipsem lorem ideas.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eGet involved\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"horizontal_teaser_title","content":"\u003cp\u003eHorizontal
-        teaser title\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"horizontal_teaser_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"horizontal_teaser_text","content":"\u003cp\u003eHorizontal
-        teaser content.\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"horizontal_teaser_link","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"},{"identifier":"component_download","content":"\u003cp\u003e\u003ca
-        href=\"/financial+capability+strategy.pdf\"\u003eYoung Adults download\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-08-03T19:09:31.000Z","updated_at":"2018-08-03T19:09:31.000Z"}],"translations":[]}'
+        celebrates\u003cbr\u003e\nhow organisations are improving financial wellbeing
+        and supporting the work of the Financial\u003cbr\u003e\nCapability Strategy.\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eWelcome
+        to the Financial Capability website\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser_section_title","content":"\u003cp\u003eFinancial
+        capability in action\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser1_title","content":"\u003cp\u003eFirst
+        teaser title\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser1_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser1_text","content":"\u003cp\u003eA
+        bunch of ipsem lorem\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser1_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eRead more\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser2_title","content":"\u003cp\u003eSecond
+        teaser title\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser2_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser2_text","content":"\u003cp\u003eKitchen
+        sink ipsem lorem text\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser2_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eCall to action\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser3_title","content":"\u003cp\u003eThird
+        teaser title\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser3_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser3_text","content":"\u003cp\u003eI
+        have run out of ipsem lorem ideas.\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"teaser3_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eGet involved\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"horizontal_teaser_title","content":"\u003cp\u003eHorizontal
+        teaser title\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"horizontal_teaser_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"horizontal_teaser_text","content":"\u003cp\u003eHorizontal
+        teaser content.\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"},{"identifier":"horizontal_teaser_link","content":"\u003cp\u003e\u003ca
+        href=\"/financial+capability+strategy.pdf\"\u003eClick here\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:56.000Z","updated_at":"2018-09-19T14:18:43.000Z"}],"translations":[]}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 21:18:12 GMT
+  recorded_at: Thu, 20 Sep 2018 09:33:13 GMT
 recorded_with: VCR 4.0.0

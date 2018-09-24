@@ -10,15 +10,15 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.13.1 (Margo-Urey-00241.local; margourey; 47116) ruby/2.4.2
-        (198; x86_64-darwin16)
+      - Mas-Cms-Client/1.17.0 (M-C02W705RG8WN.local; mbagnasco; 13023) ruby/2.4.2
+        (198; x86_64-darwin17)
   response:
     status:
       code: 200
       message: 
     headers:
       date:
-      - Sat, 30 Jun 2018 16:52:44 GMT
+      - Thu, 20 Sep 2018 12:16:53 GMT
       status:
       - 200 OK
       connection:
@@ -32,17 +32,41 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"55a35c346502f86c564a463a9109c66b"'
+      - '"66e85473592986c988160c5415e853e7"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - e707b5cd-631e-4f0a-9a25-2fe5d5e883a2
+      - a2f1c6e1-7122-400d-a94a-1a944ccea274
       x-runtime:
-      - '0.320360'
+      - '0.329607'
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJsYWJlbCI6IlByZXNzIFJlbGVhc2U6IEEgbmV3IHdheSB0byBwYXkhIiwic2x1ZyI6InByZXNzLXJlbGVhc2UtYS1uZXctd2F5LXRvLXBheSIsImZ1bGxfcGF0aCI6Ii9lbi9uZXdzL3ByZXNzLXJlbGVhc2UtYS1uZXctd2F5LXRvLXBheSIsIm1ldGFfZGVzY3JpcHRpb24iOiIiLCJtZXRhX3RpdGxlIjoiIiwiY2F0ZWdvcnlfbmFtZXMiOltdLCJsYXlvdXRfaWRlbnRpZmllciI6Im5ld3MiLCJyZWxhdGVkX2NvbnRlbnQiOnsibGF0ZXN0X2Jsb2dfcG9zdF9saW5rcyI6W3sidGl0bGUiOiJIb3cgbXVjaCBpcyB0aGUgYXZlcmFnZSBjb3N0IG9mIGhvbWUgYW5kIGNvbnRlbnRzIGluc3VyYW5jZT8iLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2hvdy1tdWNoLWlzLXRoZS1hdmVyYWdlLWNvc3Qtb2YtaG9tZS1hbmQtY29udGVudHMtaW5zdXJhbmNlIn0seyJ0aXRsZSI6IkhvdyBtdWNoIGRvZXMgYW4gYXZlcmFnZSB3ZWRkaW5nIGNvc3Q/IiwicGF0aCI6Imh0dHBzOi8vd3d3Lm1vbmV5YWR2aWNlc2VydmljZS5vcmcudWsvYmxvZy9ob3ctbXVjaC1kb2VzLWFuLWF2ZXJhZ2Utd2VkZGluZy1jb3N0In0seyJ0aXRsZSI6IkhvdyBtdWNoIGRvZXMgYW4gYXZlcmFnZSBNT1QgY29zdD8iLCJwYXRoIjoiaHR0cHM6Ly93d3cubW9uZXlhZHZpY2VzZXJ2aWNlLm9yZy51ay9ibG9nL2hvdy1tdWNoLWRvZXMtYW4tYXZlcmFnZS1NT1QtY29zdCJ9XSwicG9wdWxhcl9saW5rcyI6W10sInJlbGF0ZWRfbGlua3MiOltdLCJwcmV2aW91c19saW5rIjp7fSwibmV4dF9saW5rIjp7fX0sInB1Ymxpc2hlZF9hdCI6IjIwMTgtMDYtMzBUMTY6NDU6NDYuMDAwWiIsInN1cHBvcnRzX2FtcCI6dHJ1ZSwiYmxvY2tzIjpbeyJpZGVudGlmaWVyIjoiY29udGVudCIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlVGhlIHdheSBpbiB3aGljaCBwYXltZW50cyBhcmUgbWFkZSBpbiB0aGUgVUsgaXMgc2V0IHRvIHVuZGVyZ28gdGhlIG1vc3QgcmFkaWNhbFx1MDAzY2JyXHUwMDNlXG5jaGFuZ2Ugc2luY2UgdGhlIDE5NjBzLiBUaGlzIGZvbGxvd3MgdGhlIFx1MDAzY2EgaHJlZj1cImh0dHBzOi8vd3d3LnBheW1lbnRzZm9ydW0udWsvZmluYWwtc3RyYXRlZ3lcIlx1MDAzZWxhdW5jaCBvZiBhIG5ldyBzdHJhdGVneVx1MDAzYy9hXHUwMDNlIHRvIGdpdmUgcGVvcGxlXHUwMDNjYnJcdTAwM2VcbmdyZWF0ZXIgY29udHJvbCBvdmVyIGhvdyB0aGV5IG1hbmFnZSB0aGVpciBkYXktdG8tZGF5IGZpbmFuY2VzIGFuZCBoZWxwIHN0YW1wXHUwMDNjYnJcdTAwM2Vcbm91dCBmaW5hbmNpYWwgZnJhdWQuXHUwMDNjL3BcdTAwM2VcblxuXHUwMDNjcFx1MDAzZUluIHRoZSBmaXJzdCBpbmR1c3RyeS13aWRlIGluaXRpYXRpdmUgb2YgaXRzIGtpbmQsIHRoZSBQYXltZW50cyBTdHJhdGVneSBGb3J1bSxcdTAwM2Niclx1MDAzZVxud2hvc2UgbWVtYmVycyBpbmNsdWRlIGNvbnN1bWVyIGdyb3VwcywgYnVzaW5lc3NlcywgZmludGVjaHMsIFVLIGJhbmtzIGFuZFx1MDAzY2JyXHUwMDNlXG5idWlsZGluZyBzb2NpZXRpZXMsIHRvZGF5IHJlY29tbWVuZHMgYSBuZXcgd2F5IG9mIG1ha2luZyBwYXltZW50cyB0aGF0IHByb21pc2VzXHUwMDNjYnJcdTAwM2VcbmdyZWF0ZXIgcHJvdGVjdGlvbiBhbmQgc2VjdXJpdHkgZm9yIGNvbnN1bWVycyBhbmQgYnVzaW5lc3Nlcy4oMilcdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NwXHUwMDNlVGhlIFN0cmF0ZWd5IGdpdmVzOlx1MDAzYy9wXHUwMDNlXG5cblx1MDAzY3VsXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlTW9yZSBjb250cm9sIGFuZCBhc3N1cmFuY2UgZm9yIGNvbnN1bWVycyBvdmVyIGhvdyB0aGV5IG1hbmFnZSB0aGVpciBmaW5hbmNlc1x1MDAzYy9saVx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVNhZmVyIGFuZCBtb3JlIHNlY3VyZSBiYW5raW5nXHUwMDNjL2xpXHUwMDNlXG4gIFx1MDAzY2xpXHUwMDNlT3Bwb3J0dW5pdGllcyBmb3IgbmV3IGJhbmtzIGFuZCBGaW50ZWNocyB0byBjb21wZXRlIGFuZCBvZmZlciBpbm5vdmF0aXZlIHNlcnZpY2VzIHRoYXQgbWVldCB0aGUgbmVlZHMgb2YgdG9tb3Jyb3figJlzIHVzZXJzXHUwMDNjL2xpXHUwMDNlXG5cdTAwM2MvdWxcdTAwM2VcblxuXHUwMDNjcFx1MDAzZU5vdGVzIHRvIGVkaXRvcnNcdTAwM2MvcFx1MDAzZVxuXG5cdTAwM2NvbFx1MDAzZVxuICBcdTAwM2NsaVx1MDAzZVNvdXJjZTogVGhlIFBheW1lbnQgU3lzdGVtcyBSZWd1bGF0b3JcdTAwM2MvbGlcdTAwM2VcbiAgXHUwMDNjbGlcdTAwM2VUaGUgUGF5bWVudHMgU3RyYXRlZ3kgRm9ydW0gKHRoZSBGb3J1bSkgd2FzIGFubm91bmNlZCBieSB0aGUgUGF5bWVudCBTeXN0ZW1zIFJlZ3VsYXRvciAoUFNSKSBpbiBpdHNcdTAwM2Niclx1MDAzZVxuUG9saWN5IFN0YXRlbWVudCBwdWJsaXNoZWQgaW4gTWFyY2ggMjAxNS5cdTAwM2MvbGlcdTAwM2Vcblx1MDAzYy9vbFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDYtMzBUMTY6MzI6MTEuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA2LTMwVDE2OjQ1OjMyLjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfaGVyb19pbWFnZSIsImNvbnRlbnQiOiJcdTAwM2NwXHUwMDNlL2Fzc2V0cy9zdHlsZWd1aWRlL2hlcm8tc2FtcGxlLmpwZ1x1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNi0zMFQxNjozMjoxMS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDYtMzBUMTY6NDU6MzIuMDAwWiJ9LHsiaWRlbnRpZmllciI6ImNvbXBvbmVudF9oZXJvX2Rlc2NyaXB0aW9uIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VOZXcgc3RyYXRlZ3kgbGF1bmNoZWQgdG8gbWFrZSBVSyBwYXltZW50cyBmaXQgZm9yIHRoZSAyMXN0IENlbnR1cnlcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDYtMzBUMTY6MzI6MTEuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA2LTMwVDE2OjQ1OjMyLjAwMFoifSx7ImlkZW50aWZpZXIiOiJjb21wb25lbnRfY3RhX2xpbmtzIiwiY29udGVudCI6Ilx1MDAzY3BcdTAwM2VcdTAwM2NhIGhyZWY9XCIvbmV3c1wiXHUwMDNlTGF0ZXN0IG5ld3NcdTAwM2MvYVx1MDAzZVx1MDAzYy9wXHUwMDNlXG4iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNi0zMFQxNjozMjoxMS4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMTgtMDYtMzBUMTY6NDU6NDYuMDAwWiJ9LHsiaWRlbnRpZmllciI6Im9yZGVyX2J5X2RhdGUiLCJjb250ZW50IjoiXHUwMDNjcFx1MDAzZTIwMTgtMDctMjZcdTAwM2MvcFx1MDAzZVxuIiwiY3JlYXRlZF9hdCI6IjIwMTgtMDYtMzBUMTY6MzI6MTEuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE4LTA2LTMwVDE2OjQ1OjMyLjAwMFoifV0sInRyYW5zbGF0aW9ucyI6W119
+      encoding: UTF-8
+      string: '{"label":"Press Release: A new way to pay!","slug":"press-release-a-new-way-to-pay","full_path":"/en/news/press-release-a-new-way-to-pay","meta_description":"Testing
+        meta description","meta_title":"Testing","category_names":[],"layout_identifier":"news","related_content":{"latest_blog_post_links":[{"title":"Gumtree
+        scams: How to spot fake messages and avoid Gumtree scams","path":"https://www.moneyadviceservice.org.uk/blog/gumtree-scams"},{"title":"How
+        much does it cost to keep a dog?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-it-cost-to-keep-a-dog"},{"title":"How
+        much does a divorce cost?","path":"https://www.moneyadviceservice.org.uk/blog/how-much-does-a-divorce-cost"}],"popular_links":[],"related_links":[{"title":"Testing
+        Article","path":"/en/articles/testing-article"},{"title":"UK Strategy","path":"/en/articles/uk-strategy"}],"previous_link":{},"next_link":{}},"published_at":"2018-09-20T12:16:07.000Z","supports_amp":true,"tags":["mobile-payments","secure-payments"],"blocks":[{"identifier":"content","content":"\u003cp\u003eThe
+        way in which payments are made in the UK is set to undergo the most radical\u003cbr\u003e\nchange
+        since the 1960s. This follows the \u003ca href=\"https://www.paymentsforum.uk/final-strategy\"\u003elaunch
+        of a new strategy\u003c/a\u003e to give people\u003cbr\u003e\ngreater control
+        over how they manage their day-to-day finances and help stamp\u003cbr\u003e\nout
+        financial fraud.\u003cbr\u003e\nIn the first industry-wide initiative of its
+        kind, the Payments Strategy Forum,\u003cbr\u003e\nwhose members include consumer
+        groups, businesses, fintechs, UK banks and\u003cbr\u003e\nbuilding societies,
+        today recommends a new way of making payments that promises\u003cbr\u003e\ngreater
+        protection and security for consumers and businesses.(2)\u003cbr\u003e\nThe
+        Strategy gives:\u003c/p\u003e\n\n\u003cul\u003e\n  \u003cli\u003eMore control
+        and assurance for consumers over how they manage their finances\u003c/li\u003e\n  \u003cli\u003eSafer
+        and more secure banking\u003c/li\u003e\n  \u003cli\u003eOpportunities for
+        new banks and Fintechs to compete and offer innovative services that meet
+        the needs of tomorrow’s users\u003cbr\u003e\nNotes to editors\u003c/li\u003e\n  \u003cli\u003eSource:
+        The Payment Systems Regulator\u003c/li\u003e\n  \u003cli\u003eThe Payments
+        Strategy Forum (the Forum) was announced by the Payment Systems Regulator
+        (PSR) in its\u003cbr\u003e\nPolicy Statement published in March 2015.\u003c/li\u003e\n\u003c/ul\u003e\n","created_at":"2018-09-07T14:06:50.000Z","updated_at":"2018-09-20T12:15:00.000Z"},{"identifier":"component_hero_image","content":"\u003cp\u003e/assets/styleguide/hero-sample.jpg\u003c/p\u003e\n","created_at":"2018-09-07T14:06:50.000Z","updated_at":"2018-09-20T12:15:00.000Z"},{"identifier":"component_hero_description","content":"\u003cp\u003eNew
+        strategy launched to make UK payments fit for the 21st Century\u003c/p\u003e\n","created_at":"2018-09-07T14:06:50.000Z","updated_at":"2018-09-20T12:15:00.000Z"},{"identifier":"component_cta_links","content":"\u003cp\u003e\u003ca
+        href=\"/news\"\u003eLatest News\u003c/a\u003e\u003c/p\u003e\n","created_at":"2018-09-07T14:06:50.000Z","updated_at":"2018-09-20T12:16:07.000Z"},{"identifier":"order_by_date","content":"\u003cp\u003e2018-07-26
+        00:00:00\u003c/p\u003e\n","created_at":"2018-09-07T14:06:50.000Z","updated_at":"2018-09-20T12:15:00.000Z"}],"translations":[]}'
     http_version: 
-  recorded_at: Sat, 30 Jun 2018 16:52:44 GMT
+  recorded_at: Thu, 20 Sep 2018 12:16:53 GMT
 recorded_with: VCR 4.0.0

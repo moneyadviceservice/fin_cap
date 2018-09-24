@@ -21,3 +21,6 @@ Feature: Evidence Hub: Insight Summary page
       | Field        | Content |
       | qualitative  | tick    |
       | quantitative | cross   |
+
+    And The "description" meta tag should be present
+    And The "title" meta tag should be present

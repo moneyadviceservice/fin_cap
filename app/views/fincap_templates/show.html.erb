@@ -1,8 +1,10 @@
 <% present(resource) do |template| %>
+  <% template.render_meta_tags %>
+
   <div class="l-constrained">
-    <%= render "/components/hero", 
-      img_src: template.hero_image_component, 
-      description: template.hero_description_component 
+    <%= render "/components/hero",
+      img_src: template.hero_image_component,
+      description: template.hero_description_component
     %>
   </div>
 
