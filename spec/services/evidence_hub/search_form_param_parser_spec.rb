@@ -51,7 +51,7 @@ RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
         }
       end
 
-      let(:client_groups) { ['Young people (12 - 16)', 'Parents/families'] }
+      let(:client_groups) { ['Young people (12 - 16)', 'Parents / families'] }
 
       let(:expected_result) do
         {
@@ -59,7 +59,7 @@ RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
           blocks:
           [
             { identifier: 'client_groups', value: 'Young people (12 - 16)' },
-            { identifier: 'client_groups', value: 'Parents/families' }
+            { identifier: 'client_groups', value: 'Parents / families' }
           ]
         }
       end
@@ -78,7 +78,7 @@ RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
         }
       end
 
-      let(:client_groups) { ['Young people (12 - 16)', 'Parents/families'] }
+      let(:client_groups) { ['Young people (12 - 16)', 'Parents / families'] }
 
       let(:expected_result) do
         {
@@ -87,7 +87,7 @@ RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
           [
             { identifier: 'topics', value: 'Saving' },
             { identifier: 'client_groups', value: 'Young people (12 - 16)' },
-            { identifier: 'client_groups', value: 'Parents/families' }
+            { identifier: 'client_groups', value: 'Parents / families' }
           ]
         }
       end
@@ -106,7 +106,7 @@ RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
         }
       end
 
-      let(:client_groups) { ['Young people (12 - 16)', 'Parents/families'] }
+      let(:client_groups) { ['Young people (12 - 16)', 'Parents / families'] }
 
       let(:expected_result) do
         {
@@ -115,7 +115,7 @@ RSpec.describe EvidenceHub::SearchFormParamParser, type: :model do
           [
             { identifier: 'topics', value: 'Saving' },
             { identifier: 'client_groups', value: 'Young people (12 - 16)' },
-            { identifier: 'client_groups', value: 'Parents/families' }
+            { identifier: 'client_groups', value: 'Parents / families' }
           ]
         }
       end

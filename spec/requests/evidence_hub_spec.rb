@@ -52,7 +52,7 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
           evidence_summary_search_form: {
             keyword: '',
             year_of_publication: 'All years',
-            client_groups: ['Young people (12 - 16)', 'Parents/families']
+            client_groups: ['Young people (12 - 16)', 'Parents / families']
           }
         }
       end
@@ -70,7 +70,7 @@ RSpec.describe 'Evidence Hub Summaries', type: :request do
             },
             {
               identifier: 'client_groups',
-              value: 'Parents/families'
+              value: 'Parents / families'
             }
           ]
         }
