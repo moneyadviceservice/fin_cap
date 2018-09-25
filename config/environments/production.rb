@@ -85,5 +85,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Google analytics
-    config.google_tag_manager_id = 'GTM-WVFLH9'
+  config.google_tag_manager_id = 'GTM-MPK3QX'
 end
