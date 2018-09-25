@@ -271,7 +271,7 @@
 
 .nav__level-2__category__heading__text,
 .nav__level-3__category__heading,
-.nav__level-3__subcategory__text,
+.nav__level-3__subcategory__link,
 .nav__level-3__heading__text {
   display: block;
   padding-bottom: $baseline-unit * 2;
@@ -321,6 +321,7 @@
   color: $primary-orange;
 }
 
+.nav__level-3__subcategory__link,
 .nav__level-2__subcategory__link {
   &:visited {
     color: $primary-blue;
