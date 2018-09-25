@@ -12,10 +12,12 @@ Feature: What Works page
     This is an example paragraph containing information about a specific what works page.
     It will contain useful information and searchable text.
     """
-    And I should see the latest news box with "1" news items
+    And I should see the latest news box with "3" news items
     And I should see the news items details
-      | title                            | date                                              | link                                    |
-      | Press Release: A new way to pay! | Thursday 26 July 2018                             | /en/news/press-release-a-new-way-to-pay |
+      | title  | date                      | link            |
+      | News 1 | Monday 19 November 2018   | /en/news/news-1 |
+      | News 2 | Thursday 18 October 2018  | /en/news/news-2 |
+      | News 3 | Monday 17 September 2018  | /en/news/news-3 |
     And I should see the teaser boxes with
       | title                            | text                                              | link                                    |
       | Some title to tease you          | Loads of content to make you read more            | /financial+capability+strategy.pdf      |
