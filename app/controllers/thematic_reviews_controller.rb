@@ -15,9 +15,6 @@ class ThematicReviewsController < FincapTemplatesController
 
   def show
     @thematic_review = Mas::Cms::ThematicReview.find(params[:id])
-    @latest_news = TaggedNews.all(@thematic_review).map do |news_item|
-      NewsTemplate.new(news_item)
-    end
   end
 
   def resource
