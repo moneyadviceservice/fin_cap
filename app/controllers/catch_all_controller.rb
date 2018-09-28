@@ -11,8 +11,6 @@ class CatchAllController < ApplicationController
   private
 
   def not_found
-    raise ActionController::RoutingError.new(
-      "No route matches #{params[:path]}"
-    )
+    render 'errors/not_found', layout: 'errors'
   end
 end
