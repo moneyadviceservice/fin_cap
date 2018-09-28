@@ -35,6 +35,8 @@ Rails.application.routes.draw do
     resources :search_results, only: 'index', path: 'search'
   end
 
+  resources :cookie_policy_acceptances, only: :create
+
   # Styleguide
   get '/styleguide', to: 'styleguide#home'
   get 'styleguide/:page' => 'styleguide#show'

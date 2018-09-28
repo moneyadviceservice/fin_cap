@@ -1,0 +1,33 @@
+.cookie-policy {
+  background: $color-blue-lighter;
+  padding: 0.5em 0;
+}
+
+.cookie-form {
+  position: relative;
+}
+
+.cookie-policy-content {
+  padding: 0 $baseline-spacing 0 0;
+  margin: 0 5px 0 0;
+  font-size: 0.875em;
+}
+
+.cookie-submit {
+  position: absolute;
+  right: $baseline-spacing;
+  top: 0;
+  border: 0;
+  padding: 0;
+  background: $primary-blue-dark;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+}
+
+.cookie-submit-icon {
+  margin: 3px;
+  width: 13px;
+  height: 13px;
+  color: $color-white;
+}

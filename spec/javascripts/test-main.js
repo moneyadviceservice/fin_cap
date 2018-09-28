@@ -42,6 +42,8 @@ require.config({
     Tooltip: 'app/assets/javascripts/components/Tooltip',
     Header: 'app/assets/javascripts/components/Header',
     Filters: 'app/assets/javascripts/components/Filters',
-    Teaser: 'app/assets/javascripts/components/Teaser'
+    Teaser: 'app/assets/javascripts/components/Teaser',
+    Cookie: 'app/assets/javascripts/components/Cookie'
+
   }
 })

@@ -7,6 +7,7 @@
 //= depend_on_asset components/Header
 //= depend_on_asset components/Filters
 //= depend_on_asset components/Teaser
+//= depend_on_asset components/Cookie
 
 <%
   def requirejs_path(asset)
@@ -27,7 +28,8 @@
       Tooltip: requirejs_path('components/Tooltip'),
       Header: requirejs_path('components/Header'),
       Filters: requirejs_path('components/Filters'),
-      Teaser: requirejs_path('components/Teaser')
+      Teaser: requirejs_path('components/Teaser'),
+      Cookie: requirejs_path('components/Cookie')
     }
   }
 

@@ -2,6 +2,10 @@ Given('I entered into the Homepage') do
   home_page.load
 end
 
+When('I reload the page') do
+  visit(current_path)
+end
+
 When('I click the {string} cta') do |link_text|
   click_link(link_text)
 end
