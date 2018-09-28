@@ -7,7 +7,6 @@ Then('I should be reading the page {string}') do |path|
 end
 
 Then('I should see the page not found') do
-  expect(current_page).to have_content('Routing Error No route matches')
   expect(current_page.status_code).to be(404)
 end
 

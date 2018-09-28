@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/dadf
+    uri: http://localhost:3000/api/en/articles/rubbish.json
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Token token="mytoken"
       User-Agent:
-      - Mas-Cms-Client/1.18.0 (Margo-Urey-00241.local; margourey; 19203) ruby/2.4.2
+      - Mas-Cms-Client/1.18.0 (Margo-Urey-00241.local; margourey; 38131) ruby/2.4.2
         (198; x86_64-darwin16)
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
       message: 
     headers:
       date:
-      - Fri, 28 Sep 2018 15:15:27 GMT
+      - Fri, 28 Sep 2018 15:56:03 GMT
       status:
       - 404 Not Found
       connection:
@@ -34,12 +34,12 @@ http_interactions:
       cache-control:
       - no-cache
       x-request-id:
-      - 4a24a425-c65d-411f-8d55-17f7a93b7d92
+      - 99f4f600-6fa1-4034-9808-43dd741166aa
       x-runtime:
-      - '0.033085'
+      - '0.044294'
     body:
       encoding: UTF-8
-      string: '{"message":"Site \"api\" not found"}'
+      string: '{"message":"Page not found"}'
     http_version: 
-  recorded_at: Fri, 28 Sep 2018 15:15:27 GMT
+  recorded_at: Fri, 28 Sep 2018 15:56:03 GMT
 recorded_with: VCR 4.0.0

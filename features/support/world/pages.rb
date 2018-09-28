@@ -6,7 +6,6 @@ module World
 
     pages = %w[
       article
-      error
       evidence_summaries
       evidence_summary
       home
@@ -14,6 +13,7 @@ module World
       lifestage
       latest_news
       news
+      not_found
       regional_strategy
       search_results
       thematic_review

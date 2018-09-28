@@ -20,8 +20,8 @@ RSpec.describe 'Previewing documents', type: :request do
 
     context 'unsupported page type' do
       it 'raises an ActionController RoutingError' do
-        expect { get "/en/pages/#{id}/preview" }
-          .to raise_error(ActionController::RoutingError)
+        get "/en/pages/#{id}/preview"
+        expect(response).to redirect_to not_found_path
       end
     end
   end

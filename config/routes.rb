@@ -39,6 +39,9 @@ Rails.application.routes.draw do
   get '/styleguide', to: 'styleguide#home'
   get 'styleguide/:page' => 'styleguide#show'
 
-  # Everything else including errors
+  # Errors
+  get 'not_found', to: 'errors#not_found'
+  get 'service_unavailable', to: 'errors#service_unavailable'
+
   get '*path', to: 'catch_all#index'
 end
