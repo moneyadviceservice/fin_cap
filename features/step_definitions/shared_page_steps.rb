@@ -1,3 +1,7 @@
+Given('I visit the homepage') do
+  home_page.load
+end
+
 Given('I visit the page {string}') do |path|
   visit(path)
 end

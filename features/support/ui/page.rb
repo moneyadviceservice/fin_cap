@@ -41,7 +41,26 @@ module UI
     element :title, 'h2'
   end
 
+  class CookiePolicyHeader < SitePrism::Section
+    element :message, '.cookie-policy-content'
+    element :link, 'a'
+    element :close_button, 'button'
+
+    def message_content
+      message.text
+    end
+
+    def link_description
+      link.text
+    end
+
+    def link_url
+      link['href']
+    end
+  end
+
   class Page < SitePrism::Page
+    section :cookie_policy_header, CookiePolicyHeader, '.cookie-policy'
     sections :download_box,
              DownloadBoxSection, '.download-box ul.download-box__list li'
     sections :latest_news_item, LatestNewsItem, '.latest-news__list-item'

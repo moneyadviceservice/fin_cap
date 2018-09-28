@@ -27,7 +27,8 @@
     "sinon": "^4.4.2"
   },
   "scripts": {
-    "test": "./test.sh"
+    "test": "./test.sh",
+    "jstest": "./node_modules/karma/bin/karma start spec/javascripts/karma.conf.js"
   },
   "repository": {
     "type": "git",
