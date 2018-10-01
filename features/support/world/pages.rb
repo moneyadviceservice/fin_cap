@@ -13,6 +13,7 @@ module World
       lifestage
       latest_news
       news
+      not_found
       regional_strategy
       search_results
       thematic_review

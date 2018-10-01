@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <%= display_meta_tags(site: 'FinCap', reverse: true, separator: '-') %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+      <%= render 'shared/svg/icon_sprite' %>
+    <!--<![endif]-->
+  </head>
+  <body>
+    <div class="l-constrained">
+      <div class="l-1col">
+        <a href="/">
+          <%= image_tag("logo.png", { width: 306, height: 121, alt: "t('layouts.base.title')" }) %>
+        </a>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
