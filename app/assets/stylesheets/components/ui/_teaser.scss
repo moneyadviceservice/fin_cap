@@ -57,7 +57,7 @@
   @include column(12);
   max-height: 150px; // This will be removed via js if the content is bigger
   min-height: 150px;
-  
+
   @include respond-to($mq-m) {
     max-height: 300px; // This will be removed via js if the content is bigger
     min-height: 300px;
@@ -73,7 +73,7 @@
   padding: $baseline-unit*2 $baseline-unit;
   .object-fit & {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     flex-grow: 1;
   }
 }
@@ -83,9 +83,9 @@
   margin-bottom: $baseline-unit;
 }
 
-.teaser-box__content-text { 
+.teaser-box__content-text {
   @include body(14, 22);
-  margin: 0 0 $baseline-unit*2;   
+  margin: 0 0 $baseline-unit*2;
 
   .object-fit & {
     flex: 1 0 auto;
@@ -118,7 +118,7 @@
       width: 50%;
 
       .object-fit & {
-        flex: 1;
+        flex: 1 1 auto;
       }
     }
   }
@@ -128,7 +128,7 @@
 
     @include respond-to($mq-m) {
       .object-fit & {
-        flex: 1;
+        flex: 1 1 auto;
       }
     }
   }

@@ -32,12 +32,11 @@ input.search__input--inpage {
   width: 100%;
   padding-right: 35px;
   padding-left: 20px;
-
-  @include respond-to($mq-m) {
-    width: 50%;
-  }
 }
 
-.search__submit--icon {
-  display: none;
+.search__container .search__form-inner {
+  @include respond-to($mq-m) {
+    position: relative;
+    width: 50%;
+  }
 }
