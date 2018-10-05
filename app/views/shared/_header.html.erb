@@ -1,3 +1,29 @@
+<% unless cookie_policy_accepted? %>
+  <div class="cookie-policy" data-dough-component="Cookie">
+      <%= form_tag(
+        cookie_policy_acceptances_path,
+        remote: true,
+        authenticity_token: true,
+        class: 'cookie-form l-constrained' # hook class for js
+      ) do %>
+        <p class="cookie-policy-content">
+          <%= t('fincap.cookie_policy.message') %>
+          <%= link_to(
+          t('fincap.cookie_policy.link_description'),
+          t('fincap.cookie_policy.link_url')
+          ) %>
+        </p>
+
+        <button type="submit" class="cookie-submit">
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--search cookie-submit-icon" focusable="false">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--close"></use>
+          </svg>
+          <span class="visually-hidden">Close</span>
+        </button>
+      <% end %>
+  </div>
+<% end %>
+
 <header data-site-header data-dough-component="Header" data-dough-header-config='{"textClose":"Close Search"}' class="header">
   <div class="header-wrap">
     <div class="header-content">

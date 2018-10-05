@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include CookiePolicyAcceptance
   protect_from_forgery with: :exception
   rescue_from Mas::Cms::HttpRedirect, with: :redirect_page
   rescue_from Mas::Cms::Errors::ResourceNotFound, with: :not_found
