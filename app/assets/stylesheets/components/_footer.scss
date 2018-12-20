@@ -98,6 +98,10 @@
   }
 }
 
+.footer__menu-item--right {
+  float: right;
+}
+
 .footer__menu-link {
   color: $color-white;
   display: block;
@@ -105,5 +109,22 @@
 
   &:visited {
     color: $color-white;
+  }
+
+  &:after {
+    display: none !important;
+  }
+}
+
+.sfgb-logo__img {
+  width: 33px;
+  margin-left: 5px;
+}
+
+.footer__sfgb-text {
+  display: inline-block;
+  line-height: 1;
+  & > * {
+    display: block;
   }
 }
