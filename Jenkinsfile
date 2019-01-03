@@ -7,8 +7,12 @@ pipeline {
     stages {
         stage('prepare') {
           steps {
-            sh "docker-compose -f docker-compose.yml build --force-rm"
-            sh "docker-compose -f docker-compose.yml up -d"
+            script {
+                docker.withRegistry('https://masdevtestregistry.azurecr.io', 'acr_credentials') {
+                    sh "docker-compose -f docker-compose.yml build --force-rm"
+                    sh "docker-compose -f docker-compose.yml up -d"
+                }
+            }
           }
         }
         stage ('branch-test') {
