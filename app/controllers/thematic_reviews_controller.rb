@@ -1,6 +1,7 @@
 class ThematicReviewsController < FincapTemplatesController
   LANDING_PAGE_DOCUMENT_TYPE = 'thematic_reviews_landing_page'.freeze
   THEMATIC_REVIEWS_DOCUMENT_TYPE = 'thematic_review'.freeze
+  PAGE_TITLE = 'Thematic Reviews'.freeze
 
   def index
     document = Mas::Cms::ThematicReviewsLandingPage.all(
@@ -11,6 +12,7 @@ class ThematicReviewsController < FincapTemplatesController
       }
     ).first
     @index_page = ThematicReviewsLandingPageTemplate.new(document)
+    @page_title = PAGE_TITLE
   end
 
   def show

@@ -1,5 +1,7 @@
-<div class='l-constrained'>
-  <% present(@index_page) do |template| %>
+<% present(@index_page) do |template| %>
+  <% title template.page_title(@page_title) %>
+  <div class='l-constrained'>
+  
     <%= render '/components/hero', 
       img_src: template.hero_image_component, 
       description: template.hero_description_component 
