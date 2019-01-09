@@ -11,6 +11,9 @@
           <%= render 'shared/footer/footer_social' %>
           <%= render 'shared/footer/footer_newsletter' %>
         </div>
+        <p class="footer__copyright">
+          &copy; <%= "#{t('fincap.footer.copyright')} #{DateTime.now.year} #{t('fincap.footer.sfgb_single_financial')} #{t('fincap.footer.sfgb_guidance_body')} #{t('fincap.footer.sfgb_address')}" %>
+        </p>
         <%= render 'shared/footer/footer_menu' %>
       </div>
     </div>
