@@ -77,13 +77,13 @@ Feature: Evidence Hub Search
     When I search the evidence hub for summaries published in the last 2 years
     Then I should see "2" evidence summary
     And I should see the "first" evidence summary as
-      | Field               | Value                                                              |
-      | document title      | Moving forward together: peer support for people with problem debt |
-      | evidence type       | Insight                                                            |
-      | topics              | Credit Use and Debt                                                |
-      | countries           | England                                                            |
-      | year of publication | 2017                                                               |
-    And I should see the "first" evidence summary icon linking to "Insight" article
+      | Field               | Value                               |
+      | document title      | Looking after the pennies           |
+      | evidence type       | Evaluation                          |
+      | topics              | Topics: Budgeting and keeping track |
+      | countries           | Country/Countries: United Kingdom   |
+      | year of publication | 2019                                |
+    And I should see the "first" evidence summary icon linking to "evaluation" article
 
   Scenario: Search by single evidence type filter
     When I search the evidence hub for summaries of type "Evaluation"
