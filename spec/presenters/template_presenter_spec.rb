@@ -164,4 +164,25 @@ RSpec.describe TemplatePresenter do
       end
     end
   end
+
+  describe '#page_title' do
+    let(:attributes) { {} }
+    context 'when a page title has been specified' do
+      let(:page_title) { 'Foo' }
+
+      it 'returns the page title concatenated with the fincap page title' do
+        expect(presenter.page_title(page_title)).to eq(
+          'Foo | Financial Capability Strategy for the UK'
+        )
+      end
+    end
+
+    context 'when no page title has been specified' do
+      let(:page_title) { nil }
+
+      it 'returns nil' do
+        expect(presenter.page_title(page_title)).to eq(nil)
+      end
+    end
+  end
 end

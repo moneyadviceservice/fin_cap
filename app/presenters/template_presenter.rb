@@ -23,6 +23,12 @@ class TemplatePresenter < BasePresenter
     view.strip_tags(overview_block.try(:content).to_s)
   end
 
+  def page_title(string)
+    return unless string
+
+    "#{string} | #{view.t('fincap.page_title')}"
+  end
+
   protected
 
   def extract_links(html_string)

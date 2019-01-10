@@ -58,6 +58,7 @@ en:
       header: 'Evidence Summaries'
     filters_header: 'Filter your search'
   fincap:
+    page_title: 'Financial Capability Strategy for the UK'
     components:
       download:
         title: 'Download'
@@ -147,6 +148,7 @@ en:
         message_box_info: 'You are viewing the relevant evidence summaries for thematic review: %{link}'
         evidence_hub_direct: 'Not what you were looking for? Go to %{link} for more information'
     news:
+      page_title: News
       more_individual: "Read more"
     get_involved:
       title: Get involved
