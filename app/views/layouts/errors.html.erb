@@ -11,6 +11,9 @@
     <!--<![endif]-->
   </head>
   <body>
+    <% if Rails.env.production? %>
+      <%= render 'shared/google_tag_manager' %>
+    <% end %>
     <div class="l-constrained">
       <div class="l-1col">
         <a href="/">
