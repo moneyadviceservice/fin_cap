@@ -21,10 +21,6 @@ gem 'site_search', '0.2.0', source: 'http://gems.dev.mas.local'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
 
-group :production do
-  gem 'syslog-logger'
-end
-
 group :development, :test do
   gem 'brakeman', require: false
   gem 'capybara'
