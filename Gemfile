@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'http://gems.dev.mas.local'
 
-ruby '2.4.2'
+ruby File.read('.ruby-version', &:readline)
 
 gem 'rails', '~> 5.0.6'
 
