@@ -3,7 +3,7 @@ source 'http://gems.dev.mas.local'
 
 ruby File.read('.ruby-version', &:readline)
 
-gem 'rails', '~> 5.0.6'
+gem 'rails', '~> 5.0.7'
 
 gem 'algoliasearch'
 gem 'autoprefixer-rails'

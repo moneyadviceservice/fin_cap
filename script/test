@@ -34,6 +34,7 @@ function info {
 run npm install -quiet
 run bundle install --quiet
 run bundle exec bowndler install -allow-root
+run bundle update brakeman --quiet
 run bundle exec rake db:setup
 run bundle exec rubocop .
 run bundle exec cucumber -f progress
