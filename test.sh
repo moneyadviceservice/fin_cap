@@ -9,6 +9,7 @@ export BUNDLE_WITHOUT=development
 bundle install
 npm install
 bundle exec bowndler update
+bundle update brakeman --quiet
 bundle exec rake db:drop db:create db:schema:load db:migrate
 bundle exec rubocop .
 bundle exec brakeman -q --no-pager --ensure-latest
