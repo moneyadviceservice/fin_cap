@@ -116,17 +116,15 @@
   }
 }
 
-.sfgb-logo__img {
-  width: 33px;
-  margin-left: 5px;
+.mps-logo__img {
+  height: 2.5rem;
+  vertical-align: middle;
 }
 
 .footer__sfgb-text {
   display: inline-block;
   line-height: 1;
-  & > * {
-    display: block;
-  }
+  margin-right: 5px;
 }
 
 .footer__copyright {
