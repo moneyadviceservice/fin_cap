@@ -92,14 +92,16 @@
 
 .footer__menu-item {
   display: block;
-
   @include respond-to($mq-m) {
     display: inline-block;
   }
 }
 
 .footer__menu-item--right {
-  float: right;
+  @include clearfix;
+  @include respond-to($mq-m) {
+    float: right;
+  }
 }
 
 .footer__menu-link {
@@ -116,16 +118,26 @@
   }
 }
 
-.sfgb-logo__img {
-  width: 33px;
-  margin-left: 5px;
+.mps-logo__img {
+  height: 2.5rem;
+  vertical-align: text-bottom;
+
+  @include respond-to($mq-xl) {
+    vertical-align: middle;
+  }
 }
 
-.footer__sfgb-text {
+.footer__mps-text {
   display: inline-block;
   line-height: 1;
+  margin-right: 5px;
+
   & > * {
     display: block;
+
+    @include respond-to($mq-xl) {
+      display: inline;
+    }
   }
 }
 
