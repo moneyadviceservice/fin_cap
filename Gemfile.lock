@@ -52,7 +52,7 @@ GEM
     bindex (0.5.0)
     bowndler (1.0.2)
       thor
-    brakeman (4.4.0)
+    brakeman (4.6.1)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (2.18.0)
