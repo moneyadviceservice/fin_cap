@@ -1,40 +1,13 @@
-.cookie-policy {
-  background: $color-blue-lighter;
-  padding: 0.5em 0;
-  position: fixed;
-  bottom: 0;
-  z-index: 1000;
-
-  @include respond-to($mq-m) {
-    position: static;
-  }
-}
-
-.cookie-form {
-  position: relative;
-}
-
 .cookie-policy-content {
-  padding: 0 $baseline-spacing 0 0;
-  margin: 0 5px 0 0;
-  font-size: 0.875em;
+  font-size: 0.875rem;
+  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*3;
 }
 
-.cookie-submit {
-  position: absolute;
-  right: $baseline-spacing;
-  top: 0;
-  border: 0;
-  padding: 0;
-  background: $primary-blue-dark;
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
+button.cookie-policy--close-button {
+  float: right;
+  font-size: 0.875rem;
+  padding: $baseline-unit $baseline-unit;
+  margin: 0 0 $baseline-unit*2 $baseline-unit;
 }
 
-.cookie-submit-icon {
-  margin: 3px;
-  width: 13px;
-  height: 13px;
-  color: $color-white;
-}

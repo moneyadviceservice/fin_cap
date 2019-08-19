@@ -5,8 +5,8 @@ Feature: Cookie policy acceptance
     And I visit the homepage
     Then I should see the cookie policy header
       | Field            | Value                                                                                                                               |
-      | message_content  | We use cookies to ensure that you get the best possible experience. By continuing to use our website you are agreeing to their use. Find out more about cookies. |
-      | link_description | Find out more about cookies.                                                                                                        |
+      | message_content  | We use Cookies: By using this website, you consent to their use. More details can be found in our cookies policy. Accept and close |
+      | link_description | cookies policy                                                                                                        |
       | link_url         | /en/articles/cookies                                                                                                                |
 
   Scenario: Visiting the website and accepting the policy
@@ -21,8 +21,8 @@ Feature: Cookie policy acceptance
     When I reload the page
     Then I should see the cookie policy header
       | Field            | Value                                                                                                                               |
-      | message_content  | We use cookies to ensure that you get the best possible experience. By continuing to use our website you are agreeing to their use. Find out more about cookies. |
-      | link_description | Find out more about cookies.                                                                                                        |
+      | message_content  | We use Cookies: By using this website, you consent to their use. More details can be found in our cookies policy. Accept and close |
+      | link_description | cookies policy                                                                                                        |
       | link_url         | /en/articles/cookies                                                                                                                |
 
   Scenario: Visiting the website after accepting the policy

@@ -210,11 +210,11 @@ en:
         para_1: We tailor our support to the specific circumstances and needs of an organisation, with the overall aim of improving evidence and evaluation capacity across the financial capability community.
         para_2: If you would like to sign-up, please contact us at %{link}.
     cookie_policy:
-      message: |
-        We use cookies to ensure that you get the best possible experience.
-        By continuing to use our website you are agreeing to their use.
-      link_description: Find out more about cookies.
-      link_url: /en/articles/cookies
+      body_html: |
+        We use Cookies: By using this website, you consent to their use. More details can be found in our
+        <a class="cookie-message__link" href="%{url}">cookies policy</a>.
+      close_button: Accept and close
+      guide_link: /en/articles/cookies
     links_external:
       twitter: https://twitter.com/FinCapStrategy
       linkedin: https://www.linkedin.com/company/the-financial-capability-strategy-for-the-uk?trk=biz-companies-cym

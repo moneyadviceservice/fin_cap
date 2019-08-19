@@ -17,5 +17,22 @@
         <%= render 'shared/footer/footer_menu' %>
       </div>
     </div>
+    <% unless cookie_policy_accepted? %>
+      <div class="cookie-policy" data-dough-component="Cookie">
+        <%= form_tag(
+          cookie_policy_acceptances_path,
+          remote: true,
+          authenticity_token: true,
+          class: 'cookie-form' # hook class for js
+        ) do %>
+          <p class="cookie-policy-content">
+            <%= t('fincap.cookie_policy.body_html', url: t('fincap.cookie_policy.guide_link')) %>
+            <button class="btn btn--primary cookie-policy--close-button">
+              <%= t('fincap.cookie_policy.close_button') %>
+            </button>
+          </p>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </footer>

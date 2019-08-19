@@ -2,6 +2,7 @@
   @include column(12);
   @extend %clearfix;
   margin-top: $baseline-spacing;
+  margin-bottom: $baseline-unit*3;
   background: transparent image_url('footer/footer-bg.png') no-repeat left top;
   background-size: cover;
 
