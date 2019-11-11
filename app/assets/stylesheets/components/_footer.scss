@@ -26,7 +26,7 @@
 
 .footer__social {
   @include respond-to($mq-m) {
-    @include column(4);
+    @include column(8);
   }
 }
 

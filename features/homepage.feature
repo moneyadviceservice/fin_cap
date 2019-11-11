@@ -33,8 +33,8 @@ Feature: Homepage
       | I am interested in research and evaluation | /en/articles/our-approach         |
       | I need help to manage my money             | https://moneyadviceservice.org.uk |
     And I should see the stay in touch box
-      | title         | content                     | link                                                                                               |
-      | Stay in touch | Subscribe to our newsletter | https://moneyadviceservice.us8.list-manage.com/subscribe?u=876b00eec5e597f5575e5c4dc&id=2cfd1ff3d6 |
+      | title         | content                     | link                                                                                                        |
+      | Stay in touch | Subscribe to our newsletter | https://singlefinancialguidancebody.us8.list-manage.com/subscribe?u=876b00eec5e597f5575e5c4dc&id=b6bd848f68 |
 
     And The "description" meta tag should be present
     And The "title" meta tag should be present
