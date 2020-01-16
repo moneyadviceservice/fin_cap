@@ -1,0 +1,59 @@
+$height_s: $maps_bannerHeight_s - ($maps_bannerMargin * 2);
+$height_m: $maps_bannerHeight_m - ($maps_bannerMargin * 4);
+$height_l: $maps_bannerHeight_l - ($maps_bannerMargin * 4);
+$width_s: $height_s / 202.23px * 634.92px;
+$width_m: $width_s * $height_m / $height_s;
+$width_l: $width_s * $height_l / $height_s;
+
+.l-maps_banner {
+  height: $maps_bannerHeight_m;
+  z-index: 20;
+
+  .maps_banner__mps-text {
+    float: none;
+    font-size: 1rem;
+    color: $color-white;
+    width: calc(100% - (#{$width_m + 10}));
+
+    a {
+      text-decoration: underline;
+    }
+
+    @include respond-to($mq-l) {
+      width: calc(100% - (#{$width_l + 10}));
+    }
+  }
+
+  @include respond-to($mq-l) {
+    height: $maps_bannerHeight_l;
+  }
+}
+
+.l-maps_banner__content {
+  display: flex;
+  align-items: center;
+  height: $maps_bannerHeight_m;
+  padding: $maps_bannerMargin 0;
+
+  @include respond-to($mq-l) {
+    height: $maps_bannerHeight_l;
+    padding: $maps_bannerMargin 0;
+  }
+
+  & a[href^='https:']:not([href*='fincap.org.uk']):after {
+    content: none;
+  }
+}
+
+.maps_banner__mps-logo {
+  display: block;
+  height: $height_m;
+  width: $width_m;
+  background-size: $width_m $height_m;
+
+  @include respond-to($mq-l) {
+    height: $height_l;
+    width: $width_l;
+    background-size: $width_l $height_l;
+  }
+}
