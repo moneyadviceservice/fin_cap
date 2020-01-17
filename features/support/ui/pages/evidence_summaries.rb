@@ -49,8 +49,8 @@ module UI::Pages
             '#evidence_summary_search_form_client_groups_social-housing-tenants'
     element :children_filter,
             '#evidence_summary_search_form_client_groups_children-3-11'
-    element :last_2_years_filter,
-            '#evidence_summary_search_form_year_of_publication_last-2-years'
+    element :last_3_years_filter,
+            '#evidence_summary_search_form_year_of_publication_last-3-years'
     element :evaluation_filter,
             '#evidence_summary_search_form_evidence_types_evaluation'
     element :insight_filter,

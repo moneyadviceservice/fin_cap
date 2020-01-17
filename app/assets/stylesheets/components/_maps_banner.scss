@@ -1,0 +1,11 @@
+.l-maps_banner__content {
+  & a[href^='https:']:not([href*='fincap.org.uk']):after {
+    content: none;
+  }
+}
+
+.maps_banner__mps-text {
+  float: none;
+  color: $color-white;
+  width: calc(100% - 100px);
+}

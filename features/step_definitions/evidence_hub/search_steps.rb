@@ -13,9 +13,9 @@ Given('I am on the page {string} seeing {string} evidence summary per page') do 
   visit("/en/evidence_hub?page=#{page}&per_page=#{per_page}")
 end
 
-When('I search the evidence hub for summaries published in the last 2 years') do
+When('I search the evidence hub for summaries published in the last 3 years') do
   step %(I visit the evidence hub search page)
-  evidence_summaries_page.last_2_years_filter.set(true)
+  evidence_summaries_page.last_3_years_filter.set(true)
   step %(I press search)
 end
 
