@@ -59,6 +59,8 @@ en:
     filters_header: 'Filter your search'
   fincap:
     page_title: 'Financial Capability Strategy for the UK'
+    maps_banner:
+      strapline_html: The <a href="%{url}">UK Strategy for Financial Wellbeing</a> is taking forward the work of the Financial Capability Strategy
     components:
       download:
         title: 'Download'
