@@ -9,7 +9,7 @@ Feature: Evidence Hub Search
   Scenario: Visit the landing page
     Then I should see a list of all search filters
       | Field               | Value                                                        |
-      | Year of publication | All years, Last 2 years, Last 5 years, More than 5 years ago |
+      | Year of publication | All years, Last 3 years, Last 5 years, More than 5 years ago |
       | Client group        | Children (3 - 11), Young people (12 - 16), Parents / families, Young adults (17 - 24), Working age (18 - 65), Older people (65+), Over-indebted people, Social housing tenants, Teachers / practitioners, Other |
       | Evidence type       | Evaluation, Insight, Review |
       | Topic               | Saving, Pensions and retirement planning, Credit use and debt, Budgeting and keeping track, Insurance and protection, Financial education, Financial capability |
@@ -74,16 +74,16 @@ Feature: Evidence Hub Search
     And I should see the "first" evidence summary icon linking to "Insight" article
 
   Scenario: Search by Year of Publication filter
-    When I search the evidence hub for summaries published in the last 2 years
-    Then I should see "2" evidence summary
+    When I search the evidence hub for summaries published in the last 3 years
+    Then I should see "4" evidence summary
     And I should see the "first" evidence summary as
-      | Field               | Value                               |
-      | document title      | Looking after the pennies           |
-      | evidence type       | Evaluation                          |
-      | topics              | Topics: Budgeting and keeping track |
-      | countries           | Country/Countries: United Kingdom   |
-      | year of publication | 2019                                |
-    And I should see the "first" evidence summary icon linking to "evaluation" article
+      | Field               | Value                                |
+      | document title      | Financial well-being                 |
+      | evidence type       | Insight                              |
+      | topics              | Topics: Saving, Financial Capability |
+      | countries           | Country/Countries: United Kingdom    |
+      | year of publication | 2015                                 |
+    And I should see the "first" evidence summary icon linking to "insight" article
 
   Scenario: Search by single evidence type filter
     When I search the evidence hub for summaries of type "Evaluation"
