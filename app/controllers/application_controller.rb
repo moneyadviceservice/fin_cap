@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
     redirect_to not_found_path
   end
 
+  def show_home_banner?
+    false
+  end
+
+  helper_method :show_home_banner?
+
   private
 
   def service_unavailable

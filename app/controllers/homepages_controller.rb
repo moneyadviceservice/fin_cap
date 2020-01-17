@@ -9,6 +9,10 @@ class HomepagesController < FincapTemplatesController
     end
   end
 
+  def show_home_banner?
+    true
+  end
+
   def resource
     HomepageTemplate.new(@homepage)
   end
