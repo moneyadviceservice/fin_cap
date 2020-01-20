@@ -9,6 +9,21 @@ $width_l: $width_s * $height_l / $height_s;
   height: $maps_bannerHeight_m;
   z-index: 20;
 
+  .maps_banner__mps-text {
+    float: none;
+    font-size: 1rem;
+    color: $color-white;
+    width: calc(100% - (#{$width_m + 10}));
+
+    a {
+      text-decoration: underline;
+    }
+
+    @include respond-to($mq-l) {
+      width: calc(100% - (#{$width_l + 10}));
+    }
+  }
+
   @include respond-to($mq-l) {
     height: $maps_bannerHeight_l;
   }
@@ -40,15 +55,5 @@ $width_l: $width_s * $height_l / $height_s;
     height: $height_l;
     width: $width_l;
     background-size: $width_l $height_l;
-  }
-}
-
-.maps_banner__mps-text {
-  float: none;
-  color: $color-white;
-  width: calc(100% - (#{$width_m + 10}));
-
-  @include respond-to($mq-l) {
-    width: calc(100% - (#{$width_l + 10}));
   }
 }
