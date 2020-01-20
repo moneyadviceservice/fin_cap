@@ -22,16 +22,19 @@ $header-transition-ease: ease-out;
   position: relative;
   z-index: 15;
   height: 87px;
+  margin-bottom: 90px;
 
   .header-wrap {
     @include column(12);
     position: fixed;
     background: #fff;
-    top: 54px;
+    top: 90px;
   }
 
   @include respond-to($mq-m) {
     height: auto;
+    margin-bottom: 0;
+
     .header-wrap {
       position: relative;
       top: 0;
