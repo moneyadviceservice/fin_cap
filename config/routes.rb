@@ -1,5 +1,13 @@
+require 'yaml'
+
 Rails.application.routes.draw do
   root to: 'homepages#show', locale: 'en'
+
+  #perform the redirects
+  redirects = YAML.load_file('config/redirects.yml')
+  redirects.each do |rule|
+    get rule["old_path"], to: redirect(rule["new_path"], status: 301)
+  end
 
   CMS_PAGES = %w[
     articles
