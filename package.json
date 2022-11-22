@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "karma": "^2.0.0",
+    "karma": "^6.4.1",
     "karma-chai": "^0.1.0",
     "karma-cli": "^1.0.1",
     "karma-fixture": "^0.2.6",
