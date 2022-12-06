@@ -1,23 +1,26 @@
-source 'https://rubygems.org'
-source 'http://gems.dev.mas.local'
-
 ruby File.read('.ruby-version', &:readline)
+
+source 'https://rubygems.org'
+
+source 'https://gem.fury.io/benlovell' do
+  gem 'mas-cms-client', '1.18.0'
+  gem 'site_search', '0.2.0'
+end
 
 gem 'rails', '~> 5.0.7'
 
 gem 'algoliasearch'
 gem 'autoprefixer-rails'
+gem 'bowndler', '~> 1.0'
 gem 'dough-ruby', '~> 5.28'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem 'mas-cms-client', '1.18.0'
 gem 'meta-tags'
 gem 'newrelic_rpm'
 gem 'nokogiri'
 gem 'okcomputer'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
-gem 'site_search', '0.2.0', source: 'http://gems.dev.mas.local'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
 
@@ -51,8 +54,4 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-end
-
-group :build, :test, :development do
-  gem 'bowndler', '~> 1.0'
 end
