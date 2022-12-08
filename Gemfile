@@ -19,7 +19,6 @@ gem 'meta-tags'
 gem 'newrelic_rpm'
 gem 'nokogiri'
 gem 'okcomputer'
-gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn-rails'
@@ -34,16 +33,13 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'danger', require: false
   gem 'danger-rubocop', require: false
-  gem 'database_cleaner'
   gem 'dotenv-rails'
-  gem 'factory_bot_rails'
   gem 'launchy'
   gem 'pry-byebug'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop', '~> 0.58.2', require: false
   gem 'site_prism'
-  gem 'sqlite3'
   gem 'tzinfo-data'
   gem 'vcr'
   gem 'webmock'
