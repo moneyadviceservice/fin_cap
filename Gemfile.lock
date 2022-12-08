@@ -337,7 +337,7 @@ DEPENDENCIES
   danger
   danger-rubocop
   dotenv-rails
-  dough-ruby (~> 5.28)
+  dough-ruby (~> 5.28)!
   jbuilder (~> 2.5)
   jquery-rails
   launchy
