@@ -24,7 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'puma'
 
 group :production do
-  gem 'syslog-logger'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
