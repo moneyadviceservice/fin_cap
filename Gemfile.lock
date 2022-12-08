@@ -294,11 +294,6 @@ GEM
       capybara (~> 2.7)
     site_search (0.2.0)
       algoliasearch
-    spring (2.0.2)
-      activesupport (>= 4.2)
-    spring-watcher-listen (2.0.1)
-      listen (>= 2.7, < 4.0)
-      spring (>= 1.2, < 3.0)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -377,8 +372,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   site_prism
   site_search (= 0.2.0)!
-  spring
-  spring-watcher-listen (~> 2.0.0)
   sqlite3
   syslog-logger
   tzinfo-data
