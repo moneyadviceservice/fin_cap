@@ -2,7 +2,7 @@ ruby File.read('.ruby-version', &:readline)
 
 source 'https://rubygems.org'
 
-source 'https://gem.fury.io/benlovell' do
+source 'https://gem.fury.io/h_app288206558' do
   gem 'dough-ruby', '~> 5.28'
   gem 'mas-cms-client', '1.18.0'
   gem 'site_search', '0.2.0'
