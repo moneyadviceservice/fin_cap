@@ -4,9 +4,9 @@ env:
   BUNDLE_GITHUB__COM: ${{ secrets.BUNDLE_GITHUB__COM }}
 on:
   push:
-    branches: [ "heroku" ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "heroku" ]
+    branches: [ "main", "master" ]
 jobs:
   test:
     runs-on: ubuntu-latest
