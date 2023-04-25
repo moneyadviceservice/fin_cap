@@ -22,6 +22,10 @@
     <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
       <%= render 'shared/svg/icon_sprite' %>
     <!--<![endif]-->
+
+    <% if ENV['NO_ROBOTS'] == 'true' %>
+    <meta name="robots" content="noindex">
+    <% end %>
   </head>
 
   <body>
