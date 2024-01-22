@@ -28,7 +28,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = ENV['FINCAP_ASSET_HOST_URL']
+  # config.action_controller.asset_host = ENV['FINCAP_ASSET_HOST_URL']
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -40,7 +40,8 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
+  config.ssl_options = { hsts: { preload: true } }
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -74,16 +75,12 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-  config.logger = ActiveSupport::TaggedLogging.new(Logger::Syslog.new("fin-cap", Syslog::LOG_LOCAL6).tap {|log| log.level = Logger::INFO})
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
-
-  # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
 
   # Google analytics
   config.google_tag_manager_id = 'GTM-MPK3QX'
