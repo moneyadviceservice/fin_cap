@@ -1,4 +1,4 @@
-ruby File.read('.ruby-version', &:readline)
+ruby IO.read('.ruby-version').chomp
 
 source 'https://rubygems.org'
 
@@ -13,7 +13,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
 gem 'mas-cms-client', github: 'moneyadviceservice/mas-cms-client', branch: 'upgrade-ruby'
 
-gem 'rails', '~> 5.1.7'
+gem 'rails', '~> 5.2.8'
 
 gem 'algoliasearch'
 gem 'autoprefixer-rails'
