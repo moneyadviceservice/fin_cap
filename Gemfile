@@ -13,7 +13,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45'
 gem 'mas-cms-client', github: 'moneyadviceservice/mas-cms-client', branch: 'upgrade-ruby'
 
-gem 'rails', '~> 6.0.0'
+gem 'rails', '~> 6.1.2'
 
 gem 'algoliasearch'
 gem 'autoprefixer-rails'
