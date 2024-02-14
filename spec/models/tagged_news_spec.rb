@@ -10,11 +10,11 @@ RSpec.describe TaggedNews, type: :model do
 
     it 'retrieves all the news for the page' do
       expect(Mas::Cms::News).to receive(:all).with(
-        params: {
+        {params: {
           document_type: ['news'],
           tag: %w[one two],
           order_by_date: true
-        }
+        }}
       ).and_return(news)
 
       expect(subject).to eq([financial_capability_week])

@@ -1,3 +1,5 @@
+require_relative '../pages/home'
+
 module UI
   module Pages
     class Pagination < SitePrism::Section

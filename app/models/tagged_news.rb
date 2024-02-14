@@ -9,6 +9,6 @@ class TaggedNews
 
     params[:params][:tag] = Array(page.tags) if page.tags.present?
 
-    Mas::Cms::News.all(params).reject { |news_item| news_item.slug == page.slug }
+    Mas::Cms::News.all(**params).reject { |news_item| news_item.slug == page.slug }
   end
 end
