@@ -1,5 +1,5 @@
 RSpec.describe EvidenceSummaryPresenter do
-  let(:view) { ActionView::Base.new }
+  let(:view) { ActionView::Base.new(ActionView::LookupContext.new(nil), {}, nil) }
   let(:evidence_summary) do
     double('EvidenceSummary', attributes)
   end

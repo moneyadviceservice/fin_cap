@@ -1,12 +1,11 @@
 RSpec.describe EvidenceSummariesPresenter do
-  let(:view) { ActionView::Base.new }
   let(:evidence_summaries) { double('Mas::Cms::ResultCollection', attributes) }
   let(:params) { {} }
   let(:attributes) { {} }
+  let(:view) { ActionView::Base.new(ActionView::LookupContext.new(nil), {}, double(params: params)) }
   subject(:presenter) { described_class.new(evidence_summaries, view) }
 
   describe 'thematic_review_message' do
-    let(:view) { double(params: params) }
 
     context 'when params tag is present' do
       let(:params) do

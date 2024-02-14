@@ -1,5 +1,5 @@
 RSpec.describe NewsTemplatePresenter do
-  let(:view) { ActionView::Base.new }
+  let(:view) { ActionView::Base.new(ActionView::LookupContext.new(nil), {}, nil) }
   let(:object) do
     double('NewsTemplate', attributes)
   end

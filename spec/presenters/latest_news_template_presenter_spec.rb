@@ -1,5 +1,5 @@
 RSpec.describe LatestNewsTemplatePresenter do
-  let(:view) { ActionView::Base.new }
+  let(:view) { ActionView::Base.new(ActionView::LookupContext.new(nil), {}, nil) }
   let(:object) { double('BaseTemplate', attributes) }
   let(:attributes) { {} }
   subject(:presenter) { described_class.new(object, view) }

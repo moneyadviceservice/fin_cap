@@ -1,3 +1,5 @@
+require_relative 'article'
+
 module UI
   module Pages
     class WhatWorks < ::UI::Pages::Article

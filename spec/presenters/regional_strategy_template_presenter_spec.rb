@@ -1,5 +1,5 @@
 RSpec.describe RegionalStrategyTemplatePresenter do
-  let(:view) { ActionView::Base.new }
+  let(:view) { ActionView::Base.new(ActionView::LookupContext.new(nil), {}, nil) }
   let(:object) do
     double('RegionalStrategyTemplate', attributes)
   end

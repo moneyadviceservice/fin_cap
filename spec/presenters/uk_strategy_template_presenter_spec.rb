@@ -1,7 +1,7 @@
 RSpec.describe UkStrategyTemplatePresenter do
   subject(:presenter) { described_class.new(object, view) }
 
-  let(:view) { ActionView::Base.new }
+  let(:view) { ActionView::Base.new(ActionView::LookupContext.new(nil), {}, nil) }
   let(:object) do
     instance_double(UkStrategyTemplate, attributes)
   end
