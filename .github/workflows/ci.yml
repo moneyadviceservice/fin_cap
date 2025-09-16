@@ -27,6 +27,6 @@ jobs:
       - name: Install bower
         run: npm install -g bower
       - name: Install bowndler packages
-        run: bin/bowndler update
+        run: bin/bowndler update --force
       - name: Run tests
         run: bin/rake
